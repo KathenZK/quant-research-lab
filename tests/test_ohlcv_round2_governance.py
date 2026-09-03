@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 import json
 
@@ -127,21 +128,56 @@ def _record(
     )
 
 
-def _seal_derived(root: Path, dataset_id: str) -> None:
+def _seal_derived(root: Path, dataset_id: str, *, timeframe: str | None = None) -> None:
     inventory = parquet_inventory(root)
-    write_canonical_json(
-        root / DATASET_MANIFEST_FILENAME,
-        {
-            "dataset_id": dataset_id,
-            "quality_status": "TRUSTED_DERIVED",
-            "file_count": len(inventory),
-            "bytes": int(sum(int(row["size"]) for row in inventory)),
-            "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
-            "content_fingerprint": "test",
-            "input_manifest_sha256": "test-input",
-            "aggregation_formula_version": FORMULA_VERSION,
-        },
+    tf = timeframe or (
+        "1d" if ".1d." in dataset_id or dataset_id.endswith("1d")
+        else "4h" if ".4h." in dataset_id or "4h" in dataset_id
+        else "1h" if ".1h." in dataset_id or "1h" in dataset_id
+        else "4h"
     )
+    historical = dataset_id in {
+        "binance.perp.ohlcv.1h.from_15m.v1",
+        "binance.perp.ohlcv.4h.from_15m.v1",
+        "binance.perp.ohlcv.1d.from_15m.v1",
+    }
+    cutoff = None if historical else "2026-08-25T00:00:00+00:00"
+    declared_scope = "FULL_MARKET" if historical else "PARTIAL"
+    input_hash = hashlib.sha256(b"test-input").hexdigest()
+    stats = {
+        "file_count": len(inventory),
+        "bytes": int(sum(int(row["size"]) for row in inventory)),
+        "output_rows": 0,
+        "distinct_keys": 0,
+        "symbols": 0,
+        "start_utc": "2026-07-01T00:00:00+00:00",
+        "end_utc": "2026-07-01T00:00:00+00:00",
+        "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
+        "cutoff_exclusive_utc": cutoff,
+        "rebuild_command": (
+            "python research/platform/data-lake-governance/scripts/"
+            f"build_binance_derived_ohlcv_from_15m.py --timeframe {tf} "
+            f"--dataset-version v1 --input-snapshot-fingerprint {input_hash}"
+            + ("" if cutoff is None else f" --cutoff-exclusive-utc {cutoff}")
+        ),
+        "aggregation_impl_sha256": hashlib.sha256(b"test-impl").hexdigest(),
+        "input_parquet_inventory_fingerprint": input_hash,
+        "excluded_incomplete_buckets": 0,
+        "mixed_source_rows": 0,
+        "source_counts": {},
+    }
+    derived_manifest(
+        dataset_id=dataset_id,
+        status="TRUSTED_DERIVED",
+        timeframe=tf,
+        physical_root=str(root.resolve()),
+        input_dataset_id="binance.perp.ohlcv.15m.normalized.v1",
+        input_manifest_sha256=input_hash,
+        builder_path="research/platform/data-lake-governance/scripts/build_binance_derived_ohlcv_from_15m.py",
+        builder_sha256=hashlib.sha256(b"test-builder").hexdigest(),
+        stats=stats,
+        declared_scope=declared_scope,
+    ).write(root / DATASET_MANIFEST_FILENAME)
 
 
 def test_non_materialized_path_rejects_illegal_ohlc_and_nulls(tmp_path: Path) -> None:
@@ -444,7 +480,7 @@ def test_lineage_incomplete_rejected_without_expected_hash(tmp_path: Path) -> No
             "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
         },
     )
-    with pytest.raises(ValueError, match="LINEAGE_INCOMPLETE"):
+    with pytest.raises(ValueError, match="incomplete"):
         assert_cache_sidecar_fresh(root)
     assert_cache_sidecar_fresh(root, allow_incomplete_lineage=True)
 

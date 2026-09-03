@@ -1,3 +1,9 @@
+## 2026-09-03 — V7.1 主状态与 lock 对齐为 dry-run
+
+决定：按 glossary 2026-09-03 修订，lock `hype-1d-ma7-abt-v7-1-dry-run` 为 `mode=dry_run` 且 `enabled_allowed=true`（用户 2026-08-13 已授权，HEAD `a5a3b2a`），将 `HYPE-1D-MA7-ABT-V7.1` 从 `live spec`/`registered` 叙事迁为 `dry-run / not live-ready`。live 仍 `enabled_allowed=false`。主账 Current State 按模板压缩，诊断细节仍以既有 diagnostics 与 [2026-08-13 tracking](runner-tracking/hype-1d-ma7-abt-v7-1-dry-run-observer-2026-08-13.md) 为准。
+
+证据：[lab live spec](live-specs/hype-1d-ma7-abt-v7-1-lab-live-spec.md)
+
 ## 2026-09-03 — 家族 README 压缩为路由页
 
 - 决定：按家族 README ≤30 行路由页合同压缩 `README.md`（压缩前 76 行）。下列原文从 README 下沉到本决策记录，信息不删除、研究结论不变。

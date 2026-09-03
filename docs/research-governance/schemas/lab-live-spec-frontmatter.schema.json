@@ -24,12 +24,16 @@
     },
     "overlays": {
       "type": "array",
-      "items": {"enum": ["handoff", "runner-observer"]},
+      "items": {"enum": ["handoff"]},
       "uniqueItems": true
     },
     "strategy_id": {"type": "string", "minLength": 1},
     "runner_kind": {"type": "string", "minLength": 1},
-    "peer_spec": {"type": "string", "minLength": 1},
+    "peer_spec": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^crates/"
+    },
     "implementations": {
       "type": "array",
       "minItems": 2,
@@ -39,7 +43,11 @@
         "properties": {
           "strategy_id": {"type": "string", "minLength": 1},
           "runner_kind": {"type": "string", "minLength": 1},
-          "peer_spec": {"type": "string", "minLength": 1}
+          "peer_spec": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^crates/"
+          }
         },
         "additionalProperties": false
       }

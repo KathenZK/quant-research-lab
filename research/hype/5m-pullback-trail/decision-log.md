@@ -4,6 +4,16 @@
 
 这是 Binance HYPE `5m` 回踩恢复入场与 ATR trailing-stop 研究的家族级阅读路径。
 
+## 2026-09-03 — tiny_live_pilot 续期至 2026-12-24
+
+决定：用户已在 quant-runner 提交 `a5a3b2a` 将 `hype-pullback-live` 的 `approval_expires_at` 由 `2026-09-24` 续期至 `2026-12-24T00:00:00Z`。资金边界与策略参数不变。Lab 只记录该已执行授权窗口，不扩大 sizing。
+
+## 2026-09-03 — live 实例 halted 待用户决定
+
+决定：只读观察到 `hype-pullback-live` 的 `strategy_health.status=halted`，自 `2026-08-19T21:31Z` 无新事件；live 服务仍 `active`、`NRestarts=0`。用户尚未决定如何处理。结论仅列出待选项，Lab 不推断启停。
+
+证据：[halted incident](runner-tracking/hype-5m-pbtr-live-halted-incident-2026-09-03.md)
+
 ## 当前边界
 
 - 这是一个独立的 HYPE 策略家族。

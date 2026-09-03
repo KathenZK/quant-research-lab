@@ -2,6 +2,10 @@
 
 这是 HYPE candle-count reversal 研究的家族级阅读路径。
 
+## 2026-09-03 — parity grandfather 续期至 2026-12-24
+
+决定：用户已在 quant-runner 提交 `a5a3b2a` 将 `HYPE-CANDLE-COUNT-V35`（`hype-candle-count-v35-dry-run`）的 `parity_grandfather_until` 由 `2026-09-24` 续期至 `2026-12-24T00:00:00Z`。到期前须补标准 parity JSON（`conclusion=PASS`），否则 runner CI 将拒绝 `enabled`。主状态仍为 `dry-run`，本条不改变授权。
+
 ## 当前边界
 
 - 本家族属于策略规格与归档材料。

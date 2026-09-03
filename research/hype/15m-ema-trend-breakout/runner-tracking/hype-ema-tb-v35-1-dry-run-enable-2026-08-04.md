@@ -7,7 +7,7 @@
 ## 变更内容
 
 - Lab manifest（main 分支提交）：`hype-ema-tb-v35-1-dry-run` 升级授权；同提交移除 `bin-15m-as6s-v5-joint-np-dry-run` 条目（V5 策略代码退役，引擎随 V6 需求迁移进 V6 模块）。
-- Runner `configs/active-strategy.lock.json`：由 `scripts/governance/sync_manifest_lock.py` 从 lab main 重新生成。
+- Runner `configs/active-strategy.lock.json`：由 `scripts/governance/sync_manifest_lock.py` 从 lab main 重新生成。历史说明：该脚本已被 runner 提交 `08384af` 的 runner-owned lock 取代。
 - Runner `configs/dryrun.toml`：`hype-ema-tb-v35-1-dry-run` `enabled = true`；删除 `bin-15m-as6s-v5-joint-np-dry-run` 实例块。
 - 校验：`validate_manifest_lock.py` 与 `check_live_enabled_gate.py` 全部通过。
 

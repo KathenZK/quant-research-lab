@@ -17,3 +17,9 @@
 决策：基础设施记 `READY`，15m 与 `from_15m.v1` 全量 SQL `PASS`，消费者仍 `PARTIAL`。不以笼统 READY 覆盖 legacy 1h、家族缓存和未迁移历史脚本。不把本轮解释为策略通过，也不外推 4H 全市场结论。
 
 证据：[第二轮契约](specs/binance-ohlcv-round2-trusted-load-contract-2026-09-03.md)、[验收](diagnostics/binance-ohlcv-round2-acceptance-2026-09-03.md)、[SQL 审计](diagnostics/binance-ohlcv-trusted-quality-audit-2026-09-03.md)、[成交额追溯](diagnostics/binance-ohlcv-volume-rca-2026-09-03.md)。
+
+## 2026-09-03 — 第三轮可信读取与截止契约
+
+决策：Round 3 基础设施门禁记 `READY`；15m 与 `from_15m.v1` 行质量 `PASS` 但历史覆盖为内部缺口；4h 全市场研究 `gap_policy=reject` 为 `UNFIT`；消费者仍 `PARTIAL`；legacy 1h `quote_volume` 已按小时追溯但仍保留机器 blocker。不把本轮解释为策略通过，不发布生产新版本，不自动开始 4h MA7 研究。
+
+证据：[第三轮契约](specs/binance-ohlcv-round3-trusted-load-contract-2026-09-03.md)、[验收](diagnostics/binance-ohlcv-round3-acceptance-2026-09-03.md)、[问题矩阵](diagnostics/binance-ohlcv-round3-issue-matrix-2026-09-03.md)、[SQL 审计 R3](diagnostics/binance-ohlcv-trusted-quality-audit-r3-2026-09-03.md)、[成交额追溯 R3](diagnostics/binance-ohlcv-volume-rca-r3-2026-09-03.md)。

@@ -38,7 +38,7 @@
 
 细则由 `.cursor/rules/` 维护，不在本文件展开：
 
-- [data-quality-first.mdc](.cursor/rules/data-quality-first.mdc)：数据质量前置约束，唯一规范为 [docs/data-lake-spec.md](docs/data-lake-spec.md)；见该文件。
+- [data-quality-first.mdc](.cursor/rules/data-quality-first.mdc)：数据质量前置约束，唯一规范为 [docs/data-lake-spec.md](docs/data-lake-spec.md)；Binance OHLCV 查询/选版本/验证/读取见该文件第 16 节。治理入口：[research/platform/data-lake-governance/README.md](research/platform/data-lake-governance/README.md)。
 - [live-executable-strategy-research.mdc](.cursor/rules/live-executable-strategy-research.mdc)：晋升前须证明策略可按真实订单时序执行；见该文件。
 - [backtest-standards.mdc](.cursor/rules/backtest-standards.mdc)：策略回测的近期分片与执行成本默认口径；见该文件。
 - [research-report-storage.mdc](.cursor/rules/research-report-storage.mdc)：研究文档存放、主账、索引与共享内核约定；见该文件。

@@ -3,7 +3,7 @@
 - Full family name：`HYPE-1D-MA7-Asymmetric-Body-Trend`（别名 `HYPE-1D-MA7-ABT`）
 - 市场/周期：Binance USD-M `HYPEUSDT` perpetual，UTC `1d`
 - 机制：固定 `SMA7` 的非对称日线趋势状态机（reclaim / 迟滞 / OAPP / PEHC）。
-- 当前状态：`V1–V7.1 registered / TRANSFER_FAIL / HARD-GATE-FAILED / not promoted / not live-ready`
+- 当前状态：`V7.1 dry-run / not live-ready`；`V1–V7 registered / TRANSFER_FAIL / HARD-GATE-FAILED / not promoted / not live-ready`
 
 ## 边界
 

@@ -304,7 +304,7 @@ def assert_derived_manifest_schema(
             continue
         if field == "cutoff_exclusive_utc":
             continue
-                if field in DERIVED_INT_FIELDS:
+        if field in DERIVED_INT_FIELDS:
             if isinstance(payload[field], bool) or not isinstance(payload[field], int):
                 errors.append(f"{field} must be int, got {type(payload[field]).__name__}")
             elif int(payload[field]) < 0:
@@ -328,6 +328,16 @@ def assert_derived_manifest_schema(
     quality = str(payload.get("quality_status") or "")
     if quality not in ACCEPTED_DERIVED_QUALITY:
         errors.append(f"quality_status={quality!r} is not an accepted publish")
+    hex64 = re.compile(r"^[0-9a-f]{64}$")
+    for field in (
+        "content_fingerprint",
+        "input_manifest_sha256",
+        "builder_sha256",
+        "parquet_inventory_fingerprint",
+    ):
+        value = payload.get(field)
+        if isinstance(value, str) and not hex64.fullmatch(value):
+            errors.append(f"{field} must be a 64-char sha256 hex digest")
     if errors:
         raise ValueError(f"derived manifest schema rejected: {errors}")
 
@@ -611,6 +621,7 @@ def assert_published_derived_manifest(
         )
     payload = json.loads(root_manifest.read_text(encoding="utf-8"))
     assert_derived_manifest_schema(payload, dataset_id=dataset_id)
+    content_fp = verify_manifest_content_fingerprint(payload)
     if exchange is not None and market_type is not None and timeframe is not None:
         assert_manifest_matches_record(
             payload,
@@ -624,7 +635,6 @@ def assert_published_derived_manifest(
             physical_root=root,
             input_dataset_id=input_dataset_id,
         )
-    content_fp = verify_manifest_content_fingerprint(payload)
     stats = parquet_file_stats(root)
     if int(payload.get("file_count") or 0) != len(stats):
         raise ValueError(

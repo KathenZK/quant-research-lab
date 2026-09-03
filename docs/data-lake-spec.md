@@ -372,6 +372,10 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
   --dataset-id binance.perp.ohlcv.4h.from_15m.v1 --scope SINGLE_SYMBOL \
   --symbol BTC/USDT:USDT --end 2026-08-24T08:00:00Z
 
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py load-research \
+  --dataset-id binance.perp.ohlcv.4h.from_15m.v1 --scope SINGLE_SYMBOL \
+  --symbol BTC/USDT:USDT --end 2026-08-24T08:00:00Z --gap-policy reject
+
 python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py load \
   --dataset-id binance.perp.ohlcv.4h.from_15m.v1 --scope FULL_MARKET \
   --start 2026-08-01T00:00:00Z --end 2026-08-24T08:00:00Z \
@@ -388,16 +392,31 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 ```
 
 研究输入应记录：`dataset_id`、`parquet_inventory_fingerprint` 或 published
-`manifest_sha256`、显式 `cutoff_exclusive_utc`、以及 `quality_status=PASS`。
-当前已接受派生版本是 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`；底座是
-`binance.perp.ohlcv.15m.normalized.v1`（目录快照 `_INPUT_SNAPSHOT.json`）。
-v1 的 `cutoff_exclusive_utc` 为 null，数据实际结束于最后一根完整闭合 K，不是今天。
+`manifest_sha256`、显式闭合截止（`end` / `cutoff_exclusive_utc`）、`gap_policy`，
+以及 `row_quality=PASS`。新研究用 `load_trusted_research_dataset(..., gap_policy="reject"|"contiguous_segments")`，
+必须给截止；不得默认 `report_only`。整库治理扫描必须声明 `purpose="governance_audit"`。
+请求窗口超出最后一根已闭合 K 的收盘时间时默认拒绝。
 
-幂等更新检查（不覆盖已发布 v1；输入变了必须新版本）：
+当前已接受派生版本是 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`；底座是
+`binance.perp.ohlcv.15m.normalized.v1`。v1 的 `cutoff_exclusive_utc` 为 null（历史事实，
+不得改写）；消费时必须另给显式截止。数据实际结束于最后一根完整闭合 K，不是“今天”。
+输出 bar 必须满足 `bar_open + timeframe <= cutoff`。
+
+新版本必须先构建、审计、发布，再写入 `derived/datasets/_DATASET_REGISTRY.json`；
+禁止扫描整个 data 根并自动信任所有 manifest。`--check` / `--dry-run` 不得与
+`--write-15m-snapshot` 或 `--register` 同时使用，也不得改写发布数据。
+
+幂等核对（只读，不写快照、不覆盖已发布 v1）：
 
 ```bash
 python research/platform/data-lake-governance/scripts/build_binance_derived_ohlcv_from_15m.py \
-  --check --write-15m-snapshot --timeframe all
+  --check --timeframe all
+```
+
+临时湖上的发布→登记→查询→读取示例：
+
+```bash
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py publish-register-load
 ```
 
 预期拒绝（必须失败）：
@@ -408,5 +427,8 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case missing-dataset
 python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case bad-fingerprint
 python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case missing-manifest
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case over-range-window
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case missing-lineage
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case bad-manifest
 ```
 

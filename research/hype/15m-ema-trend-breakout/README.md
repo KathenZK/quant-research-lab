@@ -3,7 +3,7 @@
 - Full family name：`HYPE-EMA-Trend-Breakout`（历史别名：`HYPE-EMA-TB`）
 - 市场/周期：HYPE `15m`
 - 机制：EMA96/EMA384 趋势突破 / 追多追空，带 ADX、成交量、1h 确认、live-realistic 执行检查与跨所执行变体。
-- 当前状态：active 研究线。`HYPE-EMA-TB-V35` 为 grandfathered `live`；V35.1-V35.3、V36-V41 为 `registered / not promoted / not live-ready`。外部 hype-trend runner 于 `2026-07-22 04:09 UTC` 观测为 V35.3 live mode，但该事实不构成 promotion，当前是待确认授权的状态冲突，见 [runner tracking](runner-tracking/hype-ema-tb-v35-post-freeze-live-parity-2026-07-22.md)。
+- 当前状态：`HYPE-EMA-TB-V35` 为 grandfathered `live / external-observation`；`V35.1` 为 `dry-run / not live-ready`；V35.2-V35.3、V36-V41 为 `registered / not promoted / not live-ready`。
 
 ## 边界
 
@@ -16,7 +16,7 @@
 
 - 主账：[hype-ema-tb-core-ledger.md](hype-ema-tb-core-ledger.md)
 - 决策记录：[decision-log.md](decision-log.md)
-- V35.1 迁移目标与禁用 runner 草案：[hype-trend-strategy-v35-1-spec.md](specs/hype-trend-strategy-v35-1-spec.md) · [hype-ema-tb-v35-1-runner-draft.md](live-specs/hype-ema-tb-v35-1-runner-draft.md)
+- V35.1 规格与 dry-run handoff：[hype-trend-strategy-v35-1-spec.md](specs/hype-trend-strategy-v35-1-spec.md) · [hype-ema-tb-v35-1-runner-draft.md](live-specs/hype-ema-tb-v35-1-runner-draft.md)
 - V35.2 空头分批观察版：[hype-trend-strategy-v35-2-spec.md](specs/hype-trend-strategy-v35-2-spec.md)
 - V35.3 非对称止损观察版：[hype-trend-strategy-v35-3-spec.md](specs/hype-trend-strategy-v35-3-spec.md)
 - 最新编号研究规格：[hype-trend-strategy-v41-spec.md](specs/hype-trend-strategy-v41-spec.md)

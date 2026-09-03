@@ -13,3 +13,13 @@
 - [binance_ohlcv_trusted_quality_audit_2026-09-03.json](binance_ohlcv_trusted_quality_audit_2026-09-03.json)：15m 与 derived v1 全量 SQL 审计。
 - [binance_ohlcv_volume_rca_2026-09-03.json](binance_ohlcv_volume_rca_2026-09-03.json)：成交额独立追溯。
 - [binance_ohlcv_no_chat_usage_2026-09-03.json](binance_ohlcv_no_chat_usage_2026-09-03.json)：无聊天查询/读取/拒绝示例 bundle。
+- [pre_round3_protected_inventory_2026-09-03.csv](pre_round3_protected_inventory_2026-09-03.csv)：第三轮受保护资产快照，不覆盖前两轮 inventory。
+- [binance_ohlcv_r3_pre_fix_repro_2026-09-03.json](binance_ohlcv_r3_pre_fix_repro_2026-09-03.json)：第三轮修复前复现。
+- [binance_ohlcv_trusted_quality_audit_r3_2026-09-03.json](binance_ohlcv_trusted_quality_audit_r3_2026-09-03.json)：R3 全量 SQL v2 + 严格内容哈希。
+- [binance_ohlcv_4h_gap_table_r3_2026-09-03.csv](binance_ohlcv_4h_gap_table_r3_2026-09-03.csv)：4h 逐 symbol 内部缺口。
+- [binance_ohlcv_volume_rca_r3_2026-09-03.json](binance_ohlcv_volume_rca_r3_2026-09-03.json)：R3 成交额独立追溯。
+- [binance_ohlcv_volume_rca_r3_six_asset_2026-09-03.csv](binance_ohlcv_volume_rca_r3_six_asset_2026-09-03.csv)
+- [binance_ohlcv_volume_rca_r3_hour_trace_2026-09-03.csv](binance_ohlcv_volume_rca_r3_hour_trace_2026-09-03.csv)
+- [binance_ohlcv_volume_rca_r3_components_2026-09-03.csv](binance_ohlcv_volume_rca_r3_components_2026-09-03.csv)
+- [binance_ohlcv_no_chat_usage_r3_2026-09-03.json](binance_ohlcv_no_chat_usage_r3_2026-09-03.json)：R3 无聊天查询/读取/拒绝示例 bundle。
+- [binance_ohlcv_r3_test_summary_2026-09-03.json](binance_ohlcv_r3_test_summary_2026-09-03.json)：R3 测试与 preflight 摘要。

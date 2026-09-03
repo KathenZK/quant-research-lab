@@ -104,6 +104,20 @@ def _type_allowed(column: str, declared: str) -> bool:
     return True
 
 
+def _type_class(column: str, declared: str) -> str:
+    if not _type_allowed(column, declared):
+        return f"illegal:{declared}"
+    if column == "ts":
+        return "timestamptz"
+    if column in BOOLEAN_COLUMNS:
+        return "boolean"
+    if column in VARCHAR_COLUMNS:
+        return "varchar"
+    if column in FLOAT_COLUMNS:
+        return "numeric"
+    return declared.upper()
+
+
 def audit_parquet_file_schemas(
     connection: duckdb.DuckDBPyConnection,
     files: list[Path],
@@ -130,7 +144,7 @@ def audit_parquet_file_schemas(
                     f"{path.name}: column {column} has type {types[column]!r}, "
                     "which is not allowed for trusted OHLCV"
                 )
-        required_types = {name: types[name] for name in REQUIRED_OHLCV_COLUMNS}
+        required_types = {name: _type_class(name, types[name]) for name in REQUIRED_OHLCV_COLUMNS}
         if reference is None:
             reference = required_types
         elif required_types != reference:

@@ -75,7 +75,9 @@ def assert_request_window_covered(
         payload["window_status"] = "REQUEST_WINDOW_EXCEEDS_AVAILABLE"
         payload["delta"] = failures
         raise ValueError(
-            f"dataset {dataset_id} request window exceeds available data: {failures}; "
+            f"dataset {dataset_id} REQUEST_WINDOW_EXCEEDS_AVAILABLE: {failures}; "
+            f"requested_end={payload['requested_end']} available_last_bar_close="
+            f"{payload['available_last_bar_close']} delta={failures}; "
             "pass allow_incomplete_request_window=True with EXPLICIT_DIAGNOSTIC to opt in"
         )
     payload["window_status"] = "COVERED"

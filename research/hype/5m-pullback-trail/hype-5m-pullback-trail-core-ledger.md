@@ -12,9 +12,9 @@
 
 - 当前版本：`HYPE-5M-PBTR-V6.2.1`。
 - 状态：`live / tiny-live-pilot`，并行保留独立 `dry-run`；证据缺失不改变既有用户授权。
-- 授权复核截至 `2026-09-24T00:00:00Z`；资金边界为专用子账户余额，禁止未记录增资。
+- 授权复核截至 `2026-12-24T00:00:00Z`（quant-runner 提交 `a5a3b2a` 将 `hype-pullback-live.approval_expires_at` 自 `2026-09-24` 续期）；资金边界为专用子账户余额，禁止未记录增资。
 - 已通过 research/runtime signal parity；真实成交生命周期、保护单、重启恢复与滑点仍阻塞 production sizing。
-- 最新零开单审计确认 runner 健康且独立重算零信号；下一门是用户决定保持、停止或调整 tiny pilot。
+- `hype-pullback-live` 于 2026-08-19 起 `strategy_health.status=halted`，live 服务仍 active；待用户决定重启 / 修正最小名义值 / 退出 pilot。见 [halted incident](runner-tracking/hype-5m-pbtr-live-halted-incident-2026-09-03.md)。
 - 实际配置、服务和运行账本只以 quant-runner 为准；并行 dry-run 不是状态降级。
 
 ## Version Rules

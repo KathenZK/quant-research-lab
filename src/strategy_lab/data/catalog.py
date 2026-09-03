@@ -19,7 +19,6 @@ from strategy_lab.data.manifest import (
     DATASET_MANIFEST_FILENAME,
     DATASET_REGISTRY_FILENAME,
     INPUT_SNAPSHOT_FILENAME,
-    INPUT_SNAPSHOTS_DIRNAME,
     LINEAGE_INCOMPLETE,
     FingerprintMode,
     assert_published_derived_manifest,
@@ -40,6 +39,7 @@ from strategy_lab.data.resample import (
 from strategy_lab.data.sessions import OHLCVSessionPolicy, timeframe_delta
 from strategy_lab.data.sql_audit import (
     SQL_AUDIT_RULE_VERSION,
+    audit_parquet_file_schemas,
     audit_selected_sql,
     describe_parquet_columns,
     timeframe_seconds,
@@ -50,8 +50,6 @@ from strategy_lab.data.windows import (
     assert_request_window_covered,
     contiguous_segments,
     gap_intervals_from_timestamps,
-    holding_window_has_gap,
-    lookback_crosses_gap,
     require_aware_utc,
 )
 
@@ -664,6 +662,8 @@ def dataset_known_limits(record: DatasetRecord) -> tuple[str, ...]:
                 "published v1 cutoff_exclusive_utc may be null; pass an explicit closed-bar cutoff",
                 "observed end is the last stored complete bar, not wall-clock today",
                 "aligned internal gaps from dropped incomplete 15m buckets are reported, not filled",
+                "new research must set gap_policy=reject or contiguous_segments; report_only is not a research default",
+                "FULL_MARKET gap_policy=reject is UNFIT while internal gaps remain",
             ]
         )
     if record.dataset_id == BINANCE_PERP_15M_NORMALIZED_V1:
@@ -898,22 +898,32 @@ def _cached_coverage_from_sql(
     cache_dir.mkdir(parents=True, exist_ok=True)
     cache_path = cache_dir / f"coverage-{cache_key}.json"
     if cache_path.exists():
-        cached = json.loads(cache_path.read_text(encoding="utf-8"))
-        if (
-            cached.get("parquet_inventory_fingerprint") == parquet_fingerprint
-            and cached.get("coverage")
-            and cached.get("union_stats")
-        ):
-            return cached["coverage"], cached["union_stats"]
+        try:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            cache_path.unlink(missing_ok=True)
+            cached = None
+        else:
+            recorded_integrity = str(cached.get("integrity_sha256") or "")
+            actual_integrity = sha256_canonical(
+                {key: value for key, value in cached.items() if key != "integrity_sha256"}
+            )
+            if (
+                recorded_integrity == actual_integrity
+                and cached.get("parquet_inventory_fingerprint") == parquet_fingerprint
+                and cached.get("coverage")
+                and cached.get("union_stats")
+            ):
+                return cached["coverage"], cached["union_stats"]
+            cache_path.unlink(missing_ok=True)
     coverage, stats = coverage_from_sql(record, files, start=start, end=end)
-    write_canonical_json(
-        cache_path,
-        {
-            "parquet_inventory_fingerprint": parquet_fingerprint,
-            "coverage": coverage,
-            "union_stats": stats,
-        },
-    )
+    payload = {
+        "parquet_inventory_fingerprint": parquet_fingerprint,
+        "coverage": coverage,
+        "union_stats": stats,
+    }
+    payload["integrity_sha256"] = sha256_canonical(payload)
+    write_canonical_json(cache_path, payload)
     return coverage, stats
 
 
@@ -1209,13 +1219,18 @@ def _sql_audit_for_record(
     if cache_path.exists():
         try:
             cached = json.loads(cache_path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
+        except json.JSONDecodeError:
             cache_path.unlink(missing_ok=True)
             cached = None
-            del exc
         else:
+            recorded_integrity = str(cached.get("integrity_sha256") or "")
+            actual_integrity = sha256_canonical(
+                {key: value for key, value in cached.items() if key != "integrity_sha256"}
+            )
             identity_ok = (
-                cached.get("parquet_inventory_fingerprint") == parquet_fingerprint
+                recorded_integrity == actual_integrity
+                and cached.get("cache_key") == cache_key
+                and cached.get("parquet_inventory_fingerprint") == parquet_fingerprint
                 and cached.get("rule_version") == SQL_AUDIT_RULE_VERSION
                 and cached.get("dataset_id") == record.dataset_id
                 and cached.get("gap_policy") == gap_policy
@@ -1250,16 +1265,16 @@ def _sql_audit_for_record(
             expected_market_type=record.market_type.value,
             files=files,
         )
-    write_canonical_json(
-        cache_path,
-        {
-            "parquet_inventory_fingerprint": parquet_fingerprint,
-            "rule_version": SQL_AUDIT_RULE_VERSION,
-            "dataset_id": record.dataset_id,
-            "gap_policy": gap_policy,
-            "audit": audit,
-        },
-    )
+    cache_payload = {
+        "cache_key": cache_key,
+        "parquet_inventory_fingerprint": parquet_fingerprint,
+        "rule_version": SQL_AUDIT_RULE_VERSION,
+        "dataset_id": record.dataset_id,
+        "gap_policy": gap_policy,
+        "audit": audit,
+    }
+    cache_payload["integrity_sha256"] = sha256_canonical(cache_payload)
+    write_canonical_json(cache_path, cache_payload)
     return audit
 
 
@@ -1305,6 +1320,16 @@ def load_trusted_dataset(
     if purpose == "research" and requested_scope == DatasetScope.EXPLICIT_DIAGNOSTIC:
         pass
     files = list_dataset_parquet_files(record, layout)
+    with _connect() as connection:
+        schema_errors = audit_parquet_file_schemas(
+            connection,
+            files,
+            expected_exchange=record.exchange,
+            expected_market_type=record.market_type.value,
+            expected_timeframe=record.timeframe,
+        )
+    if schema_errors:
+        raise ValueError(f"dataset {dataset_id} is not trusted (schema): {schema_errors}")
     start_ts = _as_utc(start, field="start")
     end_ts = _as_utc(end, field="end")
     if requested_scope == DatasetScope.FULL_MARKET and symbol is not None:
@@ -1383,16 +1408,18 @@ def load_trusted_dataset(
             end=end_ts,
         )
     verified_identity["dataset_coverage"] = dict(dataset_coverage)
-    available_start = (
-        None
-        if not dataset_coverage.get("start_utc")
-        else require_aware_utc(dataset_coverage["start_utc"], field="available_start")
-    )
-    available_end = (
-        None
-        if not dataset_coverage.get("end_utc")
-        else require_aware_utc(dataset_coverage["end_utc"], field="available_end")
-    )
+    available_start = None
+    available_end = None
+    if dataset_coverage.get("start_utc"):
+        start_raw = pd.Timestamp(dataset_coverage["start_utc"])
+        if start_raw.tzinfo is None:
+            raise ValueError(f"dataset {dataset_id} is not trusted (schema): coverage start is timezone-naive")
+        available_start = start_raw.tz_convert("UTC")
+    if dataset_coverage.get("end_utc"):
+        end_raw = pd.Timestamp(dataset_coverage["end_utc"])
+        if end_raw.tzinfo is None:
+            raise ValueError(f"dataset {dataset_id} is not trusted (schema): coverage end is timezone-naive")
+        available_end = end_raw.tz_convert("UTC")
     window = assert_request_window_covered(
         dataset_id=dataset_id,
         timeframe=record.timeframe or "15m",
@@ -1454,11 +1481,34 @@ def load_trusted_dataset(
             audit["quality_status"] = "FAIL"
             audit["trusted"] = False
         audit["blockers"] = blockers
-        audit["gap_policy"] = "fail"
+        audit["gap_policy"] = "reject"
+    elif gap_policy == "contiguous_segments":
+        audit = dict(audit)
+        audit["gap_policy"] = "contiguous_segments"
+        audit["excluded_near_gap_windows"] = int(audit.get("internal_gap_transitions") or 0)
     else:
         audit = dict(audit)
         audit["gap_policy"] = "report_only"
         audit["excluded_near_gap_windows"] = 0
+    missing = int(audit.get("internal_missing_bars") or 0)
+    row_blockers = {
+        key: value
+        for key, value in (audit.get("blockers") or {}).items()
+        if key not in {"missing_bars"} and value
+    }
+    audit["row_quality"] = "FAIL" if row_blockers else "PASS"
+    audit["historical_coverage"] = (
+        "INTERNAL_GAPS" if missing else "COMPLETE_WITHIN_OBSERVED_SPAN"
+    )
+    if gap_policy == "reject" and missing:
+        audit["research_window_fitness"] = "UNFIT"
+    elif gap_policy == "contiguous_segments" and missing:
+        audit["research_window_fitness"] = "SEGMENTS_ONLY"
+    elif missing:
+        audit["research_window_fitness"] = "GAPS_REPORTED_ONLY"
+    else:
+        audit["research_window_fitness"] = "FIT"
+    audit["listing_evidence"] = "unknown"
 
     if audit.get("quality_status") != "PASS":
         blockers = audit.get("blockers") or {}
@@ -1560,6 +1610,36 @@ def load_trusted_dataset(
             if any(bool(value) for value in pandas_blockers.values()):
                 raise ValueError(f"dataset {dataset_id} is not trusted: {pandas_blockers}")
             audit = {**audit, **report.to_dict(), "quality_status": "PASS", "trusted": True}
+    later_fp = resolve_parquet_inventory_fingerprint(
+        record.absolute_root(layout),
+        cache_dir=_audit_cache_dir(layout) if resolved_mode is FingerprintMode.FAST_METADATA else None,
+        expected=parquet_fingerprint,
+        mode=resolved_mode,
+    )
+    if later_fp != parquet_fingerprint:
+        raise ValueError(
+            f"dataset {dataset_id} input changed during trusted load: "
+            f"start={parquet_fingerprint} end={later_fp}"
+        )
+    if should_materialize and not frame.empty and record.timeframe:
+        audit = dict(audit)
+        audit["gap_intervals"] = [
+            {
+                "symbol": interval.symbol,
+                "prev_ts": interval.prev_ts.isoformat(),
+                "next_ts": interval.next_ts.isoformat(),
+                "missing_bars": interval.missing_bars,
+                "aligned": interval.aligned,
+                "listing_evidence": interval.listing_evidence,
+            }
+            for interval in symbol_gap_intervals(frame, record.timeframe)
+        ]
+        if symbol:
+            segs = contiguous_segments(frame.loc[frame["symbol"].eq(symbol), "ts"], record.timeframe)
+            audit["contiguous_segments"] = [
+                {"start_utc": start.isoformat(), "end_utc": end.isoformat(), "bars": count}
+                for start, end, count in segs
+            ]
     loaded = frame.copy()
     loaded.attrs["dataset_manifest"] = manifest
     loaded.attrs["ohlcv_audit"] = audit
@@ -1583,3 +1663,63 @@ def read_published_manifest(record: DatasetRecord, layout: DataLakeLayout) -> di
     if not path.exists():
         return None
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def symbol_gap_intervals(frame: pd.DataFrame, timeframe: str) -> list:
+    if frame.empty or "symbol" not in frame.columns or "ts" not in frame.columns:
+        return []
+    intervals = []
+    for symbol, group in frame.groupby("symbol", dropna=False):
+        intervals.extend(gap_intervals_from_timestamps(str(symbol), group["ts"], timeframe))
+    return intervals
+
+
+def load_trusted_research_dataset(
+    dataset_id: str,
+    *,
+    layout: DataLakeLayout,
+    requested_scope: DatasetScope,
+    end: pd.Timestamp | str,
+    gap_policy: GapPolicy,
+    symbol: str | None = None,
+    start: pd.Timestamp | str | None = None,
+    **kwargs: Any,
+) -> TrustedLoad:
+    if gap_policy not in {"reject", "contiguous_segments"}:
+        raise ValueError("research gap_policy must be reject or contiguous_segments")
+    return load_trusted_dataset(
+        dataset_id,
+        layout=layout,
+        requested_scope=requested_scope,
+        symbol=symbol,
+        start=start,
+        end=end,
+        purpose="research",
+        gap_policy=gap_policy,
+        fingerprint_mode=FingerprintMode.STRICT_CONTENT,
+        **kwargs,
+    )
+
+
+def read_verified_ohlcv(
+    loaded: TrustedLoad,
+    *,
+    symbol: str | None = None,
+    start: pd.Timestamp | str | None = None,
+    end: pd.Timestamp | str | None = None,
+) -> pd.DataFrame:
+    """Re-read verified parquet files with the same closed-bar cutoff as catalog."""
+
+    if not loaded.verified_parquet_files:
+        raise ValueError("trusted load has no verified parquet files")
+    start_ts = _as_utc(start, field="start")
+    end_ts = _as_utc(end, field="end")
+    if end_ts is None:
+        raise ValueError("read_verified_ohlcv requires the same explicit closed-bar cutoff")
+    return _load_selected_frame(
+        loaded.record,
+        list(loaded.verified_parquet_files),
+        symbol=symbol,
+        start=start_ts,
+        end=end_ts,
+    )

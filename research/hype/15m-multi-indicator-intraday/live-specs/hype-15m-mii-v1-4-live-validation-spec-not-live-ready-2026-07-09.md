@@ -1,3 +1,15 @@
+---
+schema_version: "1.0"
+spec_role: lab_handoff
+family_id: HYPE-15M-MII
+main_status: registered
+spec_status: draft
+strategy_id: HYPE-15M-MII-V1.4
+runner_kind: hype_mii
+peer_spec: crates/quant-runner/src/runner/strategies/hype_mii/HYPE-15M-MII-V1.4-SPEC.md
+approval_level_max: none
+---
+
 # HYPE-15M-MII-V1.4 Live Validation Spec（非实盘批准）2026-07-09
 
 Family：`HYPE-15M-Multi-Indicator-Intraday`（alias：`HYPE-15M-MII`）

@@ -1,3 +1,11 @@
+---
+schema_version: "1.0"
+spec_role: live_feasibility
+family_id: TRX-1H-AR
+strategy_id: TRX-1H-AR-LIVE-FEASIBILITY-2026-07-03
+spec_status: active
+---
+
 # TRX-1H-Adaptive-Regime 实盘可行性审计 - 2026-07-03
 
 ## 结论

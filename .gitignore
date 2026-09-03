@@ -29,6 +29,10 @@ web/.next/
 !research/hype/15m-multi-indicator-intraday/artifacts/HYPE-15M-MII-V1.4A_parity_pending_2026-07-11.json
 !research/hype/15m-ema-crossover/artifacts/HYPE-EMA-X-V18_parity_pending_2026-07-11.json
 !research/hype/15m-candle-count-reversal/artifacts/HYPE-CANDLE-COUNT-V35_parity_pending_2026-07-11.json
+!research/hype/15m-ema-trend-breakout/artifacts/HYPE-EMA-TB-V35.1_parity_pending_2026-07-20.json
+!research/hype/15m-trend-breakout-multi-indicator-ensemble/artifacts/HYPE-15M-TB-MII-ENS-V2_parity_2026-07-09.json
+!research/hype/5m-pullback-trail/artifacts/HYPE-5M-PBTR-V6.2.1_parity_2026-06.json
+!research/hype/1d-ma7-asymmetric-body-trend/artifacts/HYPE-1D-MA7-ABT-V7.1_parity_2026-08-12.json
 !research/asset-portfolios/15m-asset-specific-six-strategy-selector/artifacts/BIN-15M-AS6S-V5-JOINT-NP_parity_2026-07-15.json
 !research/asset-portfolios/15m-asset-specific-six-strategy-selector/artifacts/BIN-15M-AS6S-V6-NP_parity_2026-07-15.json
 !research/asset-portfolios/15m-asset-specific-six-strategy-selector/artifacts/BIN-15M-AS6S-V6-SBP_parity_2026-07-15.json

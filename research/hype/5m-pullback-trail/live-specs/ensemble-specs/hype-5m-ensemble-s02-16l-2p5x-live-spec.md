@@ -1,3 +1,11 @@
+---
+schema_version: "1.0"
+spec_role: ensemble_component
+family_id: HYPE-5M-PBTR
+component_id: HYPE-5M-ENS-S02
+spec_status: draft
+---
+
 # HYPE-5M-ENS-S02: 16 子腿 / 2.5x 实盘代码规格
 
 Family id: `HYPE-5M-PBTR`

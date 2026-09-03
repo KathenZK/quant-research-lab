@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import hashlib
 
 import pandas as pd
 import pytest
@@ -104,13 +105,14 @@ def _record(
     status: DatasetStatus,
     declared_scope: DatasetScope,
     timeframe: str,
+    layer: str = "normalized",
     coverage_spec=None,
     passthrough: bool = False,
     is_standard_ohlcv: bool = True,
 ) -> DatasetRecord:
     return DatasetRecord(
         dataset_id=dataset_id,
-        layer="normalized",
+        layer=layer,
         kind=DatasetKind.OHLCV,
         status=status,
         declared_scope=declared_scope,
@@ -132,21 +134,57 @@ def _record(
     )
 
 
-def _seal_derived(root: Path, dataset_id: str) -> None:
+def _seal_derived(root: Path, dataset_id: str, *, timeframe: str | None = None, declared_scope: str | None = None) -> None:
     inventory = parquet_inventory(root)
-    write_canonical_json(
-        root / DATASET_MANIFEST_FILENAME,
-        {
-            "dataset_id": dataset_id,
-            "quality_status": "TRUSTED_DERIVED",
-            "file_count": len(inventory),
-            "bytes": int(sum(int(row["size"]) for row in inventory)),
-            "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
-            "content_fingerprint": "test",
-            "input_manifest_sha256": "test-input",
-            "aggregation_formula_version": FORMULA_VERSION,
-        },
+    tf = timeframe or (
+        "1d" if ".1d." in dataset_id or dataset_id.endswith("1d")
+        else "4h" if ".4h." in dataset_id or "4h" in dataset_id
+        else "1h" if ".1h." in dataset_id or "1h" in dataset_id
+        else "4h"
     )
+    historical = dataset_id in {
+        "binance.perp.ohlcv.1h.from_15m.v1",
+        "binance.perp.ohlcv.4h.from_15m.v1",
+        "binance.perp.ohlcv.1d.from_15m.v1",
+    }
+    cutoff = None if historical else "2026-08-25T00:00:00+00:00"
+    if declared_scope is None:
+        declared_scope = "FULL_MARKET" if historical else "PARTIAL"
+    input_hash = hashlib.sha256(b"test-input").hexdigest()
+    stats = {
+        "file_count": len(inventory),
+        "bytes": int(sum(int(row["size"]) for row in inventory)),
+        "output_rows": 0,
+        "distinct_keys": 0,
+        "symbols": 0,
+        "start_utc": "2026-07-01T00:00:00+00:00",
+        "end_utc": "2026-07-01T00:00:00+00:00",
+        "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
+        "cutoff_exclusive_utc": cutoff,
+        "rebuild_command": (
+            "python research/platform/data-lake-governance/scripts/"
+            f"build_binance_derived_ohlcv_from_15m.py --timeframe {tf} "
+            f"--dataset-version v1 --input-snapshot-fingerprint {input_hash}"
+            + ("" if cutoff is None else f" --cutoff-exclusive-utc {cutoff}")
+        ),
+        "aggregation_impl_sha256": hashlib.sha256(b"test-impl").hexdigest(),
+        "input_parquet_inventory_fingerprint": input_hash,
+        "excluded_incomplete_buckets": 0,
+        "mixed_source_rows": 0,
+        "source_counts": {},
+    }
+    derived_manifest(
+        dataset_id=dataset_id,
+        status="TRUSTED_DERIVED",
+        timeframe=tf,
+        physical_root=str(root.resolve()),
+        input_dataset_id="binance.perp.ohlcv.15m.normalized.v1",
+        input_manifest_sha256=input_hash,
+        builder_path="research/platform/data-lake-governance/scripts/build_binance_derived_ohlcv_from_15m.py",
+        builder_sha256=hashlib.sha256(b"test-builder").hexdigest(),
+        stats=stats,
+        declared_scope=declared_scope,
+    ).write(root / DATASET_MANIFEST_FILENAME)
 
 
 def test_default_registry_marks_legacy_1h_partial() -> None:
@@ -223,7 +261,7 @@ def test_dataset_ids_are_not_mixed_by_recursive_glob(tmp_path: Path) -> None:
     right = _bars(start="2024-01-01", periods=4, symbol="BBB/USDT:USDT")
     left.to_parquet(a_root / "a.parquet", index=False)
     right.to_parquet(b_root / "b.parquet", index=False)
-    _seal_derived(a_root, "dataset-a")
+    _seal_derived(a_root, "dataset-a", timeframe="15m", declared_scope="PARTIAL")
     decoy = layout.normalized_dir / "ohlcv" / "exchange=binance" / "market_type=perp" / "timeframe=15m"
     decoy.mkdir(parents=True)
     _bars(start="2024-01-01", periods=4, symbol="DECOY/USDT:USDT").to_parquet(
@@ -237,6 +275,7 @@ def test_dataset_ids_are_not_mixed_by_recursive_glob(tmp_path: Path) -> None:
                 status=DatasetStatus.TRUSTED_DERIVED,
                 declared_scope=DatasetScope.PARTIAL,
                 timeframe="15m",
+                layer="derived",
             ),
             _record(
                 dataset_id="dataset-b",
@@ -244,6 +283,7 @@ def test_dataset_ids_are_not_mixed_by_recursive_glob(tmp_path: Path) -> None:
                 status=DatasetStatus.TRUSTED_DERIVED,
                 declared_scope=DatasetScope.PARTIAL,
                 timeframe="15m",
+                layer="derived",
             ),
         ]
     )
@@ -324,7 +364,7 @@ def test_full_market_coverage_uses_history_not_just_symbol_count(tmp_path: Path)
         part["ts"] = pd.date_range("2026-07-01", periods=4, freq="h", tz="UTC")
         rows.append(part)
     pd.concat(rows, ignore_index=True).to_parquet(root / "short.parquet", index=False)
-    _seal_derived(root, "short-history")
+    _seal_derived(root, "short-history", timeframe="1h", declared_scope="FULL_MARKET")
     registry = DatasetRegistry(
         [
             _record(
@@ -333,6 +373,7 @@ def test_full_market_coverage_uses_history_not_just_symbol_count(tmp_path: Path)
                 status=DatasetStatus.TRUSTED_DERIVED,
                 declared_scope=DatasetScope.FULL_MARKET,
                 timeframe="1h",
+                layer="derived",
                 passthrough=True,
                 coverage_spec=FullMarketCoverageSpec(
                     min_distinct_symbols=2,
@@ -352,6 +393,7 @@ def test_full_market_coverage_uses_history_not_just_symbol_count(tmp_path: Path)
             layout=layout,
             requested_scope=DatasetScope.FULL_MARKET,
             registry=registry,
+            purpose="governance_audit",
         )
 
 
@@ -483,33 +525,40 @@ def test_cache_sidecar_stale_and_mismatch_are_rejected(tmp_path: Path) -> None:
     parquet_path = root / "panel.parquet"
     frame.to_parquet(parquet_path, index=False)
     inventory = parquet_inventory(root)
+    input_hash = hashlib.sha256(b"input-hash").hexdigest()
     meta = {
         "schema_version": "1.0",
         "cache_id": "demo",
+        "cache_version": "v1",
+        "physical_root": str(root),
+        "input_dataset_id": "binance.perp.ohlcv.15m.normalized.v1",
+        "input_manifest_sha256": input_hash,
+        "builder_path": "builder.py",
+        "builder_sha256": hashlib.sha256(b"builder").hexdigest(),
+        "config_parameter_sha256": hashlib.sha256(b"config").hexdigest(),
+        "generated_at": "2026-09-03T00:00:00+00:00",
+        "cutoff_exclusive_utc": "2026-08-25T00:00:00+00:00",
+        "rows": 4,
+        "distinct_keys": 4,
+        "symbols": 1,
+        "start_utc": "2024-01-01T00:00:00+00:00",
+        "end_utc": "2024-01-01T01:00:00+00:00",
+        "duplicate_overlap_resolution": "none",
+        "completeness_rules": "none",
+        "null_fill_policy": "none",
+        "rebuild_command": "rebuild",
         "quality_status": "OK",
-        "input_manifest_sha256": "input-hash",
-        "parquet_inventory_fingerprint": (
-            __import__("strategy_lab.data.manifest", fromlist=["inventory_fingerprint"]).inventory_fingerprint(
-                inventory
-            )
-        ),
+        "parquet_inventory_fingerprint": inventory_fingerprint(inventory),
     }
     write_canonical_json(root / CACHE_META_FILENAME, meta)
-    assert_cache_sidecar_fresh(root, expected_input_manifest_sha256="input-hash")
+    assert_cache_sidecar_fresh(root, expected_input_manifest_sha256=input_hash)
     frame.iloc[0, frame.columns.get_loc("close")] = 999.0
     frame.to_parquet(parquet_path, index=False)
     with pytest.raises(ValueError, match="does not match sidecar"):
         assert_cache_sidecar_fresh(root)
-    frame.to_parquet(parquet_path, index=False)
-    # restore matching bytes then mark quality STALE
-    # rewrite original
     _bars(start="2024-01-01", periods=4).to_parquet(parquet_path, index=False)
     inventory = parquet_inventory(root)
-    meta["parquet_inventory_fingerprint"] = (
-        __import__("strategy_lab.data.manifest", fromlist=["inventory_fingerprint"]).inventory_fingerprint(
-            inventory
-        )
-    )
+    meta["parquet_inventory_fingerprint"] = inventory_fingerprint(inventory)
     meta["quality_status"] = "STALE"
     write_canonical_json(root / CACHE_META_FILENAME, meta)
     with pytest.raises(ValueError, match="quality_status=STALE"):
@@ -517,10 +566,10 @@ def test_cache_sidecar_stale_and_mismatch_are_rejected(tmp_path: Path) -> None:
     meta["quality_status"] = "OK"
     meta["input_manifest_sha256"] = LINEAGE_INCOMPLETE
     write_canonical_json(root / CACHE_META_FILENAME, meta)
-    with pytest.raises(ValueError, match="LINEAGE_INCOMPLETE"):
+    with pytest.raises(ValueError, match="incomplete"):
         assert_cache_sidecar_fresh(root)
-    with pytest.raises(ValueError, match="LINEAGE_INCOMPLETE"):
-        assert_cache_sidecar_fresh(root, expected_input_manifest_sha256="input-hash")
+    with pytest.raises(ValueError, match="incomplete"):
+        assert_cache_sidecar_fresh(root, expected_input_manifest_sha256=input_hash)
 
 
 def test_staging_atomic_publish_and_no_overwrite(tmp_path: Path) -> None:
@@ -584,9 +633,10 @@ def test_derived_passthrough_keeps_composite_source(tmp_path: Path) -> None:
                 dataset_id="binance.perp.ohlcv.4h.from_15m.v1",
                 relative_root="derived/datasets/binance_perp_4h_from_15m_v1",
                 status=DatasetStatus.TRUSTED_DERIVED,
-                declared_scope=DatasetScope.PARTIAL,
-                timeframe="4h",
-                passthrough=True,
+                    declared_scope=DatasetScope.FULL_MARKET,
+                    timeframe="4h",
+                    layer="derived",
+                    passthrough=True,
             )
         ]
     )
@@ -620,6 +670,7 @@ def test_missing_dataset_root_does_not_fall_back(tmp_path: Path) -> None:
                 status=DatasetStatus.TRUSTED_DERIVED,
                 declared_scope=DatasetScope.PARTIAL,
                 timeframe="1h",
+                layer="derived",
             )
         ]
     )

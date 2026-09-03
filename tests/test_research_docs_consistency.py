@@ -383,17 +383,24 @@ def tokenize_status_cell(cell: str, allowed: frozenset[str]) -> list[str]:
   return tokens
 
 
-def _iter_status_cells(md: Path):
+def _iter_status_cells(md: Path, *, skip_headings: frozenset[str] | None = None):
   """遍历 Markdown 表格中"状态"列的单元格，返回 (行号, 内容)。"""
-  for lineno, cells, status_col, _dir_col in _iter_status_rows(md):
+  for lineno, cells, status_col, _dir_col in _iter_status_rows(md, skip_headings=skip_headings):
     yield lineno, cells[status_col]
 
 
-def _iter_status_rows(md: Path):
+PLATFORM_STATUS_HEADINGS = frozenset({"研究平台"})
+
+
+def _iter_status_rows(md: Path, *, skip_headings: frozenset[str] | None = None):
   """遍历带状态列的表格行，返回 (行号, cells, status_col, dir_col)。"""
+  skipped = PLATFORM_STATUS_HEADINGS if skip_headings is None else skip_headings
   status_col = None
   dir_col = None
+  heading = ""
   for lineno, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
+    if line.startswith("## "):
+      heading = line[3:].strip()
     stripped = line.strip()
     if not stripped.startswith("|"):
       status_col = None
@@ -412,6 +419,8 @@ def _iter_status_rows(md: Path):
       )
       continue
     if status_col is None or set(stripped) <= {"|", "-", " ", ":"}:
+      continue
+    if heading in skipped:
       continue
     if len(cells) > status_col:
       yield lineno, cells, status_col, dir_col
@@ -491,6 +500,30 @@ def test_routing_table_status_labels_use_glossary_vocabulary() -> None:
           f"{rel}:L{lineno}: 状态未包含任何 glossary 主状态词: {cell}"
         )
   assert not problems, "路由表状态词校验失败:\n" + "\n".join(problems)
+
+
+def test_platform_routing_table_is_not_scored_as_strategy_status() -> None:
+  """研究平台表使用治理状态，不得被当成策略 glossary 主状态，也不得用已废弃策略词。"""
+  md = RESEARCH / "README.md"
+  strategy_lines = {lineno for lineno, _ in _iter_status_cells(md)}
+  platform_cells = [
+    cell
+    for lineno, cell in _iter_status_cells(md, skip_headings=frozenset())
+    if lineno not in strategy_lines
+  ]
+  assert platform_cells, "research/README.md 应有「研究平台」状态列且不按策略 glossary 计分"
+  token_sets = load_glossary_token_sets()
+  problems = []
+  for cell in platform_cells:
+    lowered = cell.lower()
+    hit_forbidden = [t for t in token_sets["forbidden_tokens"] if t in lowered]
+    if hit_forbidden:
+      problems.append(f"平台状态含已废弃策略词 {hit_forbidden}: {cell}")
+    hit_phrases = [p for p in token_sets["forbidden_phrases"] if p in lowered]
+    if hit_phrases:
+      problems.append(f"平台状态含已废弃策略短语 {hit_phrases}: {cell}")
+  assert not problems, "平台路由表不得借用已废弃策略状态词:\n" + "\n".join(problems)
+  assert list(_iter_status_cells(md)), "策略家族路由表状态列必须仍接受 glossary 校验"
 
 
 def test_asset_index_status_matches_top_level_or_defers() -> None:
@@ -716,6 +749,25 @@ def test_governance_schemas_accept_canonical_contracts(tmp_path: Path) -> None:
   assert not _schema_problems(joint_frontmatter, live_spec_schema)
   joint_frontmatter["strategy_id"] = "AMBIGUOUS"
   assert _schema_problems(joint_frontmatter, live_spec_schema)
+
+  scalar_frontmatter = {
+    "schema_version": "1.0",
+    "spec_role": "lab_handoff",
+    "family_id": "EXAMPLE",
+    "main_status": "registered",
+    "spec_status": "draft",
+    "approval_level_max": "none",
+    "strategy_id": "EXAMPLE-V1",
+    "runner_kind": "example",
+    "peer_spec": "crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md",
+  }
+  assert not _schema_problems(scalar_frontmatter, live_spec_schema)
+  scalar_frontmatter["peer_spec"] = (
+    "quant-runner/crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md"
+  )
+  assert any("peer_spec" in problem for problem in _schema_problems(scalar_frontmatter, live_spec_schema))
+  scalar_frontmatter["peer_spec"] = "/crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md"
+  assert any("peer_spec" in problem for problem in _schema_problems(scalar_frontmatter, live_spec_schema))
 
   sys.path.insert(0, str(ROOT))
   try:

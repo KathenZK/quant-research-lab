@@ -2,7 +2,7 @@
 
 日期：2026-09-03  
 范围：现有本地 Binance USD-M USDT perpetual OHLCV 的可信读取、截止时间、manifest、内容指纹、版本登记、缺口边界与成交额追溯。  
-状态：本文件冻结 R3 门禁。不覆盖 2026-09-02 身份契约，不把第二轮“基础设施 READY”当作本轮验收前提。
+状态：门禁已冻结；验收见 [binance-ohlcv-round3-acceptance-2026-09-03.md](../diagnostics/binance-ohlcv-round3-acceptance-2026-09-03.md)。不覆盖 2026-09-02 身份契约，不把第二轮“基础设施 READY”当作本轮验收前提。
 
 ## 硬门禁
 

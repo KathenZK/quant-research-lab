@@ -353,6 +353,23 @@ AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
 )
 
 
+CONTROLLED_EXCEPTION_PREFIXES = (
+    "research/platform/data-lake-governance/scripts/",
+)
+CATALOG_CONSUMER_MARKERS = (
+    "load_trusted_dataset",
+    "load_canonical_binance_perp_1d",
+    "load_trusted_research_dataset",
+    "read_verified_ohlcv",
+)
+BINANCE_OHLCV_PATH_TOKENS = (
+    "data/normalized/ohlcv/exchange=binance",
+    "data/derived/datasets/binance_perp",
+    "data/cache/binance_perp_1d_from_15m",
+)
+NEW_RESEARCH_WATCH_DIRS = (
+    "research/asset-portfolios/4h-ma7-regime-continuation/scripts/",
+)
 ARCHIVED_PREFIXES = (
     "archive/",
     "research/asset-portfolios/15m-asset-specific-six-strategy-selector/",
@@ -510,6 +527,49 @@ def validate_auxiliary_classifications(root: Path) -> list[str]:
     return errors
 
 
+def discover_unregistered_binance_ohlcv_scripts(root: Path) -> list[str]:
+    """Find research scripts that consume Binance OHLCV but are not registered.
+
+    Scope: catalog API usage anywhere under research/, plus lake-path tokens
+    in NEW_RESEARCH_WATCH_DIRS. Governance scripts are controlled exceptions.
+    Historical families are not auto-grandfathered by globbing; they stay on
+    FROZEN_LEGACY_OHLCV_GLOBS or must be registered before new catalog use.
+    """
+
+    registered = {
+        spec.path
+        for spec in (*ACTIVE_TRUSTED_CONSUMERS, *DELEGATING_CONSUMERS, *BINANCE_CATALOG_CONSUMERS)
+    }
+    registered.update(FROZEN_LEGACY_OHLCV_GLOBS)
+    registered.update(item.path for item in AUXILIARY_CLASSIFICATIONS)
+    errors: list[str] = []
+    research = root / "research"
+    if not research.is_dir():
+        return [f"{research}: missing research directory"]
+    for path in research.rglob("*.py"):
+        rel = path.relative_to(root).as_posix()
+        if rel.startswith(CONTROLLED_EXCEPTION_PREFIXES) or rel.startswith(ARCHIVED_PREFIXES):
+            continue
+        if Path(rel).name.startswith(PRODUCER_NAME_PREFIXES):
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError as exc:
+            errors.append(f"{rel}: unreadable ({exc})")
+            continue
+        uses_catalog = any(marker in text for marker in CATALOG_CONSUMER_MARKERS)
+        watched = any(rel.startswith(prefix) for prefix in NEW_RESEARCH_WATCH_DIRS)
+        uses_path = watched and any(token in text for token in BINANCE_OHLCV_PATH_TOKENS)
+        if (uses_catalog or uses_path) and rel not in registered:
+            errors.append(
+                f"{rel}: Binance OHLCV consumer is not registered in "
+                "scripts/governance/check_trusted_consumers.py "
+                "(add BINANCE_CATALOG_CONSUMERS, FROZEN_LEGACY_OHLCV_GLOBS, "
+                "or a controlled exception)"
+            )
+    return errors
+
+
 def run_checks(root: Path) -> list[str]:
     specs: Iterable[ConsumerSpec] = (
         *ACTIVE_TRUSTED_CONSUMERS,
@@ -523,6 +583,7 @@ def run_checks(root: Path) -> list[str]:
     ]
     errors.extend(validate_auxiliary_classifications(root.resolve()))
     errors.extend(check_new_research_forbidden_globs(root.resolve()))
+    errors.extend(discover_unregistered_binance_ohlcv_scripts(root.resolve()))
     return errors
 
 

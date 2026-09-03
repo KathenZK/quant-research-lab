@@ -2,11 +2,11 @@
 schema_version: "1.0"
 spec_role: lab_handoff
 family_id: HYPE-1D-MA7-ABT
-main_status: live spec
-spec_status: draft
+main_status: dry-run
+spec_status: active
 strategy_id: HYPE-1D-MA7-ABT-V7.1
 runner_kind: hype_1d_ma7_abt
-peer_spec: quant-runner/crates/quant-runner/src/runner/strategies/hype_1d_ma7_abt/HYPE-1D-MA7-ABT-V7.1-SPEC.md
+peer_spec: crates/quant-runner/src/runner/strategies/hype_1d_ma7_abt/HYPE-1D-MA7-ABT-V7.1-SPEC.md
 approval_level_max: dry_run
 overlays:
   - handoff
@@ -14,7 +14,7 @@ overlays:
 
 # HYPE-1D-MA7-Asymmetric-Body-Trend V7.1 Lab Live Spec
 
-> 状态：`live spec draft / runner strict parity PASS / dry-run observer started / not live-ready / approval_level_max=dry_run`。用户于 2026-08-13 授权 dry-run observer；live 仍禁用，不授权真实下单。
+> 状态：`dry-run / not live-ready / approval_level_max=dry_run`。用户于 2026-08-13 授权 dry-run；live 仍禁用，不授权真实下单。
 
 ## 身份与边界
 
@@ -33,7 +33,7 @@ overlays:
 | Runner field | Value | 说明 |
 | --- | --- | --- |
 | `strategy_id` | `HYPE-1D-MA7-ABT-V7.1` | 事件、订单、ledger 与通知里的策略身份。 |
-| `kind` | `hype_1d_ma7_abt` | runner kind 已在 `quant-runner` 实现，但配置与 lock 仍保持 disabled。 |
+| `kind` | `hype_1d_ma7_abt` | runner kind 已在 `quant-runner` 实现；dry-run 已授权，live 仍禁用。 |
 | `symbol` | `HYPE/USDT:USDT` | Binance USD-M HYPE perpetual CCXT symbol。 |
 | `timeframe` | `1d` | 只用 UTC 已闭合日线做主信号。 |
 | `target_leverage` | `1.0` | 每次实际入场以成交后权益近似 `1x` 为目标。 |
@@ -184,7 +184,7 @@ live_confirm = false
 
 1. Runner 实现 SPEC 与本 Lab SPEC 字段逐项对齐。
 2. Offline parity：同一段 HYPE 历史数据对拍 V7.1 20 笔交易，entry/exit timestamp、side、reason、price 逐笔一致。
-3. Dry-run observer：至少 90 天或至少 5 笔闭合交易；不改参数。
+3. Dry-run：至少 90 天或至少 5 笔闭合交易；不改参数。
 4. Online open/close reconciliation：抽取 runner DB/订单/日志，与研究期望开平仓逐笔对账。
 5. 若用户仍要 tiny live pilot，必须另写 launch decision，明确子账户、最大亏损、kill switch、告警、停止条件和回滚流程。
 
@@ -199,10 +199,10 @@ live_confirm = false
 - Runner SPEC：已创建并回写 strict parity PASS 与 runtime 状态机合同。
 - Remaining blockers：
   - Lab V7.1 为 post-reveal registered candidate，尚无 clean prospective；
-  - dry-run observer 已于 2026-08-13 启动，但 90 天/5 笔闭合交易观察和线上开平仓对账尚未完成；
+  - dry-run 已于 2026-08-13 启动，但 90 天/5 笔闭合交易观察和线上开平仓对账尚未完成；
   - live 描述符为 `PilotGuards`：即使以后要 tiny live，仍需 isolated、独立 `account_id`、`warmup_bars >= 2500` 和交易所 `leverage >= 3`，研究仓位仍是 `1x`。当前 live stub `leverage = 1` / `warmup_bars = 500` 不能通过 live 启动校验；
   - 本 spec `approval_level_max=dry_run`，不能作为真实下单许可。
 
 ## 外部交付说明
 
-本文件是内部 Lab handoff 草案，不是自包含复现包。若要发给同事或外部 AI，请使用同日导出的 external reproduction spec；该外发版在正文内完整包含参数、数据要求、指标公式、执行模型、验收指标和20笔交易锚点，不依赖本地文件。
+本文件是内部 Lab 交接规格，不是自包含复现包。若要发给同事或外部 AI，请使用同日导出的 external reproduction spec；该外发版在正文内完整包含参数、数据要求、指标公式、执行模型、验收指标和20笔交易锚点，不依赖本地文件。

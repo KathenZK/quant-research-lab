@@ -2,6 +2,12 @@
 
 本文件定义本仓库从研究版本推进到 runner / dry-run / live 前需要补齐的验证证据。它服务于现有状态机，不引入新状态；状态词仍以 [strategy-status-glossary.md](strategy-status-glossary.md) 为唯一来源。
 
+## 2026-09-03 修订摘要
+
+- **硬门禁后移**：门禁 0–4 与 live-executable 审计从 `registered -> live spec` 移到 `dry-run -> live`，与线上开平仓对账并列。
+- **registered 可直达 dry-run**：`registered -> live spec` 与 `registered -> dry-run` 只要求身份冻结、runner 可复现、交接规格字段齐备；dry-run 另需用户授权、对拍或 smoke、以及 `runner-tracking/`。
+- **live spec 可选**：不再是 dry-run 的必经前置。现有 dry-run 不因本修订自动降级。
+
 本规范是仓库内部工作流说明，不是对外复现规格。门禁报告应沉淀在对应策略家族目录下，core ledger 只保存状态、结论和证据链接，不承载完整实验输出。
 
 ## 2026-08-06 修订摘要
@@ -21,7 +27,7 @@
 ## 适用原则
 
 - “登记 / 冻结 Vx”只完成 `explore -> registered` 的身份固定，不是 promotion；“promote”必须明确目标状态，不得与登记混用。
-- 门禁用于状态迁移：回测结果再好，也不能绕过 `registered -> live spec -> dry-run -> live` 的 promotion review 与交接要求。
+- 门禁用于状态迁移：回测结果再好，也不能绕过 `dry-run -> live` 的硬门禁、live-executable 审计与线上开平仓对账。`registered -> dry-run` 合法直达；`live spec` 为可选中间态。
 - 阈值是默认口径：默认按本文执行；若因策略频率、样本长度、市场结构或数据可得性需要偏离，报告必须说明原因、替代口径和影响，并在家族 `decision-log.md` 记录。
 - 缺数据不是通过：硬门禁缺少必要数据时记录为未完成 blocker；相位检查缺少更细粒度数据时记录为“未检查 / 数据不足”，但不单独阻止 promotion。
 - 证据按现有目录落地：Markdown 报告进 `diagnostics/`、`ablations/` 或 `notes/`；脚本进 `scripts/`；需保留的 JSON/CSV/图表进 `artifacts/`；状态迁移结论进 `decision-log.md`；core ledger 放紧凑链接。
@@ -33,9 +39,10 @@
 | 迁移 | 需要核验的门禁 | 结果落点 |
 | --- | --- | --- |
 | `explore -> registered` | 不新增门禁；只固定版本身份、参数和证据链接 | core ledger |
-| `registered -> live spec` | 一次性核验硬门禁 0–4 + live-executable 审计，并记录相位检查项 5（可得时）：超额收益、消融、OOS/CPCV、MC、压力测试、真实下单时序；相位结果不得单独否决 | ablations / diagnostics / live-specs / decision log |
-| `live spec -> dry-run` | runner 实现、指标/信号对拍、smoke test、创建 `runner-tracking/` | live-specs / runner-tracking |
-| `dry-run -> live` | runner 观察证据、已完成的线上开平仓逐笔对账（无未解决重大偏差）、运维风控、重启恢复、missing-bar fail-closed、kill switch；离线 replay/parity 不可替代线上对账 | runner-tracking / artifacts / decision log |
+| `registered -> live spec` | 身份冻结；参数/状态机可被 runner 复现；交接规格必备字段齐备。不要求硬门禁 0–4 或 live-executable 审计 | live-specs / decision log |
+| `registered -> dry-run` | 用户显式授权；runner 实现完成；指标对拍或 smoke 通过；同一变更建立 `runner-tracking/`；身份冻结、runner 可复现、交接规格字段齐备。不要求硬门禁 0–4 或 live-executable 审计 | live-specs / runner-tracking |
+| `live spec -> dry-run` | 同 `registered -> dry-run`（尚未满足的项在本步补齐） | live-specs / runner-tracking |
+| `dry-run -> live` | 硬门禁 0–4 + live-executable 审计，并记录相位检查项 5（可得时）；runner 观察证据、已完成的线上开平仓逐笔对账（无未解决重大偏差）、运维风控、重启恢复、missing-bar fail-closed、kill switch；离线 replay/parity 不可替代线上对账；相位结果不得单独否决 | ablations / diagnostics / runner-tracking / artifacts / decision log |
 
 ## 门禁 0：超额收益基准
 
@@ -110,7 +117,7 @@
 
 判定：
 
-- 报告分布与分位数（至少中位与约 5%–10% 尾部）；若邻域轻微扰动即大面积转亏，或参数只在针尖上有效，不推进 `live spec`。
+- 报告分布与分位数（至少中位与约 5%–10% 尾部）；若邻域轻微扰动即大面积转亏，或参数只在针尖上有效，不推进 `live`。
 - 不要求四套 MC 全部通过才算过门；缺做的子集须在报告写明「不适用/未做及原因」。
 
 ## 门禁 4：压力测试
@@ -128,7 +135,7 @@
 
 判定：
 
-- 出现无法解释的裸仓、爆仓路径、保护单无效、断流后错误下单时，不推进 `live spec`。
+- 出现无法解释的裸仓、爆仓路径、保护单无效、断流后错误下单时，不推进 `live`。
 - 压力下收益变差或回撤变大，本身不是失败；失败标准是**执行与风控合同被打破**。
 
 ## 检查项 5：相位 / K 线切分边界（非强制）
@@ -164,5 +171,5 @@
 - 本次覆盖的门禁、默认口径、是否偏离、偏离原因。
 - 关键指标、分布或切片结果。
 - 硬门禁写通过 / 未通过 / 数据不足；相位检查项写已检查 / 未检查，并说明对证据置信度的影响，不给出单独准入裁决。
-- 后续状态建议：停留 `registered`、进入 `live spec`、或保持 `not promoted / not live-ready`。
+- 后续状态建议：停留 `registered`、进入 `live spec` 或 `dry-run`、申请 `live`、或保持 `not promoted / not live-ready`。
 - 证据链接：脚本、artifacts、相关 core ledger 和 decision log。

@@ -645,13 +645,14 @@ def derived_manifest(
     builder_sha256: str,
     stats: dict[str, Any],
     extra: dict[str, Any] | None = None,
+    declared_scope: str = "FULL_MARKET",
 ) -> DatasetManifest:
     payload = DatasetManifest(
         schema_version="1.0",
         dataset_id=dataset_id,
         layer="derived",
         status=status,
-        declared_scope="FULL_MARKET",
+        declared_scope=declared_scope,
         exchange="binance",
         market_type="perp",
         timeframe=timeframe,

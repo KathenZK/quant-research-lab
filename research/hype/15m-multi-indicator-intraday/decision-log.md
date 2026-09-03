@@ -2,6 +2,10 @@
 
 这是 Binance HYPEUSDT `15m` multi-indicator intraday 研究的家族级阅读路径。
 
+## 2026-09-03 — parity grandfather 续期至 2026-12-24
+
+决定：用户已在 quant-runner 提交 `a5a3b2a` 将 `HYPE-15M-MII-V1.4A`（`hype-mii-dry-run`）的 `parity_grandfather_until` 由 `2026-09-24` 续期至 `2026-12-24T00:00:00Z`。到期前须补标准 parity JSON（`conclusion=PASS`），否则 runner CI 将拒绝 `enabled`。主状态仍为 `dry-run`，本条不改变授权。
+
 ## 当前边界
 
 - 这是一个新的探索性研究家族，不是已提升的 live strategy。
