@@ -5,6 +5,12 @@ The script intentionally has no parameter search surface. It validates the
 pre-outcome frozen config and input manifest before reading forward outcomes.
 """
 
+# FAIL-FAST：本脚本是冻结历史复现入口，读取 legacy 1h glob。
+# 复现请用 P0R（catalog 路径）：
+#   scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py
+#   dataset_id = binance.perp.ohlcv.4h.from_15m.v1 / binance.perp.ohlcv.1h.from_15m.v1
+# 不要把本文件当新研究取数模板。
+
 from __future__ import annotations
 
 import argparse

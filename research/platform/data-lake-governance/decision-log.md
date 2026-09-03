@@ -23,3 +23,9 @@
 决策：Round 3 基础设施门禁记 `READY`；15m 与 `from_15m.v1` 行质量 `PASS` 但历史覆盖为内部缺口；4h 全市场研究 `gap_policy=reject` 为 `UNFIT`；消费者仍 `PARTIAL`；legacy 1h `quote_volume` 已按小时追溯但仍保留机器 blocker。不把本轮解释为策略通过，不发布生产新版本，不自动开始 4h MA7 研究。
 
 证据：[第三轮契约](specs/binance-ohlcv-round3-trusted-load-contract-2026-09-03.md)、[验收](diagnostics/binance-ohlcv-round3-acceptance-2026-09-03.md)、[问题矩阵](diagnostics/binance-ohlcv-round3-issue-matrix-2026-09-03.md)、[SQL 审计 R3](diagnostics/binance-ohlcv-trusted-quality-audit-r3-2026-09-03.md)、[成交额追溯 R3](diagnostics/binance-ohlcv-volume-rca-r3-2026-09-03.md)。
+
+## 2026-09-03 — 消费者门禁改为 deny-by-default + frozen 清单
+
+决策：`check_trusted_consumers.py` 扫描全部 `research/**/scripts/*.py`。出现 `read_parquet` 或 `data/normalized|data/derived|data/cache|data/raw` 字面量、且不在已登记白名单 / `CONTROLLED_EXCEPTION_PREFIXES` / `scripts/governance/frozen_research_scripts.txt` 的脚本 FAIL。首次把当前命中脚本全部写入冻结清单，之后清单行数只减不增。不改冻结脚本行为，不删数据。`data/cache/binance_perp_1d_from_15m` 的 `input_manifest_sha256` / `config_parameter_sha256` 无法无损回填（构建早于 manifest 哈希约定），保持 `LINEAGE_INCOMPLETE`，新代码改用 `binance.perp.ohlcv.1d.from_15m.v1`。
+
+证据：[data-lake-spec §12–§15](../../../docs/data-lake-spec.md)、[frozen_research_scripts.txt](../../../scripts/governance/frozen_research_scripts.txt)、[check_trusted_consumers.py](../../../scripts/governance/check_trusted_consumers.py)。

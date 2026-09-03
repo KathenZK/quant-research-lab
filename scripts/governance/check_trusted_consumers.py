@@ -362,14 +362,14 @@ CATALOG_CONSUMER_MARKERS = (
     "load_trusted_research_dataset",
     "read_verified_ohlcv",
 )
-BINANCE_OHLCV_PATH_TOKENS = (
-    "data/normalized/ohlcv/exchange=binance",
-    "data/derived/datasets/binance_perp",
-    "data/cache/binance_perp_1d_from_15m",
+DIRECT_LAKE_HIT_TOKENS = (
+    "read_parquet",
+    "data/normalized",
+    "data/derived",
+    "data/cache",
+    "data/raw",
 )
-NEW_RESEARCH_WATCH_DIRS = (
-    "research/asset-portfolios/4h-ma7-regime-continuation/scripts/",
-)
+FROZEN_RESEARCH_SCRIPTS_RELATIVE = "scripts/governance/frozen_research_scripts.txt"
 ARCHIVED_PREFIXES = (
     "archive/",
     "research/asset-portfolios/15m-asset-specific-six-strategy-selector/",
@@ -527,21 +527,65 @@ def validate_auxiliary_classifications(root: Path) -> list[str]:
     return errors
 
 
-def discover_unregistered_binance_ohlcv_scripts(root: Path) -> list[str]:
-    """Find research scripts that consume Binance OHLCV but are not registered.
-
-    Scope: catalog API usage anywhere under research/, plus lake-path tokens
-    in NEW_RESEARCH_WATCH_DIRS. Governance scripts are controlled exceptions.
-    Historical families are not auto-grandfathered by globbing; they stay on
-    FROZEN_LEGACY_OHLCV_GLOBS or must be registered before new catalog use.
-    """
-
-    registered = {
+def registered_consumer_paths() -> set[str]:
+    paths = {
         spec.path
-        for spec in (*ACTIVE_TRUSTED_CONSUMERS, *DELEGATING_CONSUMERS, *BINANCE_CATALOG_CONSUMERS)
+        for spec in (
+            *ACTIVE_TRUSTED_CONSUMERS,
+            *DELEGATING_CONSUMERS,
+            *BINANCE_CATALOG_CONSUMERS,
+        )
     }
-    registered.update(FROZEN_LEGACY_OHLCV_GLOBS)
-    registered.update(item.path for item in AUXILIARY_CLASSIFICATIONS)
+    paths.update(FROZEN_LEGACY_OHLCV_GLOBS)
+    paths.update(item.path for item in AUXILIARY_CLASSIFICATIONS)
+    return paths
+
+
+def family_of_research_script(relative_path: str) -> str:
+    parts = Path(relative_path).parts
+    if "scripts" in parts:
+        return "/".join(parts[: parts.index("scripts")])
+    return "."
+
+
+def parse_frozen_research_scripts(text: str) -> set[str]:
+    found: set[str] = set()
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        path = line.split("#", 1)[0].strip()
+        if path:
+            found.add(path)
+    return found
+
+
+def load_frozen_research_scripts(root: Path) -> set[str]:
+    path = root / FROZEN_RESEARCH_SCRIPTS_RELATIVE
+    if not path.is_file():
+        return set()
+    return parse_frozen_research_scripts(path.read_text(encoding="utf-8"))
+
+
+def iter_research_script_paths(root: Path) -> list[Path]:
+    research = root / "research"
+    if not research.is_dir():
+        return []
+    return [
+        path
+        for path in research.rglob("*.py")
+        if path.parent.name == "scripts"
+    ]
+
+
+def script_hits_direct_lake(text: str) -> bool:
+    return any(token in text for token in DIRECT_LAKE_HIT_TOKENS)
+
+
+def discover_unregistered_binance_ohlcv_scripts(root: Path) -> list[str]:
+    """Find research files that call catalog APIs but are not registered."""
+
+    registered = registered_consumer_paths()
     errors: list[str] = []
     research = root / "research"
     if not research.is_dir():
@@ -558,14 +602,39 @@ def discover_unregistered_binance_ohlcv_scripts(root: Path) -> list[str]:
             errors.append(f"{rel}: unreadable ({exc})")
             continue
         uses_catalog = any(marker in text for marker in CATALOG_CONSUMER_MARKERS)
-        watched = any(rel.startswith(prefix) for prefix in NEW_RESEARCH_WATCH_DIRS)
-        uses_path = watched and any(token in text for token in BINANCE_OHLCV_PATH_TOKENS)
-        if (uses_catalog or uses_path) and rel not in registered:
+        if uses_catalog and rel not in registered:
             errors.append(
                 f"{rel}: Binance OHLCV consumer is not registered in "
                 "scripts/governance/check_trusted_consumers.py "
                 "(add BINANCE_CATALOG_CONSUMERS, FROZEN_LEGACY_OHLCV_GLOBS, "
                 "or a controlled exception)"
+            )
+    return errors
+
+
+def discover_unfrozen_direct_lake_scripts(root: Path) -> list[str]:
+    """Deny-by-default scan of research/**/scripts/*.py lake readers."""
+
+    allowed = registered_consumer_paths() | load_frozen_research_scripts(root)
+    errors: list[str] = []
+    for path in iter_research_script_paths(root):
+        rel = path.relative_to(root).as_posix()
+        if rel.startswith(CONTROLLED_EXCEPTION_PREFIXES):
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError as exc:
+            errors.append(f"{rel}: unreadable ({exc})")
+            continue
+        if not script_hits_direct_lake(text):
+            continue
+        if rel not in allowed:
+            errors.append(
+                f"{rel}: unregistered direct lake/parquet reader "
+                f"(family {family_of_research_script(rel)}; "
+                "not on the trusted-consumer whitelist, "
+                "CONTROLLED_EXCEPTION_PREFIXES, or "
+                f"{FROZEN_RESEARCH_SCRIPTS_RELATIVE})"
             )
     return errors
 
@@ -584,6 +653,7 @@ def run_checks(root: Path) -> list[str]:
     errors.extend(validate_auxiliary_classifications(root.resolve()))
     errors.extend(check_new_research_forbidden_globs(root.resolve()))
     errors.extend(discover_unregistered_binance_ohlcv_scripts(root.resolve()))
+    errors.extend(discover_unfrozen_direct_lake_scripts(root.resolve()))
     return errors
 
 
@@ -606,12 +676,14 @@ def main() -> int:
         print(f"Trusted-consumer check failed with {len(errors)} error(s).")
         return 1
 
+    frozen = load_frozen_research_scripts(args.root)
     print(
         "Trusted-consumer check passed: "
         f"{len(ACTIVE_TRUSTED_CONSUMERS)} direct consumers, "
         f"{len(DELEGATING_CONSUMERS)} delegated chains, "
         f"{len(BINANCE_CATALOG_CONSUMERS)} binance catalog consumers, "
-        f"{len(AUXILIARY_CLASSIFICATIONS)} classified auxiliary readers."
+        f"{len(AUXILIARY_CLASSIFICATIONS)} classified auxiliary readers, "
+        f"{len(frozen)} frozen direct-lake scripts."
     )
     return 0
 

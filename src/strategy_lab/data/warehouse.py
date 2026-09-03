@@ -185,6 +185,12 @@ class DuckDBWarehouse:
         allowed_sources: tuple[str, ...] = DEFAULT_REAL_SOURCE_ALLOWLIST,
         blocked_source_patterns: tuple[str, ...] = DEFAULT_BLOCKED_SOURCE_PATTERNS,
     ) -> pd.DataFrame:
+        """Compatibility loader for existing research scripts.
+
+        New research must not call this method. Use
+        ``catalog.load_trusted_research_dataset`` then
+        ``catalog.require_passing_trusted`` instead.
+        """
         if session_policy is None:
             if market_type == MarketType.EQUITY:
                 raise ValueError(

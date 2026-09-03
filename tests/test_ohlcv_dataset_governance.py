@@ -681,3 +681,36 @@ def test_missing_dataset_root_does_not_fall_back(tmp_path: Path) -> None:
             requested_scope=DatasetScope.PARTIAL,
             registry=registry,
         )
+
+
+def test_new_derived_manifests_use_canonical_quality_status() -> None:
+    from strategy_lab.data.manifest import (
+        ACCEPTED_DERIVED_QUALITY,
+        CANONICAL_DERIVED_QUALITY,
+    )
+
+    assert CANONICAL_DERIVED_QUALITY == "TRUSTED_DERIVED"
+    assert ACCEPTED_DERIVED_QUALITY == {
+        "TRUSTED_DERIVED",
+        "ACCEPTED",
+        "PASS",
+        "TRUSTED",
+    }
+    manifest = derived_manifest(
+        dataset_id="binance.perp.ohlcv.1h.from_15m.v1",
+        status="TRUSTED_DERIVED",
+        timeframe="1h",
+        physical_root="/tmp/derived",
+        input_dataset_id="binance.perp.ohlcv.15m.normalized.v1",
+        input_manifest_sha256="a" * 64,
+        builder_path="scripts/build.py",
+        builder_sha256="b" * 64,
+        stats={
+            "file_count": 0,
+            "bytes": 0,
+            "output_rows": 0,
+            "distinct_keys": 0,
+            "symbols": 0,
+        },
+    )
+    assert manifest.quality_status == CANONICAL_DERIVED_QUALITY

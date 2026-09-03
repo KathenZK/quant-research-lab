@@ -9,10 +9,10 @@
 
 ## Current State
 
-- Current observation：第三轮可信读取 / 闭合截止 / 内容哈希 / 研究缺口边界。
-- Status（分项，不以笼统 READY 代替缺口）：基础设施门禁 `READY`；数据集 15m 与 `from_15m.v1` 行质量 `PASS`、历史覆盖 `INTERNAL_GAPS`；4h 全市场研究 `gap_policy=reject` 为 `UNFIT`；legacy 1h 仍是 `PARTIAL_SCOPE_LEGACY`；家族缓存仍是 `FAMILY_CACHE`；消费者 `PARTIAL`；legacy 1h `quote_volume` 有本地追溯但仍保留 blocker。这不是策略 PASS。
+- Current observation：消费者门禁改为 deny-by-default：扫描 `research/**/scripts/*.py` 的 `read_parquet` 与湖路径字面量；未登记、非受控例外、不在 `frozen_research_scripts.txt` 的新脚本 FAIL。Round 3 可信读取 / 闭合截止 / 内容哈希 / 研究缺口边界仍保留。
+- Status（分项，不以笼统 READY 代替缺口）：基础设施门禁 `READY`；数据集 15m 与 `from_15m.v1` 行质量 `PASS`、历史覆盖 `INTERNAL_GAPS`；4h 全市场研究 `gap_policy=reject` 为 `UNFIT`；legacy 1h 仍是 `PARTIAL_SCOPE_LEGACY`；家族缓存仍是 `FAMILY_CACHE`；消费者 `PARTIAL`（历史直读已冻结清单，新直读默认拒绝）；legacy 1h `quote_volume` 有本地追溯但仍保留 blocker。这不是策略 PASS。
 - Runner / dry-run / live：none。
-- Next gate：不自动开始 4h MA7 研究；不删除旧数据；破坏性清理、面板重建、历史脚本迁移仍待用户批准。
+- Next gate：不自动开始 4h MA7 研究；不删除旧数据；破坏性清理、面板重建、历史脚本迁移仍待用户批准。冻结清单只减不增。
 
 ## Version Rules
 

@@ -24,5 +24,5 @@
 - P0 结果报告：[diagnostics/binance-4h-ma7-regime-continuation-p0-results-2026-09-02.md](diagnostics/binance-4h-ma7-regime-continuation-p0-results-2026-09-02.md)
 - P0 数据范围修正：[diagnostics/binance-4h-ma7-regime-continuation-p0-data-scope-correction-2026-09-02.md](diagnostics/binance-4h-ma7-regime-continuation-p0-data-scope-correction-2026-09-02.md)
 - P0R-DATA 合同：[specs/binance-4h-ma7-regime-continuation-p0r-data-contract-2026-09-03.md](specs/binance-4h-ma7-regime-continuation-p0r-data-contract-2026-09-03.md)
-- 脚本：[scripts/research_binance_4h_ma7_regime_continuation_p0.py](scripts/research_binance_4h_ma7_regime_continuation_p0.py) · [P0R-DATA](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py)
+- 脚本：[scripts/research_binance_4h_ma7_regime_continuation_p0.py](scripts/research_binance_4h_ma7_regime_continuation_p0.py)（冻结历史复现，复现请用 P0R catalog 路径） · [P0R-DATA](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py)
 - 产物索引：[artifacts/README.md](artifacts/README.md)

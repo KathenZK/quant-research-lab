@@ -257,12 +257,20 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 本规范的主要代码实现位于：
 
 - [`models.py`](../src/strategy_lab/data/models.py)：市场类型与数据集 schema；
+- [`settings.py`](../src/strategy_lab/data/settings.py)：仓库根路径与共享/本地存储配置；
+- [`fs.py`](../src/strategy_lab/data/fs.py)：文件锁与原子写入；
 - [`lake.py`](../src/strategy_lab/data/lake.py)：分层与分区路径，含 `derived/`；
 - [`store.py`](../src/strategy_lab/data/store.py)：身份校验、按日和原子写入；
+- [`normalize.py`](../src/strategy_lab/data/normalize.py)：时区与列规范化；
 - [`sessions.py`](../src/strategy_lab/data/sessions.py)：session policy 与 XNAS
   regular-session 权威 bar 网格；
 - [`quality.py`](../src/strategy_lab/data/quality.py)：schema、重复、连续性与对齐审计；
-- [`warehouse.py`](../src/strategy_lab/data/warehouse.py)：过滤读取与旧 trusted loader；
+- [`sql_audit.py`](../src/strategy_lab/data/sql_audit.py)：DuckDB SQL 质量审计，输出
+  `load_audit.quality_status` 为 `PASS` / `FAIL`；
+- [`windows.py`](../src/strategy_lab/data/windows.py)：cutoff、闭合 bar 窗口与
+  `gap_policy`；
+- [`warehouse.py`](../src/strategy_lab/data/warehouse.py)：过滤读取；其中
+  `load_trusted_ohlcv` 是**兼容层，新研究禁用**；
 - [`authenticity.py`](../src/strategy_lab/data/authenticity.py)：真实来源审计，含
   `composite:` 混合来源；
 - [`catalog.py`](../src/strategy_lab/data/catalog.py)：dataset_id 注册表、scope gate、
@@ -270,6 +278,14 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 - [`manifest.py`](../src/strategy_lab/data/manifest.py)：dataset manifest 与
   `.cache-meta.json`；
 - [`resample.py`](../src/strategy_lab/data/resample.py)：accepted 15m 完整桶聚合。
+
+新研究读取标准 OHLCV 的必经步骤：
+
+1. `catalog.load_trusted_research_dataset(..., end=..., gap_policy="reject"|"contiguous_segments")`（强制 `purpose="research"` 与严格指纹）；
+2. `catalog.require_passing_trusted(loaded)`，确认 `load_audit.quality_status=PASS` 且存在 `verified_parquet_files`；
+3. 只用返回的 verified 文件或 `read_verified_ohlcv`，禁止自行 `read_parquet` 湖路径。
+
+`warehouse.load_trusted_ohlcv` 仅供尚未迁移的历史脚本。新家族、新阶段、新实验不得再调用。
 
 实现与本规范冲突时，必须先修正规范或实现并补测试，不得在其他文档建立第二套约定。
 
@@ -306,6 +322,19 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 - `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`：`TRUSTED_DERIVED`；
 - `binance.perp.ohlcv.1d.cache.from_15m` 与 `binance.perp.panel.1d.ma7_rc.p0/p3`：
   `FAMILY_CACHE`。
+
+### 质量词表对照表
+
+这四套词**不是**同一个字段，禁止互相替换或把 `PASS` 写成数据集 `status`。
+
+| 词表 | 字段 / 载体 | 含义 | 允许值 |
+| --- | --- | --- | --- |
+| `registered_status` | `DatasetStatus`（注册表 / catalog record `status`） | 数据集身份与 scope 资格 | `TRUSTED_BASE` / `TRUSTED_DERIVED` / `PARTIAL_SCOPE` / `PARTIAL_SCOPE_LEGACY` / `FAMILY_CACHE` / `UNACCEPTED` / `DEPRECATED` |
+| `publish_quality` | derived `_MANIFEST.json` 的 `quality_status` | 发布时自证的质量标签 | **新写规范值唯一** `TRUSTED_DERIVED`。读取仍兼容 `ACCEPTED` / `PASS` / `TRUSTED`（见 `ACCEPTED_DERIVED_QUALITY`） |
+| `load_audit` | `sql_audit` / `TrustedLoad.audit["quality_status"]` | 本次读取窗口的 SQL 行质量 | `PASS` / `FAIL`。`require_passing_trusted` 要求 `PASS` |
+| legacy attrs 审计 | `DataFrame.attrs["ohlcv_audit"]`（`warehouse.load_trusted_ohlcv`） | 兼容层 pandas 帧内审计，不是 catalog 审计 | 由 `quality.audit_ohlcv_frame` 的 dict 构成；不得当作 `load_audit` |
+
+`FULL_MARKET` 读取必须同时满足：注册 `status` 为 `TRUSTED_BASE` 或 `TRUSTED_DERIVED`，且本次 `load_audit` 为 `PASS`。`publish_quality=TRUSTED_DERIVED` 不能替代 SQL `PASS`。
 
 ## 14. 标准衍生 OHLCV
 
@@ -351,6 +380,16 @@ rebuild command、quality status。
 
 家族面板（含指标、标签、未来路径字段）不是标准 OHLCV。长期目标是从 canonical
 derived 1d 重建这些面板，而不是让其他家族直接依赖它们。
+
+`data/cache/binance_perp_1d_from_15m`（`binance.perp.ohlcv.1d.cache.from_15m`）
+的 sidecar 中 `input_manifest_sha256` 与 `config_parameter_sha256` 现为
+`LINEAGE_INCOMPLETE`。该缓存只允许 `scripts/governance/frozen_research_scripts.txt`
+上的冻结脚本读取。新代码必须改用 `binance.perp.ohlcv.1d.from_15m.v1`。
+
+未能无损补齐这两项哈希：缓存由 2026-08-18 的 MCSM-LS3 构建标记生成，早于
+derived `_MANIFEST.json` 与参数哈希约定；`_build_complete.json` 只有月份列表与
+文字 provenance，没有当时 15m manifest SHA 或 config digest。用今天的 15m
+manifest 或当前 builder 文件哈希回填会伪造 lineage，因此保持 `LINEAGE_INCOMPLETE`。
 
 ## 16. Binance OHLCV：查询 → 选版本 → 验证 → 读取 → 固定输入
 

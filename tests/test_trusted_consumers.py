@@ -112,6 +112,30 @@ def test_unregistered_binance_catalog_consumer_is_detected(tmp_path: Path) -> No
     assert any("new_unregistered.py" in error for error in errors)
 
 
+def test_unregistered_direct_parquet_script_is_denied(tmp_path: Path) -> None:
+    scripts = tmp_path / "research" / "hype" / "1h-adaptive-regime" / "scripts"
+    scripts.mkdir(parents=True)
+    (scripts / "probe_untrusted_reader.py").write_text(
+        'frame = read_parquet("data/normalized/ohlcv/exchange=binance/demo.parquet")\n',
+        encoding="utf-8",
+    )
+    errors = check_trusted_consumers.discover_unfrozen_direct_lake_scripts(tmp_path)
+    assert any("probe_untrusted_reader.py" in error for error in errors)
+
+
+FROZEN_RESEARCH_SCRIPTS_MAX_LINES = 259
+
+
+def test_frozen_research_scripts_can_only_shrink() -> None:
+    path = GOVERNANCE_SCRIPTS / "frozen_research_scripts.txt"
+    raw = path.read_bytes()
+    line_count = raw.count(b"\n")
+    if raw and not raw.endswith(b"\n"):
+        line_count += 1
+    assert line_count <= FROZEN_RESEARCH_SCRIPTS_MAX_LINES
+    assert line_count > 0
+
+
 def test_unregistered_catalog_consumer_outside_watch_dir_is_detected(tmp_path: Path) -> None:
     """Catalog API use is in-scope for all of research/, not only the 4h watch dir."""
     scripts = tmp_path / "research" / "btc" / "1h-new-family" / "scripts"

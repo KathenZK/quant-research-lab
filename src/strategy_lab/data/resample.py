@@ -12,6 +12,7 @@ import pandas as pd
 
 from strategy_lab.data.authenticity import make_composite_source
 from strategy_lab.data.manifest import (
+    CANONICAL_DERIVED_QUALITY,
     DATASET_MANIFEST_FILENAME,
     DatasetManifest,
     inventory_fingerprint,
@@ -676,7 +677,7 @@ def derived_manifest(
         symbol_count=int(stats.get("symbols") or 0),
         rebuildable=True,
         rebuild_command=stats.get("rebuild_command") or "",
-        quality_status="TRUSTED_DERIVED",
+        quality_status=CANONICAL_DERIVED_QUALITY,
         content_fingerprint="",
         extra=extra or {
             "null_fill_policy": NULL_FILL_POLICY,
