@@ -34,6 +34,7 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+@pytest.mark.local_data
 def test_frozen_p0r_data_config_and_manifest_hashes_match() -> None:
     config = MODULE.validate_frozen_config()
     assert config["study_id"] == "BIN-4H-MA7-RC-P0R-DATA"
@@ -54,6 +55,7 @@ def test_p0r_data_outputs_do_not_collide_with_p0() -> None:
     assert not (p0_paths & planned)
 
 
+@pytest.mark.local_data
 def test_p0_artifacts_remain_intact() -> None:
     MODULE.assert_p0_artifacts_intact()
     p0_summary = (

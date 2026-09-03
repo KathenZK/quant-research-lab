@@ -7,6 +7,9 @@ import math
 from pathlib import Path
 import sys
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -48,6 +51,7 @@ def test_frozen_arms_do_not_change_exit_layer() -> None:
     ]
 
 
+@pytest.mark.local_data
 def test_locked_artifact_has_exact_ma05_parity() -> None:
     payload = load_artifact()
     assert all(
@@ -62,6 +66,7 @@ def test_locked_artifact_has_exact_ma05_parity() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_fixed_half_is_only_mdd20_pass_but_fails_retention() -> None:
     payload = load_artifact()
     passing = [
@@ -75,6 +80,7 @@ def test_fixed_half_is_only_mdd20_pass_but_fails_retention() -> None:
     assert not verdict["continuation_candidate"]
 
 
+@pytest.mark.local_data
 def test_dynamic_promotions_fail_lag_and_candidate_gate() -> None:
     payload = load_artifact()
     for arm in ("MA05_P50_C1", "MA05_P50_C2", "MA05_P25_C2"):
@@ -83,6 +89,7 @@ def test_dynamic_promotions_fail_lag_and_candidate_gate() -> None:
         assert not payload["verdict"][arm]["continuation_candidate"]
 
 
+@pytest.mark.local_data
 def test_artifact_sha256_sidecar() -> None:
     digest = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     sidecar = Path(f"{ARTIFACT}.sha256").read_text(encoding="utf-8").split()[0]

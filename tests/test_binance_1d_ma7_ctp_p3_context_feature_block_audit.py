@@ -2,6 +2,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import pytest
+pytestmark = pytest.mark.local_data
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILY_DIR = ROOT / "research/asset-portfolios/1d-ma7-cross-trend-probability"

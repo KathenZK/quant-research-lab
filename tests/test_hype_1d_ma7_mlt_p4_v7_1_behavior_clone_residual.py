@@ -9,6 +9,8 @@ import sys
 
 import pandas as pd
 
+import pytest
+pytestmark = pytest.mark.local_data
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (

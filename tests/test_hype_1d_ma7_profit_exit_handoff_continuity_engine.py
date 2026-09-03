@@ -76,6 +76,7 @@ def test_slope_off_does_not_require_previous_ma() -> None:
     assert result["slope_atr"] is None
 
 
+@pytest.mark.local_data
 def test_disabled_pehc_is_exact_fixed_oapp_parity_on_real_book() -> None:
     engine = load(ENGINE_PATH, "pehc_engine_real_parity")
     research = load(RESEARCH_PATH, "pehc_oapp_research_real_parity")
@@ -105,6 +106,7 @@ def test_disabled_pehc_is_exact_fixed_oapp_parity_on_real_book() -> None:
     assert candidate.handoff_events == []
 
 
+@pytest.mark.local_data
 def test_real_candidate_creates_isolated_shadow_events() -> None:
     engine = load(ENGINE_PATH, "pehc_engine_real_shadow")
     research = load(RESEARCH_PATH, "pehc_oapp_research_real_shadow")
@@ -128,6 +130,7 @@ def test_real_candidate_creates_isolated_shadow_events() -> None:
     assert not result.raw.metrics["bankrupt_intraday"]
 
 
+@pytest.mark.local_data
 def test_old_h_expiry_boundary_and_execution_timing_are_exact() -> None:
     engine = load(ENGINE_PATH, "pehc_engine_old_h_timing")
     research = load(RESEARCH_PATH, "pehc_oapp_research_old_h_timing")
@@ -164,6 +167,7 @@ def test_old_h_expiry_boundary_and_execution_timing_are_exact() -> None:
     assert delayed_accept["price"] == 66.743
 
 
+@pytest.mark.local_data
 def test_shadow_only_control_changes_no_funded_path() -> None:
     engine = load(ENGINE_PATH, "pehc_engine_shadow_only")
     research = load(RESEARCH_PATH, "pehc_oapp_research_shadow_only")

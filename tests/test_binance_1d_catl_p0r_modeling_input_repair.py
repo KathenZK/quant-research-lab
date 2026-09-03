@@ -8,6 +8,9 @@ from pathlib import Path
 
 import duckdb
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILY_DIR = (
@@ -45,6 +48,7 @@ def test_frozen_repair_constants_and_hype_asset_boundary():
     assert mod.MAX_ABS_RET_1D == 3.00
 
 
+@pytest.mark.local_data
 def test_output_physically_excludes_hype_but_not_hyper_and_respects_cutoff():
     mod = load_module()
     con = duckdb.connect()
@@ -70,6 +74,7 @@ def test_output_physically_excludes_hype_but_not_hyper_and_respects_cutoff():
     assert str(row[4]) < mod.CUTOFF_UTC
 
 
+@pytest.mark.local_data
 def test_causal_volatility_state_uses_only_strictly_prior_asset_rows():
     mod = load_module()
     con = duckdb.connect()
@@ -120,6 +125,7 @@ def test_causal_volatility_state_uses_only_strictly_prior_asset_rows():
     assert mismatch == 0
 
 
+@pytest.mark.local_data
 def test_liquidity_rank_is_donor_tradable_point_in_time_only():
     mod = load_module()
     con = duckdb.connect()
@@ -161,6 +167,7 @@ def test_liquidity_rank_is_donor_tradable_point_in_time_only():
     assert nontradable_ranked == 0
 
 
+@pytest.mark.local_data
 def test_model_eligibility_is_reconstructable_and_complete_path_specific():
     mod = load_module()
     con = duckdb.connect()
@@ -186,6 +193,7 @@ def test_model_eligibility_is_reconstructable_and_complete_path_specific():
     assert mismatch == 0
 
 
+@pytest.mark.local_data
 def test_feature_allowlist_exists_in_panel_and_excludes_outcomes_and_legacy_fields():
     feature_spec = json.loads(
         (ARTIFACT_DIR / "binance_1d_catl_p0r_feature_blocks.json").read_text(
@@ -213,6 +221,7 @@ def test_feature_allowlist_exists_in_panel_and_excludes_outcomes_and_legacy_fiel
     assert set(allowed).issubset(columns)
 
 
+@pytest.mark.local_data
 def test_manifest_lineage_hashes_and_ready_verdict():
     manifest = json.loads(
         (ARTIFACT_DIR / "binance_1d_catl_p0r_manifest.json").read_text(

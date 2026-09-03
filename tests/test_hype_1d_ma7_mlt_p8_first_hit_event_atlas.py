@@ -57,6 +57,7 @@ def test_p8_contract_constants_are_frozen() -> None:
     assert subject.SLIPPAGE == 0.0004
 
 
+@pytest.mark.local_data
 def test_p8_development_manifest_locks_hype_holdout_and_hashes_sources() -> None:
     manifest_path = ARTIFACT_DIR / f"{PREFIX}_development_manifest.json"
     summary_path = ARTIFACT_DIR / f"{PREFIX}_summary.json"
@@ -77,6 +78,7 @@ def test_p8_development_manifest_locks_hype_holdout_and_hashes_sources() -> None
     assert not (ARTIFACT_DIR / f"{PREFIX}_validation_summary.json").exists()
 
 
+@pytest.mark.local_data
 def test_p8_events_and_first_hit_matrix_integrity() -> None:
     events_path = ARTIFACT_DIR / f"{PREFIX}_events.csv"
     matrix_path = ARTIFACT_DIR / f"{PREFIX}_first_hit_matrix.csv"
@@ -109,6 +111,7 @@ def test_p8_events_and_first_hit_matrix_integrity() -> None:
     assert set(events["side"].astype(int).unique()) == {-1, 1}
 
 
+@pytest.mark.local_data
 def test_p8_state_matrices_controls_and_bootstrap_exist() -> None:
     feature_path = ARTIFACT_DIR / f"{PREFIX}_feature_bin_stats.csv"
     two_way_path = ARTIFACT_DIR / f"{PREFIX}_two_way_state_matrix.csv"
@@ -139,6 +142,7 @@ def test_p8_state_matrices_controls_and_bootstrap_exist() -> None:
     assert {"all", "long", "short"}.issubset(set(boot["scope"].unique()))
 
 
+@pytest.mark.local_data
 def test_p8_html_contains_ma7_paths_and_interactivity() -> None:
     html_path = ARTIFACT_DIR / f"{PREFIX}.html"
     manifest_path = ARTIFACT_DIR / f"{PREFIX}_html_manifest.json"

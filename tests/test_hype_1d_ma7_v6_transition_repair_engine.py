@@ -9,6 +9,9 @@ from typing import Any
 
 import numpy as np
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = ROOT / "research/hype/1d-ma7-asymmetric-body-trend/scripts"
@@ -195,6 +198,7 @@ def test_config_validation_and_canonical_infinity() -> None:
         raise AssertionError("invalid cooldown accepted")
 
 
+@pytest.mark.local_data
 def test_transformed_global_off_has_exact_v6_parity() -> None:
     adapter = load(ADAPTER_PATH, "test_v6_transition_repair_adapter")
     context = adapter.load_context()

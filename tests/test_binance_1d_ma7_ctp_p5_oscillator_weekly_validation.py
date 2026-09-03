@@ -48,12 +48,12 @@ def independent_wilder_rsi(close: list[float], period: int = 6) -> list[float]:
     avg_gain = sum(gains[:period]) / period
     avg_loss = sum(losses[:period]) / period
 
-    def value(g: float, l: float) -> float:
-        if g == 0 and l == 0:
+    def value(g: float, loss: float) -> float:
+        if g == 0 and loss == 0:
             return 50.0
-        if l == 0:
+        if loss == 0:
             return 100.0
-        return 100.0 - 100.0 / (1.0 + g / l)
+        return 100.0 - 100.0 / (1.0 + g / loss)
 
     out[period] = value(avg_gain, avg_loss)
     for i in range(period + 1, len(close)):

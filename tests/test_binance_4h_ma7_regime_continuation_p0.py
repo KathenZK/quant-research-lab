@@ -59,6 +59,7 @@ def hourly_frame(
     )
 
 
+@pytest.mark.local_data
 def test_frozen_config_and_manifest_hashes_match() -> None:
     config = MODULE.validate_frozen_config()
     assert config["study_id"] == "BIN-4H-MA7-RC-P0"

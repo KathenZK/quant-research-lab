@@ -9,6 +9,9 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILY_DIR = ROOT / "research/asset-portfolios/1d-ma7-cross-trend-probability"
@@ -47,6 +50,7 @@ def test_frozen_objective_and_single_pooled_model_contract():
     assert mod.COMMON_LGBM_PARAMS["n_estimators"] == 1000
 
 
+@pytest.mark.local_data
 def test_input_hashes_hype_boundary_hyper_and_event_counts():
     mod = load_module()
     feature_spec, audit = mod.validate_inputs()
@@ -68,6 +72,7 @@ def test_input_hashes_hype_boundary_hyper_and_event_counts():
     assert event_audit["duplicate_asset_ts"] == 0
 
 
+@pytest.mark.local_data
 def test_feature_allowlist_only_f0_f1_and_no_forbidden_x():
     feature_spec = json.loads((ARTIFACT_DIR / "binance_1d_ma7_ctp_p2_feature_spec.json").read_text(encoding="utf-8"))
     assert set(feature_spec["schemes"]) == {"F0_MA7_CORE", "F1_MA7_PATH"}
@@ -120,6 +125,7 @@ def test_feature_allowlist_only_f0_f1_and_no_forbidden_x():
     assert not any(any(token in feature.lower() for token in forbidden_tokens) for feature in card["features"])
 
 
+@pytest.mark.local_data
 def test_oof_contains_only_real_pre2025_ma7_crosses_and_one_direction():
     summary = load_summary()
     assert summary["objective_ma7_cross_only"] is True
@@ -139,6 +145,7 @@ def test_oof_contains_only_real_pre2025_ma7_crosses_and_one_direction():
     assert set(oof["selected_model_id"].unique()) == {summary["development"]["selected_model_id"]}
 
 
+@pytest.mark.local_data
 def test_t1_features_are_strict_prior_day_lags():
     mod = load_module()
     feature_spec = json.loads((ARTIFACT_DIR / "binance_1d_ma7_ctp_p2_feature_spec.json").read_text(encoding="utf-8"))
@@ -178,6 +185,7 @@ def test_t1_features_are_strict_prior_day_lags():
         )
 
 
+@pytest.mark.local_data
 def test_exact_purge_training_validation_metrics_and_no_2025_selection():
     summary = load_summary()
     metrics = pd.read_parquet(ARTIFACT_DIR / "binance_1d_ma7_ctp_p2_fold_metrics.parquet")
@@ -208,6 +216,7 @@ def test_platt_method_is_not_overwritten_when_calibration_improves():
     assert calibration["calibrated_log_loss"] < calibration["raw_log_loss"]
 
 
+@pytest.mark.local_data
 def test_forward_calibration_is_temporally_isolated_and_separate_from_ranking():
     summary = load_summary()
     selected = summary["development"]["selected_model_id"]
@@ -242,6 +251,7 @@ def test_forward_calibration_is_temporally_isolated_and_separate_from_ranking():
         )
 
 
+@pytest.mark.local_data
 def test_pooled_not_split_into_long_short_heads_and_side_strata_exist():
     summary = load_summary()
     assert summary["one_pooled_model_only"] is True
@@ -252,6 +262,7 @@ def test_pooled_not_split_into_long_short_heads_and_side_strata_exist():
     assert not any(col.startswith("p_long") or col.startswith("p_short") for col in oof.columns)
 
 
+@pytest.mark.local_data
 def test_bootstrap_lago_non_overlap_and_recomputed_metrics():
     summary = load_summary()
     assert summary["bootstrap"]["same_resampling_indices_for_all_models"] is True
@@ -266,6 +277,7 @@ def test_bootstrap_lago_non_overlap_and_recomputed_metrics():
     assert abs(f1_diff - summary["bootstrap"]["f1_minus_f0_auc_diff"]["point"]) < 1e-12
 
 
+@pytest.mark.local_data
 def test_deciles_and_no_strategy_live_ready_artifacts():
     summary = load_summary()
     deciles = pd.read_parquet(ARTIFACT_DIR / "binance_1d_ma7_ctp_p2_decile_metrics.parquet")

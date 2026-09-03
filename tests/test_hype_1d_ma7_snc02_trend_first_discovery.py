@@ -7,6 +7,8 @@ import math
 from pathlib import Path
 import sys
 
+import pytest
+pytestmark = pytest.mark.local_data
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_SCRIPT = (

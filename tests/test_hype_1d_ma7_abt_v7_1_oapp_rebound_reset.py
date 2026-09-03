@@ -6,6 +6,9 @@ import sys
 
 import pandas as pd
 
+import pytest
+
+
 
 SCRIPT_PATH = (
     Path(__file__).resolve().parents[1]
@@ -59,6 +62,7 @@ def test_rebound_reset_requires_two_non_rising_eligible_closes() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_rr_incident_switch_prevents_august_16_exit_but_is_terminal_censored() -> None:
     v6 = DIAGNOSTIC.load_module(DIAGNOSTIC.V6_ABLATION_PATH, "rr_test_v6")
     engine = DIAGNOSTIC.load_module(DIAGNOSTIC.ENGINE_PATH, "rr_test_engine")

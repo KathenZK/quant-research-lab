@@ -107,6 +107,7 @@ def test_final_search_grid_cardinality_is_4464() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_btc_file_hash_is_nonempty_and_deterministic() -> None:
     research = load_research()
     digest = research.sha256(research.BTC_PATH)

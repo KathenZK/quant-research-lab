@@ -57,6 +57,17 @@ uv run python scripts/governance/inventory_artifacts.py \
 
 人工清单按 artifacts 根目录的父路径汇总为“家族/主题路径”，包含文件数、总大小、最大文件和 Markdown 精确引用覆盖率；逐文件路径、大小、引用来源、预算级别和保留提示写入 JSON。导出结果不得作为当前磁盘状态的长期事实来源，使用后可直接删除。
 
+## Git 白名单与 SHA256 sidecar
+
+`.gitignore` 默认忽略所有 `**/artifacts/**`，只放开目录本身和 `*.md`。非 Markdown 产物若要进入 Git，必须同时满足：
+
+1. 路径匹配 [`tracked-artifacts-allowlist.txt`](./tracked-artifacts-allowlist.txt) 中的某一 glob（一行一个 glob，行尾注释家族路径）；
+2. 使用 `git add -f` 加入索引。`scripts/governance/check_tracked_artifacts.py` 会检查 `git ls-files` 中所有 `research/**/artifacts/**` 文件，未匹配清单则 FAIL。该检查已加入 `preflight.py` 的 governance 步骤。
+
+已 tracked 的文件不得因白名单迁移而删除。新增大文件时，优先在 Git 中只保留小型摘要、生成说明和 **SHA256 sidecar**（`<file>.sha256`），完整二进制留在本地忽略路径或外置存储；不要把大矩阵、完整预测缓存或原始行情湖提交进仓库。sidecar 用于在干净环境校验回取对象，而不是替代预算门禁。
+
+当前清单覆盖仓库里已 tracked 的全部 artifacts 文件（含 Markdown 与历史治理证据）。新增非 Markdown 证据时先扩 glob，再 `git add -f`。
+
 ## 新产物准入
 
 - 先说明产物是不可替代证据还是可再生输出，并记录生成脚本、输入身份和参数。

@@ -6,6 +6,9 @@ import sys
 
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -40,6 +43,7 @@ def test_feature_blocks_are_cumulative() -> None:
     assert len(set(b3)) == len(b3)
 
 
+@pytest.mark.local_data
 def test_development_loader_is_physically_train_only() -> None:
     subject = load_subject()
     p4 = subject.load_module(subject.P4_SCRIPT, "hype_p5_test_p4")

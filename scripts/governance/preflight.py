@@ -51,6 +51,10 @@ def main() -> int:
             [python, "scripts/governance/check_artifact_inventory.py"],
         ),
         (
+            "tracked artifacts allowlist",
+            [python, "scripts/governance/check_tracked_artifacts.py"],
+        ),
+        (
             "trusted research consumers",
             [python, "scripts/governance/check_trusted_consumers.py"],
         ),

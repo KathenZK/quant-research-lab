@@ -7,6 +7,7 @@ import re
 
 import pytest
 
+pytestmark = pytest.mark.local_data
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT_DIR = ROOT / "research/hype/1d-ma7-machine-learning-trend/artifacts"

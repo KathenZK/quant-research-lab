@@ -8,6 +8,9 @@ import sys
 import numpy as np
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -39,6 +42,7 @@ def test_three_head_contract_and_protective_stop_delegation() -> None:
     assert subject.REVERSAL_THRESHOLD == 0.70
 
 
+@pytest.mark.local_data
 def test_development_context_is_physically_train_only() -> None:
     subject = load_subject()
     p4 = subject.load_module(subject.P4_SCRIPT, "hype_p6_test_p4")
@@ -76,6 +80,7 @@ def test_complete_rows_honors_time_and_label_boundary() -> None:
     assert result["index"].tolist() == [1]
 
 
+@pytest.mark.local_data
 def test_failed_development_manifest_keeps_holdout_locked() -> None:
     subject = load_subject()
     manifest_path = ARTIFACT_DIR / f"{PREFIX}_development_manifest.json"
@@ -90,6 +95,7 @@ def test_failed_development_manifest_keeps_holdout_locked() -> None:
     subject.verify_manifest(manifest)
 
 
+@pytest.mark.local_data
 def test_development_artifacts_match_frozen_hashes() -> None:
     subject = load_subject()
     manifest = json.loads(
@@ -101,6 +107,7 @@ def test_development_artifacts_match_frozen_hashes() -> None:
         assert subject.sha256(path) == artifact["sha256"]
 
 
+@pytest.mark.local_data
 def test_reported_oof_and_confirmation_failure_are_reproducible() -> None:
     summary = json.loads(
         (ARTIFACT_DIR / f"{PREFIX}_development_summary.json").read_text(encoding="utf-8")
@@ -114,6 +121,7 @@ def test_reported_oof_and_confirmation_failure_are_reproducible() -> None:
     assert summary["development_gate"]["passed"] is False
 
 
+@pytest.mark.local_data
 def test_exported_trade_returns_are_complete_and_match_summary() -> None:
     summary = json.loads(
         (ARTIFACT_DIR / f"{PREFIX}_development_summary.json").read_text(encoding="utf-8")
@@ -129,6 +137,7 @@ def test_exported_trade_returns_are_complete_and_match_summary() -> None:
         )
 
 
+@pytest.mark.local_data
 def test_future_labels_end_inside_training_boundary() -> None:
     cases = [
         ("entry", "entry_label_complete", "entry_value"),

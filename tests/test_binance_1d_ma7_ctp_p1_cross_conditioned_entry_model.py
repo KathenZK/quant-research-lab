@@ -88,7 +88,7 @@ def test_input_manifest_hashes_match_and_hype_is_excluded():
 
 
 def test_all_training_rows_are_ma7_crosses_with_one_side_per_asset_ts():
-    mod = load_module()
+    load_module()
     summary = load_summary()
     assert summary["objective_ma7_cross_only"] is True
     assert summary["event_audit"]["n"] == 101187

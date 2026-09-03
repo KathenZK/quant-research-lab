@@ -8,6 +8,7 @@ from types import SimpleNamespace
 import pandas as pd
 import pytest
 
+pytestmark = pytest.mark.local_data
 
 SCRIPT_PATH = (
     Path(__file__).resolve().parents[1]

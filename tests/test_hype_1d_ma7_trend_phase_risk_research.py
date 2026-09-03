@@ -174,6 +174,7 @@ def test_frontier_row_keeps_risk_units_and_frozen_eligibility() -> None:
     assert row["frozen_eligible_35"]
 
 
+@pytest.mark.local_data
 def test_self_test_does_not_create_performance_artifacts() -> None:
     paths = (
         RESEARCH.MANIFEST_PATH,

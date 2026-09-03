@@ -7,6 +7,9 @@ import sys
 
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -138,6 +141,7 @@ def test_overlay_refuses_trade_count_drift() -> None:
         raise AssertionError("overlay accepted a supplemental trade")
 
 
+@pytest.mark.local_data
 def test_development_context_is_physically_train_only() -> None:
     subject = load_subject()
     p4 = subject.load_module(subject.P4_SCRIPT, "hype_p7_test_p4")
@@ -149,6 +153,7 @@ def test_development_context_is_physically_train_only() -> None:
     assert context.original_harness is not None
 
 
+@pytest.mark.local_data
 def test_failed_development_manifest_keeps_holdout_locked() -> None:
     subject = load_subject()
     manifest = json.loads(
@@ -167,6 +172,7 @@ def test_failed_development_manifest_keeps_holdout_locked() -> None:
     subject.verify_manifest(manifest)
 
 
+@pytest.mark.local_data
 def test_development_artifacts_match_frozen_hashes() -> None:
     subject = load_subject()
     manifest = json.loads(
@@ -178,6 +184,7 @@ def test_development_artifacts_match_frozen_hashes() -> None:
         assert subject.sha256(path) == artifact["sha256"]
 
 
+@pytest.mark.local_data
 def test_donor_pool_excludes_hype_and_reported_metrics_are_reproducible() -> None:
     subject = load_subject()
     pool = pd.read_csv(ARTIFACT_DIR / f"{PREFIX}_donor_survival_rows.csv", usecols=["asset"])

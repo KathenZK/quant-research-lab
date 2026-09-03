@@ -9,6 +9,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = (
@@ -54,6 +57,7 @@ def test_contract_constants_and_hype_holdout_boundary():
     assert mod.PRIMARY_CONTINUE_ADV_ATR == 0.75
 
 
+@pytest.mark.local_data
 def test_feature_panel_utc_daily_integrity_and_no_future_columns():
     mod = load_module()
     feature_dir = ARTIFACT_DIR / "p0_asset_day_feature_panel"
@@ -86,8 +90,9 @@ def test_feature_panel_utc_daily_integrity_and_no_future_columns():
     assert leaked == []
 
 
+@pytest.mark.local_data
 def test_landmark_labels_reconstruct_from_first_hit_primitives():
-    mod = load_module()
+    load_module()
     landmark_dir = ARTIFACT_DIR / "p0_directional_landmark_panel"
     cols = [
         "asset",
@@ -154,6 +159,7 @@ def test_first_hit_conflict_policy_and_long_short_symmetry():
     assert long_fav == short_fav == 1.0
 
 
+@pytest.mark.local_data
 def test_summary_manifest_hashes_and_no_validation_artifacts():
     manifest_path = ARTIFACT_DIR / "binance_1d_catl_p0_manifest.json"
     summary_path = ARTIFACT_DIR / "binance_1d_catl_p0_summary.json"
@@ -174,6 +180,7 @@ def test_summary_manifest_hashes_and_no_validation_artifacts():
         assert sha256_file(path) == item["sha256"]
 
 
+@pytest.mark.local_data
 def test_html_atlas_is_self_contained_and_interactive():
     html_path = ARTIFACT_DIR / "binance_1d_catl_p0_label_quality_atlas.html"
     text = html_path.read_text(encoding="utf-8")
