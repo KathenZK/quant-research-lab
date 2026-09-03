@@ -42,7 +42,7 @@
 - [live-executable-strategy-research.mdc](.cursor/rules/live-executable-strategy-research.mdc)：晋升前须证明策略可按真实订单时序执行；见该文件。
 - [backtest-standards.mdc](.cursor/rules/backtest-standards.mdc)：策略回测的近期分片与执行成本默认口径；见该文件。
 - [research-report-storage.mdc](.cursor/rules/research-report-storage.mdc)：研究文档存放、主账、索引与共享内核约定；见该文件。
-- [lab-runner-handoff.mdc](.cursor/rules/lab-runner-handoff.mdc)：向 `quant-runner` 交接及 runner 观察回流的契约；见该文件。
+- [lab-runner-handoff.mdc](.cursor/rules/lab-runner-handoff.mdc)：向 `quant-runner` 交接及 runner 观察回流的契约；标准回流入口为 quant-runner `scripts/lab_sync/sync_to_lab.sh`，DRAFT 报告未经人审不得作为门禁证据。
 - [strategy-validation-gates.mdc](.cursor/rules/strategy-validation-gates.mdc)：把验证门禁映射进研究到线上的工作流；见该文件。
 - [external-reproduction-spec.mdc](.cursor/rules/external-reproduction-spec.mdc)：对外复现规格的自包含标准；见该文件。
 - [clickable-file-references.mdc](.cursor/rules/clickable-file-references.mdc)：对话回复与研究文档中的文件引用必须可点击；见该文件。

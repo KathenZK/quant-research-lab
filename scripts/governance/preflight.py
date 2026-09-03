@@ -67,6 +67,7 @@ def main() -> int:
                 "-q",
                 "tests/test_research_docs_consistency.py",
                 "tests/test_governance_live_specs.py",
+                "tests/test_render_runner_tracking.py",
             ],
         ),
     ]
