@@ -89,3 +89,37 @@
 - [binance_1d_ma7_ctp_p5_summary.json](binance_1d_ma7_ctp_p5_summary.json)：P5 样本、候选、2025+ 复用验证、HYPE 隔离与全局裁决摘要。
 - [binance_1d_ma7_ctp_p5_manifest.json](binance_1d_ma7_ctp_p5_manifest.json)：P5 输入与输出产物 SHA256 manifest。
 - [P5 独立验收与修复审计](../diagnostics/binance-1d-ma7-ctp-p5-independent-acceptance-audit-2026-09-02.md)：区分 Cursor 原始输出与修复后有效输出，记录独立复算、缺陷、修复和最终裁决。
+
+## P6 Market-Regime x Side Conditional Ranking Value Audit
+
+- [binance_1d_ma7_ctp_p6_config.json](binance_1d_ma7_ctp_p6_config.json)：P6 机器可读合同、六格市场状态、候选模型、四类选择口径和 bootstrap 参数。
+- [binance_1d_ma7_ctp_p6_contract_lock.json](binance_1d_ma7_ctp_p6_contract_lock.json)：P6 合同、配置、脚本和 P5 manifest 的锁定 SHA256。
+- [binance_1d_ma7_ctp_p6_exposure_ledger.json](binance_1d_ma7_ctp_p6_exposure_ledger.json)：2025+ 复用验证、新 OOS 缺口和 future OOS 前置条件记录。
+- [binance_1d_ma7_ctp_p6_data_audit.json](binance_1d_ma7_ctp_p6_data_audit.json)：P0R/P5 输入、HYPE 隔离、市场状态还原和 P5 关键科学产物 hash 审计。
+- [binance_1d_ma7_ctp_p6_b0_reproduction_audit.json](binance_1d_ma7_ctp_p6_b0_reproduction_audit.json)：`R_B0_69` 字段数、P5 OOF/validation prediction SHA256 与复用边界。
+- [binance_1d_ma7_ctp_p6_fold_stage_metrics.parquet](binance_1d_ma7_ctp_p6_fold_stage_metrics.parquet)：外层 D1-D3、内层 B0 OOF 和 M1 warm-up/训练样本表。
+- [binance_1d_ma7_ctp_p6_predictions.parquet](binance_1d_ma7_ctp_p6_predictions.parquet)：逐事件 B0、M0、M1 raw score、六格、market state 与数据角色。
+- [binance_1d_ma7_ctp_p6_market_state_metrics.parquet](binance_1d_ma7_ctp_p6_market_state_metrics.parquet)：训练、OOF、2025、2026、方向、六格和 selection 分层指标。
+- [binance_1d_ma7_ctp_p6_selection_metrics.parquet](binance_1d_ma7_ctp_p6_selection_metrics.parquet)：年度全局、格内排序、同日同方向 Top5 与 frozen threshold 口径。
+- [binance_1d_ma7_ctp_p6_paired_bootstrap_stats.parquet](binance_1d_ma7_ctp_p6_paired_bootstrap_stats.parquet)：2,000 次共享 28 日块 paired bootstrap 主检验。
+- [binance_1d_ma7_ctp_p6_concentration_diagnostics.json](binance_1d_ma7_ctp_p6_concentration_diagnostics.json)：同日 Top5 的资产、月份、BTC/ETH 剔除和最大贡献剔除诊断。
+- [binance_1d_ma7_ctp_p6_summary.json](binance_1d_ma7_ctp_p6_summary.json)：P6 裁决、核心数字、HYPE 隔离、non-overlap 和 P5 manifest drift 摘要。
+- [binance_1d_ma7_ctp_p6_manifest.json](binance_1d_ma7_ctp_p6_manifest.json)：P6 输入与输出 SHA256 manifest，排除 manifest 自身。
+
+## P7 Temporal Drift, Score Monotonicity and Calibration Decomposition
+
+- [binance_1d_ma7_ctp_p7_config.json](binance_1d_ma7_ctp_p7_config.json)：P7 机器可读合同、样本角色、固定 raw 阈值、固定分箱、统计族、bootstrap 和 verdict 候选。
+- [binance_1d_ma7_ctp_p7_contract_lock.json](binance_1d_ma7_ctp_p7_contract_lock.json)：状态 `FROZEN_BEFORE_P7_DECOMPOSITION_OUTPUT_READ` 的合同、config 和 input inventory 锁。
+- [binance_1d_ma7_ctp_p7_input_inventory.json](binance_1d_ma7_ctp_p7_input_inventory.json)：P7 读取的 P4/P5/P6/P0R 输入文件、哈希和 P6 modeling audit 缺口记录。
+- [binance_1d_ma7_ctp_p7_data_audit.json](binance_1d_ma7_ctp_p7_data_audit.json)：样本角色、HYPE/HYPER、TradFi 排除、pre-2025 年龄/流动性边界和 fail-closed 原因。
+- [binance_1d_ma7_ctp_p7_anchor_parity.json](binance_1d_ma7_ctp_p7_anchor_parity.json)：2025+、2025、2026、阈值、HYPE/HYPER、TradFi 与 B0 重建锚点。
+- [binance_1d_ma7_ctp_p7_model_reconstruction.json](binance_1d_ma7_ctp_p7_model_reconstruction.json)：`R_B0_69` 确定性重建审计；最大 raw probability 误差 `0.009287`，未过 `1e-8`。
+- [binance_1d_ma7_ctp_p7_frozen_coefficients.json](binance_1d_ma7_ctp_p7_frozen_coefficients.json)：按当前 P5 脚本重建出的系数、预处理参数与失败误差；不作为可解释 B0 机制证据。
+- [binance_1d_ma7_ctp_p7_score_distribution_drift.parquet](binance_1d_ma7_ctp_p7_score_distribution_drift.parquet) / [csv](binance_1d_ma7_ctp_p7_score_distribution_drift.csv)：因 B0 重建失败，仅保存 fail-closed 审计占位，不含漂移结论。
+- [binance_1d_ma7_ctp_p7_feature_drift.parquet](binance_1d_ma7_ctp_p7_feature_drift.parquet) / [binance_1d_ma7_ctp_p7_feature_group_drift.csv](binance_1d_ma7_ctp_p7_feature_group_drift.csv)：因 B0 重建失败，仅保存 fail-closed 审计占位。
+- [binance_1d_ma7_ctp_p7_fixed_score_bin_outcomes.parquet](binance_1d_ma7_ctp_p7_fixed_score_bin_outcomes.parquet)、[binance_1d_ma7_ctp_p7_score_monotonicity.json](binance_1d_ma7_ctp_p7_score_monotonicity.json)、[binance_1d_ma7_ctp_p7_calibration_metrics.json](binance_1d_ma7_ctp_p7_calibration_metrics.json)、[binance_1d_ma7_ctp_p7_calibration_bins.parquet](binance_1d_ma7_ctp_p7_calibration_bins.parquet)、[binance_1d_ma7_ctp_p7_year_interactions.json](binance_1d_ma7_ctp_p7_year_interactions.json)：排序/校准分析因重建门禁失败停止，保留失败审计占位。
+- [binance_1d_ma7_ctp_p7_composition_decomposition.json](binance_1d_ma7_ctp_p7_composition_decomposition.json)、[binance_1d_ma7_ctp_p7_composition_cells.parquet](binance_1d_ma7_ctp_p7_composition_cells.parquet)、[binance_1d_ma7_ctp_p7_feature_contribution_drift.parquet](binance_1d_ma7_ctp_p7_feature_contribution_drift.parquet)、[binance_1d_ma7_ctp_p7_feature_group_contribution.csv](binance_1d_ma7_ctp_p7_feature_group_contribution.csv)、[binance_1d_ma7_ctp_p7_label_economic_decomposition.json](binance_1d_ma7_ctp_p7_label_economic_decomposition.json)：结构、贡献和经济分解因重建门禁失败停止，保留失败审计占位。
+- [binance_1d_ma7_ctp_p7_concentration_metrics.json](binance_1d_ma7_ctp_p7_concentration_metrics.json)、[binance_1d_ma7_ctp_p7_leave_one_out.parquet](binance_1d_ma7_ctp_p7_leave_one_out.parquet)、[binance_1d_ma7_ctp_p7_nonoverlap_episode_checks.json](binance_1d_ma7_ctp_p7_nonoverlap_episode_checks.json)、[binance_1d_ma7_ctp_p7_bootstrap_results.parquet](binance_1d_ma7_ctp_p7_bootstrap_results.parquet)：集中度、稳健性和 bootstrap 因重建门禁失败停止，保留失败审计占位。
+- [binance_1d_ma7_ctp_p7_summary.json](binance_1d_ma7_ctp_p7_summary.json)：P7 全局裁决 `DATA_OR_REPRODUCTION_FAILURE`、核心锚点和 P8 E 路由。
+- [binance_1d_ma7_ctp_p7_manifest.json](binance_1d_ma7_ctp_p7_manifest.json)：P7 正式产物 SHA256 manifest，排除 manifest 自身。
+- [binance_1d_ma7_ctp_p7_chart_01_raw_score_distribution.svg](binance_1d_ma7_ctp_p7_chart_01_raw_score_distribution.svg) 至 [binance_1d_ma7_ctp_p7_chart_10_concentration_summary.svg](binance_1d_ma7_ctp_p7_chart_10_concentration_summary.svg)：失败审计静态 SVG，占位说明门禁失败，不呈现漂移结论。

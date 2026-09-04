@@ -24,3 +24,17 @@
 - [binance_4h_ma7_rc_p0_controls_2026-09-02.csv](binance_4h_ma7_rc_p0_controls_2026-09-02.csv)
 - [binance_4h_ma7_rc_p0_recent_slices_2026-09-02.csv](binance_4h_ma7_rc_p0_recent_slices_2026-09-02.csv)
 - [binance_4h_ma7_rc_p0_summary_2026-09-02.json](binance_4h_ma7_rc_p0_summary_2026-09-02.json)
+
+## P0R-GAP-GUARD
+
+缺口保护盘点与验证产物，由 [../scripts/research_binance_4h_ma7_regime_continuation_p0r_gap_guard.py](../scripts/research_binance_4h_ma7_regime_continuation_p0r_gap_guard.py) 生成，不覆盖上述 P0 文件。配置 SHA256 `71306a2b45471f1e8e24fcd0d6a621a94c95be7bc83e65a69c2fa6faa61bd67d`。验收报告：[../diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md](../diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md)。
+
+- [binance_4h_ma7_rc_p0r_gap_guard_dataset_manifest_2026-09-03.json](binance_4h_ma7_rc_p0r_gap_guard_dataset_manifest_2026-09-03.json)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_summary_2026-09-03.json](binance_4h_ma7_rc_p0r_gap_guard_inventory_summary_2026-09-03.json)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_by_metric_2026-09-03.csv](binance_4h_ma7_rc_p0r_gap_guard_inventory_by_metric_2026-09-03.csv)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_by_direction_2026-09-03.csv](binance_4h_ma7_rc_p0r_gap_guard_inventory_by_direction_2026-09-03.csv)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_by_year_2026-09-03.csv](binance_4h_ma7_rc_p0r_gap_guard_inventory_by_year_2026-09-03.csv)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_by_phase_2026-09-03.csv](binance_4h_ma7_rc_p0r_gap_guard_inventory_by_phase_2026-09-03.csv)
+- [binance_4h_ma7_rc_p0r_gap_guard_inventory_by_symbol_2026-09-03.csv](binance_4h_ma7_rc_p0r_gap_guard_inventory_by_symbol_2026-09-03.csv)
+- [binance_4h_ma7_rc_p0r_gap_guard_verify_2026-09-03.json](binance_4h_ma7_rc_p0r_gap_guard_verify_2026-09-03.json)
+- [binance_4h_ma7_rc_p0r_gap_guard_parent_hash_check_2026-09-03.json](binance_4h_ma7_rc_p0r_gap_guard_parent_hash_check_2026-09-03.json)

@@ -9,11 +9,11 @@
 
 ## Current State
 
-- Current observation：`P0` completed as six-asset diagnostic only。
-- Status：`explore / diagnostic-only / not promoted / not live-ready`；数据结论为 `DATA_SCOPE_INCOMPLETE / six-asset diagnostic-only`。
+- Current observation：`P0R-GAP-GUARD` 已落地；`P0` 仍是六资产诊断；`P0R-DATA` 全市场绩效尚未写出。
+- Status：`explore / diagnostic-only / not promoted / not live-ready`；数据结论仍为 `DATA_SCOPE_INCOMPLETE / six-asset diagnostic-only` 叠加“全市场绩效未写出”。
 - Runner / dry-run / live：none；不得创建 runner、live spec、dry-run 或 live 实现。
-- Result：P0 行级质量审计通过，但全市场 scope gate 缺失。主 `SMA7` 样本只有 6 个长期历史币、`5,947` 个事件。该六资产样本上 long/short 均为 `NO-GO`，**不能外推到 Binance 全市场**。
-- Next gate：`P0R-DATA` 合同与 catalog 取数已冻结；全市场结果尚未写出。不覆盖原 P0 artifacts，禁止根据六资产结果调参。P0 仍不允许进入 P1。
+- Result：P0 六资产 `NO-GO` 不能外推全市场。缺口保护验收为 `PASS`（测试 + 连续窗口一致 + 全量窗口盘点），不是策略有效或可上线。
+- Next gate：完整研究必须使用缺口保护后的有效样本分母；仍不得根据六资产结果调参。P0 仍不允许进入 P1。
 
 ## Version Rules
 
@@ -28,6 +28,7 @@
 | --- | --- | --- | --- | --- | --- |
 | `P0` | `explore / diagnostic-only / not promoted / not live-ready` | 无条件 `4h SMA7` strict-cross 延续性 kill test，但输入 1h 非全市场 | 原生 `SMA7` 事件 `5,947` / 6 symbols；六资产样本 long/short `NO-GO`；配置 SHA256 `eb62108271cf1d22992fb53c0c1a7438d605581d96cb079d75b0579143c84642` | [P0 合同](specs/binance-4h-ma7-regime-continuation-p0-contract-2026-09-02.md) · [结果](diagnostics/binance-4h-ma7-regime-continuation-p0-results-2026-09-02.md) · [数据范围修正](diagnostics/binance-4h-ma7-regime-continuation-p0-data-scope-correction-2026-09-02.md) · [summary](artifacts/binance_4h_ma7_rc_p0_summary_2026-09-02.json) | 六资产 `NO-GO` 不得外推全市场 |
 | `P0R-DATA` | `explore / diagnostic-only / not promoted / not live-ready` | 全市场数据范围重跑；取数改 catalog derived 4h/1h | 合同已冻结；全市场结果尚未写出 | [P0R-DATA 合同](specs/binance-4h-ma7-regime-continuation-p0r-data-contract-2026-09-03.md) · [脚本](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py) | 不覆盖 P0；未完成跑批 |
+| `P0R-GAP-GUARD` | `explore / diagnostic-only / not promoted / not live-ready` | 研究脚本缺口隔离、分母修正与全量窗口盘点 | 缺口保护 `PASS`；事件 `first_hit_30` 有效 `4,389,839` / `4,405,573`；配置 SHA256 `71306a2b45471f1e8e24fcd0d6a621a94c95be7bc83e65a69c2fa6faa61bd67d` | [合同](specs/binance-4h-ma7-regime-continuation-p0r-gap-guard-contract-2026-09-03.md) · [验收](diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md) | 不是策略有效；不覆盖 P0 / P0R-DATA |
 
 ## Shared Assumptions
 
@@ -49,5 +50,8 @@
 - [P0 summary](artifacts/binance_4h_ma7_rc_p0_summary_2026-09-02.json)
 - [P0 script](scripts/research_binance_4h_ma7_regime_continuation_p0.py)
 - [P0R-DATA 脚本](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py)
+- [P0R-GAP-GUARD 合同](specs/binance-4h-ma7-regime-continuation-p0r-gap-guard-contract-2026-09-03.md)
+- [P0R-GAP-GUARD 验收](diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md)
+- [P0R-GAP-GUARD 脚本](scripts/research_binance_4h_ma7_regime_continuation_p0r_gap_guard.py)
 - [Artifacts index](artifacts/README.md)
 - [Decision log](decision-log.md)

@@ -5,7 +5,7 @@
 - Market / timeframe：Binance USD-M USDT perpetual，point-in-time 动态全市场币池，UTC `4h`
 - 机制：闭合 `4h` 上的固定 `SMA7` 严格穿越只作为事件触发，P0 无条件检验穿越后是否有趋势延续。
 - 当前状态：`explore / diagnostic-only / not promoted / not live-ready`
-- 当前阶段：`P0` 已完成，但只是六资产诊断；`DATA_SCOPE_INCOMPLETE / six-asset diagnostic-only`。现有 `NO-GO` 不能外推到全市场。下一步是不覆盖原结果的 `P0R-DATA`，不是 P1。
+- 当前阶段：`P0` 为六资产诊断；`P0R-DATA` 合同已冻结但全市场绩效未写出；`P0R-GAP-GUARD` 缺口保护 `PASS`（验证范围见验收报告），不是策略有效或可上线。
 
 ## 边界
 
@@ -24,5 +24,7 @@
 - P0 结果报告：[diagnostics/binance-4h-ma7-regime-continuation-p0-results-2026-09-02.md](diagnostics/binance-4h-ma7-regime-continuation-p0-results-2026-09-02.md)
 - P0 数据范围修正：[diagnostics/binance-4h-ma7-regime-continuation-p0-data-scope-correction-2026-09-02.md](diagnostics/binance-4h-ma7-regime-continuation-p0-data-scope-correction-2026-09-02.md)
 - P0R-DATA 合同：[specs/binance-4h-ma7-regime-continuation-p0r-data-contract-2026-09-03.md](specs/binance-4h-ma7-regime-continuation-p0r-data-contract-2026-09-03.md)
-- 脚本：[scripts/research_binance_4h_ma7_regime_continuation_p0.py](scripts/research_binance_4h_ma7_regime_continuation_p0.py)（冻结历史复现，复现请用 P0R catalog 路径） · [P0R-DATA](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py)
+- P0R-GAP-GUARD 合同：[specs/binance-4h-ma7-regime-continuation-p0r-gap-guard-contract-2026-09-03.md](specs/binance-4h-ma7-regime-continuation-p0r-gap-guard-contract-2026-09-03.md)
+- P0R-GAP-GUARD 验收：[diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md](diagnostics/binance-4h-ma7-regime-continuation-p0r-gap-guard-2026-09-03.md)
+- 脚本：[scripts/research_binance_4h_ma7_regime_continuation_p0.py](scripts/research_binance_4h_ma7_regime_continuation_p0.py)（冻结历史复现，复现请用 P0R catalog 路径） · [P0R-DATA](scripts/research_binance_4h_ma7_regime_continuation_p0r_data.py) · [P0R-GAP-GUARD](scripts/research_binance_4h_ma7_regime_continuation_p0r_gap_guard.py)
 - 产物索引：[artifacts/README.md](artifacts/README.md)

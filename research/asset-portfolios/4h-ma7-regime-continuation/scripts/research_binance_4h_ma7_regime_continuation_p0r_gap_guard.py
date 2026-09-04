@@ -429,6 +429,7 @@ def main() -> None:
     ohlcv_1h = pd.DataFrame()
     native_4h = pd.DataFrame()
 
+    failed = False
     try:
         print("stage: catalog FULL_MARKET trusted loads", flush=True)
         trusted_4h, catalog_4h = P0R.catalog_trusted_load(config["data"]["native_4h_dataset_id"], cutoff)
@@ -526,8 +527,8 @@ def main() -> None:
     except RuntimeError as exc:
         inventory["catalog_blockers"].append(str(exc))
         inventory["completeness"] = "未完成"
+        failed = True
         print(f"blocker: {exc}", flush=True)
-        raise
 
     tests_meta = {"status": "run separately via pytest", "passed": None}
     verdict = "PASS" if (
@@ -582,6 +583,8 @@ def main() -> None:
     for path in [*OUTPUTS.values(), REPORT_PATH]:
         write_sidecar(path)
     print(f"gap_guard_verdict={verdict} completeness={inventory.get('completeness')}", flush=True)
+    if failed:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

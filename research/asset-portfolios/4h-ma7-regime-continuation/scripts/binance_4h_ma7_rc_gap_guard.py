@@ -70,7 +70,7 @@ def series_utc_ns(values: pd.Series | pd.DatetimeIndex | np.ndarray) -> np.ndarr
         index = index.tz_localize("UTC")
     else:
         index = index.tz_convert("UTC")
-    return datetime_index_ns(index)
+    return np.asarray(datetime_index_ns(index), dtype=np.int64)
 
 
 def exclusive_reason(
@@ -233,6 +233,8 @@ def batch_window_status(
     step_ns: int,
 ) -> dict[str, np.ndarray]:
     n_events = int(len(starts_ns))
+    starts_ns = np.asarray(starts_ns, dtype=np.int64).reshape(-1)
+    ts_ns = np.asarray(ts_ns, dtype=np.int64).reshape(-1)
     complete = np.zeros(n_events, dtype=bool)
     internal = np.zeros(n_events, dtype=bool)
     right = np.ones(n_events, dtype=bool)
@@ -283,6 +285,7 @@ def recross_survival_on_grid(
     close: np.ndarray,
     sma7: np.ndarray,
     max_bars: int = MAX_FUTURE_BARS,
+    pos: dict[int, int] | None = None,
 ) -> dict[str, Any]:
     result = {
         "ma7_recross_bars": math.nan,
@@ -300,16 +303,17 @@ def recross_survival_on_grid(
     if fourh_ts.size == 0:
         result["right_censor"] = True
         return result
-    pos = {int(ts): idx for idx, ts in enumerate(fourh_ts.tolist())}
+    if pos is None:
+        pos = {int(ts): idx for idx, ts in enumerate(np.asarray(fourh_ts, dtype=np.int64).tolist())}
     interrupted = False
     interrupt_reason: str | None = None
     observed = 0
-    recross_main = math.nan
+    last_ts = int(fourh_ts[-1])
     for k in range(1, max_bars + 1):
         expected = signal_bar_ns + k * FOUR_H_NS
         idx = pos.get(int(expected))
         if idx is None:
-            has_later = bool(np.any(fourh_ts > expected))
+            has_later = last_ts > expected
             if not interrupted:
                 interrupt_reason = "internal_gap" if has_later else "right_censor_cutoff"
                 interrupted = True
@@ -327,8 +331,7 @@ def recross_survival_on_grid(
                 continue
             observed += 1
             if hit:
-                recross_main = float(k)
-                result["ma7_recross_bars"] = recross_main
+                result["ma7_recross_bars"] = float(k)
                 result["same_side_survival_bars"] = float(k - 1)
                 result["recross_complete"] = True
                 result["recross_status"] = "recross_observed"
@@ -373,7 +376,7 @@ def _cache_fourh(fourh_by_symbol_phase: dict[tuple[str, int], pd.DataFrame]) -> 
             ordered = ordered.copy()
             if "open" in ordered.columns:
                 pass
-        ts_ns = datetime_index_ns(ts_index)
+        ts_ns = np.asarray(datetime_index_ns(ts_index), dtype=np.int64)
         cache[key] = {
             "ts": ts_ns,
             "open": ordered["open"].to_numpy(dtype=float) if "open" in ordered.columns else np.array([]),
@@ -393,7 +396,7 @@ def _cache_hourly(hourly_by_symbol: dict[str, pd.DataFrame]) -> dict[str, dict[s
             if isinstance(ordered.index, pd.DatetimeIndex)
             else pd.DatetimeIndex(pd.to_datetime(ordered["ts"], utc=True))
         )
-        cache[symbol] = {"ts": datetime_index_ns(ts_index)}
+        cache[symbol] = {"ts": np.asarray(datetime_index_ns(ts_index), dtype=np.int64)}
     return cache
 
 
@@ -662,6 +665,7 @@ def classify_windows_for_inventory(
                 fourh_ts=fourh_ts,
                 close=close,
                 sma7=sma7,
+                pos=pos,
             )
             recross_complete_arr[row_idx] = bool(recross["recross_complete"])
             recross_after_arr[row_idx] = recross["recross_after_gap_bars"]

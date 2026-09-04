@@ -79,3 +79,15 @@
 决策：`data/cache/binance_perp_1d_from_15m` 是可重建家族缓存（月档优先于 overlay），不是 canonical OHLCV。本轮只补 sidecar，不改写 parquet；新研究应改用 `binance.perp.ohlcv.1d.from_15m.v1`。不改变 P5 裁决。
 
 证据：[治理审计](../../platform/data-lake-governance/diagnostics/binance-ohlcv-dataset-inventory-2026-09-02.md)
+
+## 2026-09-03：P6 只确认市场/方向价值，未确认同日同方向选币增量
+
+决策：P6 在合同锁定后只比较 `R_B0_69`、`M0_MARKET_ONLY`、`M1_B0_X_SIDE_X_REGIME`；2025+ 明确为 `ITERATIVE_REUSED_VALIDATION_2025_PLUS`，不是盲测。历史审计显示同日同方向 Top5 中 B0 和 M1 都未超过同日随机基准，M1 还弱于 B0；裁决 `MARKET_OR_SIDE_VALUE_ONLY`，不登记 V6、不改 runner、不继续扩特征。
+
+证据：[合同](specs/binance-1d-ma7-ctp-p6-market-regime-side-conditional-ranking-contract-2026-09-03.md) · [报告](diagnostics/binance-1d-ma7-ctp-p6-market-regime-side-conditional-ranking-2026-09-03.md) · [前瞻 OOS 协议](specs/binance-1d-ma7-ctp-p6-prospective-oos-confirmation-protocol-2026-09-03.md) · [汇总 JSON](artifacts/binance_1d_ma7_ctp_p6_summary.json)
+
+## 2026-09-04：P7 因 B0 冻结分数不可精确重建而停止解释性归因
+
+决策：P7 合同要求先把 `R_B0_69` 重建到与 P5/P6 frozen raw score 最大误差 `<=1e-8`；实际最大误差为 `0.009287`，因此裁决 `DATA_OR_REPRODUCTION_FAILURE`，停止时间漂移、单调性和校准机制解释。P8 唯一建议为 E：停止历史优化，进入冻结观察；不登记版本、不晋升、不改 runner。
+
+证据：[合同](specs/binance-1d-ma7-ctp-p7-temporal-drift-calibration-decomposition-contract-2026-09-04.md) · [报告](diagnostics/binance-1d-ma7-ctp-p7-temporal-drift-calibration-decomposition-2026-09-04.md) · [建模审计](diagnostics/binance-1d-ma7-ctp-p7-modeling-audit-2026-09-04.md) · [汇总 JSON](artifacts/binance_1d_ma7_ctp_p7_summary.json)
