@@ -317,6 +317,8 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 当前 Binance 登记：
 
 - `binance.perp.ohlcv.15m.normalized.v1`：`TRUSTED_BASE` / `FULL_MARKET`；
+- `binance.perp.ohlcv.15m.refreshed.v2`：`TRUSTED_DERIVED` / `FULL_MARKET`；保留旧 15m 业务键并加入官方 API 缺失键的同周期快照，非重采样；闭合截止 `2026-09-05T15:45:00Z`，历史仍有内部缺口；
+- `binance.perp.ohlcv.15m.history.v3`：`TRUSTED_DERIVED` / `FULL_MARKET`；在 V2 上以官方 API、月/日度 CHECKSUM 补洞，截止不变；残余上线/重开边界保留，研究只能显式按段消费，不能声称完整 PIT；
 - `binance.perp.ohlcv.1h.normalized.legacy`：`PARTIAL_SCOPE_LEGACY` / `PARTIAL`，
   不得冒充全市场；
 - `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`：`TRUSTED_DERIVED`；
@@ -338,7 +340,8 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 
 ## 14. 标准衍生 OHLCV
 
-Binance 1h/4h/1d 标准衍生数据只能由 accepted normalized 15m 生成，公式版本
+Binance 1h/4h/1d 标准衍生数据只能由已接受的标准 15m 数据生成，输入可以是
+accepted normalized V1 或显式锁定的已发布 15m V3；不得混合输入版本。v1 公式版本
 `ohlcv_resample_from_15m_v1`，来源裁决 `binance_perp_15m_priority_union_v1`
 （`binance_vision_kline_monthly` 优先于 `binance_futures_kline_api`；未列入来源
 被排除，不进入 trusted union）。
@@ -441,6 +444,23 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 不得改写）；消费时必须另给显式截止。数据实际结束于最后一根完整闭合 K，不是“今天”。
 输出 bar 必须满足 `bar_open + timeframe <= cutoff`。
 
+15m 刷新版本 `binance.perp.ohlcv.15m.refreshed.v2` 已独立发布，截止北京时间
+2026-09-05 23:45；它不改变上述 1h/4h/1d v1 的输入和截止。其 874 个合约包含
+历史合约及传统资产，不能当作当前纯加密币集合。行质量 PASS 但历史治理部分完成，
+具体执行偏差及缺口见 [V2 验收](../research/platform/data-lake-governance/diagnostics/binance-15m-refresh-v2-acceptance-2026-09-06.md)。
+读取时显式指定该 dataset-id、闭合截止及研究缺口策略，不自动切换旧消费者。
+
+后续 15m 全历史观测网格治理发布为 `binance.perp.ohlcv.15m.history.v3`，保留 V2
+全部已有业务行并补回可得记录。残余 12 段上线/重开边界仍由通用 24/7 SQL 报告为空位，
+不能放宽 `reject`；`contiguous_segments` 消费须按 [V3 连续段清单与验收](../research/platform/data-lake-governance/diagnostics/binance-15m-history-v3-closeout-2026-09-06.md)
+分段构建特征和标签。原生零成交记录保留，但不是可交易性或历史成分证明。
+
+```bash
+python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py load-research \
+  --dataset-id binance.perp.ohlcv.15m.history.v3 --scope FULL_MARKET \
+  --end 2026-09-05T15:45:00Z --gap-policy contiguous_segments --max-materialize-rows 0
+```
+
 新版本必须先构建、审计、发布，再写入 `derived/datasets/_DATASET_REGISTRY.json`；
 禁止扫描整个 data 根并自动信任所有 manifest。`--check` / `--dry-run` 不得与
 `--write-15m-snapshot` 或 `--register` 同时使用，也不得改写发布数据。
@@ -471,3 +491,95 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usage.py reject --case bad-manifest
 ```
 
+## 17. V3 配套统一研究输入
+
+本轮发布入口和完整范围见 [V3 研究输入治理契约](../research/platform/data-lake-governance/specs/binance-v3-research-inputs-v1-2026-09-07.md)，
+机器清单见 [research_input_bundle.json](../research/platform/data-lake-governance/artifacts/binance_v3_research_inputs_v1_20260907/research_input_bundle.json)。
+
+新增 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v2` 的唯一输入为
+`binance.perp.ohlcv.15m.history.v3`。数值聚合公式及 UTC 相位不变，来源使用
+`v3_already_adjudicated_passthrough_v1`：V3 已完成来源裁决，保留日度修复来源，
+不得再次套用旧 V1 仅两来源的过滤规则。新版本不覆盖旧高周期 v1。
+
+冻结总截止仍为 `2026-09-05T15:45:00Z`。请求完整闭合高周期时，可用最后收盘分别为
+1h `2026-09-05T15:00:00Z`、4h `2026-09-05T12:00:00Z`、1d `2026-09-05T00:00:00Z`。
+旧 `load_canonical_binance_perp_1d()` 仍固定 v1，避免破坏冻结复现；新实验必须显式
+选择上述 v2 ID，或使用 [research_inputs.py](../src/strategy_lab/data/research_inputs.py)
+中的 `load_v3_research_ohlcv()`，不得因函数含 canonical 字样推断其已自动升级。
+
+该入口先执行严格可信读取，然后拒绝乱序/重复，按缺口、零成交、显式身份边界重置
+`research_segment_id`。rolling、收益和未来标签必须按此字段分组，使用
+`complete_window_mask(backward=..., forward=...)` 拒绝不完整窗口。没有自动向前填充。
+
+标的有效性分为 `observed_valid` 和 `identity_verified`。默认 `require_verified`
+需要调用方提供带来源的历史身份有效期；没有证据不自动通过。显式
+`observed_diagnostic` 只用于观测样本诊断，不证明历史 PIT 或可交易性；当前
+exchangeInfo 分类和当前 TRADING 名单都不能替代历史身份。
+
+例如，明确只做观测样本诊断的日线输入（不宣称 PIT/可交易）：
+
+```python
+from strategy_lab.data.lake import DataLakeLayout
+from strategy_lab.data.settings import default_settings
+from strategy_lab.data.research_inputs import load_v3_research_ohlcv, complete_window_mask
+
+bars = load_v3_research_ohlcv(
+    layout=DataLakeLayout.from_settings(default_settings()),
+    timeframe="1d", symbol="BTC/USDT:USDT",
+    start="2026-08-01T00:00:00Z", end="2026-09-05T00:00:00Z",
+    identity_policy="observed_diagnostic",
+)
+valid = complete_window_mask(bars, backward=7, forward=0)
+ma7 = bars.groupby("research_segment_id").close.transform(
+    lambda prices: prices.rolling(7, min_periods=7).mean()
+).where(valid)
+```
+
+全市场或大窗口仍通过 catalog 的显式 dataset ID、截止和严格验证文件分批读取，
+每币调用 `segment_research_bars()`；不要先删掉零成交行再假装剩余行连续。
+
+资金费率独立于 OHLCV；配套快照即使行质量通过，也不得借用价格的 PASS 宣称完整。
+`load_verified_funding_snapshot()` 验证内容后仍不承诺覆盖；净收益须额外调用
+`require_funding_window()`，提供独立冻结的历史期望结算时间和证据。缺失、额外事件、
+同小时歧义均拒绝；毫秒时间不取整，缺失费率不填 0。期望时间不得从待检数据本身
+反推，当前 fundingInfo 不作为全历史结算日历。
+
+本轮最初发布的资金快照 ID 为 `binance.perp.funding.v3_inputs.v1`，状态 `PARTIAL_COVERAGE`。
+其 910 个历史库存代码仅有 864 个与 V3 的 874 个价格代码相交；不能按库存数量推断
+资金费率完整。范围外的旧命名/其他计价币代码只保留审计，不自动改写或纳入 V3 净收益。
+详见 [价格与费率范围审计](../research/platform/data-lake-governance/artifacts/binance_v3_research_inputs_v1_20260907/funding/price_scope_audit.json)。
+该 v1 发布时有 634 个 API 查询未完成，后续增量不得追加入该冻结快照。续治理已独立发布下节 v2，旧 bundle 和旧读取函数保持不变。
+
+## 18. 资金费率 v2：事件治理与结算覆盖分离
+
+新快照为 `binance.perp.funding.v3_inputs.v2`，见[治理契约](../research/platform/data-lake-governance/specs/binance-funding-v3-inputs-v2-2026-09-07.md)、[验收与限制](../research/platform/data-lake-governance/diagnostics/binance-funding-v3-inputs-v2-2026-09-07.md)。这是独立资金事件数据，不通过 OHLCV catalog 接口读取，也不自动改变旧研究的数据依赖。
+
+本版只包含 V3 的 874 个观测价格代码，共 2,654,430 个事件；范围、截止固定在 manifest。资金事件不铺成 15m 行，缺失不填 0。按 UTC 月压缩保存事件，历史覆盖证据另外保存；业务身份包含 `symbol + 原生毫秒 ts + rate_type`，同毫秒的 `Regular` 与 `Special` 不得合并。
+
+时间相近/费率相等不足以去重。只有完整官方小时查询或校验月档提供唯一对应，且费率一致、偏移不超过 2 秒时，才保留原生事件并记录旧键映射。特殊股息结算保留原始类型；本轮事件歧义清零不等于任意持仓窗口费用完整。
+
+使用独立入口 [funding_v2.py](../src/strategy_lab/data/funding_v2.py)，在研究配置中固定以下 manifest 身份；同一进程可验证加载一次后复用：
+
+```python
+from pathlib import Path
+from strategy_lab.data.funding_v2 import load_funding_v2, require_funding_v2_window
+
+funding = load_funding_v2(
+    Path("/Users/ZK/OpenCode/quant-strategy-lab/data/derived/datasets/binance_perp_funding_v3_inputs_v2"),
+    expected_manifest_sha256="398cc19eac88d0e8c55258c118f6cae2481c6b2d1a5e6253778344b9f25a1076",
+)
+
+def funding_for_verified_identity(symbol, start, end, identity_evidence):
+    return require_funding_v2_window(
+        funding, symbol=symbol, start=start, end=end,
+        identity_evidence=identity_evidence,
+    )
+```
+
+`start`、`end` 必须带时区，结算窗口为 `(start, end]`。调用方必须自行核实 `identity_evidence` 所指的历史身份来源及有效期：接口检查非空并保留文本，不自动鉴定证据真实性，不能用任意字符串冒充 PIT。
+
+净收益门禁要求整个窗口处于同一已证明连续结算片段，再逐条比较应有/实有事件 ID、原生时间、类型和费率。缺事件、多事件、歧义、值变化或跨边界都拒绝。只有在已证明片段内且没有应结算事件的子窗口，才允许合法空集；未知覆盖不能零填充。
+
+历史频率仅采用已留存原生月档的 `funding_interval_hours`，相邻事件须与声明间隔一致；频率切换、缺证据、首尾和多事件小时断开。不能从观察到的时间差反推全历史日历，不能用当前 `fundingInfo` 外推历史，也不能用完整 API 返回替代日历证明。
+
+本轮只有 585 个标的的 639 个部分历史片段具有该证据，**不是 585 个标的全历史通过**；API-only 的 2026 年 9 月尾部和股票特殊结算尚不能直接通过这一净收益门禁。当前 `PARTIAL_COVERAGE` 保留。剩余 71 个未检索范围虽均为 V3 零成交价格区间，也不构成费率为零或历史已退市的证明。旧消费者迁移和完整 PIT 均未完成。

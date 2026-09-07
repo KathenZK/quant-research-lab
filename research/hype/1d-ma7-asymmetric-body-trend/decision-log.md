@@ -1,3 +1,9 @@
+## 2026-09-04 — V7.1 dry-run 第一笔自然开多仍持有
+
+决定：数据补到 `2026-09-04 11:00 UTC` 后确认 `hype-1d-ma7-abt-v7-1-dry-run` 于 2026-08-30 00:00 UTC 按 `ma7_reclaim_long` 开多，现仍持有；与 exact V7.1 下一笔预期入场时点/方向一致。0 笔闭合，不构成线上开平仓对账完成，不 promotion、不启用 live。
+
+证据：[2026-09-04 runner 观察](runner-tracking/hype-1d-ma7-abt-v7-1-runner-2026-09-04.md) · [开仓快照](artifacts/hype_1d_ma7_abt_v7_1_dry_run_open_trade_2026-09-04.json) · [1h 同步](artifacts/hype_1h_prospective_sync_2026-09-04.json)
+
 ## 2026-09-03 — V7.1 主状态与 lock 对齐为 dry-run
 
 决定：按 glossary 2026-09-03 修订，lock `hype-1d-ma7-abt-v7-1-dry-run` 为 `mode=dry_run` 且 `enabled_allowed=true`（用户 2026-08-13 已授权，HEAD `a5a3b2a`），将 `HYPE-1D-MA7-ABT-V7.1` 从 `live spec`/`registered` 叙事迁为 `dry-run / not live-ready`。live 仍 `enabled_allowed=false`。主账 Current State 按模板压缩，诊断细节仍以既有 diagnostics 与 [2026-08-13 tracking](runner-tracking/hype-1d-ma7-abt-v7-1-dry-run-observer-2026-08-13.md) 为准。

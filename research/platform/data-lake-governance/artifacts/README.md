@@ -2,6 +2,16 @@
 
 本目录保存现场审计、对账和完整性快照。新衍生 OHLCV 发布在 `data/derived/datasets/`，不放在这里。
 
+- [data_lake_structure_cleanup_audit_20260907/](data_lake_structure_cleanup_audit_20260907/)：只读结构、分层占用、已发布指纹、清理依赖与旧 ZIP 比对；[适用性与清理风险报告](../diagnostics/data-lake-structure-readiness-cleanup-audit-2026-09-07.md)。未删除、移动或改写数据。
+
+- [binance_funding_v3_inputs_v2_20260907/](binance_funding_v3_inputs_v2_20260907/)：资金费率 v2 原文索引、事件映射、特殊类型、覆盖片段、未检索范围零成交审计、发布回读与旧指纹保护；[验收报告](../diagnostics/binance-funding-v3-inputs-v2-2026-09-07.md)。事件质量通过不等于全历史结算覆盖。
+
+- [binance_v3_research_inputs_v1_20260907/](binance_v3_research_inputs_v1_20260907/)：V3 配套高周期验收、独立聚合/组件对账、连续段、身份边界与资金费率补齐记录；[治理报告](../diagnostics/binance-v3-research-inputs-v1-2026-09-07.md)。资金费率与 PIT 限制不被价格 PASS 覆盖。
+
+- [binance_15m_history_v3_20260906/](binance_15m_history_v3_20260906/)：V3 全历史缺口取证、CHECKSUM、历史别名映射、raw/旧输入保护、发布后验收、边界处置与历史连续段；[解读与限制](../diagnostics/binance-15m-history-v3-closeout-2026-09-06.md)。
+
+- [binance_15m_refresh_v2_20260905/](binance_15m_refresh_v2_20260905/)：15m V2 冻结配置、官方请求回执索引、raw 对齐、合并审计、逐合约新鲜度、全部剩余缺口与发布后 `acceptance.json`；解读见 [V2 验收](../diagnostics/binance-15m-refresh-v2-acceptance-2026-09-06.md)，不得仅以行质量 PASS 宣称历史治理完成。
+
 - [pre_governance_parquet_inventory.csv](pre_governance_parquet_inventory.csv)：治理前 raw/normalized/cache/4H P0 产物的 path/size/mtime/SHA256。
 - [binance_ohlcv_dataset_inventory_2026-09-02.json](binance_ohlcv_dataset_inventory_2026-09-02.json)：现场数据集登记。
 - [binance_ohlcv_symbol_spans_2026-09-02.csv](binance_ohlcv_symbol_spans_2026-09-02.csv)：逐 symbol 起止。
