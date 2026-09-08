@@ -1,0 +1,60 @@
+{
+  "topic": "MA7-ATR14-Long-Fixed-Parameter-Transfer",
+  "frozen_at_utc": "2026-09-07T13:00:33.249518+00:00",
+  "classification": "price_diagnostic; revealed-history cross-asset transfer; no optimization or OOS/promotion claim",
+  "venue": "Binance USD-M USDT perpetual futures; separate from prior Hyperliquid study",
+  "request": {
+    "schema_version": 1,
+    "bundle_id": "binance.v3.research_inputs.v2",
+    "bundle_path": "research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2.json",
+    "bundle_sha256": "d2a729d03be71d67aa9c5522fb242bbf010b6c64400233c27d9cb2406f567008",
+    "mode": "price_diagnostic",
+    "timeframe": "1d",
+    "symbols": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BNB/USDT:USDT",
+      "UNI/USDT:USDT",
+      "ARB/USDT:USDT",
+      "LIT/USDT:USDT"
+    ],
+    "start": "2024-12-05T00:00:00Z",
+    "end": "2026-09-05T00:00:00Z",
+    "gap_policy": "contiguous_segments",
+    "asset_policy": "crypto_only",
+    "backward_bars": 15,
+    "forward_bars": 0
+  },
+  "parameters": {
+    "SMA": 7,
+    "Wilder_ATR": 14,
+    "ATR_multiplier": 1.5,
+    "slope_threshold_percent": 0,
+    "direction": "long_only",
+    "entry_notional_multiple": 1
+  },
+  "execution": "Primary causal: signal at daily close, next open fill; previous close known trailing stop effective on next day; gap-aware open exit; stop active entry day. Literal original retained only as timing diagnostic. Final close liquidation is valuation, not a strategy signal.",
+  "window_rule": "First validate all inputs through require_research_startup. For each symbol take only its final uninterrupted eligible segment ending at fixed last daily bar, starting no earlier than request start. Reject missing final bar; do not stitch gaps or pad. Save resolved bounds before calculating returns. Full available runs restart flat with cold indicators. Common runs restart all seven flat and cold from latest first date; no inherited positions.",
+  "LIT_identity": "Observed Binance LIT contract only, final contiguous segment; older same-ticker segments excluded. Intended comparison is current Lighter LIT, historical legal identity and PIT not certified.",
+  "costs": {
+    "gross": {
+      "fee": 0,
+      "slip": 0
+    },
+    "same_assumption_as_HYPE": {
+      "fee": 0.0005,
+      "slip": 0.0005
+    },
+    "binance_default_scenario": {
+      "fee": 0.001,
+      "slip": 0.0004
+    }
+  },
+  "funding_included": false,
+  "net_return_claim_permitted": false,
+  "recent_slices": "End-aligned 1/7/30/90/180/365 close-to-close NAV returns on full available causal/default-cost run, preserve positions and initial warmup; clip short histories and disclose days and realized exits.",
+  "no_parameter_search": true,
+  "engine_sha256": "718f13a02fbdbe6098b53a8c0ac75e8421baada0185f7a7a3bb517e4cd4ee3f3",
+  "original_source_sha256": "ee09948258b3d01da98335bf59550dda4cb3d780e4e7adcf2cfda2d30c802db4"
+}

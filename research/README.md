@@ -1,25 +1,13 @@
 # Research
 
-`research/` 是本仓库的主要知识入口。它不只放 Markdown，也管理当前研究需要保留的一次性脚本和小型产物。
+`research/` 管理研究文档、当前研究脚本与保留产物。本文件用于定位家族、机制、状态和主账；版本结论从主账追溯到规格与证据。
 
-本文件是**路由表**：只维护家族身份、一句话机制、当前状态标签和主账链接。版本级指标、证据清单和参数细节的唯一事实源是各家族 core ledger；不要把它们复述回本文件。
+## 使用入口
 
-## 阅读顺序
+- 从下表定位家族，再读对应资产/主题 README、家族 README 与主账；规格、报告和产物按问题取用。
+- Binance 价格与资金费率输入见 [data-lake-spec.md](../docs/data-lake-spec.md) 第 16–19 节与 [数据治理入口](platform/data-lake-governance/README.md)。新研究固定组合并执行启动前校验，历史复现使用原冻结输入。
+- 任务规则与代码边界见 [AGENTS.md](../AGENTS.md)；状态词见 [状态术语表](../docs/research-governance/strategy-status-glossary.md)，晋升证据见 [门禁规范](../docs/research-governance/strategy-validation-gates.md)。
 
-1. 本文件：确定 family 与目录。
-2. 对应资产 README（如 [hype/README.md](hype/README.md)、[btc/README.md](btc/README.md)）。
-3. 目标家族 `README.md` → core ledger / 主账 → `decision-log.md`。
-4. 按需打开 `specs/`（研究侧版本规格）、diagnostics、ablations、`live-specs/`（runner 交接规格）、artifacts。
-5. 若工作依赖 Binance OHLCV：先读 [data-lake-spec.md](../docs/data-lake-spec.md) 第 16 节与 [platform/data-lake-governance/](platform/data-lake-governance/README.md)，通过 `dataset_id` 验证后再取数。
-
-状态词定义见 [strategy-status-glossary.md](../docs/research-governance/strategy-status-glossary.md)（唯一状态机来源）；策略推进门禁见 [strategy-validation-gates.md](../docs/research-governance/strategy-validation-gates.md)。工作约束见 [../AGENTS.md](../AGENTS.md) 与 `../.cursor/rules/`。
-
-## 命名规则
-
-- 不要用裸版本号（`V13`、`V35`……）判断策略身份；版本号只在具体家族内有意义。
-- 引用时使用完整 family name（如 `HYPE-EMA-Trend-Breakout-V35`），短 id 只作为历史别名。
-- 目录名到 family name 的映射是确定性的：`research/<asset>/<timeframe>-<strategy-family-slug>/` 对应 `<ASSET>-<TIMEFRAME>-<Strategy-Family-Name>`；各家族 README 首行声明完整名称与别名，以家族 README 为准。
-- `archive/` 下的文档一律视为历史证据，不是当前入口。
 
 ## HYPE 策略家族
 
@@ -110,6 +98,8 @@
 
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
+| `MA7-Bidirectional-Trend-Generalization`（`MA7-BTG`） | [asset-portfolios/1d-ma7-bidirectional-trend-generalization/](asset-portfolios/1d-ma7-bidirectional-trend-generalization/README.md) · [主账](asset-portfolios/1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | explore / not promoted / not live-ready |
+| `MA7-ATR14-Long-Fixed-Parameter-Transfer` | [asset-portfolios/1d-ma7-atr14-long-transfer/](asset-portfolios/1d-ma7-atr14-long-transfer/README.md) | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`） | [asset-portfolios/multi-timeframe-dual-state-trend-campaign/](asset-portfolios/multi-timeframe-dual-state-trend-campaign/README.md) · [主账](asset-portfolios/multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md) · [最终报告](asset-portfolios/multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md) | goal-complete / HARD-GATE-FAILED / explore / not promoted / not live-ready |
 | `Binance-MTF-Pullback-Trend-Campaign`（`BIN-MTF-PTC`） | [asset-portfolios/multi-timeframe-pullback-trend-campaign/](asset-portfolios/multi-timeframe-pullback-trend-campaign/README.md) · [主账](asset-portfolios/multi-timeframe-pullback-trend-campaign/binance-mtf-ptc-core-ledger.md) | goal-complete / HARD-GATE-FAILED / explore / not promoted / not live-ready |
 | `Binance-1D-MA7-Deviation-Continuation`（`BIN-1D-MA7DC`） | [asset-portfolios/1d-ma7-deviation-continuation/](asset-portfolios/1d-ma7-deviation-continuation/README.md) · [主账](asset-portfolios/1d-ma7-deviation-continuation/binance-1d-ma7dc-core-ledger.md) | explore / not promoted / not live-ready |
@@ -120,6 +110,8 @@
 | `Binance-15M-EMA-Cross-LightGBM-Event-Selector`（`BIN-15M-EMAX-LGBM`） | [asset-portfolios/15m-ema-cross-lightgbm-event-selector/](asset-portfolios/15m-ema-cross-lightgbm-event-selector/README.md)（README 兼任主账） | archived / HARD-GATE-FAILED |
 | `Binance-1H-EMA-Cross-LightGBM-Event-Selector`（`BIN-1H-EMAX-LGBM`） | [asset-portfolios/1h-ema-cross-lightgbm-event-selector/](asset-portfolios/1h-ema-cross-lightgbm-event-selector/README.md)（README 兼任临时主账） | archived |
 | `Binance-4H-EMA-Cross-LightGBM-Event-Selector`（`BIN-4H-EMAX-LGBM`） | [asset-portfolios/4h-ema-cross-lightgbm-event-selector/](asset-portfolios/4h-ema-cross-lightgbm-event-selector/README.md)（README 兼任临时主账） | explore / HARD-GATE-FAILED / not promoted / not live-ready |
+| `Binance-1D-Bull-Top10-30D-Rotation`（`BIN-1D-BT10R30`） | [asset-portfolios/1d-bull-top10-30d-rotation/](asset-portfolios/1d-bull-top10-30d-rotation/README.md) · [主账](asset-portfolios/1d-bull-top10-30d-rotation/binance-1d-bt10r30-core-ledger.md)；牛市等权Top10，固定30日换仓 | explore / diagnostic-only / not promoted / not live-ready |
+| `Binance-4H-Bull-Strong-RSI-ATR-Pullback`（`BIN-4H-BSRAP`） | [asset-portfolios/4h-bull-strong-rsi-atr-pullback/](asset-portfolios/4h-bull-strong-rsi-atr-pullback/README.md) · [主账](asset-portfolios/4h-bull-strong-rsi-atr-pullback/binance-4h-bsrap-core-ledger.md)；牛市强势币RSI超卖/ATR下降，MA7−2ATR止损 | explore / diagnostic-only / HARD-GATE-FAILED / not promoted / not live-ready |
 | `Binance-4H-MA7-Regime-Continuation`（`BIN-4H-MA7-RC`） | [asset-portfolios/4h-ma7-regime-continuation/](asset-portfolios/4h-ma7-regime-continuation/README.md) · [主账](asset-portfolios/4h-ma7-regime-continuation/binance-4h-ma7-rc-core-ledger.md) | explore / diagnostic-only / DATA_SCOPE_INCOMPLETE / not promoted / not live-ready |
 | `Binance-1D-EMA-Cross-LightGBM-Event-Selector`（`BIN-1D-EMAX-LGBM`） | [asset-portfolios/1d-ema-cross-lightgbm-event-selector/](asset-portfolios/1d-ema-cross-lightgbm-event-selector/README.md)（README 兼任临时主账） | archived |
 | `Binance-1D-Multi-Asset-TSMOM-Vol-Target`（`BIN-1D-TSMOM-VT`） | [asset-portfolios/1d-multi-asset-tsmom-vol-target/](asset-portfolios/1d-multi-asset-tsmom-vol-target/README.md)（README 兼任临时主账） | explore / not promoted / not live-ready |
@@ -178,20 +170,24 @@
 | `Cross-Sectional Alpha Research Pipeline` | [platform/cross-sectional-alpha-pipeline/](platform/cross-sectional-alpha-pipeline/README.md) | explore / platform-audit |
 | `Runner-Authorization-Reconciliation`（`RUNNER-AUTH-RECON`） | [platform/runner-authorization-reconciliation/](platform/runner-authorization-reconciliation/README.md) | explore / platform-audit |
 
+## 行业与创业研究
+
+入口：[industry/README.md](industry/README.md)。跨行业产品研究不承载策略绩效或实盘晋升。
+
+| Topic | Directory | 状态 |
+| --- | --- | --- |
+| `Crypto-Startup-Opportunity-Landscape` | [industry/crypto-startup-opportunities/](industry/crypto-startup-opportunities/README.md) | explore / diagnostic-only |
+
 ## 共享研究内核
 
 跨资产或跨家族复用的研究引擎存放在 `_shared-kernels/`，按冻结版本目录管理（见 [_shared-kernels/README.md](_shared-kernels/README.md)）。当前包括 [1h-adaptive-regime-search/](_shared-kernels/1h-adaptive-regime-search/README.md)、[multi-horizon-ema-forecast/](_shared-kernels/multi-horizon-ema-forecast/README.md)、[ema-trend-breakout/](_shared-kernels/ema-trend-breakout/README.md)、[bollinger-keltner-squeeze-breakout/](_shared-kernels/bollinger-keltner-squeeze-breakout/README.md) 与 [binance-ma7-root-data/](_shared-kernels/binance-ma7-root-data/README.md)。
 
 ## 目录与存储约定
 
-细则以 `../.cursor/rules/research-report-storage.mdc` 为准，要点：
-
-- 新时间片或新机制必须新建 `research/<asset>/<timeframe>-<strategy-family-slug>/`，不得因指标相似塞进旧 family。
-- 家族目录内：`README.md` + core ledger + `decision-log.md` 为长期入口；`specs/` 放研究侧版本规格，`live-specs/` 放 runner 交接规格；`diagnostics/`、`ablations/`、`notes/` 按性质分类；验证门禁报告按 [strategy-validation-gates.md](../docs/research-governance/strategy-validation-gates.md) 落入对应类型目录；`scripts/` 放一次性研究脚本；`artifacts/` 放需保留的产物；进入 dry-run 后增加 `runner-tracking/`。
-- 新建或重构主账先使用 [core-ledger-template.md](../docs/research-governance/core-ledger-template.md)；主账只保存版本身份、当前状态、版本规则、版本表和证据链接，不承载完整实验报告或参数表。
-- 新建家族必须同步登记进对应资产 README 和本文件的路由表（索引更新义务）。
-- 长期研究文档默认中文；顶层 `reports/` 已退役；Canvas 不是长期事实源。
+新建家族、登记版本与保存产物见 [研究存储规则](../.cursor/rules/research-report-storage.mdc)；主账字段见 [主账模板](../docs/research-governance/core-ledger-template.md)。
 
 ## 历史或浅层研究
 
 `crowding_reversal` 及早期平台示例（spot CTA、CTA grid、通用 MA crossover、momentum rotation、Donchian 变体）归档于 `../archive/research/`，不作为当前核心研究线。
+
+- `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](asset-portfolios/1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。

@@ -11,7 +11,7 @@
 
 - Current version(s)：`HYPE-1D-MA7-ABT-V7.1` 为当前 quant-runner 版本；`V1`–`V7` 仍为已登记历史版本。
 - Current status：`V7.1` 为 `dry-run / not live-ready`；`V1`–`V7` 为 `registered / TRANSFER_FAIL / HARD-GATE-FAILED / not promoted / not live-ready`。
-- Runner / dry-run / live status：lock `hype-1d-ma7-abt-v7-1-dry-run` 为 `mode=dry_run`、`enabled_allowed=true`、`approval_level=dry_run`、`parity_status=PASS`（quant-runner HEAD `a5a3b2a`）。用户于 2026-08-13 授权 dry-run；live 实例 `enabled_allowed=false`。2026-08-30 已开出第一笔自然多单且仍持有；闭合交易对账未完成。
+- Runner / dry-run / live status：lock `hype-1d-ma7-abt-v7-1-dry-run` 为 `mode=dry_run`、`enabled_allowed=true`、`approval_level=dry_run`、`parity_status=PASS`（quant-runner HEAD `a5a3b2a`）。用户于 2026-08-13 授权 dry-run；live 实例 `enabled_allowed=false`。第一笔自然多单已于 2026-09-06 OAPP 平仓，现为空仓；仅 1 笔闭合且有 1h 缺 K 延迟，线上开平仓对账未完成。
 - Live-readiness blockers：无 clean prospective；V5 H FAIL 与跨资产 `TRANSFER_FAIL` 仍有效；硬门禁 0–4、live-executable 审计与线上开平仓对账未完成。不授权真实下单。
 - Next decision gate：完成 dry-run 观察窗口与线上开平仓对账后再讨论 live。诊断细节见 Version Table 与 Evidence Map 既有 diagnostics，不在本段复述。
 
@@ -73,5 +73,5 @@
 - Specs：`specs/hype-1d-ma7-abt-v{1..7,7-1}-spec.md`；V7.1 live/复现见 [live-specs/hype-1d-ma7-abt-v7-1-lab-live-spec.md](live-specs/hype-1d-ma7-abt-v7-1-lab-live-spec.md) · [live-specs/hype-1d-ma7-abt-v7-1-reproduction-spec-2026-08-11.md](live-specs/hype-1d-ma7-abt-v7-1-reproduction-spec-2026-08-11.md)
 - 当前诊断簇（2026-08-20）：[SNC02 裸核](diagnostics/hype-1d-ma7-symmetric-naked-cross-slope-2026-08-20.md) · [趋势优先审计](diagnostics/hype-1d-ma7-snc02-trend-first-discovery-audit-2026-08-20.md) · [THX](diagnostics/hype-1d-ma7-snc02-trend-health-exit-2026-08-20.md) · [OAPP 反弹重置](diagnostics/hype-1d-ma7-abt-v7-1-oapp-rebound-reset-2026-08-20.md) · [零利润回吐](diagnostics/hype-1d-ma7-abt-v7-1-oapp-zero-profit-floor-2026-08-20.md) · [持仓 ER](diagnostics/hype-1d-ma7-abt-v7-1-er-hold-overlay-2026-08-20.md)
 - Runner parity：[hype_1d_ma7_abt_v7_1_runner_strict_parity_2026-08-12.json](artifacts/hype_1d_ma7_abt_v7_1_runner_strict_parity_2026-08-12.json)
-- Runner tracking：[dry-run 启动](runner-tracking/hype-1d-ma7-abt-v7-1-dry-run-observer-2026-08-13.md) · [2026-09-04 开仓观察](runner-tracking/hype-1d-ma7-abt-v7-1-runner-2026-09-04.md)
+- Runner tracking：[dry-run 启动](runner-tracking/hype-1d-ma7-abt-v7-1-dry-run-observer-2026-08-13.md) · [2026-09-04 开仓观察](runner-tracking/hype-1d-ma7-abt-v7-1-runner-2026-09-04.md) · [2026-09-07 首笔闭合](runner-tracking/hype-1d-ma7-abt-v7-1-runner-2026-09-07.md)
 - 脚本入口：[research_hype_1d_ma7_asymmetric_body_trend.py](scripts/research_hype_1d_ma7_asymmetric_body_trend.py) · [search_hype_1d_ma7_separated_trend.py](scripts/search_hype_1d_ma7_separated_trend.py)

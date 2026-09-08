@@ -1,3 +1,9 @@
+## 2026-09-07 — V7.1 dry-run 第一笔多单已 OAPP 平仓
+
+决定：数据补到 `2026-09-07 07:00 UTC` 后确认 `hype-1d-ma7-abt-v7-1-dry-run` 已于 2026-09-06 按 `long_mfe_fraction_trail_exit` 平掉 8 月 30 日多单，净盈约 +2.12%；现为空仓。00:00 缺 K 使成交落到 01:00，账本 `net_pnl_usdt` 为空。1/5 闭合样本，不对账完成、不 promotion、不启用 live。
+
+证据：[2026-09-07 runner 观察](runner-tracking/hype-1d-ma7-abt-v7-1-runner-2026-09-07.md) · [闭合快照](artifacts/hype_1d_ma7_abt_v7_1_dry_run_closed_trade_2026-09-07.json) · [1h 同步](artifacts/hype_1h_prospective_sync_2026-09-07.json)
+
 ## 2026-09-04 — V7.1 dry-run 第一笔自然开多仍持有
 
 决定：数据补到 `2026-09-04 11:00 UTC` 后确认 `hype-1d-ma7-abt-v7-1-dry-run` 于 2026-08-30 00:00 UTC 按 `ma7_reclaim_long` 开多，现仍持有；与 exact V7.1 下一笔预期入场时点/方向一致。0 笔闭合，不构成线上开平仓对账完成，不 promotion、不启用 live。

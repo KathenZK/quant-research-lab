@@ -154,8 +154,8 @@ runner 观察实例 = `dry-run` 主状态，不另设 observer 状态或 overlay
 - 一个版本同一时刻只有一个主状态；可以叠加修饰词，不可同时挂两个主状态。
 - `not promoted` 只能修饰 `explore` 或 `registered`；`not live-ready` 可延续到 `live spec` 或 `dry-run`，但不得与 `live` 或 `NO-GO` 并存。
 - 状态迁移（升级或降级）必须写入家族 `decision-log.md`，并同步更新 core ledger 与 asset/顶层索引中的状态标签。
-- 回测再漂亮，跳过 `dry-run` 直接标记 `live`，或未完成硬门禁 / live-executable 审计就标记 `live`，均属于违规；发现即降级并记录。`live spec` 与 `dry-run` 不再以 promotion review 为前置；`registered -> dry-run` 合法。
-- 硬门禁或 live-executable 失败后不得进入 `live`：已在 runner 运行则写 `dry-run / not live-ready`，尚未授权 runner 则写 `registered / not promoted / not live-ready`；未登记研究线写 `explore / not promoted / not live-ready`。
+- 新的 `live` 准入要求经过 `dry-run` 并完成硬门禁与 live-executable 审计；缺失时记录缺口，不声明准入通过。既有实例的授权和运行状态按 runner 如实记录，不能由文档缺口自动推断降级。`live spec` 与 `dry-run` 不以完整 promotion review 为前置；`registered -> dry-run` 合法。
+- 硬门禁或 live-executable 失败时不推进 `live`：仍在 dry-run 的版本写 `dry-run / not live-ready`，尚未授权 runner 的已登记版本写 `registered / not promoted / not live-ready`，未登记研究线写 `explore / not promoted / not live-ready`。既有 live 实例发现问题时记录证据和处置建议，运行变更由用户明确决定。
 - dry-run 前不得给出 `NO-GO`；只能写 `not promoted / not live-ready`，并说明缺什么证据、什么新增证据可以重开。
 - 索引状态列只允许主状态、修饰词、结果标签、overlay、版本号、家族名与 `见顶层`；散文结论下沉到主账或 decision-log。
 - 不另设 observer 状态或 overlay；runner 观察实例写 `dry-run`。

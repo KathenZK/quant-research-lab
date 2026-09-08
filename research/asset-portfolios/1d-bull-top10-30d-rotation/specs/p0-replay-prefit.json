@@ -1,0 +1,5 @@
+{
+  "source": "scripts/replay_p0.py",
+  "sha256": "e34d5526e18f55fd5796b3a4f4767edb8891b25b425355aeaee3b2ad6ccb2317",
+  "scope": "Frozen before replay of real prices"
+}

@@ -290,6 +290,8 @@
 - [2026-08-20前瞻数据同步审计](hype_1h_prospective_sync_2026-08-20.json)：1h K线与funding补齐至`2026-08-20 04:00 UTC`，连续性与重复时间戳审计零阻断。
 - [2026-09-04前瞻数据同步审计](hype_1h_prospective_sync_2026-09-04.json)：1h K线与funding补齐至`2026-09-04 11:00 UTC`，连续性与重复时间戳审计零阻断。
 - [2026-09-04 dry-run 开仓快照](hype_1d_ma7_abt_v7_1_dry_run_open_trade_2026-09-04.json)：第一笔 `ma7_reclaim_long` 仍持有，对照研究回放。
+- [2026-09-07前瞻数据同步审计](hype_1h_prospective_sync_2026-09-07.json)：1h K线与funding补齐至`2026-09-07 07:00 UTC`，连续性与重复时间戳审计零阻断。
+- [2026-09-07 dry-run 首笔闭合快照](hype_1d_ma7_abt_v7_1_dry_run_closed_trade_2026-09-07.json)：OAPP 平仓，对照研究下一开盘。
 - [V7.1 OAPP零利润回吐机器证据](hype_1d_ma7_abt_v7_1_oapp_zero_profit_floor_2026-08-20.json)及其[SHA256](hype_1d_ma7_abt_v7_1_oapp_zero_profit_floor_2026-08-20.json.sha256)：ZPF只在收盘回到entry或以下时退出；canonical为`+469.37%/-25.07%`，弱于V7.1及OAPP off，PEHC handoff归零，裁决`NO-GO ZPF / KEEP V7.1`。
 - [V7.1 OAPP七日振幅半距市价机器证据](hype_1d_ma7_abt_v7_1_oapp_range7_half_trail_2026-08-20.json)及其[SHA256](hype_1d_ma7_abt_v7_1_oapp_range7_half_trail_2026-08-20.json.sha256)：关闭 long OAPP 后，持仓最高价回吐过去7日高低差一半即1h市价平；canonical为`+185.20%/-33.04%/23笔`，弱于V7.1与OAPP off，08-09多头在`08-11 16:00`亏损离场，裁决`NO-GO R7H / KEEP V7.1`。
 - [V7.1 持仓ER7机器证据](hype_1d_ma7_abt_v7_1_er_hold_overlay_2026-08-20.json)及其[SHA256](hype_1d_ma7_abt_v7_1_er_hold_overlay_2026-08-20.json.sha256)：`08-15 ER7=0.239`低于8个canonical OAPP锁中位`0.312`，第0层分不开，第1层未跑，裁决`LAYER0_NOT_SEPARABLE / KEEP V7.1`。

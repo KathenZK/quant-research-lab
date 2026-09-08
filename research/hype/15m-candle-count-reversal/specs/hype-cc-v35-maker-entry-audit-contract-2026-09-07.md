@@ -15,15 +15,17 @@
 - 市场 / 标的 / 周期：Binance USD-M Futures `HYPE/USDT:USDT` / `15m`。
 - 本地冻结底座：`binance.perp.ohlcv.15m.history.v3`，物理 manifest SHA256 与
   parquet inventory fingerprint 必须写入产物。
-- 当前已知门禁：catalog registry 的该数据集 fingerprint 与物理 manifest 不一致，
-  `load_trusted_research_dataset()` 会拒绝。因此本轮可以生成只读、manifest-bound 的
-  diagnostic，但在 registry parity 修复并重新严格读取前，正式结论必须标记
-  `DATA_OR_REPRODUCTION_FAILURE`。
+- 价格门禁必须通过 `load_v3_research_ohlcv()` 的 strict-content 读取；不得用示例 CLI
+  中为旧版本预填的 expected fingerprint 去裁决 V3。执行中曾误用该 CLI 产生一次假失败，
+  随后改用 canonical loader 复核并在正式运行前修正；这只纠正数据入口，不改变策略变体、
+  成本或结论阈值。
 - 若需要覆盖本地截止后的“现在”，只允许从 Binance 官方公开 REST
   `/fapi/v1/klines`、`/fapi/v1/markPriceKlines`、`/fapi/v1/fundingRate` 读取尾部；
   不回写或覆盖 data lake。产物记录抓取时间、请求范围、闭合截止、重复、缺口与
   OHLC 合法性。
 - 主张窗口：`2026-08-01T00:00:00Z` 到运行时最后一根完整闭合 `15m` K 的 open time。
+- 因截图未写时区，另以 `2026-08-01T00:00:00+08:00`（即
+  `2026-07-31T16:00:00Z`）做 Asia/Shanghai 起点敏感性，不替代 UTC 主窗口。
 - 指标 warm-up：从 HYPE 本地首根 K 开始计算；主张窗口在 8 月 1 日以 flat、
   `risk_multiplier=1`、无 cooldown、无 pending order 的新状态启动。
 - 连续状态敏感性：另从本地首根 K 启动状态机并在 8 月 1 日归一化，但不得替代主张窗口。
@@ -70,7 +72,10 @@
 - `M1-dual`：多单只在 `EMA24 > EMA672`，空单只在 `EMA24 < EMA672` 时允许挂单。
 - `M1-short-only`：仅空单要求 `EMA24 < EMA672`，多单不加均线条件。
 
-二者只回答“一个已预声明的均线规则会怎样”，不能证明截图中同事使用的均线就是它。
+为区分收益来自 maker 还是均线，还须运行相同均线规则、但保持 B0 下一根开盘
+taker 入场的 `B1-dual` 与 `B1-short-only`。只有同一均线下 maker 相对 B1 的差值，
+才可归因于入场改变。四个均线变体只回答“一个已预声明的均线规则会怎样”，不能证明
+截图中同事使用的均线就是它。
 
 ## 6. 成本、资金费与收益口径
 

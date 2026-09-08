@@ -146,3 +146,14 @@ def test_unregistered_catalog_consumer_outside_watch_dir_is_detected(tmp_path: P
     )
     errors = check_trusted_consumers.discover_unregistered_binance_ohlcv_scripts(tmp_path)
     assert any("load_btc.py" in error for error in errors)
+
+
+def test_new_bundle_startup_consumer_still_requires_registration(tmp_path: Path) -> None:
+    scripts = tmp_path / "research" / "btc" / "1h-new-family" / "scripts"
+    scripts.mkdir(parents=True)
+    (scripts / "load_bundle.py").write_text(
+        "from strategy_lab.data.research_bundle import require_research_startup\n",
+        encoding="utf-8",
+    )
+    errors = check_trusted_consumers.discover_unregistered_binance_ohlcv_scripts(tmp_path)
+    assert any("load_bundle.py" in error and "not registered" in error for error in errors)

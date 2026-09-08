@@ -1,0 +1,43 @@
+{
+  "family": "Binance-1D-Bull-Top10-30D-Rotation",
+  "alias": "BIN-1D-BT10R30",
+  "phase": "P0",
+  "decision_start": "2020-01-01T00:00:00Z",
+  "top_n": 10,
+  "formation_days": 30,
+  "holding_days": 30,
+  "signal_time_utc": "00:00",
+  "execution_time_utc": "04:00",
+  "fee_per_fill": 0.001,
+  "slippage_bps": [
+    4,
+    8
+  ],
+  "pool": {
+    "minimum_continuous_days": 60,
+    "median_quote_volume_days": 20,
+    "minimum_median_quote_volume": 10000000,
+    "liquid_top_n": 100
+  },
+  "bull": {
+    "btc_close_above_ma": 100,
+    "btc_slope_ma": 50,
+    "slope_lag_days": 5,
+    "breadth_ma": 50,
+    "breadth_threshold": 0.6,
+    "minimum_pool": 20
+  },
+  "positive_momentum_filter": false,
+  "variants": [
+    "bull_top10",
+    "always_top10"
+  ],
+  "funding_verified": false,
+  "pit_verified": false,
+  "capital_mode": "conditional_price_budget_only",
+  "initial_budget": 100000,
+  "rebalance": "full_sell_then_buy_equal_weight_every_30_days",
+  "cash_policy": "daily_bull_check_while_flat",
+  "terminal": "mark_open_positions_not_forced_exit",
+  "gap_policy_held": "invalidate_full_path_do_not_restart"
+}

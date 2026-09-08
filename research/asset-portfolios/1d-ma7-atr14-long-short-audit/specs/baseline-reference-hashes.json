@@ -1,0 +1,6 @@
+{
+  "research/asset-portfolios/1d-ma7-atr14-long-transfer/specs/full-market-contract-20260908.json": "4d87bea13d3e98dfab8123d3b860aa90514505549c82305fab5bb57a686a2d63",
+  "research/asset-portfolios/1d-ma7-atr14-long-transfer/scripts/frozen_engine.py": "718f13a02fbdbe6098b53a8c0ac75e8421baada0185f7a7a3bb517e4cd4ee3f3",
+  "research/asset-portfolios/1d-ma7-atr14-long-transfer/artifacts/full-market-20260908/all-window-results.csv": "46cafba162db67cdc374f5da6389a58ca118bef8c481afd3ebee2b71bfb1fce4",
+  "research/asset-portfolios/1d-ma7-atr14-long-transfer/artifacts/full-market-20260908/run-output-manifest.json": "148da0503de3f1a9578b6b1db593113a28a1174a4f9b05ce82a5a596e5fa3396"
+}

@@ -1,0 +1,8 @@
+{
+  "specs/p0-contract.md": "932a5687fbee1fd2a0306abbb35912b471cb0a8bf8420ca24586bdc88fce511b",
+  "specs/p0-config.json": "4b7fda7ad676964c83d14f32c87e5c971380b8dfc5baf0cae10154b76cab0717",
+  "specs/p0-startup-1d.json": "2b8d4dce735c6ae2ce6b613095feff1fb61a5ac0d13b87a0cd66fa9337684cc1",
+  "specs/p0-startup-4h.json": "c40a111a0ba5bf3d2fd8ec8dd808ec49581f0bf680122a485279797e21b779a2",
+  "specs/parent-protection.json": "8f05eddfa8cff186ea41d15ae8c48fc7fa031e161f1859d5c2759873945b9d24",
+  "scripts/build_p0_inputs.py": "d26d07d84f7fd6939c7ca7b467ebcb0663de089efb7e2e53f37ddcbf6570c3d1"
+}

@@ -1,23 +1,15 @@
 ---
-description: Self-containment standard for reproduction specs handed to people outside this repository
+description: 给仓库外读者或 AI 的单文件复现规格
 globs:
   - "research/**/specs/**/*.md"
   - "research/**/live-specs/**/*.md"
 alwaysApply: false
 ---
 
-# External Reproduction Spec
+# 对外复现规格
 
-- An external reproduction spec is any Markdown document meant to be handed to a person or AI outside this repository (同事复现规格). It must declare YAML front matter `document_type: external_reproduction_spec` and a non-empty `intended_audience`, and should use `reproduction-spec` in the filename. Classification is by declared purpose or filename: either one activates the self-containment checks, so renaming a file cannot evade them. A filename that contains `reproduction-spec` without the required front matter is invalid.
-- Audience assumption is absolute: the reader has ONLY this one Markdown file. No repository checkout, no scripts, no artifacts, no core ledger, no other research documents. If removing everything except this file breaks reproduction, the spec is incomplete.
-- Normative sections must therefore contain, in full and inline:
-  - version identity, status label, and the frozen parameter tables with literal values (never "see the JSON under artifacts/");
-  - data requirements: exchange, market type, symbols, timeframe, UTC window, candle/funding schema, closed-bar-only and data-quality gates, and how to obtain equivalent data from public APIs;
-  - every feature/indicator formula with exact windows, EWMA alpha, `min_periods`, shift/lag semantics, and anti-lookahead rules;
-  - complete signal, filter, and regime logic per leg, in natural language plus pseudocode;
-  - the execution contract: entry timing, bracket placement, same-bar conflict ordering, gap-open handling, trailing update timing, timeout, position sizing, fees, slippage, and funding accrual;
-  - portfolio/arbitration rules when the spec covers an ensemble;
-  - acceptance numbers for self-verification: headline metrics, trade counts, standard recent slices, and enough per-trade anchors (for example first/last trades with timestamps and prices) for the implementer to confirm their rebuild matches.
-- Repository-internal references (script paths, `artifacts/` files, ledgers, absolute local paths, `uv run` commands) may appear only inside a clearly separated appendix section whose heading marks it as repo-internal verification, e.g. `## 附录：仓库内校验（非复现依赖）`. Nothing in the normative sections may depend on the appendix.
-- Before handing a spec out, run the no-repo test: read the document pretending the repository does not exist and confirm every quantity used by the pseudocode is defined in-document. `tests/test_research_docs_consistency.py` enforces the appendix rule mechanically.
-- A reproduction spec freezes one version. If the version's parameters or logic change, write a new dated spec and mark the old one superseded; never hand out a stale spec.
+- 读者只拿到这一份 Markdown。文件名包含 `reproduction-spec`，front matter 声明 `document_type: external_reproduction_spec` 和非空 `intended_audience`；声明用途或文件名任一命中即适用。
+- 正文内完整定义复现所需内容：版本/状态与参数字面值；数据获取、市场/标的/周期/UTC 范围、schema 与质量门禁；指标公式、窗口、初始化和 lag；信号/过滤/状态机及伪代码；成交时序、同 bar 冲突、跳空、保护/追踪更新、仓位、成本与费率；适用时的组合仲裁。
+- 提供可验收的指标、交易数、冻结规格要求的切片和逐笔锚点；不能让复现者用仓库内文件补齐参数或逻辑。
+- 仓库路径、脚本命令和证据链接只放在明确标为“仓库内校验（非复现依赖）”的独立附录；正文不依赖附录。
+- 交付前按“仓库不存在”检查所有公式和伪代码变量是否已定义，并运行 [文档一致性检查](../../tests/test_research_docs_consistency.py) 的对外复现检查。版本参数或逻辑变化时写新日期规格，并将旧规格标为 `superseded`。

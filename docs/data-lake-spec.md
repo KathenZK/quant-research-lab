@@ -49,7 +49,7 @@ data/
 ```
 
 - `raw`：保留提供方原生字段、真实来源和抓取口径，不静默补造字段。
-- `normalized`：只保存通过身份、schema、时间、来源和质量审计的标准数据。当前 Binance 全市场可信底座是 accepted normalized `15m`，不是 normalized `1h`。
+- `normalized`：只保存通过身份、schema、时间、来源和质量审计的标准数据。Binance 历史底座为 accepted normalized `15m`；当前新研究的 V3 组合在 `derived`，见第 19 节。normalized `1h` 不是全市场输入。
 - `derived`：由 accepted 输入按冻结公式生成的版本化标准 OHLCV。每个 `dataset_id` 使用独立 slug 目录，不得写入会被旧 `normalized/**/*.parquet` glob 自动混读的路径。先写 `_staging/`，审计通过后在 `datasets/` 内原子发布；已发布目录不得覆盖，修正必须新 `vN`。
 - `features`：只保存可追溯到已接受输入数据与冻结构建逻辑的特征或因子。
 - `cache`：可重建，不构成研究证据，不得替代 raw/normalized/derived 数据，也不得成为其他家族的事实源。
@@ -281,6 +281,8 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 
 新研究读取标准 OHLCV 的必经步骤：
 
+Binance 新实验先走第 19 节组合启动 API；该 API 内部落实以下 catalog 门禁。下列底层接口单独通过不替代组合与研究窗口检查。
+
 1. `catalog.load_trusted_research_dataset(..., end=..., gap_policy="reject"|"contiguous_segments")`（强制 `purpose="research"` 与严格指纹）；
 2. `catalog.require_passing_trusted(loaded)`，确认 `load_audit.quality_status=PASS` 且存在 `verified_parquet_files`；
 3. 只用返回的 verified 文件或 `read_verified_ohlcv`，禁止自行 `read_parquet` 湖路径。
@@ -322,6 +324,7 @@ raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本�
 - `binance.perp.ohlcv.1h.normalized.legacy`：`PARTIAL_SCOPE_LEGACY` / `PARTIAL`，
   不得冒充全市场；
 - `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`：`TRUSTED_DERIVED`；
+- `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v2`：`TRUSTED_DERIVED` / `FULL_MARKET`，唯一输入为价格 V3，当前新研究组合见第 19 节；
 - `binance.perp.ohlcv.1d.cache.from_15m` 与 `binance.perp.panel.1d.ma7_rc.p0/p3`：
   `FAMILY_CACHE`。
 
@@ -387,7 +390,7 @@ derived 1d 重建这些面板，而不是让其他家族直接依赖它们。
 `data/cache/binance_perp_1d_from_15m`（`binance.perp.ohlcv.1d.cache.from_15m`）
 的 sidecar 中 `input_manifest_sha256` 与 `config_parameter_sha256` 现为
 `LINEAGE_INCOMPLETE`。该缓存只允许 `scripts/governance/frozen_research_scripts.txt`
-上的冻结脚本读取。新代码必须改用 `binance.perp.ohlcv.1d.from_15m.v1`。
+上的冻结脚本读取。新实验按第 19 节组合入口选择 `binance.perp.ohlcv.1d.from_15m.v2`，不从缓存或旧 canonical 函数隐式选版本。
 
 未能无损补齐这两项哈希：缓存由 2026-08-18 的 MCSM-LS3 构建标记生成，早于
 derived `_MANIFEST.json` 与参数哈希约定；`_build_complete.json` 只有月份列表与
@@ -398,6 +401,8 @@ manifest 或当前 builder 文件哈希回填会伪造 lineage，因此保持 `L
 
 机器可读目录由 `strategy_lab.data.catalog.list_registered_datasets()` 提供。
 下面命令均已实现；输出以现场运行为准，不得把覆盖预览写成 trusted。
+
+本节 v1 命令为历史冻结版本与底层 API 示例，不是当前新研究推荐版本。当前组合和必需的研究启动检查统一见第 19 节；不能仅因旧函数含 canonical 字样推断已升级。
 
 查询可用数据：
 
@@ -439,7 +444,7 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 必须给截止；不得默认 `report_only`。整库治理扫描必须声明 `purpose="governance_audit"`。
 请求窗口超出最后一根已闭合 K 的收盘时间时默认拒绝。
 
-当前已接受派生版本是 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1`；底座是
+历史已接受派生版本 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v1` 的底座是
 `binance.perp.ohlcv.15m.normalized.v1`。v1 的 `cutoff_exclusive_utc` 为 null（历史事实，
 不得改写）；消费时必须另给显式截止。数据实际结束于最后一根完整闭合 K，不是“今天”。
 输出 bar 必须满足 `bar_open + timeframe <= cutoff`。
@@ -493,8 +498,8 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 
 ## 17. V3 配套统一研究输入
 
-本轮发布入口和完整范围见 [V3 研究输入治理契约](../research/platform/data-lake-governance/specs/binance-v3-research-inputs-v1-2026-09-07.md)，
-机器清单见 [research_input_bundle.json](../research/platform/data-lake-governance/artifacts/binance_v3_research_inputs_v1_20260907/research_input_bundle.json)。
+价格配套的历史发布范围见 [V3 研究输入治理契约](../research/platform/data-lake-governance/specs/binance-v3-research-inputs-v1-2026-09-07.md)。
+原 [v1 组合清单](../research/platform/data-lake-governance/artifacts/binance_v3_research_inputs_v1_20260907/research_input_bundle.json) 绑定的是旧费率 v1，保留冻结；当前完整组合已升级到第 19 节 v2，不覆盖原文件。
 
 新增 `binance.perp.ohlcv.{1h,4h,1d}.from_15m.v2` 的唯一输入为
 `binance.perp.ohlcv.15m.history.v3`。数值聚合公式及 UTC 相位不变，来源使用
@@ -504,8 +509,8 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 冻结总截止仍为 `2026-09-05T15:45:00Z`。请求完整闭合高周期时，可用最后收盘分别为
 1h `2026-09-05T15:00:00Z`、4h `2026-09-05T12:00:00Z`、1d `2026-09-05T00:00:00Z`。
 旧 `load_canonical_binance_perp_1d()` 仍固定 v1，避免破坏冻结复现；新实验必须显式
-选择上述 v2 ID，或使用 [research_inputs.py](../src/strategy_lab/data/research_inputs.py)
-中的 `load_v3_research_ohlcv()`，不得因函数含 canonical 字样推断其已自动升级。
+按第 19 节通过组合启动入口选择上述 v2 ID。[research_inputs.py](../src/strategy_lab/data/research_inputs.py)
+中的 `load_v3_research_ohlcv()` 保留为冻结底层接口，不是完整的新组合启动检查；不得因函数含 canonical 字样推断其已自动升级。
 
 该入口先执行严格可信读取，然后拒绝乱序/重复，按缺口、零成交、显式身份边界重置
 `research_segment_id`。rolling、收益和未来标签必须按此字段分组，使用
@@ -516,7 +521,7 @@ python research/platform/data-lake-governance/scripts/example_binance_ohlcv_usag
 `observed_diagnostic` 只用于观测样本诊断，不证明历史 PIT 或可交易性；当前
 exchangeInfo 分类和当前 TRADING 名单都不能替代历史身份。
 
-例如，明确只做观测样本诊断的日线输入（不宣称 PIT/可交易）：
+以下是底层分段接口示例，解释历史调用语义（不宣称 PIT/可交易）；新消费者的完整写法见第 19 节：
 
 ```python
 from strategy_lab.data.lake import DataLakeLayout
@@ -558,7 +563,7 @@ ma7 = bars.groupby("research_segment_id").close.transform(
 
 时间相近/费率相等不足以去重。只有完整官方小时查询或校验月档提供唯一对应，且费率一致、偏移不超过 2 秒时，才保留原生事件并记录旧键映射。特殊股息结算保留原始类型；本轮事件歧义清零不等于任意持仓窗口费用完整。
 
-使用独立入口 [funding_v2.py](../src/strategy_lab/data/funding_v2.py)，在研究配置中固定以下 manifest 身份；同一进程可验证加载一次后复用：
+底层独立入口为 [funding_v2.py](../src/strategy_lab/data/funding_v2.py)，以下解释其冻结语义；新研究通过第 19 节组合门禁统一绑定该 manifest 和身份证据，不只调用此函数：
 
 ```python
 from pathlib import Path
@@ -583,3 +588,70 @@ def funding_for_verified_identity(symbol, start, end, identity_evidence):
 历史频率仅采用已留存原生月档的 `funding_interval_hours`，相邻事件须与声明间隔一致；频率切换、缺证据、首尾和多事件小时断开。不能从观察到的时间差反推全历史日历，不能用当前 `fundingInfo` 外推历史，也不能用完整 API 返回替代日历证明。
 
 本轮只有 585 个标的的 639 个部分历史片段具有该证据，**不是 585 个标的全历史通过**；API-only 的 2026 年 9 月尾部和股票特殊结算尚不能直接通过这一净收益门禁。当前 `PARTIAL_COVERAGE` 保留。剩余 71 个未检索范围虽均为 V3 零成交价格区间，也不构成费率为零或历史已退市的证明。旧消费者迁移和完整 PIT 均未完成。
+
+## 19. Agent 统一入口、固定组合与研究启动前校验
+
+**当前新研究组合：`binance.v3.research_inputs.v2`**。选择入口是 [current-research-inputs.json](../research/platform/data-lake-governance/specs/current-research-inputs.json)，不可变发布物是 [binance-v3-research-input-bundle-v2.json](../research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2.json)，发布契约见 [组合 v2 契约](../research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2-2026-09-07.md)。指针只帮助初次选择，研究配置必须冻结清单路径、ID 和 SHA256；后续复现读取自己的 pin，不跟随指针变化。
+
+| 角色 | 固定输入 | 可用最后完整收盘 / 事件（UTC） |
+| --- | --- | --- |
+| 15m 价格 | `binance.perp.ohlcv.15m.history.v3` | 2026-09-05 15:45 收盘 |
+| 1h 价格 | `binance.perp.ohlcv.1h.from_15m.v2` | 2026-09-05 15:00 收盘 |
+| 4h 价格 | `binance.perp.ohlcv.4h.from_15m.v2` | 2026-09-05 12:00 收盘 |
+| 1d 价格 | `binance.perp.ohlcv.1d.from_15m.v2` | 2026-09-05 00:00 收盘 |
+| 资金费率 | `binance.perp.funding.v3_inputs.v2` | 2026-09-05 15:00 事件；日历仅部分历史 |
+
+发布日期 2026-09-07 不等于数据更新到当天。五个组件均固定 manifest 和 Parquet 全内容指纹；高周期父输入必须与组合内价格 V3 一致。完整身份/PIT、全历史结算日历与可交易性仍未证明，不因清单发布而升级状态。
+
+### 19.1 先选择检查层级，不能把文件检查当研究就绪
+
+在仓库根使用已安装本仓库依赖的 Python：
+
+```bash
+python scripts/governance/check_research_startup.py --contract-only
+python scripts/governance/check_research_startup.py --bundle-only
+python scripts/governance/check_research_startup.py \
+  --request research/platform/data-lake-governance/specs/research-startup-price-example-v2.json
+```
+
+- `--contract-only`：检查指针、组合结构和冻结读取器；不读取数据湖。状态 `CONTRACT_ONLY_NOT_DATA_READY`，已接入 [preflight.py](../scripts/governance/preflight.py) 与现有 CI。
+- `--bundle-only`：五组 manifest 与 Parquet 全内容哈希一致才返回 `BUNDLE_INTEGRITY_PASS_NOT_RESEARCH_READY`；未检查某研究窗口。
+- `--request`：执行组合检查、catalog STRICT_CONTENT 行质量和精确范围的有效窗口检查；任一失败返回非零退出码。价格模式成功为 `PRICE_DIAGNOSTIC_INPUTS_VERIFIED`；净收益输入窗口通过额外门禁才为 `NET_INPUT_WINDOW_VERIFIED`。两者都不代表策略 PASS、PIT 完整或 live-ready。
+
+正式运行须加 `--output <本家族新的 artifacts 报告.json>` 留证；拒绝覆盖已有报告或写入数据湖。`--project-root` 与 `--data-root` 可显式指定代码和共享数据根；找不到文件会失败，不扫描其他任务、旧版或缓存。请求按标的分批读取，避免一次物化全历史全市场；仍需预留所请求价格帧与费率事件的内存。
+
+### 19.2 固定本研究范围，再使用返回的数据
+
+可复制的最小观测价格请求见 [research-startup-price-example-v2.json](../research/platform/data-lake-governance/specs/research-startup-price-example-v2.json)。将它复制到本家族 `specs/`，在看到研究结果前固定标的、周期、范围、缺口政策和回看/未来长度；不能用示例 BTC 窗口通过推断自己的全市场研究通过。
+
+价格按 `[start,end)` 的开盘网格选择，且每根必须完整闭合；`start/end` 必须带时区并与周期对齐。请求范围须包含所需预热和标签尾部；`backward_bars` 含当前 bar，`forward_bars` 为之后的 bar 数。不自动补取范围外数据、不静默丢标的。`gap_policy=reject` 拒绝缺首尾/缺 K/零成交/无效值/身份边界；`contiguous_segments` 则在报告中列出缺失与无效行，只准按段使用 `research_window_valid=True` 的窗口。不得先删零成交行再拼成连续历史。
+
+```python
+from pathlib import Path
+from strategy_lab.data.research_bundle import read_json, require_research_startup
+
+root = Path("/Users/ZK/OpenCode/quant-strategy-lab")  # 换成明确的当前工作区
+request = read_json(root / "research/platform/data-lake-governance/specs/research-startup-price-example-v2.json")
+inputs = require_research_startup(request, project_root=root)
+bars = inputs.prices["BTC/USDT:USDT"]
+ma7 = bars.groupby("research_segment_id").close.transform(
+    lambda p: p.rolling(7, min_periods=7).mean()
+).where(bars.research_window_valid)
+assert inputs.report["funding_window_verified"] is False  # 此模式只做价格诊断
+```
+
+实际研究必须消费 API 返回的帧和 mask；CLI 不自动启动策略，过去一次的成功报告也不是之后重读原始湖路径的许可证。新脚本调用 `require_research_startup` 会被既有消费者扫描发现，仍须登记对应 entrypoint/required call 并验证整个消费链；不得扩展历史 frozen 清单绕过登记，也不能把字符串扫描说成覆盖一切动态代码的强制沙箱。
+
+### 19.3 净收益模式不能靠任意证据字符串开绿灯
+
+`mode=price_diagnostic` 不核准历史身份。`asset_policy=crypto_only` 仅按清单观测分类排除非 COIN/UNKNOWN，不证明纯加密历史 PIT 池；需要混合传统资产样本必须显式选择 `observed_mixed_diagnostic`，且只准价格诊断。标的列表必须明确，不能用 `*` 或自动取今天活跃集合冒充历史股票池。
+
+`mode=net_research` 当前只接受 `crypto_only`，额外要求请求中的 `identity_review={"path": "本仓库相对证据复核JSON路径", "sha256": "实际文件SHA256"}`。复核 JSON 须包含非空 `reviewed_by`、`review_status="ACCEPTED_FOR_IDENTITY_ONLY"`、`windows` 数组；每个请求标的恰有一段完整覆盖请求范围的 `symbol/start/end/evidence_path/evidence_sha256`。复核文件与每份来源文件必须实际存在、哈希相符；不得把测试材料、当前 exchangeInfo 或任意字符串登记为已复核历史证据。门禁验证文件与覆盖，不自动鉴定材料真实性，研究方必须负责独立复核。
+
+价格有效性通过后，每个标的的整个 `(start,end]` 还须通过第 18 节历史费率日历门禁。缺费率、无日历、跨片段或事件歧义均中止，不回填 0，不从净收益模式降级成价格模式继续发布净值。这个启动版本采取保守的整请求窗口检查；跨越未证明费率范围的长历史研究会失败，即便部分持仓子窗口可能可验证。若要只研究子窗口，应先冻结独立请求，不按结果选择。
+
+通过时返回的 `inputs.funding[symbol]` 为已验证结算事件，仍须按真实持仓时点、方向和名义金额结算；手续费、滑点、执行时序、跨价格缺口持仓、PIT 池及 OOS 必须另过研究契约。所有启动报告的 `strategy_approved`、`pit_universe_proven`、`tradability_proven` 均保持 false。
+
+### 19.4 其他 Agent / 工作区的可见性边界
+
+同一目录内的 Agent 可从 `AGENTS.md → research/README.md → 本节 → 当前指针 → 固定请求/API` 自主发现，不依赖聊天记忆。清单、指针、启动器和规格位于可版本管理路径，但只有实际提交/同步这些文件后，其他 checkout/worktree 才能获得本轮更新；本地 `data/` 和大部分 `artifacts/` 被 Git 忽略，不会随代码自动复制。共享数据根需显式配置并重新验指纹。本轮不自动提交、推送、迁移旧研究或分发数据。

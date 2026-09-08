@@ -35,6 +35,10 @@ def main() -> int:
     python = sys.executable
     steps = [
         (
+            "current research bundle contract (not local data readiness)",
+            [python, "scripts/governance/check_research_startup.py", "--contract-only"],
+        ),
+        (
             "standardized parity reports",
             [python, "scripts/governance/check_parity_report.py"],
         ),
@@ -68,6 +72,7 @@ def main() -> int:
                 "tests/test_research_docs_consistency.py",
                 "tests/test_governance_live_specs.py",
                 "tests/test_render_runner_tracking.py",
+                "tests/test_research_bundle.py",
             ],
         ),
     ]

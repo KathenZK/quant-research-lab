@@ -1,31 +1,25 @@
 ---
-description: Contract for handing strategies to quant-runner and feeding runner observations back
+description: 向 quant-runner 交接策略、同步实现规格或记录运行观察
 globs:
   - "research/**/live-specs/**/*.md"
   - "research/**/runner-tracking/**/*.md"
-  - "docs/research-governance/**"
-  - "scripts/governance/**"
-alwaysApply: true
+  - "docs/research-governance/lab-live-spec-template.md"
+  - "scripts/governance/validate_live_specs.py"
+  - "scripts/governance/check_promotion_surface.py"
+alwaysApply: false
 ---
 
-# Lab / Runner Handoff Contract
+# Lab / Runner 交接
 
-- Runtime truth and research authority have separate scopes. `quant-runner` is the sole source of instance authorization and actual on/off state through its code, committed config/generated lock, service state, and runtime ledger/telemetry. Lab Markdown records family/version identity, research state, evidence, and handoff contracts only; Lab does not keep an authorization manifest.
-- Changing runner enabled state, mode, live/dry-run config, generated lock, or any real service state is an operational decision reserved to the user. An AI must not infer enable, disable, restart, stop, or demotion from a missing/deleted document, artifact, failed CI check, stale inventory, or status inconsistency. Without an explicit user decision, preserve the runner configuration, record the research discrepancy, and ask before any operational mutation.
-- Standard parity artifacts are normative research evidence and should exist in a clean checkout when cited. Missing or untracked evidence blocks new promotion claims but does not itself change runner authorization or runtime. Do not reconstruct evidence from prose or fabricate a replacement.
-- The generated lock is owned and interpreted only by the sibling `quant-runner` repository at `/Users/ZK/OpenCode/quant-runner/configs/active-strategy.lock.json`; Lab neither generates nor authorizes it.
-- The sibling repository `/Users/ZK/OpenCode/quant-runner` is the only production execution surface. Research backtest scripts in this repository must never be promoted into runners.
-- A strategy may only be handed to `quant-runner` through a runner handoff spec: a Markdown file under the family's `live-specs/` directory whose status line explicitly states the promotion state (for example `dry-run / not live-ready` or `live spec / not live-ready`). `live spec` is optional; `registered -> dry-run` is allowed. Live-executable audit and hard gates are required before `live`; `dry-run` only requires runner reproducibility and `runner-tracking/`.
-- `handoff` is an overlay label only. It may annotate `live spec`, `dry-run`, or `live`, but never acts as a main status, skips a gate, or authorizes an instance.
-- Legacy external-runner observations belong in family ledgers and runner-tracking reports as historical evidence only; Lab keeps no external authorization registry. A recorded external instance must not be copied, changed, restarted, stopped, or migrated without an explicit user decision; all supported current authorization lives in `quant-runner`.
-- Every runner handoff spec must contain at minimum: full family name and version, runner strategy `kind` (matching the actual `quant-runner` config value), exchange/market/symbol/timeframe, a complete parameter table with the exact runner config field names, data-quality requirements and warmup needs, fee/slippage/funding assumptions, closed-bar-only requirement, a runner TOML example, the remaining audit gaps, and links to the core ledger and the supporting research evidence.
-- Live notional is not a required field in strategy specs. If live sizing is controlled by a funded subaccount rather than by strategy parameters, record the funding/risk boundary in runner operations or the launch decision log instead of forcing it into the spec.
-- Runner-side identity must stay in sync: the handoff spec's `kind`, module path, and TOML example must match the current `quant-runner` code and configs. When `quant-runner` renames a kind or moves a module, update the lab-side handoff spec in the same change set.
-- The `quant-runner` strategy directory keeps its own `<STRATEGY_ID>-SPEC.md`; the lab handoff spec and the runner SPEC must link to each other. Parameter changes must be applied to both or explicitly recorded as divergence in the family decision log.
-- Lab live SPEC front matter must validate against `docs/research-governance/schemas/lab-live-spec-frontmatter.schema.json`; new specs should start from `docs/research-governance/lab-live-spec-template.md`. A single implementation uses `strategy_id`, `runner_kind`, and `peer_spec`. A genuine joint SPEC uses an `implementations` array containing one explicit `strategy_id`/`runner_kind`/`peer_spec` mapping per route; parallel scalar lists or implicit peer kinds are forbidden. All active SPECs also declare `schema_version`, `spec_role`, `family_id`, `main_status`, `spec_status`, and `approval_level_max`.
-- A `(strategy_id, runner_kind)` mapping may have only one active Lab SPEC and one active runner implementation SPEC. Historical specifications remain readable but must be marked `superseded`.
-- Runner observations must flow back: the `runner-tracking/` subdirectory must be created in the same change that marks a version `dry-run`, and it holds dated Markdown reports (`<family-id>-runner-<YYYY-MM-DD>.md`). The standard reflux entry is quant-runner `scripts/lab_sync/sync_to_lab.sh`; DRAFT reports are not gate evidence until human review. Each report states the runner config used, the observation window, trade count, realized fees/slippage versus backtest assumptions, signal/indicator parity mismatches, incidents (restarts, missing bars, order rejections), and a keep/stop/adjust conclusion. This repository does not use an additional simulated-live state; simulation is `dry-run`, and real-order small-notional execution is `live`.
-- Online open/close reconciliation is a mandatory runner-tracking trigger: when live or dry-run open/close/fill statistics are extracted to compare runtime behavior with research backtests, write a dated `runner-tracking/` report and retain any durable CSV/JSON evidence under the same family's `artifacts/`. The report must include the source command/log/DB snapshot, observation window, runner config, signal/bar timestamps, expected backtest entry/exit, actual open/close timestamps, side, quantity/notional, fill/mark/reference prices, fees, slippage estimate, order IDs or stable event IDs when available, and a match/mismatch conclusion.
-- `dry-run -> live` admission requires a completed online open/close reconciliation report with no unresolved material mismatch. A smoke test, offline replay parity, or narrative statement alone cannot satisfy this gate.
-- Statements like `forward-test required` in a core ledger are only satisfied by reports under `runner-tracking/`; verbal claims about dry-run performance do not count as evidence.
-- The family core ledger must reference the latest runner-tracking report whenever the version's status depends on runner evidence, and any promotion or demotion driven by runner observations must be recorded in the family `decision-log.md`.
+- 研究状态与实例授权按 [状态术语表](../../docs/research-governance/strategy-status-glossary.md) 分工。`quant-runner` 是生产执行与实例授权来源；Lab 不生成授权 manifest 或 runner lock，研究脚本不充当 runner。文档缺失、校验失败或研究结论不能代替用户的启停、重启、模式切换决定。
+- 交接文档放在家族 `live-specs/`，按 [模板](../../docs/research-governance/lab-live-spec-template.md) 和 [schema](../../docs/research-governance/schemas/lab-live-spec-frontmatter.schema.json) 填写身份、准确参数、数据/warmup、执行恢复、成本、TOML、证据和缺口；正文状态与 front matter 一致。实盘金额由子账户或 runner 管理时，链接运维/上线决策中的资金边界即可。
+- `runner_kind`、模块路径、配置字段和 TOML 必须对应当前 runner 实现。Lab 与 runner SPEC 双向链接；改参数或重命名时同步两侧，未同步的差异明确记入家族 decision log。
+- 每个 `(strategy_id, runner_kind)` 只保留一份 active Lab SPEC 与一份 active runner SPEC；旧规格标为 `superseded`。联合实现使用模板的 `implementations` 逐一映射，不用并行标量列表猜对应关系。
+- 被引用的标准 parity 产物须随版本管理保留并可在干净 checkout 中取得；缺失时记录证据缺口，不从报告文字重建或编造。各迁移所需证据见 [门禁规范](../../docs/research-governance/strategy-validation-gates.md)。
+
+## 运行观察回流
+
+- 进入 `dry-run` 的同一变更建立家族 `runner-tracking/`。标准入口为 quant-runner `scripts/lab_sync/sync_to_lab.sh`；生成的 DRAFT 须经人审才可作为门禁证据。
+- 按 `<family-id>-runner-<YYYY-MM-DD>.md` 留存报告：来源命令/日志/DB 快照、runner 配置、观察窗口、交易数、实际费用/滑点与回测假设的差异、指标/信号偏差、重启/缺 bar/拒单等事件，以及 keep/stop/adjust 结论。
+- 提取线上开平仓或成交统计用于回测对比时，报告包含逐笔对账：信号/bar 时间、预期与实际开平仓时间、方向、数量/名义金额、成交/标记/参考价、费用/滑点、可用订单或稳定事件 ID，以及匹配结论。保留的 CSV/JSON 放入家族 `artifacts/`。
+- `dry-run -> live` 要求已完成线上对账且无未解决重大偏差；smoke、离线 parity 或口头描述不能替代。主账链接影响状态的最新回流报告；由观察引起的状态决策写入 decision log，运行变更仍按用户授权执行。

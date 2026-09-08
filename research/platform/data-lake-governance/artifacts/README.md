@@ -2,6 +2,8 @@
 
 本目录保存现场审计、对账和完整性快照。新衍生 OHLCV 发布在 `data/derived/datasets/`，不放在这里。
 
+- [binance_research_bundle_v2_20260907/](binance_research_bundle_v2_20260907/)：五组内容哈希、真实价格启动、负向门禁与旧输入保护证据；[交接验收](../diagnostics/binance-research-bundle-v2-startup-2026-09-07.md)。可同步的固定组合清单位于 `specs/`，不依赖本目录自动随 Git 分发。
+
 - [data_lake_structure_cleanup_audit_20260907/](data_lake_structure_cleanup_audit_20260907/)：只读结构、分层占用、已发布指纹、清理依赖与旧 ZIP 比对；[适用性与清理风险报告](../diagnostics/data-lake-structure-readiness-cleanup-audit-2026-09-07.md)。未删除、移动或改写数据。
 
 - [binance_funding_v3_inputs_v2_20260907/](binance_funding_v3_inputs_v2_20260907/)：资金费率 v2 原文索引、事件映射、特殊类型、覆盖片段、未检索范围零成交审计、发布回读与旧指纹保护；[验收报告](../diagnostics/binance-funding-v3-inputs-v2-2026-09-07.md)。事件质量通过不等于全历史结算覆盖。

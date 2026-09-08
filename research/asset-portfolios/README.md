@@ -9,6 +9,8 @@
 
 | Directory | 状态 |
 | --- | --- |
+| [MA7-Bidirectional-Trend-Generalization（MA7-BTG）](1d-ma7-bidirectional-trend-generalization/README.md) · [主账](1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | 见顶层 |
+| [1d-ma7-atr14-long-transfer/](1d-ma7-atr14-long-transfer/README.md) | 见顶层 |
 | [multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md) | 见顶层 |
 | [multi-timeframe-pullback-trend-campaign/](multi-timeframe-pullback-trend-campaign/README.md) | 见顶层 |
 | [1d-ma7-deviation-continuation/](1d-ma7-deviation-continuation/README.md) | 见顶层 |
@@ -19,6 +21,8 @@
 | [15m-ema-cross-lightgbm-event-selector/](15m-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
 | [1h-ema-cross-lightgbm-event-selector/](1h-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
 | [4h-ema-cross-lightgbm-event-selector/](4h-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
+| [4h-bull-strong-rsi-atr-pullback/](4h-bull-strong-rsi-atr-pullback/README.md) · [主账](4h-bull-strong-rsi-atr-pullback/binance-4h-bsrap-core-ledger.md) | 见顶层 |
+| [Binance-1D-Bull-Top10-30D-Rotation（BIN-1D-BT10R30）](1d-bull-top10-30d-rotation/README.md) · [主账](1d-bull-top10-30d-rotation/binance-1d-bt10r30-core-ledger.md)；牛市Top10固定30日轮动 | 见顶层 |
 | [4h-ma7-regime-continuation/](4h-ma7-regime-continuation/README.md) | 见顶层 |
 | [1d-ema-cross-lightgbm-event-selector/](1d-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
 | [1d-multi-asset-tsmom-vol-target/](1d-multi-asset-tsmom-vol-target/README.md) | 见顶层 |
@@ -120,3 +124,5 @@
 - `Binance-1H-Multi-Leg-Six-Asset-Selector`（`BIN-1H-ML6AS`）：[1h-multi-leg-six-asset-selector/](1h-multi-leg-six-asset-selector/README.md)。BTC/ETH/SOL/BNB/TRX/HYPE 三交易臂、币内融合与抢占/非抢占全局单仓研究；`explore / not promoted / not live-ready`。主账：[binance-1h-ml6as-core-ledger.md](1h-multi-leg-six-asset-selector/binance-1h-ml6as-core-ledger.md)。
 - `Binance-MK7-Multi-Strategy-Account`（外部别名 `mk7`）：[mk7-multi-strategy-account/](mk7-multi-strategy-account/README.md)。六币 `1h` + HYPE K2FQ + HYPE MII 双槽共享账户的外部规格复现审计；全窗 LSR 已补齐，回测接近但未逐笔对齐，回测终点后 10.875 天 forward 基本持平；状态 `explore / not promoted / not live-ready`。
 - `HYPE-Cross-Strategy-Account`：[hype-cross-strategy-account/](hype-cross-strategy-account/README.md)。HYPE 单资产多策略共享子账户、全局单仓、跨策略优先级和账户级风控诊断；`explore`，不提升任何子策略状态。
+
+- `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。

@@ -1,17 +1,10 @@
 ---
-description: File references must be clickable in chat replies and research documents
+description: 回复与研究文档中的文件引用使用可点击链接
 alwaysApply: true
 ---
 
-# Clickable File References
+# 文件链接
 
-- **Hard requirement for final chat replies:** when telling the user to view any repository document, report, script, artifact, directory, or file, provide a Markdown link. Do not provide only a bare backtick path.
-- In chat replies, use an **absolute POSIX path** as the Markdown href. Cursor chat does not define the response document's relative base reliably, especially across workspace roots. Keep the repository-relative path visible as link text: [`research/hype/README.md`](/Users/ZK/OpenCode/quant-strategy-lab/research/hype/README.md).
-- Bad: `research/hype/README.md`
-- Bad: [`research/hype/README.md`](../../research/hype/README.md)（`../` may resolve outside the workspace）
-- Good: [`research/hype/README.md`](/Users/ZK/OpenCode/quant-strategy-lab/research/hype/README.md)
-- Before returning a newly generated user-facing file, verify that the exact absolute target exists and, when available, call Cursor `open_resource` with its `file://` URI. `open_resource` is a preflight only; the final Markdown href still uses the absolute POSIX path, not `file://`.
-- In durable research Markdown (README routing tables, core ledgers, decision logs, diagnostics, live specs), cross-document references must be relative Markdown links like [`hype-15m-mii-core-ledger.md`](15m-multi-indicator-intraday/hype-15m-mii-core-ledger.md), so they are clickable in Cursor and on git hosting.
-- Routing tables must link at least the family directory and the core-ledger entry; evidence lists in family docs must link each cited report.
-- Existing documents do not need a bulk rewrite. Convert bare-path references to Markdown links whenever you touch the surrounding content, and always use links in newly written or updated sections.
-- Bare backticks are reserved for parameters, code identifiers, status labels, paths inside code blocks/config examples/script output, paths that intentionally must not resolve, and `external-reproduction-spec` main bodies.
+- 回复中引用文件时，用 Markdown 链接和绝对路径；交付生成文件前确认目标存在。
+- 仓库 Markdown 中使用相对链接，索引链接到家族入口与主账，证据引用链接到对应文件。
+- 参数、代码、配置示例和泛指的路径可用反引号；对外复现规格正文按 [对外复现规则](external-reproduction-spec.mdc) 保持自包含。只修正本次涉及的引用，不批量重写历史文档。

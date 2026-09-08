@@ -3,16 +3,17 @@
 ## Family Identity
 
 - Full family name / alias：`Binance-OHLCV-Data-Lake-Governance` / `BIN-OHLCV-DLG`。
-- Market / timeframe：Binance USD-M USDT perpetual OHLCV；底座为 accepted normalized `15m`。
+- Market / timeframe：Binance USD-M USDT perpetual OHLCV 与配套资金费率；当前价格底座为 `15m.history.v3`，accepted normalized `15m` 保留为历史上游。
 - Mechanism：用 `dataset_id` 固定数据身份与 scope；partial/unaccepted 数据 fail closed；由 15m 生成版本化 1h/4h/1d；cache 只能作为可重建家族产物。
 - Boundary：这是平台数据治理线，不是交易策略；不得把治理完成解释为策略 PASS，也不得覆盖 legacy normalized 1h。
 
 ## Current State
 
 - Current observation：`15m.history.v3` 完成 V2 全部观测历史扫描、官方 API/Vision 补洞与边界分段，状态 `GOVERNED_WITH_EXPLICIT_BOUNDARY_EXCLUSIONS`；原网格仍有 12 段空位，不等于无缺口或完整 PIT。截止仍为北京时间 2026-09-05 23:45，526 个活跃 COIN/INDEX 尾部齐全。可信读取、内容哈希及消费者 deny-by-default 保留。
-- Status（分项，不以笼统 READY 代替缺口）：基础设施门禁 `READY`；数据集 15m 与 `from_15m.v1` 行质量 `PASS`、历史覆盖 `INTERNAL_GAPS`；4h 全市场研究 `gap_policy=reject` 为 `UNFIT`；legacy 1h 仍是 `PARTIAL_SCOPE_LEGACY`；家族缓存仍是 `FAMILY_CACHE`；消费者 `PARTIAL`（历史直读已冻结清单，新直读默认拒绝）；legacy 1h `quote_volume` 有本地追溯但仍保留 blocker。这不是策略 PASS。
+- Status（分项，不以笼统 READY 代替缺口）：当前价格 V3 与高周期 v2 行质量 `PASS`，保留历史边界缺口；费率 v2 行质量 `PASS`、日历 `PARTIAL_COVERAGE`；组合启动门禁本层验收通过，但全仓消费者登记仍有 6 项错误。legacy 1h 仍是 `PARTIAL_SCOPE_LEGACY`，其 `quote_volume` blocker 保留；家族缓存仍是 `FAMILY_CACHE`；消费者迁移 `PARTIAL`。这些均不是策略 PASS。
 - Runner / dry-run / live：none。
-- Next gate：新研究显式锁定 V3 或配套高周期 v2、截止及有效连续段；12 段边界禁止跨越。2026-09-07 资金费率续治理独立发布 v2，消除事件歧义并补到所有 V3 代码有观测；净收益只允许通过已验证片段及独立身份门禁的窗口。完整 PIT/结算日历、全历史远端修订复核及旧消费者迁移不冒充已完成。
+- Current bundle：`binance.v3.research_inputs.v2` 已发布，绑定价格 V3、高周期 v2 和资金费率 v2；发布/启动证据见 [本轮交接验收](diagnostics/binance-research-bundle-v2-startup-2026-09-07.md)。旧 bundle v1 与所有冻结读取入口保留。
+- Next gate：新研究按 [data-lake-spec 第 19 节](../../../docs/data-lake-spec.md) 冻结组合、范围、缺口及窗口规则并通过启动 API；净收益需独立身份证据和历史结算片段。完整 PIT/结算日历、全历史远端修订复核及旧消费者迁移不冒充已完成。
 
 ## Version Rules
 
@@ -33,6 +34,7 @@
 | `1h/4h/1d.from_15m.v2` | `TRUSTED_DERIVED`；行质量 `PASS`；保留边界缺口 | 唯一 V3 输入，完整桶；已通过发布后独立读取验收 | 874 合约；1h 15,393,559；4h 3,847,414；1d 640,378 | [统一输入契约](specs/binance-v3-research-inputs-v1-2026-09-07.md) · [清单](artifacts/binance_v3_research_inputs_v1_20260907/research_input_bundle.json) | 旧 v1 不改；资金费率/历史身份不随价格 PASS 自动通过 |
 | `funding.v3_inputs.v1` | 行质量 `PASS`；`PARTIAL_COVERAGE` | 保留原始毫秒及歧义，独立费率读取，不与 OHLCV 混表 | 2,660,857 精确键；增加 160,070；V3 价格 864/874 有任意费率观测；634 查询未完成 | [费率验收](artifacts/binance_v3_research_inputs_v1_20260907/funding/acceptance.json) · [范围审计](artifacts/binance_v3_research_inputs_v1_20260907/funding/price_scope_audit.json) | 910 库存代码不等于 910 个可用 USDT 标的；缺日历/有歧义的净收益拒绝，后续补齐须新版本 |
 | `funding.v3_inputs.v2` | 行质量 `PASS`；`PARTIAL_COVERAGE` | 官方原生事件裁决、特殊结算分离、历史频率片段门禁 | 2,654,430 行 / 874 代码；0 歧义 / 34 Special；639 片段 / 585 标的；71 个未检索范围全为零成交价格区间 | [v2 验收与边界](diagnostics/binance-funding-v3-inputs-v2-2026-09-07.md) · [机器验收](artifacts/binance_funding_v3_inputs_v2_20260907/acceptance.json) | 只准已验证片段内净收益；不是全历史完整，旧 v1/价格/读取入口不改 |
+| `binance.v3.research_inputs.v2` | `registered`；组合已发布，研究资格逐请求校验 | 五组不可变输入及冻结读取器绑定；区分清单/物理完整性/研究窗口 | 清单 SHA256 `d2a729d0…`；总截止仍 2026-09-05 15:45 UTC | [固定清单](specs/binance-v3-research-input-bundle-v2.json) · [启动验收](diagnostics/binance-research-bundle-v2-startup-2026-09-07.md) | 新实验入口统一；旧组合不覆盖，不批准 PIT/策略/实盘 |
 | `1d.cache` / MA7 RC panels | `FAMILY_CACHE` | 可重建，非标准 OHLCV | sidecar `.cache-meta.json` | cache sidecar | 不得当其他家族事实源 |
 | Round 2 | 基础设施当时 `READY`；本轮不沿用为前提 | 可信读取第一轮收口 | 受保护文件 327,640 未变 | [第二轮契约](specs/binance-ohlcv-round2-trusted-load-contract-2026-09-03.md) · [验收](diagnostics/binance-ohlcv-round2-acceptance-2026-09-03.md) | 历史消费者未全迁 |
 | Round 3 | 基础设施 `READY`；数据集 `PASS`+缺口；消费者 `PARTIAL` | 闭合 cutoff、严格 manifest、内容哈希、缺口边界、原始 RCA | 4h 库存指纹 `a52be016…`；机器 blocker 仍在 RCA | [第三轮契约](specs/binance-ohlcv-round3-trusted-load-contract-2026-09-03.md) · [验收](diagnostics/binance-ohlcv-round3-acceptance-2026-09-03.md) | 门禁收口；不发生产 v2 |
@@ -47,6 +49,7 @@
 ## Evidence Map
 
 - [Family README](README.md)
+- [组合 v2 发布与研究启动验收](diagnostics/binance-research-bundle-v2-startup-2026-09-07.md)
 - [资金费率 v2 治理与限制](diagnostics/binance-funding-v3-inputs-v2-2026-09-07.md)
 - [V3 统一研究输入治理](diagnostics/binance-v3-research-inputs-v1-2026-09-07.md)
 - [身份契约](specs/binance-ohlcv-dataset-identity-contract-2026-09-02.md)

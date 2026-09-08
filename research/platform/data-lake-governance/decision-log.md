@@ -1,5 +1,11 @@
 # Decision Log — Binance-OHLCV-Data-Lake-Governance
 
+## 2026-09-07 — 统一 Agent 路由、组合 v2 与研究启动门禁
+
+决策：按用户授权新增不可变组合 v2，统一绑定价格 V3、高周期 v2 和费率 v2；新研究按规范第 19 节冻结请求并通过启动检查。文件完整性与研究窗口资格分开，身份或费率日历不足时拒绝净收益；不改旧组合、读取器、数据和消费者。
+
+证据：[发布契约](specs/binance-v3-research-input-bundle-v2-2026-09-07.md)、[固定清单](specs/binance-v3-research-input-bundle-v2.json)、[交接验收](diagnostics/binance-research-bundle-v2-startup-2026-09-07.md)。
+
 ## 2026-09-07 — 资金费率 v2 事件治理，保留覆盖限制
 
 决策：按用户确认发布不可变 `funding.v3_inputs.v2`，官方原文裁决毫秒表示差异、独立保留 Regular / Special，不覆盖旧数据和消费者。事件歧义清零仍保留 `PARTIAL_COVERAGE`，净收益必须通过历史频率与独立身份门禁；剩余未检索区间的零成交价格证据不能证明无结算，本轮不是全历史日历完成或策略 PASS。

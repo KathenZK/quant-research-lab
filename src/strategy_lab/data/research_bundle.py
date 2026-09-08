@@ -9,13 +9,14 @@ from typing import Any
 
 import pandas as pd
 
+from strategy_lab.data import catalog as catalog_module, funding_v2 as funding_module, research_inputs as price_module
 from strategy_lab.data.catalog import (
     DatasetScope, load_trusted_research_dataset, read_verified_ohlcv,
     require_passing_trusted, resolve_dataset,
 )
 from strategy_lab.data.funding_v2 import load_funding_v2, require_funding_v2_window
 from strategy_lab.data.lake import DataLakeLayout
-from strategy_lab.data.manifest import inventory_fingerprint, parquet_inventory, sha256_file
+from strategy_lab.data.manifest import inventory_fingerprint, parquet_inventory, sha256_canonical, sha256_file
 from strategy_lab.data.research_inputs import (
     IdentityWindow, STEP, V3_CUTOFF, V3_PRICE_IDS, complete_window_mask,
     segment_research_bars,
@@ -111,6 +112,10 @@ def read_bundle_contract(
     for relative, digest in readers.items():
         _need(_hash(digest) and sha256_file(local_path(project_root, relative)) == digest,
               f"frozen reader changed: {relative}")
+    for module, relative in ((price_module, "src/strategy_lab/data/research_inputs.py"),
+                             (funding_module, "src/strategy_lab/data/funding_v2.py")):
+        _need(sha256_file(Path(module.__file__)) == readers[relative],
+              f"imported reader differs from bundle: {relative}")
     inventory = bundle["observed_asset_classes"]
     _need(isinstance(inventory, dict) and len(inventory) == 874
           and all(isinstance(s, str) and s.endswith("/USDT:USDT")
@@ -299,5 +304,8 @@ def require_research_startup(
     report = base_report("NET_INPUT_WINDOW_VERIFIED" if verified_funding is not None else "PRICE_DIAGNOSTIC_INPUTS_VERIFIED", pin)
     report.update(price_inputs_verified=True, funding_window_verified=verified_funding is not None,
                   verified_components=verified, request=request, symbols=stats,
+                  request_canonical_sha256=sha256_canonical(request),
+                  startup_core_sha256=sha256_file(Path(__file__)),
+                  catalog_sha256=sha256_file(Path(catalog_module.__file__)),
                   identity_evidence_scope="caller-reviewed files; not automatic historical truth/PIT certification")
     return VerifiedResearchInputs(prices, funding, report)

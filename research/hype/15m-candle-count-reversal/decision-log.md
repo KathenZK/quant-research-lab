@@ -24,6 +24,14 @@
 
 ## 决策记录
 
+- `2026-09-07`：[极值 Maker 入场审计](diagnostics/hype-cc-v35-maker-entry-audit-2026-09-07.md)
+  未复现“2026-08-01 至今收益 300%+”。按 V35 明示成本，单改为 10 根极值、最长
+  4 小时 maker 后收益由 `+30.64%` 变为 `-19.45%`；预声明 `EMA24/672` 过滤的
+  maker 变体最高 `+77.59%`，同规则 next-open / maker 全拆分最高 `+80.51%`，主要
+  改善来自过滤空单，不是稳定 maker 优势。因截图缺少精确均线规格、
+  完整 funding calendar 未验证且 K 线无法证明 maker 队列 / 部分成交，正式结论为
+  `DATA_OR_REPRODUCTION_FAILURE / NUMERIC_CLAIM_NOT_REPRODUCED`。本条仅为 diagnostic，
+  不登记新版本，不修改 V35 runner、dry-run 或 live 状态。
 - `2026-08-18`：共享 HYPE 15m 组再次 halt。`hype-candle-count-v35-dry-run` 自 `2026-08-17 19:19Z` 起观察窗口断裂，且 halt 时留有模拟空仓（`2026-08-17T03:00Z` short @ `58.9004304`，qty `0.509`）未再维护。研究身份不变。证据：[hype-15m-group-halt-2026-08-17.md](../15m-ema-trend-breakout/runner-tracking/hype-15m-group-halt-2026-08-17.md)。
 - `2026-07-20`：按用户决定，将 `HYPE-CANDLE-COUNT-V35` 的 parity 补证期限延至 `2026-09-24T00:00:00Z`，当时仅维持 dry-run；不恢复历史 live，也不获得新的 live 授权。当前实际授权以 quant-runner 为准，待补证据见 [`HYPE-CANDLE-COUNT-V35_parity_pending_2026-07-11.json`](artifacts/HYPE-CANDLE-COUNT-V35_parity_pending_2026-07-11.json)。
 - `2026-06-29`：`diagnostics/hype-cc-v35-live-underperformance-review-2026-06-29.md` 在 Binance live 表现不佳、6 月 OHLCV-proxy OOS replay 和阿里云 HypePulse live DB / 日志 / 交易所快照审计后，将 `HYPE-CC-V35` 下调为 live-underperformance / execution-risk diagnostic。当前归因优先级是策略 / 行情样本外亏损，其次是实盘成交摩擦放大；远端审计未发现服务卡死、当前保护单缺失、warning storm 或大幅入场滑点等足以把亏损主因改判为代码 bug 的证据。在补齐 2026-06-01 之后 mark-price replay 和 live-realistic replay 前，不要把 `+8357.56%` 或 `58.53%` 胜率作为 live expectation 引用。

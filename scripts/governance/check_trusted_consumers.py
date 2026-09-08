@@ -32,6 +32,19 @@ class AuxiliaryClassification:
 
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
+        ("load_coverage",), ("load_funding_v2",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
+        ("attempt_net_startup",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_inputs.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+    ),
     # PBTR
     ConsumerSpec(
         "research/hype/5m-pullback-trail/scripts/"
@@ -176,6 +189,48 @@ ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 BINANCE_CATALOG_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/applicability_features.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/run_audit.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-atr14-long-transfer/scripts/run_full_market.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-atr14-long-transfer/scripts/run_transfer.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-bull-top10-30d-rotation/scripts/build_p0_inputs.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/build_p1_inputs.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/build_p0_features.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
         "research/asset-portfolios/4h-ma7-regime-continuation/scripts/"
         "research_binance_4h_ma7_regime_continuation_p0r_data.py",
         ("catalog_trusted_load", "load_derived_ohlcv"),
@@ -232,6 +287,90 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/build_applicability_report.py",
+        "build",
+        "frozen-artifact-consumer",
+        "Renders this topic's frozen applicability tables and statistical limitations; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/analyze_applicability.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Verifies this topic's feature pins and evaluates frozen applicability contrasts against retained trade labels; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/audit_paths.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Matches original long entries against this topic's retained long-short ledgers; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/analyze.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Verifies this topic's frozen replay hashes and compares its retained result tables; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/build_report.py",
+        "build",
+        "frozen-artifact-consumer",
+        "Builds the Chinese mechanism audit from this topic's paired result tables; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-transfer/scripts/analyze_full_market.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Consumes this topic's retained full-market result and trade tables; never reads the lake.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-ma7-atr14-long-transfer/scripts/build_full_market_report.py",
+        "build",
+        "frozen-artifact-consumer",
+        "Verifies hashes of this topic's retained results, reconstructs accounting and renders an offline report; never reads the lake.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-bull-top10-30d-rotation/scripts/package_p0.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Verifies this family's result hashes and independent price arithmetic; never reads the lake.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-bull-top10-30d-rotation/scripts/replay_p0.py",
+        "load_inputs",
+        "frozen-artifact-consumer",
+        "Consumes hash-verified same-family daily/4h startup results for the fixed 30-day study.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/package_p1_results.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Verifies hash-pinned same-family P1 inputs, result arithmetic and P0 protection; reads no lake data.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/research_p1_states.py",
+        "load_verified_inputs",
+        "frozen-artifact-consumer",
+        "Consumes hash-pinned same-family P1 inputs returned by the daily and 4h startup checks.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/replay_p1_entries.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Consumes hash-pinned same-family P1 inputs returned by the daily and 4h startup checks.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/package_p0_results.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Verifies this family's replay manifest and arithmetic; reads no source lake data.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/4h-bull-strong-rsi-atr-pullback/scripts/replay_p0.py",
+        "main",
+        "frozen-artifact-consumer",
+        "Reads only this family's SHA-verified startup-derived feature artifact; no lake bypass.",
+    ),
     AuxiliaryClassification(
         "research/hype/15m-ema-trend-breakout/scripts/"
         "research_hype_ema_tb_v35_profit_floor.py",
@@ -357,6 +496,7 @@ CONTROLLED_EXCEPTION_PREFIXES = (
     "research/platform/data-lake-governance/scripts/",
 )
 CATALOG_CONSUMER_MARKERS = (
+    "require_research_startup",
     "load_trusted_dataset",
     "load_canonical_binance_perp_1d",
     "load_trusted_research_dataset",
