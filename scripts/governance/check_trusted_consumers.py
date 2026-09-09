@@ -33,6 +33,31 @@ class AuxiliaryClassification:
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/build_mcsm_baseline_inputs_20260909.py",
+        ("main", "scoped_read"),
+        ("read_bundle_contract", "verify_bundle_files", "load_trusted_research_dataset", "read_verified_ohlcv"),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/verify_mcsm_baseline_20260908.py",
+        ("load_first_month_prices", "recheck_ada_formation"), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/audit_inputs.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/load_binance_1d_mcsm_lifecycle_inputs_20260908.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_binance_1d_mcsm_funding_source_20260908.py",
+        ("load_current_funding",), ("load_funding_v2",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-medium-term-continuation-state/scripts/audit_inputs.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
         "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
         ("load_coverage",), ("load_funding_v2",),
     ),
@@ -189,6 +214,12 @@ ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 BINANCE_CATALOG_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/correct_mcsm_baseline_identity_20260909.py",
+        ("main",),
+        ("read_bundle_contract", "verify_bundle_files", "load_trusted_research_dataset", "scoped_read"),
+        "exploratory-scoped-identity-correction-consumer",
+    ),
+    ConsumerSpec(
         "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/applicability_features.py",
         ("load_inputs",),
         ("require_research_startup",),
@@ -287,6 +318,151 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_estimated_funding_large_cash_20260909.py",
+        "main", "posthoc-bounded-large-funding-cash-source-audit",
+        "Checks four named large cash-contribution windows against official funding API and checksum-verified monthly archives; preserves frozen account inputs and does not infer full-calendar or verified-net approval.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_estimated_funding_identity_output_20260909.py",
+        "main", "identity-corrected-estimated-funding-integrity-audit",
+        "Independently verifies corrected holding/event pins, raw mark hashes and unchanged 758 windows; no new account return, missing-calendar inference or trusted-net approval.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_identity_sources_20260909.py",
+        "main", "bounded-official-identity-and-retained-account-audit",
+        "Preserves four official CMS announcements for two preidentified contract boundaries and attributes existing price-account legs; no selection change, counterfactual rerun, or lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/correct_mcsm_baseline_identity_20260909.py",
+        "verified_saved_execution", "hash-pinned-identity-correction-returned-frame-consumer",
+        "Fixes only confirmed AERGO/LIT formation identity errors by original frozen ranks, verifies retained execution receipts and two newly scoped formations, and preserves the prior 760-leg input; not PIT or net approval.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_funded_replica_20260909.py",
+        "main", "independent-estimated-funding-account-replica",
+        "Reconstructs retained three funding proxy scenarios with independent reserve-cash arithmetic; no shared account kernel or approval of unknown calendars.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_price_only_replica_20260909.py",
+        "main", "independent-retained-account-replica",
+        "Reconstructs the hash-verified same-family price account with independent spot-equivalent algebra; not a new lake or net approval.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_baseline_selection_20260909.py",
+        "main", "frozen-selection-lineage-and-segment-audit",
+        "Audits retained V3 scoped frames against pinned original inputs; reports missing old days and unresolved signal-segment boundaries without changing holdings.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_mcsm_estimated_funding_calendar_20260909.py",
+        "main", "partial-calendar-observed-event-audit",
+        "Compares observed estimate events only within frozen evidenced funding segments; cannot assert full calendar/PIT or verified net.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/summarize_mcsm_baseline_estimate_20260909.py",
+        "main", "retained-estimated-account-report-generator",
+        "Renders hashed same-family account artifacts with native/proxy, calendar and execution limitations; no lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/build_mcsm_baseline_inputs_20260909.py",
+        "load_returned_daily", "hash-pinned-same-family-returned-frame-consumer",
+        "Reuses complete receipt-verified same-family daily frames and strict scoped V3 supplements; not historical PIT/net approval.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/build_mcsm_baseline_estimated_funding_20260909.py",
+        "prepare", "explicit-untrusted-observed-funding-estimate",
+        "Binds funding v2 and actual frozen holding windows, preserves raw API/mark proxy evidence and partial calendar status; no trusted net claim or lake writes.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/run_mcsm_baseline_estimate_20260909.py",
+        "main", "hash-pinned-exploratory-account-estimate",
+        "Consumes only frozen same-family price and funding estimate outputs; four explicitly modeled accounts, never verified net/PIT/live readiness.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/multi-public-strategies-100/scripts/build_report.py",
+        "pct", "artifact-report-generator",
+        "Reads retained diagnostic outputs and writes the report; data/raw strings describe provenance, not trusted lake reads.",
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/collect_equity_raw.py',
+        'fetch', 'raw-only-producer',
+        'Preserves native Yahoo snapshots and atomic raw partitions; never accepted normalized.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/collect_spot_raw.py',
+        'fetch', 'raw-only-producer',
+        'Checksum verified Binance spot archives retained UNACCEPTED; no perpetual substitution.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/prepare_freqtrade.py',
+        'one', 'untrusted-diagnostic-adapter',
+        'SHA-verifies explicit raw partition manifest; builds disposable adapter; outputs EXPLORE_UNTRUSTED only.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/backtest_equity_diagnostic.py',
+        'load', 'untrusted-diagnostic-reader',
+        'Verifies raw partition and payload hashes; numeric outputs remain EXPLORE_UNTRUSTED per data-lake spec section 5.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/probe_free_sources.py',
+        'fetch', 'raw-access-probe',
+        'Read-only public source access evidence; no trusted market consumption.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/scripts/run_freqtrade.py',
+        'main', 'untrusted-native-backtest',
+        'Offline native framework uses fingerprint-verified raw-derived adapter, never trusted or live-ready.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/multi-public-strategies-100/artifacts/sources/Donvink__quant-trade/scripts/build_historical_market_cap.py',
+        'download_historical_market_cap', 'archived-third-party-source',
+        'Retained source evidence only, never executed; no historical market-cap input consumed.',
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/verify_binance_1d_mcsm_lifecycle_inputs_20260908.py",
+        "main", "verified-returned-frame-artifact-audit",
+        "Verifies this round's retained API frame projection, symbol hashes and startup receipts; never reads the lake.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/verify_mcsm_baseline_20260908.py",
+        "baseline_gate_closeout", "returned-frame-and-actual-source-rejection-audit",
+        "Checks pinned same-family frames and original holdings; demonstrates missing-mark and net-startup rejection, not an approved net backtest.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/verify_mcsm_baseline_20260908.py",
+        "load_verified_returned_daily", "verified-returned-frame-artifact-audit",
+        "Checks pinned API-returned daily frame and all original startup/source receipts; no raw lake or cache read.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/probe_mcsm_baseline_funding_marks_20260908.py",
+        "inspect_local", "funding-source-availability-audit",
+        "Hash-checks existing raw API receipts and makes bounded public-source probes; does not approve or publish research inputs.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/probe_mcsm_baseline_first_day_marks_20260908.py",
+        "main", "bounded-public-funding-source-probe",
+        "Retains official first-held-day funding responses for fixed original nominations; no strategy returns or lake writes.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/reconcile_mcsm_baseline_funding_marks_20260908.py",
+        "normalized_inventory", "funding-field-availability-audit-not-research-input",
+        "Only inventories native mark field availability in existing normalized files; no normalized values enter strategy calculations.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_baseline_terminals_20260908.py",
+        "main", "bounded-terminal-source-and-returned-frame-audit",
+        "Captures five official terminal events and checks the pinned same-family returned daily projection; no exact settlement or net approval inferred.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/audit_binance_1d_mcsm_funding_source_20260908.py",
+        "load_legacy_reproduction", "frozen-artifact-reproduction-audit",
+        "Read-only reproduction of SHA-pinned original engines and retained artifacts; never a new trusted input.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-monthly-cs-momentum-long10/scripts/research_binance_1d_mcsm_lifecycle_20260908.py",
+        "main", "verified-returned-frame-artifact-consumer",
+        "Reads only this round's content-pinned projection of require_research_startup returned frames and verified receipts, not a direct lake or legacy cache.",
+    ),
     AuxiliaryClassification(
         "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/build_applicability_report.py",
         "build",

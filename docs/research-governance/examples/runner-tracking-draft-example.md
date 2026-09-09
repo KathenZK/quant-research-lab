@@ -1,8 +1,9 @@
-> **示例，非证据。** 由 `/tmp` 端到端夹具库生成，不是任何真实家族的正式 runner-tracking 报告。未经人审不得作为门禁证据。
+> **示例，非证据。** 由 `/tmp` 端到端夹具库生成，不是任何真实家族的正式 runner-tracking 报告，不得作为门禁证据。
 
 # EXAMPLE-DRAFT-V0 Runner Tracking DRAFT
 
-> 状态：`DRAFT` / pending human review。本文件由脚本生成，**未经人审不得作为门禁证据**。
+> 状态：`DRAFT` / pending evidence review。本文件由脚本生成；**来源追溯、缺项补齐、逐笔对账和差异复核完成前，保持 DRAFT，不作为门禁证据**。
+> `TODO(unverified)` 表示缺项或未验证；本报告不证明复核已完成，也不代表实盘启停授权。
 >
 > 家族：`hype-5m-pullback-trail`
 > 实例：`example-dry-run`
@@ -28,7 +29,7 @@
 
 - observation label：`2026-09-03-e2e-fixture`
 - 健康更新时间：`2026-09-03T00:01:00Z`
-- 窗口起止（人工核对）：TODO(human)
+- 窗口起止（待核对）：TODO(unverified)
 
 ## Runner 配置摘要
 
@@ -39,7 +40,7 @@
 - timeframe：`5m`
 - health status：`ok`
 - position_open：`false`
-- kind / leverage / notional / 账户：TODO(human)
+- kind / leverage / notional / 账户：TODO(unverified)
 
 ## 信号 / bar 时间戳
 
@@ -51,30 +52,30 @@
 
 ## 开平仓对账
 
-交易行 `1`，其中已平仓 `1`。CLI `ledger-trades` 不输出 `signal_ts` / 费用 / 订单号；缺项写 TODO(human)。
+交易行 `1`，其中已平仓 `1`。CLI `ledger-trades` 不输出 `signal_ts` / 费用 / 订单号；缺项写 TODO(unverified)。
 
 | trade_id | 预期回测入场 | 预期回测出场 | 实际开仓 ts | 实际平仓 ts | 方向 | 数量 | 名义 | 成交价（入） | 成交价（出） | 标记/参考价 | 费用 | 滑点估计 | 订单或事件 ID | match/mismatch |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `trade-1` | TODO(human) | TODO(human) | `2026-09-02T23:55:00Z` | `2026-09-03T00:05:00Z` | `long` | `1.0` | `10.0` | `10.0` | `10.2` | TODO(human) | `0.01` | TODO(human) | `ord-1` | TODO(human) |
+| `trade-1` | TODO(unverified) | TODO(unverified) | `2026-09-02T23:55:00Z` | `2026-09-03T00:05:00Z` | `long` | `1.0` | `10.0` | `10.0` | `10.2` | TODO(unverified) | `0.01` | TODO(unverified) | `ord-1` | TODO(unverified) |
 
-- 预期回测进出场：TODO(human)
-- 标记/参考价：TODO(human)
+- 预期回测进出场：TODO(unverified)
+- 标记/参考价：TODO(unverified)
 - 费用（fill 事件样本）：`0.01`
-- 滑点估计 vs 回测假设：TODO(human)
+- 滑点估计 vs 回测假设：TODO(unverified)
 - 订单/事件 ID 样本：`ord-1`
 - 成交价样本：`10.2`
-- match/mismatch 结论：TODO(human)
+- match/mismatch 结论：TODO(unverified)
 
 ## 费用 / 滑点 vs 回测假设
 
 - 实现费用：`0.01`
-- 回测费用假设：TODO(human)
-- 实现滑点：TODO(human)
-- 回测滑点假设：TODO(human)
+- 回测费用假设：TODO(unverified)
+- 实现滑点：TODO(unverified)
+- 回测滑点假设：TODO(unverified)
 
 ## 信号 / 指标对拍偏差
 
-TODO(human)
+TODO(unverified)
 
 ## 事件（重启、缺 K、拒单）
 

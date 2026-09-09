@@ -1,6 +1,6 @@
 # <Family Full Name> Core Ledger
 
-> 本模板定义主账应写什么。复制到家族目录后，把文件名改为 `<family-id>-core-ledger.md`，并把模板内指向本目录的相对链接改为从家族目录出发的路径（如 `strategy-status-glossary.md` 改为 `../../../docs/research-governance/strategy-status-glossary.md`）。主账是家族/版本身份与状态的叙事真源，不是实验报告、日志、参数说明书或 runner 实例授权文件。实例授权与实际运行事实只来自 `quant-runner`；文档冲突只阻止新的 promotion 或交接，不得自动改变已有实例。
+> 主账记录家族/版本身份、状态、关键结论和证据入口；章节与篇幅按研究需要调整。复制后使用 `<family-id>-core-ledger.md`，并修正相对链接。完整规格和实验输出另存后引用；实例授权与运行事实来自 quant-runner。
 
 ## Family Identity
 

@@ -8,6 +8,8 @@
 
 - [家族主账](ma7-btg-core-ledger.md)
 - [完整结论](diagnostics/final-report-20260908.md)
+- [用户原始假设澄清与后续研究路径](diagnostics/research-question-clarification-20260908.md)
+- [下一阶段研究方案：中期延续性目标与成功失败标准（草案）](notes/research-proposal-medium-term-continuation-20260908.md)
 - [数据、股票与基本面边界](diagnostics/data-and-market-scope-20260908.md)
 - [交互交易路径](artifacts/p4-trade-paths-20260908/MA7多空趋势_交易路径.html)
 - [冻结合同](specs/research-contract-p1-20260908.md) · [复现说明](scripts/README.md)

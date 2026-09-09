@@ -8,21 +8,20 @@ alwaysApply: false
 
 # 研究存储
 
-- 长期研究结论以中文 Markdown 保存在 `research/`；用户指定其他语言时从其要求。临时会话或可视化中的持久结论也应落到对应研究文档。
-- 新市场/周期/机制先核对家族边界；新周期或机制创建独立 `research/<asset>/<timeframe>-<strategy-family-slug>/`，不因指标相似并入旧家族。建立 README、decision log、scripts、artifacts，并同步资产与顶层研究索引。
-- 策略家族须有独立 `<family-id>-core-ledger.md`；纯诊断主题在 README front matter 声明 `research_classification: diagnostic_topic`，不建立策略主账。分类与目录检查见 [文档一致性检查](../../tests/test_research_docs_consistency.py)。
-- 登记/冻结版本时更新主账的身份、版本表、状态和证据链接；状态含义与迁移按 [状态术语表](../../docs/research-governance/strategy-status-glossary.md)。规格或 decision log 不能代替主账登记。
-- 主账内容按 [模板](../../docs/research-governance/core-ledger-template.md)，保持在现有校验的 150 行以内；实验后只更新受影响的状态、版本行和证据。完整参数、过程与产物放到下表对应位置，不逐次追加实验章节。
-- README 负责身份、边界、机制简介、状态与入口链接；decision log 每项记录日期、决策和证据链接。完整指标和报告不在索引与日志间重复粘贴。
+- 长期研究结论默认以中文 Markdown 保存在 `research/`；用户指定其他语言时从其要求。
+- 按资产、周期和机制组织独立家族 `research/<asset>/<timeframe>-<strategy-family-slug>/`，新家族同步登记资产与顶层研究索引。指标相似不构成合并家族的理由。
+- 策略家族保留 README、独立 `<family-id>-core-ledger.md` 和 decision log；纯诊断主题在 README 声明 `research_classification: diagnostic_topic`，以主题文档记录结论，不建立策略主账。子目录随实际产物创建。
+- README 用于定位；主账记录版本身份、当前状态、关键结论和证据链接，字段参考 [模板](../../docs/research-governance/core-ledger-template.md)。篇幅和章节按内容需要安排，完整参数与实验输出另存后链接。
+- 登记/冻结版本更新主账与规格，记录状态或重要决策时更新 decision log；索引保留简短状态或主账入口。登记不自动触发晋升、全套实验或图表生成，状态口径见 [术语表](../../docs/research-governance/strategy-status-glossary.md)。
 
 | 内容 | 家族内位置 |
 | --- | --- |
-| 研究版本的参数、逻辑、数据、成本与执行契约 | `specs/` |
-| runner 实现与运维交接 | `live-specs/`，仅在交接时创建，见 [交接规则](lab-runner-handoff.mdc) |
+| 参数、逻辑、数据、成本与执行契约 | `specs/` |
 | 诊断、消融与研究说明 | `diagnostics/`、`ablations/`、`notes/` |
-| 当前一次性研究/抓取/导出脚本 | `scripts/` |
-| 被引用或明确保留的 JSON/CSV/HTML/图表 | `artifacts/`，索引链接见 [产物治理](../../docs/research-governance/artifacts-governance.md) |
-| runner 观察与线上对账 | `runner-tracking/`，见 [交接规则](lab-runner-handoff.mdc) |
+| 当前研究、抓取、审计与导出脚本 | `scripts/` |
+| 被引用或明确保留的 JSON/CSV/HTML/图表 | `artifacts/`，见 [产物治理](../../docs/research-governance/artifacts-governance.md) |
+| runner 交接与运行观察 | `live-specs/`、`runner-tracking/`，见 [交接文档](../../docs/research-governance/lab-runner-handoff.md) |
 
-- 临时输出放系统临时目录或明确标记的 scratch/local 目录；长期文档引用前将证据保存到 `artifacts/`。退役的顶层 `reports/`、Cursor 私有目录和 `legacy-canvas/` 不接收新研究内容；历史证据不批量搬迁。
-- 跨家族共享引擎遵循 [共享内核约定](../../research/_shared-kernels/README.md)：消费方固定版本与 SHA256，已被 pin 的版本不可原地修改，变更新开版本；报告和产物仍归消费方家族。
+- 临时输出放系统临时目录或明确标记的 scratch/local 目录；长期引用前将证据保存到 `artifacts/`。退役的顶层 `reports/`、Cursor 私有目录和 `legacy-canvas/` 不接收新研究内容。
+- 仓库文档用相对 Markdown 链接引用文件，回复中交付文件用绝对路径链接，并确认目标存在。参数、代码和泛指路径可用反引号；给仓库外读者的单文件规格遵循 [对外复现格式](../../docs/research-governance/external-reproduction-spec.md)。
+- 共享引擎遵循 [共享内核约定](../../research/_shared-kernels/README.md)：消费方固定版本与 SHA256，已被 pin 的版本不可原地修改；报告和产物仍归消费方家族。

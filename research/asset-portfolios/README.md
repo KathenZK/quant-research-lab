@@ -9,6 +9,8 @@
 
 | Directory | 状态 |
 | --- | --- |
+| [Binance-1D-Medium-Term-Continuation-State（BIN-1D-MTCS）](1d-medium-term-continuation-state/README.md) · [主账](1d-medium-term-continuation-state/binance-1d-mtcs-core-ledger.md)；中期延续的事前识别 | 见顶层 |
+| [Binance-1D-Trend-Strength-Pullback-Restart（BIN-1D-TSPR）](1d-trend-strength-pullback-restart/README.md) · [主账](1d-trend-strength-pullback-restart/binance-1d-tspr-core-ledger.md)；趋势强度与回撤后首次MA7重启 | 见顶层 |
 | [MA7-Bidirectional-Trend-Generalization（MA7-BTG）](1d-ma7-bidirectional-trend-generalization/README.md) · [主账](1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | 见顶层 |
 | [1d-ma7-atr14-long-transfer/](1d-ma7-atr14-long-transfer/README.md) | 见顶层 |
 | [multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md) | 见顶层 |
@@ -126,3 +128,5 @@
 - `HYPE-Cross-Strategy-Account`：[hype-cross-strategy-account/](hype-cross-strategy-account/README.md)。HYPE 单资产多策略共享子账户、全局单仓、跨策略优先级和账户级风控诊断；`explore`，不提升任何子策略状态。
 
 - `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。
+
+- [PUBLIC100 公开策略100条复核与诊断](multi-public-strategies-100/README.md)：diagnostic_topic；19条数值诊断，81条数值回测未完成；0条正式验证。

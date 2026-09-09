@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 
-TODO = "TODO(human)"
+TODO = "TODO(unverified)"
 INCIDENT_TYPES = {
     "cycle_error",
     "group_restarted",
@@ -195,7 +195,8 @@ def render(args: argparse.Namespace) -> str:
 
     return f"""# {args.strategy_id} Runner Tracking DRAFT
 
-> 状态：`DRAFT` / pending human review。本文件由脚本生成，**未经人审不得作为门禁证据**。
+> 状态：`DRAFT` / pending evidence review。本文件由脚本生成；**来源追溯、缺项补齐、逐笔对账和差异复核完成前，保持 DRAFT，不作为门禁证据**。
+> `{TODO}` 表示缺项或未验证；本报告不证明复核已完成，也不代表实盘启停授权。
 >
 > 家族：`{family_id}`
 > 实例：`{args.instance_id}`
@@ -217,7 +218,7 @@ def render(args: argparse.Namespace) -> str:
 
 - observation label：`{args.window}`
 - 健康更新时间：{md_cell(health.get("updated_at"))}
-- 窗口起止（人工核对）：{TODO}
+- 窗口起止（待核对）：{TODO}
 
 ## Runner 配置摘要
 

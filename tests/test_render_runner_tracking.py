@@ -121,13 +121,18 @@ def test_draft_fills_available_fields_and_todos_the_rest(tmp_path: Path) -> None
     text = render.render(ns)
     output.write_text(text, encoding="utf-8")
     assert "DRAFT" in text
-    assert "pending human review" in text
-    assert "未经人审不得作为门禁证据" in text
+    assert "pending evidence review" in text
+    assert "来源追溯、缺项补齐、逐笔对账和差异复核完成前，保持 DRAFT，不作为门禁证据" in text
+    assert "缺项或未验证" in text
+    assert "本报告不证明复核已完成，也不代表实盘启停授权" in text
+    assert "pending human review" not in text
+    assert "人工核对" not in text
+    assert "TODO(human)" not in text
     assert "`trade-1`" in text
     assert "`10.0`" in text
     assert "`10.2`" in text
     assert "`ord-1`" in text
-    assert "TODO(human)" in text
+    assert "TODO(unverified)" in text
     assert "- keep：" in text
     assert "- stop：" in text
     assert "- adjust：" in text

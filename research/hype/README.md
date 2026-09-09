@@ -1,19 +1,8 @@
 # HYPE Research Index
 
-HYPE 有多个互不相关但复用版本号的策略家族。不要按裸版本号阅读：先选家族，永远优先完整 family name，短 id 只作为历史别名。
+HYPE 有多个复用版本号的独立策略家族；下表给出家族身份、机制、边界、状态与主账入口。
 
-本文件是**路由表**：每个家族只维护身份、机制、防串线警告、状态和主账链接。版本细节、证据清单和阅读顺序的唯一事实源是各家族 core ledger 与 `decision-log.md`。
-
-## 阅读顺序（通用）
-
-1. `../README.md`
-2. 本文件
-3. 目标家族 `README.md`
-4. 该家族 core ledger / 主账
-5. 该家族 `decision-log.md`
-6. 按需打开 `specs/`（研究侧版本规格）、diagnostics、ablations、`live-specs/`（runner 交接规格）、artifacts；dry-run/live 后强制阅读 `runner-tracking/`。
-
-状态词定义见 [strategy-status-glossary.md](../../docs/research-governance/strategy-status-glossary.md)。
+目标明确后直接读取相关主账、规格或报告；涉及运行表现时查看对应 `runner-tracking/`。研究组织见 [存储规则](../../.cursor/rules/research-report-storage.mdc)，状态字段见 [术语表](../../docs/research-governance/strategy-status-glossary.md)。
 
 ## Strategy Families
 
@@ -67,13 +56,6 @@ HYPE 有多个互不相关但复用版本号的策略家族。不要按裸版本
 ## 组合与账户层诊断
 
 - [../asset-portfolios/hype-cross-strategy-account/README.md](../asset-portfolios/hype-cross-strategy-account/README.md)：HYPE 多策略共享子账户 / 全局单仓组合诊断入口。既有回放使用 `HYPE-5M-PBTR-V6.2.1` + `HYPE-15M-MII-V1.3`；当前 MII runner 已切换 V1.4A，旧回放不提升任何子策略状态。
-
-## Hard Rules
-
-- 永远不要只凭 `Vxx` 回答；引用时带完整 family name。
-- 每个家族是独立研究线；指标相似不构成合并理由（详见上表防串线列）。
-- 持久 HYPE 研究报告与主账必须是 `research/` 下的 repo-tracked Markdown；Canvas 与 `legacy-canvas/` 只是历史/临时表面（细则见 `../../.cursor/rules/research-report-storage.mdc`）。
-- `archive/code/platform/` 只是被研究文档引用的历史源码快照；`src/strategy_lab/` 是数据基础设施，都不是策略事实来源。
 
 ## Transfer Notes
 

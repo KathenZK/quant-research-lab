@@ -1,8 +1,8 @@
 # Quant Strategy Lab
 
-本仓库是 data-first 的量化策略研究档案，不是通用策略平台。工作约束、命名口径与硬规则以 [AGENTS.md](AGENTS.md) 和 [`.cursor/rules/`](.cursor/rules/) 为准，本文件不复述细则。
+本仓库是 data-first 的量化策略研究档案。Agent 的核心约束是数据湖使用与研究材料组织，入口见 [AGENTS.md](AGENTS.md)。
 
-线上执行在同级仓库 `/Users/ZK/OpenCode/quant-runner`；交接与授权边界见 [lab-runner-handoff.mdc](.cursor/rules/lab-runner-handoff.mdc)。
+线上执行在同级仓库 `/Users/ZK/OpenCode/quant-runner`；交接与授权边界见 [Lab / Runner 交接](docs/research-governance/lab-runner-handoff.md)。
 
 长期维护的核心资产：
 
@@ -12,11 +12,11 @@
 
 旧策略平台、工作流引擎、Dashboard、泛化回测层和早期规划文档已归档到 `archive/`。
 
-## 先读这些
+## 任务入口
 
-- [AGENTS.md](AGENTS.md) 与 [`.cursor/rules/`](.cursor/rules/)：AI agent 在本仓库工作的约束；细则以 `.cursor/rules/` 为准。
+- [AGENTS.md](AGENTS.md)：数据与文档约束、工作位置。
 - [research/README.md](research/README.md)：研究档案总入口与家族路由表。
-- [docs/research-governance/strategy-status-glossary.md](docs/research-governance/strategy-status-glossary.md)：策略状态词与状态机的唯一定义。
+- [docs/README.md](docs/README.md)：数据规范、文档格式和按需使用的方法参考。
 
 ## 当前结构
 
@@ -46,7 +46,7 @@ tests/    # active 数据湖内核测试 + 研究文档一致性检查
 archive/   # 历史代码、配置、文档、研究和报告快照
 ```
 
-家族目录内部结构由 [research-report-storage.mdc](.cursor/rules/research-report-storage.mdc) 与 [lab-runner-handoff.mdc](.cursor/rules/lab-runner-handoff.mdc) 定义，本文件不重复。
+家族目录组织见 [研究存储规则](.cursor/rules/research-report-storage.mdc)，runner 相关文档见 [交接格式](docs/research-governance/lab-runner-handoff.md)。
 
 ## 数据湖规范
 

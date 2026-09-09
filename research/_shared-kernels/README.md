@@ -20,3 +20,4 @@
 | [ema-trend-breakout/](ema-trend-breakout/README.md) | `v2` | EMA96/384 + ADX/量能/1h 确认的 K0/K1/K2 单仓位趋势突破内核；支持 ATR risk / 固定 allocation 与显式成本压力倍数 | HYPE V39.2/V40 已完成 legacy parity；BTC 等跨标的消费方待接入 |
 | [bollinger-keltner-squeeze-breakout/](bollinger-keltner-squeeze-breakout/README.md) | `v1` | Bollinger-inside-Keltner squeeze、压缩区间突破与 15m 子柱执行 | HYPE `15m` / `1h` / `4h` / `1d` BKSB 家族 |
 | [binance-ma7-root-data/](binance-ma7-root-data/README.md) | `v1` | Binance direct `1h` / UTC `1d` / funding 对账、MA7 soft root 与 fixed-leverage 成本核算 | `BIN-1D-MA7-LMML`、`BIN-1H-MA7-RHT` |
+| [trend-strength-pullback-restart/](trend-strength-pullback-restart/README.md) | `v1` | 锚点趋势强度、顺序回撤与MA7首次重穿、共同支持联合推断及20日捕获 | `BIN-1D-TSPR` |

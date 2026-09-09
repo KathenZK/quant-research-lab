@@ -4,10 +4,9 @@
 
 ## 使用入口
 
-- 从下表定位家族，再读对应资产/主题 README、家族 README 与主账；规格、报告和产物按问题取用。
+- 从下表定位家族；目标已明确时直接读取相关主账、规格或证据。资产与家族 README 用于辨认身份和查找材料。
 - Binance 价格与资金费率输入见 [data-lake-spec.md](../docs/data-lake-spec.md) 第 16–19 节与 [数据治理入口](platform/data-lake-governance/README.md)。新研究固定组合并执行启动前校验，历史复现使用原冻结输入。
-- 任务规则与代码边界见 [AGENTS.md](../AGENTS.md)；状态词见 [状态术语表](../docs/research-governance/strategy-status-glossary.md)，晋升证据见 [门禁规范](../docs/research-governance/strategy-validation-gates.md)。
-
+- 数据与文档规则见 [AGENTS.md](../AGENTS.md)；记录状态时查 [状态术语表](../docs/research-governance/strategy-status-glossary.md)，推进运行状态时查 [状态迁移要求](../docs/research-governance/strategy-validation-gates.md)。
 
 ## HYPE 策略家族
 
@@ -98,6 +97,8 @@
 
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
+| `Binance-1D-Medium-Term-Continuation-State`（`BIN-1D-MTCS`） | [asset-portfolios/1d-medium-term-continuation-state/](asset-portfolios/1d-medium-term-continuation-state/README.md) · [主账](asset-portfolios/1d-medium-term-continuation-state/binance-1d-mtcs-core-ledger.md)；事前方向与状态识别中期延续 | explore / diagnostic-only / not promoted / not live-ready |
+| `Binance-1D-Trend-Strength-Pullback-Restart`（`BIN-1D-TSPR`） | [asset-portfolios/1d-trend-strength-pullback-restart/](asset-portfolios/1d-trend-strength-pullback-restart/README.md) · [主账](asset-portfolios/1d-trend-strength-pullback-restart/binance-1d-tspr-core-ledger.md)；事前趋势强度与顺序回撤重启的增量识别 | explore / diagnostic-only / not promoted / not live-ready |
 | `MA7-Bidirectional-Trend-Generalization`（`MA7-BTG`） | [asset-portfolios/1d-ma7-bidirectional-trend-generalization/](asset-portfolios/1d-ma7-bidirectional-trend-generalization/README.md) · [主账](asset-portfolios/1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | explore / not promoted / not live-ready |
 | `MA7-ATR14-Long-Fixed-Parameter-Transfer` | [asset-portfolios/1d-ma7-atr14-long-transfer/](asset-portfolios/1d-ma7-atr14-long-transfer/README.md) | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`） | [asset-portfolios/multi-timeframe-dual-state-trend-campaign/](asset-portfolios/multi-timeframe-dual-state-trend-campaign/README.md) · [主账](asset-portfolios/multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md) · [最终报告](asset-portfolios/multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md) | goal-complete / HARD-GATE-FAILED / explore / not promoted / not live-ready |
@@ -169,6 +170,7 @@
 | `Binance-OHLCV-Data-Lake-Governance`（`BIN-OHLCV-DLG`） | [platform/data-lake-governance/](platform/data-lake-governance/README.md) · [主账](platform/data-lake-governance/binance-ohlcv-dlg-core-ledger.md) | explore / platform-audit |
 | `Cross-Sectional Alpha Research Pipeline` | [platform/cross-sectional-alpha-pipeline/](platform/cross-sectional-alpha-pipeline/README.md) | explore / platform-audit |
 | `Runner-Authorization-Reconciliation`（`RUNNER-AUTH-RECON`） | [platform/runner-authorization-reconciliation/](platform/runner-authorization-reconciliation/README.md) | explore / platform-audit |
+| `Research-Program-Review` | [platform/research-program-review/](platform/research-program-review/README.md) | diagnostic_topic / 研究目标、方法与实盘路径审计 |
 
 ## 行业与创业研究
 
@@ -191,3 +193,5 @@
 `crowding_reversal` 及早期平台示例（spot CTA、CTA grid、通用 MA crossover、momentum rotation、Donchian 变体）归档于 `../archive/research/`，不作为当前核心研究线。
 
 - `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](asset-portfolios/1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。
+
+- [PUBLIC100 公开策略100条逐项复核](asset-portfolios/multi-public-strategies-100/README.md)：diagnostic_topic / explore / untrusted；19条数值诊断，81条数值回测未完成，not promoted / not live-ready。
