@@ -480,6 +480,7 @@ source = { editable = "." }
 dependencies = [
     { name = "duckdb" },
     { name = "exchange-calendars" },
+    { name = "jsonschema" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
@@ -501,6 +502,7 @@ ml = [
 requires-dist = [
     { name = "duckdb", specifier = ">=1.2.0" },
     { name = "exchange-calendars", specifier = ">=4.13.2" },
+    { name = "jsonschema", specifier = ">=4.26.0" },
     { name = "jsonschema", marker = "extra == 'dev'", specifier = ">=4.26.0" },
     { name = "lightgbm", marker = "extra == 'ml'", specifier = ">=4.6.0" },
     { name = "numpy", specifier = ">=2.2.0" },

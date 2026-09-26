@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "input_records": 5813,
+  "concepts": 23,
+  "templates": 32,
+  "target": 200,
+  "selected_count": 0,
+  "shortfall": 100,
+  "research_runs": 0,
+  "status": "INSUFFICIENT_EVIDENCE",
+  "excluded": {
+    "RULE_INCOMPLETE": 5643
+  },
+  "promotion_status": "NOT_REQUESTED",
+  "source_snapshot_sha256": "1038daea56337de3cbeb8dfe9748a8ef4ee6f803b784b7cc35b2841f3151561c",
+  "blockers": {
+    "RIGHTS_REVIEW_REQUIRED": 170,
+    "SOURCE_NOT_VERIFIED": 170,
+    "EXECUTION_CONTRACT_PENDING": 170,
+    "DATA_AVAILABILITY_UNCONFIRMED": 170
+  },
+  "parameter_variants_are_independent_hypotheses": false
+}

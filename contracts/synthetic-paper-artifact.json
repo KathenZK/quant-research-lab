@@ -1,0 +1,42 @@
+{
+  "approval_reference": "fixture:no-runtime-authority",
+  "approved_at": "2026-01-01T00:00:00Z",
+  "approved_by": "synthetic-test-fixture",
+  "code_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "execution_config": {
+    "closed_bar_only": true,
+    "fee_bps": 10,
+    "mode": "paper",
+    "slippage_bps": 4,
+    "timing": "next_bar_open"
+  },
+  "market": "SYNTHETIC",
+  "parameters": {
+    "lookback": 7
+  },
+  "promotion_status": "APPROVED_FOR_PAPER",
+  "required_data": [
+    "synthetic_closed_bars"
+  ],
+  "research_run_id": "synthetic-run",
+  "risk_limits": {
+    "max_drawdown": 0.2,
+    "max_gross_exposure": 1.0
+  },
+  "schema_version": "1.0",
+  "strategy_id": "SYNTHETIC-CONTRACT-TEST",
+  "universe": [
+    "TEST"
+  ],
+  "validation_summary": {
+    "costs_included": true,
+    "data_quality": "PASS",
+    "evidence_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidence_uri": "fixture:synthetic-only-no-market-evidence",
+    "oos": "PASS",
+    "parity": "PASS",
+    "research_status": "PASS"
+  },
+  "variant_id": "synthetic-variant",
+  "version": "test-v1"
+}

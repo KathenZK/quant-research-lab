@@ -1,0 +1,16 @@
+{
+  "schema_sha256": "2f14bc97316354f8e2a91e9a0c22684ea1d4af859fea9d76ad21ad3fbd7d13aa",
+  "artifact_sha256": "ba70b561aa4e61c4b179c313d2160c52a866a0003ec0337ffe05ead894f8c4a7",
+  "schema_byte_identity": true,
+  "fixture_byte_identity": true,
+  "runner": {
+    "live_authorized": false,
+    "research_run_id": "synthetic-run",
+    "runtime_enabled": false,
+    "status": "VALIDATED_FOR_PAPER_IMPORT",
+    "strategy_id": "SYNTHETIC-CONTRACT-TEST",
+    "variant_id": "synthetic-variant"
+  },
+  "live_refused": true,
+  "scope": "SYNTHETIC_CONTRACT_ONLY"
+}

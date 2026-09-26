@@ -62,3 +62,8 @@ uv run --locked --extra dev --extra ml python scripts/governance/preflight.py
 # 需要时运行全量测试
 uv run --locked --extra dev --extra ml pytest -q
 ```
+
+## QuantGraph 接入
+
+[知识候选筛选、研究证据与 paper 制品契约](research/platform/quantgraph-integration/README.md)。
+知识来自 quant-knowledge-graph API；执行仍由独立 quant-runner 承担。

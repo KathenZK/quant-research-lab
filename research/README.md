@@ -180,3 +180,8 @@
 ## 历史或浅层研究
 
 `crowding_reversal` 及早期平台示例（spot CTA、CTA grid、通用 MA crossover、momentum rotation、Donchian 变体）归档于 `../archive/research/`，不作为当前核心研究线。
+
+## QuantGraph 研究接口
+
+- [知识候选与证据联通](platform/quantgraph-integration/README.md)：diagnostic-only / not promoted。
+- [quantgraph-diagnostics 共享内核](_shared-kernels/quantgraph-diagnostics/README.md)：v1 通用统计诊断。

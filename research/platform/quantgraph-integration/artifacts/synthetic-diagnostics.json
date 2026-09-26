@@ -1,0 +1,66 @@
+{
+  "scope": "SYNTHETIC_PIPELINE_TEST_NOT_MARKET_EVIDENCE",
+  "seed": 20260926,
+  "trial_count": 8,
+  "in_sample": {
+    "observations": 128,
+    "total_return": -0.042697640037490436,
+    "cagr": -0.08232167555113645,
+    "max_drawdown": 0.10445339755710759,
+    "sharpe": -0.4749132987097271,
+    "sortino": -0.653273110584141,
+    "calmar": -0.7881186967243349
+  },
+  "oos": {
+    "observations": 128,
+    "total_return": 0.03742073940434487,
+    "cagr": 0.0750069209990778,
+    "max_drawdown": 0.08079120961444197,
+    "sharpe": 0.5327008273633103,
+    "sortino": 0.7737891910594356,
+    "calmar": 0.9284044805992088
+  },
+  "walk_forward": [
+    {
+      "observations": 64,
+      "total_return": -0.027176049716338246,
+      "cagr": -0.10280906787775801,
+      "max_drawdown": 0.08079120961444197,
+      "sharpe": -0.6348747469715418,
+      "sortino": -0.895629111408619,
+      "calmar": -1.2725278946607106
+    },
+    {
+      "observations": 64,
+      "total_return": 0.06640131454601539,
+      "cagr": 0.28806460121295574,
+      "max_drawdown": 0.04142872329083347,
+      "sharpe": 1.604431411984243,
+      "sortino": 2.3983505340432965,
+      "calmar": 6.95325798940787
+    }
+  ],
+  "pbo": {
+    "value": 0.5714285714285714,
+    "splits": 70,
+    "blocks": 8,
+    "trial_count": 8,
+    "tie_policy": "midrank; average all tied IS winners",
+    "purged": false
+  },
+  "deflated_sharpe": {
+    "value": 0.12770592347604082,
+    "benchmark_sr": 0.0734375602306879,
+    "unannualized_sr": 0.0022167107272035255,
+    "effective_trials": 8,
+    "observed_trials": 8,
+    "assumption": "IID returns approximation; effective trial count supplied, not inferred"
+  },
+  "parameter_plateau": {
+    "peak_index": 2,
+    "contiguous_width": 1,
+    "grid_size": 8,
+    "relative_tolerance": 0.1
+  },
+  "real_research_runs": 0
+}

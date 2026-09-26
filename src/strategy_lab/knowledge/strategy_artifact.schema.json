@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:quant-platform:strategy-artifact:1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "strategy_id",
+    "variant_id",
+    "research_run_id",
+    "code_sha256",
+    "version",
+    "parameters",
+    "market",
+    "universe",
+    "execution_config",
+    "risk_limits",
+    "required_data",
+    "validation_summary",
+    "promotion_status",
+    "approved_at",
+    "approved_by",
+    "approval_reference"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "strategy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "variant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "research_run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "market": {
+      "type": "string",
+      "minLength": 1
+    },
+    "universe": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "execution_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "closed_bar_only",
+        "timing",
+        "fee_bps",
+        "slippage_bps"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "paper",
+            "live"
+          ]
+        },
+        "closed_bar_only": {
+          "const": true
+        },
+        "timing": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fee_bps": {
+          "type": "number",
+          "minimum": 0
+        },
+        "slippage_bps": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "risk_limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_gross_exposure",
+        "max_drawdown"
+      ],
+      "properties": {
+        "max_gross_exposure": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max_drawdown": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "required_data": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "validation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "research_status",
+        "data_quality",
+        "oos",
+        "parity",
+        "costs_included",
+        "evidence_uri",
+        "evidence_sha256"
+      ],
+      "properties": {
+        "research_status": {
+          "const": "PASS"
+        },
+        "data_quality": {
+          "const": "PASS"
+        },
+        "oos": {
+          "const": "PASS"
+        },
+        "parity": {
+          "const": "PASS"
+        },
+        "costs_included": {
+          "const": true
+        },
+        "evidence_uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "promotion_status": {
+      "enum": [
+        "APPROVED_FOR_PAPER",
+        "APPROVED_FOR_LIVE"
+      ]
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "approved_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_reference": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "promotion_status": {
+            "const": "APPROVED_FOR_PAPER"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution_config": {
+            "properties": {
+              "mode": {
+                "const": "paper"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "promotion_status": {
+            "const": "APPROVED_FOR_LIVE"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution_config": {
+            "properties": {
+              "mode": {
+                "const": "live"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -148,3 +148,8 @@ web/.next/
 !research/asset-portfolios/1d-tradfi-futures-tsmom/artifacts/tf-1d-fut-tsmom-paper-exact-p1-2026-08-19*
 .coverage
 htmlcov/
+
+/research/platform/quantgraph-integration/artifacts/local/
+!research/platform/quantgraph-integration/artifacts/candidate-summary.json
+!research/platform/quantgraph-integration/artifacts/synthetic-diagnostics.json
+!research/platform/quantgraph-integration/artifacts/cross-repo-contract.json
