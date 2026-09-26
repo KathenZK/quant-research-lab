@@ -6,3 +6,5 @@
 
 - [Cross-Sectional Alpha Research Pipeline Readiness Audit](cross-sectional-alpha-pipeline/README.md)
 
+
+- [QuantGraph 研究联通](quantgraph-integration/README.md)
