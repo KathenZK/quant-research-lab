@@ -44,6 +44,21 @@ def test_ready_candidates_require_all_independent_gates():
     assert select_candidates(rows)['selected_count'] == 119
 
 
+def test_selected_template_excludes_unapproved_parameter_siblings():
+    allowed = candidate('allowed', eligible=True)
+    blocked = candidate('blocked')
+    blocked['variant']['source_url'] = 'https://example.org/restricted'
+    report = select_candidates([blocked, allowed])
+    assert report['candidates'][0]['planned_trial_count'] == 2
+    chosen = report['selected'][0]
+    assert chosen['source_strategy_ids'] == chosen['eligible_variants'] == ['allowed']
+    assert chosen['planned_trial_count'] == 1
+    assert [p['variant_id'] for p in chosen['parameter_grid']] == ['allowed']
+    assert chosen['source_urls'] == ['https://example.org']
+    assert chosen['variant_blockers'] == {'allowed': []}
+    assert select_candidates([allowed, blocked])['selected'] == report['selected']
+
+
 def test_evidence_uncomputed_metrics_null_and_identity_immutable():
     args = dict(family_id='qg-test', source_strategy_ids=['v1'], contract={'costs': 0.001}, trial_count=3,
                 artifact_uri='fixture:local', artifact_sha256='a' * 64, results={}, evidence_kind='PIPELINE_DIAGNOSTIC')

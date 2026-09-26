@@ -25,7 +25,7 @@ def collect_candidates(client):
 def select_candidates(rows, *, target=200):
     if not 100 <= target <= 300:
         raise ValueError('Research target must be 100..300 independent templates')
-    groups, excluded = {}, Counter()
+    groups, excluded, source_urls = {}, Counter(), {}
     for row in rows:
         v = row['variant']
         template_id = v.get('strategy_template_id')
@@ -38,6 +38,7 @@ def select_candidates(rows, *, target=200):
             'template_id': template_id, 'concept_id': v['strategy_concept_id'], 'source_strategy_ids': [],
             'parameter_grid': [], 'source_urls': set(), 'variant_blockers': {}, 'eligible_variants': []})
         vid = v['strategy_variant_id']
+        source_urls[vid] = v['source_url']
         group['source_strategy_ids'].append(vid)
         group['parameter_grid'].append({'variant_id': vid, 'spec_sha256': v['spec_sha256'], 'rule_ast': v['rule_ast']})
         group['source_urls'].add(v['source_url'])
@@ -64,7 +65,18 @@ def select_candidates(rows, *, target=200):
         group['status'] = 'READY_FOR_CONTRACT_FREEZE' if group['eligible_variants'] else 'BLOCKED'
         candidates.append(group)
     ready = [c for c in candidates if c['eligible_variants']]
-    selected = ready[:target]
+    selected = []
+    for group in ready[:target]:
+        # The triage list retains blocked siblings for audit, but a selected
+        # experiment must never inherit their rules or research identities.
+        eligible = set(group['eligible_variants'])
+        admitted_grid = [r for r in group['parameter_grid'] if r['variant_id'] in eligible]
+        selected.append({**group, 'source_strategy_ids': sorted(eligible),
+                         'parameter_grid': admitted_grid,
+                         'source_urls': sorted({source_urls[vid] for vid in eligible}),
+                         'variant_blockers': {vid: [] for vid in sorted(eligible)},
+                         'eligible_variants': sorted(eligible),
+                         'planned_trial_count': len(admitted_grid)})
     return {'schema_version': '1.0', 'input_records': len(rows), 'concepts': len({c['concept_id'] for c in candidates}),
             'templates': len(candidates), 'target': target, 'selected_count': len(selected),
             'shortfall': max(0, 100 - len(selected)), 'research_runs': 0,
