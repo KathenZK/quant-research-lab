@@ -2,6 +2,7 @@
 from collections import Counter
 import hashlib
 import json
+import math
 
 
 def digest(value):
@@ -50,10 +51,15 @@ def select_candidates(rows, *, target=200, minimum_required=100):
         blockers = []
         if row.get('research_allowed') is not True or row.get('research_rights_status') != 'ALLOWED':
             blockers.append('RIGHTS_REVIEW_REQUIRED')
-        if v.get('source_verification') != 'VERIFIED':
+        source_verified = v.get('source_verification') == 'VERIFIED' and bool(v.get('source_url'))
+        if not source_verified:
             blockers.append('SOURCE_NOT_VERIFIED')
         contract = row.get('execution_contract') or {}
-        if not all(contract.get(k) is not None for k in ('timing', 'costs', 'price_adjustment', 'missing_data_policy')):
+        execution_complete = all(contract.get(k) for k in ('timing', 'price_adjustment', 'missing_data_policy', 'indicator_semantics'))
+        costs = contract.get('costs') or {}
+        execution_complete = execution_complete and contract.get('closed_bar_only') is True
+        execution_complete = execution_complete and all(type(costs.get(k)) in (int, float) and math.isfinite(costs[k]) and costs[k] >= 0 for k in ('fee_bps', 'slippage_bps'))
+        if not execution_complete:
             blockers.append('EXECUTION_CONTRACT_PENDING')
         if row.get('data_available') is not True:
             blockers.append('DATA_AVAILABILITY_UNCONFIRMED')
@@ -62,7 +68,7 @@ def select_candidates(rows, *, target=200, minimum_required=100):
             blockers.extend(gate.get('blockers') or ['UPSTREAM_GATE_BLOCKED'])
         # Recompute readiness from observed admission facts. Never rank on an
         # untrusted API-provided score or return metric.
-        score = 20 + 20 * int(v.get('source_verification') == 'VERIFIED')
+        score = 20 + 20 * int(source_verified)
         score += 20 * int(row.get('research_allowed') is True and row.get('research_rights_status') == 'ALLOWED')
         score += 20 * int(row.get('data_available') is True)
         score += 20 * int('EXECUTION_CONTRACT_PENDING' not in blockers)

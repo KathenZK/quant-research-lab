@@ -35,3 +35,13 @@ def test_stale_projection_is_not_an_empty_universe():
             return {'scope': 'TRIAGE_ONLY', 'items': [], 'projection_status': 'STALE'}
     with pytest.raises(ValueError, match='projection'):
         collect_candidates(Client())
+
+
+@pytest.mark.parametrize('field,value', [('costs', {}), ('costs', {'fee_bps': -1, 'slippage_bps': 0}), ('closed_bar_only', False)])
+def test_lab_independently_rejects_incomplete_execution_even_if_upstream_says_eligible(field, value):
+    row = candidate(eligible=True)
+    row['candidate_gate'] = {'gate_version': 'research-candidate-gate-v2', 'eligible': True}
+    row['execution_contract'][field] = value
+    report = select_candidates([row])
+    assert report['eligible_count'] == 0
+    assert 'EXECUTION_CONTRACT_PENDING' in report['candidates'][0]['variant_blockers']['v1']
