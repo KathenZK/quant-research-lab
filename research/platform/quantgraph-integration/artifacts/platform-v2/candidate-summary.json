@@ -1,0 +1,37 @@
+{
+  "schema_version": "2.0",
+  "input_records": 5813,
+  "concepts": 28,
+  "templates": 41,
+  "target": 200,
+  "selected_count": 0,
+  "eligible_count": 0,
+  "minimum_required": 100,
+  "minimum_shortfall": 100,
+  "target_shortfall": 200,
+  "selected_concepts": 0,
+  "selection_policy": "concept_coverage_then_readiness_then_enumeration_penalty",
+  "research_runs": 0,
+  "status": "INSUFFICIENT_EVIDENCE",
+  "excluded": {
+    "RULE_INCOMPLETE": 5611
+  },
+  "promotion_status": "NOT_REQUESTED",
+  "source_snapshot_sha256": "6b3130f781c8b59b965f7b94f795ce9b38352f25acbfeff738a4d4800f81f6a7",
+  "blockers": {
+    "DATA_AVAILABILITY_UNCONFIRMED": 202,
+    "EXECUTION_CONTRACT_PENDING": 202,
+    "RIGHTS_REVIEW_REQUIRED": 202,
+    "SOURCE_EVIDENCE_UNVERIFIED": 202,
+    "SOURCE_NOT_VERIFIED": 202
+  },
+  "parameter_variants_are_independent_hypotheses": false,
+  "transport": "HTTP localhost authenticated research:read",
+  "projection_status": {
+    "latest_revision_count": 5813,
+    "current_projection_count": 5813,
+    "stale_projection_count": 0,
+    "parser_version": "grok-rule-v3.1",
+    "projection_status": "READY"
+  }
+}

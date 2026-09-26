@@ -1,0 +1,23 @@
+{
+  "data_requirements": [
+    "synthetic_closed_bars"
+  ],
+  "execution_config": {
+    "closed_bar_only": true,
+    "fee_bps": 10,
+    "mode": "paper",
+    "slippage_bps": 4,
+    "timing": "next_bar_open"
+  },
+  "market": "SYNTHETIC",
+  "parameters": {
+    "lookback": 7
+  },
+  "risk_limits": {
+    "max_drawdown": 0.2,
+    "max_gross_exposure": 1.0
+  },
+  "universe": [
+    "TEST"
+  ]
+}

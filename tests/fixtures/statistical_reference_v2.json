@@ -1,0 +1,192 @@
+{
+  "fixture_kind": "SYNTHETIC_NUMERICAL_BENCHMARK_NOT_MARKET_BACKTEST",
+  "dsr": {
+    "returns": [
+      -0.012,
+      0.008,
+      0.021,
+      -0.004,
+      0.011,
+      -0.018,
+      0.032,
+      0.006,
+      -0.009,
+      0.015,
+      0.002,
+      -0.003
+    ],
+    "trial_sharpes": [
+      -0.05,
+      0.02,
+      0.07,
+      0.1,
+      0.15,
+      0.19
+    ],
+    "effective_trials": 6,
+    "expected": {
+      "unannualized_sr": 0.28307152580186706,
+      "skew": 0.3237602143980742,
+      "pearson_kurtosis": 2.3977602548119896,
+      "benchmark_sr": 0.11334364613188509,
+      "value": 0.7196294320273796
+    }
+  },
+  "pbo": {
+    "returns_by_trial": [
+      [
+        0.01,
+        0.02,
+        0.03
+      ],
+      [
+        0.03,
+        0.01,
+        0.02
+      ],
+      [
+        0.02,
+        0.04,
+        0.01
+      ],
+      [
+        0.04,
+        0.02,
+        0.03
+      ],
+      [
+        0.01,
+        0.03,
+        0.04
+      ],
+      [
+        0.02,
+        0.01,
+        0.03
+      ],
+      [
+        0.04,
+        0.03,
+        0.01
+      ],
+      [
+        0.03,
+        0.04,
+        0.02
+      ]
+    ],
+    "blocks": 4,
+    "splits": [
+      {
+        "blocks": [
+          0,
+          1
+        ],
+        "winners": [
+          2
+        ],
+        "oos_ranks": [
+          1.5,
+          3.0,
+          1.5
+        ],
+        "logits": [
+          -0.5108256237659907
+        ]
+      },
+      {
+        "blocks": [
+          0,
+          2
+        ],
+        "winners": [
+          2
+        ],
+        "oos_ranks": [
+          2.5,
+          2.5,
+          1.0
+        ],
+        "logits": [
+          -1.0986122886681098
+        ]
+      },
+      {
+        "blocks": [
+          0,
+          3
+        ],
+        "winners": [
+          2
+        ],
+        "oos_ranks": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "logits": [
+          1.0986122886681098
+        ]
+      },
+      {
+        "blocks": [
+          1,
+          2
+        ],
+        "winners": [
+          2
+        ],
+        "oos_ranks": [
+          2.0,
+          1.0,
+          3.0
+        ],
+        "logits": [
+          1.0986122886681098
+        ]
+      },
+      {
+        "blocks": [
+          1,
+          3
+        ],
+        "winners": [
+          0,
+          1
+        ],
+        "oos_ranks": [
+          2.0,
+          1.0,
+          3.0
+        ],
+        "logits": [
+          0.0,
+          -1.0986122886681098
+        ]
+      },
+      {
+        "blocks": [
+          2,
+          3
+        ],
+        "winners": [
+          1
+        ],
+        "oos_ranks": [
+          2.0,
+          1.0,
+          3.0
+        ],
+        "logits": [
+          -1.0986122886681098
+        ]
+      }
+    ],
+    "expected_value": 0.6666666666666666
+  },
+  "sources": [
+    "https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf",
+    "https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf"
+  ],
+  "reference_method": "Independent SciPy moments and rankdata + exhaustive six-split CSCV; expected literals frozen before importing production kernel"
+}
