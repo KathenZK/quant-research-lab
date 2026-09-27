@@ -13,3 +13,5 @@ research_classification: diagnostic_topic
 
 v2：[实际候选与真实研究阻断](diagnostics/platform-v2.md) ·
 [离线晋级契约](../../../docs/research/StrategyArtifact-v2.md)。当前 5813 条记录中合格候选仍为 0；没有真实策略回测或晋级。
+
+v3：[统一研究与证据结果](diagnostics/evidence-research-v3.md)。原始语料 strict parsed 260；三个显式派生模板只缺数据；eligible/正式回测仍为 0。两个真实行情私有诊断不计正式回测。

@@ -185,3 +185,11 @@
 
 - [知识候选与证据联通](platform/quantgraph-integration/README.md)：diagnostic-only / not promoted。
 - [quantgraph-diagnostics 共享内核](_shared-kernels/quantgraph-diagnostics/README.md)：v1 通用统计诊断。
+
+- [BTC 1d QuantGraph PRICE_SMA](btc/1d-quantgraph-source-sma/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+- [BTC 1d QuantGraph ZSCORE_REVERSION](btc/1d-quantgraph-source-zscore/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+- [BTC 4h QuantGraph EMA_CROSSOVER](btc/4h-quantgraph-source-ema/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+- [quantgraph-market](_shared-kernels/quantgraph-market/README.md)：v1 冻结账户回放，只做本地研究计算。

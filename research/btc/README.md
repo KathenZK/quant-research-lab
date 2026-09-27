@@ -14,3 +14,9 @@
 - `BTC-1D-MA7-RSI6-LightGBM-Trend`（`BTC-1D-MA7-RSI6-LGBM`）：[1d-ma7-rsi6-lightgbm-trend/](1d-ma7-rsi6-lightgbm-trend/README.md)。严格 SMA7 收盘跨越、MA7/K 线几何与 Wilder RSI6 阶段状态输入 LightGBM；P0 已冻结完整日 K 和最近一年 validation，尚未训练模型；`explore / diagnostic-only / not promoted / not live-ready`。主账：[btc-1d-ma7-rsi6-lgbm-core-ledger.md](1d-ma7-rsi6-lightgbm-trend/btc-1d-ma7-rsi6-lgbm-core-ledger.md)。
 - `BTC-1W-MA7-Asymmetric-Body-Trend`（`BTC-1W-MA7-ABT`）：[1w-ma7-asymmetric-body-trend/](1w-ma7-asymmetric-body-trend/README.md)。HYPE 日线 V1 的固定 SMA7/ATR7 多空状态机零调参迁移至 BTC 周 K；主/偏移相位及多空单腿均亏损，direct transfer 失败，`explore / not promoted / not live-ready`。主账：[btc-1w-ma7-abt-core-ledger.md](1w-ma7-asymmetric-body-trend/btc-1w-ma7-abt-core-ledger.md)。
 - `Binance-1D-MA7-Asset-Specific-Search`（跨资产家族）：[asset-portfolios/1d-ma7-asset-specific-search/](../asset-portfolios/1d-ma7-asset-specific-search/README.md)。固定 SMA7/ATR7 的 BTC/ETH shared 参数搜索；`V1 / V2 registered / not promoted / not live-ready`。主账：[binance-1d-ma7-as-search-core-ledger.md](../asset-portfolios/1d-ma7-asset-specific-search/binance-1d-ma7-as-search-core-ledger.md)。
+
+- [BTC 1d QuantGraph PRICE_SMA](1d-quantgraph-source-sma/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+- [BTC 1d QuantGraph ZSCORE_REVERSION](1d-quantgraph-source-zscore/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+- [BTC 4h QuantGraph EMA_CROSSOVER](4h-quantgraph-source-ema/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
