@@ -15,8 +15,10 @@ def main():
     p.add_argument('--url', required=True)
     p.add_argument('--private-output', type=Path)
     p.add_argument('--summary-output', type=Path, required=True)
+    p.add_argument('--target', type=int, default=20)
+    p.add_argument('--minimum-required', type=int, default=1)
     args = p.parse_args()
-    report = select_candidates(collect_candidates(QuantGraphClient(args.url)))
+    report = select_candidates(collect_candidates(QuantGraphClient(args.url)), target=args.target, minimum_required=args.minimum_required)
     if args.private_output:
         args.private_output.parent.mkdir(parents=True, exist_ok=True)
         args.private_output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')

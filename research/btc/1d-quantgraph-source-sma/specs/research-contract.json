@@ -1,0 +1,63 @@
+{
+  "schema_version": "qg-first-market-v3",
+  "frozen_at": "2026-09-27T11:03:57.632223+00:00",
+  "family_id": "btc-1d-quantgraph-source-sma",
+  "parent_record_id": "M0234",
+  "signal": "PRICE_SMA",
+  "parameters": [
+    50
+  ],
+  "parameter_grid": [
+    [
+      40
+    ],
+    [
+      50
+    ],
+    [
+      60
+    ]
+  ],
+  "trial_count": 3,
+  "symbol": "BTC/EUR",
+  "exchange": "bit2me",
+  "market_type": "spot",
+  "minutes": 1440,
+  "requested_start": "2022-07-01T00:00:00Z",
+  "evaluation_start": "2023-01-01T00:00:00Z",
+  "oos_start": "2025-01-01T00:00:00Z",
+  "end_exclusive": "2026-09-27T00:00:00Z",
+  "initial_cash": 10000.0,
+  "cash_currency": "EUR",
+  "cash_interest": 0.0,
+  "leverage": 1.0,
+  "funding": "NOT_APPLICABLE_SPOT",
+  "fee_bps": 60.0,
+  "slippage_bps": 10.0,
+  "cost_basis": "RESEARCH_ASSUMPTION: conservative fixed cost; not verified actual account tier",
+  "stress_cost_multipliers": [
+    1.0,
+    2.0
+  ],
+  "signal_timing": "closed bar",
+  "execution_timing": "next bar open",
+  "execution_price": "open with adverse slippage",
+  "position": "all cash net of fees; no pyramiding",
+  "stop_loss_fraction": null,
+  "take_profit_fraction": null,
+  "bracket_policy": "gap stop at open; otherwise threshold; stop first if both touched; no same-bar reentry",
+  "missing_data_policy": "FAIL formal research on any missing/invalid bar or required native field; no fills or zero trade counts",
+  "indicator_semantics": "SMA full window including current closed close; zscore pandas rolling sample std ddof=1; EMA SMA-seeded recursive alpha=2/(n+1)",
+  "source_derivation": "Explicit research adaptation to BTC/EUR long-only spot; source short exposure becomes cash; costs and next-open timing are research assumptions",
+  "zscore_exit": "cash unless current closed z < -entry threshold; source is stateless, not hysteresis",
+  "ema_entry_exit": "fast crosses above slow with volume>0 enter; crosses below with volume>0 exit",
+  "acceptance_policy": "Only ELIGIBLE V3 + trusted complete raw/normalized audit permits REAL_MARKET_BACKTEST; raw_unaccepted permits PRIVATE_DIAGNOSTIC_PROBE only",
+  "selection_policy": "baseline parameter fixed before data; report full grid, no OOS retuning; 2025/2026 halves descriptive only",
+  "success_policy": "No promotion. RESEARCH_PASSED requires positive OOS net return, >=30 closed OOS trades, OOS Sharpe>0, MDD<=0.3, DSR>=0.95, PBO<=0.1; otherwise failed or inconclusive",
+  "limitations": [
+    "Historical OOS is not prospective evidence",
+    "Single market; not evidence of general alpha",
+    "CSCV does not purge or embargo overlapping holdings; DSR IID approximation",
+    "Base and all grid trials share one hypothesis family"
+  ]
+}
