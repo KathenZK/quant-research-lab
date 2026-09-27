@@ -22,7 +22,8 @@ def candidate(variant='v1', template='t1', eligible=False):
             'rule_ast': {'type': 'threshold_switch'}}, 'definition_admitted': True,
             'research_allowed': eligible, 'research_rights_status': 'ALLOWED' if eligible else 'REVIEW_REQUIRED',
             'data_available': eligible,
-            'execution_contract': {'timing': 'next_bar', 'costs': {'fee': 0.001},
+            'execution_contract': {'timing': 'next_bar', 'costs': {'fee_bps': 10, 'slippage_bps': 2},
+                                   'closed_bar_only': True, 'indicator_semantics': 'fixture-exact-definition',
                                    'price_adjustment': 'adjusted', 'missing_data_policy': 'fail'}}
 
 

@@ -1,0 +1,10 @@
+{
+  "reference_url": "https://github.com/polakowo/vectorbt/blob/v0.28.5/vectorbt/returns/metrics.py",
+  "reference_sha256": "501833a10f7636db820ceaa6b346e4fd0df7de5c781b7d8a65e2251a374ec33b",
+  "reference_version": "v0.28.5",
+  "reference_value": 0.7196294320273796,
+  "lab_value": 0.7196294320273795,
+  "absolute_error": 1.1102230246251565e-16,
+  "status": "PASS",
+  "source_redistributed": false
+}

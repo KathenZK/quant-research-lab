@@ -1,0 +1,44 @@
+{
+  "approval_reference": "fixture:no-runtime-authority",
+  "approved_at": "2026-01-01T00:00:00Z",
+  "approved_by": "synthetic-test-fixture",
+  "code_hash": "0dd4d646a00fc1117f75006823fe81171c399a31a2780dde345319eb1b29984f",
+  "config_hash": "f640124b50a90058c37ec504b5497bc0546a9886d06655436df47bcc0c264b53",
+  "data_requirements": [
+    "synthetic_closed_bars"
+  ],
+  "execution_config": {
+    "closed_bar_only": true,
+    "fee_bps": 10,
+    "mode": "paper",
+    "slippage_bps": 4,
+    "timing": "next_bar_open"
+  },
+  "market": "SYNTHETIC",
+  "parameters": {
+    "lookback": 7
+  },
+  "producer": "quant-strategy-lab",
+  "promotion_status": "APPROVED_FOR_PAPER",
+  "research_run_id": "synthetic-run",
+  "risk_limits": {
+    "max_drawdown": 0.2,
+    "max_gross_exposure": 1.0
+  },
+  "schema_version": "2.0",
+  "strategy_id": "SYNTHETIC-CONTRACT-TEST",
+  "strategy_variant_id": "synthetic-variant",
+  "universe": [
+    "TEST"
+  ],
+  "validation_summary": {
+    "costs_included": true,
+    "data_quality": "PASS",
+    "evidence_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidence_uri": "fixture:synthetic-only-no-market-evidence",
+    "oos": "PASS",
+    "parity": "PASS",
+    "research_status": "PASS"
+  },
+  "version": "test-v1"
+}
