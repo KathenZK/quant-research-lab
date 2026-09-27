@@ -22,3 +22,5 @@
 | [binance-ma7-root-data/](binance-ma7-root-data/README.md) | `v1` | Binance direct `1h` / UTC `1d` / funding 对账、MA7 soft root 与 fixed-leverage 成本核算 | `BIN-1D-MA7-LMML`、`BIN-1H-MA7-RHT` |
 
 | [quantgraph-diagnostics/](quantgraph-diagnostics/README.md) | `v1` | PBO / DSR / 收益序列与参数区间诊断 | platform/quantgraph-integration |
+
+- [quantgraph-market](quantgraph-market/README.md)：v1 冻结账户回放，只做本地研究计算。
