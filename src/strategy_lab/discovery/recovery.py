@@ -19,6 +19,18 @@ def freeze_confirmation_repair(parent, output):
         return json.loads((output / "plan.json").read_text())
     output.mkdir(parents=True, exist_ok=False)
     old = json.loads((parent / "plan.json").read_text())
+    if digest({k: v for k, v in old.items() if k != "plan_sha256"}) != old["plan_sha256"]:
+        raise ValueError("Parent frozen plan changed")
+    from strategy_lab.knowledge.market_contract import sha
+    for round_number in (0, 1):
+        completion = json.loads((parent / f"round-{round_number}-complete.json").read_text())
+        for item in completion["results"]:
+            if sha(item["uri"]) != item["sha256"]:
+                raise ValueError("Parent completed result changed")
+            result = json.loads(Path(item["uri"]).read_text())
+            for artifact in result["artifacts"]:
+                if sha(artifact["uri"]) != artifact["sha256"]:
+                    raise ValueError("Parent artifact changed")
     plan = {
         **old,
         "frozen_at": datetime.now(timezone.utc).isoformat(),
