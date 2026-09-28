@@ -139,7 +139,8 @@ class Worker:
                         stage, progress = value
                     elif kind == 'done':
                         results = value
-                        good = [v for v in results if v.get('status', 'SUCCESS') == 'SUCCESS']
+                        good = [v for v in results if v.get('status', 'SUCCESS') == 'SUCCESS'
+                                and v.get('results',{}).get('in_sample',{}).get('status') != 'FAILED']
                         status = 'SUCCEEDED' if good and len(good)==len(results) else ('PARTIAL' if good else 'FAILED')
                         if not good:
                             error = {'code':'NO_SUCCESSFUL_RESULT','message':'Research completed without a valid result; failure evidence retained'}
