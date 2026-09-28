@@ -1,6 +1,28 @@
 # Artifacts
 
-## 2026-09-09 最新：身份修正后的连续账户估算
+## 2026-09-24：每周Top10完整价格账
+
+[新材料索引](weekly-top10-20260924/README.md) · [报告](../diagnostics/binance-1d-mcsm-weekly-top10-20260924.md) · [每周名单及盈亏](weekly-top10-20260924/terminal-complete/weekly-holdings-and-pnl.md) · [月度](weekly-top10-20260924/terminal-complete/monthly-holdings-and-pnl.md) · [年度](weekly-top10-20260924/terminal-complete/yearly-results.md)。73个月同起点、不含资金费、条件终止估算，4bp周频+64.51%/最大回撤-97.42%，月频+925.13%/-95.43%，8账户和318次排名独立核对。`terminal-complete/`是完整结果，父目录首次W7失败不覆盖。新增预算30MiB，不复制原行情，不删除旧材料，不新增普通Git大二进制。
+
+## 2026-09-11：MA120用户指定单规则
+
+[本轮材料](ma120-round-20260911/README.md) · [报告](../diagnostics/binance-1d-mcsm-ma120-round-20260911.md) · [76个月持仓与盈亏](ma120-round-20260911/monthly-holdings-and-pnl.md) · [年度汇总](ma120-round-20260911/yearly-results.md)。8账户和全部买卖信号独立核对，4bp价格+156.46%/最大回撤-90.47%，含已有资金费估算+576.05%/回撤-80.00%，当前规则不实盘。新增预算50MiB，只保存16批请求的目标价格、计划和必要账本，不复制原始大数据；不新增普通Git大二进制，不删除旧研究。
+
+## 2026-09-11：回撤来源、扩大退出与周频
+
+[本轮材料索引](drawdown-frequency-round-20260911/README.md) · [主报告](../diagnostics/binance-1d-mcsm-drawdown-frequency-round-20260911.md) · [固定方法](../specs/binance-1d-mcsm-drawdown-frequency-round-20260911.md)。原四账回撤/月年现金与X5/X10八条新账已独立核对：4bp X5价格+2,991.81%/MDD-88.45%、含费估算+14,080.41%/MDD-87.49%；X10含费仅+231.89%、大赢家利润保留差，仍不实盘。频率分支实际四条月度B0/M28价格账完成、四条周度W28/W7账缺价停止；75月4bp B0+1,428.03%/MDD-95.43%、M28+2,210.85%/MDD-96.51%，均未计算资金费。周频全期收益不可用，失败原因和仅供查看的预定选币计划保留，不混入实际月度盈亏。
+
+`drawdown-frequency-round-20260911/`保存计划、目标补证、月年/逐腿现金、独立核对及表格来源。76月月/年表按00:15换仓后边界，75月频率表按自然月00:00、首尾00:15；资金未计算保持不可用。轮次总预算100MiB，drawdown与broader-exit各15MiB、weekly40MiB，其余为报告/独立验收/工作簿余量；既有家族仍按C-externalize约束，不复制源大包或旧全套账目，不新增普通Git大文件，不删除或迁移历史。
+
+- [2026-09-10 三项机制研究](mechanism-round-20260910/README.md)：相似币配对、事前资金费及唯一单币退出8账户；含费候选+13,663.98%但MDD-91.92%，仍不实盘。保留原生价优先基线、固定方案/信号/请求、逐腿及独立核对，不覆盖旧产物。
+
+## 2026-09-10 最新：资金费收益差复核
+
+[报告](../diagnostics/binance-1d-mcsm-funding-recheck-20260910.md) · [独立四账户重记](funding-recheck-20260910/accounting/summary.json) · [全部旧 mark 与单位检查](funding-recheck-20260910/marks/summary.json) · [部分官方事件并集](funding-recheck-20260910/combined-sources/summary.json) · [真实 mark 优先重算](funding-recheck-20260910/native-replay/summary.json)。原四轨未发现会计差错，原生优先对照 +10,084.17%，比原中心期末少 1,259.03 USDT；完整API重查因HTTP403停止，原生标记价也仍不完整，不能作为精确实盘收益。
+
+本轮不复制旧分钟大包或全部四账户明细；只留本地必要官方回执、小型映射/摘要和一份新标记价敏感性输入。失败请求、未覆盖事件与原始结果均保留，不移动或删除旧材料。
+
+## 2026-09-09 保留：身份修正后的连续账户估算
 
 最终消费 [accounts/summary.json](baseline-estimate-20260909/accounts/summary.json)，状态 `EXPLORATORY_ESTIMATED_ACCOUNT_NOT_VERIFIED_NET`。100,000 USDT，2020-03-01 00:15 至 2026-07-01 00:15 UTC，76 月各轨独立复利；全部最终清仓。
 

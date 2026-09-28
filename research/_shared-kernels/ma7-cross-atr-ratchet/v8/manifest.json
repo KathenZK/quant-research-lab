@@ -1,0 +1,7 @@
+{
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v8/engine.py",
+  "engine_sha256": "6b153c4e8362252813083645695360643383ef1918ecae083bb90e4a9b917ff0",
+  "parent_sha256": "9faaa9737ebf783079ec6d4981d7baa889cfbaad227daf9807979dfb83efb0bf",
+  "consumer": "HYPE-1D-MA7-CAR V3 parameter diagnostic 20260924",
+  "default_parity": "23 targeted tests passed; exact v7 default comparison on synthetic paths"
+}

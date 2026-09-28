@@ -1,0 +1,36 @@
+{
+  "frozen_at_utc": "2026-09-09T08:37:28.555891+00:00",
+  "status": "EXPLORE_UNTRUSTED_POST_RESULT_SOURCE_CORRECTION",
+  "reason": "Independent source audit located A36 January start-time sensitivity and C1 defensive-asset identity. Preserve previous variants. No parameter search or new blind/OOS claim.",
+  "window": [
+    "2011-01-03",
+    "2026-08-31"
+  ],
+  "raw_request": [
+    "2008-01-01T00:00:00Z",
+    "2026-09-01T00:00:00Z"
+  ],
+  "new_symbols": [
+    "IVV",
+    "VEU"
+  ],
+  "cost_bps_per_side": [
+    5,
+    10,
+    20
+  ],
+  "cash_rate": 0,
+  "leverage": 1,
+  "fractional_total_return_units": true,
+  "execution": "Previous completed month inputs, next trading session open; final session close liquidation, both endpoints charged.",
+  "A36_variants": {
+    "A36_JAN_FIRST_OPEN": "January first adjusted open to January last adjusted close; Feb first open trade. January first open fully SPY. Rebalance Jan and Feb only.",
+    "A36_PREVIOUS_DEC_CLOSE": "Previous December last adjusted close to January last adjusted close; identical trade timing. Daily cached-price schedule interpretation sensitivity, not exact LEAN reconstruction."
+  },
+  "A36_previous_variant": "First January close to final January close retained as legacy diagnostic, not a preferred version. Original daily scheduling exact Price semantics not reconstructed.",
+  "A36_source_sha256": "0e968b28a892089d9362e702201792cee3463f4229b9ee16cd398433389d0de9",
+  "C1_variant": "C1_GEM_SOURCE_IVV_VEU_BND",
+  "C1_rules": "12 completed month total returns. If IVV return strictly exceeds BIL, choose greater of IVV and VEU (IVV wins exact tie); otherwise BND. Month-first open fully allocate. BIL is a signal hurdle only, never defensive holding.",
+  "C1_source_url": "https://indexswingtrader.blogspot.com/2016/10/prospecting-dual-momentum-with-gem.html",
+  "C1_limit": "Tradable native ETF history only; do not back-extend with hypothetical indices and do not claim native AmiBroker execution."
+}

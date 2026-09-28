@@ -1,0 +1,17 @@
+{
+  "kernel_version": "v2",
+  "created_utc": "2026-09-10",
+  "source_sha256": "54f559748b557c81ec21ca53e4f30e09264547e5d0e8cb658716e33cf2f8d72b",
+  "files": {
+    "research/_shared-kernels/ma7-cross-atr-ratchet/v2/engine.py": "0d2aace099849a717da9702f129c262302746c6d547e594bedaf90b04a0b99dc",
+    "tests/test_ma7_car_four_tests.py": "157828f8fd17091cb7fd859f7926e1e5789e8db6689540ad039f0455d69d7a1f"
+  },
+  "validation": {
+    "command": ".venv/bin/python -m pytest -q tests/test_ma7_car_four_tests.py",
+    "passed": 86,
+    "elapsed_seconds": 2.17,
+    "source": "synthetic inputs only",
+    "historical_market_backtests_rerun": false
+  },
+  "interface": "original five outputs retained; optional entry_events list keyword"
+}

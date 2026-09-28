@@ -1,0 +1,7 @@
+{
+  "frozen": true,
+  "engine_sha256": "956698aeda487c849eabe2eda2109397098e4a1edc4d689e5e69ebaf8bc47aa8",
+  "origin_engine": "../v3/engine.py",
+  "origin_sha256": "31549725a5384303415763c05cb4cb91446e0682f88b519c95f815ef239778b2",
+  "consumer_pin": "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/adaptation-engine-pin-20260911.json"
+}

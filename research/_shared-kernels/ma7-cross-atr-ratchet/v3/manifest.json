@@ -1,0 +1,16 @@
+{
+  "created_before_results_utc": "2026-09-10T09:30:02.440647+00:00",
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v3/engine.py",
+  "engine_sha256": "31549725a5384303415763c05cb4cb91446e0682f88b519c95f815ef239778b2",
+  "test_path": "tests/test_ma7_car_exit_state_machine.py",
+  "test_sha256": "14e120f441807922745297a8aeadac916ba0708e73357a0d3d6bad373212081a",
+  "tests_passed": 93,
+  "fee": 0.001,
+  "slip": 0.0004,
+  "strategy_version": "experimental_state_round_not_official_V4",
+  "contracts": {
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/contract-exit-state-machine-20260910.md": "a898d95e68056d6a3f55455bf3aa1be16f54b5d300806ca5478223fbfe0cb31e",
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/exit-state-cost-amendment-20260910.md": "746e27d40e64ee7aa7c99c3a376ec0146a4a6964b9e0e8e90339f1aa1d69aede",
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/exit-state-long-history-20260910.md": "92e897c6989cf2260dd05e492264ec68ec06c83f955837bded52b1b94759baf1"
+  }
+}

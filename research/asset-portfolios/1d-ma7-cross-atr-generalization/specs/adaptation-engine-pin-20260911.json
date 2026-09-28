@@ -1,0 +1,16 @@
+{
+  "created_before_learning_utc": "2026-09-11T08:22:00.300764+00:00",
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v4/engine.py",
+  "engine_sha256": "956698aeda487c849eabe2eda2109397098e4a1edc4d689e5e69ebaf8bc47aa8",
+  "test_path": "tests/test_ma7_car_admission_routing.py",
+  "test_sha256": "b62e060dfdc13279fb010d5f2950f7e0b93a4cc03e2f2a661490f812bbee1369",
+  "new_tests_passed": 63,
+  "combined_engine_tests_passed": 156,
+  "contracts": {
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/contract-adaptation-learning-20260911.md": "6c7c0a8896785da09caabaf8f92ad331dc71be5036ea9b45b6900f161d5fe56a",
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/adaptation-implementation-details-20260911.md": "bea652841abefde6b4f84d980c1dbbbc2b105fde039cbc1afa27d6945618e8cf"
+  },
+  "fee": 0.001,
+  "slip": 0.0004,
+  "strategy_version": "experimental_adaptation_not_official_V4"
+}

@@ -1,0 +1,8 @@
+{
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v7/engine.py",
+  "engine_sha256": "9faaa9737ebf783079ec6d4981d7baa889cfbaad227daf9807979dfb83efb0bf",
+  "parent_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v6/engine.py",
+  "parent_sha256": "dd00f099ad8a4419c78cc337dede52284da75cac8675d9ccdd0eeeb8aa2de46b",
+  "change": "optional one-step 0.5 ATR on adverse MA close or four-day stagnation",
+  "scope": "HYPE only in this study"
+}

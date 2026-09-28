@@ -1,5 +1,25 @@
 # 复现入口
 
+## 资料审计与分类（2026-09-24）
+
+`python3 research/asset-portfolios/multi-public-strategies-100/scripts/build_public100_taxonomy_20260924.py`读取已归档inventory、R2状态和学习说明JSON，输出74项原因表、100项多维分类、来源目录与输入指纹至`artifacts/classification-audit-20260924/`及对应文档。只重建本次资料分析，不读取市场行情或执行回测；不覆盖旧结果。人工撰写的总体分析位于[类型与历史演化](../notes/public100-types-history-evolution-20260924.md)。
+
+## R2续测（2026-09-09）
+
+新契约为`specs/continuation-*-20260909.*`，输出全部位于`artifacts/continuation-r2/`，不覆盖R1。使用仓库`.venv/bin/python`在仓库根执行：
+
+1. `backtest_public100_b5.py`：复用首轮冻结Yahoo数据，恢复原优化器，分别执行22日/21日版；原优化器收敛状态和权重约束必须通过。
+2. `backtest_public100_r2_equities.py`：依次执行A2、A55、C10及同窗对照。`public100_r2_inputs.py`按具体清单重验原始响应和分区哈希；Coinbase原生日线及共同交易时刻必须存在，日内网格缺行/零量会拒绝。
+3. `backtest_public100_funding.py`：先用`continuation-perp-net-request-20260909.json`调用净收益启动门禁，实际使用返回帧；补充API markPrice只可与返回事件逐条匹配，不能替换费率。原始API响应与每日原生字段分区留湖。重复运行须原分区指纹一致。
+4. `diagnose_public100_boros.py`：读取官方Boros历史归档，计算同到期三合约的部分币本位费率仓位。并非完整美元账户回测，缺项和费用近似见独立契约。
+5. `backtest_public100_source_corrections.py`：先完成`capture_public100_source_etfs.py`保留缺少的IVV/VEU原生日线；按来源修正契约分别补测A36两种一月起算口径和C1来源ETF版。复用旧数据时重定向审计输出，旧账户结果不覆盖。
+6. `build_public100_r2_report.py`：合并旧19项与新7项及来源修正变体，D6单列，输出完整100项状态及分窗口排名。
+7. `test_public100_r2.py`：费用方向、无追领费用、真实持仓盈亏、8小时退出、未来数据隔离、B5调仓相位、缺行/零量拒绝、Boros退出估值，以及C1绝对动量先后次序/A36一月起算差异。加上R1共22个针对性测试。
+
+采集入口`continue_public100_data.py`和缺口重查`probe_public100_gaps.py`只写原始源层。额外2分钟、早期markPrice与Boros查询的精确URL、响应指纹、分区指纹在本轮相应manifest/receipt中；复现使用留存快照，不依赖今天重新下载的数据仍相同。完整验证与文件指纹见`artifacts/continuation-r2/validation.json`和`delivery-manifest.json`。
+
+## R1入口（保留当时说明）
+
 本轮是明确未接受数据上的诊断，不是trusted策略复现。报告中的100条状态不能都计为已回测。输入与结果已留存；从下列已有快照重新运行不会需要交易密钥，也不会下单。
 
 ## 环境
