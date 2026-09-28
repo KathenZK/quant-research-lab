@@ -73,7 +73,7 @@ timeframe、UTC 范围和 schema。
 
 ## 4. 标准 OHLCV Schema
 
-normalized 或可信 OHLCV 必填字段：
+默认 `LAB_OHLCV_V1` 的 normalized 或可信 OHLCV 必填字段（既有 reader 和质量检查保持不变）：
 
 ```text
 ts
@@ -112,6 +112,43 @@ source
 `closure_provenance`。其中 `is_closed` 可由交易所日历中的 bar 结束时间与固定
 `audit_as_of` 判定，但必须记录日历、日历依赖版本、公式与审计时点；仅凭 `ts`
 或脚本运行时“看起来已过去”不能生成可信闭合状态。
+
+### 4.1 显式选择的 OHLCV 核心研究契约
+
+`TRUSTED_OHLCV_CORE_V1` 是新的、必须写入冻结研究合同的独立 profile。旧数据不会自动
+迁移，也不能通过删除字段或修改 acceptance 标记进入新 profile。该 profile 只供离线研究，
+不授予实盘、跨提供方替代或公开再分发权限。
+
+| 层 | 要求 |
+|---|---|
+| 核心原生行情 | `ts/open/high/low/close/volume`；UTC 开盘时间、完整周期网格、合法 OHLC、非负有限成交量 |
+| 身份与来源 | `exchange/market_type/timeframe/symbol/source`，提供方原生 market ID；官方字段定义、单位、未调整口径的原文快照 |
+| 可选质量字段 | 原生 `trade_count/quote_volume/vwap/taker_volume`；存在就校验，缺失明确列出，不写 0、不估算 VWAP、不从价格反算成交额 |
+| 策略字段 | Rule AST 与 ExecutionContract 推导的集合；与核心字段取并集。策略用到的可选字段立即变成必需字段 |
+| 收盘证据 | 原生收盘标记，或经过审查的独立收盘证据。当前实现只接受下文的历史双次抓取协议，不伪造 `is_closed` |
+
+trade count、quote volume、VWAP 有助于成交活动与单位校验，但不能证明请求完整、来源可信
+或 K 线已结束；对只使用原生 OHLCV 的策略，它们不是普遍必要条件。省去这些可选列仍必须
+独立通过身份、许可、coverage、schema、calendar、integrity、hashes、finality、provenance
+九项检查。`FAIL` 为 `REJECTED`，存在 `UNKNOWN` 为 `DIAGNOSTIC_ONLY`，全部 `PASS` 才是
+`TRUSTED`。不能只凭无缺口就放行。
+
+历史收盘协议 `closed-grid-newer-bar-stable-recapture-v1` 要求：官方周期/当前 K 线语义、完整
+UTC 网格、提供方响应时钟与本次抓取时间吻合、同市场同周期已出现更晚的当前桶、请求结束
+时间不晚于该桶开盘，以及先后两轮完整历史抓取逐条相等。两轮原始 bytes、请求、页边界、
+HTTP 元数据、官方说明和独立审核都固定摘要。这是“截至抓取时已结束且两轮稳定”的证据，
+不是交易所永不修订的承诺；以后新快照必须重新审核。仅凭本机时间推算不合格。
+
+分页使用预定、互不重叠的目标窗口；静默 cap 或窗口截断触发保留父响应的二分重抓，直到
+完整或单根仍缺失而失败。接口包含/不包含边界的差异通过带证据的边缘观察排除处理；内部
+重复、乱序、缺口不得靠去重、排序、补值掩盖。仅严格倒序的原生页允许显式反转。原始响应
+留在 `data/raw/ohlcv/.../snapshot=.../`，通过离线重建审计后才写
+`data/normalized/ohlcv/.../snapshot=.../`。每个 normalized snapshot 带 profile、manifest
+和原始 capture 摘要；消费时重新构造全部观测，并逐字节比较 normalized 结果。
+
+实现与回归检查分别见 [market_core.py](../src/strategy_lab/knowledge/market_core.py)、
+[分页抓取](../research/platform/quantgraph-integration/scripts/fetch_market_paged.py) 和
+[独立验收测试](../tests/test_market_core.py)。
 
 ## 5. Raw 数据与接受状态
 
@@ -188,6 +225,10 @@ Polygon `transactions -> trade_count`，但必须保留原字段与映射 proven
 
 ## 9. 写入、分区与重复处理
 
+- 以下按日 Parquet 写入规则继续适用于默认 profile。第 4.1 节核心 profile 使用不可变的
+  全历史 snapshot 容器：仍位于标准 data/raw、data/normalized 的真实市场/类型/周期分区，
+  以摘要化 dataset ID、逐行身份和完整日历审核代替按日文件目录；整个容器原子发布，目录
+  已存在就拒绝覆盖。它不进入旧 Warehouse 的隐式发现路径。
 - 单次写入只能包含一个 UTC `date` 分区；跨日数据必须按 UTC 日期拆分。
 - exchange、market_type、symbol、timeframe、source 的行内值必须与写入分区一致。
 - 写入必须使用原子替换，失败时不得留下半成品。
@@ -211,6 +252,10 @@ Polygon `transactions -> trade_count`，但必须保留原字段与映射 proven
 
 raw/normalized 对齐使用 `audit_raw_normalized_ohlcv()`。任何研究脚本若绕过可信
 加载器，必须在对应报告中给出等价的数据质量审计和明确理由。
+
+核心 profile 显式使用 `read_market_dataset()` → `read_core()`：旧 Warehouse 要求的
+原生可选列与此 profile 不同，因此不混用 loader。每次消费重新验证所有原始页、许可、
+时间、完整网格、收盘、逐字节归一化一致性及审核代码摘要，任何不一致拒绝消费。
 
 本仓库不提供一个隐式通吃所有市场的数据同步 CLI。数据抓取、补洞和一次性迁移
 脚本放在对应 `research/.../scripts/`，并记录来源、覆盖范围与质量校验。

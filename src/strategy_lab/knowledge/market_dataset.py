@@ -12,6 +12,9 @@ from .market_contract import check_contract_binding, reviewed_rights, sha
 def read_market_dataset(contract_path, manifest_path, *, formal=True):
     manifest_path = Path(manifest_path)
     manifest = json.loads(manifest_path.read_text())
+    if manifest.get("dataset_profile") == "TRUSTED_OHLCV_CORE_V1":
+        from .market_core import read_core
+        return read_core(contract_path, manifest_path)
     contract = check_contract_binding(contract_path, manifest)
     root = manifest_path.parent
     for key in (

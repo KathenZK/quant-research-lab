@@ -128,12 +128,50 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         result["robustness"]["surface"], config["parameters"]
     )
     result["exposure_definition"] = "POST_OPEN_POSITION_PROXY_WITH_INTRABAR_BOUNDS"
+    result["trade_window_policy"] = (
+        "Trade counts and win rates are assigned by exit timestamp using whole-trade PnL; "
+        "period return/risk metrics use only that window's daily account returns. "
+        "Positions and prior-bar signals carry across the IS/OOS boundary."
+    )
     base_account = output / (
         "account-" + str(config["parameter_grid"].index(config["parameters"])) + ".csv"
     )
     import pandas as pd
 
     account = pd.read_csv(base_account)
+    account["ts"] = pd.to_datetime(account["ts"], utc=True)
+    baseline_index = config["parameter_grid"].index(config["parameters"])
+    trades = pd.read_csv(output / f"trades-{baseline_index}.csv")
+    exits = (
+        pd.to_datetime(trades.exit_ts, utc=True)
+        if len(trades)
+        else pd.Series([], dtype="datetime64[ns, UTC]")
+    )
+    sequential = []
+    cursor, end = pd.Timestamp(contract["oos_start"]), pd.Timestamp(contract["oos_end"])
+    while cursor < end:
+        stop = min(cursor + pd.DateOffset(months=6), end)
+        a = account[(account.ts >= cursor) & (account.ts < stop)]
+        t = trades[(exits >= cursor) & (exits < stop)]
+        sequential.append(
+            dict(
+                start=cursor.isoformat(),
+                end_exclusive=stop.isoformat(),
+                metrics=historical.summarize(a, t, 365 * 1440 / config["minutes"]),
+            )
+        )
+        cursor = stop
+    result["chronological_oos_slices"] = dict(
+        status="COMPUTED",
+        method="LOCKED_BASELINE_SIX_MONTH_SLICES",
+        slices=sequential,
+        state_policy="Carry account and prior closed-bar signal across boundaries; trades assigned by exit timestamp",
+        purpose="Descriptive temporal stability only; no refitting or parameter selection",
+    )
+    result["walk_forward"] = dict(
+        status="NOT_APPLICABLE",
+        reason="Frozen rule has no fitted estimator or rolling selection protocol; chronological OOS slices are reported separately",
+    )
     result["exposure_duration_bounds"] = dict(
         lower=float(account.exposure_duration_lower.mean()),
         upper=float(account.exposure_duration_upper.mean()),
@@ -152,6 +190,7 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         historical.METRICS_PATH,
         ROOT / "src/strategy_lab/knowledge/market_contract.py",
         ROOT / "src/strategy_lab/knowledge/market_dataset.py",
+        ROOT / "src/strategy_lab/knowledge/market_core.py",
         ROOT / "src/strategy_lab/data/market_coverage.py",
     ]
     code_manifest = {str(p.relative_to(ROOT)): sha(p) for p in modules}
