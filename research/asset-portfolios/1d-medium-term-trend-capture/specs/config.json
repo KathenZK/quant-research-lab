@@ -1,0 +1,33 @@
+{
+  "family": "Binance-1D-Medium-Term-Trend-Capture",
+  "alias": "BIN-1D-MTTC",
+  "run_id": "research-20260909",
+  "start": "2019-09-09T00:00:00Z",
+  "end": "2026-09-05T00:00:00Z",
+  "direction": "LONG",
+  "warmup": 60,
+  "momentum_window": 20,
+  "strength_threshold": 2.0,
+  "atr_window": 14,
+  "pullback_atr": 1.0,
+  "stop_atr": 2.0,
+  "wait_days": 20,
+  "fixed_hold_days": 20,
+  "max_hold_days": 60,
+  "policies": ["A", "B", "C"],
+  "initial_equity": 10000.0,
+  "max_slots": 10,
+  "budget_fraction": 0.1,
+  "slot_risk_fraction": 0.1,
+  "slot_notional_fraction": 0.9,
+  "costs": [
+    {"id": "base", "fee": 0.001, "slippage": 0.0004, "daily_carry": 0.0},
+    {"id": "slippage_stress", "fee": 0.001, "slippage": 0.0008, "daily_carry": 0.0},
+    {"id": "carry_3bp", "fee": 0.001, "slippage": 0.0004, "daily_carry": 0.0003},
+    {"id": "carry_10bp", "fee": 0.001, "slippage": 0.0004, "daily_carry": 0.001}
+  ],
+  "bootstrap": {"blocks": [60, 120], "repetitions": 10000, "seed": 20260909, "confidence": 0.95},
+  "recent_days": [1, 7, 30, 90, 180, 365],
+  "research_drawdown_limit": 0.3,
+  "history_role": "ITERATIVE_REUSED_DIAGNOSTIC"
+}

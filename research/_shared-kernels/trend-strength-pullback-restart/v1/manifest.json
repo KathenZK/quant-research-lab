@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "kernel": "trend-strength-pullback-restart",
+  "frozen_utc": "2026-09-08T13:46:39.402376+00:00",
+  "files": {
+    "capture.py": "42585a7289aacdb8b6a3727fcc575ec8b97294bcd70912fbf713799ef91dc351",
+    "engine.py": "d35573cd0c6f83b63f353cd078a9499118ce23aebc89b748b5f6ea21572dd677",
+    "statistics.py": "fcc4bc2aaf791998f8079abc5cd38aa86811a911e74ff8854ed29610cb7565e2",
+    "test_statistics.py": "fc3987d3ba4fdf73546c73b414a46e7cf001122380cdf0ad2f759a77dec247d9",
+    "tests/test_engine.py": "519f76d2d007d9452ca01a62dd0c47100e8aa238b0b4de027b18a30d5368edcd"
+  },
+  "consumer": "BIN-1D-TSPR",
+  "capture_source": "MTCS scripts/capture.py original bytes, no runtime dependency on old family"
+}

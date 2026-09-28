@@ -32,6 +32,42 @@ class AuxiliaryClassification:
 
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
+    # 已留证的独立审计在模块顶层运行；保留其字节，只登记精确读取入口。
+    # 原生资金费通过固定 manifest 的 load_funding_v2 读取，其余仅为本家族保留产物。
+    ConsumerSpec(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_funding_independent.py",
+        ("<module>",), ("load_funding_v2",),
+        "verified-funding-and-retained-family-artifacts-audit",
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_funding.py",
+        ("load_coverage",), ("load_funding_v2",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_inputs.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/audit_inputs.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-medium-term-continuation-state/scripts/audit_inputs.py",
+        ("load_inputs",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
+        ("load_coverage",), ("load_funding_v2",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
+        ("attempt_net_startup",), ("require_research_startup",),
+    ),
+    ConsumerSpec(
+        "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_inputs.py",
+        ("load_inputs",),
+        ("require_research_startup",),
+    ),
     # PBTR
     ConsumerSpec(
         "research/hype/5m-pullback-trail/scripts/"
@@ -232,6 +268,31 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/plot_equity_and_drawdown.py",
+        "main", "retained-family-artifacts-only",
+        "Plots pinned MTTC portfolio_daily.parquet and account-metrics.json, checks the account calendar and metrics, and embeds source hashes; no market-data access or strategy execution.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_statistics.py",
+        "main", "retained-family-artifacts-only",
+        "Independently checks pinned MTTC paired results, calendar inference and retained descriptive tables; no market-data lake access.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/explain_capture_gaps.py",
+        "main", "retained-family-artifacts-only",
+        "Explains waiting and drawdowns from retained MTTC result tables without rerunning or selecting rules.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_research.py",
+        "main", "retained-family-artifacts-only",
+        "Independently reconstructs current-family verified input snapshots, signals and retained account results.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-medium-term-trend-capture/scripts/export_findings.py",
+        "main", "retained-family-artifacts-only",
+        "Reads only the current family's retained result tables; no market-data lake access.",
+    ),
     AuxiliaryClassification(
         "research/hype/15m-ema-trend-breakout/scripts/"
         "research_hype_ema_tb_v35_profit_floor.py",
@@ -439,7 +500,16 @@ def scan_consumer(root: Path, spec: ConsumerSpec) -> list[str]:
     errors: list[str] = []
     governed_nodes: list[ast.AST] = []
     for entrypoint in spec.entrypoints:
-        node = functions.get(entrypoint)
+        if entrypoint == "<module>":
+            # 显式注册的顶层执行入口；不让未调用的函数/类中的读取满足门禁。
+            node = ast.Module(
+                body=[item for item in tree.body if not isinstance(
+                    item, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
+                )],
+                type_ignores=[],
+            )
+        else:
+            node = functions.get(entrypoint)
         if node is None:
             errors.append(f"{spec.path}: missing entry point {entrypoint}()")
         else:
