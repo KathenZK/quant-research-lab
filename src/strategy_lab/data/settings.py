@@ -84,7 +84,7 @@ class AppSettings:
 def default_settings(project_root: Path | None = None) -> AppSettings:
     root = project_root or _project_root()
     return AppSettings(
-        name="quant-strategy-lab",
+        name="quant-research-lab",
         timezone="UTC",
         storage=StorageConfig(
             root_dir=root / "data",

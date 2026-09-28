@@ -35,7 +35,7 @@ SYMBOL = "HYPEUSDT"
 DISPLAY_SYMBOL = "HYPE/USDT:USDT"
 INTERVAL = "15m"
 INTERVAL_MS = 15 * 60 * 1000
-USER_AGENT = "quant-strategy-lab-hype-cc-mark-refresh/0.1"
+USER_AGENT = "quant-research-lab-hype-cc-mark-refresh/0.1"
 
 
 def parse_args() -> argparse.Namespace:

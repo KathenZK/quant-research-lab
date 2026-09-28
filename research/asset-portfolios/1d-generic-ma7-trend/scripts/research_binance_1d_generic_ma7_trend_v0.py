@@ -145,7 +145,7 @@ def request_json(url: str, params: dict[str, Any], retries: int = 5) -> tuple[An
     last: Exception | None = None
     for attempt in range(retries):
         try:
-            req = Request(full, headers={"User-Agent": "quant-strategy-lab-research/1.0"})
+            req = Request(full, headers={"User-Agent": "quant-research-lab-research/1.0"})
             with urlopen(req, timeout=45) as response:
                 raw = response.read()
             return json.loads(raw.decode("utf-8")), raw

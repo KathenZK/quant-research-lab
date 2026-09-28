@@ -209,7 +209,12 @@
       "pattern": "^[a-f0-9]{64}$"
     },
     "producer": {
-      "const": "quant-strategy-lab"
+      "enum": [
+        "quant-research-lab",
+        "quant-strategy-lab"
+      ],
+      "default": "quant-research-lab",
+      "description": "Repository identity. New artifacts use quant-research-lab; quant-strategy-lab is accepted only for immutable historical artifacts."
     }
   },
   "allOf": [

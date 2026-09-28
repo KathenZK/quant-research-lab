@@ -25,7 +25,7 @@ FAMILY_DIR = ROOT / "research/asset-portfolios/15m-ema-cross-lightgbm-event-sele
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 INVENTORY_PATH = ARTIFACT_DIR / "binance_usdm_15m_inventory_2026-07-23.csv"
 VISION = "https://data.binance.vision"
-UA = "quant-strategy-lab-bin-15m-emax-lgbm-sync/0.1"
+UA = "quant-research-lab-bin-15m-emax-lgbm-sync/0.1"
 
 ARCHIVE_ROOT = ROOT / "data/raw/_archives/binance/futures/um/monthly"
 RAW_ROOT = ROOT / "data/raw/ohlcv/exchange=binance/market_type=perp/timeframe=15m"

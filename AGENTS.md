@@ -1,5 +1,7 @@
 # AI Agent 仓库规则
 
+仓库名为 `quant-research-lab`，Python 包名 `strategy_lab` 兼容保留。架构为 `quant-knowledge-graph → quant-research-lab → quant-runner`。历史制品不可为改名而重写，见 [迁移说明](docs/repository-name-migration.md)。
+
 本仓库是 data-first 的量化策略研究档案。研究对象可以覆盖加密货币、美股、A 股、港股、大宗商品等多个市场；HYPE 只是当前较早展开的一条研究线。线上执行在同级仓库 `/Users/ZK/OpenCode/quant-runner` 中进行。
 
 `.cursor/rules/` 是硬性工作约束的细则来源；状态机词表与验证门禁的内容细则在 `docs/research-governance/`，由对应规则文件指向。本文件只补充仓库入口、命名口径、active code 边界和术语。不要把 `.cursor/rules/` 的细则复制进本文件、根 `README.md` 或 `research/README.md`；若同一事项重复出现，以更具体、更严格的表述为准。

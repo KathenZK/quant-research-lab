@@ -35,7 +35,7 @@ ARTIFACT_DIR = FAMILY_DIR / "artifacts/p0_data_2026-08-10"
 FEATURE_DIR = ROOT / "data/features/binance_1d_ma7_rsi6_dapml_p0"
 
 API_ROOT = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-bin-1d-ma7-rsi6-dapml-p0/0.1"
+USER_AGENT = "quant-research-lab-bin-1d-ma7-rsi6-dapml-p0/0.1"
 KLINE_SOURCE = "binance_futures_kline_api_direct"
 FUNDING_SOURCE = "binance_futures_funding_rate_api_direct"
 MARK_SOURCE = "binance_mark_price"

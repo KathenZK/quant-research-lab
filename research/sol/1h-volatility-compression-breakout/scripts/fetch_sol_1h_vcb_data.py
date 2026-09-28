@@ -22,7 +22,7 @@ def load_fetcher() -> Any:
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     module.ARTIFACT_DIR = FAMILY_DIR / "artifacts"
-    module.USER_AGENT = "quant-strategy-lab-sol-1h-vcb/0.1"
+    module.USER_AGENT = "quant-research-lab-sol-1h-vcb/0.1"
     return module
 
 

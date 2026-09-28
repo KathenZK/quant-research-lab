@@ -45,7 +45,7 @@ def sha256(path: Path) -> str:
 
 
 def download(url: str, path: Path) -> None:
-    request = Request(url, headers={"User-Agent": "quant-strategy-lab research"})
+    request = Request(url, headers={"User-Agent": "quant-research-lab research"})
     with urlopen(request, timeout=60) as response:  # noqa: S310 - frozen HTTPS source
         content = response.read()
     if not content.startswith(b"PK"):

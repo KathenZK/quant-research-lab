@@ -33,7 +33,7 @@ LOG_DIR = CACHE / "logs"
 
 FAPI = "https://fapi.binance.com"
 VISION = "https://data.binance.vision"
-UA = "quant-strategy-lab-mk7-v8-data/0.1"
+UA = "quant-research-lab-mk7-v8-data/0.1"
 
 MID_LO = 2_000.0
 MID_HI = 20_000.0

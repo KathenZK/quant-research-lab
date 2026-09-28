@@ -25,7 +25,7 @@ SYMBOL_FILE = "symbol=mu_usdt_usdt.parquet"
 TIMEFRAME = "15m"
 INTERVAL_MS = 15 * 60 * 1000
 BASE_URL = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-mu-15m/0.1"
+USER_AGENT = "quant-research-lab-mu-15m/0.1"
 
 RAW_OHLCV_ROOT = (
     ROOT / "data/raw/ohlcv/exchange=binance/market_type=perp/timeframe=15m"

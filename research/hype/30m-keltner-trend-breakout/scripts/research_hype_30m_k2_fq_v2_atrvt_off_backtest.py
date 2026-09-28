@@ -28,7 +28,7 @@ DISPLAY_SYMBOL = "HYPE/USDT:USDT"
 BASE_URL = "https://fapi.binance.com"
 KLINES_PATH = "/fapi/v1/klines"
 TIME_PATH = "/fapi/v1/time"
-USER_AGENT = "quant-strategy-lab-hype-k2-30m/0.1"
+USER_AGENT = "quant-research-lab-hype-k2-30m/0.1"
 
 INTERVAL_MS = 60_000
 M30_PER_YEAR = 365 * 24 * 2

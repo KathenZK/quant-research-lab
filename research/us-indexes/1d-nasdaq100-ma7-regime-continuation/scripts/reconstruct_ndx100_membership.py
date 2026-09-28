@@ -26,7 +26,7 @@ STUDY_CONFIG_PATH = CONFIG_DIR / "ndx100-1d-ma7-regime-continuation-p0.json"
 HISTORY_TITLE = "Historical_components_of_the_Nasdaq-100"
 CURRENT_TITLE = "List_of_NASDAQ-100_companies"
 WIKI_API = "https://en.wikipedia.org/w/api.php"
-USER_AGENT = "quant-strategy-lab-ndx100-membership/1.0"
+USER_AGENT = "quant-research-lab-ndx100-membership/1.0"
 OFFICIAL_DOMAINS = (
     "nasdaq.com",
     "nasdaqomx.com",

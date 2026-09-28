@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quant-strategy-lab.local/schemas/parity-report.schema.json",
+  "$id": "https://quant-research-lab.local/schemas/parity-report.schema.json",
   "title": "Runner parity report",
   "type": "object",
   "required": [

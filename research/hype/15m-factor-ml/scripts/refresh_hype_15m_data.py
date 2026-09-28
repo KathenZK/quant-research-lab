@@ -24,7 +24,7 @@ ARTIFACT_DIR = FAMILY_DIR / "artifacts/data_quality"
 
 FAPI = "https://fapi.binance.com"
 VISION = "https://data.binance.vision"
-USER_AGENT = "quant-strategy-lab-hype-15m-factor-ml-data/0.2"
+USER_AGENT = "quant-research-lab-hype-15m-factor-ml-data/0.2"
 
 SYMBOL = "HYPEUSDT"
 DISPLAY_SYMBOL = "HYPE/USDT:USDT"

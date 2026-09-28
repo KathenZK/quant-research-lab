@@ -43,7 +43,7 @@ def main() -> None:
     source.FAMILY_DIR = FAMILY_DIR
     source.ARTIFACT_DIR = FAMILY_DIR / "artifacts"
     source.REPORT_PATH = REPORT_PATH
-    source.USER_AGENT = "quant-strategy-lab-btc-15m-trend-continuation-data/0.1"
+    source.USER_AGENT = "quant-research-lab-btc-15m-trend-continuation-data/0.1"
     source.main()
 
 

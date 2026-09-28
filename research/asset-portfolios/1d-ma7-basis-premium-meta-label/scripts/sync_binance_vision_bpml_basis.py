@@ -116,7 +116,7 @@ def s3_objects(prefix: str) -> list[dict[str, Any]]:
             params["continuation-token"] = continuation
         request = urllib.request.Request(
             f"{S3_ENDPOINT}?{urllib.parse.urlencode(params)}",
-            headers={"User-Agent": "quant-strategy-lab-bpml-p0/1.0"},
+            headers={"User-Agent": "quant-research-lab-bpml-p0/1.0"},
         )
         with urllib.request.urlopen(request, timeout=30) as response:
             root = ET.fromstring(response.read())
@@ -226,7 +226,7 @@ def download_archive(archive: Archive, retries: int = 4) -> str:
         try:
             request = urllib.request.Request(
                 archive.url,
-                headers={"User-Agent": "quant-strategy-lab-bpml-p0/1.0"},
+                headers={"User-Agent": "quant-research-lab-bpml-p0/1.0"},
             )
             with urllib.request.urlopen(request, timeout=60) as response:
                 payload = response.read()

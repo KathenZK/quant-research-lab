@@ -25,7 +25,7 @@ FAMILY_DIR = ROOT / "research/btc/1d-ma7-rsi6-lightgbm-trend"
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 
 API_ROOT = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-btc-funding-mark/0.1"
+USER_AGENT = "quant-research-lab-btc-funding-mark/0.1"
 SYMBOL = "BTCUSDT"
 DISPLAY_SYMBOL = "BTC/USDT:USDT"
 INTERVAL = "8h"

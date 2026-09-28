@@ -25,7 +25,7 @@ FAMILY_DIR = ROOT / "research/asset-portfolios/1h-cross-sectional-lightgbm-selec
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 INVENTORY_PATH = ARTIFACT_DIR / "binance_usdm_historical_inventory_2026-07-17.csv"
 VISION = "https://data.binance.vision"
-UA = "quant-strategy-lab-bin-1h-cslgbm-sync/0.1"
+UA = "quant-research-lab-bin-1h-cslgbm-sync/0.1"
 
 ARCHIVE_ROOT = ROOT / "data/raw/_archives/binance/futures/um/monthly"
 DATASET_CONFIG = {

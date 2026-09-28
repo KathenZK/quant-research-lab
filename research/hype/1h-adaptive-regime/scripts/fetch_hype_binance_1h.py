@@ -26,7 +26,7 @@ KLINES_PATH = "/fapi/v1/klines"
 FUNDING_PATH = "/fapi/v1/fundingRate"
 EXCHANGE_INFO_PATH = "/fapi/v1/exchangeInfo"
 TIME_PATH = "/fapi/v1/time"
-USER_AGENT = "quant-strategy-lab-hype-1h/0.1"
+USER_AGENT = "quant-research-lab-hype-1h/0.1"
 
 RAW_ROOT = (
     ROOT

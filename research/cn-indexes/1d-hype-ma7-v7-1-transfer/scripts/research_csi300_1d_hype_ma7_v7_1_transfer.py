@@ -108,7 +108,7 @@ def fetch_bytes(url: str) -> bytes:
             request = Request(
                 url,
                 headers={
-                    "User-Agent": "Mozilla/5.0 quant-strategy-lab-research/1.0"
+                    "User-Agent": "Mozilla/5.0 quant-research-lab-research/1.0"
                 },
             )
             with urlopen(request, timeout=45) as response:

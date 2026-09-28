@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://quant-strategy-lab.local/schemas/lab-live-spec-frontmatter.schema.json",
+  "$id": "https://quant-research-lab.local/schemas/lab-live-spec-frontmatter.schema.json",
   "title": "Lab live-spec front matter",
   "type": "object",
   "required": [

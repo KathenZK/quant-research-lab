@@ -33,7 +33,7 @@ NORMALIZED_ROOT = (
 
 VISION = "https://data.binance.vision"
 FAPI = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-bin-1d-ma7-rc-p3-sync/0.1"
+USER_AGENT = "quant-research-lab-bin-1d-ma7-rc-p3-sync/0.1"
 SOURCE_VISION = "binance_vision_kline_monthly"
 SOURCE_API = "binance_futures_kline_api"
 JULY_MONTH = "2026-07"

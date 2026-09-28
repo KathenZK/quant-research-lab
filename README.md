@@ -1,4 +1,9 @@
-# Quant Strategy Lab
+# Quant Research Lab
+
+`quant-knowledge-graph → quant-research-lab → quant-runner`
+
+Repository: [quant-research-lab](https://github.com/KathenZK/quant-research-lab)；Python package: `strategy_lab`（兼容保留）。
+本仓库负责因子/策略研究、真实回测、IS/OOS、Walk-forward、DSR/PBO 和研究证据；分工见 [ARCHITECTURE](ARCHITECTURE.md)，迁移和历史兼容见 [命名迁移说明](docs/repository-name-migration.md)。
 
 本仓库定位为"数据优先"的量化研究档案，而不是通用策略平台。研究对象是**线上可实盘执行的策略**：任何策略在进入 promotion 状态（`live spec`、`dry-run`、`live`）前，都必须先证明它能被真实订单时序复现。本仓库不定义额外的模拟盘阶段；模拟盘/仿真运行统一称为 `dry-run`，真实下单归入 `live`，资金边界由子账户资金、runner 配置或上线 decision log 管理。回测依赖无法真实成交的假设时，它不是"高收益候选"，而是失败诊断——这是本项目从趋势策略和 `HYPE-5M-Pullback-Trail` V2.1A/V3.3/V4 锁仓止损审计中反复付出代价换来的硬门槛（细则见 `.cursor/rules/live-executable-strategy-research.mdc`）。
 

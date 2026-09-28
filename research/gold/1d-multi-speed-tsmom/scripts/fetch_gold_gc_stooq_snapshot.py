@@ -62,7 +62,7 @@ def fetch_bytes(url: str) -> bytes:
         try:
             request = Request(
                 url,
-                headers={"User-Agent": "quant-strategy-lab-research/1.0"},
+                headers={"User-Agent": "quant-research-lab-research/1.0"},
             )
             with urlopen(request, timeout=60) as response:
                 content = response.read()
