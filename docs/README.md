@@ -9,6 +9,7 @@
 ## 文档与交接格式
 
 - [strategy-status-glossary.md](research-governance/strategy-status-glossary.md)：主账与机器主状态的含义；正文和补充说明不限定词汇。
+- [ci-boundaries.md](research-governance/ci-boundaries.md)：公开 CI、私有数据验收、冻结源码和证据副本的检查边界。
 - [core-ledger-template.md](research-governance/core-ledger-template.md)：新建或重构家族主账时使用的模板。
 - [external-reproduction-spec.md](research-governance/external-reproduction-spec.md)：交给仓库外读者的单文件复现规格。
 - [lab-runner-handoff.md](research-governance/lab-runner-handoff.md)：runner 实现交接、执行证据和观察回流。

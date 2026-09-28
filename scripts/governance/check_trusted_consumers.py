@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
+from strategy_lab.governance_scope import is_research_artifact, research_sources
 
 @dataclass(frozen=True, slots=True)
 class ConsumerSpec:
@@ -32,6 +33,7 @@ class AuxiliaryClassification:
 
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
+    ConsumerSpec('research/hype/15m-candle-count-reversal/scripts/research_hype_cc_v35_maker_entry_audit.py', ("_load_local_trade",), ("load_v3_research_ohlcv",), "observed-diagnostic-v3-price-reader"),
     ConsumerSpec(
         "research/asset-portfolios/1d-tpsa-long-account/scripts/account_acceptance.py",
         ("<module>",), ("load_funding_v2",), "funding-input-reader",
@@ -443,6 +445,78 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/platform/research-program-review/scripts/three-line-review-20260909/b_recalculate.py",
+        "<module>", "frozen-artifact-consumer",
+        "Independent TPSA ledger reconstruction from retained 5f41 price snapshots, predictions and account exports; no source lake read.",
+    ),
+    AuxiliaryClassification(
+        "research/platform/research-program-review/scripts/three-line-review-20260909/b_admission.py",
+        "<module>", "frozen-artifact-consumer",
+        "Admission diagnostic consumes retained TPSA predictions, account ledger and independent shadow trades; does not approve promotion.",
+    ),
+    AuxiliaryClassification('research/hype/15m-candle-count-reversal/scripts/research_hype_cc_v35_maker_entry_audit.py', "_load_local_mark", "mark-price-audit", "Local mark-price overlap audit is outside trusted trade OHLCV and does not establish complete funding."),
+    AuxiliaryClassification('research/hype/15m-candle-count-reversal/scripts/research_hype_cc_v35_maker_entry_audit.py', "_load_and_compare_funding", "funding-input-reader", "Observed funding comparison remains OBSERVED_ONLY_NOT_VERIFIED; no complete-net claim."),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/audit_v3_parameters_20260924.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/build_fixed_atr_html_20260924.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/report_v3_parameters_20260924.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/validate_fixed_atr_20260924.py',
+        '<module>', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/audit_fixed_atr_validation_20260924.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/validate_fixed_atr_20260924_r2.py',
+        '<module>', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/hype/1d-ma7-cross-atr-ratchet/scripts/validate_fixed_atr_20260924_r3.py',
+        '<module>', "frozen-artifact-consumer",
+        'Reads retained same-family input/equity snapshots and pinned account results for the 2026-09-24 diagnostic; no source lake price route.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/1d-ma7-cross-expansion-regime/scripts/run_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained CATL/P5/P6/P7A derived panels for the preregistered diagnostic; no source lake price route and no promotion approval.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/1d-ma7-cross-trend-probability/scripts/run_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py',
+        'main', "frozen-artifact-consumer",
+        'Frozen diagnostic reads retained CATL/P5 panels and normalized funding for sensitivity only; not trusted OHLCV or verified complete net returns.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/1d-ma7-cross-trend-probability/scripts/run_binance_1d_ma7_ctp_p6_market_regime_side_conditional_ranking.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained CATL/P5/P6/P7A derived panels for the preregistered diagnostic; no source lake price route and no promotion approval.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/1d-ma7-cross-trend-probability/scripts/run_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained CATL/P5/P6/P7A derived panels for the preregistered diagnostic; no source lake price route and no promotion approval.',
+    ),
+    AuxiliaryClassification(
+        'research/asset-portfolios/1d-ma7-cross-trend-probability/scripts/run_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py',
+        'main', "frozen-artifact-consumer",
+        'Reads retained CATL/P5/P6/P7A derived panels for the preregistered diagnostic; no source lake price route and no promotion approval.',
+    ),
     AuxiliaryClassification(
         "research/platform/small-account-three-line-validation/scripts/audit_b_ledgers.py",
         "audit",
@@ -1579,6 +1653,9 @@ def validate_auxiliary_classifications(root: Path) -> list[str]:
     for item in AUXILIARY_CLASSIFICATIONS:
         path = root / item.path
         if not path.is_file():
+            if item.classification == "archived-third-party-source" and is_research_artifact(path, root):
+                # Private retained source snapshots are deliberately absent from Git.
+                continue
             errors.append(f"{item.path}: missing classified auxiliary consumer")
             continue
         tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
@@ -1635,8 +1712,8 @@ def iter_research_script_paths(root: Path) -> list[Path]:
         return []
     return [
         path
-        for path in research.rglob("*.py")
-        if path.parent.name == "scripts"
+        for path in research_sources(root)
+        if "scripts" in path.relative_to(research).parts[:-1]
     ]
 
 
@@ -1652,7 +1729,7 @@ def discover_unregistered_binance_ohlcv_scripts(root: Path) -> list[str]:
     research = root / "research"
     if not research.is_dir():
         return [f"{research}: missing research directory"]
-    for path in research.rglob("*.py"):
+    for path in research_sources(root):
         rel = path.relative_to(root).as_posix()
         if rel.startswith(CONTROLLED_EXCEPTION_PREFIXES) or rel.startswith(ARCHIVED_PREFIXES):
             continue

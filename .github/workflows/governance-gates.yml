@@ -27,20 +27,3 @@ jobs:
         run: uv run --locked --extra dev --extra ml ruff check src tests scripts/governance
       - name: Run tests that do not need local data
         run: uv run --locked --extra dev --extra ml pytest -q -m "not local_data"
-
-  research-local-data:
-    runs-on: ubuntu-22.04
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
-          cache-dependency-glob: uv.lock
-      - name: Install locked test dependencies
-        run: uv sync --locked --extra dev --extra ml
-      - name: Report local-data research tests
-        run: uv run --locked --extra dev --extra ml pytest -q -m local_data

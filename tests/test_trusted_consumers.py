@@ -28,6 +28,28 @@ def test_repository_governed_consumers_pass() -> None:
     assert check_trusted_consumers.run_checks(REPOSITORY_ROOT) == []
 
 
+def test_nested_active_readers_remain_gated_and_artifact_copies_do_not(tmp_path):
+    for relative in ("scripts/nested/reader.py", "artifacts/snapshot/scripts/reader.py"):
+        path = tmp_path / "research/example" / relative
+        path.parent.mkdir(parents=True)
+        path.write_text("import pandas as pd\npd.read_parquet('data/unregistered.parquet')\n")
+    errors = check_trusted_consumers.discover_unfrozen_direct_lake_scripts(tmp_path)
+    assert len(errors) == 1 and "scripts/nested/reader.py" in errors[0]
+
+
+def test_only_archived_private_source_can_be_absent(tmp_path, monkeypatch):
+    classify = check_trusted_consumers.AuxiliaryClassification
+    entries = (
+        classify("research/f/artifacts/sources/old.py", "main", "archived-third-party-source", "private source snapshot"),
+        classify("research/f/scripts/active.py", "main", "archived-third-party-source", "active path must exist"),
+        classify("research/f/artifacts/required.py", "main", "frozen-artifact-consumer", "explicitly required evidence"),
+    )
+    monkeypatch.setattr(check_trusted_consumers, "AUXILIARY_CLASSIFICATIONS", entries)
+    errors = check_trusted_consumers.validate_auxiliary_classifications(tmp_path)
+    assert len(errors) == 2
+    assert all("sources/old.py" not in error for error in errors)
+
+
 def test_scanner_rejects_direct_parquet_and_cache_calls(
     tmp_path: Path,
 ) -> None:

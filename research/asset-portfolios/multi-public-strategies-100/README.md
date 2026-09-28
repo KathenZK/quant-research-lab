@@ -1,6 +1,9 @@
+---
+research_classification: diagnostic_topic
+---
+
 # PUBLIC100：公开策略 100 条逐项复核与回测诊断
 
-research_classification: diagnostic_topic
 
 本主题用于复核用户给定的 100 条公开策略，不是一条组合策略，也不继承仓库任何既有研究的身份、参数或结论。每条仍按原编号独立记录。`EXPLORE_UNTRUSTED` 只表示执行过带限制的诊断；不表示原策略准确复现、完整回测、正式验证通过或可实盘。
 

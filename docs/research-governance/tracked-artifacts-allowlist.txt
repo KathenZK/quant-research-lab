@@ -561,3 +561,10 @@ research/sox/1d-ma7-separated-trend-transfer/artifacts/README.md  # research/sox
 research/trx/1h-adaptive-regime/artifacts/README.md  # research/trx/1h-adaptive-regime
 research/us-indexes/1d-ma7-shared-parameter-transfer/artifacts/README.md  # research/us-indexes/1d-ma7-shared-parameter-transfer
 research/us-indexes/1d-nasdaq100-ma7-regime-continuation/artifacts/README.md  # research/us-indexes/1d-nasdaq100-ma7-regime-continuation
+
+# Public QuantGraph contract fixtures, already present on main; no private market data.
+research/platform/quantgraph-integration/artifacts/candidate-summary.json # public contract fixture
+research/platform/quantgraph-integration/artifacts/cross-repo-contract.json # public contract fixture
+research/platform/quantgraph-integration/artifacts/platform-v2/candidate-summary.json # public contract fixture
+research/platform/quantgraph-integration/artifacts/reference-v2/vectorbt-comparison.json # public contract fixture
+research/platform/quantgraph-integration/artifacts/synthetic-diagnostics.json # public contract fixture

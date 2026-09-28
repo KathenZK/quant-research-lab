@@ -14,8 +14,10 @@ import sys
 from pathlib import Path
 
 import yaml
+import pytest
 from jsonschema import Draft202012Validator, FormatChecker
 
+from strategy_lab.governance_scope import research_sources
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / "research"
 GOVERNANCE_DOCS = ROOT / "docs" / "research-governance"
@@ -289,14 +291,42 @@ def test_shared_kernel_versions_are_frozen() -> None:
     for version_dir in sorted(kernel_dir.glob("v*")):
       if not version_dir.is_dir():
         continue
+      manifest_pins = {}
+      manifest = version_dir / "manifest.json"
+      if manifest.is_file() and hashlib.sha256(manifest.read_bytes()).hexdigest() in text:
+        manifest_pins = json.loads(manifest.read_text()).get("files", {})
+        for relative, expected in manifest_pins.items():
+          frozen_file = version_dir / relative
+          if not frozen_file.is_file() or hashlib.sha256(frozen_file.read_bytes()).hexdigest() != expected:
+            problems.append(f"{kernel_dir.name}/{version_dir.name}/{relative}: 冻结 manifest 不匹配")
       for engine in sorted(version_dir.glob("*.py")):
         digest = hashlib.sha256(engine.read_bytes()).hexdigest()
-        if digest not in text:
+        if digest not in text and manifest_pins.get(engine.name) != digest:
           problems.append(
             f"{kernel_dir.name}/{version_dir.name}/{engine.name}: "
             f"实际 SHA256 {digest} 未在 kernel README 登记（冻结版本被改动或未登记）"
           )
   assert not problems, "共享内核冻结检查失败:\n" + "\n".join(problems)
+
+
+def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, monkeypatch):
+  monkeypatch.setattr(sys.modules[__name__], "RESEARCH", tmp_path)
+  kernels = tmp_path / "_shared-kernels"
+  version = kernels / "example/v1"
+  version.mkdir(parents=True)
+  (kernels / "README.md").write_text("example")
+  engine = version / "engine.py"
+  engine.write_text("VALUE = 1\n")
+  manifest = version / "manifest.json"
+  manifest.write_text(json.dumps({"files": {"engine.py": hashlib.sha256(engine.read_bytes()).hexdigest()}}))
+  (version.parent / "README.md").write_text("v1 " + hashlib.sha256(manifest.read_bytes()).hexdigest())
+  test_shared_kernel_versions_are_frozen()
+  engine.write_text("VALUE = 2\n")
+  with pytest.raises(AssertionError, match="manifest"):
+    test_shared_kernel_versions_are_frozen()
+  manifest.write_text(json.dumps({"files": {"engine.py": hashlib.sha256(engine.read_bytes()).hexdigest()}}))
+  with pytest.raises(AssertionError, match="SHA256"):
+    test_shared_kernel_versions_are_frozen()
 
 
 def test_live_specs_directories_are_not_empty() -> None:
@@ -419,10 +449,17 @@ def test_shared_kernel_index_and_copy_boundaries() -> None:
         problems.append(f"{kernel_dir.name}/{version_dir.name}: 未登记在 kernel README")
       for engine in version_dir.glob("*.py"):
         kernel_hashes[hashlib.sha256(engine.read_bytes()).hexdigest()] = engine
-  for script in sorted(RESEARCH.rglob("*.py")):
+  # This original predates extraction into TSPR v1; its manifest explicitly records
+  # capture_source as MTCS scripts/capture.py. Keep the original frozen bytes.
+  original_source = "research/asset-portfolios/1d-medium-term-continuation-state/scripts/capture.py"
+  original_digest = "42585a7289aacdb8b6a3727fcc575ec8b97294bcd70912fbf713799ef91dc351"
+  assert hashlib.sha256((ROOT / original_source).read_bytes()).hexdigest() == original_digest
+  for script in sorted(research_sources(ROOT)):
     if "_shared-kernels" in script.parts:
       continue
     digest = hashlib.sha256(script.read_bytes()).hexdigest()
+    if script.relative_to(ROOT).as_posix() == original_source and digest == original_digest:
+      continue
     if digest in kernel_hashes:
       problems.append(
         f"{script.relative_to(ROOT)}: 复制了共享内核 "

@@ -1,0 +1,61 @@
+{
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py": {
+    "sha256": "a28a21b674d2f036167a92416471ffb5d4db55313be82bc32542d964ceda2496",
+    "rules": [
+      "F401"
+    ]
+  },
+  "tests/test_ma7_car_exit_history_reports.py": {
+    "sha256": "1093ddbe9219ef2a3b3affabaf2848122a4929bfb0c3a2a3a515a5ef32f6b43c",
+    "rules": [
+      "E402"
+    ]
+  },
+  "tests/test_ma7_car_exit_state_machine.py": {
+    "sha256": "14e120f441807922745297a8aeadac916ba0708e73357a0d3d6bad373212081a",
+    "rules": [
+      "E741"
+    ]
+  },
+  "tests/test_ma7_car_four_tests.py": {
+    "sha256": "157828f8fd17091cb7fd859f7926e1e5789e8db6689540ad039f0455d69d7a1f",
+    "rules": [
+      "E731"
+    ]
+  },
+  "tests/test_ma7_car_ma30_states.py": {
+    "sha256": "f7a6c81b0e55cb2408198c97e459dc7244c9043c9cade088c743f8de08dd3dff",
+    "rules": [
+      "E701",
+      "E702"
+    ]
+  },
+  "tests/test_ma7_car_opportunity_pairs.py": {
+    "sha256": "7201d6a0e47fc42eb446061351c6fcf52597530a94287160850c369e2385fb4a",
+    "rules": [
+      "E402"
+    ]
+  },
+  "tests/test_ma7_car_v3_opportunity.py": {
+    "sha256": "24c7fc4ffe9b18ba1c87153376b2717ac6d404e65f47cfa84cc696b259d7bf19",
+    "rules": [
+      "E712"
+    ]
+  },
+  "tests/test_v3_fixed_atr_validation_20260924.py": {
+    "sha256": "a0239b7d35d73a0caccc059c28d216dcf0fa12eb3beeee1e327523f650b5264f",
+    "rules": [
+      "E401",
+      "E701",
+      "E702",
+      "F401"
+    ]
+  },
+  "tests/test_v3_parameter_stability_20260924.py": {
+    "sha256": "e0142fb68f3f52a342c6f2d0763b5977b96a24cbb79b57dc44d503b6542a6570",
+    "rules": [
+      "E701",
+      "E702"
+    ]
+  }
+}
