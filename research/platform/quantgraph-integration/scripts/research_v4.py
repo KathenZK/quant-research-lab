@@ -13,6 +13,9 @@ from strategy_lab.knowledge.market_contract import sha, check_contract_binding  
 from strategy_lab.knowledge.candidates import digest  # noqa: E402
 from strategy_lab.knowledge.results import market_evidence_v4  # noqa: E402
 import research_v3 as historical  # noqa: E402
+from strategy_lab.research.integrity import assess_research_integrity, adjudicate_research  # noqa: E402
+from strategy_lab.research.trials import TrialRegistry  # noqa: E402
+from strategy_lab.research.exposure import read_ledger  # noqa: E402
 
 ENGINE_PATH = ROOT / "research/_shared-kernels/quantgraph-market/v2/engine.py"
 ENGINE_HASH = "3c86e382f6b7716593059db568403aae0089496312ba4ba77cfa4b8de17dcdd9"
@@ -60,27 +63,11 @@ def robustness(surface, baseline):
     return out
 
 
-def adjudicate(result):
-    oos = result["oos"]
-    if oos.get("observations", 0) < 3 or oos.get("closed_trades", 0) < 30:
-        return "INCONCLUSIVE"
-    dsr, pbo = result["deflated_sharpe"], result["pbo"]
-    if (
-        oos["total_return"] <= 0
-        or (oos["sharpe"] is not None and oos["sharpe"] <= 0)
-        or oos["max_drawdown"] > 0.3
-    ):
-        return "RESEARCH_FAILED"
-    if dsr["status"] != "COMPUTED" or pbo["status"] != "COMPUTED":
-        return "INCONCLUSIVE"
-    return (
-        "RESEARCH_PASSED"
-        if dsr["value"] >= 0.95 and pbo["value"] <= 0.1
-        else "RESEARCH_FAILED"
-    )
+def adjudicate(result, assessment=None):
+    return adjudicate_research(result, assessment)
 
 
-def run(contract_path, manifest_path, output, candidate=None, private_diagnostic=False):
+def run(contract_path, manifest_path, output, candidate=None, private_diagnostic=False, *, integrity_context=None):
     bars, contract, manifest, rights, coverage = read_market_dataset(
         contract_path, manifest_path, formal=not private_diagnostic
     )
@@ -101,7 +88,15 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         )
     config = contract["engine_config"]
     historical.engine = current_engine()
-    result = historical.study(bars, config, output)
+    ctx = dict(integrity_context or {})
+    ctx.update(dataset_fingerprint=manifest['dataset_sha256'],
+               hypothesis_family_id=contract['experiment_family_id'], identity=contract['strategy_variant_id'])
+    registry_path = ctx.get('registry_path', output.parent / 'trial-registry.jsonl')
+    registry = TrialRegistry(registry_path)
+    if ctx.get('holdout_id'):
+        registry.use_holdout(ctx['holdout_id'], use_id=ctx['holdout_use_id'],
+                             dataset_fingerprint=manifest['dataset_sha256'], reason='Before V4 result computation/reveal')
+    result = historical.study(bars, config, output, trial_context=ctx)
     for name in ("deflated_sharpe", "pbo"):
         if result[name]["status"] in {"NOT_COMPUTABLE", "NOT_COMPUTED"}:
             result[name]["status"] = "NOT_APPLICABLE"
@@ -117,7 +112,7 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         limitation="Conditional fixed-family diagnostic; IID approximation; not a correction for all prior research or reused holdout",
     )
     result["pbo"].update(
-        method="CSCV",
+        method="CSCV_FIXED_RETURNS",
         tie_policy="midrank; equal weighting of all tied IS winners",
         sample_requirements=">=2 trials; 8 equal blocks; >=2 bars/block; nonzero variance in every split",
         limitation_status="LIMITATION",
@@ -193,7 +188,18 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         ROOT / "src/strategy_lab/knowledge/market_core.py",
         ROOT / "src/strategy_lab/data/market_coverage.py",
     ]
+    modules += [ROOT / 'src/strategy_lab/research' / name for name in
+                ('integrity.py', 'trials.py', 'statistics.py', 'exposure.py', 'accounting.py')]
     code_manifest = {str(p.relative_to(ROOT)): sha(p) for p in modules}
+    exposure_records = []
+    for ledger in ctx.get('exposure_ledgers', []):
+        exposure_records.extend(read_ledger(Path(ledger)))
+    assessment = assess_research_integrity(
+        study_kind=ctx.get('study_kind', 'HISTORICAL_REPLICATION' if contract.get('holdout_status') == 'RETROSPECTIVE_PREVIOUSLY_OBSERVED' else 'EXPLORATORY_ANALYSIS'),
+        contract=contract, selection_scope=result['trial_registry'],
+        statistical_methods={'dsr': result['deflated_sharpe'], 'pbo': result['pbo']},
+        holdout_evidence=registry.holdout_evidence(ctx['holdout_id']) if ctx.get('holdout_id') else None,
+        exposure_records=exposure_records, dataset_fingerprint=manifest['dataset_sha256'])
     report = dict(
         schema_version="market-study-v4",
         evidence_kind="PRIVATE_DIAGNOSTIC_PROBE"
@@ -215,10 +221,11 @@ def run(contract_path, manifest_path, output, candidate=None, private_diagnostic
         coverage=coverage,
         real_market_data=True,
         results=result,
+        integrity_assessment=assessment,
         promotion_allowed=False,
         research_status="EXPLORE_UNTRUSTED"
         if private_diagnostic
-        else adjudicate(result),
+        else adjudicate(result, assessment),
     )
     historical.write_json(output / "research-result.json", report)
     if not private_diagnostic:
@@ -243,6 +250,7 @@ if __name__ == "__main__":
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--candidate", type=Path)
     p.add_argument("--private-diagnostic", action="store_true")
+    p.add_argument("--integrity-context", type=Path, help="Optional explicit registry/campaign/protocol sidecar")
     a = p.parse_args()
     r = run(
         a.contract,
@@ -250,6 +258,7 @@ if __name__ == "__main__":
         a.output,
         json.loads(a.candidate.read_text()) if a.candidate else None,
         a.private_diagnostic,
+        integrity_context=json.loads(a.integrity_context.read_text()) if a.integrity_context else None,
     )
     print(
         json.dumps(

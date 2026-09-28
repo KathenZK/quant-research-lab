@@ -41,3 +41,7 @@ uv run --project ../quant-knowledge-graph python \
 - 在 Graph 使用 `scripts/admit_market_dataset.py --db ... --contract ... --manifest ... --output ...` 追加审查，读取 Gate 计算的 candidate.json；该脚本不导入 Lab 代码。
 - [research_v4.py](research_v4.py) 接收上述同一合同、manifest 和候选；正式入口在计算前后复核数据、权利与摘要。输出交给 Graph evidence API，读回 chain 确认同一 run。
 - 核心契约是明确 opt-in；旧原生字段 validator 保留，完整规则见[唯一数据湖规范](../../../../docs/data-lake-spec.md)。
+
+## 研究完整性 v1
+
+V3/V4 新运行在计算前登记 TrialRegistry。V4 可用 `--integrity-context` 指定自己的账本、selection campaign、实验与 holdout 协议；省略时历史完整性为 UNKNOWN。历史/探索可运行，diagnostic PBO 不再触发确认性通过。[调用与迁移](../../../../docs/research/ResearchIntegrityAssessment-v1.md) · [复现与测试](../diagnostics/research-integrity-fixes-v1.md)。
