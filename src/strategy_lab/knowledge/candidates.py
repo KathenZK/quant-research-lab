@@ -5,6 +5,9 @@ import json
 import math
 
 
+SUPPORTED_GATE_VERSION = 'research-candidate-gate-v4'
+
+
 def digest(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()
 
@@ -15,8 +18,8 @@ def collect_candidates(client):
         page = client.export_research_candidates(limit=1000, offset=offset)
         if page.get('scope') != 'TRIAGE_ONLY':
             raise ValueError('Unexpected candidate export contract')
-        if page.get('projection_status', 'READY') != 'READY':
-            raise ValueError('Incomplete QuantGraph projection; candidate selection is blocked')
+        if page.get('projection_status') != 'READY':
+            raise ValueError('UPSTREAM_CONTRACT_UNSUPPORTED: projection_status must explicitly be READY')
         items = page['items']
         if not items:
             break
@@ -25,9 +28,9 @@ def collect_candidates(client):
     return rows
 
 
-def select_candidates(rows, *, target=200, minimum_required=100):
-    if not 100 <= target <= 300:
-        raise ValueError('Research target must be 100..300 independent templates')
+def select_candidates(rows, *, target=20, minimum_required=1):
+    if not 1 <= target <= 300:
+        raise ValueError('Research target must be 1..300 independent templates')
     if not 1 <= minimum_required <= target:
         raise ValueError('minimum_required must be positive and <= target')
     groups, excluded, source_urls = {}, Counter(), {}
@@ -42,7 +45,7 @@ def select_candidates(rows, *, target=200, minimum_required=100):
         group = groups.setdefault(template_id, {'experiment_family_id': 'qg-' + digest(template_id)[:24],
             'template_id': template_id, 'concept_id': v['strategy_concept_id'], 'source_strategy_ids': [],
             'parameter_grid': [], 'source_urls': set(), 'variant_blockers': {}, 'eligible_variants': [],
-            'readiness_scores': {}})
+            'readiness_scores': {}, 'diversity_metadata': row.get('diversity_metadata', {})})
         vid = v['strategy_variant_id']
         source_urls[vid] = v['source_url']
         group['source_strategy_ids'].append(vid)
@@ -64,8 +67,10 @@ def select_candidates(rows, *, target=200, minimum_required=100):
         if row.get('data_available') is not True:
             blockers.append('DATA_AVAILABILITY_UNCONFIRMED')
         gate = row.get('candidate_gate')
-        if gate and (gate.get('eligible') is not True or gate.get('gate_version') != 'research-candidate-gate-v2'):
-            blockers.extend(gate.get('blockers') or ['UPSTREAM_GATE_BLOCKED'])
+        if not isinstance(gate, dict) or gate.get('gate_version') != SUPPORTED_GATE_VERSION:
+            blockers.append('UPSTREAM_CONTRACT_UNSUPPORTED')
+        elif gate.get('status') != 'ELIGIBLE' or gate.get('eligible') is not True:
+            blockers.extend(gate.get('blocking_reasons') or ['UPSTREAM_GATE_BLOCKED'])
         # Recompute readiness from observed admission facts. Never rank on an
         # untrusted API-provided score or return metric.
         score = 20 + 20 * int(source_verified)
@@ -92,12 +97,21 @@ def select_candidates(rows, *, target=200, minimum_required=100):
     # Greedy coverage: take a new concept before another template from an already
     # represented concept. Readiness and enumeration penalty break ties, IDs only
     # provide deterministic ordering at the final tie.
-    ordered, coverage = [], Counter()
+    ordered, coverage, diversity = [], Counter(), Counter()
+    def dimensions(c):
+        meta = c['diversity_metadata']
+        result = []
+        for key in ('strategy_family', 'factor_families', 'asset_class', 'market', 'frequency', 'source_type'):
+            value = meta.get(key)
+            if value:
+                result.extend((key, str(x)) for x in (value if isinstance(value, list) else [value]))
+        return result
     while ready:
-        chosen = min(ready, key=lambda c: (coverage[c['concept_id']], -c['candidate_quality_score'],
+        chosen = min(ready, key=lambda c: (coverage[c['concept_id']], sum(diversity[x] for x in dimensions(c)), -c['candidate_quality_score'],
                                           c['parameter_enumeration_penalty'], c['template_id']))
         ordered.append(chosen)
         coverage[chosen['concept_id']] += 1
+        diversity.update(dimensions(chosen))
         ready.remove(chosen)
     selected = []
     for group in ordered[:target]:
@@ -111,13 +125,13 @@ def select_candidates(rows, *, target=200, minimum_required=100):
                          'variant_blockers': {vid: [] for vid in sorted(eligible)},
                          'eligible_variants': sorted(eligible),
                          'planned_trial_count': len(admitted_grid)})
-    return {'schema_version': '2.0', 'input_records': len(rows), 'concepts': len({c['concept_id'] for c in candidates}),
+    return {'schema_version': '3.0', 'input_records': len(rows), 'concepts': len({c['concept_id'] for c in candidates}),
             'templates': len(candidates), 'target': target, 'selected_count': len(selected),
             'eligible_count': len(ordered), 'minimum_required': minimum_required,
             'minimum_shortfall': max(0, minimum_required - len(selected)),
             'target_shortfall': max(0, target - len(selected)), 'research_runs': 0,
             'selected_concepts': len({c['concept_id'] for c in selected}),
-            'selection_policy': 'concept_coverage_then_readiness_then_enumeration_penalty',
+            'selection_policy': 'concept_then_six_dimension_diversity_then_readiness_then_enumeration_penalty',
             'status': 'READY' if len(selected) >= minimum_required else 'INSUFFICIENT_EVIDENCE',
             'excluded': dict(excluded), 'candidates': candidates, 'selected': selected,
             'promotion_status': 'NOT_REQUESTED', 'source_snapshot_sha256': digest(rows)}

@@ -21,6 +21,7 @@ def candidate(variant='v1', template='t1', eligible=False):
             'source_verification': 'VERIFIED' if eligible else 'NOT_INDEPENDENTLY_VERIFIED',
             'rule_ast': {'type': 'threshold_switch'}}, 'definition_admitted': True,
             'research_allowed': eligible, 'research_rights_status': 'ALLOWED' if eligible else 'REVIEW_REQUIRED',
+            'candidate_gate': {'gate_version': 'research-candidate-gate-v4', 'eligible': eligible, 'status': 'ELIGIBLE' if eligible else 'REVIEW_REQUIRED'},
             'data_available': eligible,
             'execution_contract': {'timing': 'next_bar', 'costs': {'fee_bps': 10, 'slippage_bps': 2},
                                    'closed_bar_only': True, 'indicator_semantics': 'fixture-exact-definition',
@@ -42,7 +43,7 @@ def test_ready_candidates_require_all_independent_gates():
     report = select_candidates(rows, target=100)
     assert report['selected_count'] == 100 and report['templates'] == 120
     rows[0]['research_allowed'] = False
-    assert select_candidates(rows)['selected_count'] == 119
+    assert select_candidates(rows, target=200)['selected_count'] == 119
 
 
 def test_selected_template_excludes_unapproved_parameter_siblings():
@@ -104,3 +105,44 @@ def test_paper_artifact_roundtrip_and_live_refusal(tmp_path):
         bad[key] = replacement
         with pytest.raises(Exception):
             validate_artifact(bad)
+
+
+@pytest.mark.parametrize('status', [None, 'STALE', 'FAILED'])
+def test_projection_contract_requires_explicit_ready(status):
+    from strategy_lab.knowledge.candidates import collect_candidates
+    class Client:
+        def export_research_candidates(self, **kwargs):
+            page = {'scope': 'TRIAGE_ONLY', 'items': []}
+            if status is not None:
+                page['projection_status'] = status
+            return page
+    with pytest.raises(ValueError, match='UPSTREAM_CONTRACT_UNSUPPORTED'):
+        collect_candidates(Client())
+
+
+@pytest.mark.parametrize('gate', [None, {}, {'gate_version': 'unknown', 'eligible': True}])
+def test_missing_or_unknown_gate_cannot_enter_research(gate):
+    row = candidate(eligible=True)
+    if gate is None:
+        del row['candidate_gate']
+    else:
+        row['candidate_gate'] = gate
+    report = select_candidates([row])
+    assert report['selected_count'] == 0
+    assert 'UPSTREAM_CONTRACT_UNSUPPORTED' in report['candidates'][0]['variant_blockers']['v1']
+
+
+@pytest.mark.parametrize('status', [None, 'REVIEW_REQUIRED', 'CONDITIONALLY_ELIGIBLE', 'BLOCKED'])
+def test_only_explicit_v3_eligible_status_passes(status):
+    row=candidate(eligible=True)
+    row['candidate_gate']['status']=status
+    assert select_candidates([row],target=20,minimum_required=1)['selected_count']==0
+
+
+def test_twenty_template_target_and_diverse_families():
+    rows=[candidate('v'+str(i),'t'+str(i),True) for i in range(3)]
+    rows[0]['diversity_metadata']={'asset_class':['crypto'],'frequency':'1d'}
+    rows[1]['diversity_metadata']={'asset_class':['crypto'],'frequency':'1d'}
+    rows[2]['diversity_metadata']={'asset_class':['equity'],'frequency':'1h'}
+    report=select_candidates(rows,target=2,minimum_required=1)
+    assert [c['template_id'] for c in report['selected']]==['t0','t2']
