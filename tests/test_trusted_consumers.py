@@ -157,3 +157,46 @@ def test_new_bundle_startup_consumer_still_requires_registration(tmp_path: Path)
     )
     errors = check_trusted_consumers.discover_unregistered_binance_ohlcv_scripts(tmp_path)
     assert any("load_bundle.py" in error and "not registered" in error for error in errors)
+
+
+def test_explicit_module_entrypoint_requires_a_module_call(tmp_path: Path) -> None:
+    path = tmp_path / "consumer.py"
+    spec = check_trusted_consumers.ConsumerSpec(
+        "consumer.py", ("<module>",), ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    )
+    path.write_text("inputs = require_research_startup(request, project_root=root)\n")
+    assert check_trusted_consumers.scan_consumer(tmp_path, spec) == []
+
+    # Imports, a bare reference and an uncalled helper must not satisfy the
+    # new explicit module route. This leaves existing function scans unchanged.
+    for source in (
+        "from reader import require_research_startup\n",
+        "loader = require_research_startup\n",
+        "def unused():\n    return require_research_startup(request)\n",
+    ):
+        path.write_text(source)
+        errors = check_trusted_consumers.scan_consumer(tmp_path, spec)
+        assert any("do not call require_research_startup()" in error for error in errors)
+
+
+def test_tpsa_account_consumers_are_classified_without_frozen_exceptions() -> None:
+    prefix = "research/asset-portfolios/1d-tpsa-long-account/scripts/"
+    specs = [
+        spec for spec in (
+            *check_trusted_consumers.ACTIVE_TRUSTED_CONSUMERS,
+            *check_trusted_consumers.BINANCE_CATALOG_CONSUMERS,
+        ) if spec.path.startswith(prefix)
+    ]
+    assert {Path(spec.path).name for spec in specs} == {"load_prices.py", "account_acceptance.py"}
+    for spec in specs:
+        assert spec.required_calls
+        assert check_trusted_consumers.scan_consumer(REPOSITORY_ROOT, spec) == []
+    errors = (
+        check_trusted_consumers.validate_auxiliary_classifications(REPOSITORY_ROOT)
+        + check_trusted_consumers.discover_unregistered_binance_ohlcv_scripts(REPOSITORY_ROOT)
+        + check_trusted_consumers.discover_unfrozen_direct_lake_scripts(REPOSITORY_ROOT)
+    )
+    assert not [error for error in errors if prefix in error]
+    assert not any(path.startswith(prefix) for path in check_trusted_consumers.FROZEN_LEGACY_OHLCV_GLOBS)
+    assert not any(path.startswith(prefix) for path in check_trusted_consumers.load_frozen_research_scripts(REPOSITORY_ROOT))

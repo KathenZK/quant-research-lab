@@ -1,0 +1,85 @@
+import json,hashlib,os,importlib.metadata
+from pathlib import Path
+import pandas as pd
+F=Path(__file__).resolve().parents[1];A=F/'artifacts'
+def read(n):return json.loads((A/n).read_text())
+metrics=read('variant_metrics.json');main=metrics[0];mod=read('model_audit.json');hybrid=read('hybrid_price_event_audit.json');fund=read('funding_calendar_audit.json');start=read('price_startup_report.json');bars=pd.read_parquet(A/'verified_price_frames.parquet');tr=pd.read_csv(A/'ML_p040/trades.csv');tr['return']=tr.price_fee_pnl/tr.entry_notional
+blockers=['No reviewed historical identity evidence; net startup rejects.','599 full requested windows: zero covered by one proven funding-calendar segment; main 224 trades: only one calendar-covered.','Actual funding-event mark prices absent; actual funding cash amounts stay null.','Daily close and next-open share time boundary; actual post-decision quote/delay not validated.','Continuous quantity and assumed minimum notional; historical market-lot steps/minimum filters and user account permissions unverified.','Frozen old TPSA feature surface mixed with V3 execution prices; whole-pool same-source feature migration not proved.','USD/USDT=1 and cash interest=0 are assumptions, not verified account economics.']
+summary={'reproduction_audit':{k:v for k,v in read('one_click_reproduction_audit.json').items() if k!='checks'} if (A/'one_click_reproduction_audit.json').exists() else None,'family':'Binance-1D-TPSA-Long-Account','alias':'BIN-1D-TPSA-LA','version':'R0','status':'registered / not promoted / not live-ready','result_label':'HARD-GATE-FAILED / diagnostic-only','economic_decision':'NO-GO for this first-round account candidate','net_result':'NET_DATA_EXECUTION_BLOCKED; no verified net return published','initial_capital_usd':10000,'coverage':{'account_start':'2025-01-01T00:00:00Z','account_end':'2026-07-01T00:00:00Z','price_request_end_exclusive':'2026-07-02T00:00:00Z','price_rows':len(bars),'eligible_price_rows':int(bars.eligible.sum()),'symbols':int(bars.symbol.nunique()),'test_events':mod['test_count'],'train_events':mod['train_count'],'train_label_end_max':mod['train_max_label_end'],'original_source_reconstruction_symbols':['BTC/USDT:USDT','ETH/USDT:USDT','DOGS/USDT:USDT'],'original_source_reconstructed_events':574},'exposure':'ITERATIVE_REUSED_DIAGNOSTIC_2025_PLUS; all training history previously used development; no blind OOS','metrics_semantics':'Every variant is its own USD 10000 account. Equity includes prices/slippage/fees, excludes unknown actual funding; named annual carry variants add assumed burdens only. Not verified net returns.','primary':main,'variants':metrics,'blockers':blockers,'model_object':'Newly saved R0 model + imputer; not an exact missing original final object, not deployable raw-to-order pipeline','source_audits':{'old_2025_prediction_count':14457,'old_2025_probability_maxdiff':0,'new_model_reload_maxdiff':0,'three_symbol_feature_label_maxdiff':0,**hybrid},'candidate_forward_plan':'No candidate approved for forward initiation. Preserve diagnostics; do not optimize old history. Any resumed executable candidate requires a new predeclared same-source pipeline, identity/funding/filter/quote validation and fresh unseen start. 30–60 days could only validate operations.','artifacts':{'report':str(F/'diagnostics/r0-results-2026-09-08.md'),'reproduce':str(F/'scripts/run_all.py'),'config':str(F/'specs/frozen-config.json'),'orders':str(A/'ML_p040/orders.csv'),'positions':str(A/'ML_p040/positions.csv'),'equity':str(A/'ML_p040/account_equity.csv'),'trades':str(A/'ML_p040/trades.csv'),'model':str(A/'new_frozen_model.joblib'),'preprocessor':str(A/'preprocessing.json'),'paths':str(A/'trade_paths.html'),'chart':str(A/'equity_drawdown.png'),'manifest':str(A/'artifact_manifest.json')}}
+(A/'summary.json').write_text(json.dumps(summary,indent=2,default=str))
+table='\n'.join(f"| {m['variant']} | {'完整' if m['account_complete'] else '缺数停止，非全窗'} | {m['final_equity_ex_actual_funding']:,.2f} | {m['return_ex_actual_funding']:.2%} | {abs(m['max_drawdown_ex_actual_funding']):.2%} | {m['closed_trades']} |" for m in metrics)
+labeltable='\n'.join(f"| {m['year']} | {m['events']:,} | {m['auc']:.4f} | {m['base_label_success']:.2%} | {m['selected_count']:,} | {m['selected_label_success']:.2%} |" for m in mod['year_metrics'])
+report=f'''# Binance-1D-TPSA-Long-Account R0 首轮结果
+
+本轮账户候选 **NO-GO**。固定主模型和账户规则在复用历史的条件账本中，10,000美元降至 **2,108.53美元（-78.91%）**，最大回撤 **79.45%**，且弱于无筛选与事件哈希基线。这超过用户20%–30%回撤容忍范围，也没有表现出该筛选转换为账户后的增量价值。本结论针对R0账户契约，不将原TPSA的总事件条件排序一并否定。
+
+主状态保持 `registered / not promoted / not live-ready`，结果标签 `HARD-GATE-FAILED / diagnostic-only`；“NO-GO”是本轮经济候选决策，不是runner状态。**下述曲线全部排除未知真实funding，并使用旧特征+V3开盘代理；不是已验证净收益。** 净输入与实际执行存在另外可定位的阻塞，不启动R0前瞻。
+
+## 冻结范围与可重复对象
+
+[契约](../specs/r0-contract.md)与[机器配置](../specs/frozen-config.json)在读取相应结果前固定。原冻结P0R事件是历史复现输入，新执行价格通过 `require_research_startup` 消费返回帧，没有缓存回退。2025+全部为 `ITERATIVE_REUSED_DIAGNOSTIC_2025_PLUS`，2025以前为复用开发。没有新的盲OOS。
+
+新价格请求599标的，2025-01-01至2026-07-02 UTC开盘网格，得到276,816根日bar，其中257,228根eligible。新输入组合固定 `binance.v3.research_inputs.v2`；价格诊断通过不代表净输入/PIT/可交易性通过。[价格启动报告](../artifacts/price_startup_report.json)
+
+保留旧MA7-long 24,141个测试事件，其中1,136个没有完整未来标签，仍保留账户决策资格，避免按未来标签完整性挑存续标的。训练24,499个标签末端严格早于2025-01-01的事件，最晚标签结束2024-12-31。原28特征中1,431个缺值仅用训练中位数填补；没有无限值、重复事件ID或训练/测试事件交叉。全旧MA7-long样本中45,796个事件与同币下一事件的20日标签窗重叠，不能当独立试验；账户同币最多持一笔。[模型审计](../artifacts/model_audit.json)
+
+保存新模型、原生booster文本、median统计/特征顺序、环境及预测日志。重载新对象对24,141事件预测最大差为0。对原P1 **2025折**的14,457条MA7-long概率最大差也为0；这只核对该折，**不把新训练保存的对象冒充缺失的原最终模型**。2026使用固定2025前对象，不重训挑选。[模型对象](../artifacts/new_frozen_model.joblib) · [预处理](../artifacts/preprocessing.json)
+
+## 信号排序与账户是两层问题
+
+| 复用年份 | 有完整标签事件 | AUC | 全事件成功率 | p≥0.40事件数 | p≥0.40成功率 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+{labeltable}
+
+总事件排序仍存在；没有强加“必须同日选币成功”。主阈值事前固定0.40，不用完整测试期qcut；哈希只分配容量，完全不看结果。旧标签从信号close计算+2/-1 ATR的首次日close到达，账户从带滑点的入场价计算、下一open代理退出，二者本来就不能等同于净交易盈亏。
+
+## 条件账户与预定压力
+
+每个变体独立投入10,000美元，不将多条曲线叠加为同一资金。单币单仓、最多4笔、目标每笔20%上一已知权益、总开仓名义不超过80%，全额预留名义抵押；信号日close确定数量，禁止用下一日收益重新定量。主手续费单边10bps、滑点单边4bps；现金收益0、USD/USDT=1。退出为实际入场价±ATR障碍的日close触发或20次close，下一open代理成交。[完整账户](../artifacts/ML_p040/account_equity.csv) · [订单](../artifacts/ML_p040/orders.csv) · [逐日持仓](../artifacts/ML_p040/positions.csv) · [交易](../artifacts/ML_p040/trades.csv)
+
+| 变体 | 窗口状态 | 终值USD | 条件收益 | 条件最大回撤 | 已平仓 |
+| --- | --- | ---: | ---: | ---: | ---: |
+{table}
+
+`ML_p045` 在2026-01-22持有ZRC而价格无效/缺失时停止；保留137笔已平仓及未平仓状态，不能与完整546天结果直接排名，没有填零续接。其余9种完成主窗。[缺数停止证据](../artifacts/ML_p045/blocker.json)
+
+年度切片主条件账户2025约-64.72%，2026至07-01约-40.24%。主224笔价格手续费胜率26.34%，平均每笔美元损益-35.23，总手续费436.54美元，累计成交名义为初始资本43.65倍，平均名义敞口约60.43%。否决依据是完整账户风险、相对基准、压力及输入/执行边界，不是单独因为年亏损、低胜率或负中位数。前5笔盈利合计2,297.34美元，仍不抵整体亏损；没有删除行情集中贡献。
+
+157笔SL_CLOSE平均价格手续费回报约-11.45%，47笔TP_CLOSE平均约+22.26%；日收盘障碍不是保证止损价。IOTX 2025-10-03入场至10-11退出一笔亏565.65美元（该笔名义的45.26%），说明在跳跌和收盘退出规则下，-1ATR标签不能充当账户固定亏损上限。没有增补止损参数救曲线。
+
+![条件权益与回撤](../artifacts/equity_drawdown.png)
+
+[交互交易路径](../artifacts/trade_paths.html)保留主账户224笔唯一事件、持有标的完整V3窗口、K线/MA7、权益、开平点和连线，并支持缩放平移与表格定位。[载荷核验](../artifacts/trade_path_validation.json)
+
+## 数据与执行阻塞的精确位置
+
+1. **历史身份**：完整599符号中592个被组合观测分类为COIN，其余AERGO、ALL、BDXN、BTCDOM、DEFI、EOS、SXP单列。COIN观测分类仍不是PIT。净启动实际拒绝 `net research requires reviewed identity evidence`，没有伪造任意证据字符串。[净启动拒绝](../artifacts/net_startup_blocker.json)
+2. **funding**：通过固定manifest的官方仓库读取器加载并验证已发布资金费快照；599个整个请求窗没有一个被单一已证明日历段覆盖。即便细看实际持仓窗，主224笔只有1笔、无筛选206笔为0、哈希201笔为1具备日历段覆盖；它们仍缺身份复核及结算事件mark价。所有真实funding现金字段为null；10%/30%年化负担只是显式压力，不是实际费率。[资金日历范围](../artifacts/funding_calendar_audit.json) · [逐交易覆盖](../artifacts/funding_calendar_trade_scope.csv)
+3. **闭合成交时点**：24/7日收盘和次日00:00开盘为同一边界。445个主订单的决策与打印边界相同，不能证明完成信号计算后仍能以该价成交。主结果是理想open价格代理；+1日只延迟入场，退出边界仍未核准。更细时间报价/延迟和实际成交模型未验证。
+4. **混合输入**：24,141个旧事件close与V3同日close全部相等，但严格MA7可算时COS 2025-03-14与1000WHY 2025-04-04两个上穿不一致；266事件缺MA热身，1,750事件在请求片段内缺pre60核验。没有因此丢掉它们改善结果。旧特征与新执行面仍属混合诊断。[逐事件核对](../artifacts/hybrid_price_event_audit.parquet)
+5. **订单最小量与估值**：使用连续数量及5/100美元名义下限敏感性，不能声称历史步进合格；实际市场单还需MARKET_LOT_SIZE与MIN_NOTIONAL约束，市价最小名义计算与mark价有关。仓位预留是条件现金记账，真实维持保证金、标记价、特定费率/权限和USDT风险未核准。[Binance官方公开API参数](https://developers.binance.com/zh-CN/docs/products/derivatives-trading-usds-futures/common-definition)
+
+## 独立验收和保存边界
+
+三符号BTC/ETH/DOGS从原cache的5,567根bar重建574个MA7-long事件，28特征最大差0、标签零差异；另把三事件的20个未来close、上下障碍和首次到达逐项保存手算。这验证该样本的原历史逻辑，没有声称全池同源前瞻链完成。[源特征/标签核对](../artifacts/original_feature_label_audit.json)
+
+人工可算账户例：信号100、预算2000得20单位，101开盘加4bps入场，110开盘减4bps退出，双边10bps费用合计4.219928，期末应为10,174.092072美元；实际引擎完全相等。正funding对long为借记、负funding为贷记，另有0.21美元代数例，未用于伪造实际事件。[手算账](../artifacts/manual_account_check.json)
+
+根代理独立复算10变体交易/现金/抵押/权益，主账最大绝对误差约5.66e-10美元；TURBO首笔、HEI最大赚和IOTX最大亏用V3原始open×滑点×数量再减费用吻合。这验证计算，不消除上述经济与执行缺口。[独立验收](../../../platform/small-account-three-line-validation/artifacts/independent-b-ledger-audit.json)
+
+一键入口已经在新空目录 `/private/tmp/tpsa-la-r0-independent-reproduction` 实际从SHA校验、startup、源/模型到10个账户、资金覆盖、手算、HTML/SVG全链重跑；95个与保留产物对应的文件逐字节SHA一致。[全链重放验收](../artifacts/one_click_reproduction_audit.json)
+
+[一键复现入口](../scripts/run_all.py)必须给新空输出目录；[源清单](../artifacts/source_manifest.json)保留原绝对路径、内容SHA、mtime/日期，[完整产物清单](../artifacts/artifact_manifest.json)绑定配置、脚本、模型和账本。原仓库/共享湖只读，不改写其他研究或旧冻结对象。
+
+## 本线下一步
+
+本轮不启动R0候选前瞻，不再扫阈值、加模型容量或缩仓救已揭示曲线。保存的新对象足以复现本诊断，**不是完整可部署前瞻对象**。若将来出现新的、独立于这轮表现的经济机制或退出方案，须新契约、同源bar→特征→概率→订单流程、身份/funding/交易步进/真实延迟通过后再锁新未读起点。30–60天只能检运行，不能宣布月频或弱事件alpha已被证明。
+'''
+(F/'diagnostics/r0-results-2026-09-08.md').write_text(report)
+(A/'environment_full.json').write_text(json.dumps(sorted([{'name':d.metadata['Name'],'version':d.version} for d in importlib.metadata.distributions()],key=lambda d:d['name'].lower()),indent=2))
+manifest=[]
+for path in sorted(F.rglob('*')):
+ if path.is_file() and path.name!='artifact_manifest.json' and '__pycache__' not in path.parts:
+  manifest.append({'path':str(path.relative_to(F)),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
+(A/'artifact_manifest.json').write_text(json.dumps({'family':summary['family'],'version':'R0','files':manifest},indent=2))
+print('Report, summary and manifest saved')

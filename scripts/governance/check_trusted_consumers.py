@@ -33,6 +33,11 @@ class AuxiliaryClassification:
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/account_acceptance.py",
+        ("<module>",), ("load_funding_v2",), "funding-input-reader",
+    ),
+
+    ConsumerSpec(
         "research/asset-portfolios/multi-legacy-post-registration-audit/scripts/prepare_iteration_inputs.py",
         ("load_prices",), ("require_research_startup",),
         "iteration-comparison-current-startup-returned-prices-with-prior-value-parity",
@@ -321,6 +326,13 @@ ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 BINANCE_CATALOG_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/load_prices.py",
+        ("<module>",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+
+    ConsumerSpec(
         "research/platform/cross-sectional-alpha-pipeline/scripts/audit_data_capabilities_20260925.py",
         ("main",),
         ("require_research_startup", "load_funding_v2"),
@@ -431,6 +443,43 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/platform/small-account-three-line-validation/scripts/audit_b_ledgers.py",
+        "audit",
+        "frozen-artifact-consumer",
+        "Independently reconstructs the new TPSA account exports and reads its retained startup-returned price snapshot; no source lake reads or strategy engine imports.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/audit_source_execution.py",
+        "<module>",
+        "raw-ohlcv-parity-audit",
+        "Read-only reconstruction of three symbols from the original TPSA cache and comparison with this family's startup-returned frames; not a new trusted OHLCV route.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/model_and_source_audit.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Verifies the original TPSA event hash, fits a new diagnostic object and compares retained original-fold predictions; no lake OHLCV reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/run_account.py",
+        "load_inputs",
+        "frozen-artifact-consumer",
+        "Consumes this family's startup-returned price snapshot and diagnostic predictions in the full replay chain; actual funding remains unknown, not verified net returns.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/render_trade_paths.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Renders retained same-family startup prices, trades and account equity; no source lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/summarize_results.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Summarizes this family's retained diagnostic results and startup snapshot without reading the source lake.",
+    ),
+
     AuxiliaryClassification(
         "research/platform/cross-sectional-alpha-pipeline/scripts/replay_candidate_bundle.py",
         "main", "self-contained-frozen-candidate-restore",
@@ -1469,8 +1518,13 @@ def scan_consumer(root: Path, spec: ConsumerSpec) -> list[str]:
         )
         if reference is not None
     }
+    required_references = (
+        {_call_name(call).rsplit(".", 1)[-1] for call in calls}
+        if spec.entrypoints == ("<module>",)
+        else references
+    )
     for required in spec.required_calls:
-        if required not in references:
+        if required not in required_references:
             errors.append(
                 f"{spec.path}: governed entry points do not call {required}()"
             )
@@ -1528,7 +1582,7 @@ def validate_auxiliary_classifications(root: Path) -> list[str]:
             errors.append(f"{item.path}: missing classified auxiliary consumer")
             continue
         tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
-        if item.symbol not in _top_level_functions(tree):
+        if item.symbol != "<module>" and item.symbol not in _top_level_functions(tree):
             errors.append(
                 f"{item.path}: missing classified symbol {item.symbol}()"
             )

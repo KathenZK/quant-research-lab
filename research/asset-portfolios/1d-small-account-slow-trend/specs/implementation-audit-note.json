@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-09-08T13:36:21.489571+00:00",
+  "scope": "post-first-run implementation/account metadata audit, no rule selection",
+  "changes": [
+    "Exclude US federal bank holidays as well as NYSE non-sessions when counting settlement; intersection is conservative when bank/exchange calendars diverge.",
+    "BUY settlement_date corrected to actual T+n; cash_debit_date separately records funds immediately reserved at trade date."
+  ],
+  "historical_impact": "Independent comparison found zero affected SELL settlement dates across 12 variants. No account value changes expected.",
+  "source": "https://www.finra.org/sites/default/files/2022-11/Information-Notice-111822.pdf",
+  "new_optimization": false
+}

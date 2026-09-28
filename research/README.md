@@ -96,12 +96,17 @@
 
 入口：[asset-portfolios/README.md](asset-portfolios/README.md)。跨资产研究不是 HYPE 策略家族，除非文档明确把它提升为某个 HYPE family variant。
 
+10,000 美元账户三方向首轮研究与独立验收见[横向比较](platform/small-account-three-line-validation/README.md)；各线仍以自身主账和产物为准。
+
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
 | `Binance-1D-MA7-Cross-ATR-Generalization`（`BIN-1D-MA7-CAR-GEN`） | [asset-portfolios/1d-ma7-cross-atr-generalization/](asset-portfolios/1d-ma7-cross-atr-generalization/README.md) · [主账](asset-portfolios/1d-ma7-cross-atr-generalization/bin-1d-ma7-car-gen-core-ledger.md)；高低价未刷新收紧的全市场适配与穿越后斜率达标入场 | 每边手续费0.1%/滑点0.04%；原V3机会账116,933穿越、676币975段，新增两臂1,950账户；完整242币原V3/候选/空单保护盈利62/36/59，收益中位−29.26%/−56.60%/−33.04%；两改动不升级，完整牛熊及资金费未验证，正式V1/V2/V3不变 |
 | `Binance-1D-Medium-Term-Trend-Capture`（`BIN-1D-MTTC`） | [asset-portfolios/1d-medium-term-trend-capture/](asset-portfolios/1d-medium-term-trend-capture/README.md) · [主账](asset-portfolios/1d-medium-term-trend-capture/binance-1d-mttc-core-ledger.md)；共同趋势机会的入场、持有与资金账户比较 | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-1D-Medium-Term-Continuation-State`（`BIN-1D-MTCS`） | [asset-portfolios/1d-medium-term-continuation-state/](asset-portfolios/1d-medium-term-continuation-state/README.md) · [主账](asset-portfolios/1d-medium-term-continuation-state/binance-1d-mtcs-core-ledger.md)；事前方向与状态识别中期延续 | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-1D-Trend-Strength-Pullback-Restart`（`BIN-1D-TSPR`） | [asset-portfolios/1d-trend-strength-pullback-restart/](asset-portfolios/1d-trend-strength-pullback-restart/README.md) · [主账](asset-portfolios/1d-trend-strength-pullback-restart/binance-1d-tspr-core-ledger.md)；事前趋势强度与顺序回撤重启的增量识别 | explore / diagnostic-only / not promoted / not live-ready |
+| `Multi-Asset-1D-Small-Account-Slow-Trend`（`XA-1D-SAST`） | [asset-portfolios/1d-small-account-slow-trend/](asset-portfolios/1d-small-account-slow-trend/README.md) · [主账](asset-portfolios/1d-small-account-slow-trend/xa-1d-sast-core-ledger.md)；7ETF 月频多头/现金，首轮趋势增量 NO-GO | explore / diagnostic-only / not promoted / not live-ready |
+| `Binance-1D-TPSA-Long-Account`（`BIN-1D-TPSA-LA`） | [asset-portfolios/1d-tpsa-long-account/](asset-portfolios/1d-tpsa-long-account/README.md) · [主账](asset-portfolios/1d-tpsa-long-account/binance-1d-tpsa-la-core-ledger.md)；TPSA 多头事件账户化 | registered / diagnostic-only / HARD-GATE-FAILED / not promoted / not live-ready |
+| `BTCETH-8H-Small-Account-Cash-And-Carry`（`BTCETH-8H-SACC`） | [asset-portfolios/8h-btceth-small-account-carry/](asset-portfolios/8h-btceth-small-account-carry/README.md) · [主账](asset-portfolios/8h-btceth-small-account-carry/btceth-8h-sacc-core-ledger.md)；现货与到期/永续 carry，未证实可执行净利润 | explore / diagnostic-only / not promoted / not live-ready |
 | `MA7-Bidirectional-Trend-Generalization`（`MA7-BTG`） | [asset-portfolios/1d-ma7-bidirectional-trend-generalization/](asset-portfolios/1d-ma7-bidirectional-trend-generalization/README.md) · [主账](asset-portfolios/1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | explore / not promoted / not live-ready |
 | `MA7-ATR14-Long-Fixed-Parameter-Transfer` | [asset-portfolios/1d-ma7-atr14-long-transfer/](asset-portfolios/1d-ma7-atr14-long-transfer/README.md) | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`） | [asset-portfolios/multi-timeframe-dual-state-trend-campaign/](asset-portfolios/multi-timeframe-dual-state-trend-campaign/README.md) · [主账](asset-portfolios/multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md) · [最终报告](asset-portfolios/multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md) | goal-complete / HARD-GATE-FAILED / explore / not promoted / not live-ready |
@@ -171,6 +176,8 @@
 ## 研究平台
 
 入口：[platform/README.md](platform/README.md)。平台审计不承载策略绩效。
+
+- [10,000 美元账户三方向首轮验证](platform/small-account-three-line-validation/README.md)：跨家族诊断比较与独立验收；结果权威仍在各家族，不建立合成策略身份。
 
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
