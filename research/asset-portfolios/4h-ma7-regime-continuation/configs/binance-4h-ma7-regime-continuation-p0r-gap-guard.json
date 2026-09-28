@@ -1,0 +1,184 @@
+{
+  "family": "Binance-4H-MA7-Regime-Continuation",
+  "alias": "BIN-4H-MA7-RC",
+  "study_id": "BIN-4H-MA7-RC-P0R-GAP-GUARD",
+  "contract_revision": "P0R-GAP-GUARD-pre-inventory-continuity-and-denominator",
+  "frozen_at_utc": "2026-09-03T11:15:00Z",
+  "parent_observation": {
+    "study_id": "BIN-4H-MA7-RC-P0R-DATA",
+    "contract_revision": "P0R-DATA-pre-outcome-derived-15m-ohlcv",
+    "config_sha256": "4b4ceadcffea866a2783f4acfc06ecc445c4ad533c130a8ce94447bad5b55ff5",
+    "manifest_sha256": "651bd88b5e349091c36b0de74b2a480b3f44383c22a1f58e11177e33dc9155ae",
+    "role": "frozen data-entry replacement; mechanism/PIT/cost/first-hit/PASS inherited from P0; full-market results not written"
+  },
+  "purpose": "在不改 MA/ATR/入场/退出/持有期/币池/成本的前提下，冻结行情缺口处理规则，并只做连续性检查、有效性标记、分母修正与缺口影响盘点。不是调参，不是 V1，不覆盖 P0 或 P0R-DATA 产物。",
+  "identity_boundaries": {
+    "same_family_implementation_fix": true,
+    "not_a_new_strategy_family": true,
+    "not_a_strategy_version": true,
+    "do_not_overwrite_p0_or_p0r_data_artifacts": true,
+    "no_parameter_search": true,
+    "no_ml": true,
+    "no_runner_or_live_spec": true,
+    "no_download_or_backfill": true,
+    "no_raw_normalized_or_published_derived_mutation": true
+  },
+  "data": {
+    "exchange": "binance",
+    "market_type": "perp",
+    "quote_asset": "USDT",
+    "calendar": "24/7 UTC",
+    "native_4h_dataset_id": "binance.perp.ohlcv.4h.from_15m.v1",
+    "path_1h_dataset_id": "binance.perp.ohlcv.1h.from_15m.v1",
+    "forbidden_dataset_ids": [
+      "binance.perp.ohlcv.1h.normalized.legacy"
+    ],
+    "requested_scope": "FULL_MARKET",
+    "loader": "strategy_lab.data.catalog.load_trusted_dataset",
+    "audit_as_of_utc": "2026-09-03T11:15:00Z",
+    "cutoff_exclusive_utc": "2026-08-24T08:00:00Z",
+    "last_allowed_closed_1h_open_utc": "2026-08-24T07:00:00Z",
+    "last_allowed_complete_4h_open_utc": "2026-08-24T04:00:00Z",
+    "dataset_manifest": "research/asset-portfolios/4h-ma7-regime-continuation/artifacts/binance_4h_ma7_rc_p0r_gap_guard_dataset_manifest_2026-09-03.json",
+    "dataset_manifest_sha256": "2af83bfaee7632ba3b77e4c4e08d104e492620d62c86b3515d586537e4c3a823",
+    "closed_bars_only": true,
+    "no_catalog_scope_downgrade": true
+  },
+  "timestamp_semantics": {
+    "ts": "bar open time, UTC",
+    "signal_bar_open_ts": "column ts of the 4h bar whose close confirms the strict cross",
+    "signal_ts": "signal_bar_open_ts + 4h = close of signal bar t",
+    "entry_ts": "open of next 4h bar t+1; equal in clock time to signal_ts",
+    "entry_price": "real open[entry_ts]",
+    "fixed_horizon_exit_ts": "entry_ts + horizon * 4h = open of the exit 4h bar",
+    "first_hit_1h_window": "closed interval on 1h opens: [entry_ts, entry_ts + 30*4h)",
+    "mfe_mae_1h_window_h": "closed interval on 1h opens: [entry_ts, entry_ts + H*4h)",
+    "gross_4h_window_h": "inclusive 4h opens: entry_ts + k*4h for k=0..H (H+1 bars)",
+    "recross_4h_window": "4h opens after the signal bar: signal_bar_open_ts + k*4h for k=1..30"
+  },
+  "gap_guard": {
+    "preserve_add_indicators_segment_reset": true,
+    "no_interpolation": true,
+    "no_forward_fill": true,
+    "no_backfill_from_future_bars": true,
+    "signal_validity_independent_of_future_gaps": true,
+    "fourh_adjacent_step": "4h",
+    "hourly_adjacent_step": "1h",
+    "bad_input_rejected_not_treated_as_gap": [
+      "duplicate symbol-phase-ts",
+      "non-monotonic timestamps after sort",
+      "timestamp not on the timeframe grid",
+      "interval not an integer multiple of the timeframe step"
+    ],
+    "internal_gap_definition": "at least one required expected timestamp is missing and a later bar of the same symbol/phase/grid exists",
+    "right_censor_definition": "required window extends past the last available bar of that grid or past the frozen cutoff; no later bar exists",
+    "entry_rule": "next 4h open must exist at exactly ts+4h in the same contiguous 4h segment; missing entry does not roll forward to a later bar",
+    "indicator_reset": "after a 4h gap, SMA5/7/10/42, TR, ATR20, ATR_scale and lagged ATR must re-warm on the new segment; do not compute across the gap",
+    "nan_ma_is_not_no_recross": true,
+    "recross_after_gap_is_not_pre_gap_trend_end": true,
+    "main_stats_require_complete_window_per_metric": true,
+    "incomplete_observed_length_not_used_as_complete_duration_mean": true,
+    "endpoint_only_return_is_diagnostic_only": true,
+    "funding_missing_separate_from_price_gap": true,
+    "do_not_impute_incomplete_as_zero_failure_neither_or_max_duration": true,
+    "per_metric_validity": true,
+    "short_horizon_can_be_valid_when_long_horizon_is_not": true,
+    "controls_use_identical_gap_rules": true,
+    "exclusive_primary_reason_priority": [
+      "entry_bar_missing",
+      "indicator_warmup_insufficient",
+      "internal_gap",
+      "path_1h_missing",
+      "right_censor_cutoff",
+      "indicator_undefined",
+      "funding_missing",
+      "complete"
+    ],
+    "multi_label_flags": [
+      "has_internal_gap",
+      "has_right_censor",
+      "has_path_1h_missing",
+      "has_funding_missing",
+      "has_warmup_insufficient",
+      "has_indicator_undefined",
+      "has_entry_bar_missing"
+    ]
+  },
+  "metrics": {
+    "first_hit": {
+      "required_grid": "1h",
+      "required_bars": 120,
+      "start": "entry_ts",
+      "end_exclusive": "entry_ts + 120h",
+      "valid_if": "exactly 120 consecutive 1h bars from entry_ts",
+      "incomplete_label": "incomplete_future",
+      "exclude_incomplete_from_success_denominator": true
+    },
+    "mfe_mae": {
+      "required_grid": "1h",
+      "required_bars_for_horizon_h": "4*H",
+      "start": "entry_ts",
+      "end_exclusive": "entry_ts + H*4h",
+      "valid_if": "exactly 4*H consecutive 1h bars from entry_ts"
+    },
+    "gross_return": {
+      "required_grid": "4h",
+      "required_bars_for_horizon_h": "H+1",
+      "start": "entry_ts",
+      "end_inclusive": "entry_ts + H*4h",
+      "main_valid_if": "all H+1 4h opens present on a contiguous 4h grid",
+      "endpoints_only_diagnostic_if": "entry and exit opens exist but at least one intermediate 4h open is missing"
+    },
+    "net_return": {
+      "requires": ["gross_return complete 4h window", "funding complete on (entry_ts, exit_ts]"],
+      "funding_missing_does_not_fill_zero": true
+    },
+    "ma7_recross_and_same_side_survival": {
+      "required_grid": "4h",
+      "max_future_bars": 30,
+      "start_after_signal_bar": "signal_bar_open_ts + 4h",
+      "complete_if": "recross observed on a contiguous 4h path, or 30 contiguous 4h bars with finite SMA7 and no recross",
+      "interrupt_if": "missing expected 4h bar, or SMA7/close is NaN before recross or 30-bar completion",
+      "main_values_nan_if_interrupted": true,
+      "diagnostic_fields": [
+        "observed_same_side_bars_before_interrupt",
+        "recross_observed_before_interrupt",
+        "recross_after_gap_bars"
+      ]
+    }
+  },
+  "inventory": {
+    "run_full_pnl_research": false,
+    "run_bootstrap": false,
+    "run_significance": false,
+    "count_candidates_continuity_and_window_availability_only": true,
+    "dimensions": ["metric_or_horizon", "direction", "symbol", "calendar_year", "phase_hour"],
+    "groups": ["events", "same_side_non_cross_controls"],
+    "required_counts": [
+      "candidates",
+      "valid",
+      "internal_gap",
+      "right_censor_cutoff",
+      "indicator_warmup_insufficient",
+      "path_1h_missing",
+      "funding_missing",
+      "exclusive_primary_reason_checksum"
+    ],
+    "do_not_treat_bar_missing_rate_as_event_loss_rate": true
+  },
+  "known_unfixed_blockers": [
+    "complete calendar years are still counted only over 2023-2025 while PASS requires four positive years",
+    "horizon table cluster p_value overwrites bootstrap p_value of the same field name",
+    "P0R-DATA full-market results were not written before this gap-guard observation"
+  ],
+  "protected_parent_hashes": {
+    "p0_config": "eb62108271cf1d22992fb53c0c1a7438d605581d96cb079d75b0579143c84642",
+    "p0r_data_config": "4b4ceadcffea866a2783f4acfc06ecc445c4ad533c130a8ce94447bad5b55ff5",
+    "p0_script": "31a95923d5aa508f2d4512917cdc19f678c5f287e44b4653037c2c9a29739dda",
+    "p0r_data_script": "c077d9b6f4bf0c4c4b0c904d1caed90c27f2063fa6b601028df0cd272bec01ff",
+    "p0_manifest": "c11074a7a064db42c0a53214e0756f106388c14e683376bc0fcdfb56d94ffd7e",
+    "p0r_data_manifest": "651bd88b5e349091c36b0de74b2a480b3f44383c22a1f58e11177e33dc9155ae",
+    "p0_summary": "add1bcdd002c4db634e82bfc6a49a0b4d06879e9a5a2ebb751caa6fd02975c98",
+    "p0_results_report": "5570adaec3af20fe1857ec4f4377984d7ced8fe7875cd4d03ca26d2e1512d066"
+  }
+}

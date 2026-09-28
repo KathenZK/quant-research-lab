@@ -7,6 +7,9 @@ import math
 from pathlib import Path
 import sys
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -53,6 +56,7 @@ def test_cost_aware_breakeven_formula() -> None:
     assert math.isclose(short_price * (1.0 + cost), entry * (1.0 - cost))
 
 
+@pytest.mark.local_data
 def test_locked_artifact_control_parity_and_verdict() -> None:
     payload = load_artifact()
     expected = {"CTRL_SNC02", "FF3", "MA05", "HS25", "BE20", "PT25_A3"}
@@ -76,6 +80,7 @@ def test_locked_artifact_control_parity_and_verdict() -> None:
     assert payload["stress"]["MA05"]["lag_1d"]["net_return_pct"] > 0.0
 
 
+@pytest.mark.local_data
 def test_latest_august_trade_is_preserved_except_fail_fast() -> None:
     payload = load_artifact()
     for arm in ("CTRL_SNC02", "MA05", "HS25", "BE20", "PT25_A3"):
@@ -88,6 +93,7 @@ def test_latest_august_trade_is_preserved_except_fail_fast() -> None:
     assert fail_fast["net_return_pct"] < 0.0
 
 
+@pytest.mark.local_data
 def test_artifact_sha256_sidecar() -> None:
     digest = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     sidecar = Path(f"{ARTIFACT}.sha256").read_text(encoding="utf-8").split()[0]

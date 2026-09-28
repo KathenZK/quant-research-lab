@@ -1,30 +1,26 @@
-"""CI-safe defaults for research tests that need the local data lake."""
+"""Select private research tests explicitly; never rewrite test failures."""
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 import pytest
 
-_LOCAL_DATA_MARKERS = (
-    "FileNotFoundError",
-    "no HYPE 1h normalized partitions",
-    "data/normalized/",
-    "data/features/",
-    "data/cache/",
-    "/artifacts/",
-)
+_LOCAL_DATA_CASES = json.loads(Path(__file__).with_name("local_data_cases.json").read_text())
 
 
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):  # noqa: ARG001
-    """Treat missing local lake/artifacts as skips so GitHub CI stays green."""
-    outcome = yield
-    report = outcome.get_result()
-    if report.when not in {"setup", "call"} or not report.failed:
-        return
-    longrepr = str(report.longrepr)
-    if "FileNotFoundError" not in longrepr:
-        return
-    if not any(marker in longrepr for marker in _LOCAL_DATA_MARKERS):
-        return
-    report.outcome = "skipped"
-    report.longrepr = "Skipped: local research data/artifacts unavailable in CI"
+def pytest_addoption(parser):
+    parser.addoption(
+        "--run-local-data", action="store_true", default=False,
+        help="Run private-data tests; missing inputs remain failures.",
+    )
+
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_collection_modifyitems(config, items):
+    for item in items:
+        if item.nodeid.split("[", 1)[0] in _LOCAL_DATA_CASES:
+            item.add_marker(pytest.mark.local_data)
+        if item.get_closest_marker("local_data") and not config.getoption("--run-local-data"):
+            item.add_marker(pytest.mark.skip(reason="Private research inputs require --run-local-data"))

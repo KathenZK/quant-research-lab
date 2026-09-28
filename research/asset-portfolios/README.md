@@ -2,7 +2,83 @@
 
 本目录存放组合策略、跨资产策略、迁移研究和多 sleeve 资金结构研究。当前材料主要基于 Binance USD-M Futures 市场数据；若某个研究线后续变成单一资产策略家族，应迁入对应资产目录并保留这里的交叉引用。状态词定义见 [strategy-status-glossary.md](../../docs/research-governance/strategy-status-glossary.md)。
 
+
+## 状态
+
+本目录家族状态列写 `见顶层`，以 [research/README.md](../README.md) 为准。
+
+| Directory | 状态 |
+| --- | --- |
+| [Binance-1D-MA7-Cross-ATR-Generalization（BIN-1D-MA7-CAR-GEN）](1d-ma7-cross-atr-generalization/README.md) · [主账](1d-ma7-cross-atr-generalization/bin-1d-ma7-car-gen-core-ledger.md)；高低价停滞收紧全市场适配与穿越后斜率达标入场 | 每边手续费0.1%/滑点0.04%；原V3机会账116,933穿越、676币975段，新增两臂1,950账户；完整242币原V3/候选/空单保护盈利62/36/59，收益中位−29.26%/−56.60%/−33.04%；两改动不升级，完整牛熊及资金费未验证，正式V1/V2/V3不变 |
+| [Binance-1D-Medium-Term-Trend-Capture（BIN-1D-MTTC）](1d-medium-term-trend-capture/README.md) · [主账](1d-medium-term-trend-capture/binance-1d-mttc-core-ledger.md)；趋势机会的入场、持有与资金账户 | 见顶层 |
+| [Binance-1D-Medium-Term-Continuation-State（BIN-1D-MTCS）](1d-medium-term-continuation-state/README.md) · [主账](1d-medium-term-continuation-state/binance-1d-mtcs-core-ledger.md)；中期延续的事前识别 | 见顶层 |
+| [Binance-1D-Trend-Strength-Pullback-Restart（BIN-1D-TSPR）](1d-trend-strength-pullback-restart/README.md) · [主账](1d-trend-strength-pullback-restart/binance-1d-tspr-core-ledger.md)；趋势强度与回撤后首次MA7重启 | 见顶层 |
+| [Multi-Asset-1D-Small-Account-Slow-Trend（XA-1D-SAST）](1d-small-account-slow-trend/README.md) · [主账](1d-small-account-slow-trend/xa-1d-sast-core-ledger.md) | 见顶层 |
+| [Binance-1D-TPSA-Long-Account（BIN-1D-TPSA-LA）](1d-tpsa-long-account/README.md) · [主账](1d-tpsa-long-account/binance-1d-tpsa-la-core-ledger.md) | 见顶层 |
+| [BTCETH-8H-Small-Account-Cash-And-Carry（BTCETH-8H-SACC）](8h-btceth-small-account-carry/README.md) · [主账](8h-btceth-small-account-carry/btceth-8h-sacc-core-ledger.md) | 见顶层 |
+| [MA7-Bidirectional-Trend-Generalization（MA7-BTG）](1d-ma7-bidirectional-trend-generalization/README.md) · [主账](1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | 见顶层 |
+| [1d-ma7-atr14-long-transfer/](1d-ma7-atr14-long-transfer/README.md) | 见顶层 |
+| [multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md) | 见顶层 |
+| [multi-timeframe-pullback-trend-campaign/](multi-timeframe-pullback-trend-campaign/README.md) | 见顶层 |
+| [1d-ma7-deviation-continuation/](1d-ma7-deviation-continuation/README.md) | 见顶层 |
+| [1h-price-impulse-campaign/](1h-price-impulse-campaign/README.md) | 见顶层 |
+| [1h-four-asset-trend-habitat-audit/](1h-four-asset-trend-habitat-audit/README.md) | 见顶层 |
+| [1h-cross-sectional-lightgbm-selector/](1h-cross-sectional-lightgbm-selector/README.md) | 见顶层 |
+| [1h-multi-horizon-cross-sectional-ml-allocator/](1h-multi-horizon-cross-sectional-ml-allocator/README.md) | 见顶层 |
+| [15m-ema-cross-lightgbm-event-selector/](15m-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
+| [1h-ema-cross-lightgbm-event-selector/](1h-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
+| [4h-ema-cross-lightgbm-event-selector/](4h-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
+| [4h-bull-strong-rsi-atr-pullback/](4h-bull-strong-rsi-atr-pullback/README.md) · [主账](4h-bull-strong-rsi-atr-pullback/binance-4h-bsrap-core-ledger.md) | 见顶层 |
+| [Binance-1D-Bull-Top10-30D-Rotation（BIN-1D-BT10R30）](1d-bull-top10-30d-rotation/README.md) · [主账](1d-bull-top10-30d-rotation/binance-1d-bt10r30-core-ledger.md)；牛市Top10固定30日轮动 | 见顶层 |
+| [4h-ma7-regime-continuation/](4h-ma7-regime-continuation/README.md) | 见顶层 |
+| [1d-ema-cross-lightgbm-event-selector/](1d-ema-cross-lightgbm-event-selector/README.md) | 见顶层 |
+| [1d-multi-asset-tsmom-vol-target/](1d-multi-asset-tsmom-vol-target/README.md) | 见顶层 |
+| [1d-monthly-cs-momentum-ls3/](1d-monthly-cs-momentum-ls3/README.md) | 见顶层 |
+| [1d-monthly-cs-momentum-long10/](1d-monthly-cs-momentum-long10/README.md) | 见顶层 |
+| [1d-ewmac-universal-trend/](1d-ewmac-universal-trend/README.md) | 见顶层 |
+| [1d-classic-ewmac-replication/](1d-classic-ewmac-replication/README.md) | 见顶层 |
+| [1d-tradfi-futures-tsmom/](1d-tradfi-futures-tsmom/README.md) | 见顶层 |
+| [15m-multi-asset-trend-state-machine/](15m-multi-asset-trend-state-machine/README.md) | 见顶层 |
+| [1d-turtle-breakout/](1d-turtle-breakout/README.md) | 见顶层 |
+| [1d-ma7-ma30-pyramiding-transfer/](1d-ma7-ma30-pyramiding-transfer/README.md) | 见顶层 |
+| [1d-ma7-separated-trend-transfer/](1d-ma7-separated-trend-transfer/README.md) | 见顶层 |
+| [1d-generic-ma7-trend/](1d-generic-ma7-trend/README.md) | 见顶层 |
+| [1d-ma7-regime-continuation/](1d-ma7-regime-continuation/README.md) | 见顶层 |
+| [1d-trend-prebreakout-state-atlas/](1d-trend-prebreakout-state-atlas/README.md) | 见顶层 |
+| [1d-cross-asset-trend-lifecycle/](1d-cross-asset-trend-lifecycle/README.md) | 见顶层 |
+| [1d-ma7-cross-trend-probability/](1d-ma7-cross-trend-probability/README.md) | 见顶层 |
+| [1d-ma7-cross-expansion-regime/](1d-ma7-cross-expansion-regime/README.md) | 见顶层 |
+| [1d-ma7-asset-specific-search/](1d-ma7-asset-specific-search/README.md) | 见顶层 |
+| [1d-btceth-relative-cycle-rotation/](1d-btceth-relative-cycle-rotation/README.md) | 见顶层 |
+| [1d-btceth-log-ratio-mean-reversion/](1d-btceth-log-ratio-mean-reversion/README.md) | 见顶层 |
+| [1h-btceth-cross-impulse-lead-lag/](1h-btceth-cross-impulse-lead-lag/README.md) | 见顶层 |
+| [1d-btceth-cross-breadth-channel-trend/](1d-btceth-cross-breadth-channel-trend/README.md) | 见顶层 |
+| [1d-btceth-dual-horizon-campaign-trend/](1d-btceth-dual-horizon-campaign-trend/README.md) | 见顶层 |
+| [1d-btceth-dual-alpha-sleeve-ensemble/](1d-btceth-dual-alpha-sleeve-ensemble/README.md) | 见顶层 |
+| [1d-btceth-crisis-override-shadow-trend/](1d-btceth-crisis-override-shadow-trend/README.md) | 见顶层 |
+| [1d-btceth-crisis-partial-profit-runner/](1d-btceth-crisis-partial-profit-runner/README.md) | 见顶层 |
+| [1d-btceth-crisis-profit-exit-handoff-continuity/](1d-btceth-crisis-profit-exit-handoff-continuity/README.md) | 见顶层 |
+| [1d-ma7-rsi6-direction-aligned-pooled-ml/](1d-ma7-rsi6-direction-aligned-pooled-ml/README.md) | 见顶层 |
+| [1d-ma7-later-maturity-meta-label/](1d-ma7-later-maturity-meta-label/README.md) | 见顶层 |
+| [1h-ma7-root-hazard-timing/](1h-ma7-root-hazard-timing/README.md) | 见顶层 |
+| [1h-volatility-impulse-pullback-reclaim/](1h-volatility-impulse-pullback-reclaim/README.md) | 见顶层 |
+| [1d-ma7-derivatives-structure-meta-label/](1d-ma7-derivatives-structure-meta-label/README.md) | 见顶层 |
+| [1d-ma7-basis-premium-meta-label/](1d-ma7-basis-premium-meta-label/README.md) | 见顶层 |
+| [1d-ma7-taker-flow-meta-label/](1d-ma7-taker-flow-meta-label/README.md) | 见顶层 |
+| [1d-ma7-quantile-utility-meta-label/](1d-ma7-quantile-utility-meta-label/README.md) | 见顶层 |
+| [1d-ma7-asset-local-temporal-audit/](1d-ma7-asset-local-temporal-audit/README.md) | 见顶层 |
+| [1d-derivatives-structure-trend-opportunity/](1d-derivatives-structure-trend-opportunity/README.md) | 见顶层 |
+| [15m-multi-indicator-intraday/](15m-multi-indicator-intraday/README.md) | 见顶层 |
+| [15m-asset-specific-six-strategy-selector/](15m-asset-specific-six-strategy-selector/README.md) | 见顶层 |
+| [1h-adaptive-regime-multi-asset-ensemble/](1h-adaptive-regime-multi-asset-ensemble/README.md) | 见顶层 |
+| [1h-multi-leg-six-asset-selector/](1h-multi-leg-six-asset-selector/README.md) | 见顶层 |
+| [mk7-multi-strategy-account/](mk7-multi-strategy-account/README.md) | 见顶层 |
+| [hype-cross-strategy-account/](hype-cross-strategy-account/README.md) | 见顶层 |
+
 ## 当前研究线
+
+- [早期策略落档后盈利复核](multi-legacy-post-registration-audit/README.md)：diagnostic_topic；按原spec/登记日期回放15m/30m/1h旧策略，保留成本、回撤、缺件和资金费限制，不修改原版本。
+- [10,000 美元账户三方向独立验收](../platform/small-account-three-line-validation/README.md)：上述三家族的实际首轮结果与唯一下一优先项；账户各自起始 10,000 美元，不相加、不构成组合业绩。
 
 - `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`）：[multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md)。`BIN-MTF-PTC` 关账后的 materially new successor；日线 Campaign invalidation 与 position/lot stop 分层，HYPE primary、BTC/ETH independent controls；432 个账户级回测后收益强度门失败，final audit 未揭示，状态 `HARD-GATE-FAILED / explore / not promoted / not live-ready`。主账：[binance-mtf-dstc-core-ledger.md](multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md)，结论见[最终报告](multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md)。
 - `Binance-MTF-Pullback-Trend-Campaign`（`BIN-MTF-PTC`）：[multi-timeframe-pullback-trend-campaign/](multi-timeframe-pullback-trend-campaign/README.md)。BTC/ETH/HYPE 分资产的趋势识别、延续性度量、回调 restart、独立风险 layers 与结构保护；Goal 已完成但目标失败，historical locked evaluation 未揭示，决定 `HARD-GATE-FAILED`，状态 `explore / not promoted / not live-ready`。主账：[binance-mtf-ptc-core-ledger.md](multi-timeframe-pullback-trend-campaign/binance-mtf-ptc-core-ledger.md)。
@@ -14,6 +90,7 @@
 - `Binance-15M-EMA-Cross-LightGBM-Event-Selector`（`BIN-15M-EMAX-LGBM`）：[15m-ema-cross-lightgbm-event-selector/](15m-ema-cross-lightgbm-event-selector/README.md)。全市场 `15m` EMA21/96 交叉事件 + LightGBM 三分类质量打分，组合层只交易高分事件；`archived`（2026H1 锁定 OOS `HARD-GATE-FAILED`，分数漂移致 OOS 近零交易）。
 - `Binance-1H-EMA-Cross-LightGBM-Event-Selector`（`BIN-1H-EMAX-LGBM`）：[1h-ema-cross-lightgbm-event-selector/](1h-ema-cross-lightgbm-event-selector/README.md)。15m EMAX 机制的 `1h` 周期独立诊断线（成本折 ATR 约减半假设）；`archived / not promoted / not live-ready`（机制家族随 1d 关账）。
 - `Binance-4H-EMA-Cross-LightGBM-Event-Selector`（`BIN-4H-EMAX-LGBM`）：[4h-ema-cross-lightgbm-event-selector/](4h-ema-cross-lightgbm-event-selector/README.md)。同机制 `4h` 周期梯度扫描第三点（4h 数据由已审计 1h 重采样）；`explore / not promoted / not live-ready`（2026-07-30 基于 local+trend 新证据重开；V3 组合级回测 G2 年度稳健性未过，不登记）。
+- `Binance-4H-MA7-Regime-Continuation`（`BIN-4H-MA7-RC`）：[4h-ma7-regime-continuation/](4h-ma7-regime-continuation/README.md)。`4h SMA7` strict cross 无条件延续性；P0 仅为六资产诊断，`P0R-GAP-GUARD` 缺口保护已验收但不是策略有效。`explore / diagnostic-only / not promoted / not live-ready`。主账：[binance-4h-ma7-rc-core-ledger.md](4h-ma7-regime-continuation/binance-4h-ma7-rc-core-ledger.md)。
 - `Binance-1D-EMA-Cross-LightGBM-Event-Selector`（`BIN-1D-EMAX-LGBM`）：[1d-ema-cross-lightgbm-event-selector/](1d-ema-cross-lightgbm-event-selector/README.md)。同机制 `1d` 周期梯度扫描第四点（1d 数据由已审计 1h 重采样）；`archived / not promoted / not live-ready`（P2 组合级 kill gate 未过，事件级优势因容量逆向选择不可收割，机制家族关账）。
 - `Binance-1D-Multi-Asset-TSMOM-Vol-Target`（`BIN-1D-TSMOM-VT`）：[1d-multi-asset-tsmom-vol-target/](1d-multi-asset-tsmom-vol-target/README.md)。多资产时序动量（30–365 天符号集成）+ 两层波动率目标的组合型 CTA 演示线；`explore / not promoted / not live-ready`（P1 执行层契约已冻结，用户 2026-08-05 决定暂停执行，不测山寨币池）。
 - `Binance-1D-Monthly-Cross-Sectional-Momentum-LS3`（`BIN-1D-MCSM-LS3`）：[1d-monthly-cs-momentum-ls3/](1d-monthly-cs-momentum-ls3/README.md)，主账见[binance-1d-mcsm-ls3-core-ledger.md](1d-monthly-cs-momentum-ls3/binance-1d-mcsm-ls3-core-ledger.md)。UTC 每月 1 日做多上月最强 3 个、做空最弱 3 个 USDT 永续；字面规则与 `ADV≥1000万` 过滤均接近归零，`explore / not promoted / not live-ready`。
@@ -28,6 +105,9 @@
 - `Binance-1D-Generic-MA7-Trend`（`BIN-1D-GMA7T`）：[1d-generic-ma7-trend/](1d-generic-ma7-trend/README.md)，主账见[binance-1d-gma7t-core-ledger.md](1d-generic-ma7-trend/binance-1d-gma7t-core-ledger.md)，结论见[current-top30 报告](1d-generic-ma7-trend/diagnostics/binance-1d-generic-ma7-trend-v0-top30-market-cap-backtest-2026-08-18.md)。从 HYPE V7.1 删除 OAPP/RSI/PEHC/forced reversal 与多空专属参数后冻结对称 v0；current-top30 与 Binance 交集最终 22 币，`12/22` 净 Sharpe > 0、equal-risk Sharpe `0.582`，但时段、short 和 stop 稳定性不足，`explore / not promoted / not live-ready`。
 - `Binance-1D-MA7-Regime-Continuation`（`BIN-1D-MA7-RC`）：[1d-ma7-regime-continuation/](1d-ma7-regime-continuation/README.md)，主账见[binance-1d-ma7-rc-core-ledger.md](1d-ma7-regime-continuation/binance-1d-ma7-rc-core-ledger.md)，最新结论见[P3 固定规则 + 小模型确认报告](1d-ma7-regime-continuation/diagnostics/binance-1d-ma7-regime-continuation-p3-confirmatory-2026-08-25.md)。本地波动路径仍能分离部分突破，但方向随年份翻转、breadth 未改善、ML 不稳定且非加密样本不足；P3 裁决 `NO-GO`。
 - `Binance-1D-Trend-Prebreakout-State-Atlas`（`BIN-1D-TPSA`）：[1d-trend-prebreakout-state-atlas/](1d-trend-prebreakout-state-atlas/README.md)，主账见[binance-1d-tpsa-core-ledger.md](1d-trend-prebreakout-state-atlas/binance-1d-tpsa-core-ledger.md)，结论见[P1 趋势路径标签报告](1d-trend-prebreakout-state-atlas/diagnostics/binance-1d-trend-prebreakout-state-atlas-p1-barrier-ml-2026-08-25.md)。P0R 最终收益未找到稳定过滤器；P1 用 first-hit 趋势标签发现“下跌/回撤后的低波稳定区向上脱离”long 跨 MA 排序信息，但仍需新 OOS，股票类无合格事件，`exploratory signal / diagnostic-only / not promoted / not live-ready`。
+- `Binance-1D-Cross-Asset-Trend-Lifecycle`（`BIN-1D-CATL`）：[1d-cross-asset-trend-lifecycle/](1d-cross-asset-trend-lifecycle/README.md)，主账见[binance-1d-catl-core-ledger.md](1d-cross-asset-trend-lifecycle/binance-1d-catl-core-ledger.md)，结论见[P0 标签分布报告](1d-cross-asset-trend-lifecycle/diagnostics/binance-1d-catl-p0-label-distribution-2026-08-31.md)。全市场日频 causal feature panel + long/short directional first-hit entry/continuation 标签图谱；不训练模型、不生成策略，`explore / diagnostic-only / not promoted / not live-ready`。
+- `Binance-1D-MA7-Cross-Trend-Probability`（`BIN-1D-MA7-CTP`）：[1d-ma7-cross-trend-probability/](1d-ma7-cross-trend-probability/README.md)，主账见[binance-1d-ma7-ctp-core-ledger.md](1d-ma7-cross-trend-probability/binance-1d-ma7-ctp-core-ledger.md)，P7 见[失败审计报告](1d-ma7-cross-trend-probability/diagnostics/binance-1d-ma7-ctp-p7-temporal-drift-calibration-decomposition-2026-09-04.md)。只对真实 MA7 穿越打分；P7 因 `R_B0_69` 不能由当前 P5/P6 冻结链确定性重建到 `1e-8` 裁决 `DATA_OR_REPRODUCTION_FAILURE`，P6 裁决 `MARKET_OR_SIDE_VALUE_ONLY` 保持历史解释边界，`explore / diagnostic-only / not promoted / not live-ready`。
+- `Binance-1D-MA7-Cross-Expansion-Regime`（`BIN-1D-MA7-CER`）：[1d-ma7-cross-expansion-regime/](1d-ma7-cross-expansion-regime/README.md)，主账见[binance-1d-ma7-cer-core-ledger.md](1d-ma7-cross-expansion-regime/binance-1d-ma7-cer-core-ledger.md)，P0 见[无方向扩张审计](1d-ma7-cross-expansion-regime/diagnostics/binance-1d-ma7-cer-p0-direction-agnostic-expansion-audit-2026-09-04.md)。独立于 CTP：只检验 Cross 是否标记未来无方向扩张，不预测方向，`explore / diagnostic-only / not promoted / not live-ready`。
 - `Binance-1D-MA7-Asset-Specific-Search`（`BIN-1D-MA7-AS-SEARCH`）：[1d-ma7-asset-specific-search/](1d-ma7-asset-specific-search/README.md)，主账见[binance-1d-ma7-as-search-core-ledger.md](1d-ma7-asset-specific-search/binance-1d-ma7-as-search-core-ledger.md)。BTC/ETH shared 参数登记为 V1；V2 为 P2-C parent 且 `HARD-GATE-FAILED`，`registered / not promoted / not live-ready`。
 - `Binance-1D-BTCETH-Relative-Cycle-Rotation`（`BIN-1D-BE-RCR`）：[1d-btceth-relative-cycle-rotation/](1d-btceth-relative-cycle-rotation/README.md)，主账见[binance-1d-be-rcr-core-ledger.md](1d-btceth-relative-cycle-rotation/binance-1d-be-rcr-core-ledger.md)。共同周期 + 相对动量 `1x` 单仓；P0–P6 收益/风险、保护、entry、日频/小时 hazard 与 funding 均未形成 hard-target，`research line closed / HARD-GATE-FAILED / explore / not promoted / not live-ready`。
 - `Binance-1D-BTCETH-Log-Ratio-Mean-Reversion`（`BIN-1D-BE-LRMR`）：[1d-btceth-log-ratio-mean-reversion/](1d-btceth-log-ratio-mean-reversion/README.md)，主账见[binance-1d-be-lrmr-core-ledger.md](1d-btceth-log-ratio-mean-reversion/binance-1d-be-lrmr-core-ledger.md)。双腿 log-ratio mean reversion；P0 `15,288` 配置最高 `1.5471x/-44.88% ordered MDD`，`research line closed / HARD-GATE-FAILED / explore / not promoted / not live-ready`。
@@ -54,3 +134,7 @@
 - `Binance-1H-Multi-Leg-Six-Asset-Selector`（`BIN-1H-ML6AS`）：[1h-multi-leg-six-asset-selector/](1h-multi-leg-six-asset-selector/README.md)。BTC/ETH/SOL/BNB/TRX/HYPE 三交易臂、币内融合与抢占/非抢占全局单仓研究；`explore / not promoted / not live-ready`。主账：[binance-1h-ml6as-core-ledger.md](1h-multi-leg-six-asset-selector/binance-1h-ml6as-core-ledger.md)。
 - `Binance-MK7-Multi-Strategy-Account`（外部别名 `mk7`）：[mk7-multi-strategy-account/](mk7-multi-strategy-account/README.md)。六币 `1h` + HYPE K2FQ + HYPE MII 双槽共享账户的外部规格复现审计；全窗 LSR 已补齐，回测接近但未逐笔对齐，回测终点后 10.875 天 forward 基本持平；状态 `explore / not promoted / not live-ready`。
 - `HYPE-Cross-Strategy-Account`：[hype-cross-strategy-account/](hype-cross-strategy-account/README.md)。HYPE 单资产多策略共享子账户、全局单仓、跨策略优先级和账户级风控诊断；`explore`，不提升任何子策略状态。
+
+- `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。
+
+- [PUBLIC100 公开策略100条复核与诊断](multi-public-strategies-100/README.md)：diagnostic_topic；19条数值诊断，81条数值回测未完成；0条正式验证。

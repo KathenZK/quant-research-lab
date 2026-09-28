@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "bundle_id": "binance.v3.research_inputs.v2",
+  "bundle_path": "research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2.json",
+  "bundle_sha256": "d2a729d03be71d67aa9c5522fb242bbf010b6c64400233c27d9cb2406f567008",
+  "mode": "price_diagnostic",
+  "timeframe": "1d",
+  "symbols": [
+    "HYPE/USDT:USDT"
+  ],
+  "start": "2025-05-31T00:00:00Z",
+  "end": "2026-09-05T00:00:00Z",
+  "gap_policy": "reject",
+  "asset_policy": "crypto_only",
+  "backward_bars": 29,
+  "forward_bars": 0
+}

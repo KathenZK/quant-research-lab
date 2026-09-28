@@ -1,0 +1,12 @@
+{
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v6/engine.py",
+  "engine_sha256": "dd00f099ad8a4419c78cc337dede52284da75cac8675d9ccdd0eeeb8aa2de46b",
+  "contracts": {
+    "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/contract-v3-opportunity-20260913.md": "269d9aa2d3c2de2c89c43df2b602d5b5151cfcbbf54fff4313576ce97c7c3dd9"
+  },
+  "fee": 0.001,
+  "slip": 0.0004,
+  "official_version_unchanged": "V3",
+  "tests_path": "tests/test_ma7_car_v3_opportunity.py",
+  "tests_sha256": "24c7fc4ffe9b18ba1c87153376b2717ac6d404e65f47cfa84cc696b259d7bf19"
+}

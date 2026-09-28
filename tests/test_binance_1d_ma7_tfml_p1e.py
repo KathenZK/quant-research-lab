@@ -160,6 +160,7 @@ def test_empty_source_manifest_cannot_satisfy_identity_gate(
         )
 
 
+@pytest.mark.local_data
 def test_retained_p0e_inputs_fail_closed_on_lost_generator_source() -> None:
     assert p1e.verify_event_manifest()["file_count"] == 2
     flow = p1e.verify_flow_manifest(

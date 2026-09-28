@@ -179,6 +179,7 @@ def test_oat_disables_only_requested_module() -> None:
     assert not ENGINE.oat_config(config, "T").t_enabled
 
 
+@pytest.mark.local_data
 def test_leverage_grid_and_dynamic_formula_are_capped(context) -> None:
     specs = ENGINE.leverage_specs()
     assert len(specs) == 9
@@ -200,6 +201,7 @@ def test_leverage_grid_and_dynamic_formula_are_capped(context) -> None:
     assert dynamic.last_entry_leverage == 3.0
 
 
+@pytest.mark.local_data
 def test_target_quantity_matches_exact_one_x_kernel(context) -> None:
     expected = context.engine._target_quantity(1.0, 0.0, 1, 25.0, 0.0014)
     actual = METRICS.target_quantity(1.0, 0.0, 1, 25.0, 0.0014, 1.0)
@@ -208,6 +210,7 @@ def test_target_quantity_matches_exact_one_x_kernel(context) -> None:
         METRICS.target_quantity(1.0, 0.0, 1, 25.0, 0.0014, 3.01)
 
 
+@pytest.mark.local_data
 def test_all_sources_compile_without_candidate_performance(context) -> None:
     rsi6 = ENGINE.wilder_rsi6(context.book.close)
     hashes = []
@@ -228,6 +231,7 @@ def test_all_sources_compile_without_candidate_performance(context) -> None:
     assert len(set(hashes)) == 12
 
 
+@pytest.mark.local_data
 def test_all_off_is_exact_v4_on_development(context) -> None:
     config = ENGINE.TPRConfig("ALL_OFF", None, 0, False)
     candidate = ENGINE.run_variant(
@@ -249,6 +253,7 @@ def test_all_off_is_exact_v4_on_development(context) -> None:
     ] == exact.path
 
 
+@pytest.mark.local_data
 def test_exact_v4_chronological_replay_has_full_ledger_parity(context) -> None:
     exact = ADAPTER.run_v4(0, 259, retain=True)
     replay = METRICS.replay_chronological_1h(context, exact)
@@ -262,6 +267,7 @@ def test_exact_v4_chronological_replay_has_full_ledger_parity(context) -> None:
     assert replay.worst_ts == "2025-09-01T23:00:00+00:00"
 
 
+@pytest.mark.local_data
 def test_funding_off_candidate_replay_has_full_ledger_parity(context) -> None:
     config = ENGINE.TPRConfig("ALL_OFF_NO_FUNDING", None, 0, False)
     candidate = ENGINE.run_variant(

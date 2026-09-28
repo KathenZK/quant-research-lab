@@ -1,0 +1,158 @@
+{
+  "family_id": "HYPE-1D-MA7-CAR",
+  "registered_on": "2026-09-10",
+  "authority": "User explicitly assigned V1, V2, V3 to these existing results. These are strategy versions, not original R-round IDs.",
+  "ledger": "hype-1d-ma7-car-core-ledger.md",
+  "version_spec": "specs/versions-v1-v3-20260910.md",
+  "new_backtest_performed": false,
+  "engine_or_strategy_modified": false,
+  "window_start": "2025-06-29T00:00:00Z",
+  "window_end_exclusive": "2026-09-05T00:00:00Z",
+  "initial_equity": 10000,
+  "fee_per_side": 0.0005,
+  "slippage_per_side": 0.0003,
+  "funding_window_verified": false,
+  "source_result_manifest_sha256": "a3813c8dd7da4f2e8bb7f8cc61a8a5eb1eefe9982a9be0e8203d7e9eed72fdcb",
+  "source_run_manifest_sha256": "0ea53c9ca2c17bfc774b85202edae47250317b7510d799a3dfac3467620e6ad7",
+  "source_engine_sha256": "453c2e410996035eb1868a014e47c81e2390ab74b77f0ff69581579415fda36f",
+  "versions": [
+    {
+      "version": "V1",
+      "label": "基础移动止损",
+      "return_pct": 360.0242470856158,
+      "max_drawdown_pct": -27.424265137461767,
+      "trades": 15,
+      "short_early_take_profit": true,
+      "reverse": false,
+      "delayed_entry_days": 0,
+      "source_round": "R3",
+      "source_case_id": "B1_r1_fixed",
+      "frozen_engine_config": {
+        "slope": 0.05,
+        "reverse": false,
+        "short_exit": "accel1_rsi30",
+        "fee": 0.0005,
+        "slip": 0.0003,
+        "delay_hours": 0,
+        "entry_mode": "original",
+        "tighten_mode": "fixed",
+        "profit_trigger_atr": 0.0,
+        "progress_days": 0,
+        "stop_anchor": "ma",
+        "exit_opposite_cross": false,
+        "initial_stop_cap_pct": null
+      },
+      "source_summary": "artifacts/r3_price_progress_20260909/runs/B1_r1_fixed/full/summary.json",
+      "source_files_sha256": {
+        "artifacts/r3_price_progress_20260909/runs/B1_r1_fixed/full/summary.json": "0708a450cfb66791c45e145bd273da9a7bc909542a142b348b4bcdf984485c6c",
+        "artifacts/r3_price_progress_20260909/runs/B1_r1_fixed/full/trades.csv": "cd5f2c2026d91ea90ab24be5ee0a5c8274923383b0927ae9d37dc98f018ac9b9",
+        "artifacts/r3_price_progress_20260909/runs/B1_r1_fixed/full/stops.csv": "9a5e3c54cad3d50e74c3af3f7c07887f14948a8b98d02db91a321ec87eebee01",
+        "artifacts/r3_price_progress_20260909/runs/B1_r1_fixed/full/equity.parquet": "0c0e9376e26fd0ce4b75d81e60de23b7abeaab825a164b401b1beba6a21f0bb8"
+      },
+      "trade_path": "artifacts/r3_trade_paths_20260909/hype-ma7-r3-trade-paths.html#B1_r1_fixed",
+      "native_source": {
+        "research_round": "R1",
+        "case_id": "no_reverse_accel1",
+        "summary": "artifacts/results_20260909/no_reverse_accel1_summary.json",
+        "summary_sha256": "b771e9b5ea695c9d7c2c91c74507a910d9219f0914195504f4ed5da4be10c67b",
+        "artifact_checksums_sha256": "3f1866aae9f30a8a92eb22eced654e0941f69362ae8a1dcf6a692adf65b25f6a"
+      }
+    },
+    {
+      "version": "V2",
+      "label": "盈利且MA止损停滞日收紧",
+      "return_pct": 449.6080740269725,
+      "max_drawdown_pct": -27.424265137461767,
+      "trades": 15,
+      "short_early_take_profit": true,
+      "reverse": false,
+      "delayed_entry_days": 0,
+      "source_round": "R3",
+      "source_case_id": "B0_r2_stall",
+      "frozen_engine_config": {
+        "slope": 0.05,
+        "reverse": false,
+        "short_exit": "accel1_rsi30",
+        "fee": 0.0005,
+        "slip": 0.0003,
+        "delay_hours": 0,
+        "entry_mode": "original",
+        "tighten_mode": "stall_only",
+        "profit_trigger_atr": 0.0,
+        "progress_days": 0,
+        "stop_anchor": "ma",
+        "exit_opposite_cross": false,
+        "initial_stop_cap_pct": null
+      },
+      "source_summary": "artifacts/r3_price_progress_20260909/runs/B0_r2_stall/full/summary.json",
+      "source_files_sha256": {
+        "artifacts/r3_price_progress_20260909/runs/B0_r2_stall/full/summary.json": "3411358311440ad18bb5367df0f1c7d5f59159f513b9d3f9b189fd0263bb5a31",
+        "artifacts/r3_price_progress_20260909/runs/B0_r2_stall/full/trades.csv": "7deae07416bb0ced82c28da5cdf52723be7130e8bd9806e5e840a278fdc31981",
+        "artifacts/r3_price_progress_20260909/runs/B0_r2_stall/full/stops.csv": "cf1c343eac6cfe2c643d3e5165b64ba5c25d512786a56614c87ca5e1af99b430",
+        "artifacts/r3_price_progress_20260909/runs/B0_r2_stall/full/equity.parquet": "19798439b56ca6dffdf832cfe02aa7a2973d8e7d70724c2cb1117328a21e8f13"
+      },
+      "trade_path": "artifacts/r3_trade_paths_20260909/hype-ma7-r3-trade-paths.html#B0_r2_stall",
+      "native_source": {
+        "research_round": "R2",
+        "case_id": "s0.05_rev0_accel1_rsi30_original_stall_only_p0",
+        "summary": "artifacts/r2_slowdown_tightening_20260909/runs/s0.05_rev0_accel1_rsi30_original_stall_only_p0/full/summary.json",
+        "summary_sha256": "ae284d90d15c2f47c667ba77eec96de99ea649228677ab8984e52aa7cc77fcf1",
+        "artifact_checksums_sha256": "89409ccc8424ce5de703c6029e4f806961494d0adffa0397cd3a3b90abebbbcd"
+      }
+    },
+    {
+      "version": "V3",
+      "label": "高低价4日未刷新后持续收紧",
+      "return_pct": 548.6507169957516,
+      "max_drawdown_pct": -26.994793446228414,
+      "trades": 17,
+      "short_early_take_profit": true,
+      "reverse": false,
+      "delayed_entry_days": 0,
+      "source_round": "R3",
+      "source_case_id": "P4_ma",
+      "frozen_engine_config": {
+        "slope": 0.05,
+        "reverse": false,
+        "short_exit": "accel1_rsi30",
+        "fee": 0.0005,
+        "slip": 0.0003,
+        "delay_hours": 0,
+        "entry_mode": "original",
+        "tighten_mode": "fixed",
+        "profit_trigger_atr": 0.0,
+        "progress_days": 4,
+        "stop_anchor": "ma",
+        "exit_opposite_cross": false,
+        "initial_stop_cap_pct": null
+      },
+      "source_summary": "artifacts/r3_price_progress_20260909/runs/P4_ma/full/summary.json",
+      "source_files_sha256": {
+        "artifacts/r3_price_progress_20260909/runs/P4_ma/full/summary.json": "ec1fd6de0917befde72ecb875529ff948914b0ac6834e6a3e0da8b51172230b1",
+        "artifacts/r3_price_progress_20260909/runs/P4_ma/full/trades.csv": "d4d54e66e39c62ae8a4b3ce592eeabb7ec9c4c6e9d84ae617ca6e231364b7b0a",
+        "artifacts/r3_price_progress_20260909/runs/P4_ma/full/stops.csv": "9565bcfb24856730027f9c9392c961ed9946362f944aa981d8171cde29deb954",
+        "artifacts/r3_price_progress_20260909/runs/P4_ma/full/equity.parquet": "6367abcb3f7035004bae637fac11cbb4900ac8e49da11028e6658600df213f86"
+      },
+      "trade_path": "artifacts/r3_trade_paths_20260909/hype-ma7-r3-trade-paths.html#P4_ma",
+      "native_source": {
+        "research_round": "R3",
+        "case_id": "P4_ma",
+        "summary": "artifacts/r3_price_progress_20260909/runs/P4_ma/full/summary.json",
+        "summary_sha256": "ec1fd6de0917befde72ecb875529ff948914b0ac6834e6a3e0da8b51172230b1",
+        "artifact_checksums_sha256": "a3813c8dd7da4f2e8bb7f8cc61a8a5eb1eefe9982a9be0e8203d7e9eed72fdcb"
+      },
+      "config_interpretation": "In the frozen R3 engine, progress_days=4 takes priority over legacy tighten_mode=fixed. V3 uses daily high/low progress and permanent daily tightening after arming; never interpret it as V1 fixed ATR multiplier."
+    }
+  ],
+  "cross_market_aliases": {
+    "BIN-1D-MA7-CAR-GEN/F0": "V1",
+    "BIN-1D-MA7-CAR-GEN/H4_D0": "V3"
+  },
+  "unversioned_experiments": [
+    "H4_D2: V3 plus at most 2 days pending confirmation",
+    "H4_D3: V3 plus at most 3 days pending confirmation",
+    "close-based stagnation variants",
+    "slowdown-entry variants",
+    "other R1-R4 parameter cases"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-09-09T08:42:35.823563+00:00",
+  "stage": "before_new_returns",
+  "files": {
+    "research/_shared-kernels/medium-term-trend-capture/v1/engine.py": "c3ec31da08f7b5510dde5aec4b8259477d3c6b998deea952486a761b70727cb4",
+    "research/_shared-kernels/medium-term-trend-capture/v1/inference.py": "ec66ebc136262a18b0a5d2d5b9accc9a5e4b38c192df641a1d3e9fc5baf28976",
+    "research/_shared-kernels/medium-term-trend-capture/v1/portfolio.py": "93bfeba315ae7ab35ca7add88bdea0ec5f79984dbe0f92b8c25450fbb7dc4368",
+    "research/_shared-kernels/medium-term-trend-capture/v1/tests/test_engine.py": "b4ec4dd921dc806aababd11c148fec0cdd0ca3282b51ecf4f5fafbf348c022a6",
+    "research/_shared-kernels/medium-term-trend-capture/v1/tests/test_portfolio.py": "3c06f8e2ffec37cdc5b4175bce9cddf0f6c4d861b8cdd7956eed100ca080a0d0",
+    "research/asset-portfolios/1d-medium-term-trend-capture/scripts/run_research.py": "fd91a3a39ecae9e8744d6460bcc90a771534e9a524f631ee0e15d1d7ff632e1d",
+    "research/asset-portfolios/1d-medium-term-trend-capture/specs/config.json": "dfc165cea309fb48c29dfa8ed8da277beb57f479a809d60dcab30628a49bbdd9",
+    "research/asset-portfolios/1d-medium-term-trend-capture/specs/research-contract.md": "8ac2991f95a09266fcc8b71f932a50a934e4ea14df47d6beb2471d72a5b24465",
+    "research/asset-portfolios/1d-medium-term-trend-capture/specs/input-request.json": "1c48dabc767068bd3ebcde28634a59065939a219bae584b25273e1f37a82dc1c",
+    "research/asset-portfolios/1d-medium-term-trend-capture/specs/source-pins.json": "f38933596c1d4bf4e09d2f7ec855137ac48bf9d497b1109f377e532cb72bd57a",
+    "research/asset-portfolios/1d-medium-term-trend-capture/specs/input-contract.md": "dd487e2d5a8349fdbfcf4b6b8a3a18a1c3b9d9513a0dc9dd8d2a190914348367",
+    "research/asset-portfolios/1d-medium-term-trend-capture/scripts/audit_funding.py": "d36d0c110bf7e4d3aa450c3424df6654c8272a34409a94471a2ef609b2427e96",
+    "research/asset-portfolios/1d-medium-term-trend-capture/scripts/test_audit_funding.py": "1a5552835c7fad2f51dd1768116cba45c7eb88d5a7e227bfae500e75258550c8",
+    "research/asset-portfolios/1d-medium-term-trend-capture/artifacts/p0-inputs/frame-manifest.json": "40e5f1e91206d22160c3099d09da6c3fbab0b15e86a913922f2634d627b15c00",
+    "research/asset-portfolios/1d-medium-term-trend-capture/artifacts/p0-inputs/summary.json": "a24eb888ff0fb77d84f5aa3bb7a0bdef362b0d8b424674357e80507e7b9c9447",
+    "research/asset-portfolios/1d-medium-term-trend-capture/artifacts/p0-inputs/independent-verification.json": "ba3920c9cb1de11c81459ef23f493f15500574e7532c3f81f2bc34cb636a7979",
+    "research/_shared-kernels/medium-term-trend-capture/v1/manifest.json": "4bd532f6584008d051dd35b0afff0ee6859507160ac71c8b072a9aaba3fe3e06"
+  }
+}

@@ -89,7 +89,12 @@ Created：2026-07-07
 
 2026-07-09 后续登记：该轮单账户 `single_v39_priority_k1` 被用户指定记录为 `V2`。登记不改变 live-readiness 结论；同日 live-executable 审计结论为 `FAILED / NO-GO`。近一年周度开单审计见 [hype-15m-tb-mii-ens-v2-weekly-trade-audit-2026-07-09.md](notes/hype-15m-tb-mii-ens-v2-weekly-trade-audit-2026-07-09.md)，live-executable 审计见 [hype-15m-tb-mii-ens-v2-live-executable-audit-2026-07-09.md](diagnostics/hype-15m-tb-mii-ens-v2-live-executable-audit-2026-07-09.md)。
 
-## 证据入口
+## 证据
+
+- 2026-09-03 README 压缩：完整原文与阅读顺序见 [decision-log.md](decision-log.md) 当日条目。
+- 母版本参数细节以母家族主账为准：[hype-ema-tb-core-ledger.md](../15m-ema-trend-breakout/hype-ema-tb-core-ledger.md)、[hype-15m-mii-core-ledger.md](../15m-multi-indicator-intraday/hype-15m-mii-core-ledger.md)。
+
+入口
 
 - 首次组合回测（V35 + V1.3）：[hype-15m-tb-mii-ensemble-first-combination-backtest-2026-07-07.md](notes/hype-15m-tb-mii-ensemble-first-combination-backtest-2026-07-07.md)
 - V39 + V1.3 组合回测含门禁：[hype-15m-tb-mii-ensemble-v39-combination-backtest-2026-07-08.md](notes/hype-15m-tb-mii-ensemble-v39-combination-backtest-2026-07-08.md)

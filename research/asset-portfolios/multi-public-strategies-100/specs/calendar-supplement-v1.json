@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-09-08T13:47:29.047789+00:00",
+  "ids": [
+    "A31",
+    "A37"
+  ],
+  "A31": "OEF regular monthly expiry third Friday adjusted to preceding XNYS session. Enter Monday open, exit expiry open (daily proxy for source Monday10:00 and expiry first intraday data). Monday holiday means no entry as original Monday scheduling.",
+  "A37": "EEM long from last-quarter date open; short from first-quarter date open. Known astronomical quarter dates calculated with ephem4.2.1; use UTC calendar dates to mirror source truncation. Reversals on next equity session if quarter occurs on holiday. Calendar provider substitution explicit.",
+  "shared_contract": "run-contract-v1.json",
+  "status": "EXPLORE_UNTRUSTED"
+}

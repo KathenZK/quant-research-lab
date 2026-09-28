@@ -8,6 +8,9 @@ import sys
 import numpy as np
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 P1_SCRIPT = ROOT / (
@@ -167,6 +170,7 @@ def test_local_gate_cannot_bypass_failed_substrate_gate() -> None:
     assert not gate["p1_pass"]
 
 
+@pytest.mark.local_data
 def test_retained_terminal_result_and_hype_lock() -> None:
     summary = json.loads(SUMMARY_PATH.read_text(encoding="utf-8"))
 

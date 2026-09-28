@@ -7,6 +7,9 @@ import sys
 
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -82,6 +85,7 @@ def test_frozen_boundaries_do_not_overlap() -> None:
     assert module.COMMON_START < module.DEVELOPMENT_END < module.EXPECTED_TERMINAL
 
 
+@pytest.mark.local_data
 def test_frozen_p0_hashes_match_manifest() -> None:
     module = load_script()
     manifest = __import__("json").loads(

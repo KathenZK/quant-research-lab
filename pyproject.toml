@@ -7,7 +7,7 @@ name = "quant-research-lab"
 version = "0.1.0"
 description = "Data-first quantitative research archive and tooling."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [
   { name = "ZK" }
@@ -47,12 +47,29 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+markers = [
+  "local_data: tests that require the local data lake or untracked research artifacts",
+  "governance: repository governance and contract tests that must pass without local data",
+]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F"]
 
 [tool.setuptools.package-data]
 "strategy_lab.knowledge" = ["*.json"]
+
+# Historical tests are pinned by retained research manifests. Changes require removing
+# these exact-file exceptions; test_ci_contract checks their recorded bytes.
+[tool.ruff.lint.per-file-ignores]
+"tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py" = ["F401"]
+"tests/test_ma7_car_exit_history_reports.py" = ["E402"]
+"tests/test_ma7_car_exit_state_machine.py" = ["E741"]
+"tests/test_ma7_car_four_tests.py" = ["E731"]
+"tests/test_ma7_car_ma30_states.py" = ["E701", "E702"]
+"tests/test_ma7_car_opportunity_pairs.py" = ["E402"]
+"tests/test_ma7_car_v3_opportunity.py" = ["E712"]
+"tests/test_v3_fixed_atr_validation_20260924.py" = ["E401", "E701", "E702", "F401"]
+"tests/test_v3_parameter_stability_20260924.py" = ["E701", "E702"]

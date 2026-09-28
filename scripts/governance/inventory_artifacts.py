@@ -8,6 +8,7 @@ import datetime as dt
 import json
 import os
 import re
+import subprocess
 import tempfile
 from collections import defaultdict
 from pathlib import Path
@@ -77,9 +78,47 @@ def _family_path(relative_path: Path) -> str:
     return parent.as_posix() if parent.parts else "."
 
 
+def _git_visible_relative_paths(root: Path) -> set[str] | None:
+    """Return git-tracked plus untracked-not-ignored paths, or None if not a repo."""
+    if not (root / ".git").exists():
+        return None
+
+    def _ls(extra: list[str]) -> set[str] | None:
+        proc = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-z", *extra],
+            capture_output=True,
+            check=False,
+        )
+        if proc.returncode != 0:
+            return None
+        return {
+            item
+            for item in proc.stdout.decode("utf-8", "replace").split("\0")
+            if item
+        }
+
+    tracked = _ls([])
+    others = _ls(["--others", "--exclude-standard"])
+    if tracked is None or others is None:
+        return None
+    return tracked | others
+
+
 def iter_artifact_files(root: Path) -> list[Path]:
     """Return files below directories named artifacts, using metadata only."""
-    files: list[Path] = []
+    visible = _git_visible_relative_paths(root)
+    if visible is not None:
+        files: list[Path] = []
+        for rel in sorted(visible):
+            relative = Path(rel)
+            if "artifacts" not in relative.parts:
+                continue
+            path = root / relative
+            if path.is_file() and not path.is_symlink():
+                files.append(path)
+        return files
+
+    files = []
     for current, directory_names, file_names in os.walk(root, followlinks=False):
         directory_names[:] = sorted(
             name

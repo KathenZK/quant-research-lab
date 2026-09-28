@@ -1,5 +1,17 @@
 # Decision Log
 
+## 2026-09-10 — 按用户新要求回放登记之后历史
+
+用户本轮要求检查早期策略落档后能否继续盈利，授权本次独立诊断恢复原移植程序中的V6参数并查看2026-07-16至2026-09-05 15:00 UTC。NP和SBP两模式均已实际回放，分别约-8.09%和-12.97%；原手续费/滑点，资金费为现存事件估计。原Lab冻结JSON仍缺失，本次不声称重新验证其哈希或完整历史parity。
+
+原10月完整OOS在8月已放弃；本次查看区间属于已揭示历史，今后不得再称未知样本。家族封存状态和生产实例不变。完整配置恢复、官方mark输入、逐笔和结果见[落档后回放报告](../multi-legacy-post-registration-audit/diagnostics/report-20260910.md)及[本次AS6S产物](../multi-legacy-post-registration-audit/artifacts/other_assets/AS6S_V6/results.json)。
+
+## 2026-09-03 — 用户停止 V6 两条 dry-run 实例
+
+决定：用户已在 quant-runner 提交 `a5a3b2a` 将 `bin-15m-as6s-v6-mark-np-dry-run` 与 `bin-15m-as6s-v6-mark-preemptive-dry-run` 设为 `enabled=false`，lock `enabled_allowed=false` / `approval_level=none`；服务器 `quant-runner-dryrun` 于 `2026-09-03T06:47:02Z` 重启后两实例停止，停止前 `position_open=0`。家族主状态保持 `archived`。Lab 不推断启停，本条只记录已执行事实。
+
+证据：[停止记录](runner-tracking/binance-as6s-v6-dry-run-stop-2026-09-03.md)
+
 ## 2026-08-05 — 封存家族并放弃最终 OOS
 
 用户决定本家族只保留研究复盘记录，不再重建已删除的行情、funding、冻结与 parity 产物；全家族进入 `archived`，原定最终 OOS 不再揭示。研究封存不修改 quant-runner，实际实例状态仍只以其配置与运行账本为准，删除边界见 [artifacts/README.md](artifacts/README.md)。

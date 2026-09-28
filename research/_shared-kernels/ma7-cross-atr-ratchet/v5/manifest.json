@@ -1,0 +1,7 @@
+{
+  "engine_sha256": "f98eb0fb30ffe388e6e55d7535619d8dd8f0edb47c4efe864e5d61f8b7ef1a3f",
+  "parent_engine_sha256": "956698aeda487c849eabe2eda2109397098e4a1edc4d689e5e69ebaf8bc47aa8",
+  "tests_sha256": "f7a6c81b0e55cb2408198c97e459dc7244c9043c9cade088c743f8de08dd3dff",
+  "tests_passed": 28,
+  "official_strategy_version": null
+}

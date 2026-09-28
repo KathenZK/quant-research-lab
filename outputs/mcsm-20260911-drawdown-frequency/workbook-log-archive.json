@@ -1,0 +1,7 @@
+{
+  "status": "LOSSLESS_GZIP_ROUNDTRIP_SHA256_VERIFIED",
+  "archive_path": "Top10_月度持仓盈亏与年度比较_20260911.xlsx.inspect.ndjson.gz",
+  "uncompressed_bytes": 114512954,
+  "uncompressed_sha256": "d4f137e22c6491f6fe342d9a7b82cc3dce6f21b4ba4656c97ee80740885d7d49",
+  "reason": "Retain the full automatically generated export inspection log within the round's 100 MiB retained-storage budget. The workbook and source account results are unchanged."
+}

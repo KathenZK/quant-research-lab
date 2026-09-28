@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 import sys
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -37,6 +40,7 @@ def test_feature_block_sizes_and_simple_tie_break() -> None:
     assert module.choose_block(results) == "small"
 
 
+@pytest.mark.local_data
 def test_development_manifest_is_train_only_and_hashed() -> None:
     module = load_module()
     path = ARTIFACT_DIR / f"{STEM}_development_manifest.json"
@@ -50,6 +54,7 @@ def test_development_manifest_is_train_only_and_hashed() -> None:
     assert manifest["contract_sha256"] == hashlib.sha256(module.CONTRACT.read_bytes()).hexdigest()
 
 
+@pytest.mark.local_data
 def test_selected_blocks_and_validation_are_frozen_consistently() -> None:
     development = json.loads(
         (ARTIFACT_DIR / f"{STEM}_development_manifest.json").read_text(encoding="utf-8")
@@ -66,6 +71,7 @@ def test_selected_blocks_and_validation_are_frozen_consistently() -> None:
     assert summary["verdict"] == "VALIDATION_FAILED"
 
 
+@pytest.mark.local_data
 def test_exact_cross_events_are_one_row_per_cross() -> None:
     module = load_module()
     _, p1, p0, full_market = module.load_dependencies()
@@ -82,6 +88,7 @@ def test_exact_cross_events_are_one_row_per_cross() -> None:
         assert side * (float(current["close"]) - float(current["ma7"])) > 0.0
 
 
+@pytest.mark.local_data
 def test_training_labels_do_not_cross_training_boundary() -> None:
     module = load_module()
     p2, p1, p0, full_market = module.load_dependencies()

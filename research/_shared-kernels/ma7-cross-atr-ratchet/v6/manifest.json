@@ -1,0 +1,9 @@
+{
+  "engine_sha256": "dd00f099ad8a4419c78cc337dede52284da75cac8675d9ccdd0eeeb8aa2de46b",
+  "parent_engine_sha256": "f98eb0fb30ffe388e6e55d7535619d8dd8f0edb47c4efe864e5d61f8b7ef1a3f",
+  "tests_sha256": "24c7fc4ffe9b18ba1c87153376b2717ac6d404e65f47cfa84cc696b259d7bf19",
+  "tests_passed": 44,
+  "official_strategy_version": null,
+  "contract_path": "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/contract-v3-opportunity-20260913.md",
+  "readme_sha256": "96ba2d17bbdffaa7ca557817321b069d8d79fa41a1e766148fc186040f6f990b"
+}

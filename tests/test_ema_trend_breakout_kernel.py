@@ -385,6 +385,7 @@ def test_explicit_cost_multipliers_reduce_same_trade_equity() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_local_hype_v40_parity_when_data_lake_is_available() -> None:
     modules = _load_current_hype_modules()
     base = modules["base"]

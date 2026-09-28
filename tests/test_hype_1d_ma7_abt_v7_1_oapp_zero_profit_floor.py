@@ -6,6 +6,7 @@ import sys
 
 import pytest
 
+pytestmark = pytest.mark.local_data
 
 SCRIPT_PATH = (
     Path(__file__).resolve().parents[1]

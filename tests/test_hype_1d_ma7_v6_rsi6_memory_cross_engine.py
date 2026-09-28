@@ -9,6 +9,9 @@ from typing import Any
 
 import numpy as np
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = ROOT / "research/hype/1d-ma7-asymmetric-body-trend/scripts"
@@ -130,6 +133,7 @@ def test_config_and_hash_are_frozen() -> None:
         raise AssertionError("invalid RSI count accepted")
 
 
+@pytest.mark.local_data
 def test_disabled_overlay_has_exact_v6_parity() -> None:
     adapter = load(ADAPTER_PATH, "test_v6_rsi_memory_adapter")
     context = adapter.load_context()

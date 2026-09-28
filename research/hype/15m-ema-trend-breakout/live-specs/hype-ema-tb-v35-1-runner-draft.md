@@ -2,17 +2,19 @@
 schema_version: "1.0"
 spec_role: lab_handoff
 family_id: HYPE-EMA-TB
-main_status: registered
-spec_status: draft
+main_status: dry-run
+spec_status: active
 strategy_id: HYPE-EMA-TB-V35.1
 runner_kind: hype_ema_tb
 peer_spec: crates/quant-runner/src/runner/strategies/hype_ema_tb/HYPE-EMA-TB-V35.1-SPEC.md
-approval_level_max: none
+approval_level_max: dry_run
+overlays:
+  - handoff
 ---
 
 # HYPE-EMA-TB-V35.1 Runner Handoff Draft
 
-> 状态：`registered / not promoted / not live-ready`。Runner 实现与离线 parity 已完成，但 promotion review 未通过；实例必须保持 `enabled=false`。本文不是 `live spec`，也不授权 dry-run 或 live。
+> 状态：`dry-run / not live-ready`。用户于 2026-08-04 授权 quant-runner 实例 `hype-ema-tb-v35-1-dry-run`（lock `enabled_allowed=true`、`approval_level=dry_run`）。promotion review 未通过，不授权 live。
 
 ## 身份与边界
 
@@ -79,7 +81,7 @@ approval_level_max: none
 ```toml
 [[strategies]]
 name = "hype-ema-tb-v35-1-dry-run"
-enabled = false
+enabled = true
 group = "dryrun"
 kind = "hype_ema_tb"
 mode = "dry_run"
@@ -102,7 +104,7 @@ live_confirm = false
 - Gate 1：V35 全参数消融可继承，且 V35.1 仅删除经逐笔等价证明的冗余条件。
 - Gate 3 blocker：既有消融明确判定 `adx_window`、`long_adx_min`、`adx_exit`、`hard_stop_atr`、`atr_window`、`disable_after_mfe_atr` 等多数核心参数位于尖峰；按现行规则不得推进 `live spec`。
 - 仍缺 Gate 0 超额收益正式报告、Gate 2 OOS/CPCV、Gate 4 执行压力、Gate 5 真实 1m 相位，以及完整 live-executable promotion review。
-- Online open/close reconciliation：未开始；只有真正进入 dry-run 后才能用 runner-tracking 证据满足。
+- Online open/close reconciliation：dry-run 已于 2026-08-04 授权；线上开平仓对账尚未完成。
 - live blocker：当前条件保护单使用 `MARK_PRICE`，研究 TP/SL 为 trade-price OHLC；funding、真实滑点、保护单 working type、重启与拒单故障注入均未关闭。
 
 ## 双向链接

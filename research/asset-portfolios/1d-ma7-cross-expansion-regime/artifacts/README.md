@@ -1,0 +1,27 @@
+# Artifacts
+
+P0 产物前缀：`binance_1d_ma7_cer_p0_`。
+
+- [config](binance_1d_ma7_cer_p0_config.json)
+- [contract lock](binance_1d_ma7_cer_p0_contract_lock.json)
+- [input inventory](binance_1d_ma7_cer_p0_input_inventory.json)
+- [data audit](binance_1d_ma7_cer_p0_data_audit.json)
+- [event parity](binance_1d_ma7_cer_p0_event_parity.json)
+- [outcomes](binance_1d_ma7_cer_p0_outcomes.parquet)
+- [placebo outcomes](binance_1d_ma7_cer_p0_placebo_outcomes.parquet)
+- [main effects](binance_1d_ma7_cer_p0_main_effects.csv)
+- [year breakdown](binance_1d_ma7_cer_p0_year_breakdown.csv)
+- [event-time study](binance_1d_ma7_cer_p0_event_time_study.parquet)
+- [bootstrap](binance_1d_ma7_cer_p0_bootstrap.parquet)
+- [summary](binance_1d_ma7_cer_p0_summary.json)
+- [manifest](binance_1d_ma7_cer_p0_manifest.json)
+- [chart 01 max abs excursion](binance_1d_ma7_cer_p0_chart_01_max_abs_excursion.svg)
+- [chart 02 future range](binance_1d_ma7_cer_p0_chart_02_future_range.svg)
+- [chart 03 realized vol expansion](binance_1d_ma7_cer_p0_chart_03_realized_vol_expansion.svg)
+- [chart 04 path efficiency](binance_1d_ma7_cer_p0_chart_04_path_efficiency.svg)
+- [chart 05 terminal displacement](binance_1d_ma7_cer_p0_chart_05_terminal_displacement.svg)
+- [chart 06 event-time volatility](binance_1d_ma7_cer_p0_chart_06_event_time_volatility.svg)
+- [chart 07 event-time range](binance_1d_ma7_cer_p0_chart_07_event_time_range.svg)
+- [chart 08 pre/post expansion ratio](binance_1d_ma7_cer_p0_chart_08_prepost_expansion_ratio.svg)
+- [chart 09 yearly effect](binance_1d_ma7_cer_p0_chart_09_yearly_effect.svg)
+- [chart 10 up/down Cross](binance_1d_ma7_cer_p0_chart_10_up_down_cross.svg)

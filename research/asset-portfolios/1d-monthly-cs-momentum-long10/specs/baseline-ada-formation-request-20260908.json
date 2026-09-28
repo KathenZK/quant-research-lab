@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "bundle_id": "binance.v3.research_inputs.v2",
+  "bundle_path": "research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2.json",
+  "bundle_sha256": "d2a729d03be71d67aa9c5522fb242bbf010b6c64400233c27d9cb2406f567008",
+  "mode": "price_diagnostic",
+  "timeframe": "15m",
+  "symbols": ["ADA/USDT:USDT"],
+  "start": "2020-01-31T00:00:00Z",
+  "end": "2020-04-01T00:30:00Z",
+  "gap_policy": "contiguous_segments",
+  "asset_policy": "observed_mixed_diagnostic",
+  "backward_bars": 1,
+  "forward_bars": 0
+}

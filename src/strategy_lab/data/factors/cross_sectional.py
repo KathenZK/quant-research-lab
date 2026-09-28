@@ -24,12 +24,40 @@ class RelativeStrengthFactor(PandasFactor):
             market_types=("spot", "perp"),
             description="Asset trailing return minus benchmark trailing return.",
             cross_sectional=True,
+            formula=f"({price_column}[t]/{price_column}[t-{periods}]-1) - "
+                    f"({benchmark_column}[t]/{benchmark_column}[t-{periods}]-1)",
+            direction="higher_is_stronger",
         )
 
     def compute(self, frame: pd.DataFrame) -> pd.Series:
-        asset_return = frame[self.price_column].pct_change(self.periods)
-        benchmark_return = frame[self.benchmark_column].pct_change(self.periods)
-        return asset_return - benchmark_return
+        """Trailing excess return is a time-series transform before any ranking.
+
+        A multi-asset panel must never connect two instruments or two known
+        discontinuous research segments. Preserve the caller's row/index order.
+        Without an explicit time column, rows are assumed already ordered.
+        """
+        if isinstance(self.periods, bool) or not isinstance(self.periods, int) or self.periods < 1:
+            raise ValueError("periods must be a positive integer")
+        working = frame.copy().reset_index(drop=True)
+        keys = [k for k in ("exchange", "symbol", "market_type", "timeframe", "research_segment_id")
+                if k in working.columns]
+        if keys and working[keys].isna().any().any():
+            raise ValueError("missing instrument/segment identity")
+        if "ts" in working.columns:
+            ts = pd.to_datetime(working.ts, errors="raise", utc=True)
+            if ts.isna().any() or working.assign(ts=ts).duplicated([*keys, "ts"]).any():
+                raise ValueError("missing or duplicate factor timestamp")
+            working["ts"] = ts
+        groups = working.groupby(keys, sort=False, dropna=False) if keys else [(None, working)]
+        result = pd.Series(float("nan"), index=working.index, dtype=float)
+        for _, group in groups:
+            if "ts" in group.columns and not group.ts.is_monotonic_increasing:
+                raise ValueError("factor rows must be chronological within each instrument/segment")
+            asset_return = group[self.price_column].pct_change(self.periods, fill_method=None)
+            benchmark_return = group[self.benchmark_column].pct_change(self.periods, fill_method=None)
+            result.loc[group.index] = asset_return - benchmark_return
+        result.index = frame.index
+        return result
 
 
 @register_factor_provider()

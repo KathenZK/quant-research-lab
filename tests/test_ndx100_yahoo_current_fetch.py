@@ -17,6 +17,7 @@ MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
 
 
+@pytest.mark.local_data
 def test_current_snapshot_is_explicitly_survivorship_biased() -> None:
     config = MODULE.load_config()
     universe = MODULE.current_universe()
@@ -79,6 +80,7 @@ def test_parse_chart_reconstructs_split_only_prices_without_adj_close() -> None:
     assert audit["dividend_event_count"] == 1
 
 
+@pytest.mark.local_data
 def test_completed_yahoo_audit_has_no_hard_price_blocker() -> None:
     audit_path = FAMILY_DIR / "artifacts/ndx100_1d_ma7_rc_y0_yahoo_price_audit.json"
     audit = json.loads(audit_path.read_text(encoding="utf-8"))

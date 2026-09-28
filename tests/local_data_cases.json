@@ -1,0 +1,842 @@
+{
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_all_preprocessors_are_fit_on_training_only": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_allowlist_is_the_only_model_feature_source": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_every_fold_has_exact_purge_and_no_terminal_selection": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_hype_is_zero_everywhere_and_hyper_is_preserved": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_input_manifest_and_p1_manifest_hashes_are_complete": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_oof_identity_is_unique_and_fold_dates_are_exact": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_outputs_are_diagnostic_not_strategy_or_live_artifacts": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_paired_bootstrap_uses_shared_indices_per_target": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_summary_metrics_reconcile_to_predictions_and_fold_metrics": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_catl_p1_donor_walk_forward_modeling.py::test_target_specific_eligibility_matches_prediction_counts": {
+    "input": "research/asset-portfolios/1d-cross-asset-trend-lifecycle/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_alta_p1.py::test_retained_terminal_result_and_hype_lock": {
+    "input": "research/asset-portfolios/1d-ma7-asset-local-temporal-audit/artifacts/p1_temporal_audit_2026-08-10/p1_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_atr_anchor_is_event_time_only": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_bh_family_is_pre_registered_5d": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_block_bootstrap_keeps_date_clusters": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_canonical_cross_identity_aligns_with_p5": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_date_matching_uses_cross_date_weights": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_event_time_t0_boundary": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_hype_raw_partition_not_read": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_hype_rows_zero_hyper_present": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_manifest_hashes_match_files": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_no_ml_and_no_equity": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_no_strategy_equity_or_directional_success_label": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_placebo_contains_no_cross": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_primary_horizon_is_fixed_5d": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_required_outputs_exist": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_secondary_horizons_do_not_replace_primary": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_status_remains_explore": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_cer_p0_direction_agnostic_expansion_audit.py::test_volatility_matching_uses_prior_state": {
+    "input": "research/asset-portfolios/1d-ma7-cross-expansion-regime/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_all_training_rows_are_ma7_crosses_with_one_side_per_asset_ts": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_allowlist_and_event_t0_and_t1_contract": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_every_fold_has_exact_purge_and_2025_is_not_used_for_selection": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_hype_zero_everywhere_and_hyper_preserved": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_input_manifest_hashes_match_and_hype_is_excluded": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_oof_is_unique_and_heads_do_not_share_wrong_sides": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_outputs_are_diagnostic_not_strategy_or_live_artifacts": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_paired_bootstrap_uses_shared_indices": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_summary_metrics_reconcile_to_predictions_and_fold_metrics": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_system_year_gate_detects_combined_direction_flip": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_t1_features_are_strict_prior_day_lags": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p1_cross_conditioned_entry_model.py::test_training_and_validation_metrics_exist_together": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_original_p3_remains_data_block_not_ready": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_contract_lock_precedes_label_read": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_feature_arrays_match_original_p3_exactly": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_feature_spec_has_no_forbidden_x_fields": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_manifest_hashes_match_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_oof_has_unique_keys_and_no_2025_or_hype_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_purge_and_forward_calibration_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p3r_time_boundary_repair.py::test_p3r_strict_sample_and_isolation_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_all_candidates_same_samples_purge_and_preprocessing_contract_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_bootstrap_same_draw_and_manifest_hashes_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_candidate_feature_sets_are_exact_and_preregistered": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_contract_lock_status_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_factor_group_spec_builds_before_label_read_and_matches_p2_f1": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_forbidden_fields_never_enter_x": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_forward_calibration_uses_only_prior_folds_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_p2_p3_p3r_files_are_not_overwritten_by_p4_outputs": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_p4_did_not_generate_strategy_or_live_ready_artifacts_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_strict_sample_time_gate_and_isolation_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_summary_compression_checks_include_final_asset_holdout_results_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_time_asset_holdout_excludes_target_group_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p4_core_factor_ablation_compression.py::test_top10_is_fold_relative_and_oof_keys_unique_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_2025_plus_not_used_for_training_calibration_or_thresholds_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_bootstrap_draws_shared_json_parquet_markdown_verdict_consistency_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_d1_d2_d3_purge_and_2025_prediction_keys_unique_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_feature_spec_and_contract_lock_are_frozen_before_label_reads_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_forward_calibration_uses_only_labels_completed_before_each_fold_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_frozen_threshold_uses_one_probability_space_and_matches_saved_decisions_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_p5_candidate_feature_counts_and_p4_b0_reproduction": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_p5_data_audit_hype_hyper_tradfi_and_strict_sample_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p5_oscillator_weekly_validation.py::test_weekly_causality_manifest_and_no_forbidden_outputs_after_run": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private research run manifests, panels and model outputs."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_01_hype_rows_strictly_zero": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_02_hyper_is_retained": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_03_tradfi_without_main_score_excluded_from_main_results": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_04_2025_2026_sample_counts_match_frozen_anchors": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_05_raw_score_reconstruction_matches_frozen_predictions": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_06_fixed_threshold_is_strictly_frozen": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_07_main_bin_boundaries_are_from_development_oof_only": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_08_no_2025_or_2026_optimized_threshold_is_emitted": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_09_2025_and_2026_use_same_fixed_bins": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_10_calibrated_probability_is_frozen_p5_platt": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_11_no_2025_2026_calibrator_fit_claim": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_12_bootstrap_seed_and_replicate_count": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_13_bootstrap_paired_replicate_metadata_present": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_16_composition_identity_holds": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_17_feature_contribution_sum_restores_model_logit": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_18_reconstructed_probability_error_below_threshold": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_19_manifest_hashes_are_correct": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_20_manifest_excludes_self": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_21_document_summary_sync": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_22_status_stays_diagnostic_not_live_ready": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_23_no_strategy_equity_sharpe_or_trade_path_html_outputs": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7_temporal_drift_calibration_decomposition.py::test_24_contract_lock_status_frozen_before_p7_decomposition": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_barrier_and_timeout_do_not_mutate_canonical_main_result": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_block_bootstrap_keeps_date_clusters_and_paired_replicates": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_canonical_entry_atr_and_label_align": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_canonical_event_ids_align_with_p5": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_date_matched_placebo_uses_real_cross_date_weights": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_does_not_modify_p0_p7_frozen_artifacts_or_shared_docs": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_hype_raw_partition_not_read": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_hype_rows_zero_hyper_present": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_hypothetical_long_short_share_entry_and_path": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_ma7_side_uses_event_day_close_vs_sma7": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_momentum_side_uses_known_ret_1d": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_monte_carlo_seeds_and_tolerance": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_no_ml_models_or_equity_curve": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_non_cross_candidates_contain_no_ma7_cross": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_p7a_does_not_read_p7_artifacts_as_input": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_random_side_exact_expectation_formula": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_real_ma7_event_counts_match_frozen_anchors": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_required_outputs_exist": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_research_id_config_hash_and_manifest": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7a_placebo_base_rate_audit.py::test_status_remains_explore_diagnostic_only": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_2025_plus_marked_reused_diagnostic": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_bh_families": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_block_bootstrap_keeps_date_clusters_and_paired_replicates": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_bull_and_bear_drift_not_credited_to_ma7": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_bull_bear_thresholds_frozen": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_date_matching_uses_cross_date_weights": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_does_not_overwrite_p0_p7a_or_shared_docs": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_hype_raw_partition_not_read": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_hype_rows_zero_hyper_present": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_hypothetical_long_short_match_p7a": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_manifest_hash_and_p7b_prefix": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_no_b0_ml_or_equity": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_non_cross_candidates_have_no_cross": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_p6_regime_parity": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_p7a_canonical_event_identity": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_regime_does_not_use_future_information": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_required_outputs_exist": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_six_grid_frozen": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_ctp_p7b_regime_conditional_direction_placebo_audit.py::test_status_remains_diagnostic_only": {
+    "input": "research/asset-portfolios/1d-ma7-cross-trend-probability/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_binance_1d_ma7_shared_v1_long_history.py::test_frozen_p0_hashes_match_manifest": {
+    "input": "data/features/binance_1d_ma7_rsi6_dapml_p0/btcusdt_perp_1h.parquet",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_binance_1d_ma7_tfml_p1e.py::test_retained_p0e_inputs_fail_closed_on_lost_generator_source": {
+    "input": "data/cache/binance_1d_ma7_tfml_p0_unaccepted/xrpusdt_perp_5m_taker_flow.parquet",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_binance_4h_ma7_regime_continuation_p0r_gap_guard.py::test_frozen_gap_guard_hashes_and_parents_unchanged": {
+    "input": "research/asset-portfolios/4h-ma7-regime-continuation/artifacts/",
+    "reason": "Retained private run outputs or fixture manifest required by this specific audit."
+  },
+  "tests/test_hype_1d_ma7_abt_v7_1_oapp_rebound_reset.py::test_rr_incident_switch_prevents_august_16_exit_but_is_terminal_censored": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_abt_v7_1_oapp_zero_profit_floor.py::test_zero_profit_floor_fails_canonical_return_and_drawdown_gates": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_ctls_r6_intraday_context.py::test_btc_file_hash_is_nonempty_and_deterministic": {
+    "input": "data/features/btcusdt_1h_stop_path_v1/btcusdt_perp_1h.parquet",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p0.py::test_locked_artifacts_match_frozen_champions_and_validation": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p0_365d_train_validation_2026-08-27_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p0.py::test_trade_path_contains_every_ml_and_rule_trade": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p0_365d_train_validation_2026-08-27_trade_paths.html",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p3_purged_cross_survival.py::test_development_manifest_is_train_only_and_hashed": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p3_purged_cross_survival_2026-08-27_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p3_purged_cross_survival.py::test_exact_cross_events_are_one_row_per_cross": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p3_purged_cross_survival.py::test_selected_blocks_and_validation_are_frozen_consistently": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p3_purged_cross_survival_2026-08-27_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p3_purged_cross_survival.py::test_training_labels_do_not_cross_training_boundary": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_clone_training_labels_stop_inside_first_365_days": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_clone_predictions.csv",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_development_manifest_is_hashed_and_holdout_gated": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_overlay_keeps_teacher_entries_and_one_x_leverage": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_validation_teacher_trades.csv",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_recent_slice_audit_has_terminal_parity_and_hash": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_recent_slices.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_training_fit_and_oof_are_reported_separately": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_development_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_v7_1_comparison_html_is_complete_and_interactive": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_v7_1_comparison_trade_paths.html",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual.py::test_validation_is_frozen_failure_against_v7_1": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p4_v7_1_behavior_clone_residual_2026-08-27_validation_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p5_opportunity_repair_lifecycle.py::test_development_loader_is_physically_train_only": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_development_artifacts_match_frozen_hashes": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle_2026-08-28_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_development_context_is_physically_train_only": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_exported_trade_returns_are_complete_and_match_summary": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle_2026-08-28_development_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_failed_development_manifest_keeps_holdout_locked": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle_2026-08-28_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_future_labels_end_inside_training_boundary": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle_2026-08-28_entry_rows.csv",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle.py::test_reported_oof_and_confirmation_failure_are_reproducible": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p6_v7_anchor_three_head_lifecycle_2026-08-28_development_summary.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p7_cross_asset_survival_overlay.py::test_development_artifacts_match_frozen_hashes": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p7_cross_asset_survival_overlay_2026-08-28_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p7_cross_asset_survival_overlay.py::test_development_context_is_physically_train_only": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p7_cross_asset_survival_overlay.py::test_donor_pool_excludes_hype_and_reported_metrics_are_reproducible": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p7_cross_asset_survival_overlay_2026-08-28_donor_survival_rows.csv",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_mlt_p7_cross_asset_survival_overlay.py::test_failed_development_manifest_keeps_holdout_locked": {
+    "input": "research/hype/1d-ma7-machine-learning-trend/artifacts/hype_1d_ma7_mlt_p7_cross_asset_survival_overlay_2026-08-28_development_manifest.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_profit_exit_handoff_continuity_engine.py::test_disabled_pehc_is_exact_fixed_oapp_parity_on_real_book": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_profit_exit_handoff_continuity_engine.py::test_old_h_expiry_boundary_and_execution_timing_are_exact": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_profit_exit_handoff_continuity_engine.py::test_real_candidate_creates_isolated_shadow_events": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_profit_exit_handoff_continuity_engine.py::test_shadow_only_control_changes_no_funded_path": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_equity_drawdown_governor_stage_d.py::test_artifact_sha256_sidecar": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_equity_drawdown_governor_stage_d_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_equity_drawdown_governor_stage_d.py::test_control_parity_and_no_continuation_candidate": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_equity_drawdown_governor_stage_d_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_equity_drawdown_governor_stage_d.py::test_mdd20_arms_are_stuck_at_low_risk_and_fail_retention": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_equity_drawdown_governor_stage_d_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_hard_stop_stage_c.py::test_artifact_sha256_sidecar": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_hard_stop_stage_c_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_hard_stop_stage_c.py::test_latest_august_long_is_preserved": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_hard_stop_stage_c_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_hard_stop_stage_c.py::test_locked_artifact_has_exact_ma05_parity": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_hard_stop_stage_c_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_hard_stop_stage_c.py::test_no_hard_stop_arm_passes_mdd20_or_candidate_gate": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_hard_stop_stage_c_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_probe_sizing_stage_b.py::test_artifact_sha256_sidecar": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_probe_sizing_stage_b_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_probe_sizing_stage_b.py::test_dynamic_promotions_fail_lag_and_candidate_gate": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_probe_sizing_stage_b_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_probe_sizing_stage_b.py::test_fixed_half_is_only_mdd20_pass_but_fails_retention": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_probe_sizing_stage_b_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_ma05_probe_sizing_stage_b.py::test_locked_artifact_has_exact_ma05_parity": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_ma05_probe_sizing_stage_b_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_risk_overlay_oat.py::test_artifact_sha256_sidecar": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_risk_overlay_oat_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_risk_overlay_oat.py::test_latest_august_trade_is_preserved_except_fail_fast": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_risk_overlay_oat_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_risk_overlay_oat.py::test_locked_artifact_control_parity_and_verdict": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_risk_overlay_oat_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_trend_first_discovery.py::test_artifact_sha256_sidecars": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_trend_first_discovery_audit_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_trend_first_discovery.py::test_control_parity_and_cross_audit_are_complete": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_trend_first_discovery_audit_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_trend_first_discovery.py::test_ema50_filter_still_fails_latest_continuity_and_capture": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_trend_first_discovery_audit_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_trend_first_discovery.py::test_naked_control_preserves_latest_trend_through_raw_recrosses": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_trend_first_discovery_audit_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_snc02_trend_first_discovery.py::test_unfiltered_csm_recovers_opportunities_but_breaks_trend_gate": {
+    "input": "research/hype/1d-ma7-asymmetric-body-trend/artifacts/hype_1d_ma7_snc02_trend_first_discovery_audit_2026-08-20.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_symmetric_naked_cross_slope.py::test_august_08_is_exact_symmetric_long_signal": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_symmetric_naked_cross_slope.py::test_extended_naked_path_catches_august_trend_but_fails_mdd": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_all_off_is_exact_v4_on_development": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_all_sources_compile_without_candidate_performance": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_exact_v4_chronological_replay_has_full_ledger_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_funding_off_candidate_replay_has_full_ledger_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_leverage_grid_and_dynamic_formula_are_capped": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk.py::test_target_quantity_matches_exact_one_x_kernel": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_trend_phase_risk_research.py::test_self_test_does_not_create_performance_artifacts": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_fair_adapter.py::test_context_is_cached_and_pinned": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_fair_adapter.py::test_explicit_full_baseline_anchor": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_fair_adapter.py::test_frozen_market_and_v4_configs_do_not_drift": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_fair_adapter.py::test_run_v4_supports_a_bounded_window_without_full_verification": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_pft_engine.py::test_a000_is_economically_identical_to_exact_v4_on_development": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v4_pft_engine.py::test_all_eight_sources_compile_without_running_candidate_history": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_missed_trend_attribution.py::test_custom_core_replay_matches_exact_v6": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_missed_trend_attribution.py::test_full_payload_is_causal_and_internally_valid": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_rsi6_memory_cross_engine.py::test_disabled_overlay_has_exact_v6_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_structural_sizing_engine.py::test_long_probe_promotion_replay_has_full_ledger_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_structural_sizing_engine.py::test_structural_control_has_exact_v6_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_v6_transition_repair_engine.py::test_transformed_global_off_has_exact_v6_parity": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_wide_trend_lifecycle_engine.py::test_all_off_compiles_and_is_exact_v4_on_exposed_d": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_hype_1d_ma7_wide_trend_lifecycle_engine.py::test_leverage_grid_and_three_x_cap": {
+    "input": "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=1h",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_ndx100_1d_ma7_regime_continuation.py::test_membership_reconstruction_has_expected_integrity_and_corporate_actions": {
+    "input": "research/us-indexes/1d-nasdaq100-ma7-regime-continuation/artifacts/ndx100_1d_ma7_rc_p0_membership_daily.parquet",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_ndx100_yahoo_current_fetch.py::test_completed_yahoo_audit_has_no_hard_price_blocker": {
+    "input": "research/us-indexes/1d-nasdaq100-ma7-regime-continuation/artifacts/ndx100_1d_ma7_rc_y0_yahoo_price_audit.json",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  },
+  "tests/test_ndx100_yahoo_current_fetch.py::test_current_snapshot_is_explicitly_survivorship_biased": {
+    "input": "research/us-indexes/1d-nasdaq100-ma7-regime-continuation/artifacts/ndx100_1d_ma7_rc_p0_membership_daily.parquet",
+    "reason": "Private data lake or retained run artifact; not distributed in the Git checkout."
+  }
+}

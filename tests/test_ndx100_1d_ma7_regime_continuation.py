@@ -90,6 +90,7 @@ def test_access_audit_requires_a_2010_daily_anchor(
     assert historical["result_count"] == 0
 
 
+@pytest.mark.local_data
 def test_membership_reconstruction_has_expected_integrity_and_corporate_actions() -> None:
     membership = pd.read_parquet(
         FAMILY_DIR / "artifacts/ndx100_1d_ma7_rc_p0_membership_daily.parquet"
@@ -153,6 +154,7 @@ def test_y1_mapping_prefers_direct_then_unique_entity_lineage() -> None:
     assert pd.isna(mapped["source_ticker"].iloc[2])
 
 
+@pytest.mark.local_data
 def test_y1_historical_yahoo_coverage_fails_closed() -> None:
     audit_path = FAMILY_DIR / "artifacts/ndx100_1d_ma7_rc_y1_coverage_audit.json"
     if not audit_path.exists():
@@ -191,6 +193,7 @@ def test_y2_transfer_mask_keeps_only_crypto_selected_directional_cells() -> None
     assert Y2_MODULE.transfer_mask(frame).tolist() == [True, False, True, False]
 
 
+@pytest.mark.local_data
 def test_y2_completed_result_rejects_stable_cross_market_optimization() -> None:
     summary_path = FAMILY_DIR / "artifacts/ndx100_1d_ma7_rc_y2_summary.json"
     if not summary_path.exists():
@@ -239,6 +242,7 @@ def test_y3_named_state_masks_encode_recovery_and_distribution_paths() -> None:
     assert masks["S03_RALLY_DISTRIBUTION"].tolist() == [False, True]
 
 
+@pytest.mark.local_data
 def test_y3_generated_atlas_finds_recovery_structure_but_no_short_state() -> None:
     summary_path = FAMILY_DIR / "artifacts/ndx100_1d_ma7_rc_y3_summary.json"
     if not summary_path.exists():

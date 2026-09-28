@@ -1,0 +1,7 @@
+{
+  "frozen_at_utc": "2026-09-08T02:24:34.148498+00:00",
+  "scope": "Implementation details fixed before reading return summaries; complements, does not replace original contract",
+  "fold_purge": "For each feature audit period keep trades entered in that period only when natural exit also occurred strictly before its end; report removed cross-boundary labels. No feature thresholds fitted.",
+  "month_adjusted_effect": "Also report harmonic-count-weighted difference between feature groups within same entry month; exploratory market-timing confounding check, no causal identification.",
+  "censoring_sensitivity": "Natural exits remain primary. Report full-period feature mean differences including endpoint valuation labels separately to expose terminal-censoring sensitivity."
+}

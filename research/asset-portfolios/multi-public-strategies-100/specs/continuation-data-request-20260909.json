@@ -1,0 +1,14 @@
+{
+  "round": "PUBLIC100_CONTINUATION_R2",
+  "data_status": "raw_unaccepted; explicit diagnostic use only",
+  "cutoff": "2026-09-01T00:00:00Z",
+  "coinbase": {"product": "BTC-USD", "granularity": 900, "start": "2017-01-01T00:00:00Z", "end": "2026-09-01T00:00:00Z", "max_candles_per_request": 300},
+  "yahoo": [
+    {"symbol": "SPY", "interval": "60m", "start": "2024-10-01T00:00:00Z", "end": "2026-09-01T00:00:00Z"},
+    {"symbol": "SPY", "interval": "5m", "start": "2026-07-15T00:00:00Z", "end": "2026-09-01T00:00:00Z"},
+    {"symbol": "IWM", "interval": "5m", "start": "2026-07-15T00:00:00Z", "end": "2026-09-01T00:00:00Z"},
+    {"symbol": "IYR", "interval": "5m", "start": "2026-07-15T00:00:00Z", "end": "2026-09-01T00:00:00Z"}
+  ],
+  "funding": {"symbols": ["BTCUSDT", "ETHUSDT"], "start": "2024-05-01T00:00:00Z", "end": "2026-09-01T00:00:00Z", "crosscheck": "official monthly archive including native funding interval versus paginated official API including markPrice"},
+  "constraints": ["No changes to old datasets or results", "Keep every raw response and SHA256", "Store per UTC date with real exchange identity", "No fabricated native fields or normalized publication", "Only data availability and quality may change the usable data scope; no return-based window selection"]
+}

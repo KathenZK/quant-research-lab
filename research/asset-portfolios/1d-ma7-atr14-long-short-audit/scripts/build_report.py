@@ -1,0 +1,180 @@
+"""Chinese report from retained, matched ablation tables."""
+from pathlib import Path
+import argparse, json
+import pandas as pd
+from analyze import NAMES
+
+ROOT=Path(__file__).resolve().parents[1]
+ORDER=list(NAMES)
+
+
+def pct(x):
+    return '—' if pd.isna(x) else f'{x:+.2f}%'
+
+
+def table(headers,rows):
+    return '\n'.join(['| '+' | '.join(headers)+' |','| '+' | '.join(['---']*len(headers))+' |']+['| '+' | '.join(map(str,r))+' |' for r in rows])
+
+
+def build():
+    parser=argparse.ArgumentParser();parser.add_argument('--run-id',default='20260908-r1');args=parser.parse_args()
+    out=ROOT/'artifacts'/args.run_id
+    stats=pd.read_csv(out/'cohort-statistics.csv');pairs=pd.read_csv(out/'paired-comparisons.csv')
+    refs=pd.read_csv(out/'reference-coins.csv');strength=pd.read_csv(out/'realized-strength-groups.csv')
+    summary=json.loads((out/'summary.json').read_text());cohort=stats.loc[stats.cohort.eq('main_full')].set_index('variant')
+    def comp(key):
+        a=stats.loc[stats.cohort.eq(key)].set_index('variant')
+        return table(['版本','样本数','盈利币数 / 比例','收益中位数','最大回撤中位数','交易数中位数','本金耗尽数'],
+            [[NAMES[v],int(a.loc[v,'n']),f"{a.loc[v,'profitable']:.0f} / {a.loc[v,'profitable_pct']:.2f}%",pct(a.loc[v,'median_return_pct']),f"{a.loc[v,'median_mdd_pct']:.2f}%",f"{a.loc[v,'median_trades']:.0f}",int(a.loc[v,'bankrupt'])] for v in ORDER])
+    def matrix(key,value):
+        a=stats.loc[stats.cohort.eq(key)].set_index('variant')
+        return [pct(a.loc[v,value]) for v in ORDER]
+    annual=[]
+    for y in range(2020,2027):
+        a=stats.loc[stats.cohort.eq(str(y))].iloc[0]
+        annual.append([f'{y}'+(' 至9月4日' if y==2026 else ''),int(a['n']),pct(a.median_buyhold_pct),*matrix(str(y),'median_return_pct')])
+    reference=[];reference_risk=[]
+    for coin in ['BTC','ETH','SOL','BNB','UNI','ARB','LIT','HYPE','ZEC']:
+        a=refs.loc[refs.coin.eq(coin)].set_index('variant');r=a.loc['long']
+        reference.append([coin,f'{r.start} ～ {r.end}',pct(r.buyhold_return_pct),*[pct(a.loc[v,'return_pct']) for v in ORDER]])
+        reference_risk.append([coin,*[f"{a.loc[v,'mdd_pct']:.2f}%" for v in ORDER]])
+    strengths=[]
+    for w in ['main_full','2021','2022','2024','2025','2026']:
+        for label,g in strength.loc[strength.window.eq(w)].groupby('buyhold_bin',sort=False):
+            a=g.set_index('variant');r=a.loc['long']
+            strengths.append([w,label,int(r['n']),pct(r.median_buyhold_pct),*[pct(a.loc[v,'median_return_pct']) for v in ORDER]])
+    pairrows=[]
+    for _,r in pairs.loc[pairs.cohort.eq('main_full')].iterrows():
+        pairrows.append([f'{NAMES[r.variant]} 对 {NAMES[r.baseline]}',f'{r.improved:.0f}/{r.n:.0f}（{r.improved_pct:.2f}%）',f'{r.median_return_delta_pp:+.2f} 个百分点',int(r.turned_profitable),int(r.lost_profitability)])
+    costs=[]
+    for v in ORDER:
+        a=cohort.loc[v];costs.append([NAMES[v],pct(a.gross_median_return_pct),pct(a.median_return_pct),pct(a.stress_median_return_pct)])
+    decomp=pd.read_csv(out/'main-trade-decomposition.csv')
+    side_rows=[]
+    for _,r in decomp.iterrows():
+        side_rows.append([NAMES[r.variant],'多' if r.side==1 else '空',int(r['n']),f'{r.win_rate_pct:.2f}%',pct(r.mean_win_pct),pct(r.mean_loss_pct),pct(r.mean_trade_pct),int(r.reverse_exits)])
+    quality=[]
+    for key in ['main_full','main_full_clean','main_all_coin','main_all_coin_clean','main_unknown']:
+        a=stats.loc[stats.cohort.eq(key)]
+        if a.empty:continue
+        quality.append([key,int(a.iloc[0]['n']),*matrix(key,'median_return_pct')])
+    report=f'''# MA7–ATR14：对称做空与反手审计
+
+研究日期：2026-09-08。市场：Binance USDT 永续，UTC 日线。状态：`explore / diagnostic-only / not promoted / not live-ready`。
+
+## 结论
+
+用户指出的多头方向偏向成立：2022、2025 这两个样本普遍下跌的年份，对称只做空收益中位数分别为 +20.58%、+30.38%。主窗口完整 244 币只做空盈利 161 个（65.98%），收益中位数 +22.57%；因此不能用原版只做多的失败概括空头也无效。
+
+但直接合并多空仍未形成通用盈利策略：双向等待止损中位数 −41.05%，信号反手 −53.13%。反手相对等待止损仅改善 96/244 个币（39.34%）。它在 2024 年有所帮助，在 2022、2023、2025 年却更差，尚无跨年稳定优势。
+
+原多头对事后大涨的币更有利：2021 年涨幅至少 100% 的 49 个完整样本，原版收益中位数 +21.95%，但同期持币中位数 +296.75%，且原版仍有 19 个亏损。ZEC/HYPE 的大收益证明抓到了一些大波段，未证明牛市即可赚钱或能提前选出强势币。
+
+## 要回答的问题
+
+原版只做多，明显受上涨路径影响。用户要求检验强势币/牛市适用性，并增加对称做空和反手。四个版本在同一输入、同一窗口逐币配对，参数不搜索，旧结果保持冻结。以下是扣手续费和滑点的价格回测，不是资金费率齐全的净收益，也不是组合收益。
+
+## 四个版本怎样交易
+
+| 版本 | 空仓时 | 持仓遇到反向信号时 |
+| --- | --- | --- |
+| 原版只做多 | 只接多信号 | 继续多仓，等待 ATR 止损 |
+| 对称只做空 | 只接空信号 | 继续持有空单，等待 ATR 止损 |
+| 双向，等待止损 | 多空信号都可入场 | 忽略反向信号，先等原仓止损；空仓后等新信号 |
+| 双向，信号反手 | 多空信号都可入场 | 下一天开盘平原仓，用剩余权益开反向仓 |
+
+共同参数：SMA7、Wilder ATR14、1.5 倍 ATR、斜率阈值 0；第 15 根有效日线起才可能产生信号。多头要求昨日收盘严格低于昨日 MA7、今天严格高于 MA7 且 MA7 上升；空头完全镜像。等于均线不触发。多头止损 `MA7−1.5ATR` 只升不降；空头止损 `MA7+1.5ATR` 只降不升。
+
+收盘确认信号，下一天开盘成交；当天只能使用前一收盘已知的止损，入场当天也生效。旧止损若被开盘跳空触发先执行，然后才执行已计划的反手。反手平仓和开仓分别收费。**单纯触及止损不会自动反手；本轮的反手由反向穿越加斜率信号触发。**
+
+每币独立本金 1，入场名义金额约为权益 1 倍，持仓数量固定；退出后复利。空头按线性合约 `数量×(入场价−退出价)` 计盈亏，不能用反向价格比，也不能把两个独立多空账户收益相加。当经济权益耗尽时归零停机，跳空形成的未截断亏损另外保留；它不是交易所实际维持保证金强平模型。
+
+## 输入、覆盖和比较口径
+
+重新通过 Lab 的冻结组合 `binance.v3.research_inputs.v2` 读取全部 683 个显式历史代码：652 个观测 COIN、31 个 UNKNOWN。{summary['input_verified']} 个输入通过，{summary['usable_symbols']} 个有至少 30 根连续有效日线；主窗口有 {summary['main_symbols']} 个代码可回放。已结束的历史样本保留，缺口/零成交日会切段，不拼接仓位或指标。当前分类不证明完整历史身份/PIT。
+
+原始全历史范围是 2019-09-09 至 2026-09-04，最后日线收盘为 2026-09-05 00:00 UTC。主比较 2024-12-05 至 2026-09-04，244 个 COIN 都有完整 639 根日线。年度统计各年独立空仓/冷启动，2026 年到 9 月 4 日。每个年度的四版本使用完全相同的币；不同年度币数仍不同。每段第 15 根收盘最早发信号，第 16 根开盘最早成交。
+
+手续费每次成交 0.10%，不利滑点每次 0.04%；另保存零成本和滑点 0.08% 压力版本。各窗口末端强制按最后收盘估值并扣退出费用，`end_of_test` 不是策略逃顶信号，退市末端也不能保证可执行。回撤是每日收盘权益回撤，未覆盖所有盘中回撤。
+
+## 相同 244 币、相同 639 天
+
+{comp('main_full')}
+
+同币配对改善（收益相减，不是收益中位数之差）：
+
+{table(['比较','收益提高的币','逐币收益差中位数','从不盈利转盈利','从盈利转不盈利'],pairrows)}
+
+## 按年比较，区分下跌年与上涨年
+
+{table(['年份','相同币数','持币收益中位数',*[NAMES[v] for v in ORDER]],annual)}
+
+2020 年只有 3 个完整样本，不能据此概括全市场。2021 年持币中位数 +180.66%，原版收益却是 −1.84%：大幅上涨并不自动等于这套短均线进出规则能获利。2022、2025 的样本持币中位数都跌逾 80%，因此必须把做空的方向作用与入场/退出能力分开解释。
+
+## ZEC、HYPE 与指定七币
+
+以下按每币主窗口内最后一段有效历史，HYPE 和 LIT 明显更短，不能把收益直接当成同长度排行榜。HYPE 是 Binance 2025-05-31 起的数据，不混用早先 Hyperliquid 的回测；LIT 的旧/新有效段不连接。
+
+{table(['币','有效日期','持币',*[NAMES[v] for v in ORDER]],reference)}
+
+同批币对应的每日收盘最大回撤：
+
+{table(['币',*[NAMES[v] for v in ORDER]],reference_risk)}
+
+## 强势币问题：事后路径解释，不是提前选币证据
+
+下表只按这段历史实际持币涨幅分组，没有将它加入信号。它回答“已知后来大涨/大跌，哪种机制表现怎样”，不能回答“当时能不能挑出它”。ZEC/HYPE 都是用户已指出的历史赢家，不能充当未见验证样本。此前对入场前 MA60 趋势、30 日动量等条件的跨年诊断没有形成稳定选币规则；本轮不据四版本结果追加选币阈值。
+
+{table(['窗口','事后持币涨跌分组','币数','持币中位数',*[NAMES[v] for v in ORDER]],strengths)}
+
+## 交易损益如何组成
+
+主窗口完整 244 币，按实际交易方向分解。每笔算术平均收益只作账目描述，不可直接复利或视为组合收益；不同版本会改变多头和空头的进出时点，并非纯粹叠加一条收益曲线。
+
+{table(['版本','方向','交易数','胜率','平均盈利单','平均亏损单','每单算术均值','因反向信号退出数'],side_rows)}
+
+**等待止损的问题是持仓占用。** 原版 4,422 次多头入场中，有 2,471 次在双向等待版里因信号收盘时仍持有空单而没有同日对应入场。HYPE 的 11 次原多头入场有 7 次如此。它不是在保留所有原多头机会的基础上额外赚空头钱；双向版多头实际每单均值 −4.66%，空头 +2.35%，也不足以抵消多头亏损。
+
+**反手的问题是更频繁地截断和重开。** 原版多头有 4,421 次在反手版得到相同入场日，其中 2,437 笔因反向信号更早退出；既包括减少亏损，也包括提前截断盈利，不能一概称为逃顶成功。每币交易数中位数从原版 18 次、双向等待 22 次增至反手 50 次。反手版空头平均盈利单由双向等待的 +18.74% 缩小至 +14.23%，多头由 +18.73% 缩小至 +15.23%。亏损单也变小，但新增切换未带来稳定净改善。
+
+即使零手续费、零滑点，双向等待与反手的主窗口收益中位数仍分别为 −37.43%、−46.69%，不能只把失败归因于手续费。上述路径比较是账目描述，不是删单后可执行的反事实策略，详见[入场退出路径变更汇总](../artifacts/{args.run_id}/long-path-summary.csv)与[逐笔对应](../artifacts/{args.run_id}/long-path-changes.csv.gz)。
+
+## 成本、异常路径与覆盖敏感性
+
+主窗口完整 244 币的收益中位数：
+
+{table(['版本','零成本','手续费0.10%+滑点0.04%每边','手续费0.10%+滑点0.08%每边'],costs)}
+
+固定经济异常标记：相邻收盘倍率大于 4 或小于 1/4、日高/低大于 10、ATR/收盘大于 50%。保留原样本，也单独显示剔除标记段的敏感性；这不是证明数据有错，也不是可事前执行的过滤器。
+
+{table(['样本口径','币数',*[NAMES[v] for v in ORDER]],quality)}
+
+`main_full_clean` 是 244 币排除被标记段；`main_all_coin` 混合不同历史长度，仅供覆盖审计，不能替代主比较。所有发生经济本金耗尽的默认/零成本/压力回放都保留在[本金耗尽台账](../artifacts/{args.run_id}/bankruptcy-ledger.csv)，没有靠删掉爆仓币提升结果。
+
+资金费率没有被当成“已验证为零”。负资金费率时，空方可能向多方付费；真实强平还依赖标记价格和保证金，不能由本轮成交价日线模型完整还原。[Binance 资金费率说明](https://www.binance.com/en/support/faq/detail/360033525031)、[Binance 强平规则](https://www.binance.com/en-AU/support/faq/detail/360033525271)。Lab 当前组合的资金费率日历仅覆盖部分历史，长窗口/PIT 未通过净收益认证；因此做空收益的实盘可得性仍未验证。
+
+## 验证与复现
+
+共 {summary['variant_window_rows']:,} 个版本×分段窗口，含三种成本合计 {summary['cost_scenario_replays']:,} 次回放；窗口重叠，不能当成独立样本。每个多头窗口都对齐原冻结引擎和上一轮保留结果，最大权益绝对误差 {summary['max_baseline_nav_error']:.3g}。每个可用币的首个完整分段均完成四版本独立毛收益账本和前缀不变性核对；全部回放检查信号有效掩码、下一开盘成交、止损单调性、逐笔复利与归零停机。
+
+首次实现核对在 ARIA 毛收益空头的经济归零价格遇到 `0.7562000000000001` 与独立账本 `0.7562` 的浮点表示差异，权益误差 2.22e−16。初次失败保留；改为冻结合同的绝对价格容差 1e−10，时间/方向/交易数仍严格相等，经济逻辑未变。成功结果在独立 `20260908-r1` 目录，不覆盖初次证据。专项测试与文档检查共 28 项通过；没有以测试通过代替资金费率/实盘认证。
+
+本主题可信输入入口通过；仓库全局消费者扫描仍有 6 条其他研究主题已有的未登记读取错误，没有修改或掩盖它们。主题产物约 108 MiB，属于 B-review：保留成功回放的完整多空账本、前序失败证据、输入请求/指纹和最近切片，用于复核反手顺序与经济归零；仅保留本轮一份成功回放，不继续积累搜索版本，不加入普通 Git 大文件。
+
+本轮全部历史已经揭示，是新增机制的历史诊断，不是盲样本外。未做参数搜索、杠杆补救、挑选赢家或真实交易。最近 1/7/30/90/180/365 天切片保留原持仓，从当时收盘权益计算；本金此前已耗尽则记为不可计算，见[近期切片](../artifacts/{args.run_id}/recent-slices.csv.gz)。
+
+- [冻结数据与执行合同](../specs/contract-20260908.json)
+- [完整运行统计](../artifacts/{args.run_id}/summary.json)
+- [逐币主窗口四版本结果](../artifacts/{args.run_id}/main-symbol-results.csv)
+- [所有分段、年度及三成本结果](../artifacts/{args.run_id}/all-window-results.csv.gz)
+- [同币配对比较](../artifacts/{args.run_id}/paired-comparisons.csv)
+- [年度与各样本汇总](../artifacts/{args.run_id}/cohort-statistics.csv)
+- [逐币独立账本与原版核对](../artifacts/{args.run_id}/validation.json)
+- [输入与回放文件指纹](../artifacts/{args.run_id}/run-manifest.json)
+- [复现入口](../scripts/README.md)
+'''
+    path=ROOT/'diagnostics/report-20260908.md';path.write_text(report)
+    print(path)
+
+
+if __name__=='__main__':build()

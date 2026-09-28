@@ -35,6 +35,10 @@ def main() -> int:
     python = sys.executable
     steps = [
         (
+            "current research bundle contract (not local data readiness)",
+            [python, "scripts/governance/check_research_startup.py", "--contract-only"],
+        ),
+        (
             "standardized parity reports",
             [python, "scripts/governance/check_parity_report.py"],
         ),
@@ -43,8 +47,16 @@ def main() -> int:
             [python, "scripts/governance/validate_live_specs.py"],
         ),
         (
+            "promotion surface",
+            [python, "scripts/governance/check_promotion_surface.py"],
+        ),
+        (
             "live artifact budget",
             [python, "scripts/governance/check_artifact_inventory.py"],
+        ),
+        (
+            "tracked artifacts allowlist",
+            [python, "scripts/governance/check_tracked_artifacts.py"],
         ),
         (
             "trusted research consumers",
@@ -52,7 +64,16 @@ def main() -> int:
         ),
         (
             "research document consistency",
-            [python, "-m", "pytest", "-q", "tests/test_research_docs_consistency.py"],
+            [
+                python,
+                "-m",
+                "pytest",
+                "-q",
+                "tests/test_research_docs_consistency.py",
+                "tests/test_governance_live_specs.py",
+                "tests/test_render_runner_tracking.py",
+                "tests/test_research_bundle.py",
+            ],
         ),
     ]
     if not args.governance_only:
@@ -61,6 +82,20 @@ def main() -> int:
                 (
                     "data-layer contracts",
                     [python, "-m", "pytest", "-q", "tests/test_data_layer.py"],
+                ),
+                (
+                    "ohlcv governance contracts",
+                    [
+                        python,
+                        "-m",
+                        "pytest",
+                        "-q",
+                        "tests/test_ohlcv_dataset_governance.py",
+                        "tests/test_ohlcv_round2_governance.py",
+                        "tests/test_ohlcv_round3_governance.py",
+                        "tests/test_binance_4h_ma7_regime_continuation_p0r_data.py",
+                        "tests/test_trusted_consumers.py",
+                    ],
                 ),
                 (
                     "Python lint",

@@ -231,6 +231,7 @@ def test_oat_keep_only_and_neighbors_change_only_allowed_slots() -> None:
     assert any(row.long_exit.giveback == 0.50 for row in neighbors)
 
 
+@pytest.mark.local_data
 def test_all_off_compiles_and_is_exact_v4_on_exposed_d(context) -> None:
     config = ENGINE.WTLConfig("ALL_OFF")
     candidate = ENGINE.run_variant(
@@ -252,6 +253,7 @@ def test_all_off_compiles_and_is_exact_v4_on_exposed_d(context) -> None:
     ] == exact.path
 
 
+@pytest.mark.local_data
 def test_leverage_grid_and_three_x_cap(context) -> None:
     specs = ENGINE.leverage_specs()
     assert len(specs) == 9

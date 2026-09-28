@@ -1,0 +1,37 @@
+{
+  "utc": "2026-09-08T13:46:39.402842+00:00",
+  "role": "All computation frozen before first historical states/labels/results",
+  "files": {
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/README.md": "b395ca03c0e4e22341a5a544148f066763943665f029e8b1860cd66914db7637",
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/capture.py": "42585a7289aacdb8b6a3727fcc575ec8b97294bcd70912fbf713799ef91dc351",
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/engine.py": "d35573cd0c6f83b63f353cd078a9499118ce23aebc89b748b5f6ea21572dd677",
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/statistics.py": "fcc4bc2aaf791998f8079abc5cd38aa86811a911e74ff8854ed29610cb7565e2",
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/test_statistics.py": "fc3987d3ba4fdf73546c73b414a46e7cf001122380cdf0ad2f759a77dec247d9",
+    "research/_shared-kernels/trend-strength-pullback-restart/v1/tests/test_engine.py": "519f76d2d007d9452ca01a62dd0c47100e8aa238b0b4de027b18a30d5368edcd",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/audit_capture.py": "6a0d2ea1f61c3cb914c01e242e172b38c8173a3fd38d2dc0e34df5aecd0e5737",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/audit_inputs.py": "72d4ef8a145c28adfa1ce69c676e3ba4f7fe6eb5d674c26843e8df2f028ce6d3",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/family_common.py": "ba2e1ded41b6c80785f625751d3750547cbe3221e5148246e4b7b2ef3cd54ac8",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/run_capture.py": "ed435c92868129835c3786fbeda4d0e47d1200a10e44aacc2e026500f392cff5",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/run_research.py": "87c9b5b1a7b760344ee4a3fb097723ce268d2c3a4ea5c061515836e416ac7473",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/run_statistics.py": "bf194e63f5271bd5147876510967f0aa5a9a38e5d93709ff69913c6be4707482",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/sync_to_lab.py": "62eae106bf74609f7f7a090b545f75f3985767dc59502457c8abb21298f495df",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/test_capture.py": "4040fd738eec3fb58533bc5fbe3d5a1495d5f9c08a0467c5202c13075be8aab9",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/test_capture_delivery.py": "e133ad784bba38ab2c2f3c6a4cc6da3ccc8ba65bc95e59776571bd1ad6c20b39",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/verify_p0_inputs.py": "fb7f0523307e04cb17af02e3f142e778903679e9e50bdb57b22d0452da7efc3b",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/scripts/verify_research.py": "b25b1f03458f87b886697ee38068d5bc0e9001eb43d96058f3b55693b148a887",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/design-freeze.json": "712b9be7eb02b8f5ad9e4829add7f3c4690db07b7149005459837f04d5e33396",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/input-contract.md": "36c4db4925deadd8582c11ef0dd05110c6d0ed1d3c8e79ce48d25d7aa79af972",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/input-request.json": "1c48dabc767068bd3ebcde28634a59065939a219bae584b25273e1f37a82dc1c",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/observed-universe.json": "ed06ac35ee89944bda291a7481f49cecea06b328fd042aa2d83c9ed8df67b226",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/research-contract.md": "2643f8d77b78fd8a18f292fe5a24dad35765630e9de6f11397045b2f48786d36",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/source-pins.json": "22122b13797104509585c4520923650086eea973633fc04e360f7ab33d45d78e",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/statistics-contract.md": "068e289bb231b8b7e1e46ea5e50fcfe6bce38c4518e2968dc9d436c98cc8f989",
+    "research/asset-portfolios/1d-trend-strength-pullback-restart/specs/user-objective.md": "2f5dcbdd90eb43fc68f8dd31b8ae94cffaeec4e8e7fbd6980cd126930f22c14c"
+  },
+  "kernel_manifest": {
+    "path": "research/_shared-kernels/trend-strength-pullback-restart/v1/manifest.json",
+    "sha256": "9b8575fb3c3bfd59b314bb805bb6f1cfdba4c26655c01dfb59b09f8e46dd0209"
+  },
+  "test_receipt_sha256": "abf6f46e0a801e289c4e223a5fca1b1e76eaa5b8d0402b3543f274a84944c08c",
+  "design_freeze_sha256": "712b9be7eb02b8f5ad9e4829add7f3c4690db07b7149005459837f04d5e33396"
+}

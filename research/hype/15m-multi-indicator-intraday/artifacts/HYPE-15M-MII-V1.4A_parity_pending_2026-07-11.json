@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "strategy_id": "HYPE-15M-MII-V1.4A",
+  "runner_kind": "hype_mii",
+  "runner_commit": "WORKTREE@bf909ca",
+  "lab_commit": "WORKTREE@a356895e66b8d1ebe116646f822776acb46caab8",
+  "snapshot_id": "hype-15m-mii-v1-4a-pending-2026-07-11",
+  "gate_level": "parity",
+  "command": "not run",
+  "window": {
+    "start": "research-window",
+    "end": "2026-07-10",
+    "bars": 0
+  },
+  "trade_path": {
+    "reference_trades": 0,
+    "runtime_trades": 0,
+    "path_mismatches": 0,
+    "fields_compared": []
+  },
+  "conclusion": "FAIL",
+  "blockers": [
+    "runner full-window trade export has not been compared with official trades",
+    "standardized pending JSON was missing from the clean checkout and is restored as FAIL until a PASS dump exists"
+  ]
+}

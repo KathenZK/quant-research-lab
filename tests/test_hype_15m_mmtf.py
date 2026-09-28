@@ -139,6 +139,7 @@ def test_primary_entry_ablation_produces_no_trades() -> None:
     assert result.metrics["trades"] == 0
 
 
+@pytest.mark.local_data
 def test_selection_book_excludes_locked_oos() -> None:
     _require_local_evidence(ENGINE.MANIFEST_PATH)
     book = ENGINE.build_book(include_locked_oos=False)
@@ -150,6 +151,7 @@ def test_selection_book_excludes_locked_oos() -> None:
     assert bool((book.ts < book.terminal_ts).all())
 
 
+@pytest.mark.local_data
 def test_v2_clean_baseline_is_path_equal_to_registered_v1() -> None:
     _require_local_evidence(
         ENGINE.MANIFEST_PATH,
@@ -174,6 +176,7 @@ def _config_from_registered_v1() -> object:
     return ENGINE.config_from_dict(json.loads(artifact.read_text(encoding="utf-8"))["config"])
 
 
+@pytest.mark.local_data
 def test_locked_oos_reveal_is_frozen_and_no_post_reveal_tuning_is_authorized() -> None:
     artifact = (
         ROOT
@@ -187,6 +190,7 @@ def test_locked_oos_reveal_is_frozen_and_no_post_reveal_tuning_is_authorized() -
     assert payload["gates"]["overall_hard_target_pass"] is False
 
 
+@pytest.mark.local_data
 def test_full_trade_artifact_is_nonoverlapping_and_at_most_three_x() -> None:
     artifact = (
         ROOT

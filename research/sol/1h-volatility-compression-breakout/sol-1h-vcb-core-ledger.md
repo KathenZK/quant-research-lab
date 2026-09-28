@@ -37,9 +37,9 @@
 
 ## Evidence Map
 
-- Specs：无。
-- Diagnostics：`diagnostics/sol-1h-vcb-search-2026-07-13.md`
-- Live specs：无。
-- Runner tracking：无。
-- Scripts / artifacts：`scripts/fetch_sol_1h_vcb_data.py`、`scripts/research_sol_1h_vcb_search.py`、`artifacts/`
+- 2026-09-03 README 压缩：完整原文见 [decision-log.md](decision-log.md) 当日条目。
+- 压缩前 README 同时记录两套不得丢弃的搜索计数：正文首轮 `entry configs 800 / generated 2940 / eligible 341 / prefit hard pass 0`（最佳观察 prefit annual `1.3048x`、DD `-18.77%`、win `25.23%`、trades `107`）；后续扩搜口径以决策记录为准。
+- 数据窗口：UTC `2024-07-13T07:00:00Z`–`2026-07-13T06:00:00Z`，`17520` 根闭合 `1h`；missing/duplicate/critical null/OHLCV/raw-normalized 均为 `0`。
+- Diagnostics：[sol-1h-vcb-search-2026-07-13.md](diagnostics/sol-1h-vcb-search-2026-07-13.md)
+- Scripts / artifacts：[fetch_sol_1h_vcb_data.py](scripts/fetch_sol_1h_vcb_data.py)、[research_sol_1h_vcb_search.py](scripts/research_sol_1h_vcb_search.py)、[artifacts/](artifacts/)
 

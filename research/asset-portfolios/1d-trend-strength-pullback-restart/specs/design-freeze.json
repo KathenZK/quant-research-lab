@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-08T13:21:53.853865+00:00",
+  "role": "Design frozen before new states or outcome computation; P0 input audit only has run",
+  "files": {
+    "specs/research-contract.md": "2643f8d77b78fd8a18f292fe5a24dad35765630e9de6f11397045b2f48786d36",
+    "specs/statistics-contract.md": "068e289bb231b8b7e1e46ea5e50fcfe6bce38c4518e2968dc9d436c98cc8f989",
+    "specs/input-contract.md": "36c4db4925deadd8582c11ef0dd05110c6d0ed1d3c8e79ce48d25d7aa79af972",
+    "specs/user-objective.md": "2f5dcbdd90eb43fc68f8dd31b8ae94cffaeec4e8e7fbd6980cd126930f22c14c"
+  }
+}

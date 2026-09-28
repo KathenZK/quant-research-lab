@@ -1,11 +1,12 @@
 ---
-description: Treat research data quality as a hard precondition for strategy conclusions
-alwaysApply: true
+description: 读取、抓取、修复市场数据或据此作研究结论时，使用数据湖规范
+globs:
+  - "src/strategy_lab/data/**/*.py"
+  - "research/**/scripts/**/*.py"
+  - "docs/data-lake-spec.md"
+alwaysApply: false
 ---
 
-# Data Quality First
+# 数据质量
 
-- The sole repository-wide data-lake structure and quality contract is
-  [`docs/data-lake-spec.md`](../../docs/data-lake-spec.md).
-- Read and enforce that specification before ingesting, migrating, normalizing, consuming, or
-  drawing research conclusions from market data. This rule adds no second copy of the contract.
+[数据湖规范](../../docs/data-lake-spec.md) 是结构、质量与消费契约的唯一来源；处理数据前读取相关章节。Binance 输入见第 16–19 节：新研究固定输入组合与请求并通过研究范围校验，历史复现使用原冻结输入。契约检查通过不等于研究数据或策略通过。

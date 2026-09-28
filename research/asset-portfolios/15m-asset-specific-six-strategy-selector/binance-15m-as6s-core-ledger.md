@@ -19,8 +19,7 @@
   promotion 证据。
 - Final OOS：原定 `[2026-07-14, 2026-10-14)` 一次性未来 OOS 已放弃，
   不再揭示或裁决。
-- Runner boundary：历史 V6 dry-run 记录保留，但研究封存不修改实例。
-  实际授权、模式与运行状态只以 quant-runner 为准。
+- Runner boundary：2026-09-03 用户决定停止 V6 两条 dry-run 实例，runner 提交 `a5a3b2a`，服务器 `2026-09-03T06:47:02Z` 生效。实际授权、模式与运行状态只以 quant-runner 为准。
 
 ## Version Rules
 
@@ -57,5 +56,5 @@
 - 数据质量审计：[diagnostics/binance-six-asset-15m-data-quality-2026-07-14.md](diagnostics/binance-six-asset-15m-data-quality-2026-07-14.md)
 - V1 冻结规格与近期切片：[specs/binance-as6s-future-oos-freeze-2026-07-14.md](specs/binance-as6s-future-oos-freeze-2026-07-14.md)、[diagnostics/binance-as6s-v1-recent-slices-2026-07-14.md](diagnostics/binance-as6s-v1-recent-slices-2026-07-14.md)
 - V5 观察、历史 Runner 对拍与退役记录：[diagnostics/binance-as6s-v5-joint-state-observation-2026-07-14.md](diagnostics/binance-as6s-v5-joint-state-observation-2026-07-14.md)、[runner-tracking/binance-as6s-v5-joint-runner-2026-07-15.md](runner-tracking/binance-as6s-v5-joint-runner-2026-07-15.md)、[runner-tracking/binance-as6s-v5-retire-engine-inhouse-2026-08-04.md](runner-tracking/binance-as6s-v5-retire-engine-inhouse-2026-08-04.md)
-- V6 冻结规格、账户审计与历史 Runner 对拍：[specs/binance-as6s-v6-mark-joint-future-oos-freeze-2026-07-15.md](specs/binance-as6s-v6-mark-joint-future-oos-freeze-2026-07-15.md)、[diagnostics/binance-as6s-v6-mark-clean-rsi-joint-candidate-audit-2026-07-15.md](diagnostics/binance-as6s-v6-mark-clean-rsi-joint-candidate-audit-2026-07-15.md)、[runner-tracking/binance-as6s-v6-mark-joint-runner-2026-07-15.md](runner-tracking/binance-as6s-v6-mark-joint-runner-2026-07-15.md)
+- V6 冻结规格、账户审计与历史 Runner 对拍：[specs/binance-as6s-v6-mark-joint-future-oos-freeze-2026-07-15.md](specs/binance-as6s-v6-mark-joint-future-oos-freeze-2026-07-15.md)、[diagnostics/binance-as6s-v6-mark-clean-rsi-joint-candidate-audit-2026-07-15.md](diagnostics/binance-as6s-v6-mark-clean-rsi-joint-candidate-audit-2026-07-15.md)、[runner-tracking/binance-as6s-v6-mark-joint-runner-2026-07-15.md](runner-tracking/binance-as6s-v6-mark-joint-runner-2026-07-15.md)、[V6 dry-run 停止](runner-tracking/binance-as6s-v6-dry-run-stop-2026-09-03.md)
 - 历史脚本入口：[scripts/](scripts/README.md)
