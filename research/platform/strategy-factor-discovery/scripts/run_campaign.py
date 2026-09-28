@@ -17,7 +17,15 @@ def main():
     p.add_argument("--workers", type=int, default=1)
     p.add_argument(
         "--stage",
-        choices=["freeze", "factors", "baselines", "evolve", "finish", "all"],
+        choices=[
+            "freeze",
+            "factors",
+            "baselines",
+            "evolve",
+            "component",
+            "finish",
+            "all",
+        ],
         default="all",
     )
     a = p.parse_args()
@@ -75,9 +83,26 @@ def main():
     if a.stage in {"evolve", "all"}:
         campaign.freeze_evolution(root / "strategies")
         print(campaign.run(root / "strategies", round_number=1, workers=a.workers))
+    if a.stage in {"component", "all"}:
+        from strategy_lab.discovery.component import run
+
+        print(
+            {
+                "component_configurations": len(
+                    run(
+                        sc,
+                        root / "factor-component-dev",
+                        registry_path=root / "trials.jsonl",
+                    )
+                )
+            }
+        )
     if a.stage in {"finish", "all"}:
         campaign.report(root / "strategies")
         receipts = campaign.writeback(root / "strategies", sc["journal"])
+        from strategy_lab.discovery.publication import publish
+
+        publish(root / "strategies", graph_root=sc["graph_root"], journal=sc["journal"])
         scope = TrialRegistry(root / "trials.jsonl").snapshot(
             ["discovery-20260928-v1", "factor-study-discovery20-factors-v1"]
         )

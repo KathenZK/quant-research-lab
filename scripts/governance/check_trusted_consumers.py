@@ -33,6 +33,11 @@ class AuxiliaryClassification:
 
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
+    ConsumerSpec(
+        "research/platform/strategy-factor-discovery/scripts/restore_accounts.py",
+        ("main",), ("read_market_dataset",),
+        "trusted-market-core-native-byte-revalidation-and-frozen-account-parity",
+    ),
     ConsumerSpec('research/hype/15m-candle-count-reversal/scripts/research_hype_cc_v35_maker_entry_audit.py', ("_load_local_trade",), ("load_v3_research_ohlcv",), "observed-diagnostic-v3-price-reader"),
     ConsumerSpec(
         "research/asset-portfolios/1d-tpsa-long-account/scripts/account_acceptance.py",
