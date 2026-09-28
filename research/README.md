@@ -175,6 +175,7 @@
 
 ## 研究平台
 
+- [strategy-factor-discovery](platform/strategy-factor-discovery/README.md)：diagnostic_topic / exploratory；20个Graph模板、20个公开因子、失败学习与登记演化。
 - [factor-research-loop](platform/factor-research-loop/README.md)：diagnostic_topic / exploratory；公开定义到真实因子研究与私有 Graph 证据。
 
 入口：[platform/README.md](platform/README.md)。平台审计不承载策略绩效。

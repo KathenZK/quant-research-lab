@@ -48,6 +48,9 @@ def code_files():
             "src/strategy_lab/knowledge/market_dataset.py",
             "src/strategy_lab/knowledge/market_core.py",
             "src/strategy_lab/knowledge/market_contract.py",
+            "src/strategy_lab/data/factors/base.py",
+            "src/strategy_lab/data/factors/engine.py",
+            "src/strategy_lab/factor_study/factors.py",
         ]
     ]
     return {str(p.relative_to(ROOT)): sha(p) for p in sorted(files)}
@@ -123,6 +126,23 @@ def triage(catalog, factor_variants):
                 else "Not in frozen OHLC implementation set; no return-based exclusion",
                 "priority_score": 8 if chosen else 1,
                 "rights": v["commercial_use"],
+            }
+        )
+    rule_refs = {}
+    for source in catalog:
+        for link in source.get("factor_links", []):
+            rule_refs[link["factor_variant_id"]] = link
+    for fid, link in sorted(rule_refs.items()):
+        rows.append(
+            {
+                "entity_type": "RuleFactorReference",
+                "entity_id": fid,
+                "concept_id": link["factor_id"],
+                "source_url": link["source"],
+                "status": "RULE_REFERENCE_ONLY",
+                "priority_score": 1,
+                "reason": "Collected strategy indicator reference; not a semantically verified public FactorDefinition mapping",
+                "rights": "REVIEW_REQUIRED",
             }
         )
     return rows
@@ -708,6 +728,20 @@ def report(output):
         dev_ci = paired["development"]["ci95"]
         val_ci = paired["validation"]["ci95"]
         support = bool(dev_ci and val_ci and dev_ci[0] > 0 and val_ci[0] > 0)
+        subperiod_means = {}
+        for label, start, end in [
+            ("dev_2023", plan["evaluation_start"], "2024-01-01T00:00:00Z"),
+            ("dev_2024", "2024-01-01T00:00:00Z", plan["split"]),
+        ]:
+            mask = (a.ts >= pd.Timestamp(start)) & (a.ts < pd.Timestamp(end))
+            subperiod_means[label] = float(
+                (
+                    a.loc[mask, "return_net"]
+                    - weight * reference.loc[mask, "return_net"]
+                ).mean()
+            )
+        support &= all(v > 0 for v in subperiod_means.values())
+        support &= r["metrics"]["validation"]["closed_trades"] >= 10
         category = (
             "FURTHER_RESEARCH_SUPPORTED_EXPLORATORY"
             if support
@@ -718,6 +752,8 @@ def report(output):
             "family": METHODS[rid][0],
             "metrics": r["metrics"],
             "paired_incremental": paired,
+            "development_subperiod_incremental_mean": subperiod_means,
+            "activity_limit": "Fewer than10 closed validation trades means sparse episode evidence; descriptive returns still retained",
             "development_fitted_exposure_weight": weight,
             "matched_control_scope": "Analytic constant exposure-scaled buy-hold price-return control; not a separately tradable portfolio or causal attribution",
             "cost_drag": {
@@ -783,7 +819,16 @@ def report(output):
     result = {
         "campaign_id": plan["campaign_id"],
         "strategy_templates": len(plan["record_ids"]),
-        "economic_method_groups": len({METHODS[r][0] for r in plan["record_ids"]}),
+        "computational_method_groups": len({METHODS[r][0] for r in plan["record_ids"]}),
+        "economic_method_groups": len(
+            {
+                METHODS[r][0]
+                if METHODS[r][0]
+                in {"mean_reversion", "volatility_state", "drawdown_state"}
+                else "trend_directional_state"
+                for r in plan["record_ids"]
+            }
+        ),
         "rows": rows,
         "redundancy": redundancy,
         "promoted": 0,
