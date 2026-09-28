@@ -23,7 +23,7 @@ FAMILY_DIR = ROOT / (
 )
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 FAPI = "https://fapi.binance.com"
-UA = "quant-strategy-lab-bin-1h-mhcsml-freeze/1.0"
+UA = "quant-research-lab-bin-1h-mhcsml-freeze/1.0"
 START = pd.Timestamp("2026-07-01T00:00:00Z")
 HARD_END = pd.Timestamp("2026-07-19T00:00:00Z")
 MONTH = "2026-07"

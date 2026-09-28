@@ -47,7 +47,7 @@ def load_engine() -> Any:
     spec.loader.exec_module(module)
     module.SYMBOL = SYMBOL
     module.DISPLAY_SYMBOL = DISPLAY_SYMBOL
-    module.USER_AGENT = "quant-strategy-lab-bin-1h-pic-eth-15m/0.1"
+    module.USER_AGENT = "quant-research-lab-bin-1h-pic-eth-15m/0.1"
     module.RAW_ROOT = RAW_ROOT
     module.NORMALIZED_ROOT = NORMALIZED_ROOT
     module.FUNDING_ROOT = FUNDING_ROOT

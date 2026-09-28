@@ -22,7 +22,7 @@ FAMILY_DIR = ROOT / "research/asset-portfolios/15m-ema-cross-lightgbm-event-sele
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 FAPI = "https://fapi.binance.com"
 S3 = "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision"
-UA = "quant-strategy-lab-bin-15m-emax-lgbm-inventory/0.1"
+UA = "quant-research-lab-bin-15m-emax-lgbm-inventory/0.1"
 START_MONTH = "2020-01"
 END_MONTH = "2026-06"
 

@@ -19,7 +19,7 @@ def main() -> None:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     module.ARTIFACT_DIR = FAMILY_DIR / "artifacts"
-    module.USER_AGENT = "quant-strategy-lab-hype-15m-mmtf-data/0.1"
+    module.USER_AGENT = "quant-research-lab-hype-15m-mmtf-data/0.1"
     module.main()
 
 

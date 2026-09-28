@@ -22,7 +22,7 @@
 
   ```bash
   uv run python research/mu/scripts/accept_mu_polygon_ohlcv.py \
-    --data-root /Users/ZK/OpenCode/quant-strategy-lab/data \
+    --data-root /Users/ZK/OpenCode/quant-research-lab/data \
     --apply
   ```
 

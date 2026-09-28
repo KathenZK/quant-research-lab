@@ -49,7 +49,7 @@ RELIABLE_MIN_EVENTS = 100
 RELIABLE_MIN_SECURITIES = 10
 RELIABLE_MIN_DATES = 30
 TEMPORAL_SPLIT = pd.Timestamp("2020-01-01")
-USER_AGENT = "quant-strategy-lab-ndx100-ma7-regime/1.0"
+USER_AGENT = "quant-research-lab-ndx100-ma7-regime/1.0"
 
 BLOCKER_PATH = ARTIFACT_DIR / "ndx100_1d_ma7_rc_p0_data_access_blocker.json"
 ACCESS_AUDIT_PATH = ARTIFACT_DIR / "ndx100_1d_ma7_rc_p0_massive_access_audit.json"

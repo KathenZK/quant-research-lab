@@ -25,7 +25,7 @@ REPORT_PATH = ARTIFACT_DIR / "btc_binance_15m_data_quality_latest.json"
 
 FAPI = "https://fapi.binance.com"
 VISION = "https://data.binance.vision"
-USER_AGENT = "quant-strategy-lab-btc-15m-ema-tb-data/0.1"
+USER_AGENT = "quant-research-lab-btc-15m-ema-tb-data/0.1"
 
 SYMBOL = "BTCUSDT"
 DISPLAY_SYMBOL = "BTC/USDT:USDT"

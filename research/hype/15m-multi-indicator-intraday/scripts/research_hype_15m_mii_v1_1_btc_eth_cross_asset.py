@@ -87,7 +87,7 @@ def fetch_fapi_klines(symbol: str) -> pd.DataFrame:
         )
         request = Request(
             f"{FAPI_KLINES_URL}?{params}",
-            headers={"User-Agent": "quant-strategy-lab/0.1"},
+            headers={"User-Agent": "quant-research-lab/0.1"},
         )
         with urlopen(request, timeout=45) as response:  # noqa: S310
             payload = json.loads(response.read().decode("utf-8"))

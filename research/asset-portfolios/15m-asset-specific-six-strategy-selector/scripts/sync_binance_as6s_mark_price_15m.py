@@ -55,7 +55,7 @@ def fetch(symbol: str, start: pd.Timestamp) -> pd.DataFrame:
         )
         request = Request(
             f"https://fapi.binance.com/fapi/v1/markPriceKlines?{params}",
-            headers={"User-Agent": "quant-strategy-lab-as6s-mark-price/0.1"},
+            headers={"User-Agent": "quant-research-lab-as6s-mark-price/0.1"},
         )
         with urlopen(request, timeout=60) as response:  # noqa: S310
             payload = json.load(response)

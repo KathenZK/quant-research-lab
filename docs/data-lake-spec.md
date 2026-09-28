@@ -1,6 +1,6 @@
 # Data Lake Specification
 
-本文件是 `quant-strategy-lab` 数据湖结构、身份、schema、质量门禁、写入和消费规则的
+本文件是 `quant-research-lab` 数据湖结构、身份、schema、质量门禁、写入和消费规则的
 唯一规范来源。根 README、Cursor 规则、研究入口和脚本说明只应引用本文件，不得
 另行维护一份通用数据湖约定。研究报告仍须记录其实际数据来源、范围和审计结果。
 

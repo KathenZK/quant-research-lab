@@ -27,7 +27,7 @@ KLINES_PATH = "/fapi/v1/klines"
 FUNDING_PATH = "/fapi/v1/fundingRate"
 EXCHANGE_INFO_PATH = "/fapi/v1/exchangeInfo"
 TIME_PATH = "/fapi/v1/time"
-USER_AGENT = "quant-strategy-lab-hype-15m/0.1"
+USER_AGENT = "quant-research-lab-hype-15m/0.1"
 
 RAW_ROOT = ROOT / "data/raw/ohlcv/exchange=binance/market_type=perp/timeframe=15m"
 NORMALIZED_ROOT = ROOT / "data/normalized/ohlcv/exchange=binance/market_type=perp/timeframe=15m"

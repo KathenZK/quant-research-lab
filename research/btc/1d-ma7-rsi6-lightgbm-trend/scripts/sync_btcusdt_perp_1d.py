@@ -32,7 +32,7 @@ FAMILY_DIR = ROOT / "research/btc/1d-ma7-rsi6-lightgbm-trend"
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 
 API_ROOT = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-btc-1d-ma7-rsi6-lgbm/0.1"
+USER_AGENT = "quant-research-lab-btc-1d-ma7-rsi6-lgbm/0.1"
 SOURCE = "binance_futures_kline_api_direct"
 SYMBOL = "BTCUSDT"
 DISPLAY_SYMBOL = "BTC/USDT:USDT"

@@ -1,6 +1,6 @@
 # Cross-Sectional Alpha Research Pipeline
 
-本目录保存 `quant-strategy-lab` 横截面 Alpha 研究平台的仓库级审计与落地契约，不是一个策略家族，也不登记、晋升或覆盖任何现有 CTA/HYPE 研究。
+本目录保存 `quant-research-lab` 横截面 Alpha 研究平台的仓库级审计与落地契约，不是一个策略家族，也不登记、晋升或覆盖任何现有 CTA/HYPE 研究。
 
 ## 当前结论
 

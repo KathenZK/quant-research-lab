@@ -35,7 +35,7 @@ SYMBOL = "BNBUSDT"
 DISPLAY_SYMBOL = "BNB/USDT:USDT"
 FILE_NAME = "symbol=bnb_usdt_usdt.parquet"
 INTERVAL_MS = 60 * 60 * 1000
-USER_AGENT = "quant-strategy-lab-bnb-1h/0.1"
+USER_AGENT = "quant-research-lab-bnb-1h/0.1"
 
 
 def load_engine() -> Any:

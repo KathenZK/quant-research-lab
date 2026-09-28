@@ -90,7 +90,7 @@ def request_json(
     last_error: Exception | None = None
     for attempt in range(retries):
         try:
-            req = Request(url, headers={"User-Agent": "quant-strategy-lab-research/1.0"})
+            req = Request(url, headers={"User-Agent": "quant-research-lab-research/1.0"})
             with urlopen(req, timeout=30) as response:
                 return json.loads(response.read().decode("utf-8"))
         except Exception as exc:  # pragma: no cover - network path

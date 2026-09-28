@@ -23,7 +23,7 @@ FAMILY_DIR = ROOT / "research/asset-portfolios/15m-asset-specific-six-strategy-s
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 FAPI = "https://fapi.binance.com"
 VISION = "https://data.binance.vision"
-UA = "quant-strategy-lab-bin-15m-as6s-data/0.1"
+UA = "quant-research-lab-bin-15m-as6s-data/0.1"
 INTERVAL_MS = 15 * 60 * 1000
 TIMEFRAME = "15m"
 

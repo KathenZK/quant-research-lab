@@ -30,7 +30,7 @@ MANIFEST_PATH = ARTIFACT_DIR / "ndx100_1d_ma7_rc_y0_yahoo_data_manifest.json"
 
 STUDY_ID = "NDX100-1D-MA7-RC-Y0"
 ENDPOINT = "https://query2.finance.yahoo.com/v8/finance/chart"
-USER_AGENT = "Mozilla/5.0 quant-strategy-lab-ndx100-yahoo/1.0"
+USER_AGENT = "Mozilla/5.0 quant-research-lab-ndx100-yahoo/1.0"
 
 
 def parse_args() -> argparse.Namespace:

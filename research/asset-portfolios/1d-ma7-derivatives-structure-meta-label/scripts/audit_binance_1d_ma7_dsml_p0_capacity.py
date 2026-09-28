@@ -51,7 +51,7 @@ def first_archive(symbol: str) -> dict[str, Any]:
     )
     request = urllib.request.Request(
         f"{S3_LIST_ENDPOINT}?{query}",
-        headers={"User-Agent": "quant-strategy-lab-dsml-p0/1.0"},
+        headers={"User-Agent": "quant-research-lab-dsml-p0/1.0"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = response.read()

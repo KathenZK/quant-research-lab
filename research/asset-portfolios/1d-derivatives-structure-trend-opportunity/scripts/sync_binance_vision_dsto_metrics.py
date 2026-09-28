@@ -102,7 +102,7 @@ def s3_page(symbol: str, continuation: str | None) -> tuple[list[dict[str, Any]]
     query = urllib.parse.urlencode(params)
     request = urllib.request.Request(
         f"{S3_ENDPOINT}?{query}",
-        headers={"User-Agent": "quant-strategy-lab-dsto-p0/1.0"},
+        headers={"User-Agent": "quant-research-lab-dsto-p0/1.0"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = response.read()
@@ -208,7 +208,7 @@ def download_archive(archive: Archive, retries: int = 4) -> str:
         try:
             request = urllib.request.Request(
                 archive.url,
-                headers={"User-Agent": "quant-strategy-lab-dsto-p0/1.0"},
+                headers={"User-Agent": "quant-research-lab-dsto-p0/1.0"},
             )
             with urllib.request.urlopen(request, timeout=60) as response:
                 payload = response.read()

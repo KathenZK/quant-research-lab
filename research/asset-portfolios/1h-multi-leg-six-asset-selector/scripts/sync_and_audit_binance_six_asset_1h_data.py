@@ -24,7 +24,7 @@ ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 
 FAPI = "https://fapi.binance.com"
 VISION = "https://data.binance.vision"
-UA = "quant-strategy-lab-bin-1h-ml6as-data/0.1"
+UA = "quant-research-lab-bin-1h-ml6as-data/0.1"
 
 RAW_OHLCV_ROOT = (
     ROOT / "data/raw/ohlcv/exchange=binance/market_type=perp/timeframe=1h"

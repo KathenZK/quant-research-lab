@@ -23,7 +23,7 @@ FAMILY_DIR = ROOT / (
 )
 ARTIFACT_DIR = FAMILY_DIR / "artifacts"
 API_ROOT = "https://fapi.binance.com"
-USER_AGENT = "quant-strategy-lab-bin-1h-mhcsml-api-gap-repair/0.1"
+USER_AGENT = "quant-research-lab-bin-1h-mhcsml-api-gap-repair/0.1"
 START = pd.Timestamp("2020-01-01T00:00:00Z")
 END = pd.Timestamp("2026-07-01T00:00:00Z")
 COLUMNS = [

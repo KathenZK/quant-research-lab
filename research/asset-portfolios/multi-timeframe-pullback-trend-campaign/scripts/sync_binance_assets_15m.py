@@ -43,7 +43,7 @@ def load_engine(asset: str) -> Any:
     spec.loader.exec_module(module)
     module.SYMBOL = symbol
     module.DISPLAY_SYMBOL = display
-    module.USER_AGENT = f"quant-strategy-lab-bin-mtf-ptc-{asset.lower()}-15m/0.1"
+    module.USER_AGENT = f"quant-research-lab-bin-mtf-ptc-{asset.lower()}-15m/0.1"
     module.RAW_ROOT = RAW_ROOT
     module.NORMALIZED_ROOT = NORMALIZED_ROOT
     module.FUNDING_ROOT = FUNDING_ROOT

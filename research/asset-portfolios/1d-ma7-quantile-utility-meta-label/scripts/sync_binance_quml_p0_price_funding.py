@@ -315,7 +315,7 @@ def main() -> None:
     base.ARTIFACT_DIR = FAMILY_DIR / "artifacts/p0_price_data_2026-08-10"
     base.SEALED_START = CUTOFF
     base.SEALED_END_EXCLUSIVE = CUTOFF
-    base.USER_AGENT = "quant-strategy-lab-bin-1d-ma7-quml-p0/1.0"
+    base.USER_AGENT = "quant-research-lab-bin-1d-ma7-quml-p0/1.0"
     base.REQUEST_PAGE_DELAY_SECONDS = 1.0
     cutoff_ms = int(CUTOFF.timestamp() * 1_000)
     contracts = base.fetch_contracts(args.timeout)

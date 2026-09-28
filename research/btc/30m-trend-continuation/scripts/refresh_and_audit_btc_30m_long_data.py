@@ -47,7 +47,7 @@ def configure(source: object) -> None:
     source.FAMILY_DIR = FAMILY_DIR
     source.ARTIFACT_DIR = FAMILY_DIR / "artifacts"
     source.REPORT_PATH = REPORT_PATH
-    source.USER_AGENT = "quant-strategy-lab-btc-30m-trend-continuation-data/0.1"
+    source.USER_AGENT = "quant-research-lab-btc-30m-trend-continuation-data/0.1"
     source.RAW_OHLCV_ROOT = (
         ROOT
         / "data/raw/ohlcv/exchange=binance/market_type=perp/timeframe=30m"

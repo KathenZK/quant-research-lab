@@ -33,7 +33,7 @@ SYMBOL = "SOLUSDT"
 DISPLAY_SYMBOL = "SOL/USDT:USDT"
 FILE_NAME = "symbol=sol_usdt_usdt.parquet"
 INTERVAL_MS = 60 * 60 * 1000
-USER_AGENT = "quant-strategy-lab-sol-1h/0.1"
+USER_AGENT = "quant-research-lab-sol-1h/0.1"
 
 
 def load_engine() -> Any:

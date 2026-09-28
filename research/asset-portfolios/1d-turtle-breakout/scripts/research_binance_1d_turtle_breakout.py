@@ -123,7 +123,7 @@ def fetch_klines(symbol: str, start_date: date, end_exclusive: date) -> pd.DataF
         "endTime": end_ms - 1,
         "limit": 1500,
     }
-    request = Request(f"{FAPI_KLINES_URL}?{urlencode(params)}", headers={"User-Agent": "quant-strategy-lab/0.1"})
+    request = Request(f"{FAPI_KLINES_URL}?{urlencode(params)}", headers={"User-Agent": "quant-research-lab/0.1"})
     with urlopen(request, timeout=30) as response:
         payload = json.loads(response.read().decode("utf-8"))
     if not isinstance(payload, list):

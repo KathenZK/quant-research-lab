@@ -38,7 +38,7 @@ SYMBOL = "ETHUSDT"
 DISPLAY_SYMBOL = "ETH/USDT:USDT"
 FILE_NAME = "symbol=eth_usdt_usdt.parquet"
 INTERVAL_MS = 60 * 60 * 1000
-USER_AGENT = "quant-strategy-lab-eth-1h/0.1"
+USER_AGENT = "quant-research-lab-eth-1h/0.1"
 
 
 def load_engine() -> Any:
