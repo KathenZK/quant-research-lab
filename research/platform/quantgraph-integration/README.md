@@ -3,12 +3,14 @@ research_classification: diagnostic_topic
 ---
 # QuantGraph 研究联通
 
-V4 当前入口：[证据链与研究审计](diagnostics/evidence-research-v4.md)。三个模板已补齐合同/许可/数据需求；真实数据仍 PARTIAL/raw_unaccepted，正式候选与正式回测均 0。
+当前入口：[Trusted Market v1 来源与验收设计](notes/trusted-market-v1-design.md)，先完成单模板闭环。真实行情、衍生统计和 Graph 日志只保留在本机私有档案。
+
+历史 V4：[证据链与研究审计](diagnostics/evidence-research-v4.md)。当时三个模板已补齐合同/许可/数据需求，但快照为 PARTIAL/raw_unaccepted，正式候选与正式回测均 0。
 
 本主题负责知识候选筛选、实验族去重、研究结果和晋级文件的接口验证。
 不代表任何策略通过回测，也不改变既有研究家族或 runner 状态。
 
-当前状态：工程联通已验证；真实候选 `INSUFFICIENT_EVIDENCE / not promoted`。
+当前状态：核心数据协议和正式证据链已接入；研究结论与晋级授权分别审查。
 
 入口：[冻结范围](specs/pipeline-v1.md) · [实测结果](diagnostics/acceptance.md) ·
 [决策记录](decision-log.md) · [复现脚本](scripts/README.md)。

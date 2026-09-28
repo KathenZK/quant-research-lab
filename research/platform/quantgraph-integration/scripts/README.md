@@ -33,3 +33,11 @@ uv run --project ../quant-knowledge-graph python \
 - `research_v4.py --contract <同一合同> --manifest <manifest.json> --candidate <当前候选.json> --output <新家族 artifacts 目录>`：默认正式模式，先核验所有绑定与质量；`--private-diagnostic` 是显式受限诊断，永不生成正式 envelope。
 - 正式模式输出 schema 3.0，包含 contract/code/config/dataset/manifest/rights hashes。`submit_market_evidence` 通过 SDK 写回并读回；Graph chain API 查询全部关联。V3/schema 2.0 新正式写回被拒绝。
 - 原生质量合同继续使用 `docs/data-lake-spec.md`。本轮三组数据都不满足，因此只运行私有诊断。
+
+## Trusted Market v1
+
+- [fetch_market_paged.py](fetch_market_paged.py)：`--contract`、`--rights`、`--output`；可显式配置 `--proxy`。完整双次抓取、边界审计、静默截断二分重抓；任何下载结果先保持 raw_unaccepted。只引用已有 reviewed rights。
+- [audit_market_core.py](audit_market_core.py)：`--contract`、`--capture`、`--output`；独立从 raw 重建，全部通过才原子创建标准 normalized 分区内的新快照，拒绝覆盖。
+- 在 Graph 使用 `scripts/admit_market_dataset.py --db ... --contract ... --manifest ... --output ...` 追加审查，读取 Gate 计算的 candidate.json；该脚本不导入 Lab 代码。
+- [research_v4.py](research_v4.py) 接收上述同一合同、manifest 和候选；正式入口在计算前后复核数据、权利与摘要。输出交给 Graph evidence API，读回 chain 确认同一 run。
+- 核心契约是明确 opt-in；旧原生字段 validator 保留，完整规则见[唯一数据湖规范](../../../../docs/data-lake-spec.md)。

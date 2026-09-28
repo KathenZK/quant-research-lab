@@ -3,17 +3,17 @@
 ## Family Identity
 
 - Full family name：BTC-1d-QuantGraph-PRICE_SMA。
-- Market / exchange / symbol / timeframe：Bit2Me 报告的 spot / BTC/EUR / 1d；底层交易场所身份仍需进一步交叉核验。
+- Market / exchange / symbol / timeframe：Bit2Me Pro 官方接口声明的 spot / BTC/EUR / 1d；新快照绑定官方 market-config 原生标识与已锁定 OpenAPI。
 - Mechanism：从锁定社区源码转录的显式只做多研究改编。原始摘要保留，不主张等同原生策略。
 - Boundary：与既有 BTC/HYPE 家族独立；不继承它们的参数、行情或经济结论。
 
 ## Current State
 
 - Current version(s)：无已登记 Vx；只有冻结研究约定。
-- Current status：`explore / untrusted / not promoted / not live-ready`。
+- Current status：`explore / not promoted / not live-ready`。
 - Runner / dry-run / live：本轮均未触及、未申请。
-- Blockers：原生 trade_count、完整报价量/VWAP 和可信闭合证据缺失；历史长度不足；没有 eligible 候选。
-- Next gate：完整获准行情 + 来源/执行约定逐项确认，再运行正式研究。
+- Current evidence：独立核心 profile 的完整历史、许可、来源、收盘及逐日对账已在本机验收；Graph 回执保存在私有 artifacts。旧 V4 的数据不足仅代表历史快照。
+- Next gate：研究结论仍需独立验收；任何晋级必须另行申请并通过对应门槛。行情衍生指标不在公开仓库分发。
 
 ## Version Rules
 
@@ -25,6 +25,7 @@
 | Version | Status | Role / Core Idea | Key Frozen Metrics | Evidence | Decision / Live Readiness |
 | --- | --- | --- | --- | --- | --- |
 | 未登记 | explore / untrusted / not promoted / not live-ready | PRICE_SMA 来源改编诊断 | 无正式指标 | [冻结约定](specs/research-contract.json) | 数据门槛未通过 |
+| 未登记，trusted-market-v1 合同修订 | explore / not promoted / not live-ready | 同一固定机制，显式核心数据 profile | 仅本机私有证据 | [新合同](specs/research-contract-trusted-v1.json) | 无晋级授权 |
 
 ## Shared Assumptions
 
@@ -38,6 +39,7 @@
 - [冻结约定](specs/research-contract.json) · [决策记录](decision-log.md) · [运行脚本](scripts/README.md)。
 - 本机私有结果在 artifacts；行情及其衍生结果不随 PR 分发。
 - 没有 live spec、runner tracking 或 live approval。
+- 新数据协议见[通用设计](../../platform/quantgraph-integration/notes/trusted-market-v1-design.md)；逐日复核见[独立对账脚本](scripts/audit_trusted_result.py)。
 
 ## What Not To Put Here
 
