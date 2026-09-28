@@ -11,3 +11,5 @@ research_classification: strategy_family
 - [决策记录](decision-log.md)
 - [脚本入口](scripts/README.md)
 - 结果放在本家族 `artifacts/`，行情只进仓库数据湖。
+
+V4：[冻结链路合同](specs/research-contract-v4.json)；仍因完整历史和原生字段缺口阻断，见[跨仓审计](../../platform/quantgraph-integration/diagnostics/evidence-research-v4.md)。

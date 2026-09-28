@@ -1,0 +1,340 @@
+{
+  "schema_version": "research-contract-v4",
+  "frozen_at": "2026-09-28T03:34:31.678361Z",
+  "strategy_concept_id": "qkg:strategy-concept:e56cd7ef-8787-5ec8-bbe7-6ff55bc1ffe1",
+  "strategy_template_id": "qkg:strategy-template:81a8fb15-35b4-58d6-96fc-88356988f131",
+  "strategy_variant_id": "qkg:strategy-variant:47bf8ce2-0cbf-5ece-86d3-9b8e131b66e4",
+  "experiment_family_id": "btc-1d-quantgraph-source-sma-v4-chain",
+  "parameters": [
+    50
+  ],
+  "parameter_grid": [
+    [
+      40
+    ],
+    [
+      50
+    ],
+    [
+      60
+    ]
+  ],
+  "trial_count": 3,
+  "symbols": [
+    "BTC/EUR"
+  ],
+  "universe": "FIXED_SINGLE_ASSET",
+  "provider": "bit2me",
+  "source": "bit2me_public_rest",
+  "market_type": "spot",
+  "frequency": "1d",
+  "requested_start": "2022-07-01T00:00:00Z",
+  "requested_end": "2026-09-27T00:00:00Z",
+  "is_start": "2023-01-01T00:00:00Z",
+  "is_end": "2025-01-01T00:00:00Z",
+  "oos_start": "2025-01-01T00:00:00Z",
+  "oos_end": "2026-09-27T00:00:00Z",
+  "signal_timing": "CLOSED_BAR",
+  "execution_timing": "NEXT_BAR_OPEN",
+  "execution_price": "OPEN",
+  "rebalance": "SIGNAL_CHANGE_ONLY",
+  "holding_period": "UNTIL_EXIT_OR_END",
+  "fees_bps": 60.0,
+  "slippage_bps": 10.0,
+  "cost_model": "RESEARCH_ASSUMPTION: conservative fixed cost; not verified actual account tier",
+  "execution_contract": {
+    "signal_timing": {
+      "value": "closed bar",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "execution_timing": {
+      "value": "next bar open",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "execution_price": {
+      "value": "OPEN",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "rebalance_frequency": {
+      "value": "1d",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "holding_period": {
+      "value": "until explicit exit, bracket, or end-of-study liquidation",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "position_rule": {
+      "value": "all cash net of fees; no pyramiding",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "cash_rule": {
+      "value": "EUR cash, zero interest",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "fallback_rule": {
+      "value": "fail on gaps/missing data; never forward fill",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "long_short": {
+      "value": "long-only spot; source shorts -> cash",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "leverage": {
+      "value": 1,
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "transaction_cost_model": {
+      "fee_bps": 60.0,
+      "slippage_bps": 10.0,
+      "basis": "RESEARCH_ASSUMPTION",
+      "description": "RESEARCH_ASSUMPTION: conservative fixed cost; not verified actual account tier",
+      "assumption_reason": "RESEARCH_ASSUMPTION: conservative fixed cost; not verified actual account tier",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "slippage_model": {
+      "value": "adverse 10 bps on each fill",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "price_adjustment": {
+      "value": "UNADJUSTED",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "missing_data_policy": {
+      "value": "FAIL formal research on any missing/invalid bar or required native field; no fills or zero trade counts",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "indicator_semantics": {
+      "value": "SMA full window including current closed close; zscore pandas rolling sample std ddof=1; EMA SMA-seeded recursive alpha=2/(n+1)",
+      "basis": "RESEARCH_ASSUMPTION",
+      "rationale": "Explicit frozen research implementation; not a claim of native source execution",
+      "evidence": {
+        "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+        "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+      },
+      "assumption_reason": "Explicit frozen research implementation; not a claim of native source execution",
+      "assumption_version": "source-adaptation-v4.1"
+    },
+    "closed_bar_only": true,
+    "accepted_research_assumptions": true,
+    "artifact": {
+      "uri": "/Users/ZK/OpenCode/platform-v2-worktrees/quant-strategy-lab/research/btc/1d-quantgraph-source-sma/specs/research-contract.json",
+      "sha256": "428e47cb3479a3bd9a35d508e2f3ac5cf913447cb619611b8b07d7b0d8ca162f"
+    }
+  },
+  "rule_ast": {
+    "allocation": "all_equity_net_of_costs",
+    "asset": "BTC/EUR",
+    "cash": "EUR_ZERO_INTEREST",
+    "comparison": "gt_else_cash",
+    "costs": null,
+    "derivation": "Explicit research adaptation to BTC/EUR long-only spot; source short exposure becomes cash; costs and next-open timing are research assumptions",
+    "else": {
+      "allocation": "full",
+      "asset": null,
+      "cash": true
+    },
+    "entry": "close > full-window SMA; otherwise cash",
+    "execution_timing": null,
+    "exit": "close > full-window SMA; otherwise cash",
+    "indicator_semantics": "SMA full window including current closed close; zscore pandas rolling sample std ddof=1; EMA SMA-seeded recursive alpha=2/(n+1)",
+    "initial_position": "cash",
+    "missing_data_policy": null,
+    "parameters": [
+      50.0
+    ],
+    "parent_record_id": "M0234",
+    "price_adjustment": null,
+    "rebalance": "signal_change_only",
+    "schedule": "daily_eod",
+    "signal": "PRICE_SMA",
+    "stop_loss_fraction": null,
+    "take_profit_fraction": null,
+    "then": {
+      "allocation": "full",
+      "asset": "BTC/EUR"
+    },
+    "type": "long_only_signal"
+  },
+  "data_requirements": {
+    "derivation_version": "ast-execution-v4",
+    "required_fields": [
+      "close",
+      "open"
+    ],
+    "symbols": [
+      "BTC/EUR"
+    ],
+    "frequency": "1d",
+    "adjustment": "UNADJUSTED",
+    "timezone": "UTC",
+    "calendar": "CRYPTO_24_7",
+    "auxiliary_data": [],
+    "derivation_sha256": "9fe357a6d82f57534b2c04d530e02a31345dfb1264137db5fd08849edb39b8a5",
+    "dataset_profile": "LAB_OHLCV_V1"
+  },
+  "use_context": "PRIVATE_INTERNAL_RESEARCH",
+  "engine_config": {
+    "schema_version": "qg-first-market-v3",
+    "frozen_at": "2026-09-27T11:03:57.632223+00:00",
+    "family_id": "btc-1d-quantgraph-source-sma",
+    "parent_record_id": "M0234",
+    "signal": "PRICE_SMA",
+    "parameters": [
+      50
+    ],
+    "parameter_grid": [
+      [
+        40
+      ],
+      [
+        50
+      ],
+      [
+        60
+      ]
+    ],
+    "trial_count": 3,
+    "symbol": "BTC/EUR",
+    "exchange": "bit2me",
+    "market_type": "spot",
+    "minutes": 1440,
+    "requested_start": "2022-07-01T00:00:00Z",
+    "evaluation_start": "2023-01-01T00:00:00Z",
+    "oos_start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-27T00:00:00Z",
+    "initial_cash": 10000.0,
+    "cash_currency": "EUR",
+    "cash_interest": 0.0,
+    "leverage": 1.0,
+    "funding": "NOT_APPLICABLE_SPOT",
+    "fee_bps": 60.0,
+    "slippage_bps": 10.0,
+    "cost_basis": "RESEARCH_ASSUMPTION: conservative fixed cost; not verified actual account tier",
+    "stress_cost_multipliers": [
+      1.0,
+      2.0
+    ],
+    "signal_timing": "closed bar",
+    "execution_timing": "next bar open",
+    "execution_price": "open with adverse slippage",
+    "position": "all cash net of fees; no pyramiding",
+    "stop_loss_fraction": null,
+    "take_profit_fraction": null,
+    "bracket_policy": "gap stop at open; otherwise threshold; stop first if both touched; no same-bar reentry",
+    "missing_data_policy": "FAIL formal research on any missing/invalid bar or required native field; no fills or zero trade counts",
+    "indicator_semantics": "SMA full window including current closed close; zscore pandas rolling sample std ddof=1; EMA SMA-seeded recursive alpha=2/(n+1)",
+    "source_derivation": "Explicit research adaptation to BTC/EUR long-only spot; source short exposure becomes cash; costs and next-open timing are research assumptions",
+    "zscore_exit": "cash unless current closed z < -entry threshold; source is stateless, not hysteresis",
+    "ema_entry_exit": "fast crosses above slow with volume>0 enter; crosses below with volume>0 exit",
+    "acceptance_policy": "Only ELIGIBLE V3 + trusted complete raw/normalized audit permits REAL_MARKET_BACKTEST; raw_unaccepted permits PRIVATE_DIAGNOSTIC_PROBE only",
+    "selection_policy": "baseline parameter fixed before data; report full grid, no OOS retuning; 2025/2026 halves descriptive only",
+    "success_policy": "No promotion. RESEARCH_PASSED requires positive OOS net return, >=30 closed OOS trades, OOS Sharpe>0, MDD<=0.3, DSR>=0.95, PBO<=0.1; otherwise failed or inconclusive",
+    "limitations": [
+      "Historical OOS is not prospective evidence",
+      "Single market; not evidence of general alpha",
+      "CSCV does not purge or embargo overlapping holdings; DSR IID approximation",
+      "Base and all grid trials share one hypothesis family"
+    ]
+  },
+  "prior_trial_count": 3,
+  "holdout_status": "RETROSPECTIVE_PREVIOUSLY_OBSERVED",
+  "limitations": [
+    "Historical OOS is not prospective evidence",
+    "Single market; not evidence of general alpha",
+    "CSCV does not purge or embargo overlapping holdings; DSR IID approximation",
+    "Base and all grid trials share one hypothesis family",
+    "V3 diagnostic already exposed part of this historical holdout; not a fresh OOS claim",
+    "Original requested history retained; no window shrink to fit available data"
+  ]
+}

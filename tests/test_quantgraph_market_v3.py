@@ -88,7 +88,7 @@ def test_market_envelope_rejects_untrusted_fixture_and_missing_gate():
         market_evidence_envelope(**args)
     data = dict(real_market_data=True, quality_status='UNVERIFIED', data_availability_status='PENDING')
     args['data_provenance'] = data
-    args['candidate_rows'] = [dict(candidate_gate=dict(gate_version='research-candidate-gate-v3', status='ELIGIBLE', eligible=True),
+    args['candidate_rows'] = [dict(candidate_gate=dict(gate_version='research-candidate-gate-v4', status='ELIGIBLE', eligible=True),
                                   variant=dict(strategy_concept_id='c1', strategy_template_id='t1'),
                                   reviewed_evidence=dict(data_requirement=copy.deepcopy(data)))]
     with pytest.raises(ValueError, match='Untrusted'):

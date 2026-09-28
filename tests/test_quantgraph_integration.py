@@ -21,7 +21,7 @@ def candidate(variant='v1', template='t1', eligible=False):
             'source_verification': 'VERIFIED' if eligible else 'NOT_INDEPENDENTLY_VERIFIED',
             'rule_ast': {'type': 'threshold_switch'}}, 'definition_admitted': True,
             'research_allowed': eligible, 'research_rights_status': 'ALLOWED' if eligible else 'REVIEW_REQUIRED',
-            'candidate_gate': {'gate_version': 'research-candidate-gate-v3', 'eligible': eligible, 'status': 'ELIGIBLE' if eligible else 'REVIEW_REQUIRED'},
+            'candidate_gate': {'gate_version': 'research-candidate-gate-v4', 'eligible': eligible, 'status': 'ELIGIBLE' if eligible else 'REVIEW_REQUIRED'},
             'data_available': eligible,
             'execution_contract': {'timing': 'next_bar', 'costs': {'fee_bps': 10, 'slippage_bps': 2},
                                    'closed_bar_only': True, 'indicator_semantics': 'fixture-exact-definition',
@@ -43,7 +43,7 @@ def test_ready_candidates_require_all_independent_gates():
     report = select_candidates(rows, target=100)
     assert report['selected_count'] == 100 and report['templates'] == 120
     rows[0]['research_allowed'] = False
-    assert select_candidates(rows)['selected_count'] == 119
+    assert select_candidates(rows, target=200)['selected_count'] == 119
 
 
 def test_selected_template_excludes_unapproved_parameter_siblings():

@@ -5,7 +5,7 @@ import json
 import math
 
 
-SUPPORTED_GATE_VERSION = 'research-candidate-gate-v3'
+SUPPORTED_GATE_VERSION = 'research-candidate-gate-v4'
 
 
 def digest(value):
@@ -28,7 +28,7 @@ def collect_candidates(client):
     return rows
 
 
-def select_candidates(rows, *, target=200, minimum_required=100):
+def select_candidates(rows, *, target=20, minimum_required=1):
     if not 1 <= target <= 300:
         raise ValueError('Research target must be 1..300 independent templates')
     if not 1 <= minimum_required <= target:
