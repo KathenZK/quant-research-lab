@@ -47,6 +47,10 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+markers = [
+  "local_data: tests that require the local data lake or untracked research artifacts",
+  "governance: repository governance and contract tests that must pass without local data",
+]
 
 [tool.ruff]
 target-version = "py311"

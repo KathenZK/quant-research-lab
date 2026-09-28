@@ -4,7 +4,20 @@
 
 ## 当前文档
 
+- [Binance OHLCV Data Lake Governance](data-lake-governance/README.md)
 - [Cross-Sectional Alpha Research Pipeline Readiness Audit](cross-sectional-alpha-pipeline/README.md)
+- [Runner Authorization Reconciliation](runner-authorization-reconciliation/README.md)
+- [研究计划整体审计与后续方向](research-program-review/README.md)
 
 
 - [QuantGraph 研究联通](quantgraph-integration/README.md)
+## 状态
+
+本目录家族状态列写 `见顶层`，以 [research/README.md](../README.md) 为准。
+
+| Directory | 状态 |
+| --- | --- |
+| [data-lake-governance/](data-lake-governance/README.md) | 见顶层 |
+| [cross-sectional-alpha-pipeline/](cross-sectional-alpha-pipeline/README.md) | 见顶层 |
+| [runner-authorization-reconciliation/](runner-authorization-reconciliation/README.md) | 见顶层 |
+| [research-program-review/](research-program-review/README.md) | 见顶层 |

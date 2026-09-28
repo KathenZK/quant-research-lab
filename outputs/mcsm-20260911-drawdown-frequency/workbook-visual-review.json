@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ALL_SEVEN_SHEETS_VISUALLY_INSPECTED",
+  "review_date": "2026-09-11",
+  "scope": "Every sheet rendered through row 14; source sheet A:C and other sheets A:H. Full-table values/formulas and exported XML receive separate machine checks.",
+  "observations": [
+    "All seven titles and displayed column headings are readable, without clipped numeric values.",
+    "Dates, percentages, USDT amounts, negative values and unavailable planned returns have distinct formatting.",
+    "Monthly coin names are visible; per-coin dates are separate from price PnL; failed weekly plans show n.a. for returns and cash.",
+    "Final iteration added neutral row banding, subtle column separators, centered dates and readable Chinese drawdown account names."
+  ],
+  "previews_sha256": {
+    "previews/回撤来源.png": "1ae0ad79f73abc70cf67da477e53c5f9abbb6ed7d64e5578d5dd310c972dead7",
+    "previews/年度汇总.png": "fa0fc17af61a2b60b994436324b8c2b850e3396f4050c7266adf494d68cb6bad",
+    "previews/每月持仓盈亏.png": "6e4067cbadbe129667cc83dc0112793e153dc5e4f5bfd7bcdbcfabc67170389e",
+    "previews/策略总览.png": "18e003d21a2bd62e7ec114f66eea5ba38387ec0a0632a4bd4749e5c1fb6e70b9",
+    "previews/说明与来源.png": "4988cab139d9c58a9cc3335996c3f3cebf812053066689053546f9d0740407ee",
+    "previews/逐币进出.png": "8dd0b08ead90d806a877dc1c186327cb5ddad96c9afe5377e25a975b9f6f63f1",
+    "previews/频率换仓明细.png": "3f27562725a87291ccd6bb239715ebade2dde332040c3ccbfb168c998b2ba966"
+  }
+}

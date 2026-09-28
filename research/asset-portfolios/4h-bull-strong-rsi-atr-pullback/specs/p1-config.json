@@ -1,0 +1,86 @@
+{
+  "observation_id": "BIN-4H-BSRAP-P1",
+  "frozen_at_utc": "2026-09-07T08:48:17.511776+00:00",
+  "evaluation_start": "2020-01-01T00:00:00Z",
+  "state": {
+    "btc_price_sma_days": 100,
+    "btc_slope_sma_days": 50,
+    "slope_lag_days": 5,
+    "breadth_sma_days": 50,
+    "breadth_threshold": 0.6,
+    "min_pool_size": 20
+  },
+  "universe": {
+    "min_contiguous_days": 60,
+    "daily_quote_volume_median_days": 20,
+    "min_median_daily_quote_volume": 10000000,
+    "top_liquidity_n": 100
+  },
+  "strength": {
+    "momentum_days": 30,
+    "rank_top_fraction": 0.2,
+    "absolute_positive_required": true,
+    "ranking_daily": true
+  },
+  "labels": {
+    "horizons_days": [
+      3,
+      7,
+      14
+    ],
+    "primary_days": 7,
+    "entry": "next daily open after completed daily signal",
+    "forward_incomplete": "per-horizon mask; never determine membership from future validity",
+    "weighting": "equal-weight coins within day; equal-weight decision days for state and matched selector comparisons"
+  },
+  "fee_per_fill": 0.001,
+  "slippage_bps": [
+    4,
+    8
+  ],
+  "entry_variants": [
+    "direct",
+    "rsi14_pullback",
+    "rsi14_reclaim",
+    "rsi14_atr_pullback"
+  ],
+  "rsi_period": 14,
+  "rsi_threshold": 30,
+  "atr_period": 14,
+  "atr_decline_lag_4h_bars": 6,
+  "stop_ma_4h_bars": 7,
+  "stop_atr_multiple": 2,
+  "one_entry_per_oversold_episode": true,
+  "reclaim": "arm while eligible and RSI<=30; enter on first close>30 only if still eligible; clear arm at that cross regardless; no retroactive ATR qualification",
+  "capital": {
+    "initial_cash": 100000,
+    "max_positions": 5,
+    "max_notional_fraction": 0.2,
+    "risk_per_trade_fraction": 0.005,
+    "total_stop_risk_fraction": 0.02,
+    "leverage": false,
+    "priority": "higher frozen daily momentum, then symbol ascending",
+    "funding": "UNKNOWN: only hypothetical capital-constrained price contribution, no true net equity/CAGR/Sharpe"
+  },
+  "bootstrap": {
+    "unit": "decision-month whole blocks including all assets",
+    "draws": 2000,
+    "seed": 20260907,
+    "min_months": 12
+  },
+  "screen": {
+    "primary_horizon_days": 7,
+    "min_days": 100,
+    "min_years": 3,
+    "min_positive_increment_years": 3,
+    "positive_primary_mean": true,
+    "positive_primary_increment": true,
+    "secondary_3d_14d_increment_positive": true
+  },
+  "frozen_p0_indicator_source": {
+    "path": "scripts/build_p0_features.py",
+    "sha256": "83e6886364895195739715393a4e80fd8e55699cf4743ce9c445c0c1fb724d43"
+  },
+  "history_label": "RETROSPECTIVE_REUSED_DIAGNOSTIC_NOT_FRESH_OOS",
+  "net_performance_authorized": false
+}

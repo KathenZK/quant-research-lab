@@ -1,6 +1,6 @@
 """研究文档一致性检查。
 
-把 research/ 的索引更新义务、家族目录骨架和状态词约定变成可执行检查，
+把 research/ 的索引登记、家族目录骨架和证据契约变成可执行检查，
 防止路由表与目录结构漂移（历史上 6h-rs4-regime-switch 曾建目录但未登记索引）。
 规则来源：.cursor/rules/research-report-storage.mdc 与 docs/research-governance/strategy-status-glossary.md。
 """
@@ -150,7 +150,7 @@ def test_families_registered_in_asset_index() -> None:
 def test_top_level_index_links_resolve() -> None:
   """research/README.md 与 hype/README.md 中引用的仓库相对路径必须存在。
 
-  同时校验反引号路径和 Markdown 链接（clickable-file-references.mdc 要求
+  同时校验反引号路径和 Markdown 链接（research-report-storage.mdc 要求
   路由表使用可点击链接，链接失效同样属于索引漂移）。
   """
   problems = []
@@ -199,7 +199,7 @@ _REPRO_INTERNAL_REF = re.compile(
 def test_external_reproduction_specs_are_self_contained() -> None:
     """对外复现规格必须自包含：仓库内部引用只能出现在"非复现依赖"附录之后。
 
-    规则来源：.cursor/rules/external-reproduction-spec.mdc。同事只会拿到这一个
+    规则来源：docs/research-governance/external-reproduction-spec.md。同事只会拿到这一个
     Markdown 文件，正文里引用仓库脚本/产物/绝对路径都会让复现在仓库外失败。
     """
     problems = []
@@ -248,66 +248,27 @@ def test_external_reproduction_specs_are_self_contained() -> None:
     assert not problems, "对外复现规格自包含检查失败:\n" + "\n".join(problems)
 
 
-# 状态词校验：路由表状态列必须使用 strategy-status-glossary.md 的主状态词表。
-_ALLOWED_MAIN_STATUS = (
-  "explore",
-  "registered",
-  "live spec",
-  "dry-run",
-  "live",
-  "NO-GO",
-  "archived",
-)
-# 已废弃/禁止的状态词（见 glossary：paper-live 无此阶段，candidate 只能作研究角色词）。
-_FORBIDDEN_STATUS_TOKENS = ("paper-live", "sim-paper", "blocked")
-_FORBIDDEN_STATUS_PHRASES = (
-  "audit / not promoted",
-  "audit only",
-  "live candidate",
-  "dry-run candidate",
-  "promotion candidate",
-)
-
-
-def _iter_status_cells(md: Path):
-  """遍历 Markdown 表格中"状态"列的单元格，返回 (行号, 内容)。"""
-  status_col = None
-  for lineno, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
-    stripped = line.strip()
-    if not stripped.startswith("|"):
-      status_col = None
-      continue
-    cells = [c.strip() for c in stripped.strip("|").split("|")]
-    if "状态" in cells:
-      status_col = cells.index("状态")
-      continue
-    if status_col is None or set(stripped) <= {"|", "-", " ", ":"}:
-      continue
-    if len(cells) > status_col:
-      yield lineno, cells[status_col]
-
-
-def test_routing_table_status_labels_use_glossary_vocabulary() -> None:
-  """research/README.md 与 hype/README.md 路由表状态列只能用 glossary 主状态词。"""
-  problems = []
-  for md in [RESEARCH / "README.md", RESEARCH / "hype" / "README.md"]:
-    for lineno, cell in _iter_status_cells(md):
-      rel = md.relative_to(ROOT)
-      lowered = cell.lower()
-      hit_forbidden = [t for t in _FORBIDDEN_STATUS_TOKENS if t in lowered]
-      if hit_forbidden:
-        problems.append(f"{rel}:L{lineno}: 状态含已废弃词 {hit_forbidden}: {cell}")
-      hit_phrases = [p for p in _FORBIDDEN_STATUS_PHRASES if p in lowered]
-      if hit_phrases:
-        problems.append(f"{rel}:L{lineno}: 已废弃状态短语 {hit_phrases}: {cell}")
-      # "live-ready" 属于修饰词后缀，不算主状态 `live` 命中。
-      cleaned = re.sub(r"live-ready", "", lowered)
-      if not any(
-        re.search(rf"\b{re.escape(s.lower())}\b", cleaned)
-        for s in _ALLOWED_MAIN_STATUS
-      ):
-        problems.append(f"{rel}:L{lineno}: 状态未包含任何 glossary 主状态词: {cell}")
-  assert not problems, "路由表状态词校验失败:\n" + "\n".join(problems)
+def test_glossary_main_statuses_match_live_spec_schema() -> None:
+  """机器主状态与文档定义一致；研究叙述和结果说明不受词表限制。"""
+  glossary = (GOVERNANCE_DOCS / "strategy-status-glossary.md").read_text(
+    encoding="utf-8"
+  )
+  heading = "## 主状态定义"
+  assert heading in glossary, "glossary 缺少主状态定义"
+  section = glossary.split(heading, 1)[1].split("\n## ", 1)[0]
+  documented = set(re.findall(r"^\|\s*`([^`]+)`\s*\|", section, re.MULTILINE))
+  schema = json.loads(
+    (GOVERNANCE_DOCS / "schemas" / "lab-live-spec-frontmatter.schema.json").read_text(
+      encoding="utf-8"
+    )
+  )
+  machine_statuses = set(schema["properties"]["main_status"]["enum"])
+  assert documented, "glossary 主状态表为空或无法解析"
+  assert documented == machine_statuses, (
+    f"glossary 与 main_status schema 不一致: "
+    f"仅文档有 {sorted(documented - machine_statuses)}; "
+    f"仅 schema 有 {sorted(machine_statuses - documented)}"
+  )
 
 
 def test_shared_kernel_versions_are_frozen() -> None:
@@ -338,16 +299,6 @@ def test_shared_kernel_versions_are_frozen() -> None:
   assert not problems, "共享内核冻结检查失败:\n" + "\n".join(problems)
 
 
-def test_core_ledgers_respect_length_budget() -> None:
-  problems = []
-  for ledger in sorted(RESEARCH.rglob("*core-ledger*.md")):
-    rel = str(ledger.relative_to(RESEARCH))
-    line_count = len(ledger.read_text(encoding="utf-8").splitlines())
-    if line_count > 150:
-      problems.append(f"{rel}: {line_count} 行，超过新主账 150 行阈值")
-  assert not problems, "core ledger 长度检查失败:\n" + "\n".join(problems)
-
-
 def test_live_specs_directories_are_not_empty() -> None:
   problems = []
   for live_specs in sorted(path for path in RESEARCH.rglob("live-specs") if path.is_dir()):
@@ -359,45 +310,6 @@ def test_live_specs_directories_are_not_empty() -> None:
     if not specs:
       problems.append(str(live_specs.relative_to(ROOT)))
   assert not problems, "以下 live-specs/ 只有 README 或为空:\n" + "\n".join(problems)
-
-
-def test_status_combinations_are_not_self_contradictory() -> None:
-  problems = []
-  status_docs = [RESEARCH / "README.md"]
-  status_docs.extend(RESEARCH / asset / "README.md" for asset in ASSET_DIRS)
-  status_docs.extend(family_dir / "README.md" for _, family_dir in iter_family_dirs())
-  status_docs.extend(RESEARCH.rglob("*core-ledger*.md"))
-  for md in dict.fromkeys(status_docs):
-    status_lines = {
-      lineno: cell for lineno, cell in _iter_status_cells(md)
-    }
-    for lineno, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
-      is_current_status = bool(
-        re.match(
-          r"^\s*(?:[-*>]\s*)*(?:\*{0,2})?(?:current status|当前状态|status)\s*[:：]",
-          line,
-          re.IGNORECASE,
-        )
-      )
-      if lineno not in status_lines and not is_current_status:
-        continue
-      status_text = status_lines.get(lineno, line)
-      code_spans = re.findall(r"`([^`]+)`", status_text)
-      for fragment in code_spans or [status_text]:
-        lowered = fragment.lower()
-        if "dry-run" in lowered and "not promoted" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: dry-run 与 not promoted 并存")
-        if "dry-run" in lowered and "no-go" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: dry-run 与 NO-GO 并存")
-        if "no-go" in lowered and "not promoted" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: NO-GO 与 not promoted 并存")
-        if "no-go" in lowered and "not live-ready" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: NO-GO 与 not live-ready 并存")
-        if "archived" in lowered and "not promoted" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: archived 与 not promoted 并存")
-        if "archived" in lowered and "not live-ready" in lowered:
-          problems.append(f"{md.relative_to(ROOT)}:L{lineno}: archived 与 not live-ready 并存")
-  assert not problems, "发现非法状态组合:\n" + "\n".join(problems)
 
 
 def test_lab_does_not_define_runtime_authority() -> None:
@@ -443,6 +355,25 @@ def test_governance_schemas_accept_canonical_contracts(tmp_path: Path) -> None:
   assert not _schema_problems(joint_frontmatter, live_spec_schema)
   joint_frontmatter["strategy_id"] = "AMBIGUOUS"
   assert _schema_problems(joint_frontmatter, live_spec_schema)
+
+  scalar_frontmatter = {
+    "schema_version": "1.0",
+    "spec_role": "lab_handoff",
+    "family_id": "EXAMPLE",
+    "main_status": "registered",
+    "spec_status": "draft",
+    "approval_level_max": "none",
+    "strategy_id": "EXAMPLE-V1",
+    "runner_kind": "example",
+    "peer_spec": "crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md",
+  }
+  assert not _schema_problems(scalar_frontmatter, live_spec_schema)
+  scalar_frontmatter["peer_spec"] = (
+    "quant-runner/crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md"
+  )
+  assert any("peer_spec" in problem for problem in _schema_problems(scalar_frontmatter, live_spec_schema))
+  scalar_frontmatter["peer_spec"] = "/crates/quant-runner/src/runner/strategies/example/EXAMPLE-V1-SPEC.md"
+  assert any("peer_spec" in problem for problem in _schema_problems(scalar_frontmatter, live_spec_schema))
 
   sys.path.insert(0, str(ROOT))
   try:

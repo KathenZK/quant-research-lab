@@ -1,3 +1,15 @@
+---
+schema_version: "1.0"
+spec_role: lab_handoff
+family_id: HYPE-EMA-TB
+main_status: registered
+spec_status: draft
+strategy_id: HYPE-EMA-TB-V39
+runner_kind: hype_ema_tb
+peer_spec: crates/quant-runner/src/runner/strategies/hype_ema_tb/HYPE-EMA-TB-V39-SPEC.md
+approval_level_max: none
+---
+
 # HYPE-EMA-TB-V39 Live Spec（同事验证版，非实盘批准）
 
 规格 id：`HYPE-EMA-TB-V39-LIVE-SPEC-2026-07-09`

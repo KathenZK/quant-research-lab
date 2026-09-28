@@ -2,6 +2,18 @@
 
 本目录存放 Solana 单资产策略家族。任何版本号都必须和市场、周期、机制一起引用；状态词定义见 [strategy-status-glossary.md](../../docs/research-governance/strategy-status-glossary.md)。
 
+
+## 状态
+
+本目录家族状态列写 `见顶层`，以 [research/README.md](../README.md) 为准。
+
+| Directory | 状态 |
+| --- | --- |
+| [1h-adaptive-regime/](1h-adaptive-regime/README.md) | 见顶层 |
+| [1h-volatility-compression-breakout/](1h-volatility-compression-breakout/README.md) | 见顶层 |
+| [4h-rs4-regime-switch/](4h-rs4-regime-switch/README.md) | 见顶层 |
+| [1h-pullback-bracket/](1h-pullback-bracket/README.md) | 见顶层 |
+
 ## 当前研究线
 
 - `SOL-1H-Adaptive-Regime`（`SOL-1H-AR`）：[1h-adaptive-regime/](1h-adaptive-regime/README.md)。Binance USD-M Futures `SOLUSDT` perpetual `1h` 多指标自适应 regime 研究；V1、V2、V3 已登记。V3 为 `Donchian core + VWAP arm-confirm-expire satellite`，full annual `2.10x`、DD `-19.05%`、win `79.17%`；reused holdout `+2.61%` 但只有 `3` 笔。当前 `registered / not promoted / not live-ready`。主账：[sol-1h-ar-core-ledger.md](1h-adaptive-regime/sol-1h-ar-core-ledger.md)。

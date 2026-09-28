@@ -55,6 +55,7 @@ class StorageConfig:
     features_dir: Path
     cache_dir: Path
     registry_db_path: Path
+    derived_dir: Path
 
 
 @dataclass(slots=True)
@@ -93,6 +94,7 @@ def default_settings(project_root: Path | None = None) -> AppSettings:
             features_dir=root / "data" / "features",
             cache_dir=root / "data" / "cache",
             registry_db_path=root / "data" / "cache" / "_registry" / "runs.sqlite",
+            derived_dir=root / "data" / "derived",
         ),
         exchanges=[
             ExchangeConfig(name="binance", quote_assets=["USDT", "USDC"]),
@@ -131,6 +133,7 @@ def load_settings(path: str | Path | None = None) -> AppSettings:
         features_dir = defaults.storage.features_dir
         cache_dir = defaults.storage.cache_dir
         registry_db_path = defaults.storage.registry_db_path
+        derived_dir = defaults.storage.derived_dir
     else:
         root_dir = _resolve_storage_path(storage.get("root_dir"), default=defaults.storage.root_dir, project_root=project_root)
         raw_dir = _resolve_storage_path(storage.get("raw_dir"), default=defaults.storage.raw_dir, project_root=project_root)
@@ -147,6 +150,11 @@ def load_settings(path: str | Path | None = None) -> AppSettings:
             default=registry_db_default,
             project_root=project_root,
         )
+        derived_dir = _resolve_storage_path(
+            storage.get("derived_dir"),
+            default=root_dir / "derived",
+            project_root=project_root,
+        )
 
     return AppSettings(
         name=project.get("name", defaults.name),
@@ -158,6 +166,7 @@ def load_settings(path: str | Path | None = None) -> AppSettings:
             features_dir=features_dir,
             cache_dir=cache_dir,
             registry_db_path=registry_db_path,
+            derived_dir=derived_dir,
         ),
         exchanges=[
             ExchangeConfig(

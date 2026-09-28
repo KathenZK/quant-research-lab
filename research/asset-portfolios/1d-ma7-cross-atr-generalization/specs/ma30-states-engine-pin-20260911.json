@@ -1,0 +1,10 @@
+{
+  "engine_path": "research/_shared-kernels/ma7-cross-atr-ratchet/v5/engine.py",
+  "engine_sha256": "f98eb0fb30ffe388e6e55d7535619d8dd8f0edb47c4efe864e5d61f8b7ef1a3f",
+  "contract_path": "research/asset-portfolios/1d-ma7-cross-atr-generalization/specs/contract-ma30-states-20260911.md",
+  "contract_sha256": "dcb76f46a7a7af252daa8957b7ab5d13682408c99dcb0d47b186235bb7bbd8e1",
+  "tests_path": "tests/test_ma7_car_ma30_states.py",
+  "tests_sha256": "f7a6c81b0e55cb2408198c97e459dc7244c9043c9cade088c743f8de08dd3dff",
+  "tests_passed": 28,
+  "before_market_results": true
+}

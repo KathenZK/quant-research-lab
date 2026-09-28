@@ -1,0 +1,45 @@
+{
+  "dry_run": true,
+  "trading_mode": "spot",
+  "max_open_trades": 1,
+  "stake_currency": "USDT",
+  "stake_amount": 12,
+  "tradable_balance_ratio": 0.99,
+  "dry_run_wallet": 25,
+  "fiat_display_currency": "USD",
+  "cancel_open_orders_on_exit": false,
+  "dataformat_ohlcv": "feather",
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "TAO/USDT",
+      "ETH/USDT",
+      "LINK/USDT",
+      "XRP/USDT",
+      "SOL/USDT",
+      "NEAR/USDT",
+      "ADA/USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": false
+  },
+  "exit_pricing": {
+    "price_side": "same",
+    "use_order_book": false
+  },
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "unit": "minutes"
+  }
+}

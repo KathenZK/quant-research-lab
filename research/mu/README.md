@@ -4,9 +4,9 @@
 
 | Full family name | Alias | Directory | 机制 | 状态 |
 | --- | --- | --- | --- | --- |
-| `MU-HYPE-Transfer` | `MU-HYPE-XFER` | [扁平历史家族](mu-hype-xfer-session-aware-ledger.md) | HYPE V35/V6 风格 EMA 趋势迁移、时段与仓位实验 | `explore / not promoted / not live-ready`；V14 前向未确认 |
-| `MU-15M-Donchian-Trend-Breakout` | `MU-15M-DTB` | [家族目录](15m-donchian-trend-breakout/README.md) · [主账](15m-donchian-trend-breakout/mu-15m-dtb-core-ledger.md) | EMA regime + Donchian 收盘突破 + ATR/trailing exit | final audit 未通过、停止扩搜 / `explore / not promoted / not live-ready` |
-| `MU-1D-MA7-Separated-Trend-Transfer` | `MU-1D-MA7-ST-XFER` | [家族目录](1d-ma7-separated-trend-transfer/README.md) · [主账](1d-ma7-separated-trend-transfer/mu-1d-ma7-st-xfer-core-ledger.md) | HYPE 日线 V1 固定 SMA7 多空状态机迁移至 Binance perpetual / Nasdaq equity | Binance combined 失败；Nasdaq 仅多头正收益且数据未接受 / `explore / not promoted / not live-ready` |
+| `MU-HYPE-Transfer` | `MU-HYPE-XFER` | [扁平历史家族](mu-hype-xfer-session-aware-ledger.md) | HYPE V35/V6 风格 EMA 趋势迁移、时段与仓位实验 | 见顶层 |
+| `MU-15M-Donchian-Trend-Breakout` | `MU-15M-DTB` | [家族目录](15m-donchian-trend-breakout/README.md) · [主账](15m-donchian-trend-breakout/mu-15m-dtb-core-ledger.md) | EMA regime + Donchian 收盘突破 + ATR/trailing exit | 见顶层 |
+| `MU-1D-MA7-Separated-Trend-Transfer` | `MU-1D-MA7-ST-XFER` | [家族目录](1d-ma7-separated-trend-transfer/README.md) · [主账](1d-ma7-separated-trend-transfer/mu-1d-ma7-st-xfer-core-ledger.md) | HYPE 日线 V1 固定 SMA7 多空状态机迁移至 Binance perpetual / Nasdaq equity | 见顶层 |
 
 历史迁移入口：
 

@@ -16,7 +16,7 @@ approval_level_max: tiny_live_pilot
 
 Family id：`HYPE-5M-PBTR`
 
-状态：`live / tiny-live-pilot`，并行保留独立 `dry-run` 实例。tiny-live-pilot 授权截至 `2026-09-24T00:00:00Z` 复核；本文档用于完整复现策略与核对订单行为，不是生产 sizing 或扩资批准。
+状态：`live / tiny-live-pilot`，并行保留独立 `dry-run` 实例。tiny-live-pilot 授权截至 `2026-12-24T00:00:00Z` 复核；本文档用于完整复现策略与核对订单行为，不是生产 sizing 或扩资批准。
 
 创建时间：2026-06-30
 
@@ -461,7 +461,7 @@ timeout_at = entry_bar_open_ts + time_exit_bars * 5 minutes
 strategy_id = HYPE-5M-PBTR-V6.2.1
 symbol = HYPEUSDT
 timeframe = 5m
-mode = dry_run | live_tiny | live
+mode = dry_run | live
 signal_ts
 signal_i_or_ts
 side
@@ -506,6 +506,8 @@ reconcile_status
 error_code
 raw_exchange_response
 ```
+
+Runner 配置 `mode` 只有 `dry_run | live` 两态。tiny-live-pilot 由 lock `approval_level=tiny_live_pilot` 与 `approval_expires_at` 表达，不是第三种 mode。
 
 幂等 key：
 

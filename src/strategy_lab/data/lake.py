@@ -16,6 +16,11 @@ class DataLakeLayout:
     features_dir: Path
     cache_dir: Path
     registry_db_path: Path | None = None
+    derived_dir: Path | None = None
+
+    def __post_init__(self) -> None:
+        if self.derived_dir is None:
+            self.derived_dir = self.root_dir / "derived"
 
     @classmethod
     def from_settings(cls, settings: AppSettings) -> "DataLakeLayout":
@@ -26,6 +31,7 @@ class DataLakeLayout:
             features_dir=settings.storage.features_dir,
             cache_dir=settings.storage.cache_dir,
             registry_db_path=settings.storage.registry_db_path,
+            derived_dir=settings.storage.derived_dir,
         )
 
     def ensure_directories(self) -> None:
@@ -35,8 +41,23 @@ class DataLakeLayout:
             self.normalized_dir,
             self.features_dir,
             self.cache_dir,
+            self.resolved_derived_dir,
+            self.derived_datasets_dir,
+            self.derived_staging_dir,
         ):
             path.mkdir(parents=True, exist_ok=True)
+
+    @property
+    def resolved_derived_dir(self) -> Path:
+        return self.derived_dir if self.derived_dir is not None else self.root_dir / "derived"
+
+    @property
+    def derived_datasets_dir(self) -> Path:
+        return self.resolved_derived_dir / "datasets"
+
+    @property
+    def derived_staging_dir(self) -> Path:
+        return self.resolved_derived_dir / "_staging"
 
     def dataset_root(self, layer: str, kind: DatasetKind) -> Path:
         if layer == "raw":
@@ -45,6 +66,11 @@ class DataLakeLayout:
             return self.normalized_dir / kind.value
         if layer == "features":
             return self.features_dir / kind.value
+        if layer == "derived":
+            raise ValueError(
+                "derived OHLCV is addressed by dataset_id, not by globbing "
+                "layout.dataset_root('derived', kind); use strategy_lab.data.catalog"
+            )
         raise ValueError(f"unsupported layer: {layer}")
 
     def dataset_path(
@@ -85,6 +111,7 @@ class DataLakeLayout:
             "normalized_dir": str(self.normalized_dir),
             "features_dir": str(self.features_dir),
             "cache_dir": str(self.cache_dir),
+            "derived_dir": str(self.resolved_derived_dir),
             "registry_db_path": str(self.run_registry_db_path),
         }
 

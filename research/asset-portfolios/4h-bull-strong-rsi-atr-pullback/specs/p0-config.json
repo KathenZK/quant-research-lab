@@ -1,0 +1,164 @@
+{
+  "observation_id": "BIN-4H-BSRAP-P0",
+  "frozen_at_utc": "2026-09-07T07:54:27.841759+00:00",
+  "data_request": "specs/startup-price-p0.json",
+  "evaluation_start": "2020-01-01T00:00:00Z",
+  "named_symbols": [
+    "HYPE/USDT:USDT",
+    "BTC/USDT:USDT",
+    "LIT/USDT:USDT",
+    "UNI/USDT:USDT",
+    "ARB/USDT:USDT",
+    "ZEC/USDT:USDT"
+  ],
+  "unresolved_symbols": [
+    "PONS"
+  ],
+  "rsi": "Wilder RMA seeded by arithmetic mean of first n valid changes; 0/0=50",
+  "atr_period": 14,
+  "atr_decline_lag_bars": 6,
+  "ma_stop_period": 7,
+  "stop_atr_multiple": 2,
+  "bull": {
+    "btc_ma_bars": 360,
+    "ma_slope_lag_bars": 30,
+    "momentum_bars": 180
+  },
+  "strong": {
+    "momentum_bars": 180,
+    "lag_bars": 6,
+    "top_fraction": 0.2
+  },
+  "liquidity": {
+    "lookback_bars": 42,
+    "min_daily_quote_volume": 10000000,
+    "top_n": 100
+  },
+  "fee_per_fill": 0.001,
+  "slippage_bps": [
+    4,
+    8
+  ],
+  "forward_horizons_bars": [
+    6,
+    18,
+    42
+  ],
+  "min_feature_bars": 187,
+  "variants": [
+    {
+      "id": "primary",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": true,
+      "atr": true,
+      "exit": "ratchet"
+    },
+    {
+      "id": "without_atr",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": true,
+      "atr": false,
+      "exit": "ratchet"
+    },
+    {
+      "id": "without_strong",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": false,
+      "atr": true,
+      "exit": "ratchet"
+    },
+    {
+      "id": "without_bull",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": false,
+      "strong": true,
+      "atr": true,
+      "exit": "ratchet"
+    },
+    {
+      "id": "trend_state_only",
+      "rsi_period": null,
+      "rsi_threshold": null,
+      "bull": true,
+      "strong": true,
+      "atr": false,
+      "exit": "ratchet"
+    },
+    {
+      "id": "rsi6_30",
+      "rsi_period": 6,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": true,
+      "atr": true,
+      "exit": "ratchet"
+    },
+    {
+      "id": "rsi14_35",
+      "rsi_period": 14,
+      "rsi_threshold": 35,
+      "bull": true,
+      "strong": true,
+      "atr": true,
+      "exit": "ratchet"
+    },
+    {
+      "id": "natr_decline",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": true,
+      "atr": true,
+      "atr_measure": "natr",
+      "exit": "ratchet"
+    },
+    {
+      "id": "unratcheted_band",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": true,
+      "atr": true,
+      "exit": "raw_band"
+    },
+    {
+      "id": "named_observation",
+      "rsi_period": 14,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": false,
+      "atr": true,
+      "exit": "ratchet",
+      "named": true
+    },
+    {
+      "id": "named_rsi6",
+      "rsi_period": 6,
+      "rsi_threshold": 30,
+      "bull": true,
+      "strong": false,
+      "atr": true,
+      "exit": "ratchet",
+      "named": true
+    }
+  ],
+  "identity_policy": "observed_diagnostic_not_PIT",
+  "funding_policy": "NOT_VERIFIED_NO_NET_EQUITY_OR_NET_RETURN",
+  "history_label": "RETROSPECTIVE_EXPLORATORY_ALL_HISTORY_2025_PLUS_REUSED",
+  "selection_policy": "No parameter winner selected; all frozen contrasts reported",
+  "evidence_gate": {
+    "min_closed_primary": 100,
+    "min_entry_years": 3,
+    "positive_cost_adjusted_mean": true,
+    "positive_cost_adjusted_median": true,
+    "positive_mean_under_8bps": true,
+    "positive_atr_increment_in_at_least_two_years": true
+  }
+}

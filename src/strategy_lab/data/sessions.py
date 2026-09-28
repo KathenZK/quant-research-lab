@@ -20,7 +20,7 @@ def timeframe_delta(value: str) -> pd.Timedelta:
     if not match:
         raise ValueError(f"unsupported timeframe: {value!r}")
     amount, unit = match.groups()
-    unit_map = {"m": "min", "h": "h", "d": "d", "w": "w"}
+    unit_map = {"m": "min", "h": "h", "d": "D", "w": "W"}
     return pd.Timedelta(int(amount), unit=unit_map[unit])
 
 

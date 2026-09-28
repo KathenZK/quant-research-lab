@@ -1,0 +1,446 @@
+{
+  "counts": {
+    "accounts": 20,
+    "complete_accounts": 16,
+    "blocked_accounts": 4,
+    "yearly": 112,
+    "monthly": 1212,
+    "legs": 12120,
+    "periods": 954,
+    "completed_periods": 300,
+    "planned_only_periods": 654
+  },
+  "maxFormulaError": 1.862645149230957e-9,
+  "sensitivityCheckRestored": true,
+  "recalculated": true,
+  "renderedEverySheet": true,
+  "inspections": [
+    {
+      "sheet": "策略总览",
+      "rows": 20,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "428u8n",
+          "target": {
+            "id": "wb/r65awq",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "策略总览",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "6fg0si",
+          "target": {
+            "id": "wb/kcx8xl",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "年度汇总",
+      "rows": 112,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "16mzbd",
+          "target": {
+            "id": "wb/gx1ojv",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "年度汇总",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "u1t0ar",
+          "target": {
+            "id": "wb/8evfbt",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "每月持仓盈亏",
+      "rows": 1212,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "w5woo8",
+          "target": {
+            "id": "wb/1dvekc",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "每月持仓盈亏",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "3dho0c",
+          "target": {
+            "id": "wb/d2r5rs",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "逐币进出",
+      "rows": 12120,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "663y0z",
+          "target": {
+            "id": "wb/wkq8j8",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "逐币进出",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "61pnc2",
+          "target": {
+            "id": "wb/znx6wt",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "频率换仓明细",
+      "rows": 954,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "f5uvfh",
+          "target": {
+            "id": "wb/d0y9db",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "频率换仓明细",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "3d8xnb",
+          "target": {
+            "id": "wb/ohdlua",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "回撤来源",
+      "rows": 12,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "aikicp",
+          "target": {
+            "id": "wb/q8h4yt",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "回撤来源",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "n8tc58",
+          "target": {
+            "id": "wb/9drpbo",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "说明与来源",
+      "rows": 37,
+      "inspect": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "f4l07k",
+          "target": {
+            "id": "wb/ju7ylh",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "table",
+            "tokens": [
+              "table"
+            ]
+          },
+          "include": {
+            "requested": "values,formulas",
+            "tokens": [
+              "values",
+              "formulas"
+            ]
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    },
+    {
+      "sheet": "说明与来源",
+      "formulaErrorScan": {
+        "recordCount": 1,
+        "truncated": false,
+        "metadata": {
+          "revision": "igjy76",
+          "target": {
+            "id": "wb/y77ke9",
+            "beforeLines": 0,
+            "afterLines": 0
+          },
+          "kind": {
+            "requested": "match",
+            "tokens": [
+              "match"
+            ]
+          },
+          "include": {
+            "tokens": []
+          },
+          "exclude": {
+            "tokens": []
+          },
+          "notices": []
+        }
+      }
+    }
+  ]
+}

@@ -1,43 +1,34 @@
 ---
-description: Store durable research reports as repository Markdown
-alwaysApply: true
+description: 新建家族、登记版本或保存长期研究文档与产物
+globs:
+  - "research/**/*.md"
+  - "docs/research-governance/core-ledger-template.md"
+alwaysApply: false
 ---
 
-# Research Report Storage
+# 研究存储
 
-- Durable research reports, strategy ledgers, experiment conclusions, and decision records must be saved as Markdown under `research/`.
-- Write all newly created or updated durable research documents in Chinese by default unless the user explicitly requests another language. This includes `decision-log.md`, `README.md`, strategy ledgers, diagnostics, ablations, live specs, `notes/`, experiment conclusions, and handoff documents.
-- Before starting a new strategy research line, check `research/README.md` and the relevant asset `README.md`. If the timeframe or strategy mechanism is new, create a separate directory named `research/<asset>/<timeframe>-<strategy-family-slug>/`, for example `research/hype/1m-ema-crossover/`, `research/hype/15m-ema-crossover/`, or `research/hype/5m-pullback-trail/`.
-- Do not place a new timeframe into an existing family only because the indicators are similar; initialize a new family directory with at least `README.md`, `decision-log.md`, `scripts/`, and `artifacts/`.
-- Index-update obligation: creating a new family directory is incomplete until the family is also registered in the asset `README.md` and in the `research/README.md` family routing table (full name, alias, directory, one-line mechanism, current status, ledger link). Registering a new version updates only the family core ledger; asset and top-level indexes carry status labels and links, not per-version metrics.
-- Family and asset `README.md` indexes are routing tables. Do not restate per-version metrics, evidence file lists, or reading orders that already live in the family core ledger; link to the ledger instead. `docs/research-governance/strategy-status-glossary.md` defines the allowed status labels.
-- Shared research engines reused across assets or families belong in `research/_shared-kernels/<kernel-slug>/vN/` as frozen versioned directories. Once a consumer pins a version by SHA256, that `vN/` content is immutable; fixes and features go to `v(N+1)/`. Each kernel keeps a `README.md` with version SHAs and a consumer list. Do not fork a multi-asset engine as a one-off script inside a single family, and do not modify an engine file that other scripts pin by hash.
-- Every active strategy family must have a family core ledger / 主账 under its research directory, preferably named like `<family-id>-core-ledger.md`. When a user says to register, record, freeze, or name a strategy as `Vx`/`Vx.y`, update that family core ledger's current status, version rules, and version table. These words freeze version identity and default to `registered`; they never imply promotion. If the family does not yet have a core ledger, create it before considering the version registration complete.
-- A request to promote, enter dry-run, or go live is a separate state-transition request. It must name an unambiguous target status and satisfy the glossary, validation-gate, and handoff contracts; never infer promotion from a version-registration request.
-- Core-ledger coverage: a family that has at least one registered `Vx` version must have a dedicated `<family-id>-core-ledger.md` file; `README.md` may serve as interim ledger only for families with no registered versions (diagnostic-only or not-promoted lines).
-- Version specs (`specs/`), notes (`notes/`), diagnostics, live specs, and `decision-log.md` are not substitutes for the family core ledger. Version registration is incomplete unless the core ledger links the evidence and states the version status, metrics, decision, and promotion/live-readiness outcome.
-- `specs/` is for research-side version specifications: frozen parameters, signal/filter/exit rules, cost model, data scope, execution timing, and version identity. It answers "what exactly is this version?".
-- `live-specs/` is for runner handoff specifications: `quant-runner` strategy `kind`, runner field names, TOML examples, persistence, order/cancel/restart behavior, smoke tests, parity checks, and remaining implementation gaps. It answers "how should the runner implement and operate it?". A version that is not being handed to `quant-runner` should normally have `specs/` but not `live-specs/`.
-- Core ledger contract: the family core ledger is the compact narrative source of truth for family/version identity and current family state. Runner instance authorization exists only in `quant-runner` and does not replace or rewrite this family narrative. The ledger is not a report, not a diary, not a README, and not a place to paste experiment output. A core ledger should contain only:
-  - family identity and boundary: full family name, aliases, market/exchange/symbol/timeframe, mechanism summary, collision warnings;
-  - current state snapshot: current version(s), glossary status, runner/dry-run/live status if any, live-readiness blockers, and the next decision gate;
-  - version rules: how `Vx`/`Vx.y` increments, what counts as a new version versus an observation or parameter note;
-  - one version table row per registered version/official observation: version, status, role/core idea, key frozen metrics, evidence links, decision, and promotion/live-readiness result;
-  - stable assumptions shared by the family: data source/range, cost model, execution timing, and position-sizing conventions, summarized only when they define the version identity;
-  - curated links to specs, diagnostics, live specs, runner-tracking reports, artifacts, and scripts when those files are required to reproduce or audit the version.
-- Core ledger exclusions: do not put full parameter tables, ablation grids, trade lists, generated JSON/CSV content, long experiment narratives, scratch notes, daily logs, raw command output, chart dumps, or speculative next-idea brainstorming in the core ledger. Put those in `specs/`, diagnostics, ablations, `notes/`, artifacts, scripts, or `decision-log.md`, then link them from the ledger.
-- Core ledger update discipline: when updating a ledger after an experiment, change only the current state snapshot, version table, version rules, or evidence links that are affected. Do not append a new prose section for every run. If a result is not important enough to change a version row or status gate, it belongs in a report or decision log, not in the core ledger.
-- Core ledger length discipline: new ledgers must stay at or below 150 lines unless a governance exception is approved. Existing overlong ledgers may remain only on the mechanical shrink-only allowlist; when touched they must not grow and should be compacted toward the contract.
-- Recommended core ledger headings for new or heavily edited ledgers: `# <Family> Core Ledger`, `## Family Identity`, `## Current State`, `## Version Rules`, `## Version Table`, `## Shared Assumptions`, `## Evidence Map`. Additional headings require a clear reason and should usually be links to reports rather than pasted report content.
-- New `decision-log.md` entries are one decision each: date, a one-or-two-sentence decision/conclusion, and evidence links. Do not restate report content, parameter tables, or metric dumps that already live in the linked report; existing verbose entries stay as-is.
-- Family `README.md` files are routing pages, not summaries: identity, market/timeframe, one-or-two-line mechanism, collision warnings, current status label, and entry links (core ledger, decision log, key specs/reports). Keep them roughly within 30 lines; findings and metrics live only in the ledger, decision log, and reports.
-- Store current one-off research scripts under the relevant `research/.../scripts/` directory, not under `archive/scripts/research/`.
-- Store retained JSON, CSV, HTML, and trade-path outputs under the relevant `research/.../artifacts/` directory. Top-level `reports/` is retired and must not be used for scratch runs, caches, or durable evidence.
-- Put temporary experiment output in a system temporary directory or in a clearly marked scratch/local path under the relevant research directory. Do not cite scratch/local output from durable reports; promote cited or reproducible evidence into `artifacts/`.
-- If a Markdown report cites a generated file, treat that file as durable evidence: place it under the same topic/family `artifacts/` directory and update the Markdown link away from `reports/...`.
-- Do not bulk-promote every old top-level `reports/` file into `artifacts/`; migrate only cited or intentionally retained evidence.
-- Do not create durable research content in Cursor Canvas files or Cursor-private project directories.
-- Canvas may be used only as a temporary visualization surface when the user explicitly requests it.
-- If temporary Canvas work produces a durable conclusion, mirror that conclusion into the appropriate `research/` Markdown file before finishing.
-- Treat `legacy-canvas/` directories as frozen historical evidence from migrated Canvas files. Do not create new research reports there.
-- For HYPE material, keep the family name explicit. Prefer full names such as `HYPE-Candle-Count-Reversal`, `HYPE-EMA-Crossover`, `HYPE-1M-EMA-Crossover`, `HYPE-EMA-Trend-Breakout`, `HYPE-5M-Pullback-Trail`, or `MU-HYPE-Transfer`; short ids like `HYPE-CC`, `HYPE-EMA-X`, `HYPE-1M-EMA-X`, `HYPE-EMA-TB`, `HYPE-5M-PBTR`, and `MU-HYPE-XFER` are historical aliases.
+- 长期研究结论默认以中文 Markdown 保存在 `research/`；用户指定其他语言时从其要求。
+- 按资产、周期和机制组织独立家族 `research/<asset>/<timeframe>-<strategy-family-slug>/`，新家族同步登记资产与顶层研究索引。指标相似不构成合并家族的理由。
+- 策略家族保留 README、独立 `<family-id>-core-ledger.md` 和 decision log；纯诊断主题在 README 声明 `research_classification: diagnostic_topic`，以主题文档记录结论，不建立策略主账。子目录随实际产物创建。
+- README 用于定位；主账记录版本身份、当前状态、关键结论和证据链接，字段参考 [模板](../../docs/research-governance/core-ledger-template.md)。篇幅和章节按内容需要安排，完整参数与实验输出另存后链接。
+- 登记/冻结版本更新主账与规格，记录状态或重要决策时更新 decision log；索引保留简短状态或主账入口。登记不自动触发晋升、全套实验或图表生成，状态口径见 [术语表](../../docs/research-governance/strategy-status-glossary.md)。
+
+| 内容 | 家族内位置 |
+| --- | --- |
+| 参数、逻辑、数据、成本与执行契约 | `specs/` |
+| 诊断、消融与研究说明 | `diagnostics/`、`ablations/`、`notes/` |
+| 当前研究、抓取、审计与导出脚本 | `scripts/` |
+| 被引用或明确保留的 JSON/CSV/HTML/图表 | `artifacts/`，见 [产物治理](../../docs/research-governance/artifacts-governance.md) |
+| runner 交接与运行观察 | `live-specs/`、`runner-tracking/`，见 [交接文档](../../docs/research-governance/lab-runner-handoff.md) |
+
+- 临时输出放系统临时目录或明确标记的 scratch/local 目录；长期引用前将证据保存到 `artifacts/`。退役的顶层 `reports/`、Cursor 私有目录和 `legacy-canvas/` 不接收新研究内容。
+- 仓库文档用相对 Markdown 链接引用文件，回复中交付文件用绝对路径链接，并确认目标存在。参数、代码和泛指路径可用反引号；给仓库外读者的单文件规格遵循 [对外复现格式](../../docs/research-governance/external-reproduction-spec.md)。
+- 共享引擎遵循 [共享内核约定](../../research/_shared-kernels/README.md)：消费方固定版本与 SHA256，已被 pin 的版本不可原地修改；报告和产物仍归消费方家族。
+
+## 新研究的曝光与可恢复证据
+
+- 2026-09-25 起，新实验在查看结果前，按[研究记录协议](../../research/platform/cross-sectional-alpha-pipeline/specs/research-records-protocol-20260925.md)查询已看窗口并登记曝光；新目录和新家族不重置样本的历史使用状态。未知的旧搜索次数保持未知，不能据此计算可靠的 DSR/PBO。
+- 正式候选保留配置、精确代码、依赖环境、必要输入快照、实际模型及预处理（若有）、决策与账户输出，至少完成一次本地独立恢复。只留参数、随机种子、下载地址或 Markdown 不算可恢复。
+- 本协议覆盖的候选证据包和曝光账本属于长期证据，不按缓存清理。异地备份使用用户明确指定的位置；本地副本不代表异地容灾。
+- 前瞻记录保留实际写入时间、应到节点、缺失和迟到、执行/账户关联及冻结对象指纹；补算结果标为历史诊断，不回填成实时观察。已有家族冻结规则和生产授权不因本协议改变。

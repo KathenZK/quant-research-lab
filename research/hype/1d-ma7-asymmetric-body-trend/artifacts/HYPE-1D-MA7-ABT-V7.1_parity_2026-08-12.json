@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "strategy_id": "HYPE-1D-MA7-ABT-V7.1",
+  "runner_kind": "hype_1d_ma7_abt",
+  "runner_commit": "not-recorded-in-source-report",
+  "lab_commit": "bf2034f48361b0f2f016f83638bff3338cbf3784",
+  "snapshot_id": "hype-1d-ma7-abt-v7-1-strict-parity-2026-08-12",
+  "gate_level": "parity",
+  "command": "DINGTALK_WEBHOOK_URL=https://example.com cargo run -q -p quant-runner -- replay-dry-run --config configs/dryrun.toml --name hype-1d-ma7-abt-v7-1-dry-run --limit 500 --start-ts 2025-05-31T00:00:00Z --end-ts 2026-08-06T00:00:00Z",
+  "window": {
+    "start": "2025-05-31T00:00:00Z",
+    "end": "2026-08-06T00:00:00Z",
+    "bars": 432
+  },
+  "trade_path": {
+    "reference_trades": 20,
+    "runtime_trades": 20,
+    "path_mismatches": 0,
+    "fields_compared": [
+      "side",
+      "entry_ts",
+      "exit_ts",
+      "entry_price",
+      "exit_price",
+      "bars_held",
+      "reason",
+      "raw_pnl",
+      "raw_return"
+    ]
+  },
+  "conclusion": "PASS",
+  "blockers": [
+    "schema projection of existing hype_1d_ma7_abt_v7_1_runner_strict_parity_2026-08-12.json; live still disabled"
+  ]
+}

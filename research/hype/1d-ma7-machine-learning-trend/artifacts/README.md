@@ -74,11 +74,27 @@
 ## P7 Cross-Asset Survival-Only Overlay
 
 - `hype_1d_ma7_mlt_p7_cross_asset_survival_overlay_2026-08-28_development_manifest.json`：供体资产、36 个冻结 survival 特征、日历 OOF、五项开发门禁和 `holdout_permitted=false`。
-- `*_donor_survival_rows.csv` / `*_donor_oof_predictions.csv`：BTC/ETH/BNB/SOL 的 `SURVIVAL_3D` 训练表与四折日历 OOF；不含 HYPE。
+- `*_donor_survival_rows.csv` / `*_donor_oof_predictions.csv`：BTC/ETH/BNB/SOL 的 `SURVIVAL_3D` 训练表与四折日历 OOF；不含 HYPE。路径 HTML 不画这四个币；供体学到了什么见诊断里「供体到底学到了什么」。
 - `*_hype_training_feature_frame.csv` / `*_hype_training_survival_rows.csv`：仅用于 HYPE 覆盖打分，不进入训练集。
 - `*_internal_confirmation_scores.csv` / `*_internal_confirmation_decisions.csv` / `*_internal_confirmation_trades.csv`：前285日供体拟合、HYPE 最后80日不重训的内部确认；本轮延长 0 笔，与 V7.1 逐笔重合。
 - `*_training_scores.csv` / `*_training_decisions.csv` / `*_training_trades.csv` / `*_training_v7_1_trades.csv`：完整供体拟合后的 HYPE 365 日迁移覆盖；两笔 short RSI 止盈被延长，收益低于 V7.1。只作归因，不是门禁。
 - `*_training_episode_capture.csv`：完整训练迁移和内部确认的 P7/V7.1 hindsight stable-trend 逐段覆盖。
 - `*_development_summary.json`：供体 OOF、HYPE 内部确认、365 日迁移与门禁裁决；状态为 `DEVELOPMENT_FAILED_HOLDOUT_LOCKED`。
-- P7 没有任何 `*_validation_*` 文件；开发门禁失败后不得读取后81日。
+- `*_v7_1_training_trade_paths.html`：训练365日 + 数据湖验证期。默认打开验证窗（2026-05-31→2026-08-27）。连续回放 P7/V7.1 各21笔，官方空仓重开验证窗各3笔，共48条连线。金虚线标出湖内最后一根闭合日K（2026-08-27）。这是可视化，不是 P7 合同 validate。
+- `*_v7_1_training_trade_paths_manifest.json`：454根K线、89日验证、连续入场4笔 / 空仓重开3笔、3笔延长、48条连线；`holdout_read=true` 且 `visualization_only=true`。
+- `*_lake_validation_summary.json` / `*_lake_continuous_trades.csv` / `*_lake_validation_trades.csv`：湖内验证窗回放证据。P7 合同 `holdout_permitted` 仍为 false。
+- P7 没有合同 `--stage validate` 产物；门禁状态仍是 `DEVELOPMENT_FAILED_HOLDOUT_LOCKED`。
+- `hype_1d_ma7_mlt_p7_btc_survival_overlay_scout_2026-08-31_summary.json` 与 `*_p7_btc_*_trades.csv`：冻结 P7 覆盖打到 `BTCUSDT` exact V7.1 的 SCOUT 回放，不是新版本。结论见 [BTC SCOUT 诊断](../diagnostics/hype-1d-ma7-mlt-p7-btc-survival-overlay-scout-2026-08-31.md)。
 - 每个 P7 开发产物均有 `.sha256` sidecar。
+
+## P8 MA7 Cross First-Hit Event Atlas
+
+- `hype_1d_ma7_mlt_p8_ma7_cross_first_hit_event_atlas_2026-08-31_development_manifest.json`：P8 冻结合同、脚本、source loader 与 artifacts 哈希；`holdout_read=false`，HYPE 只读前365日。
+- `*_events.csv`：五资产每次 raw `SMA7` cross 的因果状态、primary first-hit、MFE/MAE、净收益、14 日去重标记和 episode cluster。
+- `*_first_hit_matrix.csv`：每个 raw cross 的 `4×4×4=64` 组 first-hit 结果；primary 为 `+2 ATR before -1 ATR within 14d`，同小时冲突按不利先触发。
+- `*_feature_bin_stats.csv` / `*_two_way_state_matrix.csv`：预注册单变量分箱与十个二维矩阵，`n<30` 标记 `INSUFFICIENT_SAMPLE`。
+- `*_matched_controls.csv` / `*_cluster_bootstrap.csv`：非穿越同侧、7日动量和随机匹配 controls，以及 asset × episode cluster bootstrap。
+- `*_asset_direction_summary.csv` / `*_summary.json`：分资产、分方向、去重敏感性、controls uplift 和最终裁决 `INSUFFICIENT_SAMPLE`。
+- `hype_1d_ma7_mlt_p8_ma7_cross_first_hit_event_atlas_2026-08-31.html`：自包含交互式事件图谱，含 MA7、事件标记、每笔 entry 到 first-hit/观察终点连线、拖动、缩放、复位、事件聚焦和筛选；明确标记后81日未读取。
+- `*_html_manifest.json`：HTML 哈希、蜡烛/事件/路径连线数量、交互功能和 `holdout_read=false` 校验。
+- 每个 P8 artifact 均有 `.sha256` sidecar；P8 没有任何 validation artifact。

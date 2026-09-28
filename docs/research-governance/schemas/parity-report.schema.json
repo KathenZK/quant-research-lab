@@ -42,7 +42,7 @@
       },
       "additionalProperties": false
     },
-    "conclusion": {"enum": ["PASS", "FAIL"]},
+    "conclusion": {"enum": ["PASS", "FAIL", "PENDING", "MISSING_EVIDENCE"]},
     "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}}
   },
   "allOf": [

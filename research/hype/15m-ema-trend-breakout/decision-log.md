@@ -2,6 +2,12 @@
 
 这是 HYPE EMA trend-breakout 研究的家族级阅读路径。
 
+## 2026-09-03 — V35.1 主状态与 lock 对齐为 dry-run
+
+决定：按 glossary 2026-09-03 修订，quant-runner lock `hype-ema-tb-v35-1-dry-run` 为 `mode=dry_run` 且 `enabled_allowed=true`（用户 2026-08-04 已授权，HEAD `a5a3b2a`），将 `HYPE-EMA-TB-V35.1` 从 `registered` 叙事迁为 `dry-run / not live-ready`。live 仍不可达；规范 parity JSON 仍缺失，不构成 live 准入。
+
+证据：[hype-ema-tb-v35-1-runner-draft.md](live-specs/hype-ema-tb-v35-1-runner-draft.md) · [dry-run 启用记录](runner-tracking/hype-ema-tb-v35-1-dry-run-enable-2026-08-04.md)
+
 ## 2026-08-18 — HYPE 15m dry-run 组再次 halt
 
 - `hype-ema-tb-v35-1-dry-run` 在 `2026-08-17 18:45–19:15Z` 连续 3 根 `NextOpen` 取价得到 `missing Binance kline`，触发共享组 `group_freshness_stale`，随后 `19:19Z` `group_halted`。同组 MII / EMA-X / CC / TB-MII-ENS 一并停；PBTR / live 不受影响。

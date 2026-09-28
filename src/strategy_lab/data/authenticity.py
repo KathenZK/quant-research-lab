@@ -23,7 +23,11 @@ DEFAULT_REAL_SOURCE_ALLOWLIST = (
     "binance_api",
     "binance_ccxt",
     "binance_fapi_funding_freeze_gap",
+    "binance_fapi_freeze_gap",
+    "binance_fapi_kline_freeze_gap",
+    "binance_fapi_kline_prospective_oos",
     "binance_fapi_klines",
+    "binance_fapi_prospective_oos",
     "binance_fapi_refresh",
     "binance_funding_daily",
     "binance_futures_funding_rate_api",
@@ -37,6 +41,7 @@ DEFAULT_REAL_SOURCE_ALLOWLIST = (
     "binance_vision",
     "binance_vision_kline_daily_gap_repair",
     "binance_vision_kline_monthly",
+    "binance_vision_kline_monthly_overlap_repair",
     "binance_vision_monthly",
     "binance_vision_usdm_daily_metrics",
     "ccxt",
@@ -105,6 +110,27 @@ def _matches_blocked_source(value: object, patterns: tuple[str, ...]) -> bool:
     return any(pattern in source for pattern in patterns)
 
 
+COMPOSITE_SOURCE_PREFIX = "composite:"
+
+
+def composite_source_parts(value: object) -> tuple[str, ...] | None:
+    source = str(value).strip().lower()
+    if not source.startswith(COMPOSITE_SOURCE_PREFIX):
+        return None
+    body = source[len(COMPOSITE_SOURCE_PREFIX) :]
+    parts = tuple(part.strip() for part in body.split("+") if part.strip())
+    return parts or None
+
+
+def make_composite_source(sources: tuple[str, ...] | list[str]) -> str:
+    unique = tuple(sorted({str(item).strip().lower() for item in sources if str(item).strip()}))
+    if not unique:
+        raise ValueError("composite source requires at least one constituent")
+    if len(unique) == 1:
+        return unique[0]
+    return COMPOSITE_SOURCE_PREFIX + "+".join(unique)
+
+
 def _is_unverified_source(
     value: object,
     *,
@@ -112,8 +138,16 @@ def _is_unverified_source(
     blocked_patterns: tuple[str, ...],
 ) -> bool:
     source = str(value).strip().lower()
-    return source not in allowed_sources or _matches_blocked_source(
-        source, blocked_patterns
+    parts = composite_source_parts(source)
+    if parts is None:
+        return source not in allowed_sources or _matches_blocked_source(
+            source, blocked_patterns
+        )
+    if len(parts) < 2:
+        return True
+    return any(
+        part not in allowed_sources or _matches_blocked_source(part, blocked_patterns)
+        for part in parts
     )
 
 

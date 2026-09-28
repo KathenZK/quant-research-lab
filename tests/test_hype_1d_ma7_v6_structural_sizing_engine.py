@@ -9,6 +9,9 @@ from typing import Any
 
 import numpy as np
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = ROOT / "research/hype/1d-ma7-asymmetric-body-trend/scripts"
@@ -132,6 +135,7 @@ def test_atr_cap_is_causal_bounded_and_applies_to_promotion() -> None:
     assert 0.49 < qty * 100.0 / equity < 0.51
 
 
+@pytest.mark.local_data
 def test_structural_control_has_exact_v6_parity() -> None:
     adapter = load(ADAPTER_PATH, "test_v6_structural_adapter")
     context = adapter.load_context()
@@ -163,6 +167,7 @@ def test_structural_control_has_exact_v6_parity() -> None:
     assert math.isclose(replay.chronological_1h_mdd_pct, -18.391735672691034)
 
 
+@pytest.mark.local_data
 def test_long_probe_promotion_replay_has_full_ledger_parity() -> None:
     adapter = load(ADAPTER_PATH, "test_v6_structural_promotion_adapter")
     context = adapter.load_context()

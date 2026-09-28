@@ -1,4 +1,9 @@
 ---
+schema_version: "1.0"
+spec_role: external_reproduction
+family_id: HYPE-1D-MA7-ABT
+strategy_id: HYPE-1D-MA7-ABT-V7.1
+spec_status: active
 document_type: external_reproduction_spec
 intended_audience: "同事及其AI；假设只拿到本文档，没有本地仓库、脚本、artifact或历史报告"
 version: HYPE-1D-MA7-ABT-V7.1

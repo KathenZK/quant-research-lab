@@ -10,6 +10,9 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = ROOT / (
@@ -157,6 +160,7 @@ def test_probe_schedule_rejects_core_open_and_preempts_later() -> None:
     assert probes[0]["exit_ts"] == context.book.ts[5]
 
 
+@pytest.mark.local_data
 def test_custom_core_replay_matches_exact_v6() -> None:
     script = load_script()
     runtime = script.load_runtime()
@@ -183,6 +187,7 @@ def test_custom_core_replay_matches_exact_v6() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_full_payload_is_causal_and_internally_valid() -> None:
     script = load_script()
     payload = script.build_payload()

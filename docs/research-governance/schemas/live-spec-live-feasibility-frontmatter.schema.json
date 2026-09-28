@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quant-strategy-lab.local/schemas/live-spec-live-feasibility-frontmatter.schema.json",
+  "title": "Live-spec live_feasibility front matter",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_role",
+    "family_id",
+    "spec_status"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "spec_role": {"const": "live_feasibility"},
+    "family_id": {"type": "string", "minLength": 1},
+    "spec_status": {"enum": ["draft", "active", "superseded"]},
+    "strategy_id": {"type": "string", "minLength": 1},
+    "component_id": {"type": "string", "minLength": 1},
+    "supersedes": {"type": "string", "minLength": 1},
+    "superseded_by": {"type": "string", "minLength": 1}
+  },
+  "anyOf": [
+    {"required": ["strategy_id"]},
+    {"required": ["component_id"]}
+  ],
+  "additionalProperties": true
+}

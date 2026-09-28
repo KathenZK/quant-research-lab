@@ -34,6 +34,7 @@ def test_every_effective_backtest_parameter_has_ablation_values() -> None:
     }
 
 
+@pytest.mark.local_data
 def test_frozen_reference_value_is_present_for_each_parameter() -> None:
     if not ABLATION.kcs.SUMMARY_PATH.is_file():
         pytest.skip("local SDS frozen reference evidence is unavailable")

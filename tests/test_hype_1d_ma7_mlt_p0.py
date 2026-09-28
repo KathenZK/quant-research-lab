@@ -9,6 +9,9 @@ import sys
 import numpy as np
 import pandas as pd
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -77,6 +80,7 @@ def test_single_trade_return_charges_both_fills_and_funding() -> None:
     assert math.isclose(actual, expected - 1.0, rel_tol=0.0, abs_tol=1e-12)
 
 
+@pytest.mark.local_data
 def test_locked_artifacts_match_frozen_champions_and_validation() -> None:
     summary = json.loads((ARTIFACT_DIR / f"{STEM}_summary.json").read_text())
     ml = pd.read_csv(ARTIFACT_DIR / f"{STEM}_ml_candidates.csv")
@@ -99,6 +103,7 @@ def test_locked_artifacts_match_frozen_champions_and_validation() -> None:
     assert summary["verdict"] == "ML_NO_EDGE"
 
 
+@pytest.mark.local_data
 def test_trade_path_contains_every_ml_and_rule_trade() -> None:
     html = (ARTIFACT_DIR / f"{STEM}_trade_paths.html").read_text()
     trades = pd.read_csv(ARTIFACT_DIR / f"{STEM}_validation_trades.csv")

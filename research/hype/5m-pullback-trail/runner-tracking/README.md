@@ -17,3 +17,5 @@
   [`hype-5m-pbtr-runner-2026-07-11.md`](hype-5m-pbtr-runner-2026-07-11.md)。
 - 2026-07-30 零开单审计（runner 健康、独立信号重算确认零信号合法，keep）见
   [`hype-5m-pbtr-runner-2026-07-30.md`](hype-5m-pbtr-runner-2026-07-30.md)。
+- 2026-09-03 tiny-live-pilot 续期至 `2026-12-24T00:00:00Z`；live halted incident 见
+  [`hype-5m-pbtr-live-halted-incident-2026-09-03.md`](hype-5m-pbtr-live-halted-incident-2026-09-03.md)。

@@ -56,6 +56,7 @@ def test_public_api_and_defaults_do_not_drift() -> None:
     assert signature.parameters["retain"].default is False
 
 
+@pytest.mark.local_data
 def test_context_is_cached_and_pinned(context) -> None:
     assert ADAPTER.load_context() is context
     cache = ADAPTER.load_context.cache_info()
@@ -76,6 +77,7 @@ def test_context_is_cached_and_pinned(context) -> None:
     }
 
 
+@pytest.mark.local_data
 def test_frozen_market_and_v4_configs_do_not_drift(context) -> None:
     assert context.book.count == 432
     assert pd.Timestamp(context.book.terminal_ts) == pd.Timestamp(
@@ -91,6 +93,7 @@ def test_frozen_market_and_v4_configs_do_not_drift(context) -> None:
     assert context.short_config.exit_buffer_atr == pytest.approx(0.75)
 
 
+@pytest.mark.local_data
 def test_run_v4_supports_a_bounded_window_without_full_verification(context) -> None:
     result = ADAPTER.run_v4(0, 30)
     assert result.metrics["start_ts"] == context.book.ts[0].isoformat()
@@ -98,6 +101,7 @@ def test_run_v4_supports_a_bounded_window_without_full_verification(context) -> 
     assert result.metrics["days"] == pytest.approx(30.0)
 
 
+@pytest.mark.local_data
 def test_explicit_full_baseline_anchor(full_baseline) -> None:
     assert full_baseline.metrics["equity_multiple"] == pytest.approx(
         4.988406741729143,

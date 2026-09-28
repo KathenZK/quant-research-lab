@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "strategy_id": "HYPE-EMA-TB-V35.1",
+  "runner_kind": "hype_ema_tb",
+  "runner_commit": "WORKTREE@missing-standardized-dump",
+  "lab_commit": "bf2034f48361b0f2f016f83638bff3338cbf3784",
+  "snapshot_id": "hype-ema-tb-v35-1-official-review-2026-07-20",
+  "gate_level": "parity",
+  "command": "not run; standardized JSON missing from clean checkout",
+  "window": {
+    "start": "2025-05-30T10:30:00Z",
+    "end": "2026-07-17T08:45:00Z",
+    "bars": 39642
+  },
+  "trade_path": {
+    "reference_trades": 111,
+    "runtime_trades": 0,
+    "path_mismatches": 111,
+    "fields_compared": []
+  },
+  "conclusion": "FAIL",
+  "blockers": [
+    "standardized parity JSON HYPE-EMA-TB-V35.1_parity_2026-07-20.json is not in a clean git checkout",
+    "narrative 111/111 review cannot substitute a schema-valid dump for new live promotion"
+  ]
+}

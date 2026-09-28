@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "bundle_id": "binance.v3.research_inputs.v2",
+  "bundle_path": "research/platform/data-lake-governance/specs/binance-v3-research-input-bundle-v2.json",
+  "bundle_sha256": "d2a729d03be71d67aa9c5522fb242bbf010b6c64400233c27d9cb2406f567008",
+  "mode": "net_research",
+  "timeframe": "1h",
+  "symbols": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "start": "2023-11-01T00:00:00Z",
+  "end": "2024-07-31T16:00:00Z",
+  "gap_policy": "reject",
+  "asset_policy": "crypto_only",
+  "backward_bars": 1,
+  "forward_bars": 0,
+  "identity_review": {
+    "path": "research/asset-portfolios/multi-public-strategies-100/artifacts/continuation-r2/btc-eth-identity-review.json",
+    "sha256": "4fc760f8457bf638a934290fa7658fd9dd05905fbbb3924aeff3701f03efc113"
+  }
+}

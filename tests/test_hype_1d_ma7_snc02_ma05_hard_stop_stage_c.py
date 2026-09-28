@@ -7,6 +7,9 @@ import math
 from pathlib import Path
 import sys
 
+import pytest
+
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = (
@@ -41,6 +44,7 @@ def test_frozen_stop_grid_and_normalized_reasons() -> None:
     assert module.hard_stop_reason(module.ARMS[2]) == "hard_stop_1p5atr"
 
 
+@pytest.mark.local_data
 def test_locked_artifact_has_exact_ma05_parity() -> None:
     payload = load_artifact()
     assert all(
@@ -57,6 +61,7 @@ def test_locked_artifact_has_exact_ma05_parity() -> None:
     )
 
 
+@pytest.mark.local_data
 def test_no_hard_stop_arm_passes_mdd20_or_candidate_gate() -> None:
     payload = load_artifact()
     for arm in ("MA05_HS10", "MA05_HS15", "MA05_HS20"):
@@ -67,6 +72,7 @@ def test_no_hard_stop_arm_passes_mdd20_or_candidate_gate() -> None:
     assert payload["verdict"]["MA05_HS20"]["hard_stop_count"] == 0
 
 
+@pytest.mark.local_data
 def test_latest_august_long_is_preserved() -> None:
     payload = load_artifact()
     for arm in payload["verdict"]:
@@ -76,6 +82,7 @@ def test_latest_august_long_is_preserved() -> None:
         assert math.isclose(trade["net_return_pct"], 26.076396828846203)
 
 
+@pytest.mark.local_data
 def test_artifact_sha256_sidecar() -> None:
     digest = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     sidecar = Path(f"{ARTIFACT}.sha256").read_text(encoding="utf-8").split()[0]

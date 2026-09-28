@@ -55,3 +55,11 @@
 - 最近三个月对全部六个家族都是已揭盲区间，组合层同样不得当作 fresh OOS 使用。
 - 小时再平衡的资金划转摩擦未计入；促升前必须给出实盘可执行的再平衡（或不再平衡）资金结构。
 - 本节其余条目是进入 dry-run 前的历史门禁记录。实际 dry-run/live 授权只以 quant-runner 为准；在完成 live-executable 审计、runner 观察与 online open/close reconciliation 前，研究侧不支持 live promotion。
+
+## Evidence Map
+
+- 2026-09-03 README 压缩：完整原文见 [decision-log.md](decision-log.md) 当日条目。
+- V1 规格：[完整复现规格](specs/binance-1h-ar-mae-v1-full-reproduction-spec-2026-07-07.md) · [简版规格](specs/binance-1h-ar-mae-v1-single-position-spec-2026-07-07.md)
+- Notes：[首次组合回测](notes/binance-1h-ar-mae-first-combination-backtest-2026-07-07.md) · [单仓回测](notes/binance-1h-ar-mae-single-position-backtest-2026-07-07.md) · [风险覆盖层](notes/binance-1h-ar-mae-v1-risk-overlay-diagnostics-2026-07-09.md) · [TRX 尾部根因](notes/binance-1h-ar-mae-v1-trx-tail-risk-optimization-2026-07-10.md) · [TRX 定向尾部](notes/binance-1h-ar-mae-v1-trx-targeted-tail-overlay-2026-07-10.md) · [周度统计](notes/binance-1h-ar-mae-v1-weekly-stats-2026-07-09.md)
+- Runner：[runner-tracking](runner-tracking/binance-1h-ar-mae-v1-runner-status.md)
+- 脚本：`scripts/research_binance_1h_ar_multi_asset_ensemble_backtest.py`、`scripts/research_binance_1h_ar_mae_single_position_backtest.py`

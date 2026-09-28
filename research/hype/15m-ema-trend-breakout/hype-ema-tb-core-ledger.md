@@ -10,11 +10,11 @@
 
 ## Current State
 
-- V35 是 grandfathered `live` 历史状态；V35.1–V35.3、V36–V41 为 `registered / not promoted / not live-ready`。
-- legacy 外部 `hype-trend` 曾运行 V35/V35.1，并于 `2026-07-22T04:09Z` 观测为 V35.3 live mode；当前是否运行须从实际环境核对，Lab 不授权。
-- V35.1 叙事记录 `111/111` parity，但规范 JSON 缺失，证据健康度 `MISSING_EVIDENCE`；V35.3 外部实现不等于研究 promotion。
-- V35 线上对账：11 笔 entry 全匹配，9 笔非人工退出原因一致；两次人工平仓、账本漏记和最终 K 仍是 blockers。
-- 下一门：确认外部 V35.3 切换授权，修复 fill/income 与 final-bar 校验，再完成 Gate 3、OOS/CPCV、压力、相位和 live-executable review。
+- Current version(s)：`V35` grandfathered `live / external-observation`；`V35.1` 为当前 quant-runner dry-run 版本；`V35.2`–`V35.3`、`V36`–`V41` 为 `registered / not promoted / not live-ready`。
+- Current status：`HYPE-EMA-TB-V35.1` 为 `dry-run / not live-ready`。
+- Runner / dry-run / live status：lock `hype-ema-tb-v35-1-dry-run` 为 `mode=dry_run`、`enabled_allowed=true`、`approval_level=dry_run`、`parity_status=PASS`（quant-runner HEAD `a5a3b2a`）。用户于 2026-08-04 授权启用；无 live 条目。规范 parity JSON 仍缺失。
+- Live-readiness blockers：Gate 3 参数尖峰；Gate 0/2/4、live-executable 与线上开平仓对账未完成。2026-08-17 组 halt 后观察窗口曾断裂。
+- Next decision gate：补标准 parity JSON 与开平仓对账后再讨论 live；不得把文档冲突解释为停实例。
 
 ## Version Rules
 
@@ -27,7 +27,7 @@
 | Version | Status | Role / Core Idea | Key Frozen Metrics | Evidence | Decision |
 | --- | --- | --- | --- | --- | --- |
 | `V35` | live / grandfathered external runner | EMA96/384，TP5/SL7、ADX22 delayed3、tx384 | `+6474.19%`、DD `-23.49%`、101 笔 | [reconciliation](runner-tracking/hype-ema-tb-v35-post-freeze-live-parity-2026-07-22.md) | 自动路径一致；人工/账本 blockers |
-| `V35.1` | registered / not promoted / not live-ready | V35 去冗余 short 1h EMA confirm | `+7708.65%`、DD `-27.26%`、111 笔 | [spec](specs/hype-trend-strategy-v35-1-spec.md) · [review](diagnostics/hype-ema-tb-v35-1-dry-run-promotion-review-2026-07-20.md) | Gate 3 尖峰阻塞 |
+| `V35.1` | dry-run / not live-ready | V35 去冗余 short 1h EMA confirm | `+7708.65%`、DD `-27.26%`、111 笔 | [spec](specs/hype-trend-strategy-v35-1-spec.md) · [review](diagnostics/hype-ema-tb-v35-1-dry-run-promotion-review-2026-07-20.md) · [dry-run 启用](runner-tracking/hype-ema-tb-v35-1-dry-run-enable-2026-08-04.md) | 2026-08-04 已授权 dry-run；Gate 3 仍阻塞 live |
 | `V35.2` | registered / not promoted / not live-ready | V35.1 short MFE4.4 时减 75% | `+9409.39%`、DD `-23.46%`、112 笔 | [spec](specs/hype-trend-strategy-v35-2-spec.md) | 峰值敏感，等 OOS |
 | `V35.3` | registered / not promoted / not live-ready | V35.2 + long SL6.75 / short SL5.7 | `+10017.59%`、DD `-22.88%`、113 笔 | [spec](specs/hype-trend-strategy-v35-3-spec.md) | 外部实现不等于 promotion |
 | `V39` | registered / not promoted / not live-ready | long volume0.35、short target0.022、去冗余确认 | `+9969.45%`、DD `-23.46%`、107 笔 | [spec](specs/hype-trend-strategy-v39-spec.md) | 未实现 runner |

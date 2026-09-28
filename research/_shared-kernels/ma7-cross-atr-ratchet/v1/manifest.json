@@ -1,0 +1,11 @@
+{
+  "kernel": "ma7-cross-atr-ratchet",
+  "version": "v1",
+  "engine_sha256": "54f559748b557c81ec21ca53e4f30e09264547e5d0e8cb658716e33cf2f8d72b",
+  "source_frozen_hype_r4_sha256": "feb82e01e0b63a55a64c549b1f51bc581b86b9d83e08f77a507681184beec50a",
+  "consumer": "BIN-1D-MA7-CAR-GEN",
+  "new_synthetic_tests": 54,
+  "regression_total_tests": 169,
+  "performance_changes": "Equivalent cached closed-day index and daily rows; no execution reordering",
+  "freeze_before_new_market_or_waiting_performance": true
+}

@@ -2,6 +2,10 @@
 
 这是 HYPE EMA golden/death cross 研究的家族级阅读路径。
 
+## 2026-09-03 — parity grandfather 续期至 2026-12-24
+
+决定：用户已在 quant-runner 提交 `a5a3b2a` 将 `HYPE-EMA-X-V18`（`hype-ema-x-dry-run`）的 `parity_grandfather_until` 由 `2026-09-24` 续期至 `2026-12-24T00:00:00Z`。到期前须补标准 parity JSON（`conclusion=PASS`），否则 runner CI 将拒绝 `enabled`。主状态仍为 `dry-run`，本条不改变授权。
+
 ## 2026-08-18 — 同组 halt，观察窗口再断
 
 - `hype-ema-x-dry-run` 再次被共享 HYPE 15m 组 `group_halted` 拖停（本次触发在 EMA-TB，不是 EMA-X 状态机）。自 `2026-08-17 19:19Z` 起 dry-run 观察窗口断裂。证据：[hype-15m-group-halt-2026-08-17.md](../15m-ema-trend-breakout/runner-tracking/hype-15m-group-halt-2026-08-17.md)。

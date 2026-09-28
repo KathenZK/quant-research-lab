@@ -218,6 +218,7 @@ def test_other_position_entry_cancels_an_armed_short() -> None:
     assert signal.events[-1]["event"] == "cancel_pending_other_entry"
 
 
+@pytest.mark.local_data
 def test_all_eight_sources_compile_without_running_candidate_history(context) -> None:
     rsi6 = PFT.wilder_rsi6(context.book.close)
     names = []
@@ -239,6 +240,7 @@ def test_all_eight_sources_compile_without_running_candidate_history(context) ->
     assert len(set(hashes)) == 8
 
 
+@pytest.mark.local_data
 def test_a000_is_economically_identical_to_exact_v4_on_development(context) -> None:
     exact = ADAPTER.run_v4(0, 259, retain=True)
     candidate = PFT.run_variant(

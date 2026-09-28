@@ -1,0 +1,216 @@
+{
+  "family": "Binance-4H-MA7-Regime-Continuation",
+  "alias": "BIN-4H-MA7-RC",
+  "study_id": "BIN-4H-MA7-RC-P0R-DATA",
+  "contract_revision": "P0R-DATA-pre-outcome-derived-15m-ohlcv",
+  "frozen_at_utc": "2026-09-03T02:14:00Z",
+  "parent_observation": {
+    "study_id": "BIN-4H-MA7-RC-P0",
+    "contract_revision": "P0R2-pre-outcome-funding-nominal-second-repair",
+    "config_sha256": "eb62108271cf1d22992fb53c0c1a7438d605581d96cb079d75b0579143c84642",
+    "role": "frozen mechanism/PIT/cost/first-hit/PASS rules; six-asset diagnostic only"
+  },
+  "purpose": "在冻结 P0 机制假设下，用全市场 derived 15m→4h/1h 重跑无条件 4H SMA7 延续性 kill test；不是调参，不是策略版本。",
+  "identity_boundaries": {
+    "new_independent_4h_family": true,
+    "not_a_version_of_binance_1d_ma7_regime_continuation": true,
+    "does_not_inherit_hype_4h_ma7_abt_parameters_or_results": true,
+    "does_not_inherit_bin_4h_emax_lgbm_signals_or_models": true,
+    "sma7_4h_clock_hours": 28,
+    "sma42_4h_role": "seven-day clock-equivalent control only, never a replacement or selector for SMA7",
+    "no_parameter_search": true,
+    "no_ml": true,
+    "no_runner_or_live_spec": true,
+    "do_not_overwrite_p0_artifacts": true,
+    "do_not_add_filters_because_of_six_asset_no_go": true
+  },
+  "data": {
+    "exchange": "binance",
+    "market_type": "perp",
+    "quote_asset": "USDT",
+    "market": "Binance USD-M USDT perpetual",
+    "calendar": "24/7 UTC",
+    "native_4h_dataset_id": "binance.perp.ohlcv.4h.from_15m.v1",
+    "path_1h_dataset_id": "binance.perp.ohlcv.1h.from_15m.v1",
+    "forbidden_dataset_ids": [
+      "binance.perp.ohlcv.1h.normalized.legacy"
+    ],
+    "requested_scope": "FULL_MARKET",
+    "loader": "strategy_lab.data.catalog.load_trusted_dataset",
+    "input_timeframe_native": "4h",
+    "path_timeframe": "1h",
+    "research_timeframe": "4h",
+    "audit_as_of_utc": "2026-09-03T02:14:00Z",
+    "cutoff_exclusive_utc": "2026-08-24T08:00:00Z",
+    "last_allowed_closed_1h_open_utc": "2026-08-24T07:00:00Z",
+    "last_allowed_complete_4h_open_utc": "2026-08-24T04:00:00Z",
+    "dataset_manifest": "research/asset-portfolios/4h-ma7-regime-continuation/artifacts/binance_4h_ma7_rc_p0r_data_dataset_manifest_2026-09-03.json",
+    "dataset_manifest_sha256": "651bd88b5e349091c36b0de74b2a480b3f44383c22a1f58e11177e33dc9155ae",
+    "funding_rate_globs": [
+      "data/normalized/funding_rates/exchange=binance/market_type=perp/date=*/*.parquet",
+      "data/normalized/funding_rates/exchange=binance/market_type=perp/source=binance_vision_monthly/month=*/*.parquet"
+    ],
+    "funding_source_priority": [
+      "binance_vision_funding_monthly_overlap_repair",
+      "binance_vision_funding_monthly",
+      "binance_futures_funding_rate_api"
+    ],
+    "funding_timestamp_normalization": "date_trunc('second', ts) before selected symbol-ts de-duplication; resolves millisecond archive offsets for the same nominal funding time without changing the funding schedule",
+    "closed_bars_only": true,
+    "duplicate_policy": "fail on duplicate selected symbol-ts rows",
+    "fail_closed_conditions": [
+      "loading binance.perp.ohlcv.1h.normalized.legacy or normalized 1h globs",
+      "FULL_MARKET coverage gate failure on derived 4h or 1h",
+      "critical OHLCV or funding identity nulls",
+      "unclosed bars before cutoff",
+      "duplicate selected symbol-ts rows",
+      "non-positive OHLC price or illegal OHLC interval",
+      "derived 4h component_count != 16 or derived 1h component_count != 4",
+      "missing, duplicate, non-consecutive, unclosed, or illegal 1h component inside a phase-shifted 4h bar",
+      "phase-shifted 4h aggregate with bars_1h != 4",
+      "data after cutoff entering event or outcome calculation",
+      "funding missing for a fixed-horizon net-return window",
+      "PIT membership requiring future volume or static current Top N"
+    ]
+  },
+  "universe": {
+    "point_in_time": true,
+    "contract_exists_and_tradable_at_event": "observed complete derived 4h bars with standard Binance perp identity",
+    "listing_age_min_calendar_days": 30,
+    "adv_window_calendar_days": 30,
+    "adv_formula": "mean daily quote_volume over the 30 UTC days strictly before the event day, using derived 4h quote_volume only",
+    "coverage_window_calendar_days": 30,
+    "coverage_formula": "sum complete 4h bars over the 30 UTC days strictly before the event day divided by 30 * 6",
+    "min_coverage": 0.95,
+    "min_adv_usdt": 10000000.0,
+    "max_pit_pool_size": 120,
+    "pool_ranking": "descending trailing ADV with deterministic symbol tiebreaker",
+    "excluded_underlyings": {
+      "stable_fiat_bases": ["AEUR", "AUD", "BFUSD", "BRL", "BUSD", "DAI", "EUR", "FDUSD", "GBP", "SUSD", "TUSD", "USD1", "USDC", "USDE", "USDP", "XUSD"],
+      "index_bases": ["BLUEBIRD", "DOTECO", "FOOTBALL"],
+      "us_stock_like_bases": ["AAPL", "AMZN", "COIN", "CRCL", "GOOGL", "HOOD", "META", "MSFT", "MSTR", "NVDA", "PLTR", "TSLA"],
+      "source": "explicit frozen exclusion list used by newer all-market MA7 research because the older 15m EMAX inventory CSV is not present in this checkout"
+    },
+    "no_survivorship_static_top_n": true
+  },
+  "aggregation_4h": {
+    "native_0h_source": "binance.perp.ohlcv.4h.from_15m.v1 via catalog dataset_id",
+    "native_0h_formula": "accepted 15m complete-bucket resample; 16 consecutive closed legal 15m bars; ohlcv_resample_from_15m_v1",
+    "phase_1_2_3_source": "binance.perp.ohlcv.1h.from_15m.v1 via catalog dataset_id, then P0 4-consecutive-1h aggregation",
+    "phases_hours": [0, 1, 2, 3],
+    "primary_phase_hour": 0,
+    "native_0h_boundaries_utc": ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"],
+    "phase_shift_formula": "open=first 1h open; high=max 1h high; low=min 1h low; close=last 1h close; volume, quote_volume, trade_count and taker fields=sum",
+    "phase_component_requirement": "exactly four consecutive closed legal 1h bars per shifted 4h bar",
+    "no_legacy_1h": true,
+    "no_interpolation_from_existing_noncanonical_4h": true
+  },
+  "indicators": {
+    "sma_periods": [5, 7, 10, 42],
+    "primary_sma_period": 7,
+    "sma_formula": "SMA_N[t] = mean(close[t-N+1:t]) over complete 4h bars",
+    "atr_period": 20,
+    "true_range_formula": "max(high[t]-low[t], abs(high[t]-close[t-1]), abs(low[t]-close[t-1]))",
+    "atr_formula": "ATR20[t] = arithmetic mean(TR[t-19:t]) over complete 4h bars",
+    "atr_scale_for_barrier": "ATR20[t-1]"
+  },
+  "events": {
+    "long_cross": "close[t-1] <= SMA_N[t-1] and close[t] > SMA_N[t]",
+    "short_cross": "close[t-1] >= SMA_N[t-1] and close[t] < SMA_N[t]",
+    "equality_assignment": "equality belongs to the pre-cross side; only strict post-cross triggers",
+    "keep_every_strict_cross_per_asset": true,
+    "signal_time": "4h bar t close",
+    "entry_time": "next 4h open, t+1",
+    "entry_price": "real open[t+1]",
+    "primary_event_ma": 7,
+    "control_event_mas": [5, 10, 42]
+  },
+  "outcomes": {
+    "first_hit": {
+      "favorable_atr_multiple": 2.0,
+      "adverse_atr_multiple": 1.0,
+      "max_future_4h_bars": 30,
+      "intrabar_order_source": "future real 1h high/low in chronological order from 1h.from_15m.v1",
+      "same_1h_dual_hit_policy": "adverse_first",
+      "labels": ["favorable_first", "adverse_first", "neither", "incomplete_future"],
+      "exclude_incomplete_future_from_primary_label_stats": true,
+      "not_a_real_tp_sl_strategy": true
+    },
+    "fixed_horizons_4h_bars": [1, 3, 6, 12, 18, 30],
+    "directional_return_formula": "side * (future_price / entry_price - 1)",
+    "fixed_horizon_exit_price": "open at entry boundary plus horizon 4h bars",
+    "path_metrics": ["mfe", "mae", "mfe_time_bar", "mae_time_bar", "ma7_recross_bars", "same_side_survival_bars"],
+    "summary_metrics": ["trimmed_mean", "median", "win_rate", "right_tail_contribution", "top_1pct_contribution", "top_5pct_contribution", "first_hit_success_rate_ci"]
+  },
+  "costs": {
+    "fee_per_fill": 0.001,
+    "baseline_slippage_per_fill": 0.0004,
+    "stress_slippage_per_fill": 0.0008,
+    "round_trip_fills": 2,
+    "funding": "real funding events over (entry_ts, exit_ts] signed by direction; missing funding blocks net and tradeability claims",
+    "net_columns": ["gross", "fee_plus_4bps", "fee_plus_8bps", "funding", "full_net"]
+  },
+  "controls": {
+    "same_side_non_cross": {
+      "method": "deterministic stratified weighting, not random single-point sampling",
+      "strata": ["symbol", "calendar_year", "side", "causal_atr_quintile"],
+      "eligibility": "same symbol/year/side, close already on the corresponding SMA side at signal time, and no same-direction strict cross on that bar",
+      "atr_quintile": "causal percentile of ATR20[t-1] within symbol history through t-1, bucketed into five right-closed bins",
+      "weighting": "non-cross rows are weighted so symbol x year x side x ATR quintile stratum weights match cross-event counts"
+    },
+    "ma_neighborhood": [5, 10],
+    "clock_equivalent": [42],
+    "phase_hours": [0, 1, 2, 3],
+    "primary_phase_hour": 0,
+    "no_control_can_replace_primary_sma7": true
+  },
+  "statistics": {
+    "random_seed": 20260902,
+    "bootstrap_iterations": 1000,
+    "bootstrap_block_dimensions": ["symbol", "utc_week"],
+    "cluster_dimensions": ["symbol", "utc_week"],
+    "confidence_level": 0.95,
+    "multiple_testing": "Benjamini-Hochberg FDR across side x horizon x MA control families",
+    "report_raw_p_and_q_values": true,
+    "known_unfixed_blockers": [
+      "complete calendar years are still counted only over 2023-2025 while PASS requires four positive years",
+      "horizon table cluster p_value overwrites bootstrap p_value of the same field name"
+    ]
+  },
+  "decision_rules": {
+    "side_separate_no_combined_pass": true,
+    "allowed_side_verdicts": ["SUPPORTED_WEAK_CONTINUATION", "PARTIAL_STRUCTURAL_SEPARATION", "NO-GO"],
+    "supported_weak_continuation_all_required": [
+      "MA7 +2ATR/-1ATR/30 first-hit favorable rate exceeds stratified same-side non-cross baseline",
+      "95% block-bootstrap CI lower bound of first-hit difference is above 0",
+      "BH-FDR still supports the difference",
+      "30-bar executable full net directional return is above 0",
+      "at least four complete calendar years have positive full net directional return",
+      "not determined by one symbol, one year, or top 1% events",
+      "8bps/fill stress does not fully cross the cost wall",
+      "MA5/MA10 neighborhood does not give a fully opposite mechanism conclusion"
+    ],
+    "partial_structural_separation": "stable first-hit, MFE, or survival separation exists but net return, annual stability, cost, or concentration gates fail",
+    "no_go": "no stable first-hit, fixed-horizon return, MFE, or survival advantage versus same-side control, or all advantage explained by costs/concentration/right tail",
+    "family_status_after_p0r_data": "explore / diagnostic-only / not promoted / not live-ready",
+    "no_automatic_promotion": true,
+    "no_quant_runner_write": true
+  },
+  "outputs": {
+    "data_audit_json": "artifacts/binance_4h_ma7_rc_p0r_data_data_audit_2026-09-03.json",
+    "dataset_manifest_json": "artifacts/binance_4h_ma7_rc_p0r_data_dataset_manifest_2026-09-03.json",
+    "universe_summary_csv": "artifacts/binance_4h_ma7_rc_p0r_data_universe_summary_2026-09-03.csv",
+    "events_parquet": "artifacts/binance_4h_ma7_rc_p0r_data_events_2026-09-03.parquet",
+    "metrics_csv": "artifacts/binance_4h_ma7_rc_p0r_data_metrics_2026-09-03.csv",
+    "first_hit_csv": "artifacts/binance_4h_ma7_rc_p0r_data_first_hit_2026-09-03.csv",
+    "horizon_returns_csv": "artifacts/binance_4h_ma7_rc_p0r_data_horizon_returns_2026-09-03.csv",
+    "survival_csv": "artifacts/binance_4h_ma7_rc_p0r_data_survival_2026-09-03.csv",
+    "yearly_csv": "artifacts/binance_4h_ma7_rc_p0r_data_yearly_2026-09-03.csv",
+    "symbol_concentration_csv": "artifacts/binance_4h_ma7_rc_p0r_data_symbol_concentration_2026-09-03.csv",
+    "phase_csv": "artifacts/binance_4h_ma7_rc_p0r_data_phase_2026-09-03.csv",
+    "controls_csv": "artifacts/binance_4h_ma7_rc_p0r_data_controls_2026-09-03.csv",
+    "recent_slices_csv": "artifacts/binance_4h_ma7_rc_p0r_data_recent_slices_2026-09-03.csv",
+    "summary_json": "artifacts/binance_4h_ma7_rc_p0r_data_summary_2026-09-03.json",
+    "results_report_md": "diagnostics/binance-4h-ma7-regime-continuation-p0r-data-results-2026-09-03.md"
+  }
+}
