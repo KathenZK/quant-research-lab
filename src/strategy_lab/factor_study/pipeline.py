@@ -53,6 +53,8 @@ def code_files(lab_root):
         'src/strategy_lab/knowledge/market_core.py', 'src/strategy_lab/knowledge/market_contract.py',
         'src/strategy_lab/knowledge/market_dataset.py', 'src/strategy_lab/research/exposure.py',
         'tests/fixtures/factor_study/qlib-golden.json',
+        'src/strategy_lab/research/trials.py', 'src/strategy_lab/research/integrity.py',
+        'src/strategy_lab/research/accounting.py',
     ]]
     return {str(p.relative_to(root)): sha(p) for p in sorted(paths)}
 
@@ -113,7 +115,7 @@ def freeze(selection_path, manifest_path, acquisition_contract, output, *, graph
     validate_schema(request, graph_root, 'research-request')
     if request['study_type'] != 'FACTOR_DIAGNOSTIC':
         raise ValueError('Only factor diagnostic requests are implemented')
-    s = request['requested_settings']
+    s = selection.get('resolved_settings', request['requested_settings'])
     verify_settings(s)
     definitions = selection['definitions']
     db = FactorDB(graph_root, profile='commercial')
@@ -303,7 +305,18 @@ def run(plan_path, *, graph_root, lab_root, journal, only=None, trial_adapter=No
                 if sha(artifact['uri']) != artifact['sha256']:
                     raise ValueError('Existing study artifact changed')
         else:
+            if trial_adapter is not None and hasattr(trial_adapter, 'start'):
+                trial_adapter.start(registration, v['factor_variant_id'])
             result = study_one(plan, frame, v, output, plan_path, lab_root, registration)
+            if trial_adapter is not None and hasattr(trial_adapter, 'complete'):
+                assessment = trial_adapter.complete(registration, result)
+                assessment_path = write(result_path.parent / 'integrity-assessment.json', assessment)
+                result['trial_registry'] = {**registration, 'assessment': assessment}
+                result['integrity_assessment']['evidence'].append(ref(assessment_path))
+                result['artifacts'].append({**ref(assessment_path), 'kind': 'integrity-assessment',
+                                           'permissions': result['permissions']['derived_result']})
+                result['limitations'][0] = ('Historical exploratory result; prior exposure is known and '
+                    'historical search completeness remains UNKNOWN. Trial registration is not independent confirmation.')
             validate_schema(result, graph_root, 'factor-study-result')
             write(result_path, result)
         receipt = repo.put(result)
