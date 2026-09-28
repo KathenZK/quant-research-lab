@@ -28,6 +28,7 @@ web/.next/
 htmlcov/
 
 /research/platform/quantgraph-integration/artifacts/local/
+/research/platform/factor-research-loop/artifacts/
 /research/btc/1d-quantgraph-source-sma/artifacts/20260928-trusted-market-v1/
 !research/platform/quantgraph-integration/artifacts/candidate-summary.json
 !research/platform/quantgraph-integration/artifacts/synthetic-diagnostics.json

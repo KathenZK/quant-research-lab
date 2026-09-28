@@ -1,0 +1,92 @@
+{
+  "selection_basis": "Collected MIT Qlib price definitions, no predictive results inspected; one variant per definition family",
+  "names": [
+    "KMID",
+    "KLEN",
+    "KUP",
+    "KLOW",
+    "KSFT",
+    "ROC5",
+    "MA5",
+    "STD5",
+    "MAX5",
+    "MIN5",
+    "RANK5",
+    "RSV5"
+  ],
+  "axis": "TIME_SERIES",
+  "symbols": [
+    "BTC/EUR"
+  ],
+  "provider": "bit2me",
+  "source_asset_class": "equity",
+  "study_asset_class": "crypto",
+  "frequency": "1d",
+  "start": "2022-07-01T00:00:00Z",
+  "end": "2026-09-27T00:00:00Z",
+  "evaluation_start": "2022-07-07T00:00:00Z",
+  "split": "2025-01-01T00:00:00Z",
+  "label_horizons": [
+    1,
+    5
+  ],
+  "label": "close[t+h]/close[t]-1; signal after close[t]; price diagnostic only, no execution claims",
+  "segments": [
+    [
+      "early",
+      "2022-07-07T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    [
+      "middle",
+      "2024-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    [
+      "late",
+      "2025-01-01T00:00:00Z",
+      "2026-09-27T00:00:00Z"
+    ]
+  ],
+  "preprocessing": "none; complete pairs; no fill, clipping, winsorization or cross-sectional rank",
+  "bootstrap": {
+    "method": "circular moving-block paired bootstrap",
+    "block_bars": 20,
+    "replications": 500,
+    "seed": 928,
+    "confidence": 0.95
+  },
+  "incremental_baseline": "OLS intercept + trailing 1-bar return; augmented with one factor; fit/scaling only in early sample with purged label boundary; late sample MSE comparison descriptive only",
+  "minimum_pairs": 30,
+  "evidence_class": "historical_replay",
+  "research_status": "EXPLORATORY_RETROSPECTIVE",
+  "holdout": "UNKNOWN_PREVIOUS_EXPOSURE_NOT_VIRGIN_OOS",
+  "economic_group_count": 4,
+  "groups": {
+    "candle_geometry": [
+      "KMID",
+      "KLEN",
+      "KUP",
+      "KLOW",
+      "KSFT"
+    ],
+    "trailing_price_relation": [
+      "ROC5",
+      "MA5"
+    ],
+    "price_dispersion": [
+      "STD5"
+    ],
+    "range_position": [
+      "MAX5",
+      "MIN5",
+      "RANK5",
+      "RSV5"
+    ]
+  },
+  "excluded": {
+    "volume_features": "Native base/quote unit not certified for the selected dataset; not needed",
+    "RSI": "No reviewed selected source mapping; Wilder/EMA/SMA smoothing not interchangeable",
+    "cross_sectional": "Only one accepted asset; no simultaneous PIT universe or industry neutralization"
+  }
+}

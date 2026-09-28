@@ -1,0 +1,1487 @@
+{
+  "request": {
+    "schema_version": "research-request/v1",
+    "request_id": "factor-research-loop-v1",
+    "entity_refs": [
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:a43634a4-29ed-51ec-86a5-bbd27b150c86",
+        "definition_revision": "9b1417b8e1cf15a6232d7b66a1261c2d2fd253327a15c105730acd5cfb4c1da1"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:52fe99d1-d37c-5e3a-b9f5-914380407bc0",
+        "definition_revision": "250e628051a0686aab2a49cefbbd236af8cfd3764064b724ae7c86d745d206de"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:de43dc35-05b1-5401-9c2f-1df499b1af7b",
+        "definition_revision": "738cbb72737304bacf3570d7ba4c21c229496ee93cdacdb51f0b881605738b24"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:12d58743-ef05-5f36-900e-9acf36932db6",
+        "definition_revision": "0d37942eeec3d2e1ff847c6c8cf46ee01ac8d2785b27afff70e79e5eaddcfd2e"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:1fa14d39-3eea-5392-a484-e756fb9c57e2",
+        "definition_revision": "afba84bac688126509ed3ad1620d710e649de885540050b3aa68c5a9b48f5d9b"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:a739bccc-3e19-5213-bb21-6eec177fd4d5",
+        "definition_revision": "72be517ee64210ec3bed1d6c3a89c55a4c336b3596a9bd5145974e843c7992ff"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:0362c214-238c-55b7-8cd8-112b094bc6ab",
+        "definition_revision": "a59235098c1941b926503d1fd8c1209296668c5983ce5a6e8532d03d6945d372"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:54c5e714-4a7c-5bbe-8161-87cc119c48df",
+        "definition_revision": "3c9f13f8a6cbf48160dc12a6e19c01c1e42f5218ee1f151a65096fef6b13f7a7"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:af537087-07e2-5dfc-915b-e432c8b49159",
+        "definition_revision": "5fbb55e65a74bbe9846768068e01d8187eb1d843738ca152cdee350b51c756e8"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:3defcf79-d7d9-5348-9cfb-c6588488f9a5",
+        "definition_revision": "caa9063f7e3937ff18c3efa38f2fc1ffbaddd989005da7ac75030551b01eb854"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:76e0bf9c-4b13-575e-afd2-af45c70f8d8f",
+        "definition_revision": "e4816e656486f28a369cb31b7a9ef57c1abe87080164c55a35c0829442e7d2b6"
+      },
+      {
+        "entity_type": "FactorVariant",
+        "entity_id": "qkg:factor:8247a3e7-1b6e-5d17-acdb-e675402a8d7c",
+        "definition_revision": "3422c589ca8dc6794cd882095688cf97edf1f28ca1a8fc21661ed9aa7255e7c9"
+      }
+    ],
+    "study_type": "FACTOR_DIAGNOSTIC",
+    "requested_settings": {
+      "selection_basis": "Collected MIT Qlib price definitions, no predictive results inspected; one variant per definition family",
+      "names": [
+        "KMID",
+        "KLEN",
+        "KUP",
+        "KLOW",
+        "KSFT",
+        "ROC5",
+        "MA5",
+        "STD5",
+        "MAX5",
+        "MIN5",
+        "RANK5",
+        "RSV5"
+      ],
+      "axis": "TIME_SERIES",
+      "symbols": [
+        "BTC/EUR"
+      ],
+      "provider": "bit2me",
+      "source_asset_class": "equity",
+      "study_asset_class": "crypto",
+      "frequency": "1d",
+      "start": "2022-07-01T00:00:00Z",
+      "end": "2026-09-27T00:00:00Z",
+      "evaluation_start": "2022-07-07T00:00:00Z",
+      "split": "2025-01-01T00:00:00Z",
+      "label_horizons": [
+        1,
+        5
+      ],
+      "label": "close[t+h]/close[t]-1; signal after close[t]; price diagnostic only, no execution claims",
+      "segments": [
+        [
+          "early",
+          "2022-07-07T00:00:00Z",
+          "2024-01-01T00:00:00Z"
+        ],
+        [
+          "middle",
+          "2024-01-01T00:00:00Z",
+          "2025-01-01T00:00:00Z"
+        ],
+        [
+          "late",
+          "2025-01-01T00:00:00Z",
+          "2026-09-27T00:00:00Z"
+        ]
+      ],
+      "preprocessing": "none; complete pairs; no fill, clipping, winsorization or cross-sectional rank",
+      "bootstrap": {
+        "method": "circular moving-block paired bootstrap",
+        "block_bars": 20,
+        "replications": 500,
+        "seed": 928,
+        "confidence": 0.95
+      },
+      "incremental_baseline": "OLS intercept + trailing 1-bar return; augmented with one factor; fit/scaling only in early sample with purged label boundary; late sample MSE comparison descriptive only",
+      "minimum_pairs": 30,
+      "evidence_class": "historical_replay",
+      "research_status": "EXPLORATORY_RETROSPECTIVE",
+      "holdout": "UNKNOWN_PREVIOUS_EXPOSURE_NOT_VIRGIN_OOS",
+      "economic_group_count": 4,
+      "groups": {
+        "candle_geometry": [
+          "KMID",
+          "KLEN",
+          "KUP",
+          "KLOW",
+          "KSFT"
+        ],
+        "trailing_price_relation": [
+          "ROC5",
+          "MA5"
+        ],
+        "price_dispersion": [
+          "STD5"
+        ],
+        "range_position": [
+          "MAX5",
+          "MIN5",
+          "RANK5",
+          "RSV5"
+        ]
+      },
+      "excluded": {
+        "volume_features": "Native base/quote unit not certified for the selected dataset; not needed",
+        "RSI": "No reviewed selected source mapping; Wilder/EMA/SMA smoothing not interchangeable",
+        "cross_sectional": "Only one accepted asset; no simultaneous PIT universe or industry neutralization"
+      }
+    },
+    "status": "DRAFT"
+  },
+  "definitions": [
+    {
+      "aliases": [
+        "Alpha158:KMID",
+        "KMID"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:813faeaa-3648-5065-9bf2-817e5a1504a5",
+      "canonical_name": "Qlib KMID feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "($close-$open)/$open",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:KMID",
+      "factor_variant_id": "qkg:factor:a43634a4-29ed-51ec-86a5-bbd27b150c86",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "close",
+                "type": "field"
+              },
+              {
+                "name": "open",
+                "type": "field"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "name": "open",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:29637667-1ff3-5e08-a7e4-47c2bdfdf45d",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 1
+      },
+      "normalized_formula": "/(-($close,$open),$open)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [],
+        "operators": [],
+        "unit": "trading_bars",
+        "window_or_lag": null
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "($close-$open)/$open",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "open"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=KMID",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:KMID"
+      ],
+      "source_record_ids": [
+        "qkg:record:5b988d11-2e8a-57fa-91aa-e289d0fc88ea"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "KMID"
+    },
+    {
+      "aliases": [
+        "Alpha158:KLEN",
+        "KLEN"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:99de4b93-7501-5264-aea6-dfa9984d6cef",
+      "canonical_name": "Qlib KLEN feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "($high-$low)/$open",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:KLEN",
+      "factor_variant_id": "qkg:factor:52fe99d1-d37c-5e3a-b9f5-914380407bc0",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "high",
+                "type": "field"
+              },
+              {
+                "name": "low",
+                "type": "field"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "name": "open",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:ace13f86-9687-5018-bda3-e0550b94987d",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 1
+      },
+      "normalized_formula": "/(-($high,$low),$open)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [],
+        "operators": [],
+        "unit": "trading_bars",
+        "window_or_lag": null
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "($high-$low)/$open",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "high",
+        "low",
+        "open"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=KLEN",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:KLEN"
+      ],
+      "source_record_ids": [
+        "qkg:record:d86e1165-fc12-551a-a3af-22310a09f847"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "KLEN"
+    },
+    {
+      "aliases": [
+        "Alpha158:KUP",
+        "KUP"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:fc79d9e3-fe6e-50f7-90ee-ac590ecae224",
+      "canonical_name": "Qlib KUP feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "($high-Greater($open, $close))/$open",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:KUP",
+      "factor_variant_id": "qkg:factor:de43dc35-05b1-5401-9c2f-1df499b1af7b",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "high",
+                "type": "field"
+              },
+              {
+                "args": [
+                  {
+                    "name": "open",
+                    "type": "field"
+                  },
+                  {
+                    "name": "close",
+                    "type": "field"
+                  }
+                ],
+                "op": "qlib:elementwise_max",
+                "type": "call"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "name": "open",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:f6064d2c-88f2-5c60-99a3-0f1dc00e85b2",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 1
+      },
+      "normalized_formula": "/(-($high,qlib:elementwise_max($open,$close)),$open)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [],
+        "operators": [
+          "qlib:elementwise_max"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": null
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "($high-Greater($open, $close))/$open",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "high",
+        "open"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=KUP",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:KUP"
+      ],
+      "source_record_ids": [
+        "qkg:record:79b21c25-b762-5ec3-9138-af8f6af00c2f"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "KUP"
+    },
+    {
+      "aliases": [
+        "Alpha158:KLOW",
+        "KLOW"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:6586b865-d4c8-5f5e-bf02-bf5ffb0c12e5",
+      "canonical_name": "Qlib KLOW feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "(Less($open, $close)-$low)/$open",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:KLOW",
+      "factor_variant_id": "qkg:factor:12d58743-ef05-5f36-900e-9acf36932db6",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "open",
+                    "type": "field"
+                  },
+                  {
+                    "name": "close",
+                    "type": "field"
+                  }
+                ],
+                "op": "qlib:elementwise_min",
+                "type": "call"
+              },
+              {
+                "name": "low",
+                "type": "field"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "name": "open",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:ceb3197f-9d89-5a07-9a6f-3a035ffb12ee",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 1
+      },
+      "normalized_formula": "/(-(qlib:elementwise_min($open,$close),$low),$open)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [],
+        "operators": [
+          "qlib:elementwise_min"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": null
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "(Less($open, $close)-$low)/$open",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "low",
+        "open"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=KLOW",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:KLOW"
+      ],
+      "source_record_ids": [
+        "qkg:record:488d9522-ab50-5423-b13c-c38592f57275"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "KLOW"
+    },
+    {
+      "aliases": [
+        "Alpha158:KSFT",
+        "KSFT"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:276e3781-707f-523d-bd85-c1c3394deec6",
+      "canonical_name": "Qlib KSFT feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "(2*$close-$high-$low)/$open",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:KSFT",
+      "factor_variant_id": "qkg:factor:1fa14d39-3eea-5392-a484-e756fb9c57e2",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "type": "number",
+                        "value": "2"
+                      },
+                      {
+                        "name": "close",
+                        "type": "field"
+                      }
+                    ],
+                    "op": "*",
+                    "type": "binary"
+                  },
+                  {
+                    "name": "high",
+                    "type": "field"
+                  }
+                ],
+                "op": "-",
+                "type": "binary"
+              },
+              {
+                "name": "low",
+                "type": "field"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "name": "open",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:c2c22f4b-d0ce-5cd4-8419-2bf5b5c20ec6",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 1
+      },
+      "normalized_formula": "/(-(-(*(2,$close),$high),$low),$open)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "2"
+        ],
+        "operators": [],
+        "unit": "trading_bars",
+        "window_or_lag": null
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "(2*$close-$high-$low)/$open",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "high",
+        "low",
+        "open"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=KSFT",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:KSFT"
+      ],
+      "source_record_ids": [
+        "qkg:record:830bd54f-9d0b-5191-9bf8-e93390b4d230"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "KSFT"
+    },
+    {
+      "aliases": [
+        "Alpha158:ROC5",
+        "Alpha360:CLOSE5",
+        "CLOSE5",
+        "ROC5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:b54447f2-9459-58cb-a898-6d14185e5840",
+      "canonical_name": "Qlib lag_close_ratio feature family",
+      "category": "momentum",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L16",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Ref($close, 5)/$close",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:lag_close_ratio",
+      "factor_variant_id": "qkg:factor:a739bccc-3e19-5213-bb21-6eec177fd4d5",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "close",
+                "type": "field"
+              },
+              {
+                "type": "number",
+                "value": "5"
+              }
+            ],
+            "op": "qlib:delay",
+            "type": "call"
+          },
+          {
+            "name": "close",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:23669c14-19d4-5ea0-875c-18d93a7d773c",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 6
+      },
+      "normalized_formula": "/(qlib:delay($close,5),$close)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:delay"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Ref($close, 5)/$close",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha360DL.get_feature_config; feature=CLOSE5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha360:CLOSE5",
+        "Alpha158:ROC5"
+      ],
+      "source_record_ids": [
+        "qkg:record:93b6aa85-e2b0-545a-ac36-bc063fa2a1d2",
+        "qkg:record:0f2bb45b-278f-5ff3-9c14-d314cdff588d"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "CLOSE5"
+    },
+    {
+      "aliases": [
+        "Alpha158:MA5",
+        "MA5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:64fe0bc7-97b3-5bc8-b987-1b1c9ff60f27",
+      "canonical_name": "Qlib MA feature family",
+      "category": "price_trend",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Mean($close, 5)/$close",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:MA",
+      "factor_variant_id": "qkg:factor:0362c214-238c-55b7-8cd8-112b094bc6ab",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "close",
+                "type": "field"
+              },
+              {
+                "type": "number",
+                "value": "5"
+              }
+            ],
+            "op": "qlib:mean",
+            "type": "call"
+          },
+          {
+            "name": "close",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:52a0d64e-1e4b-5934-858c-1b3c4eb18a6c",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "/(qlib:mean($close,5),$close)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:mean"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Mean($close, 5)/$close",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=MA5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:MA5"
+      ],
+      "source_record_ids": [
+        "qkg:record:f6107993-5913-577f-8680-b94804778856"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "MA5"
+    },
+    {
+      "aliases": [
+        "Alpha158:STD5",
+        "STD5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:e815d187-407d-53d4-b8e3-aa50e7e5df53",
+      "canonical_name": "Qlib STD feature family",
+      "category": "volatility",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Std($close, 5)/$close",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:STD",
+      "factor_variant_id": "qkg:factor:54c5e714-4a7c-5bbe-8161-87cc119c48df",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "close",
+                "type": "field"
+              },
+              {
+                "type": "number",
+                "value": "5"
+              }
+            ],
+            "op": "qlib:std",
+            "type": "call"
+          },
+          {
+            "name": "close",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:368b3da3-bd27-5e9e-b812-52bb48c90da4",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "/(qlib:std($close,5),$close)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:std"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Std($close, 5)/$close",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=STD5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:STD5"
+      ],
+      "source_record_ids": [
+        "qkg:record:61d2f315-433f-5543-80d9-f80e48589401"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "STD5"
+    },
+    {
+      "aliases": [
+        "Alpha158:MAX5",
+        "MAX5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:d2dec4fc-2211-5aff-ae7d-d3838dae5ebf",
+      "canonical_name": "Qlib MAX feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Max($high, 5)/$close",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:MAX",
+      "factor_variant_id": "qkg:factor:af537087-07e2-5dfc-915b-e432c8b49159",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "high",
+                "type": "field"
+              },
+              {
+                "type": "number",
+                "value": "5"
+              }
+            ],
+            "op": "qlib:ts_max",
+            "type": "call"
+          },
+          {
+            "name": "close",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:a656361f-1f61-5c9f-bb02-b7582c501cfa",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "/(qlib:ts_max($high,5),$close)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:ts_max"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Max($high, 5)/$close",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "high"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=MAX5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:MAX5"
+      ],
+      "source_record_ids": [
+        "qkg:record:bf14a101-c6f8-5f8e-b4c3-bdef6c5f7ed1"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "MAX5"
+    },
+    {
+      "aliases": [
+        "Alpha158:MIN5",
+        "MIN5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:280b1b61-df9b-5d1d-ac23-4cd2f0cc1a47",
+      "canonical_name": "Qlib MIN feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Min($low, 5)/$close",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:MIN",
+      "factor_variant_id": "qkg:factor:3defcf79-d7d9-5348-9cfb-c6588488f9a5",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "low",
+                "type": "field"
+              },
+              {
+                "type": "number",
+                "value": "5"
+              }
+            ],
+            "op": "qlib:ts_min",
+            "type": "call"
+          },
+          {
+            "name": "close",
+            "type": "field"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:6452522f-ebd2-5999-b97a-eac930504882",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "/(qlib:ts_min($low,5),$close)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:ts_min"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Min($low, 5)/$close",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "low"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=MIN5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:MIN5"
+      ],
+      "source_record_ids": [
+        "qkg:record:0ecedf71-dc5a-5dbb-b5fb-f27396a04ac5"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "MIN5"
+    },
+    {
+      "aliases": [
+        "Alpha158:RANK5",
+        "RANK5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:265a60df-2fdd-5534-a065-274684d06dbe",
+      "canonical_name": "Qlib RANK feature family",
+      "category": "technical_price_volume",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "Rank($close, 5)",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:RANK",
+      "factor_variant_id": "qkg:factor:76e0bf9c-4b13-575e-afd2-af45c70f8d8f",
+      "formula_ast": {
+        "args": [
+          {
+            "name": "close",
+            "type": "field"
+          },
+          {
+            "type": "number",
+            "value": "5"
+          }
+        ],
+        "op": "qlib:ts_rank",
+        "type": "call"
+      },
+      "formula_id": "qkg:formula:7042d6a0-9fe4-5d66-8aaf-50c9b3abec35",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "qlib:ts_rank($close,5)",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "5"
+        ],
+        "operators": [
+          "qlib:ts_rank"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "Rank($close, 5)",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=RANK5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:RANK5"
+      ],
+      "source_record_ids": [
+        "qkg:record:23e41df1-ce52-5243-8399-07bae3258330"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "RANK5"
+    },
+    {
+      "aliases": [
+        "Alpha158:RSV5",
+        "RSV5"
+      ],
+      "asset_class": "equity",
+      "attribution_required": true,
+      "authors": [],
+      "backtest_ready": false,
+      "canonical_factor_id": "qkg:concept:e9a7f506-7531-502e-88c0-f491439d8b0c",
+      "canonical_name": "Qlib RSV feature family",
+      "category": "price_trend",
+      "code_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py#L73",
+      "commercial_use": "ALLOWED",
+      "created_at": "2026-09-25T12:03:09.101138+00:00",
+      "derivative_allowed": "ALLOWED",
+      "description": "($close-Min($low, 5))/(Max($high, 5)-Min($low, 5)+1e-12)",
+      "dialect": "qlib",
+      "economic_logic": null,
+      "factor_concept": "qlib:RSV",
+      "factor_variant_id": "qkg:factor:8247a3e7-1b6e-5d17-acdb-e675402a8d7c",
+      "formula_ast": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "close",
+                "type": "field"
+              },
+              {
+                "args": [
+                  {
+                    "name": "low",
+                    "type": "field"
+                  },
+                  {
+                    "type": "number",
+                    "value": "5"
+                  }
+                ],
+                "op": "qlib:ts_min",
+                "type": "call"
+              }
+            ],
+            "op": "-",
+            "type": "binary"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "high",
+                        "type": "field"
+                      },
+                      {
+                        "type": "number",
+                        "value": "5"
+                      }
+                    ],
+                    "op": "qlib:ts_max",
+                    "type": "call"
+                  },
+                  {
+                    "args": [
+                      {
+                        "name": "low",
+                        "type": "field"
+                      },
+                      {
+                        "type": "number",
+                        "value": "5"
+                      }
+                    ],
+                    "op": "qlib:ts_min",
+                    "type": "call"
+                  }
+                ],
+                "op": "-",
+                "type": "binary"
+              },
+              {
+                "type": "number",
+                "value": "0.000000000001"
+              }
+            ],
+            "op": "+",
+            "type": "binary"
+          }
+        ],
+        "op": "/",
+        "type": "binary"
+      },
+      "formula_id": "qkg:formula:9615c7c9-6c31-504c-9deb-ffdc812f9d6f",
+      "frequency": "daily",
+      "holding_period": null,
+      "issue_codes": [],
+      "license": "MIT",
+      "license_id": "qkg:license:4fbc3e79-18c4-529e-80f1-306fda5c1b93",
+      "lookback": {
+        "scope": "minimum structural input span; includes current observation",
+        "status": "AST_DERIVED_NOT_RUNTIME_VERIFIED",
+        "unit": "observations",
+        "value": 5
+      },
+      "normalized_formula": "/(-($close,qlib:ts_min($low,5)),+(-(qlib:ts_max($high,5),qlib:ts_min($low,5)),0.000000000001))",
+      "paper_ids": [
+        "qkg:paper:8e975b0f-9b22-5529-bc4f-c786d457eac1"
+      ],
+      "paper_title": null,
+      "paper_year": null,
+      "parameters": {
+        "generator_default_config": true,
+        "numeric_literals": [
+          "0.000000000001",
+          "5"
+        ],
+        "operators": [
+          "qlib:ts_max",
+          "qlib:ts_min"
+        ],
+        "unit": "trading_bars",
+        "window_or_lag": 5
+      },
+      "quality_status": "CURATED_DEFINITION",
+      "raw_data_allowed": "REVIEW_REQUIRED",
+      "raw_formula": "($close-Min($low, 5))/(Max($high, 5)-Min($low, 5)+1e-12)",
+      "rebalance": null,
+      "redistribution_allowed": "ALLOWED",
+      "required_fields": [
+        "close",
+        "high",
+        "low"
+      ],
+      "required_fields_status": "syntax_extracted_unexpanded",
+      "rights_scope": "Collected definitions/metadata only; excludes underlying market observations and upstream third-party rights.",
+      "rights_status": "ATTRIBUTION_REQUIRED",
+      "semantic_status": "NOT_VERIFIED",
+      "source_id": "qlib",
+      "source_locator": "Alpha158DL.get_feature_config; feature=RSV5",
+      "source_name": "Microsoft Qlib",
+      "source_native_ids": [
+        "Alpha158:RSV5"
+      ],
+      "source_record_ids": [
+        "qkg:record:f8cf321d-ebf9-538d-87eb-3b41b87cffb9"
+      ],
+      "source_revision": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+      "source_sha256": "814b7f7ab3d418ae3c87ce352220080b239eba2670eac9e38376b794be4075cb",
+      "source_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/qlib/contrib/data/loader.py",
+      "terms_url": "https://github.com/microsoft/qlib/blob/be725493eb1a6bbb42bf11b37aa7669f59610ff1/LICENSE",
+      "universe": "configurable equity universe; no fixed market assumed",
+      "updated_at": "2026-09-25T12:03:09.101138+00:00",
+      "variant_name": "RSV5"
+    }
+  ],
+  "graph_release": "d0460076e478321851db"
+}
