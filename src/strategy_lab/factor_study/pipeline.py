@@ -53,6 +53,7 @@ def code_files(lab_root):
         'src/strategy_lab/knowledge/market_core.py', 'src/strategy_lab/knowledge/market_contract.py',
         'src/strategy_lab/knowledge/market_dataset.py', 'src/strategy_lab/research/exposure.py',
         'tests/fixtures/factor_study/qlib-golden.json',
+        'tests/fixtures/factor_study/qlib-golden-extended.json',
         'src/strategy_lab/research/trials.py', 'src/strategy_lab/research/integrity.py',
         'src/strategy_lab/research/accounting.py',
     ]]
