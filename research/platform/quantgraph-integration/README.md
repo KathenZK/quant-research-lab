@@ -19,3 +19,5 @@ v2：[实际候选与真实研究阻断](diagnostics/platform-v2.md) ·
 [离线晋级契约](../../../docs/research/StrategyArtifact-v2.md)。当前 5813 条记录中合格候选仍为 0；没有真实策略回测或晋级。
 
 v3：[统一研究与证据结果](diagnostics/evidence-research-v3.md)。原始语料 strict parsed 260；三个显式派生模板只缺数据；eligible/正式回测仍为 0。两个真实行情私有诊断不计正式回测。
+
+研究完整性 v1：[当前 main 复现与修复](diagnostics/research-integrity-fixes-v1.md) · [稳定包接口](../../../docs/research/ResearchIntegrityAssessment-v1.md)。历史与探索继续计算，确认性结论须有独立留存的协议和适用统计证据。

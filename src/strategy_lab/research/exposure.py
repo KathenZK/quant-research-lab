@@ -16,7 +16,11 @@ from .accounting import digest, utc
 
 
 def read_ledger(path: Path) -> list[dict]:
-    return _read(path.read_text()) if path.exists() else []
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        fcntl.flock(f, fcntl.LOCK_SH)
+        return _read(f.read())
 
 
 def _read(text):
@@ -89,18 +93,36 @@ def append_record(path: Path, data: dict) -> dict:
         # Late writing cannot retroactively become timely forward evidence.
         data["late"] = now > utc(data["deadline_at"]) or utc(data["completed_at"]) > utc(data["deadline_at"])
         data["prospective_credit"] = data["status"] == "completed" and not data["late"]
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a+", encoding="utf-8") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
-        f.seek(0)
-        records = _read(f.read())
-        if any(r["data"]["id"] == data["id"] for r in records):
-            raise ValueError("duplicate record id")
+    def build(records):
         if data["kind"] == "observation" and any(
             r["data"]["kind"] == "observation" and r["data"]["family"] == data["family"]
             and utc(r["data"]["decision_at"]) == utc(data["decision_at"]) for r in records
         ):
             raise ValueError("duplicate observation node; append correction as new exposure")
+        return data
+
+    return append_locked(path, build)
+
+
+def append_locked(path: Path, build, *, idempotent: bool = False) -> dict:
+    """Shared local journal transaction; caller validates event semantics under lock.
+
+    Used by exposure records and TrialRegistry. This is local POSIX locking, not
+    a distributed database or external timestamp service. A damaged tail fails
+    closed; it is never silently discarded.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a+", encoding="utf-8") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        records = _read(f.read())
+        data = json.loads(json.dumps(build(records), allow_nan=False))
+        for record in records:
+            if record["data"]["id"] == data["id"]:
+                if idempotent and record["data"] == data:
+                    return record
+                raise ValueError("duplicate record id with conflicting or non-idempotent data")
+        now = datetime.now(timezone.utc).isoformat()
         payload = {"sequence": len(records) + 1, "registered_at": now,
                    "previous_sha256": records[-1]["sha256"] if records else "0" * 64, "data": data}
         record = {**payload, "sha256": digest(payload)}
