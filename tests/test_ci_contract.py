@@ -7,11 +7,21 @@ from pathlib import Path
 import tomllib
 
 import pytest
+import yaml
 
 from strategy_lab.governance_scope import research_sources
 
 pytest_plugins = ["pytester"]
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_ci_runtime_matches_supported_research_syntax():
+    config = tomllib.loads((ROOT / "pyproject.toml").read_text())
+    workflow = yaml.safe_load((ROOT / ".github/workflows/governance-gates.yml").read_text())
+    setup = next(step for step in workflow["jobs"]["governance"]["steps"] if step.get("uses", "").startswith("actions/setup-python@"))
+    assert config["project"]["requires-python"] == ">=3.12"
+    assert config["tool"]["ruff"]["target-version"] == "py312"
+    assert setup["with"]["python-version"] == "3.12"
 
 
 @pytest.mark.parametrize(
