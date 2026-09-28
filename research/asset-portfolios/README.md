@@ -9,6 +9,9 @@
 
 | Directory | 状态 |
 | --- | --- |
+| [Multi-Asset-1D-Small-Account-Slow-Trend（XA-1D-SAST）](1d-small-account-slow-trend/README.md) · [主账](1d-small-account-slow-trend/xa-1d-sast-core-ledger.md) | 见顶层 |
+| [Binance-1D-TPSA-Long-Account（BIN-1D-TPSA-LA）](1d-tpsa-long-account/README.md) · [主账](1d-tpsa-long-account/binance-1d-tpsa-la-core-ledger.md) | 见顶层 |
+| [BTCETH-8H-Small-Account-Cash-And-Carry（BTCETH-8H-SACC）](8h-btceth-small-account-carry/README.md) · [主账](8h-btceth-small-account-carry/btceth-8h-sacc-core-ledger.md) | 见顶层 |
 | [MA7-Bidirectional-Trend-Generalization（MA7-BTG）](1d-ma7-bidirectional-trend-generalization/README.md) · [主账](1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | 见顶层 |
 | [1d-ma7-atr14-long-transfer/](1d-ma7-atr14-long-transfer/README.md) | 见顶层 |
 | [multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md) | 见顶层 |
@@ -69,6 +72,8 @@
 | [hype-cross-strategy-account/](hype-cross-strategy-account/README.md) | 见顶层 |
 
 ## 当前研究线
+
+- [10,000 美元账户三方向独立验收](../platform/small-account-three-line-validation/README.md)：上述三家族的实际首轮结果与唯一下一优先项；账户各自起始 10,000 美元，不相加、不构成组合业绩。
 
 - `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`）：[multi-timeframe-dual-state-trend-campaign/](multi-timeframe-dual-state-trend-campaign/README.md)。`BIN-MTF-PTC` 关账后的 materially new successor；日线 Campaign invalidation 与 position/lot stop 分层，HYPE primary、BTC/ETH independent controls；432 个账户级回测后收益强度门失败，final audit 未揭示，状态 `HARD-GATE-FAILED / explore / not promoted / not live-ready`。主账：[binance-mtf-dstc-core-ledger.md](multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md)，结论见[最终报告](multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md)。
 - `Binance-MTF-Pullback-Trend-Campaign`（`BIN-MTF-PTC`）：[multi-timeframe-pullback-trend-campaign/](multi-timeframe-pullback-trend-campaign/README.md)。BTC/ETH/HYPE 分资产的趋势识别、延续性度量、回调 restart、独立风险 layers 与结构保护；Goal 已完成但目标失败，historical locked evaluation 未揭示，决定 `HARD-GATE-FAILED`，状态 `explore / not promoted / not live-ready`。主账：[binance-mtf-ptc-core-ledger.md](multi-timeframe-pullback-trend-campaign/binance-mtf-ptc-core-ledger.md)。

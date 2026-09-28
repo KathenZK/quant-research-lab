@@ -4,6 +4,8 @@
 
 ## 当前文档
 
+- [10,000 美元账户三方向首轮验证](small-account-three-line-validation/README.md)：跨家族比较与独立验收诊断主题；各策略绩效仍由原家族产物和主账承载。
+
 - [Binance OHLCV Data Lake Governance](data-lake-governance/README.md)
 - [Cross-Sectional Alpha Research Pipeline Readiness Audit](cross-sectional-alpha-pipeline/README.md)
 - [Runner Authorization Reconciliation](runner-authorization-reconciliation/README.md)

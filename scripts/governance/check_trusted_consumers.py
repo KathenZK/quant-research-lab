@@ -33,6 +33,10 @@ class AuxiliaryClassification:
 
 ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/account_acceptance.py",
+        ("<module>",), ("load_funding_v2",), "funding-input-reader",
+    ),
+    ConsumerSpec(
         "research/asset-portfolios/1d-ma7-bidirectional-trend-generalization/scripts/audit_funding_scope.py",
         ("load_coverage",), ("load_funding_v2",),
     ),
@@ -189,6 +193,12 @@ ACTIVE_TRUSTED_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 BINANCE_CATALOG_CONSUMERS: tuple[ConsumerSpec, ...] = (
     ConsumerSpec(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/load_prices.py",
+        ("<module>",),
+        ("require_research_startup",),
+        "binance-bundle-startup-consumer",
+    ),
+    ConsumerSpec(
         "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/applicability_features.py",
         ("load_inputs",),
         ("require_research_startup",),
@@ -287,6 +297,42 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
+    AuxiliaryClassification(
+        "research/platform/small-account-three-line-validation/scripts/audit_b_ledgers.py",
+        "audit",
+        "frozen-artifact-consumer",
+        "Independently reconstructs the new TPSA account exports and reads its retained startup-returned price snapshot; no source lake reads or strategy engine imports.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/audit_source_execution.py",
+        "<module>",
+        "raw-ohlcv-parity-audit",
+        "Read-only reconstruction of three symbols from the original TPSA cache and comparison with this family's startup-returned frames; not a new trusted OHLCV route.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/model_and_source_audit.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Verifies the original TPSA event hash, fits a new diagnostic object and compares retained original-fold predictions; no lake OHLCV reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/run_account.py",
+        "load_inputs",
+        "frozen-artifact-consumer",
+        "Consumes this family's startup-returned price snapshot and diagnostic predictions in the full replay chain; actual funding remains unknown, not verified net returns.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/render_trade_paths.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Renders retained same-family startup prices, trades and account equity; no source lake reads.",
+    ),
+    AuxiliaryClassification(
+        "research/asset-portfolios/1d-tpsa-long-account/scripts/summarize_results.py",
+        "<module>",
+        "frozen-artifact-consumer",
+        "Summarizes this family's retained diagnostic results and startup snapshot without reading the source lake.",
+    ),
     AuxiliaryClassification(
         "research/asset-portfolios/1d-ma7-atr14-long-short-audit/scripts/build_applicability_report.py",
         "build",
@@ -579,7 +625,18 @@ def scan_consumer(root: Path, spec: ConsumerSpec) -> list[str]:
     errors: list[str] = []
     governed_nodes: list[ast.AST] = []
     for entrypoint in spec.entrypoints:
-        node = functions.get(entrypoint)
+        if entrypoint == "<module>":
+            # Explicit script entrypoint: an uncalled definition is not a
+            # top-level loader invocation. Existing function rules stay intact.
+            node = ast.Module(
+                body=[
+                    item for item in tree.body
+                    if not isinstance(item, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))
+                ],
+                type_ignores=[],
+            )
+        else:
+            node = functions.get(entrypoint)
         if node is None:
             errors.append(f"{spec.path}: missing entry point {entrypoint}()")
         else:
@@ -601,8 +658,13 @@ def scan_consumer(root: Path, spec: ConsumerSpec) -> list[str]:
         )
         if reference is not None
     }
+    required_references = (
+        {_call_name(call).rsplit(".", 1)[-1] for call in calls}
+        if spec.entrypoints == ("<module>",)
+        else references
+    )
     for required in spec.required_calls:
-        if required not in references:
+        if required not in required_references:
             errors.append(
                 f"{spec.path}: governed entry points do not call {required}()"
             )
@@ -660,7 +722,7 @@ def validate_auxiliary_classifications(root: Path) -> list[str]:
             errors.append(f"{item.path}: missing classified auxiliary consumer")
             continue
         tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
-        if item.symbol not in _top_level_functions(tree):
+        if item.symbol != "<module>" and item.symbol not in _top_level_functions(tree):
             errors.append(
                 f"{item.path}: missing classified symbol {item.symbol}()"
             )

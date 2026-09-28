@@ -1,0 +1,21 @@
+{
+  "id": "BTCETH-8H-SACC-C0-E1",
+  "frozen_at_utc": "2026-09-08T12:56:00Z",
+  "reason": "Original C0 USDT expiry surface absent from live official inventory; official notice says final maturity 2026-06-26. No price/funding outcomes read before amendment.",
+  "original_contract_retained": true,
+  "primary_expiry_surface": "OKX BTC-USD and ETH-USD inverse coin-margined expiry futures",
+  "selection": "earliest live expiry 30 to 120 days beyond exchange timestamp; no selection on basis size",
+  "initial_account_usd": 10000,
+  "spot_budget_usd": 5000,
+  "other_usdt_cash": 5000,
+  "inverse_face_notional": "N = integer contract lots times USD contract face value",
+  "base_spot_quantity": "q = N / entry_futures_price; gross spot purchase q/(1-spot_fee) rounded upward to spot lot",
+  "terminal_coin_pnl": "short inverse PnL = N*(1/settlement_price - 1/entry_futures_price)",
+  "terminal_usd_value": "q*S + N*(1/S - 1/F0)*S = N when spot equals settlement index and q=N/F0; rounding dust tracked separately",
+  "collateral": "80 percent of acquired base coin posted as isolated futures collateral; rest held as same-venue unencumbered spot. Other USD/USDT cash receives zero interest, no emergency transfer assumed.",
+  "fees": "spot 0.1 percent each side; futures entry 0.05 percent of N/F0 coin; settlement 0.01 percent of N/S coin; actual close 0.05 percent N/F coin",
+  "execution": "depth buy spot asks and short inverse bids; 2bps adverse extra each fill; proportional coin fees reduce terminal guarantee and are included, not ignored",
+  "settlement_mismatch": "spot disposal versus 30min index averaging or different official-page description unresolved; +/-10bps and +/-1percent residual tracked as scenario, exact simultaneous settlement hedge unproven",
+  "historical_scope": "since listing or latest90d, whichever shorter, same-contract basis marks and representative ledger; no expired-contract rolls silently spliced",
+  "other_rules": "C0 costs, clock quality, cash opportunity, stress and authorization boundaries retained"
+}

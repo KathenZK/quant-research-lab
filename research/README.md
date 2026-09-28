@@ -96,8 +96,13 @@
 
 入口：[asset-portfolios/README.md](asset-portfolios/README.md)。跨资产研究不是 HYPE 策略家族，除非文档明确把它提升为某个 HYPE family variant。
 
+10,000 美元账户三方向首轮研究与独立验收见[横向比较](platform/small-account-three-line-validation/README.md)；各线仍以自身主账和产物为准。
+
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
+| `Multi-Asset-1D-Small-Account-Slow-Trend`（`XA-1D-SAST`） | [asset-portfolios/1d-small-account-slow-trend/](asset-portfolios/1d-small-account-slow-trend/README.md) · [主账](asset-portfolios/1d-small-account-slow-trend/xa-1d-sast-core-ledger.md)；7ETF 月频多头/现金，首轮趋势增量 NO-GO | explore / diagnostic-only / not promoted / not live-ready |
+| `Binance-1D-TPSA-Long-Account`（`BIN-1D-TPSA-LA`） | [asset-portfolios/1d-tpsa-long-account/](asset-portfolios/1d-tpsa-long-account/README.md) · [主账](asset-portfolios/1d-tpsa-long-account/binance-1d-tpsa-la-core-ledger.md)；TPSA 多头事件账户化 | registered / diagnostic-only / HARD-GATE-FAILED / not promoted / not live-ready |
+| `BTCETH-8H-Small-Account-Cash-And-Carry`（`BTCETH-8H-SACC`） | [asset-portfolios/8h-btceth-small-account-carry/](asset-portfolios/8h-btceth-small-account-carry/README.md) · [主账](asset-portfolios/8h-btceth-small-account-carry/btceth-8h-sacc-core-ledger.md)；现货与到期/永续 carry，未证实可执行净利润 | explore / diagnostic-only / not promoted / not live-ready |
 | `MA7-Bidirectional-Trend-Generalization`（`MA7-BTG`） | [asset-portfolios/1d-ma7-bidirectional-trend-generalization/](asset-portfolios/1d-ma7-bidirectional-trend-generalization/README.md) · [主账](asset-portfolios/1d-ma7-bidirectional-trend-generalization/ma7-btg-core-ledger.md)；SMA7 多空生命周期与跨市场适用性 | explore / not promoted / not live-ready |
 | `MA7-ATR14-Long-Fixed-Parameter-Transfer` | [asset-portfolios/1d-ma7-atr14-long-transfer/](asset-portfolios/1d-ma7-atr14-long-transfer/README.md) | explore / diagnostic-only / not promoted / not live-ready |
 | `Binance-MTF-Dual-State-Trend-Campaign`（`BIN-MTF-DSTC`） | [asset-portfolios/multi-timeframe-dual-state-trend-campaign/](asset-portfolios/multi-timeframe-dual-state-trend-campaign/README.md) · [主账](asset-portfolios/multi-timeframe-dual-state-trend-campaign/binance-mtf-dstc-core-ledger.md) · [最终报告](asset-portfolios/multi-timeframe-dual-state-trend-campaign/final/binance-mtf-dstc-goal-final-2026-08-04.md) | goal-complete / HARD-GATE-FAILED / explore / not promoted / not live-ready |
@@ -163,6 +168,8 @@
 ## 研究平台
 
 入口：[platform/README.md](platform/README.md)。平台审计不承载策略绩效。
+
+- [10,000 美元账户三方向首轮验证](platform/small-account-three-line-validation/README.md)：跨家族诊断比较与独立验收；结果权威仍在各家族，不建立合成策略身份。
 
 | Family / Topic | Directory | 状态 |
 | --- | --- | --- |
