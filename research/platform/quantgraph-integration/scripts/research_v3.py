@@ -14,6 +14,9 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT/'src'))
+from strategy_lab.research.trials import TrialRegistry  # noqa: E402
+from strategy_lab.research.accounting import digest  # noqa: E402
+from strategy_lab.research.statistics import assemble_dsr, evaluate_pbo  # noqa: E402
 
 
 def load_module(name, path):
@@ -100,19 +103,70 @@ def optional(fn):
         return {'status': 'NOT_COMPUTABLE', 'value': None, 'reason': str(e)}
 
 
-def study(bars, contract, out):
+def study(bars, contract, out, *, trial_context=None):
     grid = contract['parameter_grid']
     out.mkdir(parents=True, exist_ok=False)
     per_year = 365*1440/contract['minutes']
     split = pd.Timestamp(contract['oos_start'])
-    surface, returns, accounts = [], [], []
+    ctx = trial_context or {}
+    registry = TrialRegistry(ctx.get('registry_path', out.parent / 'trial-registry.jsonl'))
+    experiment_id = ctx.get('experiment_id', 'legacy-' + digest(contract))
+    campaign_id = ctx.get('selection_campaign_id', experiment_id)
+    scope_campaigns = ctx.get('selection_campaign_ids', [campaign_id])
+    if campaign_id not in scope_campaigns:
+        raise ValueError('Selection scope must include the current campaign')
+    if not ctx.get('selection_campaign_id'):
+        registry.register_campaign(campaign_id, selection_goal='Legacy fixed-grid replay',
+            scope_definition='Only this invocation is known; broader selection history has not been established',
+            history_reason='Historical searches and cross-family selection scope unknown')
+    dataset_pin = ctx.get('dataset_fingerprint', hashlib.sha256(pd.util.hash_pandas_object(bars, index=False).values.tobytes()).hexdigest())
+    sample_pin = digest({'dataset': dataset_pin, 'timestamps': [str(t) for t in bars.loc[bars.ts >= split, 'ts']]})
+    package = ROOT / 'src/strategy_lab/research'
+    code_pin = digest({str(p.relative_to(ROOT)): sha(p) for p in
+        [Path(__file__), Path(engine.__file__), METRICS_PATH, package/'statistics.py', package/'trials.py', package/'exposure.py']})
+    surface, returns, accounts, attempt_ids = [], [], [], []
+
+    def registered_replay(parameters, *, multiplier=1, role='CANDIDATE'):
+        spec = dict(hypothesis_family_id=ctx.get('hypothesis_family_id', experiment_id),
+            selection_campaign_id=campaign_id, identity=ctx.get('identity', contract['signal']),
+            parameters=parameters, label_horizon=ctx.get('label_horizon', 'NO_PREDICTIVE_LABEL'),
+            objective='Sharpe of net account returns', selection_rule=ctx.get('selection_rule', 'Frozen baseline; inspect full parameter surface'),
+            dataset_fingerprint=dataset_pin, sample_fingerprint=sample_pin, code_hash=code_pin,
+            config_hash=digest(contract), parent_experiment_id=ctx.get('parent_experiment_id'),
+            cost_multiplier=multiplier, trial_role=role)
+        aid = registry.plan(experiment_id, spec)
+        prior = next(a for a in registry.snapshot([campaign_id])['attempts'] if a['attempt_id'] == aid)
+        # An already completed replay is still the same statistical trial.
+        if prior['state'] != 'completed':
+            registry.record(aid, event_id='start-' + str(len(prior['events'])), state='started',
+                results_observed=prior['results_observed'], affects_selection=prior['affects_selection'], reason='Replay started/retried')
+        try:
+            account, fills, trades = engine.replay(bars, contract, parameters, cost_multiplier=multiplier)
+        except BaseException as exc:
+            if prior['state'] != 'completed':
+                registry.record(aid, event_id='failure-' + str(len(prior['events'])),
+                    state='aborted' if isinstance(exc, KeyboardInterrupt) else 'failed',
+                    results_observed=prior['results_observed'], affects_selection=prior['affects_selection'], reason=type(exc).__name__ + ': ' + str(exc))
+            raise
+        return aid, account, fills, trades
+
+    def complete(aid, account_path, *, diagnostic=False):
+        refs = dict(account_path=str(account_path.resolve()), account_sha256=sha(account_path),
+            dataset_fingerprint=dataset_pin, sample_fingerprint=sample_pin, periods_per_year=per_year,
+            oos_start=contract['oos_start'])
+        registry.record(aid, event_id='complete-' + digest(refs), state='completed', results_observed='OBSERVED',
+            affects_selection='NO' if diagnostic else 'YES', reason='Results persisted; diagnostics explicitly excluded from candidate selection' if diagnostic else 'Candidate result available for subsequent research',
+            result_refs=refs)
+
     for i, p in enumerate(grid):
-        account, fills, trades = engine.replay(bars, contract, p)
+        aid, account, fills, trades = registered_replay(p)
+        attempt_ids.append(aid)
         accounts.append(account)
         returns.append(account.return_net.to_numpy())
         account.to_csv(out/f'account-{i}.csv', index=False)
         fills.to_csv(out/f'fills-{i}.csv', index=False)
         trades.to_csv(out/f'trades-{i}.csv', index=False)
+        complete(aid, out/f'account-{i}.csv')
         closed = pd.to_datetime(trades.exit_ts, utc=True) if len(trades) else pd.Series([], dtype='datetime64[ns, UTC]')
         ins = account.ts < split
         surface.append(dict(parameters=p, full=summarize(account, trades, per_year),
@@ -122,15 +176,34 @@ def study(bars, contract, out):
     base = accounts[baseline]
     osmask = (base.ts >= split).to_numpy()
     matrix = np.column_stack(returns)
-    # Sharpe in DSR is per observation, not annualized; nominal grid size is
-    # disclosed and conservatively used instead of inventing effective trials.
-    dsr = optional(lambda: metrics.deflated_sharpe(matrix[osmask, baseline],
-                   trial_sharpes=metrics.sharpe(matrix[osmask]), effective_trials=len(grid)))
+    scope = registry.snapshot(scope_campaigns)
+    scoped_returns = {}
+    for attempt in scope['attempts']:
+        if attempt['attempt_id'] not in scope['selection_trial_ids']:
+            continue
+        events = [e['data'] for e in attempt['events'] if e['data']['state'] == 'completed']
+        if not events:
+            continue
+        refs = events[-1]['result_refs']
+        path = Path(refs.get('account_path', ''))
+        if not path.is_file() or sha(path) != refs.get('account_sha256'):
+            continue  # Missing history remains explicit in assemble_dsr.
+        frame = pd.read_csv(path)
+        values = frame.loc[pd.to_datetime(frame.ts, utc=True) >= pd.Timestamp(refs['oos_start']), 'return_net']
+        scoped_returns[attempt['attempt_id']] = dict(kind='STRATEGY_RETURNS', values=values.tolist(),
+            dataset_fingerprint=refs['dataset_fingerprint'], sample_fingerprint=refs['sample_fingerprint'],
+            periods_per_year=refs['periods_per_year'])
     ins = matrix[~osmask]
     usable = len(ins)//8*8
-    pbo = optional(lambda: metrics.pbo(ins[:usable], blocks=8))
+    pbo = evaluate_pbo(ins[:usable], blocks=8, context=dict(
+        input_kind='FIXED_CANDIDATE_RETURNS', synchronous=True, future_information=False,
+        preprocessing='NONE_OR_CAUSAL', overlapping_labels=False,
+        boundary_policy='CONTINUOUS_CAUSAL_ACCOUNT', selection_scope_complete=False,
+        protocol_frozen_before_results=False,
+        block_justification='Legacy fixed eight blocks; dependence adequacy has not been established',
+        dependence_review=None, evidence_refs=[]))
     pbo.update(sample='IN_SAMPLE_ONLY', dropped_tail_observations=len(ins)-usable,
-               purged=False, embargoed=False, limitation='Holding periods can span CSCV boundaries; no purge/embargo; descriptive only')
+               limitation='Fixed causal rule/account returns; cross-block holdings alone do not mandate purge. Scope/dependence not verified; diagnostic only')
     # An unordered multi-axis grid has no defined adjacent plateau. Never report
     # a 1-D plateau for zscore/EMA grids whose ordering is arbitrary.
     scores = [r['oos'].get('sharpe') for r in surface]
@@ -139,7 +212,10 @@ def study(bars, contract, out):
              {'value': None, 'status': 'NOT_COMPUTED', 'reason': 'Multi-axis grid: adjacency not frozen; full surface reported'}}
     stress = []
     for m in contract['stress_cost_multipliers']:
-        a, _, t = engine.replay(bars, contract, cost_multiplier=m)
+        aid, a, _, t = registered_replay(contract['parameters'], multiplier=m, role='PRESPECIFIED_DIAGNOSTIC')
+        stress_path = out / ('stress-account-' + str(m) + '.csv')
+        a.to_csv(stress_path, index=False)
+        complete(aid, stress_path, diagnostic=True)
         stress.append(dict(multiplier=m, full=summarize(a, t, per_year)))
     slices = {}
     anchor = base.ts.iloc[-1] + pd.Timedelta(minutes=contract['minutes'])
@@ -147,7 +223,10 @@ def study(bars, contract, out):
         window = base[base.ts >= anchor-pd.Timedelta(days=days)]
         slices[label] = {**summarize(window, pd.DataFrame(), per_year), 'win_rate': None,
                          'closed_trades': None, 'purpose': 'AUDIT_ONLY_NOT_SELECTION'}
-    result = dict(baseline_parameters=contract['parameters'], parameter_grid=grid, trial_count=len(grid),
+    scope = registry.snapshot(scope_campaigns)
+    dsr = assemble_dsr(scope, scoped_returns, selected_attempt_id=attempt_ids[baseline],
+                       dependence=ctx.get('dependence'), return_assumptions=ctx.get('return_assumptions'))
+    result = dict(trial_registry=scope, attempt_ids=attempt_ids, baseline_parameters=contract['parameters'], parameter_grid=grid, trial_count=len(grid),
                   in_sample=surface[baseline]['in_sample'], oos=surface[baseline]['oos'],
                   full=surface[baseline]['full'], costs=stress, turnover=surface[baseline]['full']['turnover'],
                   robustness=dict(surface=surface, local_plateau=local, selection='baseline fixed before market download; no OOS retuning'),

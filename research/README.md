@@ -175,6 +175,8 @@
 
 ## 研究平台
 
+- [factor-research-loop](platform/factor-research-loop/README.md)：diagnostic_topic / exploratory；公开定义到真实因子研究与私有 Graph 证据。
+
 入口：[platform/README.md](platform/README.md)。平台审计不承载策略绩效。
 
 - [10,000 美元账户三方向首轮验证](platform/small-account-three-line-validation/README.md)：跨家族诊断比较与独立验收；结果权威仍在各家族，不建立合成策略身份。

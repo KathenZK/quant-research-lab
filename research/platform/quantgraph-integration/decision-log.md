@@ -9,3 +9,5 @@
   依据：[验收结果](diagnostics/acceptance.md)、[冻结范围](specs/pipeline-v1.md)。
 
 - 2026-09-27：切换显式 V3 gate；缺契约 fail closed。独立冻结三个来源改编家族，原始摘要冲突不覆盖。实际下载和补洞后仍缺可信原生字段；两个私有诊断共八组参数，eligible/正式回测/正式回写仍为 0，未触及 Runner。
+
+- 2026-09-28：在 main `a94f426` 复现并修复 holdout/尝试范围/PBO 判定问题，新增 ResearchIntegrityAssessment/v1 和轻量 TrialRegistry；仅合成验证，不改冻结结果。历史复现与探索正常完成，独立确认依据另行审查。见 [复现与修复](diagnostics/research-integrity-fixes-v1.md)。

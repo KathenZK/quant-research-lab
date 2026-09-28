@@ -23,3 +23,5 @@
 - [research-methods.md](research-governance/research-methods.md)：成本、窗口与验证方法选择；不作为所有研究的必做清单。
 - [strategy-validation-gates.md](research-governance/strategy-validation-gates.md)：研究证据与运行状态迁移；固定研究方法套餐已取消。
 - [trade-path-guide.md](research-governance/trade-path-guide.md)：根据问题选择图表，登记版本不自动触发出图。
+
+- [ResearchIntegrityAssessment-v1](research/ResearchIntegrityAssessment-v1.md)：历史/探索/确认性结论、TrialRegistry、DSR/PBO 适用性与迁移接口。
