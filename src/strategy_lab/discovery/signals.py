@@ -182,6 +182,6 @@ def signal_arrays(bars, record_id, *, modification=None):
             raise ValueError("Unregistered modification")
         if monthly or record_id == "EV3-M0256-BTC-EUR":
             raise ValueError("Confirmation only for daily persistent states")
-        enter &= np.r_[False, enter[:-1]]
-        leave &= np.r_[False, leave[:-1]]
+        enter = enter & np.r_[False, enter[:-1]]
+        leave = leave & np.r_[False, leave[:-1]]
     return enter, leave, value
