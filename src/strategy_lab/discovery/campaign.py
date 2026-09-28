@@ -252,10 +252,6 @@ def freeze(
 
 def register_trials(output, plan, trials, selected):
     reg = registry(output)
-    scope = reg.snapshot([plan["campaign_id"]])
-    existing = {a["experiment_id"] for a in scope["attempts"]}
-    if len(existing | {t["trial_id"] for t in trials}) > plan["strategy_trial_cap"]:
-        raise ValueError("Trial budget exhausted")
     byid = {r["variant"]["source_native_id"]: r["variant"] for r in selected}
     for t in trials:
         v = byid.get(t["record_id"])
@@ -292,6 +288,19 @@ def register_trials(output, plan, trials, selected):
             "config_hash": digest([plan["config"], t]),
             "parent_experiment_id": t["parent_experiment_id"],
         }
+        from strategy_lab.research.accounting import digest as trial_digest
+
+        expected = "attempt-" + trial_digest(
+            {"experiment_id": t["trial_id"], "spec": spec}
+        )
+        latest = reg.snapshot([plan["campaign_id"]])
+        if (
+            expected not in {a["attempt_id"] for a in latest["attempts"]}
+            and latest["raw_attempts"] >= plan["strategy_trial_cap"]
+        ):
+            raise ValueError(
+                "Trial budget exhausted (code revisions and failures included)"
+            )
         t["attempt_id"] = reg.plan(t["trial_id"], spec)
 
 

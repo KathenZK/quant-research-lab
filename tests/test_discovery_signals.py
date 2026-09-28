@@ -69,3 +69,17 @@ def test_rolling_cmo_and_ulcer_manual_oracles():
             ]
             expected = np.sqrt(np.mean(np.square(dd)))
         assert value == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("record", ["M5725", "M5676"])
+def test_confirmation_handles_pandas_readonly_arrays_and_remains_causal(record):
+    f = bars()
+    enter, leave, _ = signal_arrays(f, record)
+    actual = signal_arrays(f, record, modification="two_close_confirmation")
+    np.testing.assert_array_equal(actual[0], enter & np.r_[False, enter[:-1]])
+    np.testing.assert_array_equal(actual[1], leave & np.r_[False, leave[:-1]])
+    for full, prefix in zip(
+        actual,
+        signal_arrays(f.iloc[:400], record, modification="two_close_confirmation"),
+    ):
+        np.testing.assert_allclose(np.asarray(full)[:400], prefix, equal_nan=True)

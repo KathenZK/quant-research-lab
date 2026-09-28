@@ -139,6 +139,12 @@ def execute(request: dict, context) -> list[dict]:
                 "code": r["code"],
             },
         )
+        r["study_metadata"]["public_summary"]["sample"] = {
+            **r["sample"],
+            "end": r["sample"]["end_exclusive"],
+            "frequency": cfg["settings"]["frequency"],
+        }
+        r["study_metadata"]["provenance"]["execution_status"] = r["status"]
     return outcomes
 
 
@@ -222,9 +228,11 @@ def execute_strategy(request, context):
         campaign.run(study, round_number=1, workers=cfg.get("workers", 1))
     campaign.writeback(study, cfg["journal"])
     outcomes = []
+    plan = json.loads((study / "plan.json").read_text())
     for p in sorted((study / "runs").glob("*/graph-envelope.json")):
         envelope = json.loads(p.read_text())
-        t = json.loads((p.parent / "result.json").read_text())["trial"]
+        result = json.loads((p.parent / "result.json").read_text())
+        t = result["trial"]
         v = next(
             r["variant"]
             for r in catalog
@@ -253,9 +261,31 @@ def execute_strategy(request, context):
                 "template_id": v["strategy_template_id"],
                 "trial": t,
                 "relation": "DERIVED_FROM" if t["round"] else "TESTED_BY",
+                "execution_status": result["status"],
             },
             refs if t["round"] else [],
         )
+        summary = envelope["study_metadata"]["public_summary"]
+        summary["sample"] = {
+            "start": plan["evaluation_start"],
+            "end": plan["end"],
+            "rows": sum(
+                result.get("metrics", {}).get(k, {}).get("observations", 0)
+                for k in ("development", "validation")
+            ),
+            "frequency": "1d",
+            "symbols": ["BTC/EUR"],
+            "dataset_version": plan["dataset_version"],
+            "real_market_data": True,
+        }
+        if t["round"]:
+            summary["evolution"] = {
+                "parent_experiment_id": t["parent_experiment_id"],
+                "reason": "Observed development turnover and execution-cost erosion",
+                "change": "Two consecutive closed-bar conditions; all other rules fixed",
+                "outcome": result["status"],
+                "interpretation": "Execution status only; numerical hypothesis test remains in restricted artifact",
+            }
         outcomes.append(envelope)
     _get(context, "checkpoint")("STRATEGIES_COMPLETE", {"completed": 2, "total": 2})
     return outcomes
