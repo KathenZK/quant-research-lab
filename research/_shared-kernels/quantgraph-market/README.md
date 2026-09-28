@@ -6,3 +6,7 @@
 
 冻结 SHA256：`v1/engine.py` = `fc2161abeef0cc06303e0e41945f875e11c9c75758bfa125971a709ab770254b`。
 消费方：platform/quantgraph-integration/scripts/research_v3.py；BTC 三个 quantgraph-source 家族。
+
+## v2 暴露口径
+
+`v2/engine.py` SHA256：`3c86e382f6b7716593059db568403aae0089496312ba4ba77cfa4b8de17dcdd9`。PnL、成交和费用与 v1 相同；exposure 改为开盘操作后的持仓代理。开盘平仓为 0，盘中止损/止盈的实际暴露时长未知，另报 0..1 上下界，不冒充真实持续时间。

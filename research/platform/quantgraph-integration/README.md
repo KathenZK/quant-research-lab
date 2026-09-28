@@ -3,6 +3,8 @@ research_classification: diagnostic_topic
 ---
 # QuantGraph 研究联通
 
+V4 当前入口：[证据链与研究审计](diagnostics/evidence-research-v4.md)。三个模板已补齐合同/许可/数据需求；真实数据仍 PARTIAL/raw_unaccepted，正式候选与正式回测均 0。
+
 本主题负责知识候选筛选、实验族去重、研究结果和晋级文件的接口验证。
 不代表任何策略通过回测，也不改变既有研究家族或 runner 状态。
 

@@ -42,3 +42,7 @@
 ## What Not To Put Here
 
 不粘贴全量源码、行情、参数表或收益序列；不把单一市场的诊断变成盈利证明。
+
+## V4 证据链复核
+
+2026-09-28：新合同固定字节摘要、完整覆盖和已审核许可。三项机制仍未通过行情准入；只生成私有 diagnostic，不登记新版本。最近证据：[V4 合同](specs/research-contract-v4.json)；本机 `artifacts/20260928-v4-chain-acceptance/`。

@@ -5,7 +5,7 @@ import pytest
 
 def test_minimum_and_target_shortfalls_are_different():
     rows = [candidate('v' + str(i), 't' + str(i), True) for i in range(120)]
-    report = select_candidates(rows, target=200)
+    report = select_candidates(rows, target=200, minimum_required=100)
     assert report['eligible_count'] == 120
     assert report['minimum_shortfall'] == 0 and report['target_shortfall'] == 80
     assert 'shortfall' not in report
