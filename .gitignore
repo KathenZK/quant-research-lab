@@ -35,3 +35,4 @@ htmlcov/
 !research/platform/quantgraph-integration/artifacts/cross-repo-contract.json
 !research/platform/quantgraph-integration/artifacts/platform-v2/candidate-summary.json
 !research/platform/quantgraph-integration/artifacts/reference-v2/vectorbt-comparison.json
+/research/platform/strategy-factor-discovery/artifacts/local/
