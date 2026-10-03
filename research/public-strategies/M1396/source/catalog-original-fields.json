@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "id": "M1396",
+    "source_url": "https://www.tradingview.com/script/gPAcpcHK-Sundays-Suck-for-Bitcoin-Daily-Strategy/",
+    "作者或机构": "johnmw",
+    "别名来源": "无",
+    "可回测": "高",
+    "名称": "比特币周日差：hl2>SMA(hl2,4)且周二开多，周六平多（日线语境）",
+    "市场": "加密（Bitcoin）",
+    "提出日期": "Apr 28, 2018",
+    "标题": "比特币周日差：hl2>SMA(hl2,4)且周二开多，周六平多（日线语境）",
+    "规则": "本条只写该TradingView脚本页已印出的规则。条件：hl2高于其4期SMA且dayofweek为周二则开多；周六strategy.close。回测年起止input默认2012–2018。注释写适合日线。不是M1270周日收盘买周一收盘卖，也不是M1202周一VWAP开多周日全平：本条hl2>SMA(hl2,4)且周二开多、周六平多。计入加密。提出日期按源文件原样保留Apr 28, 2018。",
+    "页码或文件": "TradingView脚本页"
+  },
+  "redacted_fields": {},
+  "original_field_count": 11,
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "source_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1396.json",
+  "blob_sha256": "0811ed4295149f03f2c19eb41e105d12a96cbbae2cb9287deaf465d427fd6853",
+  "provenance": {
+    "csv_row_ordinal": 1396,
+    "csv_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "row_sha256": "bb1dc0df6ce990cdd4d260239314ca88c42b34f25f65704cfd915d5683764ea4",
+    "rule_sha256": "0c5ab46b29307402c65bb367efa7f27ff3d23e220157ea14cbf55b1dd83fb96c"
+  },
+  "review_scope": "Explicit per-field public source/rule review; existing source record all_fields_reviewed flag is unchanged. Whole original11 binding retained in private evidence; publication excludes internal curation."
+}

@@ -1,0 +1,138 @@
+{
+  "status": "ROOT_FROZEN_CATALOG_HYPOTHESIS_PRE_CODE_C0",
+  "source_layer": "Catalog-defined hypothesis; author webpage/runtime not verified. Existing access failure is retained and is not a generic prerequisite.",
+  "classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY; strict0",
+  "authorization_boundary": "Assignment permits implementation/prehistory synthetic work; historical run requires exact code/C0 and independent gates below.",
+  "instrument": "Bitcoin retained; Binance spot BTCUSDT quote/venue is explicit research instance, not original author assertion.",
+  "input_period": "2022-12-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; do not change input",
+  "evaluation": "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+  "monthly_reporting": "Month return=end equity/previous month end equity-1; first denominator100000. Continuous account and indicators, no monthly resetting or selective omission of cash/zero-trade months.",
+  "capital": {
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "fraction": "1",
+    "entry_fee_inclusive": true,
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "buy_order_of_operations": [
+      "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+      "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+      "fee=cash_before-notional",
+      "quantity=notional/fill",
+      "cash_after=Decimal(0)"
+    ],
+    "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+    "sell_order_of_operations": [
+      "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+      "notional=quantity_before*fill",
+      "fee=notional*Decimal(fee_bps)/10000",
+      "cash_after=cash_before+notional-fee",
+      "quantity_after=Decimal(0)"
+    ],
+    "funding_interest_borrow": 0,
+    "leverage": 1,
+    "max_positions": 1,
+    "fractional_fills": true,
+    "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+  },
+  "cost_cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "execution": {
+    "at_open": "Execute earliest-due pending action if due_index<=currentindex and actual holdings permit. Stale is logged/discarded; no sameopen roundtrip or reentry. No out-of-window fill.",
+    "at_close_sequence": [
+      "Update completed-bar indicators. Compute raw entry and exit independent of holdings.",
+      "Raw opposite event cancels pending opposite intent before position gating; if both events arise exit/cancel-buy has priority.",
+      "Schedule buy only if flat and raw entry; sell only if long and raw exit.",
+      "Same-direction repeat retains original earliest due; absent event does not cancel an existing intent.",
+      "All calendar labels refer to UTC bar-open date; signal close knowledge becomes actionable at following bar open or declared lag2.",
+      "No warmup intents, equality neutral except explicit previous-side inclusive crossing condition."
+    ],
+    "lag2": "Raw opposite event at t+1 cancels pending intent due t+2. Absence of event retains original intent/due, no repeated deferral."
+  },
+  "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+  "benchmark": {
+    "new_control_configurations": 0,
+    "required_existing_control": "M1258 buyhold100% fee-inclusive, base8bps+2bps, first2023-01-01dailyopen, mark2024-12-31close, samecanonical48e4/Decimal50/100000USDT/731rows/statistics",
+    "status_at_freeze": "M1258 C0 frozen; actual control not yet validated or remotely delivered. Do not claim it exists.",
+    "gate_before_history": "Wait for root verified M1258 control output hash/publiccore pin and exact identity match. No silently reused95% control, no automatic newcontrol authorization.",
+    "QA_recovery_runs_count_as_new_controls": false
+  },
+  "precision": "Proposed Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+  "QA_gate": "Recheck exact inputhash/grid/uniqueness/close_time/finite positiveOHLC/nonnegativevolume/trades/OHLC bounds; reject any failure, no imputation/drop/forwardfill. Existing QA accepted input may have low-activity bars; do not silently add volume filter. Halt metadata retained;4h OHLC does not prove continuous executable liquidity.",
+  "PIT": "UNKNOWN/DIAGNOSTIC_ONLY; no as-of/finality/trusted/live-readiness claim",
+  "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+  "id": "M1396",
+  "timeframe": "1d, explicit catalog daily context",
+  "expected_evaluation_bars": 731,
+  "known_halt": "Known2023-03-24 halt is intraday; no daily-midnight override. No general tradability claim.",
+  "input": {
+    "input_name": "input.csv",
+    "bytes": 128196,
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "evaluation_rows": 731,
+    "warmup_rows": 31,
+    "manifest_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+    "manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "rebuild_script": "research/public-strategies/M0216/scripts/rebuild_inputs.py",
+    "rebuild_script_sha256": "52b48a659791d6d8a9c817fce761f423831f45b46deb4978107941cfc4c950a1",
+    "fetch_dependency": "research/public-strategies/M0216/scripts/fetch_inputs.py",
+    "fetch_dependency_sha256": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+    "reacquire_command_template": "In an isolated repository checkout without retained M0216 input.csv: python research/public-strategies/M0216/scripts/rebuild_inputs.py --raw-dir NEW_PRIVATE_RAW_DIRECTORY --staging-dir NEW_PRIVATE_STAGING_DIRECTORY",
+    "raw_validation": "50 fixed ZIP/CHECKSUM objects,25 provider checksum andZIPCRC; canonical byte rebuild; no current finality or PIT guarantee."
+  },
+  "source_original_fields": "research/public-strategies/catalog-hypothesis-batch016-preflight-20261003/M1396-catalog-original-fields.json",
+  "statistics": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "total_return": "E_last/100000-1",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+  },
+  "capital_provenance": "Catalog position fraction unspecified; fullcash fee-inclusive is explicitly selected hypothesis, not author rule.",
+  "cold_start": "31 pre-evaluation daily bars for indicators; start allcash, no warmup intent. First evaluation close may compare prior ready feature; earliest signal-driven fill is second evaluation open.",
+  "hl2_SMA4": "hl2=(H+L)/2 in Decimal50; arithmetic sum current and previous3 hl2 divided4; firstreadyindex3.",
+  "entry": "UTC daily label Tuesday AND currenthl2>currentinclusiveSMA4; event true independent holdings, equality neutral.",
+  "exit": "UTC daily label Saturday, independent of hl2/trend; whenlong schedule sell, cancels pendingbuy even whileflat.",
+  "calendar_execution": "Tuesday close decision fills Wednesday open/lag1 or Thursdayopen/lag2; Saturday close decision fills Sundayopen/lag1 or Mondayopen/lag2. Not Tuesdayopen purchase/Saturdayopen sale.",
+  "date_filter_adaptation": {
+    "catalog_defaults": "start/endyears2012–2018",
+    "research_override": "2023–2024 inclusive (2023-01-01..2025-01-01 exclusive)",
+    "explicitly_selected_before_returns": true,
+    "effect": "Keeping original default would exclude entire available window. This declared input override is a hypothesis/adaptation, not reproduction of2012–2018. Never silently drop filter."
+  },
+  "economic_hypothesis": "Weekday seasonality filtered by short hl2trend; inferred research rationale, no verified risk-premium explanation."
+}
