@@ -1,5 +1,27 @@
 # 复现入口
 
+## 云端交接包字节验收
+
+使用既有 `strategy_lab.research.evidence` 的路径及摘要检查；交接 ZIP 无须转换成候选证据包。
+先通过 Library 当前受支持流程取得本地字节，再运行：
+
+```bash
+PYTHONPATH=src python -m strategy_lab.research.handover \
+  --input-dir /private/handover-input \
+  --expected /private/expected-archives.json \
+  --report /private/new-preflight.json
+```
+
+`expected-archives.json` 是独立保存的 `name / bytes / sha256` 对象列表。该入口只读输入，
+检查外层摘要、ZIP CRC、路径冲突及解压预算，至少保留 5 GiB；报告只允许新建。
+PASS 仅表示传输字节通过，不等于内部清单、语料、许可、行情或回测通过。
+缺失输入返回 BLOCKED 和退出码 2；不产生策略完成计数。私有输入及验收报告不得加入 Git。
+
+后续必须核对内部清单和稳定 ID、执行小批独立校验、保存私有 Library 压缩包与独立清单，
+从远端重新取得并恢复验证成功后才扩量。候选证据继续使用既有
+`strategy_lab.research.evidence`，Graph 继续使用 `corpus_export` / `corpus_workspace` 及
+现有策略详情、因子详情和比较页；本入口不新增调度器或展示平台。
+
 先启动相邻 quant-knowledge-graph 服务，并在环境配置 `QUANTGRAPH_TOKEN`。
 使用该仓库已安装的 SDK 环境运行：
 
