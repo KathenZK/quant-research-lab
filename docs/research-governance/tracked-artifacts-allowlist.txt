@@ -1158,3 +1158,33 @@ research/public-strategies/M0283/artifacts/20261003-batch011/results/summary.jso
 research/public-strategies/M0283/artifacts/20261003-batch011/source-qa.json  # root batch011
 research/public-strategies/M0283/artifacts/20261003-batch011/stage-timing.json  # root batch011
 research/public-strategies/M0283/artifacts/20261003-batch011/trade-sample-manifest.json  # root batch011
+
+# batch011 immutable projection and documentation history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/M0260.md.snapshot  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/M0265.md.snapshot  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/M0282.md.snapshot  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/v2/M0283.md.snapshot  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history

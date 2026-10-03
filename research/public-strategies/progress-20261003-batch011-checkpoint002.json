@@ -1,0 +1,333 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T14:46:25.032692+00:00",
+  "coordinator": "Codex root only",
+  "batch": "011",
+  "checkpoint": 2,
+  "previous_checkpoint_sha256": "ca2fca21bff9581e870976fc053999847cb8572d79bd98fa251e6e3afe1412bc",
+  "source_freeze_commit": "782bb93874bc529059d8cd28bbd0d803cef4a164",
+  "source_final_commit": "234bf3590189bb4f702475aa4a05d574464698e8",
+  "new_accepted_ids": [
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283"
+  ],
+  "new_strategy_configurations": 16,
+  "new_controls": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304",
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283"
+  ],
+  "cumulative_strategy_configurations": 115,
+  "cumulative_controls": 20,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "ledger_qa": {
+    "status": "PASS",
+    "ids": [
+      {
+        "id": "M0260",
+        "states": 421632,
+        "fills": 1356,
+        "ledger_wall_seconds": 6.618548744998407,
+        "max_rss_kib": 599708
+      },
+      {
+        "id": "M0265",
+        "states": 421632,
+        "fills": 6784,
+        "ledger_wall_seconds": 6.76315800500015,
+        "max_rss_kib": 453688
+      },
+      {
+        "id": "M0282",
+        "states": 421632,
+        "fills": 562,
+        "ledger_wall_seconds": 8.01950350900006,
+        "max_rss_kib": 448560
+      },
+      {
+        "id": "M0283",
+        "states": 421632,
+        "fills": 540,
+        "ledger_wall_seconds": 7.564566854998702,
+        "max_rss_kib": 443012
+      }
+    ],
+    "states": 1686528,
+    "daily_rows": 5856,
+    "fills": 9242,
+    "successful_checks_wall_seconds": 41.504600788983225,
+    "successful_checks_cpu_seconds": 41.479161,
+    "peak_child_rss_kib": 599708,
+    "failed_attempts_preserved": 1,
+    "new_engine_runs": 0,
+    "receipt_sha256": "a6b1649c400110c8be02ee4cb2f9e3dd684b48e5107c6418777e7d36fb91ceb9",
+    "absolute_tolerance": 0,
+    "relative_tolerance": 1e-09,
+    "expected_zero_exact": true,
+    "checks": "independent Decimal decisions, price/notional/fees/cash/equity, phase/time, source-adapter-saved signals and metrics",
+    "coverage_limit": "All four profit-only gates false; enabled gate evidence is prior synthetic, not exercised by these historical cases"
+  },
+  "archive_qa": {
+    "receipt_sha256": "1980a6997f23c88d94878ca64858b601ee9526f5459cd512d6b90692f487af0f",
+    "public_files": 197,
+    "public_bytes": 1222755,
+    "public_manifest_sha256": "002da88303881c2f6d6676e06c0b9e9e06a51d36bfe4940661ad47fceb122b77",
+    "fresh_restored_files_byte_identical": 56,
+    "archive_bytes": 86185587,
+    "archive_sha256": "475011ac40b325802357126b056a9820e39f001d5da929978be849b23a741a1b",
+    "standalone_manifest_sha256": "a6209170726d6b36f91b3b86a556dac02d3538b9c5da353792c744941f902ed2",
+    "zip_members": 610,
+    "payload_files": 609,
+    "raw_objects": 39,
+    "canonical_copies": 1,
+    "CRC_and_member_hashes": "PASS",
+    "remote_library_backup_verified": false,
+    "limitations": [
+      "Archive contains source/code/input/evidence and dependency locks; preinstalled compatible runtime remains required, not a wheel-complete empty-machine environment.",
+      "Fresh restoration was separately executed by worker and56outputs independently byte-compared here; final archive itself was only CRC/member-hash checked, not rerun through optional engine.",
+      "Account/event QA belongs to m0200; this receipt does not duplicate that conclusion.",
+      "Only local archive verified; no Library/remote backup or deployment claim."
+    ]
+  },
+  "results": {
+    "M0260": {
+      "summary_sha256": "c757402ab7500479c279e46e9f626cbccc5f307709aa19751b40194d43f0e6b3",
+      "configurations": {
+        "base": {
+          "total_return": -0.2412902950695487,
+          "max_drawdown": 0.35117889651841583,
+          "sharpe": -1.6801940127114272,
+          "round_trips": 169,
+          "final_equity": 75870.97049304513
+        },
+        "fee0": {
+          "total_return": -0.018338566787186594,
+          "max_drawdown": 0.2371551543944962,
+          "sharpe": -0.038541374787012514,
+          "round_trips": 169,
+          "final_equity": 98166.14332128134
+        },
+        "fee20": {
+          "total_return": -0.48445868374966183,
+          "max_drawdown": 0.5241807055315033,
+          "sharpe": -4.083489774099512,
+          "round_trips": 169,
+          "final_equity": 51554.13162503382
+        },
+        "delay2": {
+          "total_return": -0.24194318398582282,
+          "max_drawdown": 0.3423635144890783,
+          "sharpe": -1.7163262578432845,
+          "round_trips": 169,
+          "final_equity": 75805.68160141772
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0265": {
+      "summary_sha256": "262a6459a5da4d9e679caa3b16cb1b71e8f82db7e53f5f77952199f29e1ebd39",
+      "configurations": {
+        "base": {
+          "total_return": -0.7656388116899534,
+          "max_drawdown": 0.7674176585263115,
+          "sharpe": -9.909275921389863,
+          "round_trips": 848,
+          "final_equity": 23436.11883100466
+        },
+        "fee0": {
+          "total_return": -0.1495562093340288,
+          "max_drawdown": 0.23277976096128816,
+          "sharpe": -1.0737491309866594,
+          "round_trips": 848,
+          "final_equity": 85044.37906659712
+        },
+        "fee20": {
+          "total_return": -0.9660899550771728,
+          "max_drawdown": 0.966138628860967,
+          "sharpe": -19.33648713894534,
+          "round_trips": 848,
+          "final_equity": 3391.0044922827283
+        },
+        "delay2": {
+          "total_return": -0.7489165286498639,
+          "max_drawdown": 0.7500129370715204,
+          "sharpe": -9.665028580422547,
+          "round_trips": 848,
+          "final_equity": 25108.34713501361
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0282": {
+      "summary_sha256": "bf922fa30a8ceb87050fbf5226307e6167763e5808f5499a9a216d68b72dc3f4",
+      "configurations": {
+        "base": {
+          "total_return": 0.18077857724841495,
+          "max_drawdown": 0.37450870334315134,
+          "sharpe": 0.5945435677728202,
+          "round_trips": 69,
+          "final_equity": 118077.8577248415
+        },
+        "fee0": {
+          "total_return": 0.27641793741626897,
+          "max_drawdown": 0.3640201999639556,
+          "sharpe": 0.7687527385973407,
+          "round_trips": 77,
+          "final_equity": 127641.7937416269
+        },
+        "fee20": {
+          "total_return": 0.12098260561924068,
+          "max_drawdown": 0.37731746143090206,
+          "sharpe": 0.4783115539701759,
+          "round_trips": 64,
+          "final_equity": 112098.26056192406
+        },
+        "delay2": {
+          "total_return": 0.18548811915772045,
+          "max_drawdown": 0.37000437035329625,
+          "sharpe": 0.6031186033149348,
+          "round_trips": 69,
+          "final_equity": 118548.81191577204
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0283": {
+      "summary_sha256": "b7b57a8de4b65305ff0e8eebbc20d3ca67d890b72a94eb0e439dfdd63529c134",
+      "configurations": {
+        "base": {
+          "total_return": 0.0027032207786203966,
+          "max_drawdown": 0.2859839410417577,
+          "sharpe": 0.1621680933047575,
+          "round_trips": 67,
+          "final_equity": 100270.32207786203
+        },
+        "fee0": {
+          "total_return": 0.0709532280277616,
+          "max_drawdown": 0.27837400987276173,
+          "sharpe": 0.37873189299797066,
+          "round_trips": 72,
+          "final_equity": 107095.32280277617
+        },
+        "fee20": {
+          "total_return": -0.23026194536392475,
+          "max_drawdown": 0.4166296193048963,
+          "sharpe": -0.5797885479893328,
+          "round_trips": 60,
+          "final_equity": 76973.80546360752
+        },
+        "delay2": {
+          "total_return": -0.00022331542870424048,
+          "max_drawdown": 0.28560342372587944,
+          "sharpe": 0.15085477703887643,
+          "round_trips": 69,
+          "final_equity": 99977.66845712958
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    }
+  },
+  "benchmark": {
+    "origin_id": "M0311",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "total_return": 1.1503041230956876,
+    "new_control_runs": 0
+  },
+  "stage_timings": {
+    "run": {
+      "wall_seconds": 59.16540269800316,
+      "cpu_seconds": 59.124821999999995,
+      "peak_rss_kib": 645540
+    },
+    "source": {
+      "wall_seconds": 9.860038649996568,
+      "cpu_seconds": 9.845692,
+      "peak_rss_kib": 389180
+    },
+    "oracle": {
+      "wall_seconds": 31.06118717999925,
+      "cpu_seconds": 31.041354,
+      "peak_rss_kib": 885120
+    },
+    "event": {
+      "wall_seconds": 2.555874068988487,
+      "cpu_seconds": 2.5535419999999998,
+      "peak_rss_kib": 207744
+    },
+    "prefix": {
+      "wall_seconds": 51.68007458499778,
+      "cpu_seconds": 51.634464,
+      "peak_rss_kib": 641728
+    }
+  },
+  "frozen_originals_preserved": true,
+  "projection_and_prose_revisions": "Old Graph/publication/report/ZIP bytes retained. New v2 assumptions and v3 prose clarify units, M0265 terminal flat state and inactive profit-only gates; financial outputs and source/kernel/C0 unchanged.",
+  "graph_directory": {
+    "main_commit": "cabfc9dc07b83359b0ccfe1e79a11c7b91757133",
+    "records": 200,
+    "strategy_candidates": 171,
+    "factor_candidates": 12,
+    "unclassified": 17,
+    "new_backtests": 0,
+    "six_push_pr_main_CI_checks": "SUCCESS",
+    "delivered_files": 108,
+    "delivered_bytes": 556302,
+    "site_update": false
+  },
+  "site_updated": false,
+  "other_owner_dot006": {
+    "ids": [
+      "M0253",
+      "M0272",
+      "M0264",
+      "M0266"
+    ],
+    "stage": "Parent reports execution, independent QA and Library recovery PASS. Root standard materialization failed; exact public Git delivery and root acceptance pending.",
+    "accepted_count_added_here": 0
+  },
+  "backup_status": "batch009118MB and batch01186MB full archives are local only. Standard root Library upload route HTTP401 unresolved; no repeated upload without repair evidence. Git preserves approved source/results and offline reconstruction recipe separately.",
+  "new_market_requests": 0,
+  "new_local_execution_blockers": 0,
+  "conclusions": "M0260 and M0265 lose even with zero fee and retained slippage. M0282 stays invested most of the window but trails buyhold with higher MDD; its loaded CCI687 exit never triggers. M0283 is near-flat and becomes negative under fee20 or delay2. All are exposed-window ADAPTED diagnostics, no promotion/OOS/PIT/strict claim."
+}
