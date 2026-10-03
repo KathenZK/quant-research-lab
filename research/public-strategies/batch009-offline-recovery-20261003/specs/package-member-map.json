@@ -1,0 +1,74 @@
+{
+  "schema": "batch009-private-package-logical-map/v1",
+  "scope": "Archive directory entries inspected without redistributing private members",
+  "member_count": 637,
+  "groups": [
+    {
+      "prefix": "PRIVATE-CONTENTS.json",
+      "members": 1,
+      "role": "Original private byte inventory, not copied here"
+    },
+    {
+      "prefix": "README.md",
+      "members": 1,
+      "role": "Original private package instructions"
+    },
+    {
+      "prefix": "RESTORE_PACKAGE.py",
+      "members": 1,
+      "role": "Original package verifier/replayer; unchanged, requires full private reference files"
+    },
+    {
+      "prefix": "checks/batch009",
+      "members": 54,
+      "role": "Prior batch QA evidence; unchanged, not required to regenerate outputs"
+    },
+    {
+      "prefix": "checks/batch009-engine-profile-20261003-v1",
+      "members": 14,
+      "role": "Synthetic profiling evidence only"
+    },
+    {
+      "prefix": "checks/batch009-kernel-review-20261003-v1",
+      "members": 3,
+      "role": "Prior superseded draft review retained"
+    },
+    {
+      "prefix": "checks/batch009-kernel-review-20261003-v2",
+      "members": 4,
+      "role": "Pre-C0 fix review retained"
+    },
+    {
+      "prefix": "checks/native5m-batch009-rule-map-20261003-v1",
+      "members": 31,
+      "role": "Prior source-rule mapping evidence retained"
+    },
+    {
+      "prefix": "repo/research",
+      "members": 250,
+      "role": "Frozen Git code/specs/evidence: use fixed checkout for this wrapper"
+    },
+    {
+      "prefix": "runs/M0311",
+      "members": 32,
+      "role": "Original18 result files and QA/receipts; wrapper regenerates results and checks public expected hashes"
+    },
+    {
+      "prefix": "runs/batch009",
+      "members": 150,
+      "role": "Five original14-file result sets plus validation/receipts; wrapper regenerates result sets"
+    },
+    {
+      "prefix": "shared/snapshot",
+      "members": 80,
+      "role": "Original capture and request evidence: wrapper requires manifest+39 source objects+canonical only"
+    },
+    {
+      "prefix": "shared/sources",
+      "members": 16,
+      "role": "14 pinned inputs plus retained GPL/Apache license files; user provides lawful local copy"
+    }
+  ],
+  "copied_private_members": 0,
+  "library_backup_verified": false
+}
