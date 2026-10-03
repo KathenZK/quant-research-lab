@@ -1,0 +1,97 @@
+{
+  "id": "M0296",
+  "bytes": 1809,
+  "sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+  "python_ast_sha256": "aee95c04c3cf3630e2bc32ddd7704b22a10cb416c6a084c51239abc7b0beeae4",
+  "ast_schema": "CPython3.12 ast.dump(include_attributes=False); includes literal docstrings; excludes comments/location",
+  "methods": [
+    {
+      "class": "SMACrossover",
+      "method": "slow_sma",
+      "lines": [
+        14,
+        15
+      ],
+      "ast_sha256": "d4ce49f0b4f975aa78246c8bad866f1c6fc6af469ef27e414411da685149c019"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "fast_sma",
+      "lines": [
+        18,
+        19
+      ],
+      "ast_sha256": "dfe0f7e95994907dbb01c4677c37d5f0bd08c0d38cfeec2b17abb0830aeaf553"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "should_long",
+      "lines": [
+        21,
+        24
+      ],
+      "ast_sha256": "a9886e8fcaa582c3b5178b5ac90992b8440ff5ebd14b04be852a5100af9c5d17"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "should_short",
+      "lines": [
+        26,
+        29
+      ],
+      "ast_sha256": "6886cde601e2b917aa342721552f2dc9cbf33435924cdf1e7bcdd114599400bc"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "should_cancel_entry",
+      "lines": [
+        31,
+        32
+      ],
+      "ast_sha256": "711cdaf50564e48d3bd385f9c778fda5201fea975ef2a8e2cb454a84572316d3"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "go_long",
+      "lines": [
+        34,
+        38
+      ],
+      "ast_sha256": "a0c042a425fcbe404d20140bceb585fd279824cbc49aa32c660eb25f8af541be"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "go_short",
+      "lines": [
+        40,
+        44
+      ],
+      "ast_sha256": "25a31998edc24e5c3485593963477b0843f5e4a08d6f007b1078190716e39d7d"
+    },
+    {
+      "class": "SMACrossover",
+      "method": "update_position",
+      "lines": [
+        46,
+        52
+      ],
+      "ast_sha256": "7d2ffe9d7e01179788db6b6974ebcd2827eba0fee183a35edc28536ef3d778e8"
+    }
+  ],
+  "called_function_names": [
+    "self.liquidate",
+    "ta.sma",
+    "utils.size_to_qty"
+  ],
+  "defined_methods": [
+    "slow_sma",
+    "fast_sma",
+    "should_long",
+    "should_short",
+    "should_cancel_entry",
+    "go_long",
+    "go_short",
+    "update_position"
+  ],
+  "meaning": "Text and AST identity only; different hashes do not prove semantic distinctness, equal abstract rule keywords do not prove duplicates."
+}

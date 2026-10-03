@@ -1,0 +1,47 @@
+{
+  "family": "PUBLIC-M0314-TURTLE-S1-CALLBACK-DEPENDENT",
+  "timeframe": null,
+  "timeframe_evidence": "comments say days; module consumes route candles; no day/4h route enforced",
+  "native_4h_confirmed": false,
+  "directions": [
+    "long",
+    "short"
+  ],
+  "before_each_bar": {
+    "unit_risk_percent": 1,
+    "entry_dc_period": 20,
+    "exit_dc_period": 10,
+    "atr_period": 20,
+    "atr_multiplier": 2,
+    "maximum_pyramiding_levels": 4,
+    "pyramiding_threshold": 0.5,
+    "system_type": "S1"
+  },
+  "entry": "high>=current-inclusive Donchian20.upper => long; elif low<=Donchian20.lower => short",
+  "exit": "exit_signal: high>=Donchian10.upper => exit_short; elif low<=Donchian10.lower => exit_long; liquidate on opposite entry or direction-matching exit",
+  "sizing": "qty=(balance*0.01)/(ATR20*dollars_per_point), default multiplier1; no fee haircut/notional cap",
+  "nominal_initial_stop_risk_fraction": 0.02,
+  "pyramiding": "strict price movement >0.5*current ATR from last_opened_price, current_pyramiding_levels<4; counters mix submission and on_increased_position callback",
+  "skip_profit": "flag set only in source on_take_profit; S1_filter consumes/reset once; modern inspected dispatch does not invoke legacy take-profit/stop-loss hooks",
+  "unknowns": [
+    "原作者Jesse版本、其依赖/平台/配置/路由未提供",
+    "实际交易所、具体标的、市场类型、合约乘数、费用/滑点/资金费及借币成本未冻结",
+    "挂单/部分成交/精度/最小下单量、时钟与撮合版本未冻结",
+    "没有真实行情、历史收益或净值/交易记录；不得以合成PASS宣称策略有效或严格复现",
+    "原作者legacy callback reachability未知；现代所核dispatch不支持上述旧hook",
+    "盈利后跳过是下一次过滤器调用而非完整虚拟突破交易；不得补成经典海龟规则",
+    "最初1%是每1ATR金额单位；2ATR初始名义风险2%，非完整组合最大亏损1%",
+    "S2仅注释，无before可持续配置S2/55代码路径；不改周期/模式",
+    "挂单失败、过滤拒绝、停损回调缺失与partial fill可能使层数偏离成交单位；ATR变化可能放宽止损"
+  ],
+  "schema": "source-rule-specification/v1",
+  "id": "M0314",
+  "source_commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+  "source_sha256": "35e4c3cd69010ca81402277693cb6f7deaf52a284153f20f25d4cf605701408a",
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "original_runtime": "UNKNOWN",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "semantic_spec_canonical_sha256": "ec34262891015fd73327bf289f191a994f9c0c533c85c4b100540fee2a81ebe6"
+}

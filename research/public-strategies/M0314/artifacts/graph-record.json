@@ -1,0 +1,115 @@
+{
+  "schema": "public-catalog-graph-source-rule-audit/v1",
+  "id": "M0314",
+  "name": "TurtleRules",
+  "status": "source_rule_dedup_audit_only",
+  "reason": "来源与规则审计完成；无历史执行授权，原runtime与执行依赖未冻结",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0314-TURTLE-S1-CALLBACK-DEPENDENT"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AND_MIT_VERIFIED",
+    "source_rule_attribution_status": "SOURCE_VERIFIED_WITH_EXPLICIT_REFERENCE_API_LIMITS",
+    "independent_validation": "25_STATIC_DECIMAL_CHECKS_PASS; not native engine validation",
+    "causality_validation": "LOCAL_FORMULA_AND_INDEX_FIXTURES_ONLY; original runtime not established",
+    "data_quality_status": "NOT_APPLICABLE_NO_MARKET_INPUT",
+    "trusted_input": false,
+    "strict_replication": false,
+    "strict_reproductions": 0,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "source": {
+    "repository": "jesse-ai/example-strategies",
+    "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+    "path": "TurtleRules/__init__.py",
+    "url": "https://github.com/jesse-ai/example-strategies/blob/7c91e0a37bf62165790120d730442e4f6eb00364/TurtleRules/__init__.py",
+    "sha256": "35e4c3cd69010ca81402277693cb6f7deaf52a284153f20f25d4cf605701408a",
+    "bytes": 8142,
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d",
+    "original_source_publicly_copied": false
+  },
+  "fingerprints": {
+    "source_sha256": "35e4c3cd69010ca81402277693cb6f7deaf52a284153f20f25d4cf605701408a",
+    "python_ast_sha256": "c988eb8480c1e69fb2b3dc6c01feb4e82e2f002f5d72a280b67712488b3bc7c5",
+    "semantic_spec_canonical_sha256": "ec34262891015fd73327bf289f191a994f9c0c533c85c4b100540fee2a81ebe6",
+    "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "catalog_original_row_sha256": "9dc86d877af7fde409b8574f4f0a5ea2fcc6886f910f067218695e33cdd07b6e"
+  },
+  "relationships": [
+    {
+      "target_id": "M0179",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog为1h入10/出30/ATR15且账户停机规则；不同参数及控制"
+    },
+    {
+      "target_id": "M0232",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "固定Lab来源审计明确N1/N2/ATR与完整代码未知，不能默认20/10或确认为同源"
+    },
+    {
+      "target_id": "M0354",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog含S1/S2与2%单位风险；本源before固定S1且1%/ATR sizing"
+    },
+    {
+      "target_id": "M0691",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "medium",
+      "basis": "catalog为OKX现货日线，通道长度未给；不能推定为20/10相同实现"
+    },
+    {
+      "target_id": "M1391",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog双通道20/20、offset20、close cross与10exit；不是当前high/low inclusive分支"
+    },
+    {
+      "target_id": "M1938",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "medium",
+      "basis": "20/10/ATR20×2/1%文字最接近，但挂突破stop入与本源信号后self.price下单、1%/ATR与真实止损风险、pyramid/skip/callback需完整另一源才能确认；本轮未取其完整实现"
+    },
+    {
+      "target_id": "M2485",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog含快20/10+慢55/20、前棒通道与pyramiding5；本源S1 current-inclusive且层数4"
+    },
+    {
+      "target_id": "M2599",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog五ETF仅多、风险仓位与等权上限取小；本源多空、无名义上限"
+    },
+    {
+      "target_id": "M2704",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "catalog默认仅多、close比前棒通道并ATR追踪；本源high/low当前通道与特殊callback"
+    },
+    {
+      "target_id": "M0270",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "同Jesse库catalog写前一根Donchian收盘cross+SMA200仅多，非本源high/low优先分支+加仓"
+    }
+  ],
+  "implementations": [],
+  "related_results": [],
+  "synthetic_case_count": 20,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "private_detail_present_in_public": false,
+  "metrics": null,
+  "metrics_reason": "NOT_RUN; not zero return",
+  "graph_upload_status": "NOT_ATTEMPTED_BY_THIS_WORKER"
+}

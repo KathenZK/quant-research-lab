@@ -1,0 +1,118 @@
+{
+  "id": "M0299",
+  "bytes": 1683,
+  "sha256": "746cc0f8644a7fae12089f597448b573d4d482a3855c870d18b4a7bfeb0a5255",
+  "python_ast_sha256": "6b5287d29a51ea7ac3689f339324aa8878701f12f5574fe3df29931efad2852c",
+  "ast_schema": "CPython3.12 ast.dump(include_attributes=False); includes literal docstrings; excludes comments/location",
+  "methods": [
+    {
+      "class": "SimpleBollinger",
+      "method": "bb",
+      "lines": [
+        18,
+        20
+      ],
+      "ast_sha256": "faa125ae657c744abd7e7876828442621913695b454a2712729e38030e302453"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "ichimoku",
+      "lines": [
+        23,
+        24
+      ],
+      "ast_sha256": "7b80c7c7e4b7950210e48b3e0c34de110bd791826b2be227044fd28e1318e9ce"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "filter_trend",
+      "lines": [
+        26,
+        28
+      ],
+      "ast_sha256": "ccbdda10316c3574ef9099fe81f53edae89f86a6557ea6e6c006cd6a9528bc1d"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "filters",
+      "lines": [
+        30,
+        31
+      ],
+      "ast_sha256": "dd5cf5aa7dd228250ab17061605cb127c269c55e492afa5a5dc609f2ce1ee4f8"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "should_long",
+      "lines": [
+        33,
+        35
+      ],
+      "ast_sha256": "0fec033045d478e9f94f823cd938cdc267d05ee1871c6117dcff262969b317e4"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "should_short",
+      "lines": [
+        37,
+        38
+      ],
+      "ast_sha256": "81c70cc4e5ac643b3cbc98817fd1c364c4c093927cbf4b969b6e1f68cc6f4063"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "should_cancel_entry",
+      "lines": [
+        40,
+        41
+      ],
+      "ast_sha256": "56843ec4278d95e03d0b813dad8fb8fc8d94c49ca654e8704ebb88a0c7f88dc8"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "go_long",
+      "lines": [
+        43,
+        46
+      ],
+      "ast_sha256": "a0c042a425fcbe404d20140bceb585fd279824cbc49aa32c660eb25f8af541be"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "go_short",
+      "lines": [
+        48,
+        49
+      ],
+      "ast_sha256": "861280c781a875e248dc2e8dcf01185be088387c145f8a3e272396796e5c7eed"
+    },
+    {
+      "class": "SimpleBollinger",
+      "method": "update_position",
+      "lines": [
+        51,
+        54
+      ],
+      "ast_sha256": "6034d753176e764b34d29560eabb42c269c93fd100252f12aae9b8d6871db8a4"
+    }
+  ],
+  "called_function_names": [
+    "self.liquidate",
+    "ta.bollinger_bands",
+    "ta.ichimoku_cloud",
+    "utils.size_to_qty"
+  ],
+  "defined_methods": [
+    "bb",
+    "ichimoku",
+    "filter_trend",
+    "filters",
+    "should_long",
+    "should_short",
+    "should_cancel_entry",
+    "go_long",
+    "go_short",
+    "update_position"
+  ],
+  "meaning": "Text and AST identity only; different hashes do not prove semantic distinctness, equal abstract rule keywords do not prove duplicates."
+}

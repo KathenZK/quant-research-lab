@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0296,SMACrossover,加密现货,SMA50>SMA200 做多，SMA50<SMA200 做空；反向交叉平仓。,jesse-ai/example-strategies,SMACrossover,https://github.com/jesse-ai/example-strategies/blob/master/SMACrossover/__init__.py,__init__.py,高,https://www.tradingview.com/script/fS2fhQ5k-Bitcoin-15-min-crossover-SMA-Strategy-Script/,未知

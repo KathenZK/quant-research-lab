@@ -1,0 +1,117 @@
+{
+  "schema": "catalog-readonly-dedup-review/v1",
+  "id": "M0299",
+  "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+  "rows_scanned": 6973,
+  "exact_source_url_matches": [
+    "M0299"
+  ],
+  "exact_name_matches": [
+    "M0299"
+  ],
+  "exact_rule_text_matches": [
+    "M0299"
+  ],
+  "candidate_regex": "SimpleBollinger|一目.*布林|一目.*BB|Bollinger.*Ichimoku|BB.*一目",
+  "regex_match_ids": [
+    "M0299",
+    "M1394",
+    "M2339",
+    "M3115",
+    "M3367"
+  ],
+  "regex_match_count": 5,
+  "manually_compared": [
+    {
+      "target_id": "M2339",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "虽一目9/26/52及BB20/2相近，catalog写close源、下轨cross、TK/迟行条件与多空；此处hl2上轨state、仅多、中轨退",
+      "target_catalog_row": {
+        "data_row_ordinal": 2339,
+        "csv_record_including_header": 2340,
+        "physical_line_start": 2340,
+        "physical_line_end": 2340
+      },
+      "target_original_11": {
+        "id": "M2339",
+        "名称": "一目+布林：TK/迟行/云上且下轨上穿收盘开多；对称开空；反向平仓",
+        "市场": "加密/美股通用",
+        "规则": "本条只写该TradingView脚本页已印出的规则。Tenkan9；Kijun26；Senkou B52；位移26。BB Length20 StdDev2.0源close。bullish=tk多头且cs多头且价在云上且crossover(lower,close)；bearish对称用crossover(close,lower)。Long/Short Entry默认true。无额外%止损input。不是纯一目：本条为一目条件且BB下轨上穿收盘开多/对称开空。计入加密。提出日期按源文件原样保留Sep 7, 2022。",
+        "作者或机构": "Coinrule",
+        "标题": "一目+布林：TK/迟行/云上且下轨上穿收盘开多；对称开空；反向平仓",
+        "source_url": "https://www.tradingview.com/script/gV8mo1Vj/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "Sep 7, 2022"
+      },
+      "target_original_row_sha256": "3eb0654afd85a66380a1e5b0637ec0072e44b2ae713a4ecd4b7767ba626e66c4",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M1394",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "另一catalog为一目18/52/104/52双向云突破，未见BB上轨门；非同一参数/退出核",
+      "target_catalog_row": {
+        "data_row_ordinal": 1394,
+        "csv_record_including_header": 1395,
+        "physical_line_start": 1395,
+        "physical_line_end": 1395
+      },
+      "target_original_11": {
+        "id": "M1394",
+        "名称": "加密一目突破：转换18基准52先行B104位移52；收盘上穿云上沿开多、下穿云下沿开空",
+        "市场": "加密",
+        "规则": "本条只写该TradingView脚本页已印出的规则。Tenkan默认18、Kijun默认52、Senkou B默认104、Senkou A/Displace默认52、Span Offset默认52。Long_Breakout：云顶为SpanA时收盘上穿SpanAA，或云顶为SpanB时上穿SpanBB；Short_Breakout对称下穿。strategy.entry long/short。不是M0685经典9/26/52，也不是M1088 TK20/60+EMA200，也不是M1095 Tenkan20/Kijun50：本条转换18基准52先行B104位移52，收盘上穿云上沿开多、下穿云下沿开空。计入加密。提出日期按源文件原样保留Feb 26, 2018。",
+        "作者或机构": "nathanhoffer",
+        "标题": "加密一目突破：转换18基准52先行B104位移52；收盘上穿云上沿开多、下穿云下沿开空",
+        "source_url": "https://www.tradingview.com/script/DbsCZWxj-Ichimoku-Crypto-Breakout/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "Feb 26, 2018"
+      },
+      "target_original_row_sha256": "da491df01cfb91c93f273a62ccd05f218572efbd7dc0bac4c44810b4dbd5c2fc",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0316",
+      "relation": "DISTINCT_VERIFIED_DEFINITION",
+      "confidence": "high",
+      "evidence_level": "fixed_lab_definition_and_catalog",
+      "reason_zh": "已核Lab规格是RSI10+EMA5/10同步cross+ADX25；其命名hl2实际(open+close)/2，不是本源Jesse hl2",
+      "target_catalog_row": {
+        "data_row_ordinal": 316,
+        "csv_record_including_header": 317,
+        "physical_line_start": 317,
+        "physical_line_end": 317
+      },
+      "target_original_11": {
+        "id": "M0316",
+        "名称": "hlhb",
+        "市场": "加密现货",
+        "规则": "4h；hl2 的 RSI(10) 上穿 50 且 EMA5 上穿 EMA10 且 ADX>25 做多；RSI 下穿 50 且 EMA5 下穿 EMA10 且 ADX>25 平多；止损 -32.11%。",
+        "作者或机构": "freqtrade/freqtrade-strategies",
+        "标题": "hlhb",
+        "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/hlhb.py",
+        "页码或文件": "hlhb.py",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "e52ff964798bed8259fb0761fe4bbda730faac33748702f7f0342ef31cde0a38",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    }
+  ],
+  "four_batch_pairwise": "Four source SHA/AST fingerprints all distinct; SMA state, BB+cloud, RSI cross and Turtle channel+callbacks have different indicator and decision cores",
+  "decision": "PRESERVE_ID_NO_AUTOMATIC_MERGE",
+  "exact_duplicates_confirmed": [],
+  "limit": "No exhaustive semantic/translated/copied-source equivalence proof across 6973. Relatedness is based on the stated evidence only, not correlated returns; omitted candidates not individually audited."
+}

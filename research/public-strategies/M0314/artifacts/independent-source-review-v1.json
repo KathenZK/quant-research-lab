@@ -1,0 +1,169 @@
+{
+  "schema": "batch005-independent-static-rule-review/v1",
+  "checks": [
+    {
+      "check": "M0296 source SHA",
+      "pass": true
+    },
+    {
+      "check": "M0296 exact source URL unique in 6973 catalog",
+      "pass": true
+    },
+    {
+      "check": "M0296 stable catalog row",
+      "pass": true,
+      "csv_line_including_header": 297,
+      "original_11_fields": [
+        "M0296",
+        "SMACrossover",
+        "加密现货",
+        "SMA50>SMA200 做多，SMA50<SMA200 做空；反向交叉平仓。",
+        "jesse-ai/example-strategies",
+        "SMACrossover",
+        "https://github.com/jesse-ai/example-strategies/blob/master/SMACrossover/__init__.py",
+        "__init__.py",
+        "高",
+        "https://www.tradingview.com/script/fS2fhQ5k-Bitcoin-15-min-crossover-SMA-Strategy-Script/",
+        "未知"
+      ]
+    },
+    {
+      "check": "M0299 source SHA",
+      "pass": true
+    },
+    {
+      "check": "M0299 exact source URL unique in 6973 catalog",
+      "pass": true
+    },
+    {
+      "check": "M0299 stable catalog row",
+      "pass": true,
+      "csv_line_including_header": 300,
+      "original_11_fields": [
+        "M0299",
+        "SimpleBollinger",
+        "加密现货",
+        "注释周期 1h；收盘>BB(hl2 默认参数)上轨且高于一目云做多；收盘<中轨平仓。",
+        "gabrielweich / jesse-ai/example-strategies",
+        "SimpleBollinger",
+        "https://github.com/jesse-ai/example-strategies/blob/master/SimpleBollinger/__init__.py",
+        "__init__.py",
+        "高",
+        "",
+        "未知"
+      ]
+    },
+    {
+      "check": "M0312 source SHA",
+      "pass": true
+    },
+    {
+      "check": "M0312 exact source URL unique in 6973 catalog",
+      "pass": true
+    },
+    {
+      "check": "M0312 stable catalog row",
+      "pass": true,
+      "csv_line_including_header": 313,
+      "original_11_fields": [
+        "M0312",
+        "TradingView_RSI",
+        "加密现货",
+        "RSI 上穿 35 做多；默认 RSI 周期 5，止损价×0.95，止盈价×1.10；RSI 下穿默认 75 或下穿 10 平仓。",
+        "jesse-ai/example-strategies",
+        "TradingView_RSI",
+        "https://github.com/jesse-ai/example-strategies/blob/master/TradingView_RSI/__init__.py",
+        "__init__.py",
+        "高",
+        "",
+        "未知"
+      ]
+    },
+    {
+      "check": "M0314 source SHA",
+      "pass": true
+    },
+    {
+      "check": "M0314 exact source URL unique in 6973 catalog",
+      "pass": true
+    },
+    {
+      "check": "M0314 stable catalog row",
+      "pass": true,
+      "csv_line_including_header": 315,
+      "original_11_fields": [
+        "M0314",
+        "TurtleRules",
+        "加密现货",
+        "海龟 S1：20 日 Donchian 突破入场、10 日通道出场；ATR(20)×2 止损；单位风险 1%；加仓间隔 0.5 ATR，最多 4 层；上一笔盈利则跳过下一次 S1 入场。",
+        "jesse-ai/example-strategies",
+        "TurtleRules",
+        "https://github.com/jesse-ai/example-strategies/blob/master/TurtleRules/__init__.py",
+        "__init__.py",
+        "高",
+        "",
+        "未知"
+      ]
+    },
+    {
+      "check": "M0296 state greater-than, not cross-event",
+      "pass": true
+    },
+    {
+      "check": "M0299 1h is docstring, no route property",
+      "pass": true
+    },
+    {
+      "check": "M0312 RSI5 stays outside declared10..30",
+      "pass": true
+    },
+    {
+      "check": "M0312 third positional3 in both entry paths",
+      "pass": true
+    },
+    {
+      "check": "reference API third argument precision",
+      "pass": true
+    },
+    {
+      "check": "strict margin gate 10",
+      "pass": true
+    },
+    {
+      "check": "strict margin gate 30",
+      "pass": true
+    },
+    {
+      "check": "Turtle before hardcodes S1/20/10",
+      "pass": true
+    },
+    {
+      "check": "Turtle entry_signal high-first branch",
+      "pass": true
+    },
+    {
+      "check": "Turtle exit_signal high-first branch",
+      "pass": true
+    },
+    {
+      "check": "Turtle 1% ATR position with2ATR stop implies 2% nominal risk",
+      "pass": true
+    },
+    {
+      "check": "reference dispatch has no old take-profit/stop-loss callback",
+      "pass": true
+    },
+    {
+      "check": "reference liquidate assigns TP/SL but is not old callback proof",
+      "pass": true
+    }
+  ],
+  "check_count": 25,
+  "external_source_code_executed": false,
+  "synthetic_cases": "2 Decimal margin gates and1 risk arithmetic; no historical inputs",
+  "history_runs": 0,
+  "market_requests": 0,
+  "dedup_limit": "Exact URL uniqueness across6973; not exhaustive semantic or source-AST duplicate proof",
+  "reference_api_SHA256": "d2a01f1e366d02f63fa39fd11fcad9adefa22da9ee6da5cf5aca1ec77ca76474",
+  "reference_runtime_limit": "Fixed reviewed source only; not original author runtime. Current wrapper Rust internals and parameter validation are not established by these checks."
+}

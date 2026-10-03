@@ -1,0 +1,225 @@
+{
+  "schema": "per-id-source-rule-synthetic-report/v1",
+  "id": "M0296",
+  "shared_batch_cli": "../M0296/scripts/audit_batch.py",
+  "synthetic_case_count": 8,
+  "cases": [
+    {
+      "id": "M0296",
+      "case": "strict_long_relation",
+      "observed": true,
+      "expected": true,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "strict_short_relation",
+      "observed": true,
+      "expected": true,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "equality_neither_direction",
+      "observed": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "unchanged_above_still_eligible_flat",
+      "observed": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "sma50_200_decimal_oracle",
+      "observed": [
+        176.5,
+        101.5
+      ],
+      "expected": [
+        176.5,
+        101.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "reverse_state_exit_long_and_short",
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "undefined_sma_no_entry",
+      "observed": false,
+      "expected": false,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0296",
+      "case": "fee_and_floor_budget",
+      "observed": 99.7,
+      "expected": 99.7,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    }
+  ],
+  "batch_static_checks": [
+    {
+      "check": "M0296_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "sma_signal_has_no_crossed_call",
+      "pass": true
+    },
+    {
+      "check": "sma_fast50_slow200",
+      "pass": true
+    },
+    {
+      "check": "M0299_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "bb_hl2_and_default_cloud",
+      "pass": true
+    },
+    {
+      "check": "bb_cancel_true",
+      "pass": true
+    },
+    {
+      "check": "M0312_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "rsi_default5_outside10_30",
+      "pass": true
+    },
+    {
+      "check": "rsi_third_positional_literal3",
+      "pass": true
+    },
+    {
+      "check": "rsi_strict_margin_gt",
+      "pass": true
+    },
+    {
+      "check": "M0314_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "turtle_no_direct_take_profit_assignment",
+      "pass": true
+    },
+    {
+      "check": "turtle_legacy_callbacks_defined",
+      "pass": true
+    },
+    {
+      "check": "turtle_forced_s1_before",
+      "pass": true
+    },
+    {
+      "check": "turtle_entry_priority_high_first",
+      "pass": true
+    },
+    {
+      "check": "turtle_exit_priority_high_first",
+      "pass": true
+    },
+    {
+      "check": "reference_size_arg3_precision",
+      "pass": true
+    },
+    {
+      "check": "reference_fee_buffer_x3",
+      "pass": true
+    },
+    {
+      "check": "reference_init_injects_default_literal",
+      "pass": true
+    },
+    {
+      "check": "reference_liquidate_positive_sets_takeprofit",
+      "pass": true
+    },
+    {
+      "check": "reference_updated_dispatch_has_no_legacy_callbacks",
+      "pass": true
+    },
+    {
+      "check": "reference_close_calls_new_callback",
+      "pass": true
+    },
+    {
+      "check": "reference_spot_rejects_short",
+      "pass": true
+    },
+    {
+      "check": "reference_spot_rejects_brackets_in_go_long",
+      "pass": true
+    },
+    {
+      "check": "reference_filters_after_go_long",
+      "pass": true
+    },
+    {
+      "check": "reference_reset_not_turtle_custom_fields",
+      "pass": true
+    },
+    {
+      "check": "reference_cloud_python_80_guard",
+      "pass": true
+    },
+    {
+      "check": "reference_cloud_rust_displacement_minus1",
+      "pass": true
+    },
+    {
+      "check": "reference_rust_dependency_pin",
+      "pass": true
+    },
+    {
+      "check": "reference_rust_cargo_version",
+      "pass": true
+    }
+  ],
+  "batch_static_check_count": 30,
+  "pass": true,
+  "native_engine_runs": 0,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "third_party_code_executed": false,
+  "limitation": "Self-authored mathematical/branch fixtures. Not native indicator equality, an original-runtime reproduction, or full execution-engine validation."
+}

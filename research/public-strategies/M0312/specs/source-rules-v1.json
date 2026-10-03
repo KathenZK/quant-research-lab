@@ -1,0 +1,67 @@
+{
+  "family": "PUBLIC-M0312-RSI-CROSS35-75-10",
+  "timeframe": null,
+  "native_4h_confirmed": false,
+  "directions": [
+    "long"
+  ],
+  "hyperparameters": [
+    {
+      "name": "rsi",
+      "type": "int",
+      "min": 10,
+      "max": 30,
+      "default": 5
+    },
+    {
+      "name": "stop_loss",
+      "type": "float",
+      "min": 0.5,
+      "max": 0.99,
+      "default": 0.95
+    },
+    {
+      "name": "take_profit",
+      "type": "float",
+      "min": 1.1,
+      "max": 1.2,
+      "default": 1.1
+    },
+    {
+      "name": "xparam",
+      "type": "int",
+      "min": 60,
+      "max": 90,
+      "default": 75
+    }
+  ],
+  "entry": "crossed(RSI,35,above) AND qty>0 AND available_margin>qty*price; returns None otherwise",
+  "exit": "crossed(RSI,xparam=75,below) OR crossed(RSI,10,below)",
+  "risk": {
+    "stop_price_multiplier": 0.95,
+    "take_profit_price_multiplier": 1.1,
+    "anchor": "self.price at order submission; not necessarily filled average entry"
+  },
+  "sizing": "size_to_qty(balance,price,3,fee_rate=fee_rate); third positional is precision in reference API",
+  "entry_cancel": false,
+  "reference_default_validation": "reviewed _prepare_routes->_init_objects directly injects default5; no clipping/range check along this ordinary route; optimize int samples10..30",
+  "unknowns": [
+    "原作者Jesse版本、其依赖/平台/配置/路由未提供",
+    "实际交易所、具体标的、市场类型、合约乘数、费用/滑点/资金费及借币成本未冻结",
+    "挂单/部分成交/精度/最小下单量、时钟与撮合版本未冻结",
+    "没有真实行情、历史收益或净值/交易记录；不得以合成PASS宣称策略有效或严格复现",
+    "默认RSI5越界是原源码事实；保留5，不改10，不声称所有历史版本都会拒绝或放行",
+    "参考引擎spot禁止go_long中预设SL/TP；不能直接认作现货可运行",
+    "同根双触以参考短周期阴阳路径排序为模型；原运行与真实盘中路径未知"
+  ],
+  "schema": "source-rule-specification/v1",
+  "id": "M0312",
+  "source_commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+  "source_sha256": "86a0532e427cfe3b4f3ff9fa94c7d007ffb544c96db7fa20613b7ebf724d2769",
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "original_runtime": "UNKNOWN",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "semantic_spec_canonical_sha256": "e50c787d3ff141f96287e9fb8c9261b2b3542df593df22ecff139efd86419016"
+}

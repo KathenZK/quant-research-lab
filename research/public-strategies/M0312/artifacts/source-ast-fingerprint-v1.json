@@ -1,0 +1,128 @@
+{
+  "id": "M0312",
+  "bytes": 1764,
+  "sha256": "86a0532e427cfe3b4f3ff9fa94c7d007ffb544c96db7fa20613b7ebf724d2769",
+  "python_ast_sha256": "1476d2b287d67f72ab460d7f70d1882cc632ee35b548524066dcc3ebdb1fc336",
+  "ast_schema": "CPython3.12 ast.dump(include_attributes=False); includes literal docstrings; excludes comments/location",
+  "methods": [
+    {
+      "class": "TradingView_RSI",
+      "method": "hyperparameters",
+      "lines": [
+        16,
+        22
+      ],
+      "ast_sha256": "01931511b708102d867b28add479fbe40fe6d8ad50d8ad24ca882ab9f8126aa5"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "rsi",
+      "lines": [
+        25,
+        26
+      ],
+      "ast_sha256": "b8709bb6a24e7c20e8cbcbab693b8d325b6f251004249df78b7f1f25b49a4949"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "should_long",
+      "lines": [
+        29,
+        33
+      ],
+      "ast_sha256": "19d5d99f912c71ba5ee0dfec60eacb0b0577878e50635611584452c75015fbf9"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "should_short",
+      "lines": [
+        35,
+        36
+      ],
+      "ast_sha256": "b58e22c64514cbaf2c6b3184f4f845ef8ba4345ca94bac0b349df511e35b7501"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "should_cancel_entry",
+      "lines": [
+        38,
+        39
+      ],
+      "ast_sha256": "1df46eeb02c30fc2e9507780fc9f0f5815df934b95e63c4958b0febdec1d2aee"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "go_long",
+      "lines": [
+        42,
+        46
+      ],
+      "ast_sha256": "59d0812945fc91333a8c58f7658428e49134d9db6f295938eb49b8556c6ddfa9"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "go_short",
+      "lines": [
+        48,
+        49
+      ],
+      "ast_sha256": "861280c781a875e248dc2e8dcf01185be088387c145f8a3e272396796e5c7eed"
+    },
+    {
+      "class": "TradingView_RSI",
+      "method": "update_position",
+      "lines": [
+        51,
+        53
+      ],
+      "ast_sha256": "f19def631ecc1ee32aa319c995d4e4aad0352cfa4c08f1e3b451219e7d20f11c"
+    }
+  ],
+  "called_function_names": [
+    "self.liquidate",
+    "ta.rsi",
+    "utils.crossed",
+    "utils.size_to_qty"
+  ],
+  "defined_methods": [
+    "hyperparameters",
+    "rsi",
+    "should_long",
+    "should_short",
+    "should_cancel_entry",
+    "go_long",
+    "go_short",
+    "update_position"
+  ],
+  "hyperparameters": [
+    {
+      "name": "rsi",
+      "type": "int",
+      "min": 10,
+      "max": 30,
+      "default": 5
+    },
+    {
+      "name": "stop_loss",
+      "type": "float",
+      "min": 0.5,
+      "max": 0.99,
+      "default": 0.95
+    },
+    {
+      "name": "take_profit",
+      "type": "float",
+      "min": 1.1,
+      "max": 1.2,
+      "default": 1.1
+    },
+    {
+      "name": "xparam",
+      "type": "int",
+      "min": 60,
+      "max": 90,
+      "default": 75
+    }
+  ],
+  "meaning": "Text and AST identity only; different hashes do not prove semantic distinctness, equal abstract rule keywords do not prove duplicates."
+}

@@ -1,0 +1,161 @@
+{
+  "schema": "catalog-readonly-dedup-review/v1",
+  "id": "M0312",
+  "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+  "rows_scanned": 6973,
+  "exact_source_url_matches": [
+    "M0312"
+  ],
+  "exact_name_matches": [
+    "M0312"
+  ],
+  "exact_rule_text_matches": [
+    "M0312"
+  ],
+  "candidate_regex": "RSI.*(上穿|cross).*35|TradingView_RSI|RSI-Trend-Crypto",
+  "regex_match_ids": [
+    "M0312",
+    "M0322",
+    "M0588",
+    "M0685",
+    "M0807",
+    "M0865",
+    "M1288",
+    "M1405",
+    "M1467",
+    "M2174",
+    "M2259",
+    "M2340",
+    "M2392",
+    "M2515",
+    "M2705",
+    "M2739",
+    "M2785",
+    "M2927",
+    "M2932",
+    "M3429"
+  ],
+  "regex_match_count": 20,
+  "manually_compared": [
+    {
+      "target_id": "M0322",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "另一catalog RSI14上穿35叠加SuperTrend、65空、1.5%/1%风控；此处RSI5/75/10/5%/10%",
+      "target_catalog_row": {
+        "data_row_ordinal": 322,
+        "csv_record_including_header": 323,
+        "physical_line_start": 323,
+        "physical_line_end": 323
+      },
+      "target_original_11": {
+        "id": "M0322",
+        "名称": "FMZ RSI穿越35/65并经SuperTrend过滤（TRX合约）",
+        "市场": "加密货币",
+        "规则": "作者或机构：发明者量化 FMZ。标题：RSI与SuperTrend过滤策略组合系统：趋势确认下的动量反转交易框架。章节：页面策略原理与Pine默认参数。规则：回测头为币安合约TRX_USD，周期1日。RSI(14)上穿35且SuperTrend方向为多（收盘相对ATR下轨，ATR周期10、倍数3.0）做多；RSI下穿65且方向为空做空。止盈1.5%，止损1%。",
+        "作者或机构": "发明者量化 FMZ",
+        "标题": "RSI与SuperTrend过滤策略组合系统：趋势确认下的动量反转交易框架",
+        "source_url": "https://www.fmz.com/strategy/491514",
+        "页码或文件": "专文或README",
+        "可回测": "高",
+        "别名来源": "quant-cn-firms-20 C438（同核未另开）",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "7c2254b6462dd0b1858cf4aa43d7ae84423f72512e22c52d6dbe246c61de5faa",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0588",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "另一catalog XOM RSI14上穿35，50退出并做空65；此处仅多、RSI5、75/10退出",
+      "target_catalog_row": {
+        "data_row_ordinal": 588,
+        "csv_record_including_header": 589,
+        "physical_line_start": 589,
+        "physical_line_end": 589
+      },
+      "target_original_11": {
+        "id": "M0588",
+        "名称": "samples/kselrsi/ksignal.py",
+        "市场": "美股",
+        "规则": "默认Yahoo代码XOM。RSI(14)上穿35做多，RSI>50平多；RSI下穿65做空，RSI<50平空。",
+        "作者或机构": "Daniel Rodriguez / mementum/backtrader",
+        "标题": "samples/kselrsi/ksignal.py",
+        "source_url": "https://github.com/mementum/backtrader/blob/master/samples/kselrsi/ksignal.py",
+        "页码或文件": "samples/kselrsi/ksignal.py",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "d6511d561c96351ccacf07bdef2cf968329d07ce9330bd2aac7696dee62daf6a",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M2739",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "另一catalog 15m RSI14+BB下轨或TEMA支路，ROI/追踪完全不同；共享35不足去重",
+      "target_catalog_row": {
+        "data_row_ordinal": 2739,
+        "csv_record_including_header": 2740,
+        "physical_line_start": 2740,
+        "physical_line_end": 2740
+      },
+      "target_original_11": {
+        "id": "M2739",
+        "名称": "加密：Freqtrade社区BBRSIv2；15m，RSI上穿35且收盘<BB(20,2σ)下轨，或RSI<23且TEMA(9)在下轨上方拐头做多；RSI>70或创新高平多",
+        "市场": "加密（Freqtrade社区BBRSIv2；15m RSI上穿35且收盘<BB下轨或RSI<23+TEMA拐头做多；davidzr BBRSIv2）",
+        "规则": "本条只写davidzr仓 `strategies/BBRSIv2/BBRSIv2.py` 默认。timeframe=15m；stoploss=−0.99；minimal_roi={\"0\":0.3}；sell_profit_only=True，offset=0.01；use_custom_stoploss：利润>20%/10%/6%/3%时止损收至5%/3%/2%/1%。典型价 BB(20,2σ)；RSI(14)；TEMA(9)；60窗滚动高低。做多两支或：RB1=`rsi`上穿35且`close<bb_lower`；RB2=`rsi<23`且`tema<bb_lower`且`tema`上行。平多：`rsi>70` 或 `high>close_max(60)`。不是 W345/W356 单阈值核。提出日期未知。 不是W345/W356单阈值核：本条为Freqtrade社区BBRSIv2；15m，RSI上穿35且收盘<BB下轨或RSI<23且TEMA(9)在下轨上方拐头做多；RSI>70或创新高平多。 计入加密。 提出日期按源文件原样保留未知。",
+        "作者或机构": "davidzr / freqtrade-strategies社区仓（BBRSIv2.py；StrongManBR定制）",
+        "标题": "加密：Freqtrade社区BBRSIv2；15m，RSI上穿35且收盘<BB(20,2σ)下轨，或RSI<23且TEMA(9)在下轨上方拐头做多；RSI>70或创新高平多",
+        "source_url": "https://github.com/davidzr/freqtrade-strategies/blob/9623c1f3/strategies/BBRSIv2/BBRSIv2.py",
+        "页码或文件": "公开页/已印出规则",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "f205c7606d82bde1c23d7733b4cb615c8bd81b28d9bbe1ad0a1b836ebffa8c92",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0316",
+      "relation": "DISTINCT_VERIFIED_DEFINITION",
+      "confidence": "high",
+      "evidence_level": "fixed_lab_definition_and_catalog",
+      "reason_zh": "已核Lab规格RSI10与EMA同根交叉、50门槛和ADX；不同核心合取与风险规则",
+      "target_catalog_row": {
+        "data_row_ordinal": 316,
+        "csv_record_including_header": 317,
+        "physical_line_start": 317,
+        "physical_line_end": 317
+      },
+      "target_original_11": {
+        "id": "M0316",
+        "名称": "hlhb",
+        "市场": "加密现货",
+        "规则": "4h；hl2 的 RSI(10) 上穿 50 且 EMA5 上穿 EMA10 且 ADX>25 做多；RSI 下穿 50 且 EMA5 下穿 EMA10 且 ADX>25 平多；止损 -32.11%。",
+        "作者或机构": "freqtrade/freqtrade-strategies",
+        "标题": "hlhb",
+        "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/hlhb.py",
+        "页码或文件": "hlhb.py",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "e52ff964798bed8259fb0761fe4bbda730faac33748702f7f0342ef31cde0a38",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    }
+  ],
+  "four_batch_pairwise": "Four source SHA/AST fingerprints all distinct; SMA state, BB+cloud, RSI cross and Turtle channel+callbacks have different indicator and decision cores",
+  "decision": "PRESERVE_ID_NO_AUTOMATIC_MERGE",
+  "exact_duplicates_confirmed": [],
+  "limit": "No exhaustive semantic/translated/copied-source equivalence proof across 6973. Relatedness is based on the stated evidence only, not correlated returns; omitted candidates not individually audited."
+}
