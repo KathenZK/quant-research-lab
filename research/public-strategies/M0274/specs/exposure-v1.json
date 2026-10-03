@@ -1,0 +1,15 @@
+{
+  "current_run_benchmark_returns_seen": false,
+  "current_run_strategy_returns_seen": false,
+  "holdout_claim": false,
+  "id": "M0274",
+  "new_parameter_trials": 0,
+  "planned_scenarios": 6,
+  "prior_search_count": "UNKNOWN",
+  "prior_window_exposure": "KNOWN_REUSED_CATALOG_DIAGNOSTIC_WINDOW",
+  "recorded_at_utc": "2026-10-03T10:20:28.231068+00:00",
+  "source_comment_optimization_claims_seen_but_excluded": true,
+  "source_rule_seen": true,
+  "stage": "before feature audit and performance computation",
+  "will_run_scenarios_only_if_causality_gate_passes": true
+}

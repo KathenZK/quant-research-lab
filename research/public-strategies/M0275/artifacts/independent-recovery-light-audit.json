@@ -1,0 +1,16 @@
+{
+  "id": "M0275",
+  "status": "PASS_RECOVERY_AND_LIGHT_PROJECTION_REVIEW",
+  "recovered_output_files": 22,
+  "exact_byte_identical_files": 21,
+  "only_summary_difference": "peak_rss_kib",
+  "recovery_used_existing_independent_network_snapshot": true,
+  "new_network_capture": false,
+  "month_end_rows_including_initial": 25,
+  "calendar_year_rows": 10,
+  "manifest_and_graph_hashes_match": true,
+  "public_raw_candles_in_light_outputs": false,
+  "future_graph_deployment_verified": false,
+  "C3_remote_save": "NOT_RUN_BY_REVIEWER",
+  "at_utc": "2026-10-03T10:36:49.098784+00:00"
+}

@@ -451,6 +451,22 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/public-strategies/M0275/scripts/prepare_freeze.py",
+        "<module>", "explicit-spot-diagnostic-freeze-preparation",
+        "Reviewed one-time source/age and 75-object snapshot hash checks, pinned canonical input and exposure freeze; no portfolio returns, perpetual bundle fallback, TRUSTED claim or promotion. Existing frozen protocol is not regenerated.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0275/scripts/run_replay.py",
+        "load_input", "explicit-hash-pinned-spot-diagnostic",
+        "Exact 4572-row native spot input identity/hash and grid/OHLCV checks; declared DIAGNOSTIC_ONLY with halt/ROI execution proxies, no accepted perpetual data claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0275/scripts/audit_raw.py",
+        "<module>", "official-spot-archive-integrity-audit",
+        "Checks inherited official ZIP/CHECKSUM/CSV and canonical hashes for the declared spot diagnostic; no automatic admission or lake fallback.",
+    ),
+
+    AuxiliaryClassification(
         "research/public-strategies/M0286/scripts/run_replay.py",
         "load_input", "frozen-artifact-consumer",
         "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",

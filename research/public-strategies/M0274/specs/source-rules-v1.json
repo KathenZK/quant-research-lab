@@ -1,0 +1,45 @@
+{
+  "age_filter_days": 30,
+  "entry_expression": "trend_ichimoku_base < 0.06295",
+  "exit_expression": "numpy.isclose(trend_kst_diff, 0.8779, rtol=1e-5, atol=1e-8, equal_nan=False)",
+  "full_feature_call": "dropna(freqtrade_ohlcv_dataframe); add_all_ta_features(open=open,high=high,low=low,close=close,volume=volume,fillna=True)",
+  "id": "M0274",
+  "inactive_parameters": [
+    "buy-cross-0 volatility_kcc",
+    "buy-int-0 42",
+    "sell-cross-0 volume_mfi",
+    "sell-int-0 98"
+  ],
+  "original_author_optimization_profits": "EXCLUDED_NOT_OUR_RESULT",
+  "parameter_resolution": "literal buy_params and sell_params, no optimization, no overrides",
+  "source_attributes": {
+    "buy_params": {
+      "buy-cross-0": "volatility_kcc",
+      "buy-indicator-0": "trend_ichimoku_base",
+      "buy-int-0": 42,
+      "buy-oper-0": "<R",
+      "buy-real-0": 0.06295
+    },
+    "minimal_roi": {
+      "0": 0.3556,
+      "22372": 0,
+      "4818": 0.21275,
+      "6395": 0.09024
+    },
+    "sell_params": {
+      "sell-cross-0": "volume_mfi",
+      "sell-indicator-0": "trend_kst_diff",
+      "sell-int-0": 98,
+      "sell-oper-0": "=R",
+      "sell-real-0": 0.8779
+    },
+    "stoploss": -0.34549,
+    "timeframe": "12h",
+    "trailing_only_offset_is_reached": true,
+    "trailing_stop": true,
+    "trailing_stop_positive": 0.22673,
+    "trailing_stop_positive_offset": 0.2684
+  },
+  "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+  "source_startup_candle_count": "unspecified"
+}

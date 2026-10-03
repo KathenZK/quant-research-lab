@@ -1,0 +1,20 @@
+{
+  "gates": {
+    "calendar": "PASS_RETAINED_12H_GRID_WITH_KNOWN_PARTIAL_OUTAGE_BUCKET",
+    "coverage": "FAIL_INCOMPLETE_14_OF_25_MONTHS",
+    "finality": "UNKNOWN_STRICT_CURRENT_BUCKET_UNAVAILABLE",
+    "hashes": "PASS_RETAINED_OBJECTS_ONLY_NO_FULL_CANONICAL_HASH",
+    "identity": "PASS_FOR_SOURCE_AND_PREDECLARED_BTCUSDT_SPOT_NOT_PIT_UNIVERSE",
+    "integrity": "PASS_RETAINED_42_COMPLETE_OBJECTS_PLUS_ONE_CHECKSUM",
+    "license": "PERSONAL_NONCOMMERCIAL_RESEARCH_AUTHORIZED_NO_RAW_REDISTRIBUTION",
+    "provenance": "PASS_OFFICIAL_NATIVE12H_RETAINED_OBJECTS_ONLY",
+    "schema": "PASS_RETAINED_854_ROWS_ONLY"
+  },
+  "id": "M0274",
+  "lake_ingestion_performed": false,
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "reason_not_trusted_loader": "Bounded handoff explicitly allows isolated raw diagnostic snapshot. Existing lake catalog/full-market perp inputs are not available or substituted. Failure remains fail-closed; no normalized/trusted dataset registered.",
+  "registered_status": "UNACCEPTED",
+  "scope": "EXPLICIT_DIAGNOSTIC",
+  "trusted": false
+}

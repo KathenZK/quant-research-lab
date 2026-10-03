@@ -1,0 +1,12 @@
+{
+  "at_utc": "2026-10-03T10:39:30.039735+00:00",
+  "full_capture_full_features_backtest_exercised": false,
+  "guard_test_script_sha256": "f846db5b2adc492200ffddc3275be1b721c0662ed101156a551a81e27ba9927a",
+  "id": "M0274",
+  "network_requests_in_tests": 0,
+  "python_ast_syntax_files": 7,
+  "relative_document_links_verified": 33,
+  "scope": "Unit guards + retained data + deterministic blocker restoration only; not a full engine test",
+  "synthetic_guard_tests_passed": 16,
+  "test_log_sha256": "cfd0ec577364ef32bb0d6a6500b403393d314b34dec0ef3b0ea9b7bd544db531"
+}

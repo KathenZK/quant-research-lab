@@ -1,0 +1,170 @@
+{
+  "actual_strategy_backtests": 0,
+  "created_at_utc": "2026-10-03T10:40:09.600348+00:00",
+  "data_redistribution": "NO_RAW_DATA; lightweight attribution and audit only",
+  "excluded": [
+    "raw market archives and canonical OHLCV",
+    "full third-party strategy source",
+    "large curves",
+    "private Graph detail",
+    "superseded source-static-audit-v1.json draft",
+    "__pycache__ and pyc",
+    "work directories and launch tool arguments"
+  ],
+  "id": "M0274",
+  "manifest_is_additional_public_candidate": true,
+  "network_recovery": "NOT_RUN",
+  "offline_recovery": "PASS_LOCAL_BLOCKER_AND_RETAINED_PARTIAL_ONLY",
+  "offsite_backup": "NOT_PERFORMED_BY_WORKER",
+  "origin_run_id": "M0274-20261003-blocked-audit",
+  "public_allowlist": {
+    "CODE-LICENSE.md": {
+      "bytes": 1060,
+      "sha256": "8ecc2fa9bdb4043394e95602c3dc4f2a5362c358d7139ed4fc44d8507e88112d"
+    },
+    "DATA-LICENSE.md": {
+      "bytes": 1759,
+      "sha256": "9bfce23b4b44924db27157930ee73e7704ec2bf616edbb252042e9e5fdbda478"
+    },
+    "LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "M0274-core-ledger.md": {
+      "bytes": 1999,
+      "sha256": "6b12d39c151acf56839162dd93e86b1f735729319d97c0452a299a729f0b1a05"
+    },
+    "M0274-report.md": {
+      "bytes": 10826,
+      "sha256": "3019d5bee2488d61e65e970063a3daf3e00cce30a7672f8be2d16a4a91b095c7"
+    },
+    "README.md": {
+      "bytes": 2190,
+      "sha256": "a775efb14851f3f5558f953bde3b9c8d317194c799446341c67cba87128ced43"
+    },
+    "REPRODUCE.md": {
+      "bytes": 4234,
+      "sha256": "fff812294cfcb0cefbe0a1ce2fbafc8e98436b10ca6e89cb841f550d8316279e"
+    },
+    "artifacts/capture-failure-v1.json": {
+      "bytes": 426,
+      "sha256": "ef0506c4af02472cde462660f625bd6cc33e012908c7ed4a8955194f9abd1a01"
+    },
+    "artifacts/dependencies-v1.json": {
+      "bytes": 1636,
+      "sha256": "d88eebe63ada2c2c8f94b76d09324a6c95c04ce260d35ada5cabe11eaffceead"
+    },
+    "artifacts/graph-record.json": {
+      "bytes": 937,
+      "sha256": "f46c329b26451a193f3911e2a895ba33db5da43f00491cce174fbea9a6d85bef"
+    },
+    "artifacts/independent-partial-review-v1.json": {
+      "bytes": 922,
+      "sha256": "60f96497d4c9460f85d86ea9dbb98daa18fac60c781b16f9fc51b17feee0f6b8"
+    },
+    "artifacts/independent-synthetic-comparison-v1.json": {
+      "bytes": 872,
+      "sha256": "c94c08c53acaf776394cfc5b11d34f91fd29b72b23bdf32c569f6f9e6dc22ef9"
+    },
+    "artifacts/input-gates-v1.json": {
+      "bytes": 1059,
+      "sha256": "6f31af7995c3113090d0e124f878960fdd54dcc9f50a85cf97f8bbab8d4076eb"
+    },
+    "artifacts/launch-status-v1.json": {
+      "bytes": 1110,
+      "sha256": "ce77273517ebcc79b5fe8e4128a95e3d952dc2a870e24436ac903197e9903db7"
+    },
+    "artifacts/local-validation-v1.json": {
+      "bytes": 566,
+      "sha256": "2f637720ae444eca55276296bb7b27132805592200826700aeec3eabc9633d17"
+    },
+    "artifacts/offline-recovery-v1.json": {
+      "bytes": 1220,
+      "sha256": "ce3bc96e9014ff3eb6eff130e1fe06f657b8ce6e258c701624fe2ece2bf15228"
+    },
+    "artifacts/outage-and-source-provenance-v1.json": {
+      "bytes": 1802,
+      "sha256": "019d2a01e3c60f4e06ceee3efb7a80812259b04088a389acdb6bc51b34b8be3e"
+    },
+    "artifacts/partial-input-independent-qa-v1.json": {
+      "bytes": 13057,
+      "sha256": "92cf58d1abc55ef76259b1d115582fa91309868ce2173197b1ebe77e6b5d18c9"
+    },
+    "artifacts/results-status-v1.json": {
+      "bytes": 1011,
+      "sha256": "c9fae29598d2e0e4eb90c472d3e1bb71688aea8e01fb3fa8b467ea4cf8604268"
+    },
+    "artifacts/source-license-receipt-v1.json": {
+      "bytes": 244,
+      "sha256": "2cdd478066e77cddc3ed092b1efd6cc070f6b594a089e03bebc9a93e600de9ee"
+    },
+    "artifacts/source-static-audit-v2.json": {
+      "bytes": 3367,
+      "sha256": "6dcbaed759033bca9184a50fe436735ebe3c46436557bc88213b311e51c76b25"
+    },
+    "artifacts/start-source-receipt.json": {
+      "bytes": 1755,
+      "sha256": "8f1bbb4fb9b2d7c4446825dff7bb4eb7757e64dbe1e8377d3c3808f73ba1afd7"
+    },
+    "artifacts/synthetic-causality-v1.json": {
+      "bytes": 10317,
+      "sha256": "662571910d591b5b9f36d7cd1cb5f08fdda8caeb8b638aaed396cc8a5b109a38"
+    },
+    "decision-log.md": {
+      "bytes": 1888,
+      "sha256": "86cfef26243698381f6724a5b5c04e08c9aeb36ff62e9c71c859994893b6d58c"
+    },
+    "scripts/audit_causality.py": {
+      "bytes": 6906,
+      "sha256": "ee4292afee2ef7e61631df0951b508605021ed0c9f806859e73306f16362b92c"
+    },
+    "scripts/audit_partial_capture.py": {
+      "bytes": 3957,
+      "sha256": "413755b893fe9ea182904652e3e72dc18b47d1d7dd6774ace67b2d8a8453c97e"
+    },
+    "scripts/audit_source_static.py": {
+      "bytes": 3779,
+      "sha256": "23ed4005a2fb11696bbef00074a7779e168ca7a7d1287b2401c2418ae6ed9844"
+    },
+    "scripts/audit_synthetic_causality.py": {
+      "bytes": 3154,
+      "sha256": "ddc70fb0f150e7a7e983527c79cdf7b007b459808abe254a31095c809078eb91"
+    },
+    "scripts/rebuild_native12h.py": {
+      "bytes": 18604,
+      "sha256": "70afb95f1298d5a6a2887e4c34b6ce5a1aa2b19ebe95067255909996c48758fa"
+    },
+    "scripts/test_capture_guards.py": {
+      "bytes": 2833,
+      "sha256": "f846db5b2adc492200ffddc3275be1b721c0662ed101156a551a81e27ba9927a"
+    },
+    "scripts/verify_native12h.py": {
+      "bytes": 3932,
+      "sha256": "dc7827d53906163209136aab37ebe2b8c6137b39b75938163183b6f53cb9ed23"
+    },
+    "specs/blocked-diagnostic-freeze-v1.json": {
+      "bytes": 1467,
+      "sha256": "4806681ebf2bd5cc9b11111a7ca4d578810b02f24d9a78a75b421c6dcc43388f"
+    },
+    "specs/exposure-v1.json": {
+      "bytes": 570,
+      "sha256": "a83c92f4b93b988dbdfbc63df8d405f0aada90c95c1b3a0712c4a50f9b8d8891"
+    },
+    "specs/pre-performance-plan-v1.json": {
+      "bytes": 4526,
+      "sha256": "4b296cdb7bbbcaa8abaf0e77fd76e0f8bcd5d707f95cf992786ce6e3832c36c2"
+    },
+    "specs/source-rules-v1.json": {
+      "bytes": 1508,
+      "sha256": "e0c5b74fc8f560c23952922ba6069e56d083ab7b48dbf897e50ed55f4dbb8f9f"
+    }
+  },
+  "remote_publication": "NOT_PERFORMED_BY_WORKER",
+  "schema": "public-strategy-publication-manifest/v1",
+  "self_excluded": true,
+  "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+  "status": "BLOCKED_LIGHT_DELIVERY_VALIDATED_NOT_BACKTEST",
+  "strict_reproductions": 0,
+  "total_allowlisted_bytes": 150640,
+  "variant_id": "M0274-GODSTRA-BTCUSDT-12H-20261003-BLOCKED-v1"
+}
