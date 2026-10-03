@@ -22,6 +22,9 @@ PASS 仅表示传输字节通过，不等于内部清单、语料、许可、行
 `strategy_lab.research.evidence`，Graph 继续使用 `corpus_export` / `corpus_workspace` 及
 现有策略详情、因子详情和比较页；本入口不新增调度器或展示平台。
 
+2026-10-03 的工具失败、已证实边界及平台支持事项见
+[云端交接传输阻塞](../diagnostics/cloud-handover-transfer-blocker-20261003.md)。
+
 先启动相邻 quant-knowledge-graph 服务，并在环境配置 `QUANTGRAPH_TOKEN`。
 使用该仓库已安装的 SDK 环境运行：
 
