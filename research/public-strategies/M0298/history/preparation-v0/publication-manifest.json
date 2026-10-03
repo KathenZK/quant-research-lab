@@ -1,0 +1,122 @@
+{
+  "schema": "public-strategy-exact-publication-manifest/v1",
+  "record_id": "M0298",
+  "stage": "BLOCKED_SOURCE_INPUT",
+  "manifest_self_excluded": true,
+  "strict_reproductions": 0,
+  "actual_strategy_runs": 0,
+  "actual_controls": 0,
+  "file_count_excluding_manifest": 20,
+  "bytes_excluding_manifest": 108170,
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 851,
+      "sha256": "acd56e3463d613b216456a4c42cb1cb64939fbbc94cc04e7e5043e2d5c254f65"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README.md",
+      "bytes": 941,
+      "sha256": "6e58908978420db246808dd3b71e8d77ae71cdcb3db8fd4c78844c05db848332"
+    },
+    {
+      "path": "RECOVERY.md",
+      "bytes": 4661,
+      "sha256": "f7a624ebf9624b54c428276929f3c1f0293c4d4cdcad5ba30c41072ca1d2282e"
+    },
+    {
+      "path": "artifacts/data-recovery-blocker-safe.json",
+      "bytes": 1620,
+      "sha256": "dbb0cea0adf59db406d195d0e5abb10db24157fc532fda582c766d780db23e7d"
+    },
+    {
+      "path": "artifacts/graph-record.json",
+      "bytes": 1849,
+      "sha256": "54a6672236fae4c1ed2b7adeb52a7f9adb3e3aad1ee2cf21a7d869899d2e7890"
+    },
+    {
+      "path": "artifacts/independent-formula-audit.json",
+      "bytes": 3669,
+      "sha256": "d0dc0739c822cd85894bda84324b5ea294f9ee1054ebaad697c8dfda92440c51"
+    },
+    {
+      "path": "artifacts/independent-reference-chain.json",
+      "bytes": 2146,
+      "sha256": "dc2bdb7e2f823e495fd4d41d697692da00ee15d897ca7264e17018c3a954ba52"
+    },
+    {
+      "path": "artifacts/independent-scalar-oracle-replay.json",
+      "bytes": 2751,
+      "sha256": "58b4ed066c092752236ba3dbff53e459ae3626252b5b3b313bed468c61e40d69"
+    },
+    {
+      "path": "artifacts/independent-worker-probes-v2.json",
+      "bytes": 7427,
+      "sha256": "398219af5894688aa6a94b955d01d81bd66e02edfc4ac5bf78bca9a10e9d0d5a"
+    },
+    {
+      "path": "artifacts/offline-code-recovery-v1.json",
+      "bytes": 654,
+      "sha256": "3a2293f1eb144b96a6721e4acb3fc8af2880de4d6a29954eef5f4f4cc68d9ff7"
+    },
+    {
+      "path": "artifacts/source-synthetic-preflight-v1.json",
+      "bytes": 3699,
+      "sha256": "da52d8c731f2504a3d37cf31898ec36d397c21c84d9729062d7679287128faa8"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 2112,
+      "sha256": "72c85ed58414e2bbd662f8c6ee4ba2e9870d9558c3e0d53271a259c2e75a5c67"
+    },
+    {
+      "path": "diagnostics/M0298-preparation-20261003.md",
+      "bytes": 7687,
+      "sha256": "fe88d0822c3e21abe9850905bfcf080f65b2a1711e4f6795842c8746ae8b9d72"
+    },
+    {
+      "path": "m0298-core-ledger.md",
+      "bytes": 1437,
+      "sha256": "f2ff4f31cd1c4403caa24f0830ec36c869f9d07bce05f8a522f6c454d19c2bea"
+    },
+    {
+      "path": "scripts/preflight_synthetic.py",
+      "bytes": 9332,
+      "sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0"
+    },
+    {
+      "path": "scripts/scalar_formula_oracle.py",
+      "bytes": 11579,
+      "sha256": "38a62443daee5feae1cda9e97efa2b3274199c0c1b2a296a27b0f171d2be673b"
+    },
+    {
+      "path": "specs/environment-preparation.json",
+      "bytes": 506,
+      "sha256": "23dd9bc659cffaaac33e2b13901c9b64f6eac8fe18e692ae190204bf989b88fc"
+    },
+    {
+      "path": "specs/protocol-draft-v1.json",
+      "bytes": 6495,
+      "sha256": "27b2a48746c2ac50e697285c45a99989b5d272428a5a0699be402dfce192f2f3"
+    },
+    {
+      "path": "specs/source-fingerprint.json",
+      "bytes": 3607,
+      "sha256": "6373a05c67f149bc6f5c0a1108424deb53c225b60718ac3da920a27177376b92"
+    }
+  ],
+  "excluded_categories": [
+    "raw market data",
+    "full third-party source",
+    "private Graph detail",
+    "private Library identities",
+    "long equity curves",
+    "derived Python bytecode"
+  ],
+  "C0": "NOT_CREATED"
+}

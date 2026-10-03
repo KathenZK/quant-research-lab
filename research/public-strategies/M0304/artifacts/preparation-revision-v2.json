@@ -1,0 +1,11 @@
+{
+  "status": "PREPARATION_DOCUMENT_CORRECTION_ONLY",
+  "at_utc": "2026-10-03T12:32:42.025675+00:00",
+  "reason": "Independent review requires a real shell stop-on-error guard and runnable scalar-oracle instructions. No rule, execution assumption, source, synthetic result, or historical exposure changed.",
+  "old_publication_manifest_sha256": "ab4cabb6c85046a09516d70b7e31da2c060a035d7504b91db15064376abd210c",
+  "old_recovery_document_sha256": "0b34a246866f923307ee7273cada993565c54e1f06f8444568def4c035409ce6",
+  "new_recovery_document_sha256": "3f2e1a73fb07c50d89b3874ad4202e2191384a05b6786163a4a1bee4778837f0",
+  "old_preparation_pin_preserved": true,
+  "previous_public_packet_preserved_as_private_archive": true,
+  "historical_runs": 0
+}

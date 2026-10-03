@@ -1,0 +1,87 @@
+{
+  "record_id": "M0304",
+  "retrieval": "GitHub connector, pinned public files",
+  "retrieved_at_utc": "2026-10-03T12:22:26.753130+00:00",
+  "third_party_code_executed": false,
+  "full_third_party_source_in_public_package": false,
+  "items": [
+    {
+      "repository": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/Strategy002.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy002.py",
+      "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+      "bytes": 4363,
+      "used_as": "original_strategy_AST"
+    },
+    {
+      "repository": "freqtrade/freqtrade",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/strategy/interface.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "bytes": 81628,
+      "used_as": "reference_semantics_only_not_original_runtime"
+    },
+    {
+      "repository": "freqtrade/freqtrade",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/resolvers/strategy_resolver.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/resolvers/strategy_resolver.py",
+      "sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+      "bytes": 13694,
+      "used_as": "reference_semantics_only_not_original_runtime"
+    },
+    {
+      "repository": "freqtrade/freqtrade",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/strategy/hyper.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/hyper.py",
+      "sha256": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+      "bytes": 7650,
+      "used_as": "reference_semantics_only_not_original_runtime"
+    },
+    {
+      "repository": "freqtrade/freqtrade",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/vendor/qtpylib/indicators.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/vendor/qtpylib/indicators.py",
+      "sha256": "c040927436bb510e2091a7bb7f6e51f25135292bf2e0d995fa344871f0d505a9",
+      "bytes": 789,
+      "used_as": "reference_semantics_only_not_original_runtime"
+    },
+    {
+      "repository": "freqtrade/technical",
+      "commit": "c3fc191961cb20e3c6cb9d8de8866a983dc340d7",
+      "path": "technical/vendor/qtpylib/indicators.py",
+      "url": "https://github.com/freqtrade/technical/blob/c3fc191961cb20e3c6cb9d8de8866a983dc340d7/technical/vendor/qtpylib/indicators.py",
+      "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+      "bytes": 19686,
+      "used_as": "reference_semantics_only_not_original_runtime"
+    }
+  ],
+  "catalog_provenance": {
+    "master_file": "quant-master-draft.csv",
+    "sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "physical_csv_line_1based": 305,
+    "stable_id": "M0304",
+    "name": "Strategy002"
+  },
+  "same_name_sidecar": {
+    "directory_url": "https://api.github.com/repos/freqtrade/freqtrade-strategies/contents/user_data/strategies?ref=f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "file": "Strategy002.json",
+    "present": false,
+    "scope": "only pinned repository directory, not author external filesystem"
+  },
+  "parameter_precedence": [
+    "external runtime config",
+    "sidecar special parameters if present",
+    "strategy class attributes",
+    "IStrategy/resolver fallback defaults"
+  ],
+  "research_external_config_overrides": null,
+  "author_runtime_config": "UNKNOWN",
+  "original_author_runtime": "UNKNOWN",
+  "reference_technical_tag": "1.7.0",
+  "reference_technical_commit": "c3fc191961cb20e3c6cb9d8de8866a983dc340d7"
+}

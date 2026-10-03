@@ -1,0 +1,31 @@
+{
+  "status": "PASS_SYNTHETIC_EXECUTION_BOUNDARIES_ONLY",
+  "fixture_count": 21,
+  "checks": [
+    "intrabar_entry_remainder_path_age_origin",
+    "favorable_open_limit_slip_capped",
+    "entry_timeout_no_implicit_rehang",
+    "terminal_pending_cancel",
+    "source_collision_suppression",
+    "fee_profit_gate_denied",
+    "fee_profit_gate_pass_can_fill_net_loss",
+    "samebar_entry_stop_before_roi",
+    "gap_stop_price_and_adverse_slip",
+    "trailing_disabled_despite_positive_offset",
+    "roi_boundary_20",
+    "roi_boundary_30",
+    "roi_boundary_60",
+    "intrabar_roi_clock_not_aged_from_open",
+    "entry_signal_does_not_suppress_roi",
+    "ascending_roi_signal_roi",
+    "ascending_roi_signal_exit_signal",
+    "open_signal_priority_over_roi",
+    "pending_exit_cancelled_by_stop",
+    "delay_two_bars_not_one",
+    "buyhold_market_fullbar_mdd_terminal_mark"
+  ],
+  "all_event_float_accounting_recomputed": true,
+  "historical_market_input_read": false,
+  "historical_runs": 0,
+  "peak_rss_kib": 76952
+}

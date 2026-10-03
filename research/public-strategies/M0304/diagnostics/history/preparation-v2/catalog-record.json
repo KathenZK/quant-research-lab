@@ -1,0 +1,38 @@
+{
+  "record_id": "M0304",
+  "name": "Strategy002",
+  "family": "PUBLIC-M0304-STRATEGY002",
+  "variant_id": "M0304-BTCUSDT-5M-PLAN-20261003",
+  "status": "BLOCKED_SOURCE_INPUT",
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "historical_strategy_runs": 0,
+  "historical_controls": 0,
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy002.py",
+  "source_sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+  "provenance": "quant-master-draft.csv M0304 physical line305, fixed public source and declared port assumptions",
+  "method": "native5m indicators; formula-only synthetic prefix validation;4strategy cases plus1control planned but not run",
+  "metrics": null,
+  "result_records": [],
+  "audit": {
+    "source_bytes_and_AST": "PASS",
+    "synthetic_formula_probe": "PASS",
+    "independent_formula_and_Decimal_helpers": "PASS",
+    "source_input_recovery": "BLOCKED",
+    "data_C0": "NOT_PASSED",
+    "full_execution": "NOT_IMPLEMENTED",
+    "Decimal_trade_ledger": "NOT_RUN",
+    "historical_recovery": "NOT_RUN"
+  },
+  "limits": [
+    "Original author universe/cost/runtime unknown",
+    "Calendar2024 availability-selected, notOOS",
+    "Input rows and hashes expected only, no complete source objects restored",
+    "No return/equity evidence, no trading or promotion"
+  ],
+  "graph_import_ready": false,
+  "runner_handoff": false,
+  "created_at_utc": "2026-10-03T12:30:13.072150+00:00"
+}

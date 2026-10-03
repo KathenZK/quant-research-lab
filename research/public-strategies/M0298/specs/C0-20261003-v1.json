@@ -1,0 +1,115 @@
+{
+  "schema": "M0298-execution-C0/v1",
+  "record_id": "M0298",
+  "status": "FROZEN_BEFORE_RETURNS",
+  "frozen_at_utc": "2026-10-03T12:48:26.079295+00:00",
+  "release_status": "AWAITING_INDEPENDENT_C0_AUDIT",
+  "origin_run_id": "M0298-calendar2024-execution-v1-20261003",
+  "variant_id": "M0298-BTCUSDT-NATIVE5M-SIMPLE-20261003-v1",
+  "lab_handoff_commit": "48851ef54b5fba6fef1da6825983864e1665fe1e",
+  "input": {
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "rows": 114336,
+    "eval_rows": 105408,
+    "native_timeframe": "5m",
+    "market": "Binance BTCUSDT spot",
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z"
+  },
+  "frozen_files": [
+    {
+      "path": "../scripts/replay_v1/replay.py",
+      "sha256": "4e960ad57b1cb0df643637321ec99d2ebe89846da8f3f13c46012c13fc5e12b6",
+      "bytes": 15318
+    },
+    {
+      "path": "../scripts/replay_v1/signal_logic.py",
+      "sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0",
+      "bytes": 9332
+    },
+    {
+      "path": "../scripts/replay_v1/test_engine.py",
+      "sha256": "b3cf2dd46e94a582a1ef93a0ea60e33792a150ca78fc1889635afba13eb61192",
+      "bytes": 7537
+    },
+    {
+      "path": "../specs/execution-plan-v1.json",
+      "sha256": "4aa248afafaccc86fd66e6beb8bc5d896b8fdc6a40278979b0ebdffad129b18e",
+      "bytes": 8100
+    },
+    {
+      "path": "../specs/source-fingerprint.json",
+      "sha256": "6373a05c67f149bc6f5c0a1108424deb53c225b60718ac3da920a27177376b92",
+      "bytes": 3607
+    },
+    {
+      "path": "../specs/environment-preparation.json",
+      "sha256": "23dd9bc659cffaaac33e2b13901c9b64f6eac8fe18e692ae190204bf989b88fc",
+      "bytes": 506
+    },
+    {
+      "path": "../artifacts/source-synthetic-preflight-v1.json",
+      "sha256": "da52d8c731f2504a3d37cf31898ec36d397c21c84d9729062d7679287128faa8",
+      "bytes": 3699
+    },
+    {
+      "path": "../artifacts/independent-formula-audit.json",
+      "sha256": "d0dc0739c822cd85894bda84324b5ea294f9ee1054ebaad697c8dfda92440c51",
+      "bytes": 3669
+    },
+    {
+      "path": "../artifacts/independent-worker-probes-v2.json",
+      "sha256": "398219af5894688aa6a94b955d01d81bd66e02edfc4ac5bf78bca9a10e9d0d5a",
+      "bytes": 7427
+    },
+    {
+      "path": "../artifacts/execution-v1/synthetic-engine-test-v3.json",
+      "sha256": "a35c2c273c3a475b2c25ca698c2ba7ffbde3bc0815a28bf4e106134d3a14ca82",
+      "bytes": 3342
+    },
+    {
+      "path": "../artifacts/execution-v1/synthetic-capacity-test-v2.json",
+      "sha256": "98150fdcab3d9f6fce45a77564e793d1ff3697aa62cc8f97e447791be84a407b",
+      "bytes": 957
+    },
+    {
+      "path": "../artifacts/execution-v1/history-input-feature-qa-v1.json",
+      "sha256": "f01c4242d0f878f6bb929e32da96e51c3f1849cc81df513e3b1e72fe6e2358f3",
+      "bytes": 488
+    },
+    {
+      "path": "../artifacts/execution-v1/data-recovery-safe-v2.json",
+      "sha256": "ddb81501a8ea706ad6b60c21ed6c8da01bfba48f99911f479340632c5738d783",
+      "bytes": 2014
+    },
+    {
+      "path": "../artifacts/execution-v1/independent-canonical-qa-v1.json",
+      "sha256": "96dbc05f4eac6ce02335e63d02ced1de9e21c200129af7f00d5908f372ee4c44",
+      "bytes": 1275
+    }
+  ],
+  "exposure": {
+    "historical_account_returns_viewed_before_freeze": false,
+    "historical_account_runs": 0,
+    "historical_input_features_QA_read": true,
+    "synthetic_runs_only_prior_to_freeze": true,
+    "evaluation_window": "availability_selected_not_OOS",
+    "old_search_count": "UNKNOWN",
+    "new_parameter_searches": 0,
+    "do_not_compare_old_two_year_totals": true
+  },
+  "counts": {
+    "strategy_configurations": 4,
+    "same_window_buyhold_controls": 1,
+    "strategy_parameterizations": 1,
+    "strict_reproductions": 0
+  },
+  "original_21_file_preparation_manifest_sha256": "1af70a7a555e4e8260d7380d59cc3aca082491184e3c3c4a3501e0a3170397f6",
+  "fidelity_class": "HYPOTHESIS",
+  "data_status": "DIAGNOSTIC_ONLY",
+  "trusted_input": false,
+  "deploy_or_promote": false,
+  "environment_policy": "Python3.12.14 numpy2.3.5 pandas2.2.3 TA-Lib0.6.8/C0.6.4,compatibility0,RSI/EMA unstable0,BLAS1,RLIMIT_AS1GiB",
+  "required_start_gate": "Independent audit receipt bound to this C0 and approved data must exist before historical CLI; freeze alone is not execution approval"
+}

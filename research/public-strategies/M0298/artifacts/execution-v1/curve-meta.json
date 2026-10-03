@@ -1,0 +1,18 @@
+{
+  "observations": 105408,
+  "total_observations": 105408,
+  "returned_points": 366,
+  "sampling": "last5m valuation of each UTC day; no interpolation",
+  "frequency": "1d display from native5m ledger",
+  "initial_equity": 100000,
+  "initial_timestamp": "2024-01-01T00:00:00Z",
+  "max_drawdown_sign": "negative",
+  "max_drawdown_source": "all105408native5mcloseequities plusinitialcash",
+  "sharpe_frequency": "UTCdailyclose sqrt365 ddof1 rf0",
+  "timestamp_convention": "barclose boundary;2025-01-01T00Z values final2024day",
+  "period_end_exclusive": "2025-01-01T00:00:00Z",
+  "sampled_curve_sha256": "3e8f4d5d0d5bdef5dbed8225c10cd77b03459349ef44c9b32ad34dfa4abdb402",
+  "full_curve_sha256": "f8b14060a0e323a2cfb412964c9da7c8ad08091998d1094876465b4445d8fe94",
+  "benchmark_curve_available": true,
+  "benchmark_curve_file": "buyhold-daily-equity-light.csv"
+}

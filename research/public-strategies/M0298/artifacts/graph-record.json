@@ -1,0 +1,60 @@
+{
+  "id": "M0298",
+  "name": "Simple：BTC现货原生5m MACD/BB/RSI",
+  "status": "tested_hypothesis_only",
+  "reason": "已执行固定4配置+同窗基准并完成独立账本/干净恢复；base明显落后同窗buyhold且成本敏感，保留HYPOTHESIS，不晋升。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0298-SIMPLE"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AND_AST_PASS",
+    "source_rule_attribution_status": "source_signals_ROI_and_stop_parameters_preserved_execution_assumptions_explicit",
+    "independent_validation": "PASS_ALL_ACTUAL_FILL_BAR_LEDGER_AND_METRICS",
+    "causality_validation": "PASS_SYNTHETIC_EXECUTION_PREFIX_AND_REAL_FEATURE_PREFIX",
+    "local_recovery": "PASS_FROZEN_REPLAY_INDEPENDENT_REBUILT_INPUT",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0298-calendar2024-execution-v1-20261003",
+      "variant_id": "M0298-BTCUSDT-NATIVE5M-SIMPLE-20261003-v1",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "4aa248afafaccc86fd66e6beb8bc5d896b8fdc6a40278979b0ebdffad129b18e",
+      "C0_sha256": "55b0a3221bd296aa1465cf476d9ced3f50b77cd43ee052570ff3c9e8f2e1cf4e",
+      "manifest_sha256": "b6ba704539bc6dadcdbedfe2a2c4ef278d924aa25ff07404753ad4392490d874",
+      "family": "PUBLIC-M0298-SIMPLE"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0298-calendar2024-execution-v1-20261003",
+      "variant_id": "M0298-BTCUSDT-NATIVE5M-SIMPLE-20261003-v1",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "4aa248afafaccc86fd66e6beb8bc5d896b8fdc6a40278979b0ebdffad129b18e",
+      "C0_sha256": "55b0a3221bd296aa1465cf476d9ced3f50b77cd43ee052570ff3c9e8f2e1cf4e",
+      "manifest_sha256": "b6ba704539bc6dadcdbedfe2a2c4ef278d924aa25ff07404753ad4392490d874"
+    }
+  ],
+  "counts": {
+    "strategy_parameterizations": 1,
+    "strategy_configurations": 4,
+    "same_window_controls": 1,
+    "additional_frozen_recovery_runs": 5,
+    "new_parameter_searches": 0,
+    "strict_reproductions": 0
+  },
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA4 with Binance dataset terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "Pinned formula computation, declared hypothetical execution and cash accounting, summary metrics and daily equity sampling"
+  }
+}

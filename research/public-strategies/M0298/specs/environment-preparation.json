@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "TA_Lib_python": "0.6.8",
+  "TA_Lib_C": "0.6.4 (Oct 20 2025 20:23:51)",
+  "compatibility": 0,
+  "unstable_period_RSI": 0,
+  "unstable_period_EMA": 0,
+  "blas_threads": 1,
+  "script_sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0",
+  "status": "PREPARATION_ENVIRONMENT_ONLY_NOT_C0",
+  "observed_peak_rss_bytes": 77037568,
+  "python_peak_budget_bytes": 1073741824,
+  "dependencies_installed_or_upgraded": false
+}
