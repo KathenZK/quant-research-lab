@@ -1,0 +1,404 @@
+{
+  "audit": {
+    "PIT": "NOT_PROVEN",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "strict_reproductions": 0
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "acceptance_role": "control_release",
+    "allocation": "100% fee-inclusive",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_start": "2023-01-01T00:00:00Z",
+    "evidence_role": "control_reference",
+    "fee_bps_each_side": 8,
+    "id": "M1258",
+    "initial_cash": "100000",
+    "kind": "REUSED_ACCEPTED_M1258_CONTROL",
+    "metrics": {
+      "cagr": 1.3744318581300612,
+      "final_equity": 565129.9863331392,
+      "max_drawdown": -0.261513750538678,
+      "observations": 731,
+      "sharpe_zero_cash": 2.016493590663557,
+      "total_return": 4.651299863331392
+    },
+    "name": "buyhold",
+    "new_controls_for_this_strategy": 0,
+    "observations": 731,
+    "slippage_bps_each_side": 2,
+    "source_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "timeframe": "1d",
+    "window_OOS": false
+  },
+  "catalog_fields": {
+    "id": "M1463",
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-bollinger-bands-trading-strategy-performance-backtest/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "可回测": "高",
+    "名称": "比特币布林：收盘上破上轨(20日,2σ)做多，收盘回到中轨离场（Key Takeaways；正式Trading Rules会员墙）",
+    "市场": "加密（Bitcoin；日线布林）",
+    "提出日期": "2026-01-25",
+    "标题": "比特币布林：收盘上破上轨(20日,2σ)做多，收盘回到中轨离场（Key Takeaways；正式Trading Rules会员墙）",
+    "规则": "本条只写源文件已印出的规则。本条只写QuantifiedStrategies《Bitcoin Bollinger Bands Trading Strategy》免费Key Takeaways与正文已印句，不是会员墙正式Trading Rules小节。标的比特币；布林用20日SMA与±2标准差。Key Takeaways写：上轨突破触发做多入场；中轨交叉作为离场；只强调多头侧更有效。正式Trading Rules与做空规则段会员墙，本条不补会员正文，也不把下轨均值回归写成默认。页面写回测约2015至今；未印仓位%、手续费。提出日期取datetime首条。 不是M0184四小时布林下轨均值回归，也不是M0819 SPY布林+RSI均值回归：本条是比特币布林(20,2)收盘上破上轨做多、收盘回到中轨离场（只做多；Key Takeaways；正式Trading Rules会员墙不补）。 计入加密。 提出日期按源文件原样保留2026-01-25。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "catalog_public_scope": {
+    "complete_original_fields_public": false,
+    "omitted_fields": {
+      "别名来源": {
+        "public_alias_url": "https://www.quantifiedstrategies.com/bitcoin-bollinger-bands-trading-strategy/",
+        "reason": "Internal catalog curation retained privately, not redistributed"
+      }
+    },
+    "original_field_count": 11,
+    "public_field_count": 10
+  },
+  "configuration_runs": 4,
+  "control_configurations": 0,
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "hypothesis": "Volatility-band trend continuation with middle-line exit; inferred research rationale not proven.",
+    "paper": null,
+    "status": "INFERRED_RESEARCH_RATIONALE_NOT_SOURCE_VERIFIED"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "catalog-daily-bollinger20x2-fullcash"
+  ],
+  "fidelity_class": "HYPOTHESIS",
+  "id": "M1463",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "catalog-daily-bollinger20x2-fullcash",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "256d9eb7e8b1a9b33891e0019a98ad8d2fc8b7e75e586dbdf685b12cc8de9448",
+      "origin_run_id": "m1463-catalog-daily-20261003-v1",
+      "protocol_sha256": "169f2ea4f9d29455356c427f6c051a6ca152dab0565a7da1329eabff2e8d3f34",
+      "variant_id": "M1463-catalog-daily-v1-base"
+    }
+  ],
+  "limitations": [
+    "Strict0;notpromoted",
+    "Prior-exposed2023–2024nonOOS",
+    "Partial fills, lot constraints, market impact and true publication timing not proved",
+    "Private fullNAV/raw excluded from public core",
+    "Only25 approved normalized public points;731 is source metric observations. No rescaling/interpolation or private dailyNAV use.",
+    "Four original strategy configurations;0 original new controls. Existing accepted M1258 fullcash fee-inclusive control is reused.",
+    "This display preparation runs0 strategies and0 controls; Graph HYPOTHESIS remains distinct from ADAPTED_EXECUTION_PROXY.",
+    "Prior-exposed2023-2024 is not untouched OOS;strict0;source webpage/runtime equivalence remains unverified.",
+    "Monthly observations count24 is preserved, but selected light summary does not publish monthly return values; none invented.",
+    "Original private-result hash in approved source lineage is provenance only, never a public display manifest or permission to read private outputs."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "metric_conventions": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "total_return": "E_last/100000-1",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade"
+  },
+  "monthly": null,
+  "monthly_status": "NOT_PUBLISHED_IN_SELECTED_LIGHT_SUMMARY",
+  "name": "BTC布林20/2上破/中轨退出：目录假设",
+  "new_control_runs": 0,
+  "projection_profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "CATALOG_HYPOTHESIS / ADAPTED_EXECUTION_PROXY;1规则实现4固定策略配置0新control;strict0",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "256d9eb7e8b1a9b33891e0019a98ad8d2fc8b7e75e586dbdf685b12cc8de9448",
+      "origin_run_id": "m1463-catalog-daily-20261003-v1",
+      "protocol_sha256": "169f2ea4f9d29455356c427f6c051a6ca152dab0565a7da1329eabff2e8d3f34",
+      "variant_id": "M1463-catalog-daily-v1-base"
+    }
+  ],
+  "research_fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "results": {
+    "base": {
+      "cagr": 0.38308710285827385,
+      "cancelled_intents": 0,
+      "case": "base",
+      "closed_roundtrips": 20,
+      "delay_bars": 1,
+      "exposure_fraction": 0.4021887824897401,
+      "fee_bps": 8,
+      "fills": 40,
+      "final_cash": "191463.04091003155463354612701927855356123087933036",
+      "final_equity": 191463.04091003156,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 12,
+      "max_drawdown": -0.2498188059416544,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 40,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.2036380507513895,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "4880.7870515395058264602805530167799523616619691858",
+      "total_return": 0.9146304091003157,
+      "win_rate": 0.4,
+      "winning_roundtrips": 8
+    },
+    "delay2": {
+      "cagr": 0.571125312597027,
+      "cancelled_intents": 2,
+      "case": "delay2",
+      "closed_roundtrips": 18,
+      "delay_bars": 2,
+      "exposure_fraction": 0.399452804377565,
+      "fee_bps": 8,
+      "fills": 36,
+      "final_cash": "247149.20351707902983376577015064744193656271042144",
+      "final_equity": 247149.20351707903,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 9,
+      "max_drawdown": -0.21173276362533522,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 38,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.6243552798656768,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "5091.3818490890708255656687477569051905892003968443",
+      "total_return": 1.4714920351707903,
+      "win_rate": 0.5,
+      "winning_roundtrips": 9
+    },
+    "fee0": {
+      "cagr": 0.4053637237282781,
+      "cancelled_intents": 0,
+      "case": "fee0",
+      "closed_roundtrips": 20,
+      "delay_bars": 1,
+      "exposure_fraction": 0.4021887824897401,
+      "fee_bps": 0,
+      "fills": 40,
+      "final_cash": "197688.94270811463988005420849749735275158321420354",
+      "final_equity": 197688.94270811463,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 12,
+      "max_drawdown": -0.24318783542502653,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 40,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.2557229146984734,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "0E-44",
+      "total_return": 0.9768894270811463,
+      "win_rate": 0.4,
+      "winning_roundtrips": 8
+    },
+    "fee20": {
+      "cagr": 0.35033243958887406,
+      "cancelled_intents": 0,
+      "case": "fee20",
+      "closed_roundtrips": 20,
+      "delay_bars": 1,
+      "exposure_fraction": 0.4021887824897401,
+      "fee_bps": 20,
+      "fills": 40,
+      "final_cash": "182489.87504811732254161904032577532073913953229364",
+      "final_equity": 182489.87504811733,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 12,
+      "max_drawdown": -0.259657392643032,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 40,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.1253744513890578,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "11888.088730892637798588928616180688907210039388629",
+      "total_return": 0.8248987504811733,
+      "win_rate": 0.4,
+      "winning_roundtrips": 8
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "bollinger": {
+      "SMA": "Current and previous19 closes; sum in chronological order/20, Decimal50.",
+      "convention": "Populationvariance and strictcross choices are explicit hypothesis, not verified formal author Trading Rules.",
+      "first_possible_cross_index": 20,
+      "first_ready_index": 19,
+      "lookback": 20,
+      "multiplier": "2",
+      "price": "raw close",
+      "variance": "Population ddof0; sum((close-mean)^2) in chronological order/20, then Decimal50.sqrt(); upper=mean+2*sqrt(variance), lower=mean-2*sqrt(variance)."
+    },
+    "capital": {
+      "Decimal_precision": 50,
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "currency": "USDT",
+      "entry_fee_inclusive": true,
+      "fraction": "1",
+      "fractional_fills": true,
+      "funding_interest_borrow": 0,
+      "initial_cash": "100000",
+      "leverage": 1,
+      "max_positions": 1,
+      "rounding": "ROUND_HALF_EVEN",
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "capital_provenance": "Catalog position fraction unspecified; fullcash fee-inclusive is explicitly selected hypothesis, not author rule.",
+    "cold_start": "31 pre-evaluation daily bars for indicators; start allcash, no warmup intent. First evaluation close may compare prior ready feature; earliest signal-driven fill is second evaluation open.",
+    "cost_cases": [
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 8,
+        "name": "base",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 0,
+        "name": "fee0",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 20,
+        "name": "fee20",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 2,
+        "fee_bps_each_side": 8,
+        "name": "delay2",
+        "slippage_bps_each_side": 2
+      }
+    ],
+    "date_scope": "Research2023–2024 subwindow of catalog approx2015–present, chosen by available data; source proposeddate2026-01-25 is preserved. Not OOS.",
+    "entry": "Previousready C<=upper and current C>upper; strict currentupcross, not persistent aboveupper entry.",
+    "execution": {
+      "at_close_sequence": [
+        "Update completed-bar indicators. Compute raw entry and exit independent of holdings.",
+        "Raw opposite event cancels pending opposite intent before position gating; if both events arise exit/cancel-buy has priority.",
+        "Schedule buy only if flat and raw entry; sell only if long and raw exit.",
+        "Same-direction repeat retains original earliest due; absent event does not cancel an existing intent.",
+        "All calendar labels refer to UTC bar-open date; signal close knowledge becomes actionable at following bar open or declared lag2.",
+        "No warmup intents, equality neutral except explicit previous-side inclusive crossing condition."
+      ],
+      "at_open": "Execute earliest-due pending action if due_index<=currentindex and actual holdings permit. Stale is logged/discarded; no sameopen roundtrip or reentry. No out-of-window fill.",
+      "lag2": "Raw opposite event at t+1 cancels pending intent due t+2. Absence of event retains original intent/due, no repeated deferral."
+    },
+    "exit": "Previousready C>=middle and current C<middle; strict currentdowncross; exactmiddle equality retains position.",
+    "known_halt": "Known2023-03-24 halt is intraday; no daily-midnight override. No general tradability claim.",
+    "membership_scope": "Only printed catalog long20/2breakout andmiddleexit. No membership text, shortside, lowerband meanreversion, parametersearch or authorperformance reproduction.",
+    "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+    "timeframe": "1d, explicit catalog daily context",
+    "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation."
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 5233,
+      "path": "research/public-strategies/M1463/specs/C0-v1.json",
+      "sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/specs/C0-v1.json"
+    },
+    "catalog_fields": {
+      "bytes": 2787,
+      "path": "research/public-strategies/M1463/source/catalog-original-fields.json",
+      "sha256": "44c44e534e31eb94efe6fcd4bf0bff5db257bf9647eebb8fb5e687a762c5b252",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/source/catalog-original-fields.json"
+    },
+    "control_reference": {
+      "bytes": 4190,
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/control-reference.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/recovery/control-release-v1/control-reference.json"
+    },
+    "control_release": {
+      "bytes": 2039,
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/release.json",
+      "sha256": "51823b3b465f2f8ab75b37e56277c36264a21e624ddf9a146c76fcbcf666fbaf",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/recovery/control-release-v1/release.json"
+    },
+    "original_detail": {
+      "bytes": 11200,
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-detail.json",
+      "sha256": "da60261540f338030eae1cb3228ac3889c85f682e2ae3b91e595cf174a133ced",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 918,
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-record.json",
+      "sha256": "e5226f0b1fb7fea96e40b8c1465fdebf9d9c6119e844c9a023a9d9cb48f6170d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-record.json"
+    },
+    "protocol": {
+      "bytes": 19420,
+      "path": "research/public-strategies/M1463/specs/protocol-v1.json",
+      "sha256": "169f2ea4f9d29455356c427f6c051a6ca152dab0565a7da1329eabff2e8d3f34",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/specs/protocol-v1.json"
+    },
+    "publication_manifest": {
+      "bytes": 10404,
+      "path": "research/public-strategies/M1463/publication-manifest.v1.json",
+      "sha256": "ae06e451a8dcc6f8c09ca4a49205860cefb09efab4cccc06f754032a0dfd94ae",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/publication-manifest.v1.json"
+    },
+    "rules": {
+      "bytes": 10228,
+      "path": "research/public-strategies/M1463/source/root-frozen-rules.json",
+      "sha256": "3dbbcee4df9a25f201b76edec58b9b2fb3f7fa8ce3beecd90e1f39e296f49f5f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/source/root-frozen-rules.json"
+    },
+    "summary": {
+      "bytes": 3935,
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/summary.json",
+      "sha256": "ce30612dd5784f08dea323921e01ce933789e720943319d44a640ae82832cc49",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1463/artifacts/20261003-catalog-v1/summary.json"
+    }
+  },
+  "source_contract": "CATALOG_BOLLINGER20X2_FULLCASH_REUSED_CONTROL_V1",
+  "source_status": "tested_proxy_only",
+  "status": "tested_hypothesis_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}
