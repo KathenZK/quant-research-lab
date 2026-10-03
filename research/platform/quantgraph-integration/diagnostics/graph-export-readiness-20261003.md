@@ -43,3 +43,7 @@ M0220已通过现有Graph `corpus_research.build_manifest` 做实际离线输入
 当前小样门仍为NOT_PASSED：Lab远端保存和恢复已通过；Graph原生证据包、私有定义绑定、不可变基线恢复、导入、CAS激活及实际页面核验未通过。普通Sites工具读操作没有额外审批要求；暂停凭证创建来自用户的明确限制，不是人为添加发布审批。
 
 行情许可复核期间新增公开派生成果暂停，见 [共享许可核验](../../../public-strategies/DATA-LICENSE-AUDIT-20261003.md)。没有重新计算研究、公开新净值、改Graph源代码、读取批注或修改Site版本。
+
+## 已完成的离线准备增量
+
+M0220新增准备适配器已用原冻结证据执行：核验并保留26份原文件，生成4份明确标为草稿的投影；共30文件逐字节复核。18项合成测试与Ruff通过。仍缺其余5个原生文件及真实定义/来源范围，native_import_ready保持false，没有创建runtime或调用导入器。见 [逐策略准备说明](../../../public-strategies/M0220/diagnostics/graph-pilot-preparation-20261003.md) 和 [原生恢复工具侧交接](sites-native-restore-handoff-20261003.md)。`1297284`的Governance gates运行37107766484已完成且成功。
