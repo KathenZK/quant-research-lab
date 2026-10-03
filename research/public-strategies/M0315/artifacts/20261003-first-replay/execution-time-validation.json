@@ -1,0 +1,40 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "checks": {
+    "base": {
+      "fills": 14,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "roi": 7
+      }
+    },
+    "fee0": {
+      "fills": 14,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "roi": 7
+      }
+    },
+    "fee20": {
+      "fills": 14,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "roi": 7
+      }
+    },
+    "delay2": {
+      "fills": 16,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "roi": 8
+      }
+    },
+    "buyhold": {
+      "fills": 1,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {}
+    }
+  },
+  "intrabar_exact_time_claim": false
+}

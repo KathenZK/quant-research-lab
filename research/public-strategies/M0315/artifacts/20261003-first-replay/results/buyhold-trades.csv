@@ -1,0 +1,2 @@
+trade_id,bar_index,bar_open_utc,side,reason,phase,signal_bar_index,signal_close_utc,execution_time_utc,execution_earliest_utc,execution_latest_utc,execution_time_basis,reference_price,fill_price,quantity,notional,fee,cash_after,quantity_after
+1,8928,2024-01-01T00:00:00Z,BUY,buy_hold,open,,,2024-01-01T00:00:00Z,2024-01-01T00:00:00Z,2024-01-01T00:00:00Z,native_5m_open_proxy,42283.580000000002,42292.036716000002,2.2444901717274597,94924.06075139888,75.939248601119104,5000,2.2444901717274597

@@ -1,0 +1,18 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "rows": 114336,
+  "source_sha256": "b3a62e0d8a26024e7ab5f3613d0964e3954373bc3735c1ffd0678d84ce1b1e32",
+  "effective_parameters": {
+    "buy_umacd_max": -0.01176,
+    "buy_umacd_min": -0.01416,
+    "sell_umacd_max": -0.02323,
+    "sell_umacd_min": -0.00707
+  },
+  "actual_Freqtrade_parameter_loading": true,
+  "indicator_arrays_equal": true,
+  "signal_arrays_equal": true,
+  "empty_sell_interval_retained": true,
+  "engine_used": false,
+  "new_market_requests": 0
+}

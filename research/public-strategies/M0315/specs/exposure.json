@@ -1,0 +1,17 @@
+{
+  "id": "M0315-20261003-first-replay-exposure",
+  "kind": "exposure",
+  "family": "PUBLIC-M0315-UNIVERSAL-MACD",
+  "window_start": "2024-01-01T00:00:00Z",
+  "window_end": "2025-01-01T00:00:00Z",
+  "evidence_class": "historical_replay",
+  "trial_count": 4,
+  "controls": 1,
+  "selection_reason": "Availability-driven2024 window after2023 native5m input rejection, frozen before performance; not OOS nor direct comparison with earlier2023-2024 totals",
+  "artifacts": {
+    "specs/M0315-first-replay.json": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb"
+  },
+  "recorded_at_utc": "2026-10-03T12:05:35.241233+00:00",
+  "historical_total_search_count": "UNKNOWN",
+  "oos_claim": false
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "diagnostic-window-predeclaration/v1",
+  "created_at": "2026-10-03T11:49:20.945759+00:00",
+  "coordinator": "root only",
+  "candidate_ids": [
+    "M0315",
+    "M0298",
+    "M0304"
+  ],
+  "phase": "INPUT_QA_AND_IMPLEMENTATION_ONLY_NOT_FROZEN_PERFORMANCE_RUN",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "native_timeframe": "5m",
+  "exchange": "binance",
+  "market_type": "spot",
+  "symbol": "BTCUSDT",
+  "input_start": "2023-12-01T00:00:00Z",
+  "input_end_exclusive": "2025-01-01T00:00:00Z",
+  "evaluation_start": "2024-01-01T00:00:00Z",
+  "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+  "warmup_days": 31,
+  "expected_input_rows": 114336,
+  "expected_evaluation_rows": 105408,
+  "reason": "Previous 2023-2024 native5m candidate input was blocked by March2023 official-archive gap, native zero-volume records and irregular close_time. Preserve that failure. Declare separate calendar2024 diagnostic before viewing candidate historical performance, without silently repairing or excluding records within this new window.",
+  "window_limitations": [
+    "Researcher-chosen single calendar year; original author historical evaluation window unknown.",
+    "Availability-driven window selection; not an independent OOS or robust full-cycle test.",
+    "2024 historical market conditions and prior catalog research are known; prior total search count unknown.",
+    "Do not compare this window directly to prior 2023-2024 strategy totals; each new run has same-window buy-and-hold."
+  ],
+  "hard_gates": [
+    "13 complete native monthly archives2023-12..2024-12 QA with exact grids/close_time/checksum/CRC/OHLCV; no gap exemptions",
+    "one frozen canonical input and independent raw-to-canonical audit",
+    "final per-ID protocol/code/dependencies/source/input hashes and pre-performance exposure before any history run",
+    "predeclared4strategycases+1same-windowcontrol; no parameter search"
+  ],
+  "data_status": "NOT_READY",
+  "new_strategy_runs": 0,
+  "no_previous_evidence_modified": true
+}

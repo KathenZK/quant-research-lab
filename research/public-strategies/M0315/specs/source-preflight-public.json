@@ -1,0 +1,174 @@
+{
+  "stage": "SOURCE_SEMANTIC_PREFLIGHT_ONLY",
+  "claimed": false,
+  "assigned": false,
+  "historical_backtest_runs": 0,
+  "real_market_input_read": false,
+  "market_data_requests": 0,
+  "global_writes": false,
+  "push": false,
+  "source_repository_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "software_license": {
+    "name": "GPL-3.0",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "local_copy": "sources/LICENSE-LICENSE"
+  },
+  "reference_environment": {
+    "freqtrade": "2026.9",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "TA-Lib": "0.6.8",
+    "technical": "1.7.0",
+    "ft-pandas-ta": "0.3.16"
+  },
+  "not_original_runtime_claim": true,
+  "existing_input_boundary": "Only previously verified BTCUSDT spot1d/4h are authorized input references for this candidate screen; never synthesize1m/5m by upsampling or changing native timeframe.",
+  "scope_limits": [
+    "No author historical search/sample recreated",
+    "No returns/performance/market signal counts observed",
+    "No repaired ADAPTED variant created",
+    "Root alone may claim and assign after rechecking latest concurrency"
+  ],
+  "protected_ids_untouched": [
+    "M0257",
+    "M0273",
+    "M0316",
+    "M0317",
+    "M0293"
+  ],
+  "prepared_at_utc": "2026-10-03T11:39:54.261108+00:00",
+  "id": "M0315",
+  "source": {
+    "id": "M0315",
+    "path": "user_data/strategies/UniversalMACD.py",
+    "local_filename": "M0315-UniversalMACD.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/UniversalMACD.py",
+    "bytes": 4558,
+    "sha256": "b3a62e0d8a26024e7ab5f3613d0964e3954373bc3735c1ffd0678d84ce1b1e32",
+    "retrieved_at_utc": "2026-10-03T11:36:03.034807+00:00",
+    "status": "SOURCE_BYTES_VERIFIED"
+  },
+  "synthetic_evidence": {
+    "id": "M0315",
+    "source_sha256": "b3a62e0d8a26024e7ab5f3613d0964e3954373bc3735c1ffd0678d84ce1b1e32",
+    "source_class_imported": true,
+    "native_timeframe": "5m",
+    "minimal_roi": {
+      "0": 0.213,
+      "27": 0.099,
+      "60": 0.03,
+      "164": 0
+    },
+    "stoploss": -0.318,
+    "trailing_stop_effective_class_default": false,
+    "startup_candle_count_effective_class_default": 30,
+    "effective_parameters": {
+      "buy_umacd_max": -0.01176,
+      "buy_umacd_min": -0.01416,
+      "sell_umacd_max": -0.02323,
+      "sell_umacd_min": -0.00707
+    },
+    "synthetic_rows": 1000,
+    "synthetic_signal_counts_only": {
+      "entry": 51,
+      "exit": 0
+    },
+    "historical_data_read": false,
+    "backtest_engine_started": false,
+    "future_perturbation_prefix": {
+      "ma12": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      },
+      "ma26": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      },
+      "umacd": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      }
+    },
+    "short_prefix_recompute": {
+      "ma12": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      },
+      "ma26": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      },
+      "umacd": {
+        "changed_prefix_rows": 0,
+        "first_changed_index": null,
+        "example_before": null,
+        "example_after": null
+      }
+    },
+    "between_boundary_semantics": "inclusive both; buy endpoints included",
+    "empty_sell_interval_verified": true,
+    "equivalence_to_declared_ema_ratio": "PASS"
+  },
+  "catalog_row": "314,M0315,UniversalMACD,加密现货,用 EMA12 与 EMA26 构造 UMACD；买在 -0.01416 至 -0.01176，卖在 -0.02323 至 -0.00707（文件默认值）。,freqtrade/freqtrade-strategies,UniversalMACD,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/UniversalMACD.py,UniversalMACD.py,中,,未知",
+  "name": "UniversalMACD",
+  "status": "DATA_TIMEFRAME_BLOCKED_FOR_CURRENT4H_INPUT;SOURCE_DEFAULT_EXIT_INTERVAL_EMPTY",
+  "native_timeframe": "5m",
+  "can_use_existing4h_without_rule_change": false,
+  "requires_new_native_input": "QA-acceptedBTCUSDT spot5m before any historical execution; no such input verified in this task",
+  "exact_rules": {
+    "indicator": "UMACD = EMA(close,12)/EMA(close,26)-1",
+    "entry": "UMACD between[-0.01416,-0.01176], endpoints included",
+    "exit": "UMACD between[min=-0.00707,max=-0.02323], endpoints included; empty interval, alwaysFalse",
+    "minimal_roi_minutes": {
+      "0": 0.213,
+      "27": 0.099,
+      "60": 0.03,
+      "164": 0
+    },
+    "stoploss": -0.318,
+    "trailing_stop": false,
+    "can_short": false,
+    "startup_candle_count": 30,
+    "volume_guard_in_source": false,
+    "buy_params_dict_provided": false,
+    "sell_params_dict_provided": false
+  },
+  "catalog_differences": [
+    "Catalog omits native5m; it is not4h.",
+    "Catalog summarizes sell as sorted range-0.02323..-0.00707; exact source field semantics reverse min/max and produce no indicator exits.",
+    "Do not sort/swap sell bounds: that changes original rules and may create signal collisions."
+  ],
+  "imports_required": [
+    "numpy",
+    "pandas",
+    "freqtrade.strategy native Parameter lifecycle",
+    "talib.abstract",
+    "pandas_ta (imported but not used by active indicator)",
+    "technical.qtpylib (imported but not used by active indicator)"
+  ],
+  "source_dependencies_active": "TA-Lib EMA and Pandas between plus Freqtrade risk/parameter processing",
+  "synthetic_result": "Original class imports; EMA ratio equals explicit formula; both buy endpoints included; sell interval empty on1201-point grid; future perturbation and shortened input leave EMA/UMACD prefix unchanged.",
+  "theory_status": "No paper verified; source points to TradingView indicator page, not read in this task. Relative EMA ratio plus negative band is a researcher-interpreted mean-reversion hypothesis, not reproduced author economic proof.",
+  "source_link_not_yet_read": "https://www.tradingview.com/script/xNEWcB8s-Universal-Moving-Average-Convergence-Divergence/",
+  "freeze_readiness": "Source-default5m diagnostic contract can be prepared after native5m data is separately accepted; original min/max defect preserved and reported. Not currently assignable on4h.",
+  "public_projection": {
+    "original_frozen_sha256": "954a37ef354def5bed39c9a074abc052bd49ac319c1bda163bc495de4128d108",
+    "removed_fields": [
+      "catalog_library_id",
+      "catalog_read_receipt_sha256"
+    ],
+    "status": "PUBLIC_DERIVATIVE_NOT_FROZEN_ORIGINAL",
+    "original_preserved": "Private original evidence and recovery archive; C0 protocol is unchanged."
+  }
+}

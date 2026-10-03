@@ -1,0 +1,15 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "verified_at_utc": "2026-10-03T12:15:03.183203+00:00",
+  "frozen_code_and_supporting_hashes_unchanged": true,
+  "markdown_relative_links": 34,
+  "ruff": "PASS",
+  "compileall": "PASS",
+  "synthetic_tests": 5,
+  "independent_nav_states": 527040,
+  "independent_fill_events": 59,
+  "local_recovery_output_files": 18,
+  "remote_backup_verified": false,
+  "scope": "Only M0315 files; global artifact registration intentionally delegated to root"
+}

@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "filename": "UniversalMACD.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/UniversalMACD.py",
+      "sha256": "b3a62e0d8a26024e7ab5f3613d0964e3954373bc3735c1ffd0678d84ce1b1e32",
+      "bytes": 4558,
+      "license": "GPL-3.0",
+      "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5"
+    }
+  ],
+  "private_source_bytes_preserved": true
+}

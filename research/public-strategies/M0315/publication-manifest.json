@@ -1,0 +1,278 @@
+{
+  "id": "M0315",
+  "schema": "public-research-publication-projection/v1",
+  "created_at_utc": "2026-10-03T12:19:39.527108+00:00",
+  "root_base_commit": "7e516e3e7fc9ab23809dba6736bbaaea9795bdef",
+  "source_local_commit_not_public_ancestor": "afc4d5b700a3c58fb9feae00d63310977d5c6d01",
+  "frozen_protocol_unchanged_sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb",
+  "mapping": "PUBLICATION-NOTES.md",
+  "files": [
+    {
+      "path": "research/public-strategies/M0315/ATTRIBUTION.md",
+      "bytes": 1277,
+      "sha256": "078e9381fe5e43ca7625910af9a6de7bede3b4f907bc1e06be94cd23d233a04c"
+    },
+    {
+      "path": "research/public-strategies/M0315/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "research/public-strategies/M0315/PUBLICATION-NOTES.md",
+      "bytes": 1379,
+      "sha256": "7edd5f02215804b5f382cfa944eef520f5073f30793c3e865774053f9dabe8b8"
+    },
+    {
+      "path": "research/public-strategies/M0315/README.md",
+      "bytes": 1335,
+      "sha256": "09cb537143b8ab05d7abf88f7ccad0397c880156c0fa760e21143e3a6c2b0259"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/additional-prefix-validation.json",
+      "bytes": 329,
+      "sha256": "a8dee79c5e720f11eebfa353108ef6a268b899b8a0ad984a63b7139f004e7562"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/base-nav-light.csv",
+      "bytes": 24687,
+      "sha256": "8cf284fa2698aaf5584715271da781a394b0f8680774789eb3ee570396967e95"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/buyhold-nav-light.csv",
+      "bytes": 17886,
+      "sha256": "b4c5bfb2b2ecb2455a43514134deb407e55fe656a11d99630e1f70da61363b57"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/causality-validation.json",
+      "bytes": 459,
+      "sha256": "e512c5ac5eff986c04e134857effa506818c7d9d4db9e1f3819dc538943b7e17"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/execution-reuse-validation.json",
+      "bytes": 596,
+      "sha256": "bcfb39647f97e70d37ab28abbb87eb7dd93f783ea89c49d1d1a3fb44ce3aecc3"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/execution-time-validation.json",
+      "bytes": 717,
+      "sha256": "93376f82d6819ddada10ffe0acf2bdba8e1bf68990a55d4e8e991d4314dbce18"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/final-validation.json",
+      "bytes": 485,
+      "sha256": "b0ccd0eed0d9f07c066b6633ef7b68496f1e4787b36534b37a36448ea71d13c1"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/freeze-receipt.json",
+      "bytes": 448,
+      "sha256": "5e5f4aa9022a09d4d2ec956ee6462e5069ef0544feca8b9f89647a4452d09f14"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/graph-projection-receipt.json",
+      "bytes": 235,
+      "sha256": "5481c4528e731bc5f00cb0003edbb2accf179e634f8d3d4bd8685b0757ffc843"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/graph-record.json",
+      "bytes": 2335,
+      "sha256": "8d2348008b53573bba59014e531a7f3cced78a46c5b6b5801627928e2a2c1d6e"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/independent-validation.json",
+      "bytes": 1328,
+      "sha256": "64f9cbaa65b2d60da6a052038899e502e9c2e977aaedc2f37f495e2faccd0e03"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/local-recovery.json",
+      "bytes": 3230,
+      "sha256": "2da31b1a965f16b9bfa5867dedac827cf9ef51dcc37e3cdcc50ea1e659457ec0"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/original-source-validation.json",
+      "bytes": 506,
+      "sha256": "17189fef6bfdb68c2a487d9b28de746bf8f01a2613a3809cd71a5ae9e039a475"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/result-manifest.json",
+      "bytes": 3632,
+      "sha256": "3185cff39c62fa90df3e5cb989f9347fc7e7e786db8c9d8585ee8c23c4fc6f0e"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/base-trades.csv",
+      "bytes": 4026,
+      "sha256": "c9922e270c32dadeab733bd4d9641c9e7c46f4c675b7d77e706311c1a19ddb6f"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/buyhold-trades.csv",
+      "bytes": 493,
+      "sha256": "b841336ee461cc6fcf3655705bee68f09737a31ff9eb24f147d85498892369f1"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/delay2-trades.csv",
+      "bytes": 4562,
+      "sha256": "b311bbb89528debb1d45dbaa558be1c9c6632136df4a1b568387b11bc444abe5"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/fee0-trades.csv",
+      "bytes": 3805,
+      "sha256": "3dcb803dd2a7c811453512d42c48ab5e2564e25c0c6d60de704a45f44cb2045b"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/fee20-trades.csv",
+      "bytes": 4022,
+      "sha256": "7b117bc35f1e5331a929a31d4d6aab1e5ad302cc69b5efc7757eb3431f7017e2"
+    },
+    {
+      "path": "research/public-strategies/M0315/artifacts/20261003-first-replay/results/summary.json",
+      "bytes": 5714,
+      "sha256": "6b43f3d1e8fe0b545cad9090ce605a6cd1c9599482156fb29c690ad1d0cfef6d"
+    },
+    {
+      "path": "research/public-strategies/M0315/decision-log.md",
+      "bytes": 1267,
+      "sha256": "85ce22a285a56ce3dc9b8ea72030b659a56567c6dbebe8a55c659f386debd9c3"
+    },
+    {
+      "path": "research/public-strategies/M0315/diagnostics/M0315-20261003.md",
+      "bytes": 9281,
+      "sha256": "ef0f21a62cc67ea14a126d886eae3abf78590e137b7e31d3ea40254a108b19d0"
+    },
+    {
+      "path": "research/public-strategies/M0315/diagnostics/rebuild-20261003.md",
+      "bytes": 3572,
+      "sha256": "18dafaa60f00bbc2dd3a28faf22df47908d60bcb1cfac1342aa6b5372f27deb7"
+    },
+    {
+      "path": "research/public-strategies/M0315/m0315-core-ledger.md",
+      "bytes": 1072,
+      "sha256": "7cc7a4162ad21937891ced11fb3598045d6799c85ecdc88d983b044e083a2a5a"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/audit_input.py",
+      "bytes": 5664,
+      "sha256": "53a8da9d6b50cf3eeaf55a8558d79223664cf3855dadb03d36e14f5eb9e5daa6"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/check_additional_prefixes.py",
+      "bytes": 1572,
+      "sha256": "3d9cf7df081f45e28f2d6074f6b2b85ca899d21bc9c6daf996c400ca5455f232"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/check_causality.py",
+      "bytes": 2152,
+      "sha256": "fe849fd0756c7df6572d70317e0ff649124a301fae66a59db540c5fe4bdd8697"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/compare_original.py",
+      "bytes": 2934,
+      "sha256": "e3555f67f0666b0f4d3fc15159299d5796697a9f2e09e8be6df7aabe80c5c3d0"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/export_graph.py",
+      "bytes": 9651,
+      "sha256": "018d65f895340e033f63e745410f92dd146a90c2ee14aac01e6e327b3acb69e6"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/freeze_protocol.py",
+      "bytes": 9495,
+      "sha256": "e6221c22e1c1bbbe5d3499743a1587288b3f820eaba240a5e6eae1f2576ce2db"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/rebuild.py",
+      "bytes": 2999,
+      "sha256": "67af9fd19365844f4a505a963ce087d15350fa896880228b6bcd7f9e8e6f07d4"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/run_replay.py",
+      "bytes": 13737,
+      "sha256": "7759b72caff4a4415fb50085b1e50bb2a8394402a2581edc7fe3489e5b035ebf"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/test_units.py",
+      "bytes": 3765,
+      "sha256": "6383bfc253262d8315d03d6fc7f6fa35a6b49db28721db183807f855a42f60d7"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/validate_execution_times.py",
+      "bytes": 1897,
+      "sha256": "dbcc45ac4d82315b424e37eaf1e4458241dc98127e73bb411252cee9b00c4432"
+    },
+    {
+      "path": "research/public-strategies/M0315/scripts/validate_independent.py",
+      "bytes": 8468,
+      "sha256": "ac93e7933f39d9bb71eac60d9efe2d18b1ab10c44c3c7bf5aba9acedecec66a0"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/M0315-first-replay.json",
+      "bytes": 9055,
+      "sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/environment.json",
+      "bytes": 351,
+      "sha256": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/execution-reuse.json",
+      "bytes": 727,
+      "sha256": "3dda657d5fff33bc5a19325f880aae551ffe745e05c7aac5ba7ae278da36524b"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/exposure-query.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/exposure.json",
+      "bytes": 705,
+      "sha256": "6319938121d95444b3900801be43ee5e990cf9850d5d5ee9635a4242838a3b6d"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/implementer-input-qa.json",
+      "bytes": 2583,
+      "sha256": "c65eb0bde287ddb9e7f8c477f0a58e2ed9c780170a1099264e3c733ed3d95b53"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/input-coordinator-independent-qa.json",
+      "bytes": 563,
+      "sha256": "647e7fa3930926a00eb94846c5c13559aa096fdeb77f1b5013ae00e7d93dd64b"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/input-independent-rebuild.json",
+      "bytes": 2582,
+      "sha256": "9444ecff07b6a2fc46975410ba004e8f4ac02afbf906258cad2f5c8379310ff9"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/input-protocol.json",
+      "bytes": 928,
+      "sha256": "a115c982eb32da2a63de70edf28214fa4fa3d89a4d23adf06ae3b34f4a79b066"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/requirements.lock.txt",
+      "bytes": 1562,
+      "sha256": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/source-manifest.json",
+      "bytes": 472,
+      "sha256": "d302337685350cb4ba40d8981453102e1015c643f89f028d3b62ae8c4728b7d5"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/source-preflight-public.json",
+      "bytes": 7053,
+      "sha256": "6cbb7be6f9580013864a7d67fbf7cd9443fe08e8ed71c345c6bde4d3b192f8f7"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/synthetic-source-qa.json",
+      "bytes": 504,
+      "sha256": "22ac85070f061bbb366b59d094aff8c2cc79fb96330c1998e757a2d04f4831ee"
+    },
+    {
+      "path": "research/public-strategies/M0315/specs/window-predeclaration.json",
+      "bytes": 2011,
+      "sha256": "6aeb4214a1150234c145697f6a626ecc856c2f2883a5bf3f9818d679db68daa5"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "no_raw_market_data_or_private_library_ids": true
+}
