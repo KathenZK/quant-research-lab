@@ -80,3 +80,5 @@
 - [M1358 EMA13/48冷启动状态策略](M1358/README.md)：日线四配置执行改编；保留收益前数值失败与修复，原作者环境未复现，严格0。
 
 - [Catalog假设批次015冻结准备](catalog-hypothesis-batch015-preflight-20261003/README.md)：M1180/M1258，原始字段、执行选择与数据依赖明确；尚无新历史运行。
+
+- [Catalog日线假设批次016冻结准备](catalog-hypothesis-batch016-preflight-20261003/README.md)：M1396/M1463，8个计划策略配置；待代码/C0/独审及同口径控制验收，当前无新历史运行。

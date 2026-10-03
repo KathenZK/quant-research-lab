@@ -1,0 +1,61 @@
+{
+  "schema": "catalog-hypothesis-execution-output-contract/v1",
+  "frozen_at_utc": "2026-10-03T16:51:02.797993+00:00",
+  "coordinator": "root only",
+  "batch": "016",
+  "implementation_base_commit": "d3e58dc9bf5c33c4d59cf56b37da94861d84d911",
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "strategy_ids": [
+    "M1396",
+    "M1463"
+  ],
+  "assignments": {
+    "M1396": "root/m0217 next isolated twoID executor; not started",
+    "M1463": "root/m0217 next isolated twoID executor; not started"
+  },
+  "fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "strategy_configurations_per_id": 4,
+  "new_control_configurations_per_id": 0,
+  "total_planned_strategy_configurations": 8,
+  "total_planned_new_controls": 0,
+  "historical_runs_at_freeze": 0,
+  "rules": {
+    "M1396": {
+      "path": "research/public-strategies/catalog-hypothesis-batch016-preflight-20261003/M1396-root-frozen-rules.json",
+      "bytes": 10110,
+      "sha256": "0b66cc30dda37a342fd1720ab70fb5a3909225693f15a1979c3b2c1918690ee0"
+    },
+    "M1463": {
+      "path": "research/public-strategies/catalog-hypothesis-batch016-preflight-20261003/M1463-root-frozen-rules.json",
+      "bytes": 10228,
+      "sha256": "3dbbcee4df9a25f201b76edec58b9b2fb3f7fa8ce3beecd90e1f39e296f49f5f"
+    }
+  },
+  "remote_recovery_scope_addendum": {
+    "path": "research/public-strategies/remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+  },
+  "gates_before_history": [
+    "Single root claims/isolated outputs and no overlap withM1180/M1258.",
+    "Input sourcehash/grid/OHLCV/CRC and exact50raw->48e4canonical reconstruction pass; no newmarketneeded.",
+    "Code/runtime/C0/exposure locked before first newstrategyreturn, exactDecimaloperations/statistics/pending frozen; independent synthetic/numerical/calendar/causality/account QApass.",
+    "Reuse existing validated repository code through immutable SHA-pinned sharedkernel per repository policy if shared across families; no new platform or call to another strategy runner.",
+    "M1258 exact100%control is actually accepted with outputhash/publiccorepin and matchingidentity before reuse; do not run extra control on assumption.",
+    "Prior remote core restore verified; privateLibraryZIP upload gap separately reported, not fabricated success."
+  ],
+  "output_contract": [
+    "One independent ChineseMarkdown perID: originalrule/publicprovenance, unchanged private11fieldbinding and redacted internalcuration hash where needed, explanation/assumptions/QA/benchmark/costs/metrics/NAV/trades/failure/nextresearch.",
+    "Private fullfeature/decision/pending/fill/nativeNAV/dailyNAV/monthlyreport artifacts with deterministic resultmanifest; zero-trade states/cash periods never omitted",
+    "Four frozen strategy configurations perID only. Reuse actually accepted exactM1258buyhold, 0newcontrols; no search or extra variants.",
+    "Full independent account and metric validation,causalprefix/future checks,immutablefailedruns and postreturndecisionlog",
+    "Safe Graph-compatible record/detail/normalized lightcurve labelledhypothesis; no invented entity revision and noSiteactivation",
+    "Remote allowed corecode/docs/lightresults/fingerprints/rebuildrecipe and actualremote recoveryverification; local privateZIP+standalonemanifest; Library saveif available honestly reported"
+  ],
+  "data_authorization": "Reuse existing authorized Binance spot daily exact48e4 input only; no new market requests, paid data, credentials or venue substitution.",
+  "disk_reserve_bytes": 5368709120,
+  "global_progress_writer": "root only",
+  "new_strategy_returns_exposure_at_freeze": false
+}

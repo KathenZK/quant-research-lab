@@ -1,0 +1,59 @@
+{
+  "status": "PASS_PRE_CODE_CONTRACT_AND_PUBLIC_SCOPE_REVIEW",
+  "reviewed_at_utc": "2026-10-03T16:53:11.961560+00:00",
+  "contract_sha256": "286e1c8cd712f79afe4a6864a78731d7d449085a820370727c477da9e514fca7",
+  "original_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "records": [
+    {
+      "id": "M1396",
+      "rules_bytes": 10110,
+      "rules_sha256": "0b66cc30dda37a342fd1720ab70fb5a3909225693f15a1979c3b2c1918690ee0",
+      "original_fields_bound": 11,
+      "verbatim_public_fields": 11,
+      "hash_only_redacted_fields": [],
+      "original_all_fields_reviewed_unchanged": false
+    },
+    {
+      "id": "M1463",
+      "rules_bytes": 10228,
+      "rules_sha256": "3dbbcee4df9a25f201b76edec58b9b2fb3f7fa8ce3beecd90e1f39e296f49f5f",
+      "original_fields_bound": 11,
+      "verbatim_public_fields": 10,
+      "hash_only_redacted_fields": [
+        "别名来源"
+      ],
+      "original_all_fields_reviewed_unchanged": false
+    }
+  ],
+  "synthetic_boundary_checks": {
+    "2023-01-03_lag1": true,
+    "2023-01-03_lag2": true,
+    "2023-01-07_lag1": true,
+    "2023-01-07_lag2": true,
+    "TuesdayUTC": true,
+    "SaturdayUTC": true,
+    "absent_Wednesday_event_preserves_pending": true,
+    "constant_BB_exact_equality_no_entry": true,
+    "ddof0_not1": true,
+    "cross_prior_inclusive_current_strict": true,
+    "fee_inclusive_cash_exact": true,
+    "full_window": true
+  },
+  "synthetic_count": 12,
+  "M1396": "Original2012–2018 filter explicitly overridden2023–2024 before returns; hypothesis not author-reproduction. UTC labelsTuesday/Saturday decisionclose; nextopenWednesday/Sunday orlag2Thursday/Monday. Missing weekday event does not cancel existingintent. hl2 andinclusiveSMA4 retained.",
+  "M1463": "20/2close breakout andmiddleexit preserved;populationddof0,Decimal50sqrt,strictcurrentcross/priorinclusive,31warmup no importedwarmuporders; mathematical choices labelledhypothesis, no membership content.",
+  "privacy": "M1463 oneinternalcurationfield excluded frompublic,335UTF8bytes hashchecked privately;safealias retained;21fields verbatim+1hashbinding total22;originalrecord publication flags unchanged. No internal text in thisreceipt.",
+  "cash_and_statistics": "Fullcash orderofoperations matchesnotional/residualfee/qty/cash0;731returns inclinitialanchor,365annualization,ddof1Sharpe nullatzero,negativeMDD,24months,UTCfillcounts,Decimalaccount/floatmetrics explicit.",
+  "benchmark_gate": "8strategyconfigs/0newcontrols;M1258actual100%control currently dependency, not countedexisting;must verifyaccepted outputhash/publiccorepin/identity beforehistory.",
+  "recovery": "Explicitaddendumhashmatches;no retroactiveC0 rewrite/privateZIPsuccess assertion.",
+  "required_fixes": [],
+  "nonblocking_editorial_note": "QA_gate carries generic4hOHLC caveat fromprior template although bothinputs aredaily. Dailycontract itself is explicit andunambiguous; optionally clarifyto dailyOHLC beforepublication, requiringnewhashpins ifedited.",
+  "implementation_checks_before_C0": [
+    "Implementcross with previousclose versuspreviousband andcurrentclose versuscurrentband; verifyindexedformula andequality in independentcodeQA.",
+    "Executeactualpending/fee/causality/fullindicator syntheticchecks; here only12algebra/calendar fixtures,notrunnerapproval.",
+    "Benchmark remains hard prerequisiteto history;do not substitute95% or createunapprovedcontrols."
+  ],
+  "historical_runs": 0,
+  "market_requests": 0,
+  "repo_global_writes": 0
+}

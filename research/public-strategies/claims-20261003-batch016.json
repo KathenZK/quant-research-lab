@@ -1,0 +1,32 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T16:51:02.797993+00:00",
+  "coordinator": "root only",
+  "batch": "016",
+  "claims": [
+    {
+      "id": "M1396",
+      "owner": "root/m0217",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "required_before_returns": "codeC0 + independentQA + exactM1258control accepted"
+    },
+    {
+      "id": "M1463",
+      "owner": "root/m0217",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "required_before_returns": "codeC0 + independentQA + exactM1258control accepted"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch016-output-contract-20261003.json",
+    "bytes": 3799,
+    "sha256": "286e1c8cd712f79afe4a6864a78731d7d449085a820370727c477da9e514fca7"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0
+}
