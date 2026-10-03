@@ -1,0 +1,54 @@
+{
+  "schema": "public-catalog-executor-output-contract/v1",
+  "created_at": "2026-10-03T11:17:02.290901+00:00",
+  "repository": "KathenZK/quant-research-lab",
+  "output_branch": "dot/public-strategies-20261003-b003",
+  "fixed_lab_main_base": "7039a9df2d17da352776c5d16ed85a52241c9cac",
+  "previous_assignment_head_preserved": "344e8b361d28004ce36949efe3b3aeda65b5a9f9",
+  "executor": "dot exclusively",
+  "integration_and_global_progress_writer": "Codex root only",
+  "exclusive_ids": [
+    "M0316",
+    "M0317"
+  ],
+  "allowed_paths": [
+    "research/public-strategies/M0316/**",
+    "research/public-strategies/M0317/**"
+  ],
+  "forbidden_changes": [
+    "Any path outside the two allowed ID roots",
+    "global progress and indexes",
+    "governance rules and allowlists",
+    "shared kernels and other strategy IDs",
+    "Site publication or production execution"
+  ],
+  "frozen_evidence_policy": "Preserve original C0/code-base, timestamps, hashes, trials and accepted source bytes; moving the publication branch base does not authorize refreezing or rerunning results. Add versioned evidence only; never overwrite old evidence.",
+  "publication_policy": {
+    "public_repository": true,
+    "exact_public_allowlist_and_hash_manifest_required": true,
+    "private_library_ids_credentials_personal_annotations_signed_urls_raw_market_data_forbidden": true,
+    "private_backups": "Save recoverable archive and independent manifest to the user private Library; report identities and restore receipts privately. Local disk does not count as remote backup.",
+    "publication_manifest_file": "publication-manifest.json under each assigned ID root"
+  },
+  "delivery_policy": {
+    "frozen_source_and_result_validation_required": true,
+    "exact_remote_readback_required": true,
+    "push_only_to_assigned_branch": true,
+    "force_push_rebase_delete_forbidden": true,
+    "do_not_write_main_or_create_merge_requests": "Root serial integration owner",
+    "handoff": [
+      "head commit",
+      "per-ID public file count/bytes/manifest sha256",
+      "real strategy configurations and controls",
+      "fidelity and blockers",
+      "independent validation and restoration receipts",
+      "private Library identities through private channel"
+    ]
+  },
+  "source_preflight_commit": "f97844d6d82904f8ee657d82b234f1addf6483aa",
+  "counts_at_contract_creation": {
+    "new_accepted_ids": 0,
+    "new_accepted_runs": 0
+  },
+  "note": "Branch publication scope only; existing worker execution receipts are not reclassified as accepted by this contract."
+}
