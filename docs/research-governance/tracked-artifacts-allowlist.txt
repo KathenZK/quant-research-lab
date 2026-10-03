@@ -1367,6 +1367,23 @@ research/public-strategies/M1258/artifacts/20261003-public-display-prep/public-d
 research/public-strategies/M1258/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # M1258 additive display publication
 research/public-strategies/M1258/artifacts/20261003-public-display-review/review.safe.json  # M1258 additive display publication
 
+# dot009 frozen public lightweight results (exact paths)
+research/public-strategies/M1270/artifacts/20261003-batch017-v1/graph-detail.json
+research/public-strategies/M1270/artifacts/20261003-batch017-v1/graph-record.json
+research/public-strategies/M1270/artifacts/20261003-batch017-v1/light-curve.json
+research/public-strategies/M1270/artifacts/20261003-batch017-v1/private-output-manifest.json
+research/public-strategies/M1270/artifacts/20261003-batch017-v1/summary.json
+research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json
+research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json
+research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json
+research/public-strategies/M1346/artifacts/20261003-batch017-v1/private-output-manifest.json
+research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json
+research/public-strategies/M1349/artifacts/20261003-batch017-v1/graph-detail.json
+research/public-strategies/M1349/artifacts/20261003-batch017-v1/graph-record.json
+research/public-strategies/M1349/artifacts/20261003-batch017-v1/light-curve.json
+research/public-strategies/M1349/artifacts/20261003-batch017-v1/private-output-manifest.json
+research/public-strategies/M1349/artifacts/20261003-batch017-v1/summary.json
+
 # M1396/M1463 independently reviewed additive display v2; exact approved paths
 research/public-strategies/M1396/artifacts/20261003-public-display-prep/base-nav-sampled.json  # catalog pair display publication
 research/public-strategies/M1396/artifacts/20261003-public-display-prep/graph-detail.json  # catalog pair display publication

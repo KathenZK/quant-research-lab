@@ -1,0 +1,343 @@
+{
+  "schema": "batch017-independent-M1349-historical-QA/v1",
+  "status": "PASS",
+  "strategy_ids": [
+    "M1349"
+  ],
+  "strategy_configurations_verified": 4,
+  "new_research_configurations": 0,
+  "new_controls": 0,
+  "source_historical_runs_by_parent": 4,
+  "QA_engine_replays": 74,
+  "QA_replay_scope": "Prefix and future-suffix perturbations of frozen cases after original output; no new research variants",
+  "source_feature_rows": 762,
+  "account_verifier": {
+    "status": "PASS",
+    "features": 762,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "monthly_rows": 96,
+    "fill_rows": 40,
+    "strategy_configurations": 4,
+    "new_control_configurations": 0,
+    "source_signal": "Independent exact Decimal50 ROC25 from raw strings, first ready25, strictly below-0.10 level, raw_exit=0; no shadow position state",
+    "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+    "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+    "engine_runs": 0,
+    "execution_policy": {
+      "max_completed_closes": 25
+    },
+    "lifecycle": "independent actual buy index -> completed closes; sticky timeexit until sale",
+    "raw_signal_validation": "caller supplies independently checked raw events; no adapter holding state"
+  },
+  "supplemental": {
+    "lifecycle_rows": 2924,
+    "literal_decimal_audits": [
+      {
+        "case": "base",
+        "exact_decimal_fields": 2264,
+        "numerical_errors": 0,
+        "representation_only_differences": 0
+      },
+      {
+        "case": "fee0",
+        "exact_decimal_fields": 2264,
+        "numerical_errors": 0,
+        "representation_only_differences": 0
+      },
+      {
+        "case": "fee20",
+        "exact_decimal_fields": 2264,
+        "numerical_errors": 0,
+        "representation_only_differences": 1
+      },
+      {
+        "case": "delay2",
+        "exact_decimal_fields": 2264,
+        "numerical_errors": 0,
+        "representation_only_differences": 2
+      }
+    ]
+  },
+  "lifecycle": [
+    {
+      "case": "base",
+      "filled_entries": 5,
+      "filled_exits": 5,
+      "closed_roundtrips": 5,
+      "holding_bars_for_every_roundtrip": 25,
+      "mandatory_latched_closes": 5,
+      "simultaneous_oversold_and_forced_exit_closes": 0,
+      "terminal_held_completed_bars": 0,
+      "terminal_mandatory_exit_latched": false,
+      "terminal_pending": null
+    },
+    {
+      "case": "fee0",
+      "filled_entries": 5,
+      "filled_exits": 5,
+      "closed_roundtrips": 5,
+      "holding_bars_for_every_roundtrip": 25,
+      "mandatory_latched_closes": 5,
+      "simultaneous_oversold_and_forced_exit_closes": 0,
+      "terminal_held_completed_bars": 0,
+      "terminal_mandatory_exit_latched": false,
+      "terminal_pending": null
+    },
+    {
+      "case": "fee20",
+      "filled_entries": 5,
+      "filled_exits": 5,
+      "closed_roundtrips": 5,
+      "holding_bars_for_every_roundtrip": 25,
+      "mandatory_latched_closes": 5,
+      "simultaneous_oversold_and_forced_exit_closes": 0,
+      "terminal_held_completed_bars": 0,
+      "terminal_mandatory_exit_latched": false,
+      "terminal_pending": null
+    },
+    {
+      "case": "delay2",
+      "filled_entries": 5,
+      "filled_exits": 5,
+      "closed_roundtrips": 5,
+      "holding_bars_for_every_roundtrip": 26,
+      "mandatory_latched_closes": 10,
+      "simultaneous_oversold_and_forced_exit_closes": 0,
+      "terminal_held_completed_bars": 0,
+      "terminal_mandatory_exit_latched": false,
+      "terminal_pending": null
+    }
+  ],
+  "causality": [
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 163,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 187,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 188,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "base",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 163,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 187,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 188,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 163,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 187,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 188,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 164,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 188,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 189,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 190,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "case": "delay2",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    }
+  ],
+  "original_outputs_unchanged": true,
+  "C0_v1_and_v2_pins_unchanged": true,
+  "runtime_lock_asserted": true,
+  "network": "Python socket audit guard; no socket operations attempted",
+  "C0_v2_sha256": "1b7389015fb57787ef67aa661e13a825d15db6d1c61683d538fef79cbfb68e17",
+  "manifest_sha256": "7e6ce412271fbaa6cb71d384888bca9a976df07baf2de9d51aae5929bda367b5",
+  "script_sha256": "4ea0d21eeb8ba24117673ca7c7a93f37c801bd28ccd16c1d1d0cbde159684177"
+}

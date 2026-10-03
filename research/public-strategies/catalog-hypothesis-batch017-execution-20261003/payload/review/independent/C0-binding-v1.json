@@ -1,0 +1,21 @@
+{
+  "schema": "batch017-independent-C0-binding/v1",
+  "status": "PASS",
+  "C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+  "C0_bytes": 10579,
+  "C0_pins_verified": 51,
+  "prehistory_gate_pins_reverified": 28,
+  "active_ids": [
+    "M1346",
+    "M1270"
+  ],
+  "strategy_configurations": 8,
+  "new_controls": 0,
+  "historical_strategy_runs_before_release": 0,
+  "cases_rules_statistics_runtime_kernel_source": "ALL_EXACT",
+  "prior_exposure_disclosed": true,
+  "M1349": "STILL_BLOCKED_PENDING_V2",
+  "results_absence_scope": "No results/results-v1/historical/output/outputs directory in this package; only invented synthetic outputs exist under review/independent. Parent declaration and C0 both report zero historical runs.",
+  "prehistory_gate_sha256": "0b5f9b753e9f60c9d40511600523a6cf58f745fc6335323d11f0ddba875cb0a7",
+  "release": "Parent may execute the eight unchanged frozen M1346/M1270 cases. No release for M1349 or new controls."
+}

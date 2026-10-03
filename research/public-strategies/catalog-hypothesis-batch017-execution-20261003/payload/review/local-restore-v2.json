@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "id": "M1346",
+      "C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+      "kernel_version": "v1",
+      "payloads": 42,
+      "manifest_byte_exact": true,
+      "all_payloads_byte_exact": true,
+      "output_manifest_sha256": "09aaa8c6e4dfee9d134d32a4f94849543ca8cd7f4fef3213b25565ba356b7895"
+    },
+    {
+      "id": "M1270",
+      "C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+      "kernel_version": "v1",
+      "payloads": 42,
+      "manifest_byte_exact": true,
+      "all_payloads_byte_exact": true,
+      "output_manifest_sha256": "68b2f888436bd5110c5a0fd5541a320721ebf4aea7cc33dedb7ed026cdaa8a2f"
+    },
+    {
+      "id": "M1349",
+      "C0_sha256": "1b7389015fb57787ef67aa661e13a825d15db6d1c61683d538fef79cbfb68e17",
+      "kernel_version": "v2",
+      "payloads": 42,
+      "manifest_byte_exact": true,
+      "all_payloads_byte_exact": true,
+      "output_manifest_sha256": "7e6ce412271fbaa6cb71d384888bca9a976df07baf2de9d51aae5929bda367b5"
+    }
+  ],
+  "engine_QA_replay_configurations": 12,
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "strict_reproductions": 0
+}

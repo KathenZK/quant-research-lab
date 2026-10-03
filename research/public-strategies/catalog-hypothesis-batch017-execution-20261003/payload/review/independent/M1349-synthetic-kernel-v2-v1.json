@@ -1,0 +1,34 @@
+{
+  "schema": "M1349-independent-kernel-v2-synthetic/v1",
+  "status": "PASS",
+  "tests_run": 10,
+  "counts": {
+    "synthetic_engine_calls": 94,
+    "lifecycle_rows": 9340,
+    "prefix_checks": 32,
+    "future_checks": 32
+  },
+  "account_counts": {
+    "simulations": 0,
+    "nav_rows_audited": 9338,
+    "fills_audited": 312,
+    "prefix_comparisons": 0,
+    "future_comparisons": 0,
+    "signal_rows_compared": 12382
+  },
+  "errors": [],
+  "failures": [],
+  "historical_strategy_runs": 0,
+  "new_controls": 0,
+  "policy": {
+    "max_completed_closes": 25
+  },
+  "source_signal": "independent Decimal50 ROC25 level strictly below -0.10; raw_exit zero; actual kernel owns lifecycle",
+  "pins": {
+    "kernel/v2/engine.py": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219",
+    "kernel/v2/verify_account.py": "191961bece1b80c02d074894a8f48fde8c3f6360b5ab564cc69484fae3b14712",
+    "kernel/v2/manifest.json": "0f5d96e56c1dfe396320d5d80932d09218291379495045a31b0564c1ef16bb5a",
+    "source/daily_three_signals.py": "2b892666b161cedcda35abd99be13aba8a9f891aa280eb3f2d986a9d98daea1c",
+    "review/independent/test_m1349_kernel_v2.py": "a8545f68ac8df8b9fdd39e7f18a16e7af02cd207060dbd5cb232f0afabd9f18d"
+  }
+}

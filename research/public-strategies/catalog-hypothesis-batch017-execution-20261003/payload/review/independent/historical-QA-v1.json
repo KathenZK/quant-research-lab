@@ -1,0 +1,507 @@
+{
+  "schema": "batch017-independent-historical-QA/v1",
+  "status": "PASS",
+  "strategy_ids": [
+    "M1346",
+    "M1270"
+  ],
+  "strategy_configurations_verified": 8,
+  "new_research_configurations": 0,
+  "new_controls": 0,
+  "source_historical_runs_by_parent": 8,
+  "qa_engine_replays": 112,
+  "qa_replay_scope": "Causal prefix and future-suffix perturbations of already frozen cases, not new research trials",
+  "causality": [
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "base",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee0",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "fee20",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1346",
+      "case": "delay2",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "base",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee0",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "fee20",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 33,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 56,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 62,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 365,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 397,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 428,
+      "prefix": "PASS",
+      "future": "PASS"
+    },
+    {
+      "id": "M1270",
+      "case": "delay2",
+      "cut_global_index_exclusive": 761,
+      "prefix": "PASS",
+      "future": "PASS"
+    }
+  ],
+  "results": [
+    {
+      "id": "M1346",
+      "source_feature_rows": 762,
+      "account_verifier": {
+        "status": "PASS",
+        "features": 762,
+        "nav_rows": 2924,
+        "decision_rows": 2924,
+        "monthly_rows": 96,
+        "fill_rows": 212,
+        "strategy_configurations": 4,
+        "new_control_configurations": 0,
+        "source_signal": "Independent exact Decimal50 strict close-vs-lag25 comparisons and UTC bar-open calendar, including ready mask; no kernel/adapter used for expected flags",
+        "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+        "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+        "engine_runs": 0
+      },
+      "literal_decimal_audits": [
+        {
+          "case": "base",
+          "exact_decimal_fields": 2614,
+          "numerical_errors": 0,
+          "representation_only_differences": 3
+        },
+        {
+          "case": "fee0",
+          "exact_decimal_fields": 2614,
+          "numerical_errors": 0,
+          "representation_only_differences": 0
+        },
+        {
+          "case": "fee20",
+          "exact_decimal_fields": 2614,
+          "numerical_errors": 0,
+          "representation_only_differences": 7
+        },
+        {
+          "case": "delay2",
+          "exact_decimal_fields": 2418,
+          "numerical_errors": 0,
+          "representation_only_differences": 2
+        }
+      ],
+      "manifest_sha256": "09aaa8c6e4dfee9d134d32a4f94849543ca8cd7f4fef3213b25565ba356b7895",
+      "all_results_unchanged": true
+    },
+    {
+      "id": "M1270",
+      "source_feature_rows": 762,
+      "account_verifier": {
+        "status": "PASS",
+        "features": 762,
+        "nav_rows": 2924,
+        "decision_rows": 2924,
+        "monthly_rows": 96,
+        "fill_rows": 630,
+        "strategy_configurations": 4,
+        "new_control_configurations": 0,
+        "source_signal": "Independent exact Decimal50 strict close-vs-lag25 comparisons and UTC bar-open calendar, including ready mask; no kernel/adapter used for expected flags",
+        "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+        "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+        "engine_runs": 0
+      },
+      "literal_decimal_audits": [
+        {
+          "case": "base",
+          "exact_decimal_fields": 3664,
+          "numerical_errors": 0,
+          "representation_only_differences": 11
+        },
+        {
+          "case": "fee0",
+          "exact_decimal_fields": 3664,
+          "numerical_errors": 0,
+          "representation_only_differences": 0
+        },
+        {
+          "case": "fee20",
+          "exact_decimal_fields": 3664,
+          "numerical_errors": 0,
+          "representation_only_differences": 10
+        },
+        {
+          "case": "delay2",
+          "exact_decimal_fields": 2194,
+          "numerical_errors": 0,
+          "representation_only_differences": 0
+        }
+      ],
+      "manifest_sha256": "68b2f888436bd5110c5a0fd5541a320721ebf4aea7cc33dedb7ed026cdaa8a2f",
+      "all_results_unchanged": true
+    }
+  ],
+  "C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+  "script_sha256": "bc674a440797176ceecf528460e0ef5f3af6c3a4dce3cf7dd7e9a3de1b987b11",
+  "runtime_lock_asserted": true,
+  "socket_audit_guard": "active; no socket operations attempted",
+  "M1349_status": "Not executed, pending v2"
+}
