@@ -1,0 +1,637 @@
+{
+  "audit": {
+    "id": "M1346",
+    "source_url": "https://www.quantifiedstrategies.com/trend-following-and-momentum-strategies-on-bitcoin/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "别名来源": "无",
+    "可回测": "高",
+    "名称": "比特币：收盘高于25日前收盘做多、低于则卖出",
+    "市场": "加密（Bitcoin；日线动量）",
+    "提出日期": "2026-04-23",
+    "标题": "比特币：收盘高于25日前收盘做多、低于则卖出",
+    "规则": "本条只写源文件已印出的规则。本条只写同站同文免费正文动量段已印句：若比特币收盘高于25日前收盘则做多，收盘低于25日前收盘则卖出。不是100/250 SMA交叉，也不是会员墙规则段。页面写回测区间含约2015起样本；未印仓位%、手续费。 不是同文SMA100/250交叉（M1345），也不是会员墙规则段：本条是比特币收盘高于/低于25日前收盘做多/卖出。 计入加密。 提出日期按源文件原样保留2026-04-23。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "benchmark_reference": {
+    "id": "M1258",
+    "kind": "REUSED_ACCEPTED_M1258_BASE_CONTROL",
+    "matched_cost_controls_available": false,
+    "projection": {
+      "curve_resolution": "accepted monthly close projection only; not an invented daily control curve",
+      "metrics": {
+        "cagr": 1.3744318581300612,
+        "cancelled_intents": 0,
+        "case": "buyhold",
+        "closed_roundtrips": 0,
+        "delay_bars": 0,
+        "exposure_fraction": 1.0,
+        "fee_bps": 8,
+        "fills": 1,
+        "final_equity": 565129.9863331392,
+        "kind": "CONTROL",
+        "losing_roundtrips": 0,
+        "max_drawdown": -0.261513750538678,
+        "monthly_observations": 24,
+        "observations": 731,
+        "queued_intents": 0,
+        "retained_intents": 0,
+        "sharpe_zero_cash": 2.016493590663557,
+        "slippage_bps": 2,
+        "stale_intents": 0,
+        "terminal_pending": null,
+        "terminal_position_open": true,
+        "total_fees": "79.936051159072741806554756195043964828137490008",
+        "total_return": 4.651299863331392,
+        "win_rate": null,
+        "winning_roundtrips": 0
+      },
+      "monthly": [
+        {
+          "buy_fills": 1,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 1.396587201937684,
+          "month": "2023-01",
+          "return_fraction": 0.3965872019376837,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 28,
+          "days_long": 28,
+          "end_equity_multiple": 1.397580056620008,
+          "month": "2023-02",
+          "return_fraction": 0.0007109149224242199,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 1.7190976861340395,
+          "month": "2023-03",
+          "return_fraction": 0.23005310357076034,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 1.7654701598458784,
+          "month": "2023-04",
+          "return_fraction": 0.026974891587529543,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 1.6433043433807746,
+          "month": "2023-05",
+          "return_fraction": -0.06919732728632949,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 1.8402839342933466,
+          "month": "2023-06",
+          "return_fraction": 0.11986799140768127,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 1.7654121829301221,
+          "month": "2023-07",
+          "return_fraction": -0.04068489104751903,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 1.5666316840718746,
+          "month": "2023-08",
+          "return_fraction": -0.11259721711465932,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 1.6283396559274224,
+          "month": "2023-09",
+          "return_fraction": 0.039388946670069286,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 2.0919864865652613,
+          "month": "2023-10",
+          "return_fraction": 0.2847359449547817,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 2.2782488030298254,
+          "month": "2023-11",
+          "return_fraction": 0.08903609925816482,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 2.5536162036757504,
+          "month": "2023-12",
+          "return_fraction": 0.12086801067544341,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 2.571517784267875,
+          "month": "2024-01",
+          "return_fraction": 0.007010286262421488,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 29,
+          "days_long": 29,
+          "end_equity_multiple": 3.6918600807826163,
+          "month": "2024-02",
+          "return_fraction": 0.43567355565993426,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 4.304786598820855,
+          "month": "2024-03",
+          "return_fraction": 0.16602105838970682,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 3.6641410757891153,
+          "month": "2024-04",
+          "return_fraction": -0.14882166823489504,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 4.07891819785416,
+          "month": "2024-05",
+          "return_fraction": 0.11319900448312237,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 3.790966182931914,
+          "month": "2024-06",
+          "return_fraction": -0.07059519239040682,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 3.9030542828009454,
+          "month": "2024-07",
+          "return_fraction": 0.02956715899331565,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 3.5615938021192073,
+          "month": "2024-08",
+          "return_fraction": -0.08748545522064739,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 3.824519115073379,
+          "month": "2024-09",
+          "return_fraction": 0.07382237491477175,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 4.245118689688477,
+          "month": "2024-10",
+          "return_fraction": 0.10997449926643348,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 30,
+          "days_long": 30,
+          "end_equity_multiple": 5.82233116088585,
+          "month": "2024-11",
+          "return_fraction": 0.37153554152171775,
+          "sell_fills": 0
+        },
+        {
+          "buy_fills": 0,
+          "days": 31,
+          "days_long": 31,
+          "end_equity_multiple": 5.651299863331392,
+          "month": "2024-12",
+          "return_fraction": -0.029375054909867946,
+          "sell_fills": 0
+        }
+      ],
+      "new_controls": 0,
+      "original_daily_nav_sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664",
+      "original_full_output_manifest_sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7",
+      "reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "schema": "reused-accepted-benchmark-projection/v1",
+      "source": "M1258 accepted original control; no computation or new control",
+      "source_public_summary_sha256": "a12f6254843e5b6c3693600a555ff10bcecaddacde4aad6acae8f8f6036e219d",
+      "source_repository_commit": "2d4da814b23fc861a73850a5691a1104d6e7766d",
+      "trusted": false,
+      "window_OOS": false
+    },
+    "reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+  },
+  "catalog_fields": {
+    "id": "M1346",
+    "source_url": "https://www.quantifiedstrategies.com/trend-following-and-momentum-strategies-on-bitcoin/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "别名来源": "无",
+    "可回测": "高",
+    "名称": "比特币：收盘高于25日前收盘做多、低于则卖出",
+    "市场": "加密（Bitcoin；日线动量）",
+    "提出日期": "2026-04-23",
+    "标题": "比特币：收盘高于25日前收盘做多、低于则卖出",
+    "规则": "本条只写源文件已印出的规则。本条只写同站同文免费正文动量段已印句：若比特币收盘高于25日前收盘则做多，收盘低于25日前收盘则卖出。不是100/250 SMA交叉，也不是会员墙规则段。页面写回测区间含约2015起样本；未印仓位%、手续费。 不是同文SMA100/250交叉（M1345），也不是会员墙规则段：本条是比特币收盘高于/低于25日前收盘做多/卖出。 计入加密。 提出日期按源文件原样保留2026-04-23。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "configuration_runs": 4,
+  "control_configurations": 0,
+  "coverage_history": [
+    {
+      "OOS": false,
+      "cases": 4,
+      "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+      "evaluation_start": "2023-01-01T00:00:00Z",
+      "new_controls": 0
+    }
+  ],
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "author_verified": false,
+    "hypothesis": "Persistence of25day price momentum; researchinterpretation, noauthorvalidated mechanism or OOSclaim."
+  },
+  "entity_revision_status": "NOT_ISSUED_NOT_INVENTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "fidelity_class": "HYPOTHESIS",
+  "id": "M1346",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "PUBLIC-M1346-DAILY-MOMENTUM25",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "7f5fc59c64093164302e1bac5d94d8beecfe07cbba9b861ffc130a96902670bf",
+      "origin_run_id": "M1346-catalog-batch017-20261003-v1",
+      "protocol_sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668",
+      "variant_id": "M1346-catalog-batch017-20261003-v1-base"
+    }
+  ],
+  "limitations": [
+    "HYPOTHESIS / ADAPTED_EXECUTION_PROXY；strict=0。",
+    "原生历史月档hash/CRC/网格一致不证明PIT、finality或逐时可交易性。",
+    "2023–2024是既有曝光且按数据可得性选定的窗口，不是OOS；旧搜索次数未知，未计算可信DSR/PBO。",
+    "手续费、滑点、满仓和延迟模型不是成交保证；未建立交易所最小手数、部分成交或流动性冲击模型。",
+    "没有Site激活、实盘或推广授权。",
+    "Only25 original normalized samples;731 counts metric observations. No interpolation or metric recalculation.",
+    "One actual M1258 base8bps+2bps control reused across cases; no fee0/20 matched-cost controls exist in this projection.",
+    "Projection runs0 strategies/controls. No active entity/revision bound; not Site activation."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "monthly": null,
+  "monthly_status": "STRATEGY_MONTHLY_VALUES_NOT_IN_SELECTED_PUBLIC_SUMMARY",
+  "name": "比特币：收盘高于25日前收盘做多、低于则卖出",
+  "new_control_runs": 0,
+  "original_provenance": {
+    "csv_row_ordinal": 1346,
+    "csv_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "row_sha256": "30bdf9d8c3ec51ad2762322e92133969e3fe5b00d14ccebea01301235b65db53",
+    "rule_sha256": "167a1e70e1a566e016d89898542be5a55d28b5d17705f507caf6764376671f9d"
+  },
+  "projection_profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "7f5fc59c64093164302e1bac5d94d8beecfe07cbba9b861ffc130a96902670bf",
+      "origin_run_id": "M1346-catalog-batch017-20261003-v1",
+      "protocol_sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668",
+      "variant_id": "M1346-catalog-batch017-20261003-v1-base"
+    }
+  ],
+  "research_fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "results": {
+    "base": {
+      "cagr": 0.7607128168794586,
+      "cancelled_intents": 0,
+      "case": "base",
+      "closed_roundtrips": 30,
+      "delay_bars": 1,
+      "exposure_fraction": 0.627906976744186,
+      "fee_bps": 8,
+      "fills": 60,
+      "final_cash": "310491.82534259135495751493794269923441371699330493",
+      "final_equity": 310491.8253425913,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 19,
+      "max_drawdown": -0.3570004355255392,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 60,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.6271053613567328,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "9303.1384055358206826391718127889903671671546505282",
+      "total_return": 2.104918253425913,
+      "win_rate": 0.36666666666666664,
+      "winning_roundtrips": 11
+    },
+    "delay2": {
+      "cagr": 0.7723847602008154,
+      "cancelled_intents": 14,
+      "case": "delay2",
+      "closed_roundtrips": 16,
+      "delay_bars": 2,
+      "exposure_fraction": 0.6306429548563611,
+      "fee_bps": 8,
+      "fills": 32,
+      "final_cash": "314627.72865525140756253441598533929703898570664938",
+      "final_equity": 314627.7286552514,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 9,
+      "max_drawdown": -0.3805772900277521,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 46,
+      "retained_intents": 32,
+      "sharpe_zero_cash": 1.618045153701344,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "5261.4582087143954163182131030419149449173199143769",
+      "total_return": 2.1462772865525137,
+      "win_rate": 0.4375,
+      "winning_roundtrips": 7
+    },
+    "fee0": {
+      "cagr": 0.8034218896909553,
+      "cancelled_intents": 0,
+      "case": "fee0",
+      "closed_roundtrips": 30,
+      "delay_bars": 1,
+      "exposure_fraction": 0.627906976744186,
+      "fee_bps": 0,
+      "fills": 60,
+      "final_cash": "325758.91520335016949210565722160598489426305296810",
+      "final_equity": 325758.9152033502,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 18,
+      "max_drawdown": -0.34558346613309265,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 60,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.687756617698009,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "0E-44",
+      "total_return": 2.257589152033502,
+      "win_rate": 0.4,
+      "winning_roundtrips": 12
+    },
+    "fee20": {
+      "cagr": 0.6985380482803751,
+      "cancelled_intents": 0,
+      "case": "fee20",
+      "closed_roundtrips": 30,
+      "delay_bars": 1,
+      "exposure_fraction": 0.627906976744186,
+      "fee_bps": 20,
+      "fills": 60,
+      "final_cash": "288922.19310899727317407369676827538435015419750366",
+      "final_equity": 288922.19310899725,
+      "final_quantity": "0",
+      "kind": "STRATEGY",
+      "losing_roundtrips": 19,
+      "max_drawdown": -0.3737535448201501,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 60,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.5358838140520892,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "total_fees": "22288.590210588748650482248677807087452074264829626",
+      "total_return": 1.8892219310899727,
+      "win_rate": 0.36666666666666664,
+      "winning_roundtrips": 11
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "capital": {
+      "Decimal_precision": 50,
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "currency": "USDT",
+      "entry_fee_inclusive": true,
+      "fraction": "1",
+      "fractional_fills": true,
+      "funding_interest_borrow": 0,
+      "initial_cash": "100000",
+      "leverage": 1,
+      "max_positions": 1,
+      "rounding": "ROUND_HALF_EVEN",
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "cold_start": "31pre-evalbars;25lag readybeforeevaluation. Startcash/noimportedwarmupintent, earliestfillsecond evaluationopen.",
+    "cost_cases": [
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 8,
+        "name": "base",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 0,
+        "name": "fee0",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 20,
+        "name": "fee20",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 2,
+        "fee_bps_each_side": 8,
+        "name": "delay2",
+        "slippage_bps_each_side": 2
+      }
+    ],
+    "entry": "Rawentry=C[t]>C[t-25]; level condition, no priorcross requirement. Actualflat may schedulebuy.",
+    "execution": {
+      "at_close_sequence": [
+        "Update completed-bar indicators. Compute raw entry and exit independent of holdings.",
+        "Raw opposite event cancels pending opposite intent before position gating; if both events arise exit/cancel-buy has priority.",
+        "Schedule buy only if flat and raw entry; sell only if long and raw exit.",
+        "Same-direction repeat retains original earliest due; absent event does not cancel an existing intent.",
+        "All calendar labels refer to UTC bar-open date; signal close knowledge becomes actionable at following bar open or declared lag2.",
+        "No warmup intents, equality neutral except explicit previous-side inclusive crossing condition."
+      ],
+      "at_open": "Execute earliest-due pending action if due_index<=currentindex and actual holdings permit. Stale is logged/discarded; no sameopen roundtrip or reentry. No out-of-window fill.",
+      "lag2": "Raw opposite event at t+1 cancels pending intent due t+2. Absence of event retains original intent/due, no repeated deferral."
+    },
+    "exit": "Rawexit=C[t]<C[t-25]; level condition. Actuallong may schedulesell. Equality neither event, holdings/pending remain.",
+    "indicator": "Compare rawClose[t] with rawClose[t-25], ready at globalindex25; no ROC arithmetic necessary and noSMA/RSI/filter.",
+    "known_halt": "Known2023-03-24 halt is intraday; no daily-midnight override. No general tradability claim.",
+    "statistics": {
+      "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+      "cagr": "(E_last/100000)**(365/n)-1, n=731",
+      "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+      "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+      "fee_total": "sum exact Decimal fees; represented decimaltext",
+      "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+      "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+      "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+      "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+      "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+      "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results",
+      "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+      "total_return": "E_last/100000-1",
+      "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade"
+    },
+    "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+    "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation."
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 10579,
+      "path": "research/public-strategies/M1346/specs/C0.json",
+      "sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/specs/C0.json"
+    },
+    "cases": {
+      "bytes": 447,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json",
+      "sha256": "0ad62d335d9032e0e291a9f54f96446b2c455cc5447c44b5cfbba43c6ccbc7ac",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json"
+    },
+    "catalog": {
+      "bytes": 1913,
+      "path": "research/public-strategies/M1346/source/catalog-original-fields.json",
+      "sha256": "41056e93ba2f52554b0ec7e9176591c8deb5fa1e186eed719991a51d3b045dcb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/source/catalog-original-fields.json"
+    },
+    "control_projection": {
+      "bytes": 6820,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json",
+      "sha256": "b108f7dfa0458cbff6c0a751d319da7dd0f66871d809bc7debd32506861af37f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json"
+    },
+    "control_reference": {
+      "bytes": 4190,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json"
+    },
+    "curve": {
+      "bytes": 2600,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json",
+      "sha256": "0fb5a0865e4b5104e806a09aed46c6a8108a6cc192e80d414357d81e3c4dce35",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json"
+    },
+    "original_detail": {
+      "bytes": 9094,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json",
+      "sha256": "3eafe865cd504941fe95c3b590ac679c1ee22ef0cb0f3c6e5b10459efc6e9c4d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 2184,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json",
+      "sha256": "3bba85d88996cafdb680797f09cfc103bfec476361c67a6509e5c7b597212e19",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json"
+    },
+    "rules": {
+      "bytes": 12079,
+      "path": "research/public-strategies/M1346/source/root-frozen-rules.json",
+      "sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/source/root-frozen-rules.json"
+    },
+    "statistics": {
+      "bytes": 1436,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json",
+      "sha256": "5554f6f67d0956388aefb2b75dfe348e652b923b4cc1b91cf15b8fe23a2e560e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json"
+    },
+    "summary": {
+      "bytes": 11487,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json",
+      "sha256": "99ac7e858f339e3c88194e17d835f79de45fbbf34af9c0ee10d29a7a4857e3b3",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json"
+    }
+  },
+  "source_contract": "CATALOG_CLOSE25_LEVEL_FULLCASH_REUSED_CONTROL_V1",
+  "source_url": "https://www.quantifiedstrategies.com/trend-following-and-momentum-strategies-on-bitcoin/",
+  "status": "tested_hypothesis_only",
+  "strategy_configurations": 4
+}
