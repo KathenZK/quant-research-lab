@@ -288,6 +288,11 @@ def test_shared_kernel_versions_are_frozen() -> None:
       problems.append(f"{kernel_dir.name}: 缺少 README.md")
       continue
     text = readme.read_text(encoding="utf-8")
+    # Historical C0 manifests can freeze the root README itself. A named
+    # addendum registers later versions without changing those evidence bytes.
+    version_addendum = kernel_dir / "README-versions.md"
+    if version_addendum.is_file():
+      text += "\n" + version_addendum.read_text(encoding="utf-8")
     for version_dir in sorted(kernel_dir.glob("v*")):
       if not version_dir.is_dir():
         continue
@@ -444,6 +449,11 @@ def test_shared_kernel_index_and_copy_boundaries() -> None:
     if not readme.is_file():
       continue
     text = readme.read_text(encoding="utf-8")
+    # Historical C0 manifests can freeze the root README itself. A named
+    # addendum registers later versions without changing those evidence bytes.
+    version_addendum = kernel_dir / "README-versions.md"
+    if version_addendum.is_file():
+      text += "\n" + version_addendum.read_text(encoding="utf-8")
     for version_dir in sorted(kernel_dir.glob("v*")):
       if version_dir.is_dir() and version_dir.name not in text:
         problems.append(f"{kernel_dir.name}/{version_dir.name}: 未登记在 kernel README")
