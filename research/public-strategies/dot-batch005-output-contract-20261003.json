@@ -1,0 +1,68 @@
+{
+  "schema": "public-catalog-executor-output-contract/v1",
+  "created_at_utc": "2026-10-03T12:29:13.689501+00:00",
+  "repository": "KathenZK/quant-research-lab",
+  "output_branch": "dot/public-strategies-20261003-b005",
+  "fixed_lab_main_base": "7e516e3e7fc9ab23809dba6736bbaaea9795bdef",
+  "executor": "dot exclusively",
+  "integration_and_global_progress_writer": "Codex root only",
+  "exclusive_ids": [
+    "M0296",
+    "M0299",
+    "M0312",
+    "M0314"
+  ],
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "allowed_paths": [
+    "research/public-strategies/M0296/**",
+    "research/public-strategies/M0299/**",
+    "research/public-strategies/M0312/**",
+    "research/public-strategies/M0314/**"
+  ],
+  "fixed_source_repository": "jesse-ai/example-strategies",
+  "fixed_source_commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+  "source_cards": "research/public-strategies/dot-rule-audit-preflight-20261003/source-audit-candidates.json",
+  "source_cards_sha256": "2ae4cc4b289fee8fb02645c1a85a052ef85ca5ef7d41c9d717879e7027b5a880",
+  "market_data_requests_authorized": false,
+  "historical_replays_authorized": false,
+  "strategy_runs_expected": 0,
+  "requirements": [
+    "Read exact original11-field rows in own verified6973catalog and preserve stable IDs/original text/public provenance without private Library locators",
+    "Verify fixed source SHA and MIT license; pin any reference Jesse indicator/engine API separately, never claim it is the original author runtime",
+    "Audit stated rule versus executable code/defaults, route/timeframe ambiguity, long/short/sizing/cost dependencies, callbacks and causality with independently checked synthetic cases where executable",
+    "Address each source-card audit focus; do not silently repair out-of-range defaults, shift signals, skip-profit logic or assign4h to unspecified routing",
+    "Compare against existing definitions/IDs read-only; report exact duplicate, related or distinct with evidence and confidence, never auto-merge/delete/renumber",
+    "Per-ID standalone Markdown and Graph-compatible structured record distinguish source-verified facts, assumptions and precise missing dependencies; no NAV/trade records without actual historical execution",
+    "Exact reviewed public file/hash manifest; private originals remain recoverable with independent manifest and Library readback if available; report backup failure accurately",
+    "Preserve frozen evidence, failures and original source bytes; add versioned findings only; remote readback of exact delivery commit required"
+  ],
+  "forbidden_changes": [
+    "Paths outside the four allowed ID roots",
+    "global progress, indexes, governance and allowlists",
+    "this contract, claims, preflight inputs, other assigned IDs or shared kernels",
+    "raw market acquisition/transfer/proxy fetch, strategy historical returns, real trading, credentials or permission changes",
+    "Site writes, user annotations, force push/rebase/delete, main or PR writes"
+  ],
+  "public_repository_exclusions": [
+    "Library IDs and private read receipts",
+    "credentials, signed URLs, personal annotations",
+    "raw market data and private account records"
+  ],
+  "handoff_required": [
+    "Exact head, per-ID file count/bytes/manifest SHA",
+    "Actual source/synthetic audit counts and precise blockers, historical runs0",
+    "Independent source/semantic checks and restoration receipts",
+    "Private Library identifiers only through private channel"
+  ],
+  "root_reserved_ids": [
+    "M0311",
+    "M0302",
+    "M0315"
+  ],
+  "previous_dot_reserved_ids": [
+    "M0298",
+    "M0304",
+    "M0257",
+    "M0273"
+  ]
+}

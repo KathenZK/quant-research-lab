@@ -1,0 +1,121 @@
+{
+  "schema": "public-source-audit-suggestions/v1",
+  "checked_at": "2026-10-03T12:24:00.474853+00:00",
+  "status": "NO_ADDITIONAL_UNCLAIMED_NATIVE4H_CONFIRMED_IN_BOUNDED_READ_SET",
+  "scope_limit": "Two previously read catalog ranges plus seven finite fixed-source timeframe checks; not exhaustive6973 search",
+  "suggestions": [
+    {
+      "id": "M0296",
+      "name": "SMACrossover",
+      "catalog_source": "https://github.com/jesse-ai/example-strategies/blob/master/SMACrossover/__init__.py",
+      "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+      "fixed_source_url": "https://raw.githubusercontent.com/jesse-ai/example-strategies/7c91e0a37bf62165790120d730442e4f6eb00364/SMACrossover/__init__.py",
+      "sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+      "bytes": 1809,
+      "status": 200,
+      "timeframe": "not fixed in strategy module; cannot call native4h",
+      "rule_summary": "SMA50 above/below SMA200 emits long/short states; opposite state liquidates existing position, all-balance sizing",
+      "audit_focus": [
+        "State test rather than crossover-event test: repeated eligibility while flat must match engine behavior",
+        "Both long and short source; do not project to spot-long without adaptation label",
+        "Pin Jesse routing timeframe, sizing utility/fee semantics and execution order; no timeframe invented"
+      ],
+      "claim_check": "No matching ID in 10 local claim manifests at check time; suggestion only, root must atomically assign",
+      "proposed_scope": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+      "new_strategy_runs": 0,
+      "fidelity_ceiling": "HYPOTHESIS unless separately established",
+      "framework_version": "UNPINNED_REQUIRES_AUDIT",
+      "source_license": "MIT at fixed repository commit; original source only in private local evidence"
+    },
+    {
+      "id": "M0299",
+      "name": "SimpleBollinger",
+      "catalog_source": "https://github.com/jesse-ai/example-strategies/blob/master/SimpleBollinger/__init__.py",
+      "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+      "fixed_source_url": "https://raw.githubusercontent.com/jesse-ai/example-strategies/7c91e0a37bf62165790120d730442e4f6eb00364/SimpleBollinger/__init__.py",
+      "sha256": "746cc0f8644a7fae12089f597448b573d4d482a3855c870d18b4a7bfeb0a5255",
+      "bytes": 1683,
+      "status": 200,
+      "timeframe": "1h explicitly in source docstring; not4h",
+      "rule_summary": "Long if close above upper Bollinger band using hl2 and above both Ichimoku spans; exit below middle band",
+      "audit_focus": [
+        "Pin Jesse Bollinger default period/std/matype and Ichimoku defaults/shift semantics",
+        "Resolve cross-library leading-span alignment and causality before any replay",
+        "Full balance sizing, should_cancel_entry True, no shorts; require engine order semantics"
+      ],
+      "claim_check": "No matching ID in 10 local claim manifests at check time; suggestion only, root must atomically assign",
+      "proposed_scope": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+      "new_strategy_runs": 0,
+      "fidelity_ceiling": "HYPOTHESIS unless separately established",
+      "framework_version": "UNPINNED_REQUIRES_AUDIT",
+      "source_license": "MIT at fixed repository commit; original source only in private local evidence"
+    },
+    {
+      "id": "M0312",
+      "name": "TradingView_RSI",
+      "catalog_source": "https://github.com/jesse-ai/example-strategies/blob/master/TradingView_RSI/__init__.py",
+      "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+      "fixed_source_url": "https://raw.githubusercontent.com/jesse-ai/example-strategies/7c91e0a37bf62165790120d730442e4f6eb00364/TradingView_RSI/__init__.py",
+      "sha256": "86a0532e427cfe3b4f3ff9fa94c7d007ffb544c96db7fa20613b7ebf724d2769",
+      "bytes": 1764,
+      "status": 200,
+      "timeframe": "not fixed in strategy module; cannot call native4h",
+      "rule_summary": "RSI crosses35 upward to enter; crosses75 or10 downward to liquidate; price-relative stop.95 and take-profit1.10",
+      "audit_focus": [
+        "RSI default5 lies outside declared min10/max30; confirm native engine validation rather than silently clipping",
+        "Third positional argument3 in size_to_qty must be checked against pinned Jesse API, not assumed leverage",
+        "Strict available_margin > quantity*price gate and same-candle stop/TP order semantics require independent audit"
+      ],
+      "claim_check": "No matching ID in 10 local claim manifests at check time; suggestion only, root must atomically assign",
+      "proposed_scope": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+      "new_strategy_runs": 0,
+      "fidelity_ceiling": "HYPOTHESIS unless separately established",
+      "framework_version": "UNPINNED_REQUIRES_AUDIT",
+      "source_license": "MIT at fixed repository commit; original source only in private local evidence"
+    },
+    {
+      "id": "M0314",
+      "name": "TurtleRules",
+      "catalog_source": "https://github.com/jesse-ai/example-strategies/blob/master/TurtleRules/__init__.py",
+      "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+      "fixed_source_url": "https://raw.githubusercontent.com/jesse-ai/example-strategies/7c91e0a37bf62165790120d730442e4f6eb00364/TurtleRules/__init__.py",
+      "sha256": "35e4c3cd69010ca81402277693cb6f7deaf52a284153f20f25d4cf605701408a",
+      "bytes": 8142,
+      "status": 200,
+      "timeframe": "source comments say day-based Turtle; module consumes supplied candles without fixed route; not confirmed4h",
+      "rule_summary": "Donchian20 entry/10 exit with ATR20 risk-sized long/short positions,2ATR stop,0.5ATR pyramiding up to4",
+      "audit_focus": [
+        "Pin Donchian current-bar inclusion and equality; both-range breakout prioritizes long branch",
+        "last_was_profitable only set in on_take_profit while no take_profit order appears; validate claimed skip-after-profit behavior against callbacks",
+        "Pyramiding counters/stops and1%/ATR sizing imply different risk from prose; do not silently repair or replace short exposure"
+      ],
+      "claim_check": "No matching ID in 10 local claim manifests at check time; suggestion only, root must atomically assign",
+      "proposed_scope": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+      "new_strategy_runs": 0,
+      "fidelity_ceiling": "HYPOTHESIS unless separately established",
+      "framework_version": "UNPINNED_REQUIRES_AUDIT",
+      "source_license": "MIT at fixed repository commit; original source only in private local evidence"
+    }
+  ],
+  "already_claimed_confirmed4h": [
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0293",
+    "M0316"
+  ],
+  "do_not_touch": [
+    "M0298",
+    "M0304",
+    "M0315",
+    "M0302",
+    "M0311",
+    "M0317",
+    "M0257",
+    "M0273"
+  ],
+  "market_data_requests": 0,
+  "new_strategy_runs": 0,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

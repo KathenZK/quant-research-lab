@@ -1,0 +1,53 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T12:29:13.689501+00:00",
+  "coordinator": "Codex root only",
+  "claims": [
+    {
+      "id": "M0296",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_SOURCE_RULE_DEDUP_AUDIT_ONLY_NOT_STARTED_BY_ROOT",
+      "historical_runs_authorized": false
+    },
+    {
+      "id": "M0299",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_SOURCE_RULE_DEDUP_AUDIT_ONLY_NOT_STARTED_BY_ROOT",
+      "historical_runs_authorized": false
+    },
+    {
+      "id": "M0312",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_SOURCE_RULE_DEDUP_AUDIT_ONLY_NOT_STARTED_BY_ROOT",
+      "historical_runs_authorized": false
+    },
+    {
+      "id": "M0314",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_SOURCE_RULE_DEDUP_AUDIT_ONLY_NOT_STARTED_BY_ROOT",
+      "historical_runs_authorized": false
+    },
+    {
+      "id": "M0311",
+      "owner": "root m0288",
+      "stage": "ASSIGNED_C0_THEN_DECLARED_EXECUTION_PROXY_REPLAY",
+      "timeframe": "native5m",
+      "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+      "input_scope": "Only already lawfully held root-environment input; no market request or transfer to dot",
+      "historical_runs_at_assignment": 0
+    },
+    {
+      "id": "M0302",
+      "owner": "root m0215 source preflight only",
+      "stage": "SOURCE_PREFLIGHT_COMPLETE_NO_REPLAY_ASSIGNED"
+    }
+  ],
+  "unchanged_dot_b004": [
+    "M0298",
+    "M0304"
+  ],
+  "dot_b004_status": "SOURCE_AND_BLOCKER_DELIVERY_ONLY_AFTER_NATIVE5M_FIRST_GET_TUNNEL403;0HISTORICAL_RUNS",
+  "forbidden": "No input transfer, proxy fetch, timeframe rewrite, new credentials, access bypass or repeated403requests",
+  "new_accepted_ids_at_assignment": 0,
+  "new_accepted_runs_at_assignment": 0
+}
