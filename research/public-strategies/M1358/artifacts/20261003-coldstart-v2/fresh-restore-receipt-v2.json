@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "regenerated_payload_files": 22,
+  "manifest_exact": true,
+  "network_requests": 0,
+  "scope": "own adapted experiment only; original forum source/project omitted; requires locked Python runtime preinstalled"
+}

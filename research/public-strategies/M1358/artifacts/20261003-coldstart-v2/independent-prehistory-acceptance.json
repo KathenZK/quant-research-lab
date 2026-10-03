@@ -1,0 +1,9 @@
+{
+  "status": "PASS_EXACT_V2_CODE_C0_SYNTHETIC_GATE_AUTHORIZED_FOUR_CONFIGURATIONS",
+  "source_commit": "11a101a855c9ef83a2b4223d49dfa9a6b48d4a51",
+  "C0_sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+  "independent_receipt_sha256": "493b186b0c3c9ccf4f7f0be2294a6367a9f1b5fa0dc8ee02a150bd6037d2aacc",
+  "completed_utc": "2026-10-03T15:54:18.953115+00:00",
+  "scope": "independent 124 checks plus rerun68synthetic, exact code/C0 before history",
+  "historical_runs_before_acceptance": 0
+}

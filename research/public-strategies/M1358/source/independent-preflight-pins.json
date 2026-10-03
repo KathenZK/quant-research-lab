@@ -1,0 +1,14 @@
+[
+  {
+    "receipt_name": "contract-review-addendum.json",
+    "bytes": 2774,
+    "sha256": "f5af91e6e5c759ebf49f757d5cb696d22825c0ffed52fb6de8ec5030d70aa267",
+    "scope": "pre-implementation independent source/contract/input review; not code acceptance"
+  },
+  {
+    "receipt_name": "input-and-reuse-review.json",
+    "bytes": 20393,
+    "sha256": "23aa79d472566a1b0f26bc752d2060b8368ac5067d5779f29dc23b7e20bab38c",
+    "scope": "pre-implementation independent source/contract/input review; not code acceptance"
+  }
+]

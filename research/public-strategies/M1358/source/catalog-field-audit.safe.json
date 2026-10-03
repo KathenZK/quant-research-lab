@@ -1,0 +1,64 @@
+{
+  "record_id": "M1358",
+  "catalog_commit": "26712be68a662d15dcdb636a197a8062457246b5",
+  "catalog_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1358.json",
+  "catalog_blob": "e1a37c5c5be0188805abc3d57c4c337d4086c632",
+  "field_count": 11,
+  "review": [
+    {
+      "field": "id",
+      "status": "VERIFIED",
+      "finding": "原固定记录为 M1358；不新增编号。"
+    },
+    {
+      "field": "source_url",
+      "status": "VERIFIED",
+      "finding": "原 canonical URL 200；只读公开 HTML。"
+    },
+    {
+      "field": "作者或机构",
+      "status": "VERIFIED",
+      "finding": "主题作者可见为 Andy Lee；未将回复作者的项目并入。"
+    },
+    {
+      "field": "别名来源",
+      "status": "NO_ADDITIONAL_ALIAS_ESTABLISHED",
+      "finding": "原值无；未据类名另分配策略 ID。"
+    },
+    {
+      "field": "可回测",
+      "status": "QUALIFIED",
+      "finding": "目录高可回测不是可执行验收；信号可重建，原运行环境与账户初始化尚未验证。"
+    },
+    {
+      "field": "名称",
+      "status": "MISMATCH_STATE_VS_CROSS",
+      "finding": "标题上穿/下穿易误导；代码比较当前 EMA 状态，不比较前值。"
+    },
+    {
+      "field": "市场",
+      "status": "VERIFIED_WITH_MODEL_CAVEAT",
+      "finding": "Binance BTCUSDT 日线 Crypto，代码指定 Margin；不能偷换 futures 或纯 Cash。"
+    },
+    {
+      "field": "提出日期",
+      "status": "NEW_SOURCE_METADATA",
+      "finding": "原目录未知保留；本次 HTML 主题 datePublished 为 2022-05-13 01:26:56，时区未标，不能视作带 UTC 的正式发布日期。"
+    },
+    {
+      "field": "标题",
+      "status": "MISMATCH_STATE_VS_CROSS",
+      "finding": "与名称相同措辞偏差，审校报告提出修订而不修改固定目录。"
+    },
+    {
+      "field": "规则",
+      "status": "PARTIALLY_VERIFIED_INCOMPLETE_ENVIRONMENT",
+      "finding": "核心持仓/EMA 状态规则一致；完整可见类补充起止日、现金调用、Margin、slow.IsReady；需保留其隐式默认依赖。"
+    },
+    {
+      "field": "页码或文件",
+      "status": "VERIFIED_VISIBLE_CLASS_ONLY",
+      "finding": "当前公开页完整可见一个 Python 类的 Initialize/OnData；不等于原工程/依赖锁/回测原件。"
+    }
+  ]
+}
