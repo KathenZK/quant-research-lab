@@ -47,3 +47,7 @@ M0220已通过现有Graph `corpus_research.build_manifest` 做实际离线输入
 ## 已完成的离线准备增量
 
 M0220新增准备适配器已用原冻结证据执行：核验并保留26份原文件，生成4份明确标为草稿的投影；共30文件逐字节复核。18项合成测试与Ruff通过。仍缺其余5个原生文件及真实定义/来源范围，native_import_ready保持false，没有创建runtime或调用导入器。见 [逐策略准备说明](../../../public-strategies/M0220/diagnostics/graph-pilot-preparation-20261003.md) 和 [原生恢复工具侧交接](sites-native-restore-handoff-20261003.md)。`1297284`的Governance gates运行37107766484已完成且成功。
+
+## 当前授权状态修正
+
+用户已于2026-10-03 08:03:59 UTC确认数据条款和原Site限定操作。原生短期源码凭证创建已成功，自动发布未启用，秘密仅在内存。此前“缺凭证授权”不再是当前阻塞；剩余阻塞为官方site-workflow.mjs不可用。get_site复核原站仍为owner-private、version8 active；没有实际源码checkout、私有runtime恢复、Graph导入或新部署回执。
