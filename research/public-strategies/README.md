@@ -111,3 +111,5 @@
 - [M2903 EMA20事件交叉](M2903/README-prehistory-status-v1.md)：精确C0与合成独审通过，持久化门禁前不运行历史。
 - [M3710 SMA20状态规则](M3710/README-prehistory-status-v1.md)：精确C0与合成独审通过，历史未放行。
 - [批020协调检查点003](progress-20261003-batch020-checkpoint003.json)：43 ID／175策略配置／22原始控制；新增准备与已执行研究分开记账。
+
+- [批020交付增补004](progress-20261003-batch020-delivery004.json)：43 ID／175配置／22原始对照不变；Lab PR42与Graph PR29精确main CI通过，26条离线展示，Library上传401仍未解决。
