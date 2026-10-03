@@ -199,6 +199,8 @@
 
 ## 共享研究内核
 
+- [catalog-daily-input-view](_shared-kernels/catalog-daily-input-view/README.md)：v1 校验完整日线输入、特征切片和账户索引；批020三消费者各自执行C0门禁，不改变原全现金账户内核。
+
 跨资产或跨家族复用的研究引擎存放在 `_shared-kernels/`，按冻结版本目录管理（见 [_shared-kernels/README.md](_shared-kernels/README.md)）。当前包括 [1h-adaptive-regime-search/](_shared-kernels/1h-adaptive-regime-search/README.md)、[multi-horizon-ema-forecast/](_shared-kernels/multi-horizon-ema-forecast/README.md)、[ema-trend-breakout/](_shared-kernels/ema-trend-breakout/README.md)、[bollinger-keltner-squeeze-breakout/](_shared-kernels/bollinger-keltner-squeeze-breakout/README.md) 与 [binance-ma7-root-data/](_shared-kernels/binance-ma7-root-data/README.md)。
 
 ## 目录与存储约定

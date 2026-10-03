@@ -1,0 +1,164 @@
+{
+  "actual_tests": {
+    "author_original_groups_normal": 7,
+    "author_original_groups_optimized": 7,
+    "failed_groups": 0,
+    "independently_written_groups_normal": 7,
+    "independently_written_groups_optimized": 7,
+    "logs": [
+      {
+        "bytes": 923,
+        "optimization": 0,
+        "path": "author-normal.log",
+        "sha256": "ef51c6523474002d8a3bffdaed7f7ec88471f047c690fedf6dd1e542241778a4",
+        "test_groups": 7
+      },
+      {
+        "bytes": 929,
+        "optimization": 1,
+        "path": "author-optimized.log",
+        "sha256": "2f49104f1c6ec5fefd4ab6595e9f73d32bfd16840e9d2264f06ef8be275eb8e0",
+        "test_groups": 7
+      },
+      {
+        "bytes": 1099,
+        "optimization": 0,
+        "path": "own-normal.log",
+        "sha256": "41c35e467a913da9c5be9f49cccbe65f83042151bbad80d5d519dd41950a0b70",
+        "test_groups": 7
+      },
+      {
+        "bytes": 1105,
+        "optimization": 1,
+        "path": "own-optimized.log",
+        "sha256": "34cf9d0b3a93193b7f3cd1ad67e997ad9520a151b7744e09ca38c54687ec39d0",
+        "test_groups": 7
+      }
+    ],
+    "test_processes": 4
+  },
+  "adapter_bytes": 8485,
+  "adapter_sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22",
+  "base_commit": "5e92b97a3f5d1c07d980516d0e06d8991d2024ac",
+  "blocking_adapter_findings": [],
+  "created_at_utc": "2026-10-03T21:40:51.009159+00:00",
+  "guard_launcher_sha256": "9af9a1f47cc2b6a01ccc89fcf9617f3e992aa249a10e68ff952d2df127f1b67b",
+  "limitations": [
+    "Structural projection cannot mathematically prove indicators were not reseeded or computed using future data; consumer full-trace oracle/init/prefix/future checks remain required.",
+    "Readiness field semantics and earliest crossover readiness belong to each consumer C0; declaration validation does not certify economic correctness.",
+    "InputView is an in-process validated value, not an authentication token against code that deliberately constructs one.",
+    "Actual canonical input bytes were not read; this is code and synthetic QA, not historical input/strategy acceptance or a C0 history gate."
+  ],
+  "manifest_bytes": 934,
+  "manifest_sha256": "fa2f58d33d4c11c5b0436c67623cc3ea70755b2ac795fe35dcb20f75d6150bca",
+  "manifest_validation": "Actual three listed payload lengths and SHA256 values match; manifest fixed by independent supplied934-byte hash; root README pins manifest.",
+  "own_coverage": {
+    "features": "Both full traces preserved then offset-sliced; mandatory exact index/time/close fields; explicit ready integers and required finite numeric fields; no pre-ready signals; all evaluation rows ready; no bool/float or nonfinite Decimal recursively.",
+    "immutability": "Original list/dict mutations do not alter validated InputView/FeatureView; nested sequence/mapping output immutable; high-precision Decimal exponent and trailing zeros preserved.",
+    "index_mapping_per_test_run": {
+      "canonical_comparisons": 2297,
+      "eval_comparisons": 1462,
+      "pending_signal_delay_combinations": 2924,
+      "roundtrip_comparisons": 2920,
+      "view_comparisons": 1524
+    },
+    "input": "Independently serialized fabricated831/1466 constant-price rows; exact original string values and fixed CRLF762-row projection; direct production loader rejects all fabricated identities.",
+    "mapping": "All canonical/view/eval bars; missing pre-view/pre-evaluation coordinates remain None; reject bool,float,Decimal,str,out-of-range indices; exact evaluation pending due and delay1/2 including future731/732 ordinals without invented rows; strictly increasing actual fill indices.",
+    "projection_scope": "Changes to a dropped early feature remain visible in full trace but not view; a future endpoint change only changes matching endpoint; no indicator or accounting computation performed.",
+    "rejections": "Wrong UTC/close grid, bounds/volumes/taker/trade type/ignore, LF/BOM/header/truncated/invalidUTF8, wrong lengths/hashes/dimensions, invalid readiness schemas and nested values fail explicitly."
+  },
+  "profiles": [
+    {
+      "canonical_bytes": 139983,
+      "canonical_rows": 831,
+      "canonical_sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+      "canonical_warmup": 100,
+      "name": "warmup100",
+      "offset": 69
+    },
+    {
+      "canonical_bytes": 247171,
+      "canonical_rows": 1466,
+      "canonical_sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+      "canonical_warmup": 735,
+      "name": "warmup735",
+      "offset": 704
+    }
+  ],
+  "runtime_boundary": {
+    "account_engine_executed": false,
+    "global_progress_written": false,
+    "historical_controls": 0,
+    "historical_data_read": false,
+    "historical_features_computed": false,
+    "historical_strategy_runs": 0,
+    "history_release_issued": false,
+    "network_calls": 0,
+    "normal_and_optimized_executed": true,
+    "observed_workspace_access": "Only own or verified copied code and attempted missing pycache lookups; no pyc files created.",
+    "python": "CPython3.12.14",
+    "repositories_modified": false,
+    "workspace_access_guard": "All /workspace and /tmp file opens outside this new synthetic review directory rejected; network connection/address-resolution audit events rejected."
+  },
+  "schema": "catalog-daily-input-view-independent-synthetic-review/v1",
+  "separate_governance_issue": {
+    "reported_by_root": "Existing freeze-checker accepted dict manifests but this immutable manifest uses a typed list; root is adding strict list compatibility and required index registration without changing frozen five files.",
+    "review_of_that_patch": "Pending separate provided diff; not a mathematical or synthetic-adapter failure."
+  },
+  "source_commit": "ba5edc400c1881a62c7485898f69fbbeb5046c46",
+  "source_diff": "Exactly five additions in catalog-daily-input-view; no edits to old dailycash kernels, histories, or consumers.",
+  "source_files": [
+    {
+      "bytes": 611,
+      "path": "research/_shared-kernels/catalog-daily-input-view/README.md",
+      "sha256": "f0b56649796aede7f14b85c81f2b7fc33a5305521adbca4eb26b4a7d3ceb5e04"
+    },
+    {
+      "bytes": 5799,
+      "path": "research/_shared-kernels/catalog-daily-input-view/v1/README.md",
+      "sha256": "acf7c4f8795c94329258c27e61e7346171e212b1d74921e65026bdf0ff287e04"
+    },
+    {
+      "bytes": 8485,
+      "path": "research/_shared-kernels/catalog-daily-input-view/v1/adapter.py",
+      "sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22"
+    },
+    {
+      "bytes": 934,
+      "path": "research/_shared-kernels/catalog-daily-input-view/v1/manifest.json",
+      "sha256": "fa2f58d33d4c11c5b0436c67623cc3ea70755b2ac795fe35dcb20f75d6150bca"
+    },
+    {
+      "bytes": 8492,
+      "path": "research/_shared-kernels/catalog-daily-input-view/v1/tests/test_adapter.py",
+      "sha256": "1300a5bb130f9f532f24caba29f801fbcdda8cc8c9a2c0379249aa2cd8f2db40"
+    }
+  ],
+  "source_files_bytes": 24321,
+  "source_files_unchanged_after_review": true,
+  "static_checks": {
+    "no_file_network_indicator_or_accounting_calls": true,
+    "private_synthetic_test_pin_replacement_not_public_loader_bypass": true,
+    "public_loader_has_only_two_frozen_profiles": true,
+    "removable_assertions_in_adapter": 0,
+    "stdlib_only_imports": [
+      "collections.abc",
+      "csv",
+      "dataclasses",
+      "decimal",
+      "hashlib",
+      "io",
+      "types"
+    ]
+  },
+  "status": "PASS_CODE_AND_SYNTHETIC_ONLY_NOT_HISTORY_GATE",
+  "test_source_sha256": "b9a648e594196222dcb208cdab9bc2439ca816f157ea3c4039622506d19c0cd3",
+  "view": {
+    "bytes": 128196,
+    "evaluation": 731,
+    "note": "Production byte identities inspected as code constants; no corresponding real input bytes read in this review.",
+    "rows": 762,
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "warmup": 31
+  }
+}
