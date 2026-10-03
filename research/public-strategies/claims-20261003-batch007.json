@@ -1,0 +1,81 @@
+{
+  "schema": "public-catalog-parallel-claims/v1",
+  "assigned_at_utc": "2026-10-03T11:52:59.830392+00:00",
+  "coordinator": "root only",
+  "base_commit": "d5a0c5ee6ac7ddc56159b3d5969c5267ca83bf96",
+  "claims": [
+    {
+      "id": "M0315",
+      "owner": "m0288",
+      "status": "ASSIGNED_IMPLEMENTATION_AND_SYNTHETIC_QA_ONLY",
+      "allowed_path": "research/public-strategies/M0315/",
+      "source_sha256": "b3a62e0d8a26024e7ab5f3613d0964e3954373bc3735c1ffd0678d84ce1b1e32",
+      "source_bytes": 4558,
+      "native_timeframe": "5m",
+      "fidelity_ceiling": "HYPOTHESIS",
+      "historical_replay_not_started": true
+    },
+    {
+      "id": "M0298",
+      "owner": "m0215",
+      "status": "ASSIGNED_IMPLEMENTATION_AND_SYNTHETIC_QA_ONLY",
+      "allowed_path": "research/public-strategies/M0298/",
+      "source_sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+      "source_bytes": 2695,
+      "native_timeframe": "5m",
+      "fidelity_ceiling": "HYPOTHESIS",
+      "historical_replay_not_started": true
+    },
+    {
+      "id": "M0304",
+      "owner": "m0217",
+      "status": "ASSIGNED_IMPLEMENTATION_AND_SYNTHETIC_QA_ONLY",
+      "allowed_path": "research/public-strategies/M0304/",
+      "source_sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+      "source_bytes": 4363,
+      "native_timeframe": "5m",
+      "fidelity_ceiling": "HYPOTHESIS",
+      "historical_replay_not_started": true
+    }
+  ],
+  "window": {
+    "input_start": "2023-12-01T00:00:00Z",
+    "input_end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_start": "2024-01-01T00:00:00Z",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "warmup_days": 31,
+    "expected_input_rows": 114336,
+    "expected_evaluation_rows": 105408,
+    "reason": "Previous 2023-2024 native5m candidate input was blocked by March2023 official-archive gap, native zero-volume records and irregular close_time. Preserve that failure. Declare separate calendar2024 diagnostic before viewing candidate historical performance, without silently repairing or excluding records within this new window.",
+    "window_limitations": [
+      "Researcher-chosen single calendar year; original author historical evaluation window unknown.",
+      "Availability-driven window selection; not an independent OOS or robust full-cycle test.",
+      "2024 historical market conditions and prior catalog research are known; prior total search count unknown.",
+      "Do not compare this window directly to prior 2023-2024 strategy totals; each new run has same-window buy-and-hold."
+    ]
+  },
+  "data_owner": "m0200 only;13month native5m QA in progress",
+  "historical_performance_gate": "Do not run historical performance before coordinator accepts exact input and executor freezes full source/spec/code/input/environment hashes and exposure. Synthetic implementation can proceed.",
+  "intended_cases": [
+    "base fee8bps/slip2bps/next5mbar",
+    "fee0 with slip retained",
+    "fee20 with slip retained",
+    "extra1bar delay",
+    "same-window same95percent-budget buyhold"
+  ],
+  "fixed_initial_cash": 100000,
+  "cash_budget_fraction_including_buy_fee": 0.95,
+  "strict_reproductions": 0,
+  "actual_started_historical_runs": 0,
+  "external_reserved_ids": [
+    "M0257",
+    "M0273",
+    "M0316",
+    "M0317"
+  ],
+  "source_only_blockers_not_counted_backtested": [
+    "M0294 original-source future interpolation",
+    "M0295 native1m data unavailable"
+  ],
+  "publication_boundaries": "No raw market snapshots, private Library identifiers, credentials, signed URLs or personal annotations in public Git; root alone integrates/global counts; dot alone writes active Site and6973 output branch."
+}
