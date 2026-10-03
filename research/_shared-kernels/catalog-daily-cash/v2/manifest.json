@@ -1,0 +1,46 @@
+{
+  "schema": "catalog-daily-cash-kernel/v2",
+  "base_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+  "parent_version": "v1",
+  "status": "CANDIDATE_FROZEN_FOR_INDEPENDENT_REVIEW",
+  "execution_policy": {
+    "max_completed_closes": 25
+  },
+  "default_behavior": "v1 byte-compatible",
+  "historical_runs": 0,
+  "new_strategy_trials": 0,
+  "new_controls": 0,
+  "files": [
+    {
+      "path": "engine.py",
+      "bytes": 11513,
+      "sha256": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219"
+    },
+    {
+      "path": "verify_account.py",
+      "bytes": 10965,
+      "sha256": "191961bece1b80c02d074894a8f48fde8c3f6360b5ab564cc69484fae3b14712"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3699,
+      "sha256": "60979d769e0e09ee0f0cae8c3ff879129014d18931c21eaf1eb1a26eedee361f"
+    },
+    {
+      "path": "tests/test_lifecycle.py",
+      "bytes": 9843,
+      "sha256": "ceea3ed5bd9faaa4aca8e2ec57130225f3784b04cb72a4f10987f5be5c7a21a8"
+    },
+    {
+      "path": "tests/synthetic-receipt.json",
+      "bytes": 2491,
+      "sha256": "d8933bd0175b83c10afc0c7cdab0ca7077757607cdbd6ef1062d49c1ad409369"
+    }
+  ],
+  "unchanged_v1": {
+    "manifest.json": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4",
+    "engine.py": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+    "verify_account.py": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+  },
+  "root_frozen_readme_sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+}
