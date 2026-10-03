@@ -1,0 +1,56 @@
+{
+  "status": "PASS_INDEPENDENT_SYNTHETIC_PREHISTORY_CODE_REVIEW",
+  "C0_sha256": {
+    "M1396": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+    "M1463": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80"
+  },
+  "engine_sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+  "verifier_sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe",
+  "IDs": [
+    {
+      "id": "M1396",
+      "feature_rows_checked": 762,
+      "account_states_checked": 2924,
+      "fills_checked": 536,
+      "months_checked": 96,
+      "prefix_future_cases": 8
+    },
+    {
+      "id": "M1463",
+      "feature_rows_checked": 762,
+      "account_states_checked": 2924,
+      "fills_checked": 102,
+      "months_checked": 96,
+      "prefix_future_cases": 8
+    }
+  ],
+  "states_checked": 5848,
+  "fill_records_checked": 638,
+  "adversarial_checks": {
+    "noevent_retains": true,
+    "opposite_cancel_flat": true,
+    "repeat_does_not_postpone": true,
+    "both_exit_priority": true,
+    "tiny_zero_rejected": true,
+    "equality_current_neutral": true,
+    "prev_and_current_bands_distinct": true
+  },
+  "source_data_used": "None; deterministic invented762bar OHLC decimal path only",
+  "coverage": "Independent rational feature moments/weekday;Decimal50 fill/principal/fee/cash/qty/equity/pending/time;stdlib metrics;24monthly accounts percase. ExistingworkerQA reviewed separately,not counted ourchecks.",
+  "gate_review": "Pinnedkernel loader checks manifest+engine/verifier;run_replay beforefeatures checks C0files,environment,inputhash/rootgate andcontrolidentity/filehash. Rootgate is coordinator attestation,remotecommit string alone not a cryptographic proof of remoteacceptance;root must supply verifiedcontrolreceipt.",
+  "limits": [
+    "No historical engine/inputfeatures/returns requested;controlacceptance andremote-core gates remain root-owned.",
+    "Originalframework/source not verified;contracts expresslycatalogHYPOTHESIS.",
+    "Full production feature/NAV serialization requires postrun independent validation; short 1bar prefix can emit numpy warning but null Sharpe matches contract."
+  ],
+  "wall_seconds": 0.34406293099891627,
+  "cpu_seconds": 0.741313735,
+  "max_rss_kib": 31172,
+  "checked_utc": "2026-10-03T17:10:34.159116+00:00",
+  "new_history": 0,
+  "new_controls": 0,
+  "market_requests": 0,
+  "repo_writes": 0,
+  "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+  "commit_worktree_byte_equal_files": 52
+}

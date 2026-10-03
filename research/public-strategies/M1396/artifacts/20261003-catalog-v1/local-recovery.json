@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "compared_files": 31,
+  "scope": "Fresh local source+input reconstruction, not Library snapshot or remote recovery",
+  "strategy_configurations_research_count": 0,
+  "new_controls": 0
+}

@@ -1,0 +1,299 @@
+{
+  "id": "M1463",
+  "run_id": "m1463-catalog-daily-20261003-v1",
+  "origin_run_id": "m1463-catalog-daily-20261003-v1",
+  "variant_id": "M1463-catalog-daily-v1-base",
+  "name": "BTC布林20/2上破/中轨退出：目录假设",
+  "family": "catalog-daily-bollinger20x2-fullcash",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "目录规则锚定的显式日线假设与全现金成交代理，非原作者严格复现",
+  "metrics": {
+    "periods": {
+      "full": {
+        "total_return": 0.9146304091003157,
+        "cagr": 0.38308710285827385,
+        "max_drawdown": -0.2498188059416544,
+        "sharpe_zero_cash": 1.2036380507513895,
+        "observations": 731,
+        "final_equity": 191463.04091003156,
+        "sharpe": 1.2036380507513895,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      },
+      "2023-2024": {
+        "total_return": 0.9146304091003157,
+        "cagr": 0.38308710285827385,
+        "max_drawdown": -0.2498188059416544,
+        "sharpe_zero_cash": 1.2036380507513895,
+        "observations": 731,
+        "final_equity": 191463.04091003156,
+        "sharpe": 1.2036380507513895,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "total_return": 4.651299863331392,
+        "cagr": 1.3744318581300612,
+        "max_drawdown": -0.261513750538678,
+        "sharpe_zero_cash": 2.016493590663557,
+        "observations": 731,
+        "final_equity": 565129.9863331392,
+        "sharpe": 2.016493590663557,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "total_return": 1.4714920351707903,
+        "cagr": 0.571125312597027,
+        "max_drawdown": -0.21173276362533522,
+        "sharpe_zero_cash": 1.6243552798656768,
+        "observations": 731,
+        "final_equity": 247149.20351707903,
+        "sharpe": 1.6243552798656768,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "cost_sensitivity": {
+      "fee0": {
+        "2023-2024": {
+          "total_return": 0.9768894270811463,
+          "cagr": 0.4053637237282781,
+          "max_drawdown": -0.24318783542502653,
+          "sharpe_zero_cash": 1.2557229146984734,
+          "observations": 731,
+          "final_equity": 197688.94270811463,
+          "sharpe": 1.2557229146984734,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      },
+      "fee20": {
+        "2023-2024": {
+          "total_return": 0.8248987504811733,
+          "cagr": 0.35033243958887406,
+          "max_drawdown": -0.259657392643032,
+          "sharpe_zero_cash": 1.1253744513890578,
+          "observations": 731,
+          "final_equity": 182489.87504811733,
+          "sharpe": 1.1253744513890578,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+    "capital_state": {
+      "initial_cash_usdt": 100000,
+      "final_equity_usdt": 191463.04091003156,
+      "final_position_open": false,
+      "terminal_pending": null
+    }
+  },
+  "spec": {
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-bollinger-bands-trading-strategy-performance-backtest/",
+    "assumptions": [
+      "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY; strict0",
+      "Catalog position fraction unspecified; fullcash fee-inclusive is explicitly selected hypothesis, not author rule.",
+      "31 pre-evaluation daily bars for indicators; start allcash, no warmup intent. First evaluation close may compare prior ready feature; earliest signal-driven fill is second evaluation open.",
+      "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+      "Proposed Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+      "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+      "base8bps/2bps each side; fee0 and fee20 retain2bps slippage; delay2 extra dailybar",
+      "No author runtime equivalence, PIT/tradability not proven; no untouched OOS",
+      "M1258 accepted existing fullcash100%control, no newcontrol",
+      "Population ddof0; sum((close-mean)^2) in chronological order/20, then Decimal50.sqrt(); upper=mean+2*sqrt(variance), lower=mean-2*sqrt(variance).",
+      "Previousready C<=upper and current C>upper; strict currentupcross, not persistent aboveupper entry.",
+      "Previousready C>=middle and current C<middle; strict currentdowncross; exactmiddle equality retains position.",
+      "No membership content or internal catalog curation published"
+    ],
+    "rule_excerpt": "本条只写源文件已印出的规则。本条只写QuantifiedStrategies《Bitcoin Bollinger Bands Trading Strategy》免费Key Takeaways与正文已印句，不是会员墙正式Trading Rules小节。标的比特币；布林用20日SMA与±2标准差。Key Takeaways写：上轨突破触发做多入场；中轨交叉作为离场；只强调多头侧更有效。正式Trading Rules与做空规则段会员墙，本条不补会员正文，也不把下轨均值回归写成默认。页面写回测约2015至今；未印仓位%、手续费。提出日期取datetime首条。 不是M0184四小时布林下轨均值回归，也不是M0819 SPY布林+RSI均值回归：本条是比特币布林(20,2)收盘上破上轨做多、收盘回到中轨离场（只做多；Key Takeaways；正式Trading Rules会员墙不补）。 计入加密。 提出日期按源文件原样保留2026-01-25。",
+    "params": {
+      "timeframe": "1d",
+      "fraction": "1",
+      "fee_bps": 8,
+      "slippage_bps": 2,
+      "lag_bars": 1
+    }
+  },
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "deep_validation": {
+    "account": "PASS independent Decimal serialized state/fills/months",
+    "causality": "PASS 24prefix/future checks",
+    "recovery": "31files byte-exact fresh local; thisID remote core pending coordinator"
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 1.3488004189320375,
+      "drawdown": -0.025994532964371608
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 1.3263233256536233,
+      "drawdown": -0.042225853350214594
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 1.3767610651280633,
+      "drawdown": -0.005803389875654582
+    },
+    {
+      "date": "2023-04-30",
+      "equity": 1.3075283990962785,
+      "drawdown": -0.05579818099960963
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 1.2664437650504217,
+      "drawdown": -0.08546651265946137
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 1.3409118187013045,
+      "drawdown": -0.031691105744261525
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 1.2751853734207603,
+      "drawdown": -0.07915395950194098
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 1.2751853734207603,
+      "drawdown": -0.07915395950194098
+    },
+    {
+      "date": "2023-09-30",
+      "equity": 1.2276508582161256,
+      "drawdown": -0.11347992576970158
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 1.4282508459246779,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 1.4722096010765433,
+      "drawdown": -0.056851248377788696
+    },
+    {
+      "date": "2023-12-31",
+      "equity": 1.5409353703230084,
+      "drawdown": -0.06424393068974908
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 1.3331323359546183,
+      "drawdown": -0.19043543383536557
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 1.797674271692565,
+      "drawdown": -0.020840561185672114
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 1.9183711753825996,
+      "drawdown": -0.10725060514491858
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 1.9183711753825996,
+      "drawdown": -0.10725060514491858
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 1.9550547266238278,
+      "drawdown": -0.09017923825200734
+    },
+    {
+      "date": "2024-06-30",
+      "equity": 1.9465709522917376,
+      "drawdown": -0.09412731905005725
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 1.9417399048551307,
+      "drawdown": -0.09637553604314616
+    },
+    {
+      "date": "2024-08-31",
+      "equity": 1.7961871605816049,
+      "drawdown": -0.1641111890998446
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 1.805213054198896,
+      "drawdown": -0.1599108230975479
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 1.671705367858767,
+      "drawdown": -0.22204108637409092
+    },
+    {
+      "date": "2024-11-30",
+      "equity": 2.054410715901512,
+      "drawdown": -0.04394209684729964
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 1.9146304091003155,
+      "drawdown": -0.11137534283137117
+    }
+  ],
+  "curve_meta": {
+    "observations": 731,
+    "total_observations": 731,
+    "returned_points": 25,
+    "sampling": "first barclose+24UTCmonthend closes;bar-open date label",
+    "equity_unit": "initial_capital_multiple",
+    "drawdown_unit": "fraction",
+    "benchmark_curve_available": false
+  },
+  "lineage": {
+    "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+    "C0_sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80",
+    "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "result_manifest_sha256": "fbd8aa6085f08b4546b03c1c703b7b885198ea87b9b345cfca454ecc11c9f881",
+    "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+    "control_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "new_control_runs": 0
+  },
+  "limitations": [
+    "Strict0;notpromoted",
+    "Prior-exposed2023–2024nonOOS",
+    "Partial fills, lot constraints, market impact and true publication timing not proved",
+    "Private fullNAV/raw excluded from public core"
+  ]
+}

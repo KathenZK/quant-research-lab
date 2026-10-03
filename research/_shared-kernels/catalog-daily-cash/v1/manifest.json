@@ -1,0 +1,23 @@
+{
+  "schema": "shared-kernel/v1",
+  "mechanism": "daily allcash Decimal50 account/pending/monthly/statistics with independent verifier",
+  "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+  "source_files": {
+    "run_replay.py": "67c9a6ab99cdc9e7f96626bcde25cad303e067f6d466e1901c093917ced4497c",
+    "verify_replay.py": "34c2192da14d30ea53819d5964a2fcb8e0fe9e3b69537b71c6a1fb469f338b0b"
+  },
+  "adaptations": [
+    "Removed RSI feature generation, source-family environment path and strategy CLI",
+    "Removed new benchmark creation; consumers must reuse independently accepted control",
+    "Generic feature-independent decisions",
+    "Explicit simultaneous-event exit priority before pending cancellation; both chosen strategy predicates mutually exclusive on real inputs"
+  ],
+  "files": {
+    "engine.py": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+    "verify_account.py": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+  },
+  "consumers": [
+    "M1396",
+    "M1463"
+  ]
+}
