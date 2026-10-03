@@ -1,0 +1,101 @@
+{
+  "schema": "public-catalog-executor-output-contract/v1",
+  "created_at_utc": "2026-10-03T12:08:18.246975+00:00",
+  "repository": "KathenZK/quant-research-lab",
+  "output_branch": "dot/public-strategies-20261003-b004",
+  "fixed_lab_main_base": "d5a0c5ee6ac7ddc56159b3d5969c5267ca83bf96",
+  "assignment_predecessor": "42e43ed1145129a7e8590fbec37d9b66073b3837",
+  "executor": "dot exclusively",
+  "integration_and_global_progress_writer": "Codex root only",
+  "exclusive_ids": [
+    "M0298",
+    "M0304"
+  ],
+  "root_excluded_id": "M0315",
+  "allowed_paths": [
+    "research/public-strategies/M0298/**",
+    "research/public-strategies/M0304/**"
+  ],
+  "source_preflights": [
+    {
+      "id": "M0298",
+      "path": "research/public-strategies/batch007-native5m-preflight-20261003/specs/M0298-source-preflight.json",
+      "sha256": "e545c0a64864e8bf7e4a925c7a1de7d9dc2b97ccdf933fe8dc5981ab99cadc7c",
+      "source": {
+        "repository": "freqtrade/freqtrade-strategies",
+        "ref": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+        "path": "user_data/strategies/berlinguyinca/Simple.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+        "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+        "bytes": 2695
+      }
+    },
+    {
+      "id": "M0304",
+      "path": "research/public-strategies/batch007-native5m-preflight-20261003/specs/M0304-source-preflight.json",
+      "sha256": "75198005c05c85991778a26f88df52d4e87fb97f6bd1f71e5096069c807e6a50",
+      "source": {
+        "repository": "freqtrade/freqtrade-strategies",
+        "ref": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+        "path": "user_data/strategies/Strategy002.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy002.py",
+        "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+        "bytes": 4363
+      }
+    }
+  ],
+  "input": {
+    "recipe": "research/public-strategies/batch007-native5m-preflight-20261003/README.md",
+    "timeframe": "native5m",
+    "market": "Binance BTCUSDT spot",
+    "input_start_inclusive": "2023-12-01T00:00:00Z",
+    "input_end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_start_inclusive": "2024-01-01T00:00:00Z",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "rows": 114336,
+    "evaluation_rows": 105408,
+    "bytes": 31428289,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "expected_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+    "selection_limit": "Calendar2024 availability-selected after earlier2023 QA failure, before these candidate returns; not OOS, not directly comparable with earlier2year total returns.",
+    "restore_required": "Restore in the executor own filesystem using the fixed recipe, validate all39sourceobjects and full114336row QA, independent byte-identical canonical rebuild before historical runs. Root path availability is not evidence of dot recovery.",
+    "stop_conditions": [
+      "Any403/451, redirect, checksum or source hash mismatch, gaps/duplicates/zero-volume/nonstandard close_time, less than5GiB free disk",
+      "Do not switch host/timeframe/window, loosen QA, create credentials, delete evidence or bypass access restrictions"
+    ]
+  },
+  "pre_run_requirements": [
+    "Per-ID C0 freeze protocol, execution code/dependency versions, source/default semantics, costs and exposure before viewing historical performance",
+    "Use fixed original source with all attributes; framework reference is not proof of original runtime. Preserve M0298 entry/exit collisions and M0304 exit_profit_only=true",
+    "Declare order pricing/fill/timeout/stake assumptions, ROI-stop-exit precedence and bar ambiguity; any substitute port remains HYPOTHESIS or ADAPTATION, never strict reproduction",
+    "Register4predeclared configurations (cost and execution sensitivity) plus1same-window buyhold control per ID; no performance-dependent search or silent rule fixes"
+  ],
+  "forbidden_changes": [
+    "Any path outside the two allowed ID roots",
+    "global progress/indexes/governance/allowlists/shared kernels/other IDs",
+    "This contract, ownership claims or preflight source/recipe bytes",
+    "Site publication, production execution, force push/rebase/delete"
+  ],
+  "frozen_evidence_policy": "Preserve C0 timestamps/hash/code base and all original evidence. Add versioned findings; never overwrite frozen evidence.",
+  "publication_policy": {
+    "public_repository": true,
+    "exact_public_allowlist_and_hash_manifest_required": true,
+    "forbidden": "private Library identities, credentials, personal annotations, signed URLs and raw market data",
+    "private_backups": "Save recoverable archive and independent manifest to private Library and verify readback/recovery; report privately. Data that cannot legally be transferred stays source/hash/rebuild recipe only. Local disk is not remote backup.",
+    "publication_manifest_file": "publication-manifest.json under each assigned ID root"
+  },
+  "delivery_policy": {
+    "push_only_to_assigned_branch": true,
+    "do_not_write_main_or_create_merge_requests": "Root serial integration owner",
+    "required": [
+      "Per-ID standalone Markdown and Graph-compatible records with required provenance/fidelity/method/results/limits",
+      "Independent source/causality, execution and ledger validation, one clean recovery",
+      "Exact remote readback, head SHA, each ID file count/bytes/manifest SHA, actualconfigs/controls/blockers and private Library restore receipts"
+    ]
+  },
+  "counts_at_contract_creation": {
+    "new_accepted_ids": 0,
+    "new_accepted_runs": 0,
+    "dot_historical_workers_started_by_root": 0
+  }
+}

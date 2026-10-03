@@ -277,3 +277,5 @@
 - [M0275 主账](public-strategies/M0275/m0275-core-ledger.md)：Heracles原生4h、4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。
 
 - [M0293 ReinforcedAverageStrategy](public-strategies/M0293/README.md)：4h 假设回测4配置与1买持；48h SMA50可用时点、源类信号和独立账户已核验，严格复现0。
+
+- [Batch007 原生5m输入与执行交接](public-strategies/batch007-native5m-preflight-20261003/README.md)：diagnostic_topic；固定2024窗口、来源与输入恢复QA，不计新回测。

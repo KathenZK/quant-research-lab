@@ -1,0 +1,22 @@
+{
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "verified_at": "2026-10-03T11:52:28.239948+00:00",
+  "input_rows": 114336,
+  "evaluation_rows": 105408,
+  "zero_volume_rows": 0,
+  "native_fields_byte_for_field_equal": true,
+  "canonical_bytes_equal": true,
+  "canonical_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "canonical_bytes": 31428289,
+  "13_official_SHA_and_ZIP_CRC": "PASS",
+  "independent_grid_OHLCV_native_quantity_checks": "PASS",
+  "script_sha256": "4972fedfbe54517423c94d834efda557a99a2667ddd067be31acc5ed5927f746",
+  "network_GETs": 0,
+  "strategy_runs": 0,
+  "PIT": false,
+  "finality": false,
+  "remote_recovery": false,
+  "source_objects": 39,
+  "GETs_original_capture": 26,
+  "dependencies": "Python3.12.14 standard library only"
+}

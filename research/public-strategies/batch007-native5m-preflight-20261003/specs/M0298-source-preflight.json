@@ -1,0 +1,52 @@
+{
+  "record_id": "M0298",
+  "stage": "SOURCE_VERIFIED_NO_HISTORICAL_PERFORMANCE_YET",
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "ref": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/Simple.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+    "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "bytes": 2695
+  },
+  "native_timeframe": "5m",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "strict_reproduction_eligible": false,
+  "original_author_universe_cost_runtime": "UNKNOWN",
+  "reviewed_engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "reviewed_engine_scope": "Reference defaults/parameter precedence only; not full framework execution",
+  "source_semantics": {
+    "explicit_class_attributes": {
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m"
+    },
+    "parameter_load_precedence": [
+      "external runtime config",
+      "sidecar special params when present",
+      "strategy class attributes",
+      "IStrategy/resolver defaults"
+    ],
+    "repo_same_name_json_present": false,
+    "causality": "3 prefixes +3 future perturbations per class passed on2400 synthetic bars; this is empirical formula/prefix evidence, not a universal proof",
+    "execution_pending": [
+      "root claim/spec/runtime pin/exposure before any historical run",
+      "native5m market snapshot QA by m0200, no timeframe substitution",
+      "maker entry/exit limit pricing, fill model, timeout, stake/cash, fees and slippage",
+      "ROI/stop/exit precedence and same-bar ambiguity with native framework rules",
+      "explicit absence of external config/sidecar overrides or freeze their exact values",
+      "warmup/indicator initialization, volume/data gaps and tradability policy"
+    ]
+  },
+  "source_report_sha256": "0735dd5b850a05833f0699dce47f4bb0a97e21f92c4a45ee3e3b6d4c02a999ef",
+  "warnings": [
+    "Do not replace native5m with4h",
+    "Freeze full per-ID execution and exposure before looking at historical returns",
+    "Preserve signal-collision and exit-profit semantics; limit fills remain explicit diagnostic assumptions",
+    "Calendar2024 input chosen after earlier2023 data QA failure, before candidate returns; not OOS and not directly comparable to prior two-year totals"
+  ],
+  "actual_historical_runs": 0
+}

@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3756,
+      "sha256": "0de1c657407d075875d07bad463c313d7194fde44d10980fb90e9ad03885e6f2"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 611,
+      "sha256": "ae0e379f0659b08b0bee478509ad7138a7124e232cdc6df442d024b70d174378"
+    },
+    {
+      "path": "scripts/builder_5m_calendar2024.py",
+      "bytes": 18985,
+      "sha256": "e217666105d2a454b61bb93d4306f2c91af9d6356182baaf57d145645556f182"
+    },
+    {
+      "path": "scripts/verify_raw_rebuild.py",
+      "bytes": 3880,
+      "sha256": "4972fedfbe54517423c94d834efda557a99a2667ddd067be31acc5ed5927f746"
+    },
+    {
+      "path": "specs/expected-manifest.json",
+      "bytes": 16495,
+      "sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102"
+    },
+    {
+      "path": "specs/window-contract.json",
+      "bytes": 2250,
+      "sha256": "42f990bb29a893e8b4c85f6d23bbc1e1f56ffa8b6ab512af371d75c8cb001cb2"
+    },
+    {
+      "path": "specs/independent-qa-summary.json",
+      "bytes": 777,
+      "sha256": "5d6bc586df822a54d3435b89f62a0f96d1406d7e8f7c9a5a2ceaba0408bfdd95"
+    },
+    {
+      "path": "specs/local-validation-receipt.json",
+      "bytes": 992,
+      "sha256": "e91e4ec0dc0b837793c26c42b76770d9e653d3668faf4ad5ae15aa231776d774"
+    }
+  ],
+  "excluded": "all data, local restore directories, __pycache__, runtime artifacts",
+  "scope": "explicit eight safe handoff files plus this allowlist itself"
+}

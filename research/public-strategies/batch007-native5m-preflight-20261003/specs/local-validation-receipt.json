@@ -1,0 +1,22 @@
+{
+  "status": "PASS_LOCAL_ONLY",
+  "verified_at": "2026-10-03T11:58:36.684349+00:00",
+  "copied_builder_sha256": "e217666105d2a454b61bb93d4306f2c91af9d6356182baaf57d145645556f182",
+  "copied_verifier_sha256": "4972fedfbe54517423c94d834efda557a99a2667ddd067be31acc5ed5927f746",
+  "expected_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+  "original_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+  "source_objects_copied_and_hash_checked": 39,
+  "builder_compare_expected_actual_vs_derived": "PASS",
+  "copied_verifier_executed": "PASS",
+  "canonical_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "canonical_bytes": 31428289,
+  "input_rows": 114336,
+  "evaluation_rows": 105408,
+  "network_GETs_this_validation": 0,
+  "strategy_runs": 0,
+  "raw_data_published": false,
+  "network_recovery_claim": false,
+  "remote_backup_claim": false,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "public-catalog-claim-amendment/v1",
+  "assigned_at_utc": "2026-10-03T11:58:40.056322+00:00",
+  "supersedes_ownership_only_at_commit": "42e43ed1145129a7e8590fbec37d9b66073b3837",
+  "reason": "Dot has two idle executors; transfer unstarted historical tasks before C0 or performance. Existing source preflight ownership does not imply replay ownership.",
+  "claims": [
+    {
+      "id": "M0315",
+      "owner": "root m0288",
+      "status": "C0_IMPLEMENTATION_STARTED_NO_PERFORMANCE_YET"
+    },
+    {
+      "id": "M0298",
+      "owner": "dot exclusively",
+      "status": "ASSIGNED_REQUIRES_LOCAL_NATIVE5M_INPUT_QA_AND_C0"
+    },
+    {
+      "id": "M0304",
+      "owner": "dot exclusively",
+      "status": "ASSIGNED_REQUIRES_LOCAL_NATIVE5M_INPUT_QA_AND_C0"
+    }
+  ],
+  "root_m0298_m0304_replay_workers_started": false,
+  "actual_new_strategy_runs": 0,
+  "root_global_writer_only": true,
+  "unchanged_window_contract": "claims-20261003-batch007.json"
+}
