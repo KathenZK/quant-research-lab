@@ -1,0 +1,14 @@
+{
+  "id": "M0316",
+  "status": "PASS_C1_FINAL_FREEZE_GATE_NOT_RESULTS",
+  "at_utc": "2026-10-03T11:06:25.512630+00:00",
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "engine_sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d",
+  "frozen_files_checked": 26,
+  "static_review_sha256": "bbf8031d1dde27e255cb1aaab9c2594f12ee7b636c423ca823cd2f157104127b",
+  "returns_seen_by_reviewer": false,
+  "next_stage_authorized": "C2 market replay under frozen diagnostic contract",
+  "strict_reproductions": 0,
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "uses_actual_market_returns": false,
+  "checks": [
+    "same-bar stop-first when both high and low touch; no same-bar reentry",
+    "gap-through stop sells at observed worse open",
+    "chronological open ROI gap precedes subsequent low stop",
+    "644 minute tier not used for preceding whole-bar high; first usable open at720 minutes",
+    "native minute boundary retained in candidate log",
+    "halt bucket nominal12 open modeled at14 resume, never12",
+    "extra one-bar entry delay",
+    "08h risk interval capped before actual halt, no fabricated halt fill",
+    "3269 minute tier deferred to first later open",
+    "7289 minute ROI0 deferred, open equal target exits",
+    "ROI0 fee-adjusted target not equated to raw entry reference",
+    "adverse exit slippage applied after fee-aware ROI target"
+  ],
+  "production_engine_modified": false
+}

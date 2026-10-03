@@ -1,0 +1,97 @@
+{
+  "status": "PASS_LOCAL_CONTENT_CHECK_NOT_INDEPENDENT_FINAL_MANIFEST",
+  "frozen_objects_unchanged": 26,
+  "python_scripts_ast_parsed": 15,
+  "markdown_local_links_verified": [
+    [
+      "m0316-core-ledger.md",
+      "diagnostics/M0316-20261003.md"
+    ],
+    [
+      "m0316-core-ledger.md",
+      "artifacts/results/summary.json"
+    ],
+    [
+      "m0316-core-ledger.md",
+      "artifacts/independent-real-result-audit.json"
+    ],
+    [
+      "m0316-core-ledger.md",
+      "artifacts/local-recovery.json"
+    ],
+    [
+      "README.md",
+      "diagnostics/M0316-20261003.md"
+    ],
+    [
+      "README.md",
+      "m0316-core-ledger.md"
+    ],
+    [
+      "README.md",
+      "decision-log.md"
+    ],
+    [
+      "README.md",
+      "specs/protocol.json"
+    ],
+    [
+      "README.md",
+      "specs/source-manifest.json"
+    ],
+    [
+      "README.md",
+      "artifacts/results/summary.json"
+    ],
+    [
+      "README.md",
+      "artifacts/graph-record.json"
+    ],
+    [
+      "README.md",
+      "artifacts/independent-real-result-audit.json"
+    ],
+    [
+      "README.md",
+      "artifacts/local-recovery.json"
+    ],
+    [
+      "README.md",
+      "diagnostics/rebuild-20261003.md"
+    ],
+    [
+      "README.md",
+      "ATTRIBUTION.md"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../artifacts/independent-execution-recovery-audit.json"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../specs/protocol.json"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../m0316-core-ledger.md"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../artifacts/results/summary.json"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../artifacts/independent-real-result-audit.json"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "rebuild-20261003.md"
+    ],
+    [
+      "diagnostics/M0316-20261003.md",
+      "../ATTRIBUTION.md"
+    ]
+  ],
+  "no_raw_ohlcv_or_third_party_full_source_in_public_root": true,
+  "C3": "not performed by worker"
+}

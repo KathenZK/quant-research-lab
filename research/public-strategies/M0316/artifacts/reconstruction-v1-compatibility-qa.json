@@ -1,0 +1,22 @@
+{
+  "id": "M0316",
+  "status": "CONFIRMED_V0_RECIPE_SCHEMA_DEFECT_AND_OFFLINE_V1_FIX",
+  "at_utc": "2026-10-03T11:25:33.868001+00:00",
+  "v0_publication_manifest_sha256": "62ab095975a9963f03a6db14276d93187cf41b30f9dd1fe80c452eafadbf6f93",
+  "v0_recipe_sha256": "aa444c12e6cce002d7844e1cb09750ec610400bab993a346532a03a2db185ca1",
+  "frozen_builder_sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+  "full_full_compare": "PASS",
+  "full_vs_inherited_light_compare": "KeyError: 'protocol'",
+  "root_cause": "light manifest lacks protocol required by frozen builder compare_expected; not a source data mismatch",
+  "correction": "capture WITHOUT expected option only when authorized and accessible; offline compare native snapshot against frozen light using separate verified comparator. Full expected option only accepts actual full snapshot manifest.",
+  "offline_new_comparison_receipts": [
+    "reconstruction-v1-primary-light-check.json",
+    "reconstruction-v1-rebuild-light-check.json"
+  ],
+  "frozen_objects_unchanged": 26,
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "returns_changed": false,
+  "new_return_runs": 0,
+  "new_market_requests": 0,
+  "C3": "parent updates same Library identity, retains previous version"
+}

@@ -1,0 +1,64 @@
+{
+  "base": {
+    "exit_reason_counts": {
+      "trailing_stop": 9,
+      "roi": 7,
+      "exit_signal": 7
+    },
+    "order_status_counts": {
+      "filled": 30
+    },
+    "roi_boundary_candidates": 36,
+    "trailing_activations": 11,
+    "roi_suppressed_position_bars": 29
+  },
+  "fee0": {
+    "exit_reason_counts": {
+      "trailing_stop": 11,
+      "exit_signal": 7,
+      "roi": 5
+    },
+    "order_status_counts": {
+      "filled": 30
+    },
+    "roi_boundary_candidates": 34,
+    "trailing_activations": 11,
+    "roi_suppressed_position_bars": 29
+  },
+  "fee20": {
+    "exit_reason_counts": {
+      "roi": 9,
+      "trailing_stop": 7,
+      "exit_signal": 7
+    },
+    "order_status_counts": {
+      "filled": 30
+    },
+    "roi_boundary_candidates": 37,
+    "trailing_activations": 9,
+    "roi_suppressed_position_bars": 29
+  },
+  "delay2": {
+    "exit_reason_counts": {
+      "trailing_stop": 7,
+      "roi": 6,
+      "exit_signal": 5
+    },
+    "order_status_counts": {
+      "filled": 23,
+      "timeout_unfilled": 6
+    },
+    "roi_boundary_candidates": 27,
+    "trailing_activations": 8,
+    "roi_suppressed_position_bars": 20
+  },
+  "buyhold": {
+    "exit_reason_counts": {},
+    "order_status_counts": {
+      "filled": 1
+    },
+    "roi_boundary_candidates": 0,
+    "trailing_activations": 0,
+    "roi_suppressed_position_bars": 0
+  }
+}

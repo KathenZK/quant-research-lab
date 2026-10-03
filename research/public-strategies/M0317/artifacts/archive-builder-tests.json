@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests": 17,
+  "network_requests": 0,
+  "stderr_sha256": "202907ff62a2f9d08c348d101653fb0676201312ee6c7e97a600d0f9867840ef",
+  "script_sha256": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817",
+  "builder_sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+  "at_utc": "2026-10-03T11:11:36.570860+00:00",
+  "scope": "synthetic lossless/grid/checksum/zip/terms/existing-target/disk/hash failclosed guards; not new market capture"
+}

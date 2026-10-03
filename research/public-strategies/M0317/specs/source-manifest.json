@@ -1,0 +1,43 @@
+{
+  "id": "M0317",
+  "strategy": {
+    "id": "M0317",
+    "filename": "M0317-mabStra.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/mabStra.py",
+    "bytes": 4044,
+    "sha256": "1c483a549398a0244ca6d87f9736a76ed462056aca8a5ee9affd9aa65efd9393",
+    "fetched_at_utc": "2026-10-03T10:28:37.465479+00:00"
+  },
+  "framework_commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+  "source_download_started_utc": "2026-10-03T10:53:45Z",
+  "verified_at_utc": "2026-10-03T10:59:07.111210+00:00",
+  "master_identity": "M0317/mabStra/freqtrade-strategies unchanged; catalog row not published",
+  "strategy_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "assignment_commit": "344e8b361d28004ce36949efe3b3aeda65b5a9f9",
+  "files": {
+    "mabStra.py": {
+      "sha256": "1c483a549398a0244ca6d87f9736a76ed462056aca8a5ee9affd9aa65efd9393",
+      "bytes": 4044,
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/mabStra.py",
+      "public_full_copy": false
+    },
+    "freqtrade-parameters.py": {
+      "sha256": "b5d31e7d1429b2a9a1b97676a0c46920b4f2dbf2a4e311d09ffc9dd8909aaa92",
+      "bytes": 13252,
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/parameters.py",
+      "public_full_copy": false
+    },
+    "freqtrade-interface.py": {
+      "sha256": "561656e2e97d3509798e40d486e918394aceab0987218513fb4f66ce5c05f478",
+      "bytes": 80064,
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/interface.py",
+      "public_full_copy": false
+    },
+    "LICENSE": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "public_full_copy": false
+    }
+  }
+}
