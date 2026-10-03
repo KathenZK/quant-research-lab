@@ -1,0 +1,24 @@
+{
+  "actual_strategy_backtests": 0,
+  "classification": "HYPOTHESIS_DIAGNOSTIC_ONLY",
+  "evidence": [
+    "artifacts/partial-input-independent-qa-v1.json",
+    "artifacts/synthetic-causality-v1.json",
+    "artifacts/results-status-v1.json"
+  ],
+  "headline": "原生12h下载14/25月后访问被拒；原完整特征管线存在合成可复现前视依赖。未计算收益。",
+  "id": "M0274",
+  "market": "binance spot",
+  "original_id": "M0274",
+  "private_detail_exported": false,
+  "promotion_allowed": false,
+  "results": [],
+  "schema": "public-strategy-research-record/v1",
+  "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/GodStra.py",
+  "status": "BLOCKED",
+  "strict_reproductions": 0,
+  "symbol": "BTCUSDT",
+  "timeframe": "12h",
+  "title": "GodStra"
+}

@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-10-03T10:30:58.082591+00:00",
+  "canonical_full_input_absent": true,
+  "freeze_sha256": "4806681ebf2bd5cc9b11111a7ca4d578810b02f24d9a78a75b421c6dcc43388f",
+  "full_input_recovery": "NOT_RUN",
+  "full_input_status": "FAIL_INCOMPLETE_854_OF_1524",
+  "full_months_required": 25,
+  "full_real_features": "NOT_RUN",
+  "full_real_strategy_returns": "NOT_RUN",
+  "id": "M0274",
+  "no_download_or_session_read": true,
+  "partial_audit_sha256": "92cf58d1abc55ef76259b1d115582fa91309868ce2173197b1ebe77e6b5d18c9",
+  "retained_months": 14,
+  "retained_native12h_rows_verified": 854,
+  "retained_objects_rehashed": 43,
+  "status": "PASS_PARTIAL_FILE_REVIEW_FULL_WINDOW_BLOCKED",
+  "strict_reproductions": 0,
+  "synthetic_independent_report_sha256": "f44b0a6a13cca79431c518e00d371693f76ab4c7a35f7f3530e81620b9ca5bb1",
+  "upstream_review_sha256": "714e13f0188461f6fee5e45dedb686dc78a7c6b79925bb83d4da23fcd62d9f5e"
+}

@@ -19,6 +19,8 @@
 | M0226 | [日频定投预审](M0226/README.md) | 金额与资金流规则阻塞，回测0 |
 | M0256 | [AverageStrategy EMA8/21](M0256/README.md) | 4h假设回测4配置及1买持对照，严格0 |
 | M0259 | [BbandRsi数据预审](M0259/README.md) | 1h缺口与停市异常阻塞，回测0 |
+| M0274 | [GodStra](M0274/README.md) | 原生12h输入与完整管线因果阻塞，回测0 |
+| M0275 | [Heracles](M0275/README.md) | 4h假设回测4配置及1买持，严格0 |
 | M0286 | [MultiMa](M0286/README.md) | TEMA信号核验及4配置假设回测、1买持，严格0 |
 | M0288 | [PatternRecognition](M0288/README.md) | 原生参考引擎假设回测4配置及1买持，严格0 |
 

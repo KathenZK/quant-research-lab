@@ -1,0 +1,37 @@
+{
+  "affected_native12h_bucket_open_utc": "2023-03-24T12:00:00Z",
+  "current_bucket_probe": {
+    "existing_failure_at_utc": "2026-10-03T08:05:55.262845+00:00",
+    "existing_url": "https://api.binance.com/api/v3/time",
+    "failure_receipt_sha256": "c687df12e768186e059233d2d7f0d2d508497b182aa75eb56944a81b2e6d4062",
+    "new_request_in_this_task": false,
+    "status": 451,
+    "strict_current_finality_established": false
+  },
+  "execution_claim": "No order or backtest occurred. Future native12h open price at noon cannot be treated as an executed noon trade. Planned restart proxy was predeclared, not activated.",
+  "id": "M0274",
+  "intrabar_path_known": false,
+  "native12h_bucket_first_trade_clock_proxy": "2023-03-24T14:00:00Z",
+  "native12h_open_equals_native1h_1400_open": true,
+  "native1h_1200_zero_volume": true,
+  "native1h_1300_missing": true,
+  "no_1m_read_or_download": true,
+  "official_pages": [
+    {
+      "bytes": 100463,
+      "sha256": "b508aabfc782adb6066a1ded8d835ab6c5220368c074763c1c0c8be179006f93",
+      "url": "https://www.binance.com/en/support/announcement/detail/813a31506e9f478ea8c1058b425df87a"
+    },
+    {
+      "bytes": 104674,
+      "sha256": "e10d574df64cfd22914fb0d663f964293c936b2b5280ceca804dbc25cb223083",
+      "url": "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113"
+    }
+  ],
+  "resume_utc": "2023-03-24T14:00:00Z",
+  "reviewed_at_utc": "2026-10-03T10:31:59.393539+00:00",
+  "source_12h_month_csv_sha256": "930f091ddd9dff602f27c24edbed1b0bd9c70191ab02d3c5370552a953a12493",
+  "source_1h_csv_sha256": "17bb536be486876f0c73ced1ef1a0d46ce5cca3d4a08baa30343a04cb3aa9c76",
+  "source_1h_daily_monthly_comparison_sha256": "55223fcd700151fb77eac04ebd9371e1aeb7dddf671b622490a41a1e15476a7c",
+  "suspension_start_utc": "2023-03-24T11:27:00Z"
+}

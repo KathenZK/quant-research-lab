@@ -1,0 +1,46 @@
+{
+  "strategy_source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Heracles.py",
+    "repository_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "filename": "Heracles.py",
+    "bytes": 3867,
+    "sha256": "5b25d85297329243d7a3c65770975b5a70e52ec2684b1e007e5d8a3d1a7e3718",
+    "author": "Mablue / Masoud Azizi",
+    "license": "GPL-3.0",
+    "upstream_historical_runtime": "UNKNOWN"
+  },
+  "private_master_provenance": {
+    "id": "M0275",
+    "master_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "selected_row_sha256": "e126040e2d5d6ac2a57dd781922b9ff2b9b83ca80286e30a1183b209bf01b7c4",
+    "full_row_published": false
+  },
+  "reference_only_sources": [
+    {
+      "filename": "freqtrade-hyper.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/hyper.py",
+      "status": 200,
+      "bytes": 8317,
+      "sha256": "ca611132fa1d9869d4548e8f51d452fe82c35830f3a0593bccdaf0ac292ae4e7"
+    },
+    {
+      "filename": "freqtrade-AgeFilter.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/plugins/pairlist/AgeFilter.py",
+      "status": 200,
+      "bytes": 6653,
+      "sha256": "c546f9b39053526e7dbdd4667f89bfd49c5d2548c439356ad90f21a2c170faa9"
+    },
+    {
+      "filename": "binance-age.html",
+      "url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "status": 200,
+      "bytes": 100399,
+      "sha256": "7c2cca084bb8a03b16bbacb0859ab97c2d5a70ec509b8a7467549b4a052d18f9"
+    }
+  ],
+  "license_reference": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "full_third_party_source_in_publication": false
+}

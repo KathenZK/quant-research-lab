@@ -1,0 +1,49 @@
+{
+  "id": "M0256",
+  "status": "PASS_BOUNDED_1H_TO_4H_MAPPING_NOT_TICK_PROOF",
+  "basis": "resume_1h_open_proxy",
+  "known_halt_start_utc": "2023-03-24T11:27:00Z",
+  "announced_resume_utc": "2023-03-24T14:00:00Z",
+  "nominal_4h_bar_open_utc": "2023-03-24T12:00:00Z",
+  "effective_open_ms": 1679666400000,
+  "nominal_open_ms": 1679659200000,
+  "verified_mapping": [
+    "4h open equals observed 14:00 1h open",
+    "4h close equals observed 15:00 1h close",
+    "4h high/low and all native volume/trade totals equal aggregate of 14:00+15:00 1h bars"
+  ],
+  "one_hour_defects": "12:00 native zero-volume malformed close; 13:00 missing. Retained as evidence only, not repaired or treated as valid hourly research input.",
+  "input_4h_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "one_hour_daily_csv_sha256": "17bb536be486876f0c73ced1ef1a0d46ce5cca3d4a08baa30343a04cb3aa9c76",
+  "one_hour_monthly_csv_sha256": "9608d74f112518d3e4941cd9673f96f887f752120a7ed6c29240a75795f15974",
+  "sources": [
+    {
+      "url": "https://www.binance.com/en/support/announcement/detail/813a31506e9f478ea8c1058b425df87a",
+      "decoded_html_sha256": "9592aed42d9cc0e0b549c03a9a1eda81ce8544976fc776e927454ed1732a5fc0",
+      "fact": "Official spot resumption scheduled at 14:00 UTC"
+    },
+    {
+      "url": "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113",
+      "decoded_html_sha256": "2f8743c56591a51bd54dd3115398ad5e89120e221ff36074c2cd3d2a68f58d09",
+      "fact": "Official retrospective identifies 11:27 UTC suspension and 14:00 UTC resumption"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03-24.zip",
+      "sha256": "ea9d94f28a39ad8029c9c2863cbb7769137188edd957fea35d0313ae4183561f",
+      "checksum_sha256": "838a86096f5a24e520a31d14e8b41428a781b0647f970142d5639a6fb1108243"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03.zip",
+      "sha256": "7f2afb8e0179a57ac31eab5205660298ba5eb77039ac2e21aef9b715ff3d06ce"
+    }
+  ],
+  "execution_policy": "Keep bar label 12:00; any scheduled or gap open fill uses matching resumption-open price, modeled at 14:00 with costs. Intrabar risk exits have time bounds 14:00 to 15:59:59.999. In 08:00 bucket, intrabar execution upper bound is 11:26:59.999.",
+  "limitations": [
+    "Not exact first-tick timing; 1h open is a resumption proxy",
+    "No 1m evidence read or used",
+    "Does not prove all-history absence of downtime, PIT, executable liquidity or strict finality",
+    "Same 4h prices retained; no result-driven price or strategy selection"
+  ],
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false
+}

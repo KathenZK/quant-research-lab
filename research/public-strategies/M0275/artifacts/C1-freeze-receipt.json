@@ -1,0 +1,29 @@
+{
+  "checkpoint": "C1",
+  "frozen_at_utc": "2026-10-03T10:26:36.509200Z",
+  "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+  "files": {
+    "scripts/audit_raw.py": "b4601a55807845238877d9cf7bd51cb5b593c1ac9781d50174e8bec8c006698b",
+    "scripts/check_signals.py": "3a7bc86c921aa890318670c197ccb6fd84f97ec147b1fccf87bd6aa67b4fbcf8",
+    "scripts/prepare_freeze.py": "d4858b395eeaf01dc75d01df3c49f0bef580bf90d412f03e4aad27da35c02c29",
+    "scripts/rebuild_official_bars.py": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+    "scripts/run_replay.py": "cdd86eb05d2dbdcb2ca8cc94d74617f681ed3943d979f6f09614f8020b654e78",
+    "scripts/test_rebuild_official_bars.py": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817",
+    "scripts/validate_ledger.py": "61bedb259fafa56edd04a3f56b60fc410cfbbcaad87d18adfe2b8304ae7a8c05",
+    "specs/agefilter-evidence.json": "da205e57c79076d1cdd49b5019594904fbe2aa4dc32b03e29f8e41fbb70b4b00",
+    "specs/data-source-documents-inherited.json": "ac66dd5ff4fc3522e6867afc66b7ed96105e544c4f38aa893ac3a85f87c32f2f",
+    "specs/exposure.json": "2284d55a997e8f6bc79237ad46cbd69d7fea953820bf6d903dcd2d57974a67c7",
+    "specs/input-manifest-inherited.json": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594",
+    "specs/input-rebuild-inherited.json": "e6bc91227956b11aa4162fe48e5e43d32ee843d763d9417d50b27f8fffb0fc0a",
+    "specs/market-halt-evidence-inherited.json": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999",
+    "specs/requirements.lock.txt.json": "1f5426c3b67550113d86296145d30b9cc6ee30150abc0b97a78d45c1e4d5667f",
+    "specs/source-manifest.json": "03063d37d65959cc4b3e6a85215fd37266278e4d21a3f322f7c7997fab2ff15e",
+    "artifacts/C0-primary-raw-audit.json": "7e05ee9f73ceaae7f7d9f070792c6f63bb41f4ef6b68c1fc85410666b9b2ca80",
+    "artifacts/C0-rebuild-raw-audit.json": "febbd825d9f792e47b63d0d18de7ad8d281aa43ae983bef8cfca78d29bfc594d",
+    "artifacts/C0-signal-causality.json": "8457f99f8462824b0ff334a53833dcd7096f7eb88d4c41abe9230bbc6f8f30d2",
+    "artifacts/C0-source-input-qa.json": "bd900a1626f8f2c493aa71160bf5e884afc15a0231330743b662f78876cf7061"
+  },
+  "returns_computed": false,
+  "source_returns_in_comments_ignored": true,
+  "remaining_disk_bytes": 30464774144
+}

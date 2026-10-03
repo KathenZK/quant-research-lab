@@ -1,0 +1,8 @@
+{
+  "at_utc": "2026-10-03T10:21:48.078981Z",
+  "error": "UNAVAILABLE: GET https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/12h/BTCUSDT-12h-2024-02.zip: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+  "error_type": "CaptureError",
+  "retained_partial_evidence": "work-M0274/data/native12h-primary.partial",
+  "status": "FAILED",
+  "target_not_published": "work-M0274/data/native12h-primary"
+}

@@ -1,0 +1,26 @@
+{
+  "at_utc": "2026-10-03T10:31:59.393539+00:00",
+  "compared_keys": [
+    "prefix_rows",
+    "changed_columns",
+    "active_columns",
+    "evaluation_rows_changed"
+  ],
+  "complete_real_window_audit": "NOT_RUN",
+  "different_script_entrypoints": true,
+  "id": "M0274",
+  "independent_report_sha256": "f44b0a6a13cca79431c518e00d371693f76ab4c7a35f7f3530e81620b9ca5bb1",
+  "independent_script_sha256": "c85b01f165e78a54359603478458e3550d6b4f9f423ed0b8cecebc2307131c88",
+  "input_type": "synthetic_only_not_real_market",
+  "our_report_sha256": "662571910d591b5b9f36d7cd1cb5f08fdda8caeb8b638aaed396cc8a5b109a38",
+  "our_script_sha256": "ddc70fb0f150e7a7e983527c79cdf7b007b459808abe254a31095c809078eb91",
+  "prefixes": [
+    62,
+    80,
+    124,
+    239
+  ],
+  "same_synthetic_generator": true,
+  "status": "PASS_EXACT_CHECKS_AGREEMENT",
+  "strategy_returns_computed": false
+}

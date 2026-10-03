@@ -1,0 +1,14 @@
+{
+  "id": "M0275",
+  "started_at_utc": "2026-10-03T10:28:32.755569+00:00",
+  "completed_at_utc": "2026-10-03T10:28:34.871149+00:00",
+  "pid": 6,
+  "command": "/workspace/shared/dot-public-strategies-20261003/.venv/bin/python /workspace/shared/dot-public-strategies-20261003-b002/research/public-strategies/M0275/scripts/run_replay.py --input /workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-primary-v1/BTCUSDT-4h-202212-202412-native12.csv --output /workspace/shared/dot-public-strategies-20261003-b002/work-M0275/first-run --spec /workspace/shared/dot-public-strategies-20261003-b002/research/public-strategies/M0275/specs/protocol.json",
+  "exit_code": 0,
+  "stderr": "",
+  "resource_contract": {
+    "BLAS_threads": 1,
+    "process_address_space_limit_bytes": 1610612736
+  },
+  "remaining_disk_bytes": 30460297216
+}

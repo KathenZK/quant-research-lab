@@ -1,0 +1,49 @@
+{
+  "base": {
+    "exit_reason_counts": {
+      "roi": 60,
+      "stoploss": 1
+    },
+    "first_entry_utc": "2023-01-01T04:00:00Z",
+    "last_event_side": "BUY",
+    "last_event_bar_open_utc": "2024-12-16T08:00:00Z",
+    "roi_boundary_candidate_bars": 178
+  },
+  "fee0": {
+    "exit_reason_counts": {
+      "roi": 64,
+      "stoploss": 1
+    },
+    "first_entry_utc": "2023-01-01T04:00:00Z",
+    "last_event_side": "BUY",
+    "last_event_bar_open_utc": "2024-12-19T08:00:00Z",
+    "roi_boundary_candidate_bars": 188
+  },
+  "fee20": {
+    "exit_reason_counts": {
+      "roi": 61,
+      "stoploss": 1
+    },
+    "first_entry_utc": "2023-01-01T04:00:00Z",
+    "last_event_side": "BUY",
+    "last_event_bar_open_utc": "2024-12-19T12:00:00Z",
+    "roi_boundary_candidate_bars": 182
+  },
+  "delay2": {
+    "exit_reason_counts": {
+      "roi": 61,
+      "stoploss": 1
+    },
+    "first_entry_utc": "2023-01-01T08:00:00Z",
+    "last_event_side": "BUY",
+    "last_event_bar_open_utc": "2024-12-17T00:00:00Z",
+    "roi_boundary_candidate_bars": 183
+  },
+  "buyhold": {
+    "exit_reason_counts": {},
+    "first_entry_utc": "2023-01-01T00:00:00Z",
+    "last_event_side": "BUY",
+    "last_event_bar_open_utc": "2023-01-01T00:00:00Z",
+    "roi_boundary_candidate_bars": 0
+  }
+}

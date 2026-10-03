@@ -270,3 +270,8 @@
 ## 公开策略 M0286
 
 - [M0286 主账](public-strategies/M0286/m0286-core-ledger.md)：BTC现货4h MultiMa，完整原类信号核对，4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。
+
+## 公开策略 M0274 / M0275
+
+- [M0274 主账](public-strategies/M0274/M0274-core-ledger.md)：GodStra原生12h输入不完整及完整指标管线合成因果失败，真实回测0。
+- [M0275 主账](public-strategies/M0275/m0275-core-ledger.md)：Heracles原生4h、4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。

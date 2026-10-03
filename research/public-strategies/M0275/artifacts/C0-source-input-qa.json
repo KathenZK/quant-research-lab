@@ -1,0 +1,31 @@
+{
+  "id": "M0275",
+  "completed_at_utc": "2026-10-03T10:26:36.500655Z",
+  "checkpoint": "C0",
+  "status": "PASS_FOR_DIAGNOSTIC_ONLY",
+  "strategy_returns_read": false,
+  "source_matches_claim": true,
+  "original_id_matches_master": true,
+  "input_snapshots": {
+    "dot-b001-primary-v1": {
+      "archive_triplets": 25,
+      "source_objects": 75,
+      "match": "bytes/sha256/schema/timeframe/canonical",
+      "manifest_sha256": "f3dff3ccf7df26088643644b7859999063b79ddb354a0fb360208c583fa9760c"
+    },
+    "dot-b001-rebuild-v1": {
+      "archive_triplets": 25,
+      "source_objects": 75,
+      "match": "bytes/sha256/schema/timeframe/canonical",
+      "manifest_sha256": "f130c0699fd184961d46b0badfc65576a1aa2524ac4eb08a803cfbbaff8224cb"
+    }
+  },
+  "input_rows": 4572,
+  "evaluation_rows": 4386,
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false,
+  "strict_core_finality": "NOT_ESTABLISHED_HTTP451_provider_clock_current_bucket",
+  "remaining_disk_bytes": 30464798720,
+  "age_filter": "historical lower-bound proxy only",
+  "one_minute_evidence_accessed": false
+}
