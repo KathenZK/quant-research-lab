@@ -314,7 +314,8 @@ def test_shared_kernel_versions_are_frozen() -> None:
   assert not problems, "共享内核冻结检查失败:\n" + "\n".join(problems)
 
 
-def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, monkeypatch):
+@pytest.mark.parametrize("version_index", ["README.md", "README-versions.md"])
+def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, monkeypatch, version_index):
   monkeypatch.setattr(sys.modules[__name__], "RESEARCH", tmp_path)
   kernels = tmp_path / "_shared-kernels"
   version = kernels / "example/v1"
@@ -324,7 +325,8 @@ def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, 
   engine.write_text("VALUE = 1\n")
   manifest = version / "manifest.json"
   manifest.write_text(json.dumps({"files": {"engine.py": hashlib.sha256(engine.read_bytes()).hexdigest()}}))
-  (version.parent / "README.md").write_text("v1 " + hashlib.sha256(manifest.read_bytes()).hexdigest())
+  (version.parent / "README.md").write_text("Frozen historical index\n")
+  (version.parent / version_index).write_text("v1 " + hashlib.sha256(manifest.read_bytes()).hexdigest())
   test_shared_kernel_versions_are_frozen()
   engine.write_text("VALUE = 2\n")
   with pytest.raises(AssertionError, match="manifest"):
