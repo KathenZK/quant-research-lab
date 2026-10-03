@@ -1,6 +1,8 @@
-# 批021既有目录来源准备
-
+---
 research_classification: diagnostic_topic
+---
+
+# 批021既有目录来源准备
 
 M1510 已由 root [独占登记](../claims-20261003-batch021-source-only.json)给父端 single dot executor，范围仅为来源、规则和数据复用准备；该执行者尚未启动本家族准备，root/m0288 完成的是只读独立来源支持。没有历史运行权限，没有 C0，没有新增策略配置或对照。
 
