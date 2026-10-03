@@ -300,3 +300,5 @@
 - [native5m-execution-proxy v1共享内核](_shared-kernels/native5m-execution-proxy/README.md)：五ID复用固定OHLC成交与独立Decimal账户校验；ID规则、C0、结果分别冻结。
 
 - [dot batch006来源预检](public-strategies/dot-batch006-preflight-20261003/README.md)：diagnostic_topic；四个5m候选已分配、未启动历史回放。
+
+- [root batch011来源预检](public-strategies/root-batch011-preflight-20261003/README.md)：diagnostic_topic；M0260/M0265/M0282/M0283已分配，逐ID C0与独立验收后才计完成。

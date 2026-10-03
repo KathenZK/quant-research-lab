@@ -1,0 +1,95 @@
+{
+  "record_id": "M0254",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source": {
+    "id": "M0254",
+    "name": "AdxSmas",
+    "path": "user_data/strategies/berlinguyinca/AdxSmas.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AdxSmas.py",
+    "sha256": "01356e36b3164b66aa4338a70f67f4bb887d4c79ae81b1bc2d1be5c5ba76fca5",
+    "bytes": 1784,
+    "cached": false
+  },
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "selected_for_v1": false,
+  "status": "BLOCKED_NATIVE_TIMEFRAME",
+  "license": {
+    "spdx": "GPL-3.0",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "timeframe": "1h"
+  },
+  "parameter_constructors": {},
+  "effective_without_external_override": {
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 0,
+    "process_only_new_candles": true,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    },
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "timeframe": "1h"
+  },
+  "effective_hyperparameters": {},
+  "signal_predicate_slices": {
+    "populate_entry_trend": [
+      "((dataframe['adx'] > 25) & qtpylib.crossed_above(dataframe['short'], dataframe['long']), 'enter_long')"
+    ],
+    "populate_exit_trend": [
+      "((dataframe['adx'] < 25) & qtpylib.crossed_above(dataframe['long'], dataframe['short']), 'exit_long')"
+    ]
+  },
+  "catalog_difference_and_boundaries": "Native1h; catalog omits timeframe; no resampling to5m authorized.",
+  "qa": {
+    "status": "NOT_RUN_NATIVE_TIMEFRAME_EXCLUDED"
+  },
+  "predicate_fixture_qa": null,
+  "shared_defaults_source": {
+    "engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+    "interface_sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "resolver_sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3"
+  },
+  "runtime": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4",
+    "technical_commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "qtpylib_sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+  },
+  "limitations": [
+    "Native class methods with import shim; not full Freqtrade engine.",
+    "Advanced TA numerics not independently reimplemented except Cofi STOCHF rolling formula.",
+    "External config/sidecar/runtime/universe unknown; absent external overrides is explicit research hypothesis.",
+    "C0 must freeze cost/position/input hash/lag and rawopen proxy before historical returns; no native limitfill equivalence.",
+    "Signal collision/profitgate/stopROI semantics belong to frozen v1 account; no account runs here."
+  ],
+  "historical_runs": 0,
+  "market_requests": 0
+}

@@ -1,0 +1,150 @@
+{
+  "record_id": "M0282",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source": {
+    "id": "M0282",
+    "name": "MACDStrategy",
+    "path": "user_data/strategies/berlinguyinca/MACDStrategy.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MACDStrategy.py",
+    "sha256": "80ce71ddb59191921e6dcd08101418f11e0d76d7b61471479ee5617605d22d55",
+    "bytes": 3052,
+    "cached": false
+  },
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "selected_for_v1": true,
+  "status": "PASS_SOURCE_AND_SIGNAL_QA_FOR_V1_HYPOTHESIS",
+  "license": {
+    "spdx": "GPL-3.0",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.3,
+    "timeframe": "5m",
+    "buy_params": {
+      "buy_cci": -48
+    },
+    "sell_params": {
+      "sell_cci": 687
+    }
+  },
+  "parameter_constructors": {
+    "buy_cci": "IntParameter(low=-700, high=0, default=-50, space='buy', optimize=True)",
+    "sell_cci": "IntParameter(low=0, high=700, default=100, space='sell', optimize=True)"
+  },
+  "effective_without_external_override": {
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 0,
+    "process_only_new_candles": true,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    },
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.3,
+    "timeframe": "5m",
+    "buy_params": {
+      "buy_cci": -48
+    },
+    "sell_params": {
+      "sell_cci": 687
+    }
+  },
+  "effective_hyperparameters": {
+    "buy_cci": -48,
+    "sell_cci": 687
+  },
+  "signal_predicate_slices": {
+    "populate_entry_trend": [
+      "((dataframe['macd'] > dataframe['macdsignal']) & (dataframe['cci'] <= self.buy_cci.value) & (dataframe['volume'] > 0), 'enter_long')"
+    ],
+    "populate_exit_trend": [
+      "((dataframe['macd'] < dataframe['macdsignal']) & (dataframe['cci'] >= self.sell_cci.value) & (dataframe['volume'] > 0), 'exit_long')"
+    ]
+  },
+  "catalog_difference_and_boundaries": "Effective buy/sell params -48/687 override constructor -50/100. Volume>0 gate omitted from catalog.",
+  "qa": {
+    "status": "PASS_NATIVE_METHODS_AND_CAUSALITY",
+    "synthetic_rows": 3000,
+    "entry_count": 64,
+    "exit_count": 0,
+    "collisions": 0,
+    "effective_params": {
+      "buy_cci": -48,
+      "sell_cci": 687
+    },
+    "prefix_checks": 3,
+    "future_checks": 3,
+    "extra": {},
+    "timing": {
+      "wall_s": 0.026520373998209834,
+      "cpu_s": 0.026515336,
+      "max_rss_kib": 78860
+    }
+  },
+  "predicate_fixture_qa": {
+    "status": "PASS",
+    "fixture_rows": 4,
+    "expected_entry": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "expected_exit": [
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "shared_defaults_source": {
+    "engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+    "interface_sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "resolver_sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3"
+  },
+  "runtime": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4",
+    "technical_commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "qtpylib_sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+  },
+  "limitations": [
+    "Native class methods with import shim; not full Freqtrade engine.",
+    "Advanced TA numerics not independently reimplemented except Cofi STOCHF rolling formula.",
+    "External config/sidecar/runtime/universe unknown; absent external overrides is explicit research hypothesis.",
+    "C0 must freeze cost/position/input hash/lag and rawopen proxy before historical returns; no native limitfill equivalence.",
+    "Signal collision/profitgate/stopROI semantics belong to frozen v1 account; no account runs here."
+  ],
+  "historical_runs": 0,
+  "market_requests": 0
+}

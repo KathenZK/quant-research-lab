@@ -1,0 +1,408 @@
+{
+  "schema": "public-catalog-executor-output-contract/v1",
+  "created_at_utc": "2026-10-03T14:08:44.156454+00:00",
+  "repository": "KathenZK/quant-research-lab",
+  "output_branch": "codex/native5m-batch011-20261003",
+  "fixed_implementation_base_commit": "eca7ad8e41d4b8aa4d3fd18bced178f2e5f45530",
+  "executor": "root/m0288 exclusively; one executor for all four IDs",
+  "integration_and_global_progress_writer": "Codex root only",
+  "exclusive_ids": [
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283"
+  ],
+  "stage": "ASSIGNED_C0_AND_INDEPENDENT_QA_GATED_EXECUTION_PROXY",
+  "historical_runs_at_assignment": 0,
+  "started": false,
+  "allowed_paths": [
+    "research/public-strategies/M0260/**",
+    "research/public-strategies/M0265/**",
+    "research/public-strategies/M0282/**",
+    "research/public-strategies/M0283/**"
+  ],
+  "fixed_source_repository": "freqtrade/freqtrade-strategies",
+  "fixed_source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source_cards": [
+    {
+      "id": "M0260",
+      "path": "research/public-strategies/root-batch011-preflight-20261003/M0260-rule-card.json",
+      "sha256": "397ed5d33e68dcb704b0fb34ce8f6d82308c41a56a2d431d52838f9bed152557",
+      "source": {
+        "id": "M0260",
+        "name": "BinHV27",
+        "path": "user_data/strategies/berlinguyinca/BinHV27.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BinHV27.py",
+        "sha256": "e94ea092f9d277f29ce593f5adc1d9efffb846c27f1c1abfa51c57f1c53257b5",
+        "bytes": 5879,
+        "cached": true
+      }
+    },
+    {
+      "id": "M0265",
+      "path": "research/public-strategies/root-batch011-preflight-20261003/M0265-rule-card.json",
+      "sha256": "71ec4ce7910d9d7349a7f1c504ffac2c1bacf3ef54367f68feaaa67d8f64df7f",
+      "source": {
+        "id": "M0265",
+        "name": "CofiBitStrategy",
+        "path": "user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+        "sha256": "c565296f014ade283b684cae3ff375bd1b80c8696d7b8498b2b5915d2a6553ff",
+        "bytes": 3058,
+        "cached": true
+      }
+    },
+    {
+      "id": "M0282",
+      "path": "research/public-strategies/root-batch011-preflight-20261003/M0282-rule-card.json",
+      "sha256": "e75856606178f901626c0b667fa0e531e5f41aa2d6bf28d2a529fca90063b7c0",
+      "source": {
+        "id": "M0282",
+        "name": "MACDStrategy",
+        "path": "user_data/strategies/berlinguyinca/MACDStrategy.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MACDStrategy.py",
+        "sha256": "80ce71ddb59191921e6dcd08101418f11e0d76d7b61471479ee5617605d22d55",
+        "bytes": 3052,
+        "cached": false
+      }
+    },
+    {
+      "id": "M0283",
+      "path": "research/public-strategies/root-batch011-preflight-20261003/M0283-rule-card.json",
+      "sha256": "8b4b913c7360f3b6007d22439f5eb3d6dcaa3f080d6813690a1455f8cc8fdda3",
+      "source": {
+        "id": "M0283",
+        "name": "MACDStrategy_crossed",
+        "path": "user_data/strategies/berlinguyinca/MACDStrategy_crossed.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MACDStrategy_crossed.py",
+        "sha256": "af5aed1cbb9a9d3ed519ea8649363a2cfaa95cbffe443f073d9f96b2aa91b0f6",
+        "bytes": 2335,
+        "cached": false
+      }
+    }
+  ],
+  "kernel": {
+    "path": "research/_shared-kernels/native5m-execution-proxy/v1",
+    "files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research."
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "slippage_bps": 2,
+    "open_execution_overrides": {},
+    "intrabar_execution_latest_overrides": {},
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable spot without borrowing",
+    "fractional_fills": true,
+    "sequence": [
+      "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+      "flat entry due from previous closedbar; never same-bar reentry after sale",
+      "open<=stop triggers stop gap; else open>ROI strict gap",
+      "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+      "mark remaining position at rawclose; no terminal forced sale"
+    ],
+    "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+    "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+    "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded",
+    "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+    "proxy_label": "ADAPTED_EXECUTION_PROXY",
+    "proxy_changes": {
+      "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+      "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+      "stop": "Original limit stop replaced by market-style gap/threshold full fill",
+      "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+      "pending": "No restinglimit states/timeouts/cancellations or partialfills"
+    }
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    }
+  ],
+  "benchmark_reference": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "strategy_configurations_expected": 16,
+  "new_control_configurations_expected": 0,
+  "market_data_requests_authorized": false,
+  "data_rule": "Use root-held previously verified snapshot only; exact original raw manifest and canonical pins. No market acquisition or raw transfer. One input QA/rebuild for family batch.",
+  "fidelity": "ADAPTED_EXECUTION_PROXY; original GTC limit orders are not reproduced; no strict result presumed",
+  "requirements": [
+    "Read original11 fields in own verified catalog and preserve IDs and source text; verify all fixed source/card hashes before coding",
+    "Reuse shared v1 account and independent oracle by SHA pins, use per-ID source/Boolean adapters; no copies or modifications of v1. Any required kernel change returns to root for separate frozen version",
+    "Verify actual loaded source class/parameters, complete qtpylib reexport chain, source flags and causal prefix/future perturbations before historical returns",
+    "Freeze each ID code/source/environment/input/rules/cases/C0 before its first returns. Four declared configurations only; isolate blockers without silently changing source rules",
+    "One shared input validation/recovery per batch; full per-ID account states/fills, metrics, daily curves and nonstatistical public samples. Exact-zero and relative-scale Decimal checks plus execution-phase/time/notional verification",
+    "Reference exact existing M0311 same-window buyhold result; a reference is not a newly run control",
+    "Independent rule/account validator, one fresh batch restoration with deterministic outputs byte identical, frozen failures preserved",
+    "Per-ID standalone Chinese Markdown, core ledger, decision log, recoverable source/code/dependencies/input/full logs and Graph-compatible structured record with PIT/availability-selection/no-OOS limitations",
+    "One private batch archive plus standalone manifest and Library remote readback where available. Report any backup failure without claiming local storage is remote backup",
+    "Report actual IDs/configs/controls/blockers and timings/CPU/RSS; preserve full publication-manifest and immutable source commits. Root integrates indexes/allowlist/global progress"
+  ],
+  "forbidden_changes": [
+    "Outside four ID roots, including all global claims/progress/indexes/allowlists",
+    "Existing v1 kernel, other assigned IDs, main, Site, personal annotations",
+    "Market acquisition, live trading, purchases, credentials or permission changes, force-push/rebase/delete",
+    "Private Library IDs, credentials, signed URLs, raw market data or full private ledger publication"
+  ],
+  "previous_reservations_preserved": [
+    "M0298",
+    "M0304",
+    "M0257",
+    "M0273",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266"
+  ],
+  "other_current_ids_excluded": [
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0311",
+    "M0296",
+    "M0299",
+    "M0312",
+    "M0314"
+  ],
+  "per_id_required_source_parameters": {
+    "M0260": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 1
+      },
+      "stoploss": -0.5,
+      "timeframe": "5m",
+      "loaded_hyperparameters": {}
+    },
+    "M0265": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "buy_params": {
+        "buy_fastx": 25,
+        "buy_adx": 25
+      },
+      "sell_params": {
+        "sell_fastx": 75
+      },
+      "minimal_roi": {
+        "40": 0.05,
+        "30": 0.06,
+        "20": 0.07,
+        "0": 0.1
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m",
+      "loaded_hyperparameters": {
+        "buy_fastx": 25,
+        "buy_adx": 25,
+        "sell_fastx": 75
+      }
+    },
+    "M0282": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "60": 0.01,
+        "30": 0.03,
+        "20": 0.04,
+        "0": 0.05
+      },
+      "stoploss": -0.3,
+      "timeframe": "5m",
+      "buy_params": {
+        "buy_cci": -48
+      },
+      "sell_params": {
+        "sell_cci": 687
+      },
+      "loaded_hyperparameters": {
+        "buy_cci": -48,
+        "sell_cci": 687
+      }
+    },
+    "M0283": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "60": 0.01,
+        "30": 0.03,
+        "20": 0.04,
+        "0": 0.05
+      },
+      "stoploss": -0.3,
+      "timeframe": "5m",
+      "loaded_hyperparameters": {}
+    }
+  },
+  "preflight_manifest_sha256": "236aafe2fe164a554b79035897961f3d1846896b66edf7cdcd53616d16f046ed"
+}

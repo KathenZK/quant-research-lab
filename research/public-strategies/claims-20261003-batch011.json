@@ -1,0 +1,49 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T14:08:44.156454+00:00",
+  "coordinator": "Codex root only",
+  "batch": "011",
+  "branch": "codex/native5m-batch011-20261003",
+  "claims": [
+    {
+      "id": "M0260",
+      "owner": "root/m0288 exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA and immutable per-ID C0"
+    },
+    {
+      "id": "M0265",
+      "owner": "root/m0288 exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA and immutable per-ID C0"
+    },
+    {
+      "id": "M0282",
+      "owner": "root/m0288 exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA and immutable per-ID C0"
+    },
+    {
+      "id": "M0283",
+      "owner": "root/m0288 exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA and immutable per-ID C0"
+    }
+  ],
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "other_reservations_preserved": [
+    "M0298",
+    "M0304",
+    "M0257",
+    "M0273",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266"
+  ]
+}
