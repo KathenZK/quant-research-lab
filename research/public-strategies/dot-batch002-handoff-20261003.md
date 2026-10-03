@@ -13,7 +13,7 @@
 
 BTCUSDT现货研究实例，输入2022-12-01至2025-01-01不含末端，评价2023-01-01至2025-01-01不含末端。不是作者完整选池复现，默认HYPOTHESIS。输入窗口和执行协议须在读取策略结果前冻结；不根据结果换窗。
 
-4h沿用已合并M0256的受审重建脚本与官方25月清单：`research/public-strategies/M0256/scripts/rebuild_official_bars.py --timeframe 4h --target <新的独立目录> --expected-manifest research/public-strategies/M0256/artifacts/20261003-first-replay/4h-input-manifest-light.json --terms-reviewed`。先核命令参数与清单；目标canonical input SHA256为`9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c`。已有本机dot冻结输入可先验hash再只读复用；父或Codex路径不代表dot本地可读。
+4h沿用已合并M0256的受审重建脚本与官方25月清单：`research/public-strategies/M0256/scripts/rebuild_official_bars.py --timeframe 4h --target <新的独立目录> --terms-reviewed`。原脚本的`--expected-manifest`不能直接接轻量清单（缺protocol键），不要使用该组合。无expected参数抓取后，按轻量清单逐项独立比对timeframe/schema/builder、75个ZIP/CHECKSUM/CSV对象的bytes与SHA及canonical输出；失败保留.partial，不覆盖。目标canonical input SHA256为`9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c`。已有本机dot冻结输入可先验hash再只读复用；父或Codex路径不代表dot本地可读。
 
 12h须从相同官方Binance Vision原生12h月档重新获取，按既有捕获/QA规范适配：ZIP/CHECKSUM/CRC、native12、网格、开闭时间、OHLCV、缺口/乱序、重复、微秒格式和历史停市审查。当前脚本仅列明的周期可直接使用，**不能直接把`--timeframe 12h`当已支持，也不能以4h重采样冒充原生12h**。保留2023-03-24停市事实；实际下单时钟/部分停市桶的代理须预先声明，不能隐式使用无交易时刻价格。数据QA/来源失败则具体阻塞，严格复现仍0。
 
