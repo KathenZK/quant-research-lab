@@ -346,3 +346,8 @@
 - [catalog-daily-cash v2 版本增补](_shared-kernels/catalog-daily-cash/README-versions.md)：可选实际成交后计时退出；[独立合成复核](_shared-kernels/catalog-daily-cash/reviews/v2-independent-20261003.json)通过，不代表M1349已运行或自身C0已放行。
 
 - [批016实际远端恢复](public-strategies/catalog-hypothesis-batch016-recovery-20261003/REMOTE-CORE-RESTORE.md)：M1396/M1463从远端原代码重建，60载荷长度/hash及2份清单原字节通过；不新增研究/控制，完整Library私包仍未异地保存。
+
+- [M1346 日线目录假设](public-strategies/M1346/README.md)：冻结公开研究核心；状态与结论以家族主账及独立验收为准。
+- [M1349 定时退出目录假设](public-strategies/M1349/README.md)：固定 v2 持仓计数规则；不修改原冻结证据。
+- [M1270 日线目录假设](public-strategies/M1270/README.md)：冻结公开研究核心；不自动晋升。
+- [批017共享恢复诊断](public-strategies/catalog-hypothesis-batch017-execution-20261003/README.md)：三 ID 的公开代码、指纹及离线重建配方；不代替完整私有备份。

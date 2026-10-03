@@ -1,0 +1,89 @@
+{
+  "schema": "batch017-independent-Decimal50-fee-equivalence/v1",
+  "status": "PASS_EXACT_NUMERIC_ZERO_ERROR",
+  "precision": 50,
+  "rounding": "ROUND_HALF_EVEN",
+  "per_fee_bps": {
+    "0": {
+      "comparisons": 4104,
+      "lexical_differences": 0,
+      "numerical_differences": 0
+    },
+    "8": {
+      "comparisons": 4104,
+      "lexical_differences": 551,
+      "numerical_differences": 0
+    },
+    "20": {
+      "comparisons": 4104,
+      "lexical_differences": 684,
+      "numerical_differences": 0
+    }
+  },
+  "total_comparisons": 12312,
+  "synthetic_coefficient_count": 216,
+  "scale_exponents": [
+    -500,
+    -100,
+    -50,
+    -20,
+    -10,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    10,
+    20,
+    50,
+    100,
+    500
+  ],
+  "examples": [
+    {
+      "notional": "0E-500",
+      "bps": 8,
+      "literal": "0E-500",
+      "factor_first": "0E-504"
+    },
+    {
+      "notional": "0E-500",
+      "bps": 20,
+      "literal": "0E-500",
+      "factor_first": "0E-503"
+    },
+    {
+      "notional": "0E-100",
+      "bps": 8,
+      "literal": "0E-100",
+      "factor_first": "0E-104"
+    },
+    {
+      "notional": "0E-100",
+      "bps": 20,
+      "literal": "0E-100",
+      "factor_first": "0E-103"
+    },
+    {
+      "notional": "0E-50",
+      "bps": 8,
+      "literal": "0E-50",
+      "factor_first": "0E-54"
+    },
+    {
+      "notional": "0E-50",
+      "bps": 20,
+      "literal": "0E-50",
+      "factor_first": "0E-53"
+    }
+  ],
+  "reason": "For these frozen integer bps, the rate is an exact finite decimal. Under normal exponent bounds, multiplication then exact power-of-ten division and multiplication by the exact predivided rate have the same rounded 50-significant-digit numerical value. Decimal coefficient/exponent representation can retain different trailing zeros; neither operation quantizes. This bounded executable check includes 50-digit and halfway-shaped coefficients over scales -500 to +500; it is not a proof for Decimal overflow/subnormal arithmetic outside the research range.",
+  "contract_interpretation": "No explicit requirement found that independent oracles with equivalent algebra must produce identical decimal text. Exact Decimal numerical equality is checked here; engine replay serialization remains separately byte-exact.",
+  "historical_strategy_runs": 0,
+  "new_controls": 0,
+  "script_sha256": "3af8b77ccdf41c2cc0901bd18bc904329800664730b684177271c16f6d5be8a5"
+}

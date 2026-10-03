@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "id": "M1349",
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-crash-trading-strategy/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "别名来源": "无",
+    "可回测": "高",
+    "名称": "比特币急跌反弹例：25日ROC跌破−10%收盘买入，持有25日后收盘卖出",
+    "市场": "加密（Bitcoin；急跌反弹例）",
+    "提出日期": "2026-01-25",
+    "标题": "比特币急跌反弹例：25日ROC跌破−10%收盘买入，持有25日后收盘卖出",
+    "规则": "本条只写源文件已印出的规则。本条只写《Bitcoin Crash Trading Strategy》免费正文举出的一组优化示例规则（文称example of how one optimization could be like），不是50%自高点崩盘定义，也不是把整张优化网格收成默认。当过去N日ROC低于−x%时收盘做多，持有N日后收盘离场；示例取N=25、x=10（跌10%）。文后称结果零散、不宜当可交易系统，本条仍只记已印示例数字，不编造其它默认。提出日期取datetime首条。 不是50%自高点崩盘定义，也不是整张优化网格：本条是比特币25日ROC跌破−10%收盘买、持有25日后收盘卖的已印示例。 计入加密。 提出日期按源文件原样保留2026-01-25。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "source_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1349.json",
+  "blob_sha256": "c3c501a2fac943309f71ecb8f7163c964dfdb386d67ba9553b465eb82090ef50",
+  "provenance": {
+    "csv_row_ordinal": 1349,
+    "csv_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "row_sha256": "1465fdec29fdc3febf58a269ef69e63909dba261f5c2722a138995eba128ab1a",
+    "rule_sha256": "710a4e13a6c10eb555e5822d5c2711d8cf0b19c7b318431aaab0785053b1117f"
+  },
+  "publication_review": "Root inspected all11 values: public source identities/rule summaries; alias none; no privatepersonalannotations,credentials,LibraryIDs orrawmarketdata. Original Graph record flags unchanged."
+}
