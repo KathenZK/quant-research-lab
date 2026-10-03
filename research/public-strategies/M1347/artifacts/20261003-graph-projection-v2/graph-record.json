@@ -1,0 +1,46 @@
+{
+  "id": "M1347",
+  "name": "BTC月末倒数第三日到次月第三日：目录假设",
+  "status": "tested_proxy_only",
+  "reason": "1规则实现4固定策略配置；0新增控制；全部亏损；strict0",
+  "tested_variants": 1,
+  "families": [
+    "catalog-daily-monthturn-fullcash"
+  ],
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false,
+    "economic_conclusion": "All four predetermined configurations lost money; no support for this hypothesis in this exposed window"
+  },
+  "implementations": [
+    {
+      "variant_id": "M1347-catalog-daily-v1-base",
+      "family": "catalog-daily-monthturn-fullcash",
+      "origin_run_id": "m1347-catalog-daily-20261003-v1",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "configuration_runs": 4,
+  "new_control_runs": 0,
+  "research_classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "display_projection": {
+    "version": 2,
+    "period_aliases": {
+      "full": "2023-2024"
+    },
+    "fee_labels_bps": [
+      "0",
+      "20"
+    ],
+    "retained_slippage_bps_each_side": 2,
+    "v1_detail_sha256": "5e8003a430a9e2f0e802cfba743b62b4ba1b8c46a962d273cc47903790efa5d4",
+    "summary_sha256": "4c19980d35f4a699ef68dc9dffe0c1155b2bc6140847a0da864fb4dbf3594894",
+    "new_strategy_configurations": 0,
+    "new_controls": 0,
+    "explanation": "Default full-period consumer and numeric bps labels; all values, nulls and25sourcepoints unchanged"
+  }
+}

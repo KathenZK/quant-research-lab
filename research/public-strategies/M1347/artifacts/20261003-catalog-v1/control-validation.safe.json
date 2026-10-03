@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "buyhold-decisions.csv",
+      "bytes": 104465,
+      "sha256": "19504c9f22b4beb590b2557fba407f386a349fd6233b683ea6dac0ab5a7bf27b"
+    },
+    {
+      "path": "buyhold-fills.csv",
+      "bytes": 409,
+      "sha256": "d1d455ce41ae73763a76212d0a6fc8226506d4bd329905f1d1e3e5999a6eb74f"
+    },
+    {
+      "path": "buyhold-monthly.csv",
+      "bytes": 3027,
+      "sha256": "acf6f1d7769b498bcf7ec657f39ffe045798a0413617274286e159467a40b17d"
+    },
+    {
+      "path": "buyhold-nav.csv",
+      "bytes": 127882,
+      "sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664"
+    },
+    {
+      "path": "buyhold-pending.csv",
+      "bytes": 130,
+      "sha256": "dd7074fbd9d99e5f3f560d891bfe30f78c6aed5d051215b1fb14296259687a5e"
+    },
+    {
+      "path": "buyhold-roundtrips.csv",
+      "bytes": 112,
+      "sha256": "36a3c6e8fc36325190f5a98f1446d35515fc81d4196da29d8d316e6fbad1463c"
+    },
+    {
+      "path": "buyhold-summary.json",
+      "bytes": 766,
+      "sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142"
+    }
+  ],
+  "new_control_runs": 0,
+  "existing_control_source_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "fresh_build_files": 4,
+  "byte_equal": true,
+  "default_full_period_mappings": 5,
+  "numeric_fee_labels": [
+    "0",
+    "20"
+  ],
+  "slippage_bps_each_side": 2,
+  "curve_points": 25,
+  "metric_observations": 731,
+  "new_runs": 0,
+  "new_controls": 0,
+  "consumer_file": "web/src/CorpusResearch.tsx",
+  "consumer_sha256": "b8061f388bf9bca8683a429c18cd92a258ed5b1188defb7a555f99b51cb289e8",
+  "consumer_contract": "defaultfull;benchmark[period];costObject.entries renders bps",
+  "old_v1_kept": true
+}
