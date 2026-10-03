@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "checks": 22,
+  "tests": [
+    "9 malformed execution policies rejected before execution",
+    "Default v1 JSON+6CSV+metrics byte equality base",
+    "Default v1 JSON+6CSV+metrics byte equality fee0",
+    "Default v1 JSON+6CSV+metrics byte equality fee20",
+    "Default v1 JSON+6CSV+metrics byte equality delay2",
+    "Actual entrybar close1 trigger25 fill e+25",
+    "Oversold level never resets clock, cannot cancel sell, nextclose reentry lag1",
+    "No out-of-window liquidation before trigger or pendingdue lag1",
+    "Actual entrybar close1 trigger25 fill e+26",
+    "Oversold level never resets clock, cannot cancel sell, nextclose reentry lag2",
+    "No out-of-window liquidation before trigger or pendingdue lag2",
+    "Pending buy does not start clock; absent rawentry retains buy; latch due retained",
+    "Cancelled unfilled buy never starts timer",
+    "Optional earlier raw exit resets actual lifecycle for next actual buy",
+    "Warmup signals cannot initialize holdings or count",
+    "Explicit positive limit1 boundary counts actual buy close",
+    "Lifecycle prefix/future independence nine cuts base",
+    "Lifecycle prefix/future independence nine cuts fee0",
+    "Lifecycle prefix/future independence nine cuts fee20",
+    "Lifecycle prefix/future independence nine cuts delay2",
+    "Independent verifier exact all states/decisions/events/roundtrips/months/metrics",
+    "Independent verifier detects corrupted timer serialization"
+  ],
+  "independent_full_account": {
+    "status": "PASS",
+    "features": 762,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "monthly_rows": 96,
+    "fill_rows": 224,
+    "strategy_configurations": 4,
+    "new_control_configurations": 0,
+    "source_signal": "family independent Fraction features supplied and verified separately",
+    "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+    "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+    "engine_runs": 0,
+    "execution_policy": {
+      "max_completed_closes": 25
+    },
+    "lifecycle": "independent actual buy index -> completed closes; sticky timeexit until sale",
+    "raw_signal_validation": "caller supplies independently checked raw events; no adapter holding state"
+  },
+  "historical_runs": 0,
+  "market_requests": 0,
+  "new_strategy_trials": 0,
+  "new_controls": 0,
+  "policy": {
+    "max_completed_closes": 25
+  },
+  "v1_default_byte_equivalence_cases": 20
+}
