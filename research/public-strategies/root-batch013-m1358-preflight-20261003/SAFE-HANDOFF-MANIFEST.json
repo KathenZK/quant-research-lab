@@ -1,0 +1,35 @@
+{
+  "schema_version": "source-preflight-safe-handoff/v1",
+  "record_id": "M1358",
+  "frozen_at_utc": "2026-10-03T15:16:04.398454+00:00",
+  "status": "SOURCE_PREFLIGHT_COMPLETE; C0_NOT_SIGNED",
+  "not_remote_backup": true,
+  "files": [
+    {
+      "path": "README.safe.md",
+      "bytes": 6921,
+      "sha256": "f741d1c73d9568a2146b37ab943f80bdc802cd4ea502a5cea0d8127b8c683fdc"
+    },
+    {
+      "path": "M1358-sourcecard.safe.json",
+      "bytes": 8711,
+      "sha256": "22a93b2ef0b40903392fe75b8a6d46dd578f9839a3d971ab1a06a441409ffdef"
+    },
+    {
+      "path": "M1358-cold-start-candidate.safe.json",
+      "bytes": 1197,
+      "sha256": "d9ec75c859c6d8d935132cbb373e9c522e3e12ac067967ec59e74237c99484c4"
+    },
+    {
+      "path": "catalog-field-audit.safe.json",
+      "bytes": 2393,
+      "sha256": "4c085c3f59595e808a116d3d09a014f243228e2b3e88b99f86487521ecc887e3"
+    },
+    {
+      "path": "synthetic-report.json",
+      "bytes": 3477,
+      "sha256": "ea48dd68ce60393e082d411dbc2539a1c7cefae31f528ff939a4f4b661324790"
+    }
+  ],
+  "excluded": "All forum fulltext/code, original catalog row and private metadata, downloaded reference source, scripts and environment receipts. No publication or external upload performed."
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "m1358-source-synthetic/v1",
+  "record_id": "M1358",
+  "status": "PASS",
+  "checked_at_utc": "2026-10-03T15:11:39.344298+00:00",
+  "visible_class_sha256": "b568553dabbe304d814d4e15d5ebbab1a343b4688b16fea1573d433600833eba",
+  "lean_reference_commit": "705b9551be1aaa821c7f77896a7eb8fcd07b92ee",
+  "scope": "literal Python class against method-recording stub; mathematical EMA reference only",
+  "not_tested": [
+    "actual Lean runtime startup",
+    "account base currency initialization end-to-end",
+    "actual C# indicator numeric equivalence",
+    "historical data",
+    "order sizing, fees, fills, returns"
+  ],
+  "historical_runs": 0,
+  "market_requests": 0,
+  "checks": [
+    {
+      "name": "only_one_visible_class",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "initialize_exact_call_sequence",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "not_ready_no_entry",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "not_ready_no_exit",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "flat_above_without_cross_enters",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": [
+          [
+            "target",
+            [
+              "BTCUSDT",
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "name": "flat_below_does_not_short",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "flat_equal_no_action",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "long_below_exits",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": [
+          [
+            "liquidate",
+            [
+              "BTCUSDT"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "name": "long_above_does_not_rebalance",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "long_equal_holds",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": []
+      }
+    },
+    {
+      "name": "literal_negative_holding_above_targets_long",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": [
+          [
+            "target",
+            [
+              "BTCUSDT",
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "name": "previous_is_not_a_cross_gate",
+      "status": "PASS",
+      "detail": {
+        "observed_actions": [
+          [
+            "target",
+            [
+              "BTCUSDT",
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "name": "flat_repeated_above_reissues_without_cross",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "31_samples_slow_not_ready",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "47_samples_slow_not_ready",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "48th_sample_ready_seed_SMA",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "49th_sample_recursive",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "synthetic_prefix_causal",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "wall_seconds": 0.0011089659965364262,
+  "cpu_seconds": 0.0011067529999999985,
+  "max_rss_kib": 11008
+}

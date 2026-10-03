@@ -71,3 +71,5 @@
 - [M0264 ClucMay72018](M0264/README.md)：原生5m四配置执行代理诊断；既有买持复用，严格0；root独立验收另记。
 
 - [M0266 CombinedBinHAndCluc](M0266/README.md)：原生5m四配置执行代理诊断；既有买持复用，严格0；root独立验收另记。
+
+[M1358冷启动来源预检](root-batch013-m1358-preflight-20261003/README.md)：单ID日线4配置执行改编已分配，待独立C0；严格0。

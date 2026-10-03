@@ -1,0 +1,25 @@
+{
+  "schema_version": "m1358-proposed-c0-input/v1",
+  "record_id": "M1358",
+  "status": "PROPOSAL_NOT_C0_NOT_EXECUTION_AUTHORIZATION",
+  "proposed_by": "root coordination",
+  "evaluation_start": "2023-01-01T00:00:00Z",
+  "indicator_state_at_start": "empty",
+  "existing_31_pre_eval_days_fed_to_EMA": false,
+  "slow_ready_after_valid_daily_updates": 48,
+  "first_47_updates": "no order decisions",
+  "first_eligible_decision": "after sample 48, only when source state condition true; exact event timestamp must be frozen",
+  "normal_exposure": "long/flat",
+  "explicit_single_USDT_cash": "required adaptation; no assertion about author original defaults",
+  "sizing_fee_fill_lot_rounding": "pending independent execution review and root freeze",
+  "classification_if_executed": "ADAPTED_DIAGNOSTIC",
+  "original_window_reproduction": false,
+  "new_OOS_claim": false,
+  "market_requests": 0,
+  "historical_runs": 0,
+  "notes": [
+    "Current 31-day shortage does not force extra data for this cold-start proposal.",
+    "Do not silently prefeed December or use five-period warmup.",
+    "Do not silently reuse native5m ROI/stop or assume SetHoldings target one equals a three-times position."
+  ]
+}

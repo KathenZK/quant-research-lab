@@ -1,0 +1,343 @@
+{
+  "schema": "m1358-independent-synthetic-execution-preflight/v1",
+  "status": "PASS_SYNTHETIC_ADAPTED_BOUNDARIES_NOT_C0",
+  "completed_utc": "2026-10-03T15:19:32.186395+00:00",
+  "source_sha256": "b568553dabbe304d814d4e15d5ebbab1a343b4688b16fea1573d433600833eba",
+  "checks": [
+    {
+      "name": "visible_source_hash",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "class_only_no_imports",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "original_cash_not_changed_in_stub",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_state_without_cross",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_no_rebalance_while_long",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_equal_and_flat_below",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_long_below_exit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_not_ready_blocks_both_sides",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_rational_reference",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_SMA_seed_and_readiness",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_12",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_13",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_47",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_48",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_49",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA13_prefix_future_95",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_rational_reference",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_SMA_seed_and_readiness",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_12",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_13",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_47",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_48",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_49",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "EMA48_prefix_future_95",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "cold_start_first_47_unavailable",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "cold_start_dates_full731",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "lag1_source_state_fills",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "lag2_duplicate_intents_no_pyramiding",
+      "status": "PASS",
+      "detail": {
+        "fills": [
+          [
+            49,
+            "BUY"
+          ],
+          [
+            56,
+            "SELL"
+          ]
+        ],
+        "skips": [
+          [
+            50,
+            "BUY",
+            "already_at_target"
+          ],
+          [
+            57,
+            "SELL",
+            "already_at_target"
+          ]
+        ],
+        "intents": [
+          [
+            47,
+            "BUY"
+          ],
+          [
+            48,
+            "BUY"
+          ],
+          [
+            54,
+            "SELL"
+          ],
+          [
+            55,
+            "SELL"
+          ]
+        ],
+        "pending_after_end": {}
+      }
+    },
+    {
+      "name": "lag2_no_silent_cancel_on_flat_below",
+      "status": "PASS",
+      "detail": {
+        "fills": [
+          [
+            49,
+            "BUY"
+          ],
+          [
+            51,
+            "SELL"
+          ]
+        ],
+        "skips": [
+          [
+            52,
+            "SELL",
+            "already_at_target"
+          ]
+        ],
+        "intents": [
+          [
+            47,
+            "BUY"
+          ],
+          [
+            49,
+            "SELL"
+          ],
+          [
+            50,
+            "SELL"
+          ]
+        ],
+        "pending_after_end": {}
+      }
+    },
+    {
+      "name": "end_window_signal_does_not_execute_outside",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "base_quote_fee_95_notional",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "fee0_quote_fee_95_notional",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "fee20_quote_fee_95_notional",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "lag2_quote_fee_95_notional",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "BTC_fee_not_cash_fee_equivalent_state",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "cash_fee_vs_BTC_fee_initial_mark_only_equal",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "cash_fee_vs_BTC_fee_future_exposure_differs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "100percent_notional_plus_cash_fee_would_borrow",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "100percent_fee_inclusive_is_different_sizing",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "check_count": 39,
+  "chronology": {
+    "first_input_bar_open": "2023-01-01",
+    "first_ready_bar_open": "2023-02-17",
+    "first_ready_bar_close_exclusive": "2023-02-18T00:00:00Z",
+    "first_possible_lag1_fill": "2023-02-18T00:00:00Z",
+    "first_possible_lag2_fill": "2023-02-19T00:00:00Z",
+    "evaluation_days": 731,
+    "pre_evaluation_bars_fed_to_EMA": 0,
+    "unready_decision_days": 47,
+    "first_possible_entry_bar_number_1based": 49,
+    "no_fill_NAV_rows_before_first_possible_lag1_entry": 48
+  },
+  "proposed_cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "lag_days": 1,
+      "synthetic_notional": "95000.00",
+      "synthetic_cash_after_buy": "4924.000000",
+      "fee_currency": "USDT",
+      "sizing": "95% pre-fee cash notional; fee additional"
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "lag_days": 1,
+      "synthetic_notional": "95000.00",
+      "synthetic_cash_after_buy": "5000.00",
+      "fee_currency": "USDT",
+      "sizing": "95% pre-fee cash notional; fee additional"
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "lag_days": 1,
+      "synthetic_notional": "95000.00",
+      "synthetic_cash_after_buy": "4810.00000",
+      "fee_currency": "USDT",
+      "sizing": "95% pre-fee cash notional; fee additional"
+    },
+    {
+      "name": "lag2",
+      "fee_bps": 8,
+      "lag_days": 2,
+      "synthetic_notional": "95000.00",
+      "synthetic_cash_after_buy": "4924.000000",
+      "fee_currency": "USDT",
+      "sizing": "95% pre-fee cash notional; fee additional"
+    }
+  ],
+  "pending_policy": "Daily source action using actual held quantity, enqueue i+lag, execute only flat BUY/long SELL, record duplicate stale actions, no cancel or re-time on later opposite condition, no beyond-window fills; explicitly differs from actual Lean target sizing/open-order netting.",
+  "numeric_scope": "Decimal60 vs independent exact rational EMA and transaction arithmetic; current Lean formula reference, not actual C# Decimal or engine equivalence",
+  "historical_prices_read": false,
+  "historical_runs": 0,
+  "strategy_account_engine_runs": 0,
+  "actual_lean_runs": 0,
+  "source_modified": false,
+  "claims_written": false,
+  "C0_written": false,
+  "network_requests": 0,
+  "wall_seconds": 0.004071515999385156,
+  "cpu_seconds": 0.004069203,
+  "max_rss_kib": 11776,
+  "script_sha256": "8a7eee498f88925adce8e4b5cabc24de7bdbf63118cc8e3c2cf1b2a8907792bb"
+}
