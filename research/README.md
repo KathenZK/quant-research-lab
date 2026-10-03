@@ -324,3 +324,6 @@
 - [M0266 CombinedBinHAndCluc](public-strategies/M0266/README.md)：原生5m四配置执行代理诊断；既有买持复用，严格0；root独立验收另记。
 
 [M1358冷启动来源预检](public-strategies/root-batch013-m1358-preflight-20261003/README.md)：单ID日线4配置执行改编已分配，待独立C0；严格0。
+
+- [M0287 MultiRSI](public-strategies/M0287/README.md)：10m/40m闭合重采样的原生5m四配置执行代理；基础配置亏损48.56%，零费仍保留滑点；严格0。
+- [M0289 PowerTower](public-strategies/M0289/README.md)：原始绝对价格幂参数3.849/3.798保留；四配置零交易，无参数搜索；严格0。

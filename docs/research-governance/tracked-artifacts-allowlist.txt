@@ -1252,3 +1252,29 @@ research/public-strategies/M0266/artifacts/20261003-dot006-display/public-displa
 research/public-strategies/M0272/artifacts/20261003-dot006-display/base-nav-light.csv  # dot006 additive display projection
 research/public-strategies/M0272/artifacts/20261003-dot006-display/graph-record.json  # dot006 additive display projection
 research/public-strategies/M0272/artifacts/20261003-dot006-display/public-display-manifest.json  # dot006 additive display projection
+
+# dot007 independently verified public evidence; exact paths
+research/public-strategies/M0287/artifacts/catalog-original11.csv  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/catalog-original11.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/pre-C0-source-signal-QA.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/base-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/core-ledger.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/delay2-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/fee0-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/fee20-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/nonstatistical-fill-sample.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/runtime.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/summary.json  # dot007 approved public evidence
+research/public-strategies/M0287/artifacts/results/validation-summary.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/catalog-original11.csv  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/catalog-original11.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/pre-C0-source-signal-QA.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/base-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/core-ledger.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/delay2-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/fee0-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/fee20-daily-equity.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/nonstatistical-fill-sample.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/runtime.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/summary.json  # dot007 approved public evidence
+research/public-strategies/M0289/artifacts/results/validation-summary.json  # dot007 approved public evidence
