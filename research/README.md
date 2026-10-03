@@ -305,3 +305,5 @@
 
 - [M0298 Simple](public-strategies/M0298/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
 - [M0304 Strategy002](public-strategies/M0304/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
+
+- [batch009六ID离线恢复入口](public-strategies/batch009-offline-recovery-20261003/README.md)：diagnostic_topic；复用原冻结执行入口与88个结果指纹，需要用户合法持有的离线输入；不代表Library远端备份。
