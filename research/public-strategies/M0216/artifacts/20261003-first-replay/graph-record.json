@@ -1,0 +1,31 @@
+{
+  "id": "M0216",
+  "name": "日线双均线11/20",
+  "status": "tested_hypothesis_only",
+  "reason": "真实BTCUSDT现货数据回测及独立校验完成；源风控门停机后保留持仓，未通过策略质量判断。",
+  "tested_variants": 1,
+  "families": [
+    "BTC-1D-M0216-SMA-CROSS"
+  ],
+  "audit": {
+    "source_verification_status": "readable",
+    "source_rule_attribution_status": "public_source_anchored_hypothesis"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0216-BTCUSDT-SMA11-20-SOURCE-GATE-20261003",
+      "family": "BTC-1D-M0216-SMA-CROSS",
+      "origin_run_id": "M0216-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0216-20261003-first-replay",
+      "variant_id": "M0216-BTCUSDT-SMA11-20-SOURCE-GATE-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "43d1c5ea6c94d544cb8dad35b84277e5f9e0f0535b8b6b1f993e0897c0efb7fb",
+      "manifest_sha256": "d6841993cb3e90f505308f9c3424447e34a3e46ad7cf90d0947acb3d2eb6396f"
+    }
+  ]
+}

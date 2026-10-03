@@ -1,0 +1,52 @@
+{
+  "base": {
+    "days": 519,
+    "return_pct": 19.08765495824327,
+    "cagr_pct": 13.072039092082566,
+    "max_drawdown_pct": 22.13835117017735,
+    "sharpe_daily_365": 0.6584529982591258,
+    "fills": 34,
+    "fees": 2884.55036193302,
+    "terminal_quantity": 0.0
+  },
+  "fee0": {
+    "days": 519,
+    "return_pct": 22.19098274580884,
+    "cagr_pct": 15.136363847694456,
+    "max_drawdown_pct": 21.885651411100504,
+    "sharpe_daily_365": 0.7387667782444167,
+    "fills": 34,
+    "fees": 0.0,
+    "terminal_quantity": 0.0
+  },
+  "fee20": {
+    "days": 519,
+    "return_pct": 14.571433297931137,
+    "cagr_pct": 10.039079474220758,
+    "max_drawdown_pct": 22.516599961211558,
+    "sharpe_daily_365": 0.5374085047933244,
+    "fills": 34,
+    "fees": 7076.604082931269,
+    "terminal_quantity": 0.0
+  },
+  "lag2": {
+    "days": 519,
+    "return_pct": -0.8398559207236533,
+    "cagr_pct": -0.5913887695096598,
+    "max_drawdown_pct": 28.072873319156443,
+    "sharpe_daily_365": 0.08933489019433924,
+    "fills": 32,
+    "fees": 2417.939744941802,
+    "terminal_quantity": 0.0
+  },
+  "buyhold": {
+    "days": 519,
+    "return_pct": 208.9696814326945,
+    "cagr_pct": 121.07815910709365,
+    "max_drawdown_pct": 25.620038099371733,
+    "sharpe_daily_365": 1.8853406382025923,
+    "fills": 1,
+    "fees": 76.0,
+    "terminal_quantity": 3.2491844215685055
+  }
+}

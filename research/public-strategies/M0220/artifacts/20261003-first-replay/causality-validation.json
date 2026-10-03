@@ -1,0 +1,11 @@
+{
+  "stop_ratchet_and_prior_caution_fixtures": "PASS 4 hand cases",
+  "weekly_twentieth_boundary": "PASS Sunday19 Monday20",
+  "incomplete_week_future_leak": "PASS unchanged current week; changed next week only",
+  "truncated_incomplete_week": "PASS",
+  "future_perturbation": {
+    "2023-09-30": "PASS all five configurations",
+    "2024-06-30": "PASS all five configurations"
+  },
+  "raw_open_fills_checked": 462
+}

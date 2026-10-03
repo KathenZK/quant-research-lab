@@ -1,0 +1,31 @@
+{
+  "id": "M0233",
+  "name": "单资产z分数回撤",
+  "status": "tested_adaptation_only",
+  "reason": "源码信号核验通过；BTC现货仅多改编，非原多空策略，表现弱且时序敏感",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0233-ZSCORE-MEANREVERSION"
+  ],
+  "audit": {
+    "source_verification_status": "readable",
+    "source_rule_attribution_status": "source_verified_long_only_adaptation"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0233-BTCUSDT-Z20-15-LONGONLY-20261003",
+      "family": "PUBLIC-M0233-ZSCORE-MEANREVERSION",
+      "origin_run_id": "M0233-20261003-first-replay",
+      "fidelity_class": "ADAPTATION"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0233-20261003-first-replay",
+      "variant_id": "M0233-BTCUSDT-Z20-15-LONGONLY-20261003",
+      "fidelity_class": "ADAPTATION",
+      "protocol_sha256": "7f6c755d3abc1036bdbbe48ef47375608ed0e7370eb84df5eff4e92073b5a700",
+      "manifest_sha256": "822756fb873fd004b6a292eed301a74ff3bac47f9dddebcda6a13d2a98d208d3"
+    }
+  ]
+}

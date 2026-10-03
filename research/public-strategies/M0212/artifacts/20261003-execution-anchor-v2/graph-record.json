@@ -1,0 +1,120 @@
+{
+  "id": "M0212",
+  "name": "成交量收缩突破：执行日锚假设",
+  "status": "tested_hypothesis_only",
+  "reason": "单BTC日频实例与时间解释未源文核实，延迟一日转负，不晋升",
+  "tested_variants": 2,
+  "families": [
+    "M0212-VOLUME-CONTRACTION"
+  ],
+  "audit": {
+    "source_verification_status": "empty_public_page",
+    "source_rule_attribution_status": "catalog_rule_unverified_original_source"
+  },
+  "metrics": {
+    "periods": {
+      "full": {
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "observations": 731,
+        "total_return": 0.29460153133625355,
+        "cagr": 0.13760464770242442,
+        "max_drawdown": -0.227162296506785,
+        "sharpe": 0.9448373152156592,
+        "fills": 73,
+        "closed_round_trips": 36
+      }
+    },
+    "start": "2023-01-01",
+    "end": "2024-12-31",
+    "observations": 731,
+    "total_return": 0.29460153133625355,
+    "cagr": 0.13760464770242442,
+    "max_drawdown": -0.227162296506785,
+    "sharpe": 0.9448373152156592,
+    "fills": 73,
+    "closed_round_trips": 36
+  },
+  "implementations": [
+    {
+      "variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-EXECUTION-ANCHOR-V2-20261003",
+      "family": "M0212-VOLUME-CONTRACTION",
+      "origin_run_id": "M0212-20261003-execution-anchor-v2",
+      "fidelity_class": "HYPOTHESIS",
+      "role": "current_canonical_hypothesis"
+    },
+    {
+      "variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-NEXTOPEN-20261003",
+      "family": "M0212-VOLUME-CONTRACTION",
+      "origin_run_id": "M0212-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS",
+      "role": "retained_extra_information_delay_diagnostic"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0212-20261003-execution-anchor-v2",
+      "variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-EXECUTION-ANCHOR-V2-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "metrics": {
+        "periods": {
+          "full": {
+            "start": "2023-01-01",
+            "end": "2024-12-31",
+            "observations": 731,
+            "total_return": 0.29460153133625355,
+            "cagr": 0.13760464770242442,
+            "max_drawdown": -0.227162296506785,
+            "sharpe": 0.9448373152156592,
+            "fills": 73,
+            "closed_round_trips": 36
+          }
+        },
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "observations": 731,
+        "total_return": 0.29460153133625355,
+        "cagr": 0.13760464770242442,
+        "max_drawdown": -0.227162296506785,
+        "sharpe": 0.9448373152156592,
+        "fills": 73,
+        "closed_round_trips": 36
+      },
+      "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+      "protocol_sha256": "feb7a449eec40ea4eb7e35e1b8c96eb8e6674398936c6396b086dc1551cbc9c0",
+      "manifest_sha256": "9f7690d3c41eb8560a4ad410d0c84fb42b6f779c2841bd5e62fd120e572ba4ae"
+    },
+    {
+      "origin_run_id": "M0212-20261003-first-replay",
+      "variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-NEXTOPEN-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "role": "retained_extra_information_delay_diagnostic",
+      "metrics": {
+        "periods": {
+          "full": {
+            "start": "2023-01-01",
+            "end": "2024-12-31",
+            "observations": 731,
+            "total_return": 0.00681752681688641,
+            "max_drawdown": -0.20746333510358983,
+            "sharpe": 0.10108218804218862,
+            "cagr": 0.0033983101635881585,
+            "fills": 73
+          }
+        }
+      }
+    }
+  ],
+  "historical_versions_retained": [
+    "M0212-BTCUSDT-VOLUME-CONTRACTION-NEXTOPEN-20261003"
+  ],
+  "current_canonical_variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-EXECUTION-ANCHOR-V2-20261003",
+  "execution_counts": {
+    "research_ids": 1,
+    "frozen_interpretations": 2,
+    "first_strategy_config_runs": 8,
+    "benchmark_runs": 2,
+    "strict_reproductions": 0,
+    "restoration_not_counted": true
+  }
+}

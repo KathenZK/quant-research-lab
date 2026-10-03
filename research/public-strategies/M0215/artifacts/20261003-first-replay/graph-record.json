@@ -1,0 +1,30 @@
+{
+  "id": "M0215",
+  "name": "RSI2超跌反弹：BTC单腿",
+  "status": "tested_hypothesis_only",
+  "reason": "BTC单腿真实行情假设回测及独立校验完成，回报大幅落后买入持有；严格复现0。",
+  "tested_variants": 1,
+  "families": [
+    "BTC-1D-M0215-RSI2-SNAPBACK"
+  ],
+  "audit": {
+    "source_verification_status": "catalog_read_public_source_403",
+    "source_rule_attribution_status": "catalog_anchored_hypothesis"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0215-BTCUSDT-RSI2-WILDER-20261003",
+      "family": "BTC-1D-M0215-RSI2-SNAPBACK",
+      "origin_run_id": "M0215-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0215-20261003-first-replay",
+      "variant_id": "M0215-BTCUSDT-RSI2-WILDER-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "0e1a169de3e6013ae86fade22fb2d2f9f9aea66ba68ba9969e884568fdca4f6e"
+    }
+  ]
+}

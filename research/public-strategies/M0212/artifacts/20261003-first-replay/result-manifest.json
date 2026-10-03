@@ -1,0 +1,21 @@
+{
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "files": {
+    "specs/M0212-first-replay.json": "55e19a985063f73c1388de689fa82a78221c5f49f12bd4f41455d92ec4f67188",
+    "scripts/run_replay.py": "0ae7fbe110b3c9146670f782fa739888710e29de09fefe5a595c13db7a5b78f0",
+    "scripts/verify_replay.py": "18a330139a2adf54e1263d587c26680f7bd157ee93bd36202f432cc47fc039de",
+    "artifacts/20261003-first-replay/results/base-nav.csv": "2cf45f33abb28d3cf6fa2f29047075e3d88537279f008742f9b8a442ee4dd8d1",
+    "artifacts/20261003-first-replay/results/base-trades.csv": "25a7b2d642206c05037ea08407094427663e9139246a1ebbecaa2a970d97fa57",
+    "artifacts/20261003-first-replay/results/buyhold-nav.csv": "ee23e20b7a7f69e4a6abaace9513542daf6a92c7055f51568b12175f9da802d1",
+    "artifacts/20261003-first-replay/results/buyhold-trades.csv": "98d98a3c621c1ecebb65d26020735d24a2aa5279987c6fb53eb939021632d22b",
+    "artifacts/20261003-first-replay/results/fee0-nav.csv": "b951f0636e536a9915d1621bf3a70d667207d994250f6859ff7f5d7c73755d2c",
+    "artifacts/20261003-first-replay/results/fee0-trades.csv": "1fe63b29c830b178c878c7866f09bd8d4ed0bf849e67e726e78ed4f1241e85e5",
+    "artifacts/20261003-first-replay/results/fee20-nav.csv": "fa1bafd01eb1e7567227d6e76a09f50f27af62f4ab80c1f8df7e48d58ddfe6fc",
+    "artifacts/20261003-first-replay/results/fee20-trades.csv": "ca2263f205dc3f5546f2b7e5fc4889ddcad399636b1623a6658134d4063b24e5",
+    "artifacts/20261003-first-replay/results/lag2-nav.csv": "b24fc235f2ab74a0668fd47bbb6d0cbd5279260519b7ae925e05c08867f11a0f",
+    "artifacts/20261003-first-replay/results/lag2-trades.csv": "c0548f0d26ff6791cdbba51529ebbb8488ecc56d451a096e982d52bad5f56a8e",
+    "artifacts/20261003-first-replay/results/summary.json": "7115234a5ee394b246a4d01900ac4d598af2f99f0fefab95bb6b87c1359eaa29",
+    "artifacts/20261003-first-replay/results/verification.json": "d3505a903e8da2c88a71a27efd257afdec7b1e5d9c40e5cc70765d46db5afb00",
+    "artifacts/20261003-first-replay/exposure.jsonl": "42c61211947a56b4f236f8d569a475e84f32d555f60b194c2acd415bc1d78f6f"
+  }
+}

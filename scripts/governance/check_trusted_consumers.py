@@ -451,6 +451,151 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/export_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0233/scripts/build_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Reads pinned source and diagnostic evidence only; source-signal parity does not imply execution fidelity.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0233/scripts/verify_source.py",
+        "<module>", "frozen-artifact-consumer",
+        "Reads pinned source and diagnostic evidence only; source-signal parity does not imply execution fidelity.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0212/scripts/run_replay.py",
+        "main", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0212/scripts/run_replay_v2.py",
+        "main", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0212/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0212/scripts/verify_replay_v2.py",
+        "verify", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0214/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0214/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0214/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0214/scripts/export_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0233/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0233/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Explicit hash-pinned historical spot input and retained diagnostic results only; no perpetual bundle or source-faithful reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0200/scripts/run_replay.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0200/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/export_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/build_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/export_graph_projection.py",
+        "project", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/fetch_inputs.py",
+        "fetch", "official-spot-archive-snapshot-builder",
+        "Fixed BTCUSDT spot archive acquisition: verifies provider SHA256, exact daily grid and native OHLCV; independent of the perpetual V3 bundle, with no PIT or production-readiness claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/run_replay.py",
+        "main", "frozen-artifact-consumer",
+        "M0216 public-catalog spot historical hypothesis consumes only its SHA256-pinned retained CSV, never a lake fallback or perpetual substitution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Independent Decimal ledger and indicator reconstruction from the retained M0216 snapshot; validates exported results without importing the replay engine.",
+    ),
+    AuxiliaryClassification(
         "research/platform/research-program-review/scripts/three-line-review-20260909/b_recalculate.py",
         "<module>", "frozen-artifact-consumer",
         "Independent TPSA ledger reconstruction from retained 5f41 price snapshots, predictions and account exports; no source lake read.",

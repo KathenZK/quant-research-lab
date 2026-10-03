@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_commit": "ef662462516eb7fa30d6dc26fa27333f59e43881",
+  "source_sha256": "52f359babecc66dc17f76b68a7e18006e62d4808cdeb4e08ce910cd52f544e3c",
+  "method": "Execute only inspected Strategy and MeanReversionStrategy class AST from hash-verified source; no upstream imports, engine, downloader or application execution",
+  "source_signal_rows": 762,
+  "long_target_rows": 762,
+  "short_source_rows": 144,
+  "classification": "ADAPTATION: signal mapping verified, execution and capital differ",
+  "license": "MIT Copyright (c) 2025 Alqama-svg"
+}

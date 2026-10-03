@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "independent_method": "Decimal 40-digit rolling sample variance and separate cash ledger; pandas source signal cross-check",
+  "configurations": 5,
+  "daily_rows": 3655,
+  "signal_rows": 762,
+  "numeric_comparisons": 16288,
+  "max_absolute_difference": 1.6007106751203537e-10,
+  "future_perturbation": "PASS: prices from 2024-07-01 multiplied by1.7; all earlier NAV/trades identical",
+  "zero_variance": "PASS flat",
+  "z_exit_redundancy": "PASS .1 and .5 identical",
+  "fidelity_class": "ADAPTATION",
+  "strict_reproduction": false
+}

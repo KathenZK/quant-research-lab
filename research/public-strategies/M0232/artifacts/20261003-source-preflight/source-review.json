@@ -1,0 +1,50 @@
+{
+  "id": "M0232",
+  "source_url": "https://www.fmz.com/strategy/443132",
+  "reviewed_at": "2026-10-03T07:05:23.910388+00:00",
+  "public_rendered_page": "readable summary and truncated code header",
+  "full_source_status": "LOGIN_REQUIRED",
+  "executor_fetch": {
+    "method": "urllib.request.urlopen normal public page GET",
+    "attempts": 1,
+    "result": "HTTP Error 403: Forbidden",
+    "retry": false
+  },
+  "source_bytes_acquired": false,
+  "source_sha256": null,
+  "source_hash_status": "UNKNOWN; no original bytes downloaded",
+  "visible_header": {
+    "pine_version": 5,
+    "period": "1d",
+    "base_period": "1h",
+    "exchange": "Futures_Binance",
+    "currency": "BTC_USDT",
+    "start": "2024-01-29 00:00:00",
+    "end": "2024-02-28 00:00:00",
+    "license_label": "Mozilla Public License 2.0",
+    "copyright_label": "李和邪"
+  },
+  "default_parameters_verified": false,
+  "rule_blockers": [
+    "N1/N2 defaults",
+    "mode1/mode2 selection and lengths",
+    "ATR period and calculation",
+    "stop/pyramid multipliers and max units",
+    "Shutdown behavior",
+    "long/short/reversal semantics",
+    "signal/fill/order precedence",
+    "risk sizing and contract semantics"
+  ],
+  "data_blockers": [
+    "Existing BTCUSDT spot daily cannot represent visible futures hourly-base example",
+    "Required finer fills/funding/contract metadata depend on inaccessible code"
+  ],
+  "classification": "BLOCKED_SOURCE_RULES",
+  "research_ids": 1,
+  "strategy_runs": 0,
+  "strict_reproductions": 0,
+  "model": "UNKNOWN",
+  "reasoning_effort": "UNKNOWN",
+  "ready_to_run": false,
+  "prerequisite": "batch003 remote recovery and CI gate; source/data blockers separately unresolved"
+}

@@ -1,0 +1,36 @@
+{
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "files": {
+    "README.md": "992ce3a8009cb8ca92cbd61b1e5e224db4e915ad7a5d2228a9c39132fdbb5505",
+    "artifacts/20261003-first-replay/LICENSE.md": "e1b472175a80dc2f0d6240afeb16fdafc368e65e312fbe0fe1c555df1279ca96",
+    "artifacts/20261003-first-replay/exposure.jsonl": "340330f4271f1db88376e5c466a6a83da326f891210701ec9831bb812ed05b3d",
+    "artifacts/20261003-first-replay/results/base-nav.csv": "4c6aa32171c2ee11ae75e9ff0714d1c2ffa5ac91e5916e2e7aaf56a8041bcf36",
+    "artifacts/20261003-first-replay/results/base-trades.csv": "0e93c1c3753eeea0134e699af434f0ac28654db0c2441953f8848e9d4fc2f69c",
+    "artifacts/20261003-first-replay/results/buyhold-nav.csv": "10f2ac7bb79a5dc011da76ea33b4183dd7d02d4d0a666e5bed9fcf6c54fb643e",
+    "artifacts/20261003-first-replay/results/buyhold-trades.csv": "8e26a70c46cdc1eeb15da7d3b9ef9dff1ac2bc537394430656c15f429a88f4d5",
+    "artifacts/20261003-first-replay/results/fee0-nav.csv": "924a266e1e1fd82be1e35ad79c5aebb97e311e339cb322b66345a4c300232285",
+    "artifacts/20261003-first-replay/results/fee0-trades.csv": "193c1c9b660015cfc4b9fd650686162257729e95134f4e1226174799162926bc",
+    "artifacts/20261003-first-replay/results/fee20-nav.csv": "6c742af2356ffe1495448b38cc9e04dc71fbf9cc1a407e0856ed6bc29896c33b",
+    "artifacts/20261003-first-replay/results/fee20-trades.csv": "ea97be19f69181d6b8c251f4939688f30452339ce4005928b8184209f3888f8a",
+    "artifacts/20261003-first-replay/results/lag2-nav.csv": "e6d2e48dfb6893c31997920dc15555c18ddfbcc0b99b1e9a7a77eb51a397e42a",
+    "artifacts/20261003-first-replay/results/lag2-trades.csv": "89e7d1f3ea3f52b338f33ebc66cbf504f2f9f5b3cd584d952340cd058015dc3c",
+    "artifacts/20261003-first-replay/results/summary.json": "2e459683aede56e0bcb912cb2fd0157cb5d49e41c66617faff0d4e30e5a74aba",
+    "artifacts/20261003-first-replay/results/verification.json": "a6aa9f00e1f58ed3db081155ce6cef796d7b2b6205c4d5a8e8ba8353f5ddeaed",
+    "decision-log.md": "8b35a18a48a2d08642a65042e06e196ea591fa45224755df3a751c7403a2d36f",
+    "diagnostics/M0200-20261003.md": "96087f1743b095976ec9caba8668a5578c79a4846eaa2ecb990bd3857e82892c",
+    "m0200-core-ledger.md": "c4e41607111044ac137453e75fc96c6ef6b12597e8a744b42b2d6eec51ca79e4",
+    "scripts/.ruff_cache/.gitignore": "9e3a60f1e6ec4ae60215c11d54b171392745ec25e9dded433d5bd921363af316",
+    "scripts/.ruff_cache/0.15.11/13891920455943354138": "c05e3979412eba621ab124d8d5253cc34a310dbae37ae266fcdb1ffca1f42200",
+    "scripts/.ruff_cache/CACHEDIR.TAG": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae",
+    "scripts/ruff.toml": "eaa5fa3c71e03b92fe000246f36db513b1d52e09b5f9587f084ab1014ae94919",
+    "scripts/run_replay.py": "1aa62a5551456656547ff06da549fd6c165698ad70071b134c9a8c1219d3902c",
+    "scripts/verify_replay.py": "88e25dace23f7492cceb158881bcc5de63b7fd6e204fe4a43fae6371f75f5126",
+    "specs/M0200-first-replay.json": "a3b35fa3f22774cf42c36304defa2866b7b15f60549162ed8517aa0f433a69c6"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}

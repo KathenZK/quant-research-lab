@@ -1,0 +1,12 @@
+{
+  "url": "https://courses.theartoftrading.com/pages/bitcoin-momentum-strategy",
+  "status": 200,
+  "retrieved_at": "2026-10-03T07:01:43.793377+00:00",
+  "html_sha256": "7527ba70b42d144b6a4cf8d63af98d3c051bb7e1c712801929779b96f15f08e9",
+  "source_sha256": "8231266815c7ce26940f3254cd7574057612f0ad388b57a45874fa23e4cebc04",
+  "source_license": "MPL-2.0 per source header",
+  "source_bytes": 3729,
+  "tradingview_read": "Failed to fetch restricted URL; no retry or bypass",
+  "strategy_runs": 0,
+  "model_effort": "UNKNOWN"
+}

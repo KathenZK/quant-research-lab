@@ -1,0 +1,114 @@
+{
+  "base": {
+    "full": {
+      "observations": 731,
+      "final_equity": 136887.45415673257,
+      "total_return": 0.3688745415673256,
+      "cagr": 0.16973787256827033,
+      "max_drawdown": -0.20749660075085297,
+      "sharpe_zero_cash": 0.8754153034721107
+    },
+    "trade_records": 420,
+    "round_trips": 210,
+    "2023": {
+      "observations": 365,
+      "final_equity": 106667.4958847314,
+      "total_return": 0.06667495884731389,
+      "cagr": 0.06667495884731389,
+      "max_drawdown": -0.20749660075085297,
+      "sharpe_zero_cash": 0.42996616275837046
+    },
+    "2024": {
+      "observations": 366,
+      "final_equity": 136887.45415673257,
+      "total_return": 0.28330990637164577,
+      "cagr": 0.2824355809446599,
+      "max_drawdown": -0.12265162295456922,
+      "sharpe_zero_cash": 1.280775647160423
+    }
+  },
+  "fee0": {
+    "full": {
+      "observations": 731,
+      "final_equity": 188326.03677203495,
+      "total_return": 0.8832603677203494,
+      "cagr": 0.3717252921081029,
+      "max_drawdown": -0.14888414100842806,
+      "sharpe_zero_cash": 1.6526679901002352
+    },
+    "trade_records": 420,
+    "round_trips": 210,
+    "2023": {
+      "observations": 365,
+      "final_equity": 125693.89359702736,
+      "total_return": 0.2569389359702736,
+      "cagr": 0.2569389359702736,
+      "max_drawdown": -0.14888414100842806,
+      "sharpe_zero_cash": 1.2769461571820517
+    },
+    "2024": {
+      "observations": 366,
+      "final_equity": 188326.03677203495,
+      "total_return": 0.4982910576054336,
+      "cagr": 0.49663678906896913,
+      "max_drawdown": -0.09380570269815802,
+      "sharpe_zero_cash": 1.9947487679509437
+    }
+  },
+  "fee20": {
+    "full": {
+      "observations": 731,
+      "final_equity": 84751.6381484698,
+      "total_return": -0.1524836185153019,
+      "cagr": -0.07928928586745554,
+      "max_drawdown": -0.30101131609713705,
+      "sharpe_zero_cash": -0.3103773179996771
+    },
+    "trade_records": 420,
+    "round_trips": 210,
+    "2023": {
+      "observations": 365,
+      "final_equity": 83349.96696622319,
+      "total_return": -0.16650033033776812,
+      "cagr": -0.16650033033776812,
+      "max_drawdown": -0.30101131609713705,
+      "sharpe_zero_cash": -0.850691518029311
+    },
+    "2024": {
+      "observations": 366,
+      "final_equity": 84751.6381484698,
+      "total_return": 0.016816697513684975,
+      "cagr": 0.016770367115288565,
+      "max_drawdown": -0.20456534998608678,
+      "sharpe_zero_cash": 0.18317483111926425
+    }
+  },
+  "buy_hold": {
+    "full": {
+      "observations": 731,
+      "final_equity": 542226.9858060954,
+      "total_return": 4.422269858060954,
+      "cagr": 1.3258858046070183,
+      "max_drawdown": -0.25848029746503176,
+      "sharpe_zero_cash": 2.00578922935108
+    },
+    "trade_records": 1,
+    "round_trips": 0,
+    "2023": {
+      "observations": 365,
+      "final_equity": 247711.61418067562,
+      "total_return": 1.4771161418067562,
+      "cagr": 1.4771161418067562,
+      "max_drawdown": -0.19471872279443359,
+      "sharpe_zero_cash": 2.337466913999536
+    },
+    "2024": {
+      "observations": 366,
+      "final_equity": 542226.9858060954,
+      "total_return": 1.1889445418195308,
+      "cagr": 1.1842641380269758,
+      "max_drawdown": -0.25848029746503176,
+      "sharpe_zero_cash": 1.752396567998615
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "verified_at": "2026-10-03T06:32:46.935702+00:00",
+  "files_identical": 12,
+  "type": "independent_output_directory_rebuild_same_frozen_input",
+  "remote_restore": false,
+  "snapshot_backup": false
+}

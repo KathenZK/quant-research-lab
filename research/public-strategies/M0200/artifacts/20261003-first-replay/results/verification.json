@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "configurations": {
+    "base": {
+      "daily_rows": 519,
+      "fills": 34,
+      "independent_decimal_accounting": true,
+      "independent_metrics": true
+    },
+    "fee0": {
+      "daily_rows": 519,
+      "fills": 34,
+      "independent_decimal_accounting": true,
+      "independent_metrics": true
+    },
+    "fee20": {
+      "daily_rows": 519,
+      "fills": 34,
+      "independent_decimal_accounting": true,
+      "independent_metrics": true
+    },
+    "lag2": {
+      "daily_rows": 519,
+      "fills": 32,
+      "independent_decimal_accounting": true,
+      "independent_metrics": true
+    },
+    "buyhold": {
+      "daily_rows": 519,
+      "fills": 1,
+      "independent_decimal_accounting": true,
+      "independent_metrics": true
+    }
+  },
+  "future_perturbation_pass": true,
+  "independent_source_verification": false,
+  "strict_reproductions": 0
+}

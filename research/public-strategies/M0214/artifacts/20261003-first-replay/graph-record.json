@@ -1,0 +1,30 @@
+{
+  "id": "M0214",
+  "name": "10/20均线与平均K：BTC只多改编",
+  "status": "tested_adaptation_only",
+  "reason": "BTC现货只多改编真实回测及独立校验完成，收益落后持有；严格复现0。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0214-SMA-HA"
+  ],
+  "audit": {
+    "source_verification_status": "catalog_read_original_unavailable",
+    "source_rule_attribution_status": "catalog_anchored_adaptation"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0214-BTCUSDT-SMA10-20-HA-CROSS-LONG-20261003",
+      "family": "PUBLIC-M0214-SMA-HA",
+      "origin_run_id": "M0214-20261003-first-replay",
+      "fidelity_class": "ADAPTATION"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0214-20261003-first-replay",
+      "variant_id": "M0214-BTCUSDT-SMA10-20-HA-CROSS-LONG-20261003",
+      "fidelity_class": "ADAPTATION",
+      "protocol_sha256": "3549effe245b578271e54304206990e2914c8f754b4911b97314872f63c6ea75"
+    }
+  ]
+}

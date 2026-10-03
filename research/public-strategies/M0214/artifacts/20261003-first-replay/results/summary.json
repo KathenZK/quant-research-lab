@@ -1,0 +1,62 @@
+{
+  "base": {
+    "metrics": {
+      "total_return": 0.43887124880732364,
+      "cagr": 0.19923109598432842,
+      "max_drawdown": -0.11735271041667039,
+      "sharpe_zero_cash": 1.2049510550918858,
+      "final_equity": 143887.12488073236,
+      "observations": 731
+    },
+    "fills": 24,
+    "completed_round_trips": 12
+  },
+  "fee0": {
+    "metrics": {
+      "total_return": 0.4650307042595825,
+      "cagr": 0.2100684147941565,
+      "max_drawdown": -0.11256203700590373,
+      "sharpe_zero_cash": 1.2602370689421092,
+      "final_equity": 146503.07042595826,
+      "observations": 731
+    },
+    "fills": 24,
+    "completed_round_trips": 12
+  },
+  "fee20": {
+    "metrics": {
+      "total_return": 0.40043397612927767,
+      "cagr": 0.18312675768023712,
+      "max_drawdown": -0.12450486421287399,
+      "sharpe_zero_cash": 1.1213156333599033,
+      "final_equity": 140043.39761292777,
+      "observations": 731
+    },
+    "fills": 24,
+    "completed_round_trips": 12
+  },
+  "lag2": {
+    "metrics": {
+      "total_return": 0.2852244717792096,
+      "cagr": 0.13348284644331754,
+      "max_drawdown": -0.1506352808879492,
+      "sharpe_zero_cash": 0.8943161662733794,
+      "final_equity": 128522.44717792097,
+      "observations": 731
+    },
+    "fills": 22,
+    "completed_round_trips": 11
+  },
+  "buyhold": {
+    "metrics": {
+      "total_return": 4.422269858060954,
+      "cagr": 1.3258858046070183,
+      "max_drawdown": -0.25848029746503176,
+      "sharpe_zero_cash": 2.00578922935108,
+      "final_equity": 542226.9858060954,
+      "observations": 731
+    },
+    "fills": 1,
+    "completed_round_trips": 0
+  }
+}

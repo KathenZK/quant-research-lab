@@ -36,3 +36,7 @@ htmlcov/
 !research/platform/quantgraph-integration/artifacts/platform-v2/candidate-summary.json
 !research/platform/quantgraph-integration/artifacts/reference-v2/vectorbt-comparison.json
 /research/platform/strategy-factor-discovery/artifacts/local/
+
+# Public catalog research keeps unreviewed full source copies private,
+# including Markdown that the general artifacts exception would expose.
+/research/public-strategies/**/artifacts/**/private-source/**

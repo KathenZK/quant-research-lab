@@ -1,0 +1,43 @@
+[
+  {
+    "name": "author",
+    "url": "https://capriole.com/hash-ribbons-bitcoin-bottoms",
+    "status": 200,
+    "bytes": 83162,
+    "sha256": "47b0b7584771b69f4ba63e61b63e2dbdfe4120e3b58e0218f565cea2ac44fc3d",
+    "retrieved_at": "2026-10-03T07:11:09.195363+00:00"
+  },
+  {
+    "name": "hashrate-method",
+    "url": "https://gitbook-docs.coinmetrics.io/network-data/network-data-overview/mining/hash-rate.md",
+    "status": 200,
+    "bytes": 12517,
+    "sha256": "63cdd3a5ab127af970a1f4bda2dd2d1b66896dd3c324afdf23f61d276386b697",
+    "retrieved_at": "2026-10-03T07:11:09.792073+00:00"
+  },
+  {
+    "name": "cm-readme",
+    "url": "https://raw.githubusercontent.com/coinmetrics/data/master/README.md",
+    "status": 200,
+    "bytes": 1496,
+    "sha256": "9c9d798a88a688f4d25791a953d1f01acda99b9ef5cb5d2481ec577b28af84ae",
+    "retrieved_at": "2026-10-03T07:11:10.140271+00:00"
+  },
+  {
+    "name": "cm-license",
+    "url": "https://raw.githubusercontent.com/coinmetrics/data/master/LICENSE",
+    "status": 200,
+    "bytes": 289,
+    "sha256": "197c6cdd1642545c2300d4353b1ec4be6a3b888073ad969079c224998cbc0732",
+    "retrieved_at": "2026-10-03T07:11:10.373533+00:00"
+  },
+  {
+    "name": "coinmetrics-btc-community",
+    "url": "https://raw.githubusercontent.com/coinmetrics/data/f1a36afb962731c387bb03982758ab0103063da5/csv/btc.csv",
+    "commit": "f1a36afb962731c387bb03982758ab0103063da5",
+    "status": 200,
+    "bytes": 2482497,
+    "sha256": "06495ff8e643432e6948b7b4686ce44fc106217287dabdc1b38351d9ddec46c3",
+    "retrieved_at": "2026-10-03T07:11:11.403867+00:00"
+  }
+]

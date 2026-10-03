@@ -1,0 +1,17 @@
+{
+  "completed_at": "2026-10-03T07:18:45.603470+00:00",
+  "file_checks": {
+    "fee20-trades.csv": true,
+    "lag2-trades.csv": true,
+    "summary.json": true,
+    "fee0-nav.csv": true,
+    "fee20-nav.csv": true,
+    "fee0-trades.csv": true,
+    "buyhold-trades.csv": true,
+    "buyhold-nav.csv": true,
+    "base-trades.csv": true,
+    "lag2-nav.csv": true,
+    "base-nav.csv": true
+  },
+  "limitation": "local isolated copied engine and new output directory, reused hash-verified private input; not remote snapshot recovery"
+}

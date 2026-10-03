@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-03T06:16:35.342223+00:00",
+  "record_id": "M0216",
+  "strict_reproduction": false,
+  "strategy_configurations": 4,
+  "benchmark_configurations": 1,
+  "files": {
+    "artifacts/20261003-first-replay/LICENSE.md": "e1b472175a80dc2f0d6240afeb16fdafc368e65e312fbe0fe1c555df1279ca96",
+    "artifacts/20261003-first-replay/environment.json": "ab87e7bccee4d5fea8d7c3d2c472def0d91363ec601bd5452bf057c645488278",
+    "artifacts/20261003-first-replay/exposure.jsonl": "0b5e8c53dbac761fcb9a56bbd9fd33637d06b63e97927bc3001d1db79bea791a",
+    "artifacts/20261003-first-replay/input-manifest.json": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "artifacts/20261003-first-replay/input.csv": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "artifacts/20261003-first-replay/results/base-nav.csv": "87b253fb1108e30e6378cb7212e067d460999a6d34fd2a77ad4d3d9a8bf0a004",
+    "artifacts/20261003-first-replay/results/base-trades.csv": "075269a4321baa7042381ee742c3d78a03a2aef7e6de406de1a777e04f00110a",
+    "artifacts/20261003-first-replay/results/buyhold-nav.csv": "ddf22ba489e0976cf9b138974c22461c057a4bfc34aacf410b4d5e5754ffbd80",
+    "artifacts/20261003-first-replay/results/buyhold-trades.csv": "4481e3843e5bad2a5634b45732f067d25154cce006df5c885ed41f2a011deee6",
+    "artifacts/20261003-first-replay/results/fee0-nav.csv": "d7ca3cb9153559df9c269d014846af7d9f7d8612e435c9c959b3ccaaa339c687",
+    "artifacts/20261003-first-replay/results/fee0-trades.csv": "7b85ef926fc3bdac99548d60ab99c2670d79f85dde9bf9ac979c65194e8a9c80",
+    "artifacts/20261003-first-replay/results/fee20-nav.csv": "889951c56c391e590ecaea000063f5aea2e30494b9e726bc2722e2e79fd8f051",
+    "artifacts/20261003-first-replay/results/fee20-trades.csv": "08595eb4ead2a0a2042d3fe8bebcd357444e2eb13d3a063c556f1dce9e16bc80",
+    "artifacts/20261003-first-replay/results/lag2-nav.csv": "176e12c23a294dcf376700cfb53ef04ee48d3a5825ef13ca4ef4d0fbbc27287f",
+    "artifacts/20261003-first-replay/results/lag2-trades.csv": "9b334318b6bfe7eec5dca081b13bac0f9581b478a0d3c7e21ddfaa647fbe4e62",
+    "artifacts/20261003-first-replay/results/summary.json": "a8941d6cdb767b12fbec960836042b6b83ddcf8fa0f4b27587a6669952f04c42",
+    "artifacts/20261003-first-replay/source-manifest.json": "470916ab728901292c8dba091bae915d8c05e17c16aeb0ca9e2a063e3a561d51",
+    "artifacts/20261003-first-replay/validation.json": "a1b8e857427b73ddefcade3d0f91255c2215e6ca67746a96c598fadbfbfcda7f"
+  },
+  "code": {
+    "scripts/fetch_inputs.py": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+    "scripts/run_replay.py": "03e9eddb24c127ec779fbe5f20c0764d47cf6aa291b8f5bbb25f628aee6c2911",
+    "scripts/verify_replay.py": "5dbcf04622afc58f221c29a4897ca86f37af88e82530498ba7dbfbb18bb7d169"
+  },
+  "spec_sha256": "43d1c5ea6c94d544cb8dad35b84277e5f9e0f0535b8b6b1f993e0897c0efb7fb"
+}

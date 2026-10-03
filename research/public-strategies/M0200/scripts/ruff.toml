@@ -1,0 +1,4 @@
+# Preserve the pre-run hash-frozen indicator code's scalar loss variable.
+extend = "../../../../pyproject.toml"
+[lint]
+ignore = ["E741"]

@@ -1,0 +1,18 @@
+{
+  "id": "M0226",
+  "name": "日频定额映射定投",
+  "status": "blocked_rule_execution",
+  "reason": "长均线/RSI和买入金额函数未公开，外部现金流与终值规则不足，不能替换成标准DCA。",
+  "tested_variants": 0,
+  "families": [],
+  "audit": {
+    "source_rule_attribution_status": "not_implemented",
+    "strict_reproduction_status": "NOT_ESTABLISHED",
+    "strategy_backtest_runs": 0,
+    "nav_and_trades_unavailable_reason": "长均线/RSI和买入金额函数未公开，外部现金流与终值规则不足，不能替换成标准DCA。"
+  },
+  "implementations": [],
+  "related_results": [],
+  "imported": false,
+  "report": "diagnostics/M0226-20261003-source-preflight.md"
+}

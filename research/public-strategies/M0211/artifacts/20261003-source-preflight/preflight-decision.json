@@ -1,0 +1,25 @@
+{
+  "id": "M0211",
+  "status": "BLOCKED_RULE_EXECUTION",
+  "backtest_runs": 0,
+  "strict_reproductions": 0,
+  "source_commit": "b88031b4d6cf1ad620769b1069a66b3857b7bf78",
+  "source_consistent_execution_possible": false,
+  "adaptation_possible": "Composite score can be independently modeled but requires invented missing execution rules; not pursued to inflate completed counts",
+  "blockers": [
+    "README entry_threshold/exit_threshold not implemented or semantically defined",
+    "Missing data_collector and complete execution loop",
+    "30s observations not daily candles; market/currency mapping unverified",
+    "daily_loss threshold unit and risk order ambiguous"
+  ],
+  "license_status": "README claims MIT; no LICENSE file; API null",
+  "full_sources_publication": false,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "M0233_distinction": {
+    "repository": "Alqama-svg/quant_trading_engine",
+    "commit": "ef662462516eb7fa30d6dc26fa27333f59e43881",
+    "mechanism": "rolling20 sample std z threshold +/-1.5, row-reset positions",
+    "same_source": false
+  }
+}

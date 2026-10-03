@@ -1,0 +1,16 @@
+{
+  "files": [
+    "README.md",
+    "decision-log.md",
+    "diagnostics/M0221-source-data-preflight-20261003.md",
+    "artifacts/20261003-source-preflight/source-manifest.json",
+    "artifacts/20261003-source-preflight/supplemental-source-manifest.json",
+    "artifacts/20261003-source-preflight/data-qa.json",
+    "artifacts/20261003-source-preflight/preflight-decision.json",
+    "artifacts/20261003-source-preflight/access-audit.json"
+  ],
+  "excluded": [
+    "artifacts/20261003-source-preflight/private-source/"
+  ],
+  "full_data_or_source_publication": false
+}
