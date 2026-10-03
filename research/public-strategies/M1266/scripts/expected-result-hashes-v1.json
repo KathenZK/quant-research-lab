@@ -1,0 +1,37 @@
+[
+  {
+    "bytes": 957642,
+    "path": "base.json",
+    "sha256": "7a64884387ec30fd7fc8dea29f182c915b53fbe81f94fb0484be12f4f16d8e29"
+  },
+  {
+    "bytes": 846812,
+    "path": "buyhold-base.json",
+    "sha256": "89e855de624d8ee634b7b6863639e54603a95ca78cad52f3bc354be025ecb570"
+  },
+  {
+    "bytes": 936342,
+    "path": "delay2.json",
+    "sha256": "21d823ed34379c0cfc6c24401b0337e1f3fe043f22d6feba255295042bdb64b7"
+  },
+  {
+    "bytes": 957063,
+    "path": "fee0.json",
+    "sha256": "488a5b0a25211f539ef8e3144321866e16271daf0618d9f8a4e0ee69c98fb476"
+  },
+  {
+    "bytes": 957662,
+    "path": "fee20.json",
+    "sha256": "5bcb5c701849eddb066d5f3788f3c23c93366226f686dcca0860073fc95a09d4"
+  },
+  {
+    "bytes": 831,
+    "path": "manifest.json",
+    "sha256": "da4887ee75ab33cdefeae5a330e56a0bb6da8de750df625caf8802e601848d8e"
+  },
+  {
+    "bytes": 4157,
+    "path": "summary.json",
+    "sha256": "5b564339701ffa677ec98611c3b5a8d2ebbfd5de800feb44418d34a90dcb8446"
+  }
+]
