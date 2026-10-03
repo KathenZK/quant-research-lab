@@ -331,3 +331,7 @@
 - [M1358 EMA13/48冷启动状态策略](public-strategies/M1358/README.md)：日线四配置执行改编；保留收益前数值失败与修复，原作者环境未复现，严格0。
 
 - [Catalog假设批次015冻结准备](public-strategies/catalog-hypothesis-batch015-preflight-20261003/README.md)：M1180/M1258，原始字段、执行选择与数据依赖明确；尚无新历史运行。
+
+- [Catalog日线假设批次016冻结准备](public-strategies/catalog-hypothesis-batch016-preflight-20261003/README.md)：M1396/M1463，8个计划策略配置；待代码/C0/独审及同口径控制验收，当前无新历史运行。
+
+- [M1258 五期RSI跨50目录假设](public-strategies/M1258/README-results-v1.md)：[研究报告](public-strategies/M1258/M1258.md)，原C0文档保持收益前快照；4策略与1个100%含费控制的独立终验/远端恢复逐项记录。

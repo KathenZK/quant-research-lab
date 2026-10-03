@@ -1,0 +1,174 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "coordinator": "Codex root only",
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304",
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266",
+    "M0287",
+    "M0289",
+    "M1358",
+    "M1258"
+  ],
+  "cumulative_strategy_configurations": 147,
+  "cumulative_controls": 21,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "acceptance_meaning": "Independently validated executed research. Remote persistence is tracked separately; local-only packages are not declared complete remote backups.",
+  "recorded_at": "2026-10-03T17:16:19.339709+00:00",
+  "batch": "015",
+  "checkpoint": 2,
+  "previous_checkpoint_sha256": "9ed4ca35681d056ab1429c711a93582ec4299928c67dad4f14f75474135baf73",
+  "new_accepted_ids": [
+    "M1258"
+  ],
+  "new_strategy_configurations": 4,
+  "new_controls": 1,
+  "remote_core_recovery": {
+    "id": "M1258",
+    "source_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "status": "ACTUAL_FETCHED_CODE_REBUILD_PASS",
+    "fetched_public_objects": 37,
+    "additional_support_objects": 6,
+    "expected_source": "remote public private-output-manifest; no worker source/results fallback",
+    "matching_payload_files": 37,
+    "matching_manifest": true,
+    "input": "authorized50raw checksum/CRC -> exact48e4canonical128196B; sourcefutureavailabilitynotguaranteed",
+    "independent_actual_comparison_sha256": "b96307130481dbaf1bba85f2308182a17506d6fcb513f0d474b20500c0b6be32",
+    "safe_acceptance": {
+      "path": "M1258/recovery/coordinator-v1/acceptance.safe.json",
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    "remote_recipe": "M1258/recovery/REMOTE-CORE-RESTORE.md atsourcecommit",
+    "new_research_or_controls": 0,
+    "full_private_Library_archive_saved": false
+  },
+  "delivery_scope_addendum": {
+    "path": "remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c",
+    "old_C0_contracts_results_preserved": true,
+    "hashes_without_executable_code_and_actual_rebuild_sufficient": false
+  },
+  "current_owned_work": {
+    "M1180": {
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b008-m1180",
+      "status": "PARENT_REPORTS4STRATEGY_1CONTROL_LOCAL_QA_PASS_PRIVATE_RESTORE_AND_PUBLIC_DELIVERY_PENDING",
+      "reported_runs_excluded_from_root_accepted_totals": true
+    },
+    "M1258": {
+      "owner": "root/m0288 executor;root/m0286 independentreview",
+      "status": "INDEPENDENTLY_ACCEPTED_AND_REMOTE_CORE_RESTORED",
+      "strategy_configurations": 4,
+      "new_controls": 1
+    },
+    "M1396": {
+      "owner": "root/m0217",
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "status": "CODE_C0_INDEPENDENT_PREHISTORY_QA_PASS_AWAIT_EXECUTION",
+      "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+      "actual_historical_runs": 0,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0
+    },
+    "M1463": {
+      "owner": "root/m0217",
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "status": "CODE_C0_INDEPENDENT_PREHISTORY_QA_PASS_AWAIT_EXECUTION",
+      "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+      "actual_historical_runs": 0,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0
+    }
+  },
+  "contract": {
+    "path": "catalog-hypothesis-batch015-output-contract-20261003.json",
+    "sha256": "4670e9110f18a1ea63444991fa00f9884f484903ff28afe915742e503bbe9744",
+    "pre_code_independent_review": "PASS; actual code C0+syntheticQA still required"
+  },
+  "Graph": {
+    "main_commit": "58e9ad0a4820fa454172b2c28a382ced13160abf",
+    "main_CI": [
+      "37135795863 SUCCESS",
+      "37135795867 SUCCESS"
+    ],
+    "remote_files_byte_exact": 4,
+    "offline_records": 16,
+    "offline_curve_points": 5490,
+    "dot007_and_M1358_three_record_export": {
+      "status": "LAB_PUBLIC_DERIVED_COMMITTED_AND_REMOTE_READBACK_PASS_GRAPH19_ADAPTER_IN_PROGRESS",
+      "source_commit": "f6d2431bc5c727d6525851a4e6c80b2a2acede33",
+      "head_CI": "37138764081 SUCCESS",
+      "new_base_points": 757,
+      "M1358_public_points": 25
+    },
+    "Site_deployed": false,
+    "active_assets": "existingHTTP403, no new restricted requests or access change",
+    "M1258_display_preparation": "4candidate+outermanifest,25existingpublicsamples,notindependentlyreviewed/imported"
+  },
+  "data_routes": {
+    "SPY_and_new_USD": "Parent read-only route investigation completed; DATA_SOURCE_PERMISSION_OR_COVERAGE_PENDING; no active waiting worker and no permanent impossibility assertion",
+    "repeat_search_policy": "Only revisit on new authorized data or user choice of lawful service; no signup/token/purchase/terms acceptance",
+    "full6973_readiness_map": "Parent delivered newprivate map; current helper download genericfailed/noHTTPstatusknown, zerooriginalZIPbytesverified here; manifest renderedmetadata only. Fixed2400 localpublicsubset independently screened, not all6973 or100queue readiness."
+  },
+  "backup_gaps": {
+    "M1358_private_full_archive": "local only; knownLibrary upload401, no blind repeat",
+    "prior_root009_011_full_archives": "previously reported local-only full packages; no newLibrarysuccessclaim",
+    "rawdata_remote_backup": "not claimed or required under clarified core delivery scope; future authorized data availability remains externaldependency",
+    "M1258_private_full_archive": {
+      "status": "LOCAL_CRC_MEMBER_HASH_VERIFIED_REMOTE_LIBRARY_NOT_SAVED",
+      "bytes": 701547,
+      "sha256": "fed9e15cfc1952c2792796d43f7745fa336435f9d910dbd40170606d4a01286c",
+      "manifest_sha256": "870a86f74ac926ed3067e4270c394544e61653654e12208ab0900b6eae8ef2f1",
+      "upload": "existingLibrary401,no newblindattempt"
+    }
+  },
+  "private_Library_identifiers_in_public_files": false,
+  "main_delivery_at_freeze": {
+    "main": "d3e58dc9bf5c33c4d59cf56b37da94861d84d911",
+    "main_accepted_ids": 35,
+    "new_result_branch_core_pin": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "PR": 30,
+    "merge_pending": true
+  },
+  "last_original_execution_utc": "2026-10-03T16:53:16.824568Z",
+  "last_remote_restore_comparison_utc": "2026-10-03T17:05:09.709049+00:00",
+  "next_batch017": "M1346/M1349/M1270 privatepreflightdraft only; root claims/contractfreeze pending, notcounted asrunning"
+}

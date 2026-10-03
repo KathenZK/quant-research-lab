@@ -1,0 +1,59 @@
+{
+  "status": "PASS_STAGED_THREE_ID_PROJECTION_NOT_GRAPH_ACTIVATION",
+  "checked_utc": "2026-10-03T16:31:28.424558+00:00",
+  "source_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+  "source_files_checked": 101,
+  "source_bytes": 825821,
+  "candidate_files": 12,
+  "outer_manifest_files": 1,
+  "fresh_rebuild_byte_equal": 13,
+  "IDs": [
+    {
+      "id": "M0287",
+      "points": 366,
+      "configs": 4,
+      "profile": "NATIVE_5M_RULE_CARD_V2",
+      "metrics_and_source_curve_equivalence": "PASS"
+    },
+    {
+      "id": "M0289",
+      "points": 366,
+      "configs": 4,
+      "profile": "NATIVE_5M_RULE_CARD_V2",
+      "metrics_and_source_curve_equivalence": "PASS"
+    },
+    {
+      "id": "M1358",
+      "points": 25,
+      "configs": 4,
+      "profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+      "metrics_and_source_curve_equivalence": "PASS"
+    }
+  ],
+  "total_curve_points": 757,
+  "frozen_configs": 12,
+  "exporter_sha256": "266c93afa0829b0e504b2e008e1ed0ae1b43a4b5fd2869ffaeb047e41fba3128",
+  "helper_sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13",
+  "helper_original_dot006_export_byte_identical": true,
+  "guard_cases_reexecuted": [
+    "existing_output",
+    "M0287_C0_hash",
+    "M0289_C0_hash",
+    "M0289_null_to_zero",
+    "M1358_double_normalization",
+    "M1358_extra_private_curve_point",
+    "privatepath",
+    "credential_field"
+  ],
+  "preparer_18_guards": "Read checker source/self-receipt; only the eight listed guards independently rerun here. No claim all18rerun.",
+  "manifest_cycle_check": "PASS",
+  "privacy": "PASS exact selectedpublic refs only; no private731NAV fetched or reflected; privateinventory onlypath/hash/size/url",
+  "integration_boundary": "Current Graph16 adapter not asserted to supportv2. Root must add explicitv2 profiles and sampled25vs731 handling in a separately reviewed integration; stagedassets not active definition/entity/revision.",
+  "limitations": [
+    "No research recomputation or full privateaccounting QA; this review checks public derivation fidelity.",
+    "First/month-end M1358 sample cannot reproduce full731day MDD; original metrics retained, not recomputed fromsamples."
+  ],
+  "new_history": 0,
+  "new_market_requests": 0,
+  "repo_or_Site_writes": 0
+}

@@ -1,0 +1,7 @@
+{
+  "receipt_sha256": "b998e10cfbd50d74587bc5e5bd9cf5becd59b584775f24068e6e3dc84f83a8b6",
+  "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+  "C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
+  "status": "PASS_INDEPENDENT_PREHISTORY",
+  "full_receipt_in_private_package": true
+}

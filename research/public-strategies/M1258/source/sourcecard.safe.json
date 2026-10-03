@@ -1,0 +1,20 @@
+{
+  "id": "M1258",
+  "catalog_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "catalog_original_fields": "catalog-original-fields.json",
+  "original_webpage": "https://www.quantifiedstrategies.com/bitcoin-rsi-trading-strategy/",
+  "source_verified": false,
+  "original_framework_verified": false,
+  "fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "catalog_rule": "RSI5 up-cross50 fullcash long; down-cross50 exit; completed close signal",
+  "research_choices": [
+    "Binance spotBTCUSDT UTC1d",
+    "Wilder means seeded from5deltas; flat50",
+    "Decimal50",
+    "100% fee-inclusive fractionalfill",
+    "nextopen/slippage/fee/delay",
+    "31priorbars continuous warmup; no warmuporders"
+  ],
+  "license": "Only user-supplied catalog fields and independently written implementation distributed. Original webpage/fulltext not retrieved or redistributed.",
+  "strict_reproduction_count": 0
+}

@@ -1,0 +1,166 @@
+{
+  "curve_contract": {
+    "benchmark_curve_available": false,
+    "drawdown_unit": "fraction",
+    "equity_unit": "initial_capital_multiple",
+    "first_point_rebased": false,
+    "full_daily_curve_published": false,
+    "interpolation_claim": false,
+    "observations": 731,
+    "private_daily_nav_used": false,
+    "returned_points": 25,
+    "sampling": "first close + UTC month-end; unchanged initial-capital denominator100000",
+    "source_drawdown_basis": "Source drawdown retained at samples; full daily peaks, not recomputed from 25 points",
+    "total_observations": 731
+  },
+  "excluded_from_self_hash": [
+    "public-display-manifest.json",
+    "graph-record.json",
+    "graph-detail.json"
+  ],
+  "exclusion_reason": "Record and detail bind manifest hash; outer delivery manifest binds all generated files without cycles",
+  "files": {
+    "C0": {
+      "bytes": 6198,
+      "path": "research/public-strategies/M1358/specs/C0-v2.json",
+      "sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/C0-v2.json"
+    },
+    "base-nav-sampled.json": {
+      "bytes": 2568,
+      "sha256": "05aabfc5595d13ed77727879457bbc55dc13a7e319f8cc16e11e91b7c3eab47a"
+    },
+    "numerics": {
+      "bytes": 1383,
+      "path": "research/public-strategies/M1358/specs/numerics-and-exposure-v2.json",
+      "sha256": "74fa2f7ecfd2f76fb27db9932f17e3f7c9608be2c1e6508d06d9cdfddacd7c0f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/numerics-and-exposure-v2.json"
+    },
+    "original_detail": {
+      "bytes": 13345,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json",
+      "sha256": "ffe426fbd6222e7b76c56b20b7292eee635df459ef95c17d8fa0dbc08f070d97",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 873,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json",
+      "sha256": "a0e0e4a383192a8821cbc23afb9307b2a464d8f0b07048d498ba406065936650",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json"
+    },
+    "protocol": {
+      "bytes": 21523,
+      "path": "research/public-strategies/M1358/specs/protocol-v1.json",
+      "sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/protocol-v1.json"
+    },
+    "publication_manifest": {
+      "bytes": 9545,
+      "path": "research/public-strategies/M1358/publication-manifest.json",
+      "sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 331,
+      "path": "research/public-strategies/M1358/README.md",
+      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/README.md"
+    },
+    "report": {
+      "bytes": 5757,
+      "path": "research/public-strategies/M1358/M1358.md",
+      "sha256": "a8e0d1d25e7f6c4743662289efd5b42424724272d8c472ea56f5a99028a3b001",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/M1358.md"
+    },
+    "source_rule_card": {
+      "bytes": 8711,
+      "path": "research/public-strategies/M1358/source/M1358-sourcecard.safe.json",
+      "sha256": "22a93b2ef0b40903392fe75b8a6d46dd578f9839a3d971ab1a06a441409ffdef",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/source/M1358-sourcecard.safe.json"
+    },
+    "summary": {
+      "bytes": 6343,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json",
+      "sha256": "027c06dae2ecdd6bc4d8ac2c98d8adb9c0fd8cbdef0259496cb8e2d18b1859b1",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json"
+    }
+  },
+  "id": "M1358",
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "origin_lab_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+  "origin_run_id": "m1358-coldstart-daily-20261003-v2",
+  "original_private_result_manifest": false,
+  "original_results_modified": false,
+  "projection_profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "schema_version": "quantgraph-public-derived-display-manifest/v2",
+  "source_artifacts": {
+    "C0": {
+      "bytes": 6198,
+      "path": "research/public-strategies/M1358/specs/C0-v2.json",
+      "sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/C0-v2.json"
+    },
+    "numerics": {
+      "bytes": 1383,
+      "path": "research/public-strategies/M1358/specs/numerics-and-exposure-v2.json",
+      "sha256": "74fa2f7ecfd2f76fb27db9932f17e3f7c9608be2c1e6508d06d9cdfddacd7c0f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/numerics-and-exposure-v2.json"
+    },
+    "original_detail": {
+      "bytes": 13345,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json",
+      "sha256": "ffe426fbd6222e7b76c56b20b7292eee635df459ef95c17d8fa0dbc08f070d97",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 873,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json",
+      "sha256": "a0e0e4a383192a8821cbc23afb9307b2a464d8f0b07048d498ba406065936650",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json"
+    },
+    "private_output_inventory_reference_only": {
+      "bytes": 3451,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json",
+      "sha256": "22ffb4f574ee34d1e140da66a487c51ffe4585d7a995309e1abe6ef40ed2ccf7",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json"
+    },
+    "protocol": {
+      "bytes": 21523,
+      "path": "research/public-strategies/M1358/specs/protocol-v1.json",
+      "sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/protocol-v1.json"
+    },
+    "publication_manifest": {
+      "bytes": 9545,
+      "path": "research/public-strategies/M1358/publication-manifest.json",
+      "sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 331,
+      "path": "research/public-strategies/M1358/README.md",
+      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/README.md"
+    },
+    "report": {
+      "bytes": 5757,
+      "path": "research/public-strategies/M1358/M1358.md",
+      "sha256": "a8e0d1d25e7f6c4743662289efd5b42424724272d8c472ea56f5a99028a3b001",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/M1358.md"
+    },
+    "source_rule_card": {
+      "bytes": 8711,
+      "path": "research/public-strategies/M1358/source/M1358-sourcecard.safe.json",
+      "sha256": "22a93b2ef0b40903392fe75b8a6d46dd578f9839a3d971ab1a06a441409ffdef",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/source/M1358-sourcecard.safe.json"
+    },
+    "summary": {
+      "bytes": 6343,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json",
+      "sha256": "027c06dae2ecdd6bc4d8ac2c98d8adb9c0fd8cbdef0259496cb8e2d18b1859b1",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json"
+    }
+  },
+  "status": "STAGED_NOT_PUBLISHED",
+  "variant_id": "M1358-coldstart-daily-v2-base"
+}

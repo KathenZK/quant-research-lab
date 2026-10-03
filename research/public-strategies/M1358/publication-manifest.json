@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 720,
-      "sha256": "00c086e862f309dda36a6d8b1f11b94ff549630aebfce39c3c747b75f7a13284"
+      "bytes": 1626,
+      "sha256": "3a28e986afeb01da657ed484317a4662474c1e02e00a8f2b9a7d0e90a453ad5b"
     },
     {
       "path": "artifacts/20261003-coldstart-v1/input-qa-v1.json",
@@ -101,9 +101,29 @@
       "sha256": "f3539ac6640c10e78eb7fb444b236f4547fc15990654703177d2f6418b915409"
     },
     {
+      "path": "artifacts/20261003-public-display-prep/base-nav-sampled.json",
+      "bytes": 2568,
+      "sha256": "05aabfc5595d13ed77727879457bbc55dc13a7e319f8cc16e11e91b7c3eab47a"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/graph-detail.json",
+      "bytes": 23968,
+      "sha256": "658cced1e2c3bb182fe6b7001db591e48b104a08dfedac7eade8798952695d58"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/graph-record.json",
+      "bytes": 16633,
+      "sha256": "3a8015f919120dd9eb7853771e227addaf6d6f148a22cda43cce2eebe6511cc7"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/public-display-manifest.json",
+      "bytes": 9654,
+      "sha256": "2ff97f2bcfe26ffa4056985c1c5008eaaba87a4a6945d8e44c47167ded1e9d40"
+    },
+    {
       "path": "decision-log.md",
-      "bytes": 1511,
-      "sha256": "2da4b1577e2c4026d07091ab6944d0c976e9a700d2faf5bb0694ba791eb174f1"
+      "bytes": 1937,
+      "sha256": "974d0feb55ee8839a670d471458994612260b92639d0405af9cbbd05a1bc5aa3"
     },
     {
       "path": "publication-history/revision-v2.json",
@@ -114,6 +134,11 @@
       "path": "publication-history/revision-v3.json",
       "bytes": 630,
       "sha256": "0fadebe31f6ec0d2f70dfc2576c50df32fdf2d5f9c6abc83095c047d24473c27"
+    },
+    {
+      "path": "publication-history/revision-v4.json",
+      "bytes": 1468,
+      "sha256": "49e3f0bfbd558c0f6161ba06e67010b5b396343301449e252beee6f07b922118"
     },
     {
       "path": "publication-history/v1/README.md.snapshot",
@@ -144,6 +169,21 @@
       "path": "publication-history/v2/publication-manifest.json",
       "bytes": 9545,
       "sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc"
+    },
+    {
+      "path": "publication-history/v3/README.md.snapshot",
+      "bytes": 720,
+      "sha256": "00c086e862f309dda36a6d8b1f11b94ff549630aebfce39c3c747b75f7a13284"
+    },
+    {
+      "path": "publication-history/v3/decision-log.md.snapshot",
+      "bytes": 1511,
+      "sha256": "2da4b1577e2c4026d07091ab6944d0c976e9a700d2faf5bb0694ba791eb174f1"
+    },
+    {
+      "path": "publication-history/v3/publication-manifest.json",
+      "bytes": 11372,
+      "sha256": "d44e0fc8d9883408308d3833e62f339eee0b2890cc346891d7e1bf17e7e13e61"
     },
     {
       "path": "recovery/remote-core-v1/M1358-remote-core-recovery.safe.json",
@@ -319,7 +359,8 @@
     "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
     "Graph_enum": "HYPOTHESIS"
   },
-  "revision": 3,
-  "previous_publication_manifest_sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
-  "revision_scope": "additive actual remote-core recovery receipt and executable recipes; old documentation retained; original C0/results unchanged"
+  "revision": 4,
+  "previous_publication_manifest_sha256": "d44e0fc8d9883408308d3833e62f339eee0b2890cc346891d7e1bf17e7e13e61",
+  "revision_scope": "additive reviewed public display v2 derivatives, frozen offline export and acceptance receipts; original C0 and results unchanged",
+  "publication_status": "PUBLIC_DERIVATIVES_STAGED_PENDING_PARENT_INTEGRATION_SITE_NOT_DEPLOYED"
 }

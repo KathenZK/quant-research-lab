@@ -1,0 +1,283 @@
+{
+  "id": "M1258",
+  "run_id": "m1258-catalog-rsi5-20261003-v1",
+  "origin_run_id": "m1258-catalog-rsi5-20261003-v1",
+  "variant_id": "M1258-catalog-rsi5-v1-base",
+  "name": "比特币 RSI5 跨50满仓（日线目录假设）",
+  "family": "daily-rsi5-cross50-fullcash",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "原页尚未核验；目录跨线/满仓规则与明确日线、Wilder、USDT、成交代理假设分开。",
+  "metrics": {
+    "periods": {
+      "2023-2024": {
+        "total_return": 1.750120765699299,
+        "cagr": 0.6572016936773524,
+        "max_drawdown": -0.31254387921099047,
+        "sharpe_zero_cash": 1.5246151975291922,
+        "observations": 731,
+        "final_equity": 275012.0765699299,
+        "sharpe": 1.5246151975291922,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "total_return": 4.651299863331392,
+        "cagr": 1.3744318581300612,
+        "max_drawdown": -0.261513750538678,
+        "sharpe_zero_cash": 2.016493590663557,
+        "observations": 731,
+        "final_equity": 565129.9863331392,
+        "sharpe": 2.016493590663557,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "total_return": 2.146760196218083,
+        "cagr": 0.7725205870765328,
+        "max_drawdown": -0.27086223872115456,
+        "sharpe_zero_cash": 1.7411723910584034,
+        "observations": 731,
+        "final_equity": 314676.0196218083,
+        "sharpe": 1.7411723910584034,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "cost_sensitivity": {
+      "fee0": {
+        "2023-2024": {
+          "total_return": 2.0760455182586735,
+          "cagr": 0.7525184326266128,
+          "max_drawdown": -0.2896212132811812,
+          "sharpe_zero_cash": 1.6739962792780572,
+          "observations": 731,
+          "final_equity": 307604.5518258673,
+          "sharpe": 1.6739962792780572,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      },
+      "fee20": {
+        "2023-2024": {
+          "total_return": 1.3248243227409975,
+          "cagr": 0.5238578670601741,
+          "max_drawdown": -0.34554932420208906,
+          "sharpe_zero_cash": 1.300606675050349,
+          "observations": 731,
+          "final_equity": 232482.43227409973,
+          "sharpe": 1.300606675050349,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+    "capital_state": {
+      "initial_cash_usdt": 100000,
+      "final_equity_usdt": 275012.0765699299,
+      "final_position_open": false
+    }
+  },
+  "spec": {
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-rsi-trading-strategy/",
+    "assumptions": [
+      "原网页/原软件未核验；目录假设 HYPOTHESIS，执行代理 ADAPTED，严格复现0。",
+      "目录五期RSI跨50、每笔满仓；Binance BTCUSDT现货与UTC日线为研究选择。",
+      "RSI5以首5个close差值均值初始化、Wilder递推；平价50、当前严格越50才跨线。",
+      "31日只预热指标；评估起始100000 USDT空仓，无预热订单在首open成交。",
+      "买入本金=现金/(1+买费率)，买费=现金−本金，现金恰为0；Decimal50，不留隐形储备或容忍负现金。",
+      "日close决定、下一日open全量成交；delay2第二日open；两边2bps不利滑点。",
+      "原始反向cross先取消相反待成交单，与持仓无关；按实际仓位排单，同侧保留最早due。",
+      "基线双边8bps，另fee0、fee20、delay2预定配置；无stop/ROI/halt，没有择优。",
+      "新100%含费买持仅1个控制，首评估open买入，8bps费和2bps滑点，无期末强平。",
+      "DIAGNOSTIC_ONLY；PIT/finality/成交可行性未证；已曝光2023–2024窗口，非OOS。",
+      "731日含现金期，24月连续不重置；末端按rawclose盯市，不扣未发生的卖出费；无lot/部分成交建模。"
+    ],
+    "rule_excerpt": "五期RSI严格上穿50做多、严格下穿50清仓，每笔满仓；标题5日、正文五期。",
+    "params": {
+      "period": 5,
+      "threshold": 50,
+      "timeframe": "1d hypothesis",
+      "smoothing": "Wilder;five-delta mean seed;flat50",
+      "cash_fraction": 1,
+      "fees": "fee-inclusive fullcash Decimal50",
+      "execution": "next-open proxy;rawopposite cancellation"
+    }
+  },
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "deep_validation": {
+    "independent_Fraction_features": "PASS",
+    "independent_Decimal_account": "PASS",
+    "prefix_future": "PASS",
+    "fresh_restore": "PASS"
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 1.3856132138369677,
+      "drawdown": -0.025994532964371597
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 1.3294862990533665,
+      "drawdown": -0.06544848829703398
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 1.6913660712898557,
+      "drawdown": -0.0010183578240208213
+    },
+    {
+      "date": "2023-04-30",
+      "equity": 1.6518067196738968,
+      "drawdown": -0.05796506300721216
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 1.499912039169055,
+      "drawdown": -0.14459147884305967
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 1.6574722012038006,
+      "drawdown": -0.05473400608481971
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 1.5076322801059665,
+      "drawdown": -0.14018858073279628
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 1.3444734797819413,
+      "drawdown": -0.23323898932624598
+    },
+    {
+      "date": "2023-09-30",
+      "equity": 1.3530987583792269,
+      "drawdown": -0.228319942997664
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 1.7627564733828842,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 1.6910390688035561,
+      "drawdown": -0.1091419412830501
+    },
+    {
+      "date": "2023-12-31",
+      "equity": 1.7276370471229927,
+      "drawdown": -0.12747272956401223
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 1.6446542824955235,
+      "drawdown": -0.16938241495436224
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 2.307362057798355,
+      "drawdown": -0.020840561185672013
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 2.5137911189270246,
+      "drawdown": -0.08857409578060771
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 2.18943546833797,
+      "drawdown": -0.2061758089464103
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 2.0700042039585815,
+      "drawdown": -0.24947803374522803
+    },
+    {
+      "date": "2024-06-30",
+      "equity": 2.0064464520585528,
+      "drawdown": -0.2725221844940624
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 2.192887094830433,
+      "drawdown": -0.20492435182523805
+    },
+    {
+      "date": "2024-08-31",
+      "equity": 1.8960631721034058,
+      "drawdown": -0.31254387921099047
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 2.0256178457490557,
+      "drawdown": -0.2655712072637145
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 2.144410116231989,
+      "drawdown": -0.2225006626492535
+    },
+    {
+      "date": "2024-11-30",
+      "equity": 2.847288293908507,
+      "drawdown": -0.056022906506822734
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 2.750120765699299,
+      "drawdown": -0.08823738968967398
+    }
+  ],
+  "curve_meta": {
+    "observations": 731,
+    "total_observations": 731,
+    "returned_points": 25,
+    "sampling": "first bar close + each UTC monthend bar close; bar-open date label",
+    "equity_unit": "initial_capital_multiple",
+    "drawdown_unit": "fraction",
+    "benchmark_curve_available": false
+  },
+  "lineage": {
+    "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+    "C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
+    "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "new_control_runs": 1
+  },
+  "limitations": [
+    "HYPOTHESIS，不是作者严格复现。",
+    "账户/因果检查不证明真实成交或未来获利。",
+    "原始行情及完整账户不入Git。",
+    "本地完整私有ZIP不是远端备份。"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "catalog-execution-branch-assignment/v1",
+  "recorded_at_utc": "2026-10-03T16:51:02.797993+00:00",
+  "contract_pin": "a1a4e09cf9f88d4ca11481cddc59e407f8bb6e12",
+  "preservation": "Original batch015 claims and contract immutable; this additive assignment fixes output branches, not rules.",
+  "assignments": {
+    "M1180": {
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b008-m1180",
+      "allowed_root": "research/public-strategies/M1180/",
+      "reported_stage": "IMPLEMENTATION_PREFLIGHT_ONLY",
+      "actual_historical_runs_reported": 0
+    },
+    "M1258": {
+      "owner": "root/m0288",
+      "branch": "codex/m1258-catalog-rsi5-20261003",
+      "allowed_root": "research/public-strategies/M1258/",
+      "source_C0_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+      "reported_stage": "C0_FROZEN_INDEPENDENT_PREHISTORY_QA_RUNNING",
+      "actual_historical_runs_reported": 0
+    }
+  },
+  "global_writer": "root only: claims/progress/index/allowlist/integration/PR/merge",
+  "no_duplicate_restart": true
+}

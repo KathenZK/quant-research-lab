@@ -1,0 +1,376 @@
+{
+  "schema": "M1258-catalog-hypothesis-protocol/v1",
+  "id": "M1258",
+  "created_utc": "2026-10-03T16:35:23.255918+00:00",
+  "base_commit": "a1a4e09cf9f88d4ca11481cddc59e407f8bb6e12",
+  "source_rules": {
+    "path": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1258-root-frozen-rules.json",
+    "bytes": 10303,
+    "sha256": "eccfd386fe9fb17206bff6ea344e99cabb938c5bda06330767c08f58279bdbce"
+  },
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch015-output-contract-20261003.json",
+    "bytes": 4076,
+    "sha256": "4670e9110f18a1ea63444991fa00f9884f484903ff28afe915742e503bbe9744"
+  },
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution": "ADAPTED_EXECUTION_PROXY",
+  "strict_reproductions": 0,
+  "input": {
+    "input_name": "input.csv",
+    "bytes": 128196,
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "evaluation_rows": 731,
+    "warmup_rows": 31,
+    "manifest_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+    "manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "rebuild_script": "research/public-strategies/M0216/scripts/rebuild_inputs.py",
+    "rebuild_script_sha256": "52b48a659791d6d8a9c817fce761f423831f45b46deb4978107941cfc4c950a1",
+    "fetch_dependency": "research/public-strategies/M0216/scripts/fetch_inputs.py",
+    "fetch_dependency_sha256": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+    "reacquire_command_template": "In an isolated repository checkout without retained M0216 input.csv: python research/public-strategies/M0216/scripts/rebuild_inputs.py --raw-dir NEW_PRIVATE_RAW_DIRECTORY --staging-dir NEW_PRIVATE_STAGING_DIRECTORY",
+    "raw_validation": "50 fixed ZIP/CHECKSUM objects,25 provider checksum andZIPCRC; canonical byte rebuild; no current finality or PIT guarantee.",
+    "raw_files": [
+      {
+        "name": "BTCUSDT-1d-2022-12.zip",
+        "bytes": 2222,
+        "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf"
+      },
+      {
+        "name": "BTCUSDT-1d-2022-12.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "69270bc38bf2bce2ef473bab3846e9119952f597dc44e1f9c4062acbfef364cf"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-01.zip",
+        "bytes": 2250,
+        "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-01.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "dee4c03862bcec3cb77c43d50973d450ea4b3a6c6114005c2b230a9aad01d454"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-02.zip",
+        "bytes": 2072,
+        "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-02.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "5947aa09bcce8b0af5a71bed3241b0680bed9a05b57ba22ce4d8580032b66f29"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-03.zip",
+        "bytes": 2265,
+        "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-03.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "4ae87b95b41803371c50754d4e9d66bfdc29009b17452dc5b499784525cff52e"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-04.zip",
+        "bytes": 2108,
+        "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-04.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "ff934dc2f11da5df37b475a7ae4f392ef7df9d7945a820b7c51295e0e355c6ab"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-05.zip",
+        "bytes": 2168,
+        "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-05.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "bc849dbfcc027fcc1e03c93e00616938644079ae632f4eea20a77256c80f2ba1"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-06.zip",
+        "bytes": 2099,
+        "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-06.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "6db68d70a6c9c6701ec1bf0d9737bff3344838fc5b6c8b515f01d12e7d289e02"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-07.zip",
+        "bytes": 2132,
+        "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-07.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "364fe4b0962f9e1836a12bab7b47164f0117ad06bf516d3c6ffbd105b927ff4b"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-08.zip",
+        "bytes": 2160,
+        "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-08.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "9d3396b6e98ead2e00c7aa5fcb51132ce4f10a40e15c24e6632d0032cdd1e21f"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-09.zip",
+        "bytes": 2080,
+        "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-09.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "4ba133f29316eafef1a8af1d25f78e3690538f479625ee855a1ac284d8d7df82"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-10.zip",
+        "bytes": 2154,
+        "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-10.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "55a9c4cef733df85900e7abbb0119629afdbc427e435e0e554db4fc0af1105ae"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-11.zip",
+        "bytes": 2102,
+        "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-11.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "12583d6752383ddf5e070e25306c7fe425f7a57249cda15b2af940da5000a4fa"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-12.zip",
+        "bytes": 2177,
+        "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979"
+      },
+      {
+        "name": "BTCUSDT-1d-2023-12.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "c02ae2a53fecc777a02272345ace99488ca15a19cbd7ea9a0a7265d057029ae9"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-01.zip",
+        "bytes": 2190,
+        "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-01.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "71b077b0fdf209e46fce5e951ce9e6c7e5cbfa24da0615b1abc014eff610bfa2"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-02.zip",
+        "bytes": 2053,
+        "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-02.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "f1b2d31240117fc874dfaadbf1d53322881b178b7e86f23a0ecd9580f1154672"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-03.zip",
+        "bytes": 2224,
+        "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-03.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "2e25240c502df99c33605676d89ce121ae749242885e576f5738b085ec5beb80"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-04.zip",
+        "bytes": 2141,
+        "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-04.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "ea23a2ea25f9fd86b3e3bfc6bf80b5530f70b2ba86d6b05710f93f4d61248a90"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-05.zip",
+        "bytes": 2185,
+        "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-05.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "2ad2d24b78bab81ba229d216441330003fd24138f1dc43d2a84be072b0adca39"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-06.zip",
+        "bytes": 2095,
+        "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-06.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "7d4f2d0569b4465ea956474827ed5f3aae670d8272e64e578dea0542bf5b9cf5"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-07.zip",
+        "bytes": 2203,
+        "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-07.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "e8f15da5d2588d694e9c5cd6d2b7b5a351a356083ef4f42e8d22fc13bbe48ead"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-08.zip",
+        "bytes": 2190,
+        "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-08.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "875dcd65e6d6595bb50280408f5eb54f0404c01a93ad4b6322f9f1c053006bf0"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-09.zip",
+        "bytes": 2106,
+        "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-09.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "26d0bdd27f946237638a33025086796747d41e276019784c2e60a45fdf1935f3"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-10.zip",
+        "bytes": 2203,
+        "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-10.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "bf315ea2b65839fbd220d29bbee4f2844b50b48ab5c0daecc2329a6d6156a7aa"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-11.zip",
+        "bytes": 2157,
+        "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-11.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "0cc578524970a94a4bff742840013f82d997afb119e558f08a86f0ceba467654"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-12.zip",
+        "bytes": 2218,
+        "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da"
+      },
+      {
+        "name": "BTCUSDT-1d-2024-12.zip.CHECKSUM",
+        "bytes": 88,
+        "sha256": "6bcfb157f3058010bc0331caa2e0039f9593c91fcee335474ca246363d4e4a90"
+      }
+    ]
+  },
+  "evaluation_start_ms": 1672531200000,
+  "evaluation_end_ms": 1735689600000,
+  "warmup_bars": 31,
+  "evaluation_bars": 731,
+  "initial_cash": "100000",
+  "decimal_precision": 50,
+  "decimal_rounding": "ROUND_HALF_EVEN",
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "benchmark": {
+    "name": "buyhold",
+    "fee_bps_each_side": 8,
+    "slippage_bps_each_side": 2,
+    "delay_bars": 0,
+    "new_controls": 1,
+    "entry": "first evaluation open; fullcash fee-inclusive; no exit"
+  },
+  "statistics": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "total_return": "E_last/100000-1",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+  },
+  "source_limitations": [
+    "Catalog11fields only; original webpage blocked/unverified, no original fulltext/code imported.",
+    "Title5day supports explicit1d choice; Wilder seed, flat50, venueUSDT and nextopen execution are hypotheses."
+  ],
+  "exposure": {
+    "window": "2023-01-01..2025-01-01 exclusive",
+    "pre_exposed": true,
+    "OOS": false,
+    "new_M1258_returns_seen": false,
+    "earlier_search_count": "UNKNOWN",
+    "no_tuning": true
+  },
+  "data_quality": {
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT": "NOT_PROVEN",
+    "gap_policy": "reject",
+    "zero_volume_policy": "retain; no liquidity filter",
+    "no_market_requests": true,
+    "known_2023_03_24_halt": "intraday; no daily midnightopen override; no all-history executability claim"
+  },
+  "recovery_gate": {
+    "path": "research/public-strategies/M1358/recovery/remote-core-v1/M1358-remote-core-recovery.safe.json",
+    "bytes": 5628,
+    "sha256": "ff46b170a4d7ba4305768e4ba43ff1cb3c63aaf9302bd7541aec3c69795cffa4"
+  },
+  "remote_scope_addendum": {
+    "path": "research/public-strategies/remote-recovery-scope-addendum-20261003.json",
+    "bytes": 2033,
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+  }
+}

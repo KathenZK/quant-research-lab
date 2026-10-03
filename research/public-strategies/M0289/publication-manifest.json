@@ -13,8 +13,28 @@
     },
     {
       "path": "README.md",
-      "bytes": 5461,
-      "sha256": "850a96ec38739a5e4df6ae0622c134c47f10cd2a877cc8ee110751fa7cd8a8ab"
+      "bytes": 6357,
+      "sha256": "f41b8c797d558690cdaf84364f6a51134f811e5501e0d13c9b22b666bd5b8969"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/base-nav-light.csv",
+      "bytes": 17992,
+      "sha256": "f12cb5d81b1128b2a0a0421b9c0d47debe214129318b42b9345d0f9e810d2432"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/graph-detail.json",
+      "bytes": 80290,
+      "sha256": "840266081576c28679ca82e65537ed2a1c3fe72c8ea45f0ff9b629ce5cb65712"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/graph-record.json",
+      "bytes": 17977,
+      "sha256": "02d5817de5cadbb63df08683a1e757e5d9120858e80273cde0efd2ebd4cff1c6"
+    },
+    {
+      "path": "artifacts/20261003-public-display-prep/public-display-manifest.json",
+      "bytes": 10580,
+      "sha256": "c53a5d7433c7470045fd2b3e8e826b5db660669a7ef6b7c2627a4e9c1559536b"
     },
     {
       "path": "artifacts/catalog-original11.csv",
@@ -78,13 +98,33 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 649,
-      "sha256": "a0627dac195a8e66c4b962c612086313f76138fac403181d7c43a5baf7104448"
+      "bytes": 1047,
+      "sha256": "b9d4e95d747fd0d81eaa97e838fd4877683a8dc02e5d4190c7ffbe57881b7552"
     },
     {
       "path": "m0289-core-ledger.md",
       "bytes": 390,
       "sha256": "8a2c4d8f481250d699792d19b58da177ec6fcfe63404e20aa0321e432125d494"
+    },
+    {
+      "path": "publication-history/revision-v2.json",
+      "bytes": 1462,
+      "sha256": "6b26494ea7ef76749295265ef2109a56d8b3055ea14ad69d9b31328f81644739"
+    },
+    {
+      "path": "publication-history/v1/README.md.snapshot",
+      "bytes": 5461,
+      "sha256": "850a96ec38739a5e4df6ae0622c134c47f10cd2a877cc8ee110751fa7cd8a8ab"
+    },
+    {
+      "path": "publication-history/v1/decision-log.md.snapshot",
+      "bytes": 649,
+      "sha256": "a0627dac195a8e66c4b962c612086313f76138fac403181d7c43a5baf7104448"
+    },
+    {
+      "path": "publication-history/v1/publication-manifest.json",
+      "bytes": 3979,
+      "sha256": "7e98f610a6758332599e5cc66d5e47489b35ec1b4e242a610cecde15c8b599c5"
     },
     {
       "path": "scripts/adapter.py",
@@ -117,9 +157,12 @@
       "sha256": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af"
     }
   ],
-  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
+  "publication_status": "PUBLIC_DERIVATIVES_STAGED_PENDING_PARENT_INTEGRATION_SITE_NOT_DEPLOYED",
   "raw_market_data": false,
   "full_ledgers": false,
   "private_Library_IDs": false,
-  "shared_kernel_modified": false
+  "shared_kernel_modified": false,
+  "revision": 2,
+  "previous_publication_manifest_sha256": "7e98f610a6758332599e5cc66d5e47489b35ec1b4e242a610cecde15c8b599c5",
+  "revision_scope": "additive reviewed public display v2 derivatives, frozen offline export and acceptance receipts; original C0 and results unchanged"
 }
