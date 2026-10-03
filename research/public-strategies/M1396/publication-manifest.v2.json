@@ -1,0 +1,348 @@
+{
+  "Graph_imported": false,
+  "Site_deployed": false,
+  "actual_strategy_configurations": 4,
+  "files": [
+    {
+      "bytes": 617,
+      "path": "research/_shared-kernels/catalog-daily-cash/README.md",
+      "sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+    },
+    {
+      "bytes": 9243,
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/engine.py",
+      "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+    },
+    {
+      "bytes": 1038,
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/manifest.json",
+      "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+    },
+    {
+      "bytes": 8744,
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/verify_account.py",
+      "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+    },
+    {
+      "bytes": 1022,
+      "path": "research/public-strategies/M1396/M1396-core-ledger.md",
+      "sha256": "7e65b9d192eb14a189851db418822735fe5274021aa9ee9efd2e6ff64862439f"
+    },
+    {
+      "bytes": 379,
+      "path": "research/public-strategies/M1396/M1396-result-ledger-v1.md",
+      "sha256": "9b0f1cb18f3177c55cb5e3a635ba93df414133c16f20df7774184aa57d225f09"
+    },
+    {
+      "bytes": 7945,
+      "path": "research/public-strategies/M1396/M1396.md",
+      "sha256": "1745304b896f2d983147d4d5c399269453c1df6995044496bd0d6443f6d71705"
+    },
+    {
+      "bytes": 4819,
+      "path": "research/public-strategies/M1396/README-display-v1.md",
+      "sha256": "f77c48c250a755bf0b28c617b94f9ad6cfd31f28315d1487dce9388c51ad616e"
+    },
+    {
+      "bytes": 209,
+      "path": "research/public-strategies/M1396/README-results-v1.md",
+      "sha256": "5ea41111a9abb19161568aaa8d715f0f328b48ff79368418f516770b101adbfa"
+    },
+    {
+      "bytes": 872,
+      "path": "research/public-strategies/M1396/README.md",
+      "sha256": "00239cf0d063a9011f44cd9f9d27b0a72bc4e64039fa51ffcafb862c4d0e50c9"
+    },
+    {
+      "bytes": 516,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/LICENSE-results.md",
+      "sha256": "2b09dc6a16d3e9aa91007552619ee00799828597e620b00201dd83971d923fa9"
+    },
+    {
+      "bytes": 330,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/execution-receipt.v1.json",
+      "sha256": "8a6e66a4ddaa9a48fc20321265cc5b4daf5ef14de799e8cf0e37b58f1e28994f"
+    },
+    {
+      "bytes": 1211,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/exposure.jsonl",
+      "sha256": "cad26c20ff04091e07de2e524092ae97bf34efe96e31c27df4ca001a9c10820b"
+    },
+    {
+      "bytes": 10728,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-detail.json",
+      "sha256": "6acc5ef6dbfcdc8db71b22a5e89d72af1973d79f225a85b7dd813dac5f9e4487"
+    },
+    {
+      "bytes": 913,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-record.json",
+      "sha256": "1a69e57c411bcbdf7b46a3c5afca0daa09f1f115b84b8c8e70563472d756aa8d"
+    },
+    {
+      "bytes": 1457,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/history-causality.v1.json",
+      "sha256": "0b2638696764b4822221f861d2650dd754e74f40bd42f9166fc77761b33f6c22"
+    },
+    {
+      "bytes": 490,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/independent-ledger.v1.json",
+      "sha256": "87c48a8867a97e1ea7bab61207fd9327c7c12a3beb9bad7451d4037b40bde213"
+    },
+    {
+      "bytes": 452,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/input-QA.json",
+      "sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909"
+    },
+    {
+      "bytes": 210,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/local-recovery.json",
+      "sha256": "d590903a4fb4e2b85f1c2e5643acabd7ce3c96f78caea21464256b5baad61aa3"
+    },
+    {
+      "bytes": 792,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/private-archive.safe.json",
+      "sha256": "1d702de722ab63e2355b79f070329c3ab95d5dd8f6249ed204190596951ecf2f"
+    },
+    {
+      "bytes": 4267,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/private-output-manifest.json",
+      "sha256": "77b980470ba4c78a0af62f5855539589ff57b4aaedafbf194c46e4d24ce1c1f5"
+    },
+    {
+      "bytes": 4339,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/summary.json",
+      "sha256": "b258d42ec259102cf23e987ca2cbc3ccc1edc82df81c9b33910864aaa9f38deb"
+    },
+    {
+      "bytes": 1455,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/synthetic-causality.json",
+      "sha256": "2cc797c74ce5ee45e519f997c83031a114b11fadc7d6188e8e35fad1d91f026f"
+    },
+    {
+      "bytes": 3330,
+      "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/synthetic-prehistory.json",
+      "sha256": "6858cfb4c5fc237a19ca5a9790f01c3a70f410f5d79389d9cf61453c340d4921"
+    },
+    {
+      "bytes": 2615,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-prep/base-nav-sampled.json",
+      "sha256": "603b68f0f328181a5528f99580bfbb41c029165734aa0147bc3bce936d80c3d8"
+    },
+    {
+      "bytes": 21025,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-prep/graph-detail.json",
+      "sha256": "1c6d53300c34c7e4c920a7e1e6fafcbcba4f8c6e1a98479ef096701c6b5523be"
+    },
+    {
+      "bytes": 20006,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-prep/graph-record.json",
+      "sha256": "d8ed5ebfb0d41a4c6d0cab68c07ec45817d5d311ae80977d0ad7b7ef2209b3d6"
+    },
+    {
+      "bytes": 9548,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-prep/public-display-manifest.json",
+      "sha256": "7c00500dd7b7ad0107239431d08fbf2512dfb2c7d1afada2cf377dc39831b4a0"
+    },
+    {
+      "bytes": 10769,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json",
+      "sha256": "4dac40471c452dd2bfef59848ddb2fb302a903d2b6246a1456860223ef50055f"
+    },
+    {
+      "bytes": 1970,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-review/EXACT-8-FILES.json",
+      "sha256": "53fad4db2a1eb35b15cdfabe0402ecab682c1fd7d66ce4183583ec1f45001659"
+    },
+    {
+      "bytes": 12526,
+      "path": "research/public-strategies/M1396/artifacts/20261003-public-display-review/review.safe.json",
+      "sha256": "8d3f73818c42a5bbd4002797475f34d03cf1287d5e02b28ec0dfcb8cb82779f4"
+    },
+    {
+      "bytes": 913,
+      "path": "research/public-strategies/M1396/decision-log-display-v1.md",
+      "sha256": "fbdd2f5d522264b07efa9acc53efcf7610d0aedc0d26a5ed8ae393d0ba02fc34"
+    },
+    {
+      "bytes": 822,
+      "path": "research/public-strategies/M1396/decision-log-results-v1.md",
+      "sha256": "c67c1816fd0dc6061d63bea6515ec43e1045ee04036c849f57517d05927584ff"
+    },
+    {
+      "bytes": 912,
+      "path": "research/public-strategies/M1396/decision-log.md",
+      "sha256": "6095e6f8cf812853a168dc5ea91e9317d50ad7cd35dec0de8ea646dde3715071"
+    },
+    {
+      "bytes": 10403,
+      "path": "research/public-strategies/M1396/publication-manifest.v1.json",
+      "sha256": "ee8d68770a697e372021989c192674b6db6cf96b8ea0eeee450ecb4370454c6f"
+    },
+    {
+      "bytes": 1517,
+      "path": "research/public-strategies/M1396/recovery/REMOTE-CORE-RESTORE.md",
+      "sha256": "47acd29afface38bc0e90cd0ff3084578be101f08f8a5c61c1dc0d6c160ffca0"
+    },
+    {
+      "bytes": 4190,
+      "path": "research/public-strategies/M1396/recovery/control-release-v1/control-reference.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "bytes": 3065,
+      "path": "research/public-strategies/M1396/recovery/control-release-v1/coordinator-acceptance.safe.json",
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    {
+      "bytes": 2309,
+      "path": "research/public-strategies/M1396/recovery/control-release-v1/prehistory-authorization.safe.json",
+      "sha256": "47825dd4e5a3c1e635023536ff8f6c60a57e4da47bb4cbd458a2f964ac92552e"
+    },
+    {
+      "bytes": 2513,
+      "path": "research/public-strategies/M1396/recovery/control-release-v1/prehistory-independent-review.safe.json",
+      "sha256": "82ea37d40a5919b83a43536463ea599c0674d7ba6359914dff48eab39cd46899"
+    },
+    {
+      "bytes": 2039,
+      "path": "research/public-strategies/M1396/recovery/control-release-v1/release.json",
+      "sha256": "51823b3b465f2f8ab75b37e56277c36264a21e624ddf9a146c76fcbcf666fbaf"
+    },
+    {
+      "bytes": 926,
+      "path": "research/public-strategies/M1396/scripts/README.md",
+      "sha256": "bf57395426872b6635277e2faf41e47bf7bfffa1c22f0cadcddef2b87dcdecf9"
+    },
+    {
+      "bytes": 3496,
+      "path": "research/public-strategies/M1396/scripts/build_private_archive_v1.py",
+      "sha256": "b9d40566e6a47c3d6de7d6f9bc1e235c856b01214c5362fb267e9242d59a1451"
+    },
+    {
+      "bytes": 3747,
+      "path": "research/public-strategies/M1396/scripts/check_causality.py",
+      "sha256": "52522cfe510ee12f2caf2a65e82614678c1421e65a00718ae27076d4730597e1"
+    },
+    {
+      "bytes": 9430,
+      "path": "research/public-strategies/M1396/scripts/check_synthetic.py",
+      "sha256": "687db5413b94960240bb76a86baa479840a482b5b750dbd01eaf41be51390980"
+    },
+    {
+      "bytes": 725,
+      "path": "research/public-strategies/M1396/scripts/kernel_loader.py",
+      "sha256": "79c145afa650c8e2ab03b76632ed0b50c8f025123ac3835be8d01d05ff124ded"
+    },
+    {
+      "bytes": 1490,
+      "path": "research/public-strategies/M1396/scripts/oracle.py",
+      "sha256": "c11147506d51099d4c6e4884373842797be9ed79d24019069fa143b4c10219cb"
+    },
+    {
+      "bytes": 5922,
+      "path": "research/public-strategies/M1396/scripts/postprocess_v1.py",
+      "sha256": "220e0bae9149199ed1266bd048e305b069b35a2c71cde9cba95c43d9a910fad4"
+    },
+    {
+      "bytes": 17351,
+      "path": "research/public-strategies/M1396/scripts/public-display-v2/common_public_display.py",
+      "sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13"
+    },
+    {
+      "bytes": 21025,
+      "path": "research/public-strategies/M1396/scripts/public-display-v2/export_catalog_pair.py",
+      "sha256": "8e6acc4cd4c2c30cc2cf5aecaec5f1231697f7935176042416e33bb633f5c64b"
+    },
+    {
+      "bytes": 19561,
+      "path": "research/public-strategies/M1396/scripts/public-display-v2/frozen_export.py",
+      "sha256": "266c93afa0829b0e504b2e008e1ed0ae1b43a4b5fd2869ffaeb047e41fba3128"
+    },
+    {
+      "bytes": 13673,
+      "path": "research/public-strategies/M1396/scripts/public-display-v2/verify_catalog_pair.py",
+      "sha256": "00f269bcf90f37ec08eac5b22140054cf042bad38232ac4b6ab8c9695342dd4b"
+    },
+    {
+      "bytes": 2176,
+      "path": "research/public-strategies/M1396/scripts/rebuild_input.py",
+      "sha256": "9057b3d800717797258a36aa351547095f95d0e8486559eac2013846c4c961ab"
+    },
+    {
+      "bytes": 2643,
+      "path": "research/public-strategies/M1396/scripts/restore_run.py",
+      "sha256": "e5a67ffdb9e9f5c18771ebdb0528af069d7baa4f90eb6916daccbebcd5b491cb"
+    },
+    {
+      "bytes": 3071,
+      "path": "research/public-strategies/M1396/scripts/run_replay.py",
+      "sha256": "06f338dc0978ea299a7dde52aa028cda462abd47d3cfb7909eed0ea107d6eda4"
+    },
+    {
+      "bytes": 923,
+      "path": "research/public-strategies/M1396/scripts/signals.py",
+      "sha256": "f48c5407c12bedd66d9190a0d3acf4fa9ff821651f19752bed02cd3df2c70574"
+    },
+    {
+      "bytes": 928,
+      "path": "research/public-strategies/M1396/scripts/verify_replay.py",
+      "sha256": "ebcd4fd311902e41fba4905b2129ec044c34865f859bcea9fc9becb3313b7fa4"
+    },
+    {
+      "bytes": 1850,
+      "path": "research/public-strategies/M1396/source/catalog-original-fields.json",
+      "sha256": "7d0d4464e98b0f3a59e41f0e2aa95faf8d9bd154ef4fd4aa065657818684d84d"
+    },
+    {
+      "bytes": 10110,
+      "path": "research/public-strategies/M1396/source/root-frozen-rules.json",
+      "sha256": "0b66cc30dda37a342fd1720ab70fb5a3909225693f15a1979c3b2c1918690ee0"
+    },
+    {
+      "bytes": 5232,
+      "path": "research/public-strategies/M1396/specs/C0-v1.json",
+      "sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a"
+    },
+    {
+      "bytes": 461,
+      "path": "research/public-strategies/M1396/specs/environment-lock.json",
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "bytes": 347,
+      "path": "research/public-strategies/M1396/specs/kernel-pin.json",
+      "sha256": "3487c12dd67ae13e699974ddd42c50d3d7337c767646c1f6d7121859ddbcea33"
+    },
+    {
+      "bytes": 19302,
+      "path": "research/public-strategies/M1396/specs/protocol-v1.json",
+      "sha256": "2ee5efd86194f2bda97d61839cd60313614767f357e362d00fee95864b71f056"
+    }
+  ],
+  "id": "M1396",
+  "integration_base_commit": "216c1fe7dddb5e18b788d9373f5e8549cc90184a",
+  "new_controls": 0,
+  "original_C0_sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+  "original_metric_observations": 731,
+  "original_payload_count": 49,
+  "original_payloads_modified": false,
+  "payload_bytes": 316909,
+  "payload_count": 63,
+  "previous_publication_manifest": {
+    "bytes": 10403,
+    "path": "research/public-strategies/M1396/publication-manifest.v1.json",
+    "sha256": "ee8d68770a697e372021989c192674b6db6cf96b8ea0eeee450ecb4370454c6f"
+  },
+  "private_full_curves_included": false,
+  "private_raw_or_original_curation_included": false,
+  "projection_new_controls": 0,
+  "projection_new_trials": 0,
+  "public_curve_points": 25,
+  "publication_scope": "Approved additive display candidates, frozen exporters, exact safe receipts and new display documents; historical v1 remains immutable",
+  "reused_control_id": "M1258",
+  "revision": 2,
+  "schema": "batch016-fixed-publication/v2",
+  "self_excluded": true,
+  "source_commit": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+  "strict_reproductions": 0
+}
