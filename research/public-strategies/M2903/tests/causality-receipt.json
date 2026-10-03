@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "account_prefix_future_pairs": 24,
+  "historical_features": 0,
+  "historical_runs": 0,
+  "new_controls": 0
+}

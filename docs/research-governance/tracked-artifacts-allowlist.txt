@@ -1453,3 +1453,8 @@ research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/verifica
 research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-detail.json  # M1266 diagnostic publication
 research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-record.json  # M1266 diagnostic publication
 research/public-strategies/M1266/artifacts/20261003-batch019-v1/metrics.json  # M1266 diagnostic publication
+
+# M3710 independently reviewed prehistory synthetic receipts; no historical results
+research/public-strategies/M3710/artifacts/20261003-prehistory-v1/gate-negative.safe.json  # exact C0 preparation
+research/public-strategies/M3710/artifacts/20261003-prehistory-v1/indicator-synthetic.safe.json  # exact C0 preparation
+research/public-strategies/M3710/artifacts/20261003-prehistory-v1/synthetic-suite.safe.json  # exact C0 preparation

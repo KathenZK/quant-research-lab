@@ -1,0 +1,298 @@
+{
+  "schema": "exact-publication-boundary-review/v1",
+  "id": "M3710",
+  "status": "SAFE_TO_PUBLISH",
+  "source_commit": "88f5c31b66592e8917d14f5afe140e20c137bc11",
+  "scope": "Only the exact34 family files below; root independently rechecks and publishes under current explicit lightweight Git authorization",
+  "file_count": 34,
+  "total_bytes": 169689,
+  "files": [
+    {
+      "path": "research/public-strategies/M3710/M3710-core-ledger.md",
+      "bytes": 1398,
+      "sha256": "6a6d86f1f2ea59220233d1f01e491b0253c53ecdd7524f6d0de430927890f8ff",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored strategy documentation, source paraphrase, diagnostic limitations and execution/recovery instructions."
+    },
+    {
+      "path": "research/public-strategies/M3710/M3710.md",
+      "bytes": 6212,
+      "sha256": "0f906ec0f1e4c17b8edd5ce4566052674bf37f6ee6fc4bd026e7ac352698d2c0",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored strategy documentation, source paraphrase, diagnostic limitations and execution/recovery instructions."
+    },
+    {
+      "path": "research/public-strategies/M3710/README.md",
+      "bytes": 1397,
+      "sha256": "19d9df51cdc6289763f6e6bf648ecfdf0ef9c7c3be5f061bdce1b7d8f4ef600d",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored strategy documentation, source paraphrase, diagnostic limitations and execution/recovery instructions."
+    },
+    {
+      "path": "research/public-strategies/M3710/artifacts/20261003-prehistory-v1/gate-negative.safe.json",
+      "bytes": 1307,
+      "sha256": "19b51dc6df140f4ede532024b3672b1363d61e24de324ac32adc7d2a16227e0a",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Compact artificial-test counts/assertion descriptions, no full generated or historical curve."
+    },
+    {
+      "path": "research/public-strategies/M3710/artifacts/20261003-prehistory-v1/indicator-synthetic.safe.json",
+      "bytes": 1612,
+      "sha256": "58cc6563fe91da3c1554a401d97b532d8d918a69b2e68aa7d3d61d7c58fdfbd9",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Compact artificial-test counts/assertion descriptions, no full generated or historical curve."
+    },
+    {
+      "path": "research/public-strategies/M3710/artifacts/20261003-prehistory-v1/synthetic-suite.safe.json",
+      "bytes": 4343,
+      "sha256": "6584d5737f67c0e14cedbd76de2be03a1cf3ff5e23b8819dd3e99f8ddf3049ea",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Compact artificial-test counts/assertion descriptions, no full generated or historical curve."
+    },
+    {
+      "path": "research/public-strategies/M3710/decision-log.md",
+      "bytes": 1779,
+      "sha256": "5c08dcc0230cad686190742c007e96b17cfcdfc000709eb04aaff6f9bb12b6dd",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored strategy documentation, source paraphrase, diagnostic limitations and execution/recovery instructions."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/README.md",
+      "bytes": 2584,
+      "sha256": "c1ac41be32142f7dd676e374aa92b6244f66e0ec5493618a7576995cc329a96d",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored strategy documentation, source paraphrase, diagnostic limitations and execution/recovery instructions."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/check_causality.py",
+      "bytes": 1481,
+      "sha256": "8d5f11a927f90dae54186834c5a462a59f25a782f2cba04725033d840fbdbb69",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/check_gates.py",
+      "bytes": 5911,
+      "sha256": "f51594654bbdb752f07816880cc1fe48811e48f07dc5fe15dbe9e96a6449a746",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/check_indicator_synthetic.py",
+      "bytes": 3540,
+      "sha256": "454b8d902032f8e655aaa7867621dd5a71ee2e5cffb70724547fb57002a2b749",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/check_synthetic.py",
+      "bytes": 8057,
+      "sha256": "3c2cdca8417d186371e265b6c1ee95bfe422ede59de77ab3b9c8aeaa56ba2767",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/dependencies.py",
+      "bytes": 1498,
+      "sha256": "69871c56dbac53abebf1658c145b7dbbb03551aa3a2e9152ded540ba03680906",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/gates.py",
+      "bytes": 3818,
+      "sha256": "2667d48efa4641602c14f1491814701c2753f2bcbf531afef47f40ea5ccf353e",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/oracle.py",
+      "bytes": 2386,
+      "sha256": "7c016edf2fc440360a5d662d1cad423f2082c44b0abadf0f749a56497b0700fe",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/rebuild_input.py",
+      "bytes": 2320,
+      "sha256": "5093e48e23829ad57acd1478398c733f5e9ad49151fa2a02d02cc6e59aba1696",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/restore_run.py",
+      "bytes": 3659,
+      "sha256": "e60995971092c5544c5be05fcd6f5ea9884943186d1daa0ec9f240a48e62ff3a",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/run_replay.py",
+      "bytes": 4068,
+      "sha256": "b8d87ed68382d68fe8bf1b357c5d0627fab438eb8aaa3be0959fe58083c10714",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/signals.py",
+      "bytes": 1626,
+      "sha256": "f574cb8ab70fa090b9f48d7a16572eda71a77f32ac13349edaf6ebca1aae60bf",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/verify_replay.py",
+      "bytes": 4236,
+      "sha256": "4e322dd0725b87caa794f878edc4839e318994ed45b7f890b437d42eefaaab75",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored implementation or synthetic QA code; no embedded historical market rows or secret values."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/C0-v1.json",
+      "bytes": 6255,
+      "sha256": "1d30c90f0d1ba1b18b1800d3c100bdb9fbafcbc568f0d14a02961be75f0e3da9",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Freeze metadata and 33 exact relative file identities; no embedded private dataset, source transcript, internal annotation or release credential."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/adapter-independent-review.safe.json",
+      "bytes": 7919,
+      "sha256": "9039c85ddbd122eadc8f931d46f9f812ec621fce621367612928e5119a91ce0d",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/adapter-pin.json",
+      "bytes": 969,
+      "sha256": "fa1a4c33436fb81a4372d0ad3b2ad7ec59311f50e33929208a1d5662e48bd4b0",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/adapter-remote-acceptance.safe.json",
+      "bytes": 1554,
+      "sha256": "3dbf6b9e462bb383d683031f74fafe92996a5f5309a2ed6f924af6094d08d786",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/contract-pin.json",
+      "bytes": 486,
+      "sha256": "6a78b8294f448f3d0da2f0347b0a26b9b3d36cf0be91ae3fd2e252b2e1062247",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Already authorized public M1258 control summary, methodology and seven result fingerprints; no full NAV or fill rows."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/control-remote-acceptance.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Already public control recovery receipt and relative-path fingerprints; private-evidence SHA references do not embed private files or Library IDs."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Runtime version metadata and generic managed-runtime interpreter path; no personal path, account identity or credential."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/exposure-v1.json",
+      "bytes": 860,
+      "sha256": "032731d774f3966939ab4335dc2e58ddabcb4c7a904a0e4372560f4c9a0c5e02",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/input-manifest.json",
+      "bytes": 19543,
+      "sha256": "c51b38f62c06820923a51d2df7b00564e109b77c4d752471f6106fa0b4f50283",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Dataset identity, coverage, QA flags and 56 public-source object URL/size/SHA records only; no raw archive or OHLCV payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/kernel-pin.json",
+      "bytes": 759,
+      "sha256": "cec2e11f67d006acc3a3a3766feb5a92bcdf6d4f7d0dff09e669169dd3cb3728",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Public code/contract dependency pins, provenance, exposure or safe QA/remote receipt metadata; no private payload."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/protocol-v1.json",
+      "bytes": 18489,
+      "sha256": "42b60790ca2640bfbc07d58b5474a7b6e5951975fe74559e6a33cdb3f10d2491",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Authorized operational contract and public source/input fingerprints; original private catalog fields are absent."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/root-rules-v1.json",
+      "bytes": 17318,
+      "sha256": "e5200ca8aa62f787e32101702e2d638c0d37959b5ff6ff5f713058544156eb6d",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Authorized operational contract and public source/input fingerprints; original private catalog fields are absent."
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/source-review.safe.json",
+      "bytes": 9785,
+      "sha256": "387340040ae9bd5f165da3b8cc5611cb8132405791d346bccc98bd384c630e8e",
+      "decision": "SAFE_TO_PUBLISH_EXACT_BYTES",
+      "reason": "Self-authored source summary, public bibliography/URLs/status/hashes; no full source body or private 11-field catalog record."
+    }
+  ],
+  "private_retained_items_in_this_exact_set": [],
+  "absolute_path_findings": [
+    {
+      "path": "research/public-strategies/M3710/specs/environment-lock.json",
+      "literal": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "disposition": "Generic system interpreter location, not a user-specific private directory; permitted reproducibility metadata"
+    },
+    {
+      "path": "research/public-strategies/M3710/scripts/check_gates.py",
+      "literal": "/tmp/README.md",
+      "disposition": "Fabricated negative-test absolute path that must be rejected; no actual file content embedded"
+    },
+    {
+      "path": "research/public-strategies/M3710/specs/adapter-independent-review.safe.json",
+      "literals": [
+        "/workspace",
+        "/tmp"
+      ],
+      "disposition": "Generic sandbox directory names in audit guard description; no private review-directory or user-specific path"
+    }
+  ],
+  "sensitive_content_checks": {
+    "private_Library_identifiers_found": 0,
+    "credential_or_private_key_payloads_found": 0,
+    "user_specific_absolute_paths_found": 0,
+    "raw_market_payload_files": 0,
+    "full_historical_NAV_or_transaction_files": 0,
+    "full_third_party_source_bodies": 0,
+    "private_original_11field_catalog_records": 0,
+    "internal_catalog_annotation_payloads": 0
+  },
+  "boundary_notes": [
+    "This review is specific to M3710 exact bytes; it grants no permission to publish M1180 or other rejected/private C0 payloads.",
+    "The word private in filenames, relative recovery recipe locations or SHA references is not itself private content; referenced full data remains outside this allowlist.",
+    "Source/body hashes and operational catalog rule paraphrases were explicitly authorized; full originals and unpublished annotations remain private.",
+    "Public control reference includes its already approved aggregate metrics, not an authorization for full market data or NAV redistribution.",
+    "Generic absolute path occurrences are disclosed above; no frozen bytes were rewritten or silently sanitized."
+  ],
+  "recovery_boundary": [
+    "Public34-file core preserves the complete C0 identity and implementation; it is not a full private backup.",
+    "Exact private canonical input139983B/a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550 or lawful identical raw56 objects, pinned runtime and nine frozen dependency files are separate prerequisites.",
+    "Use frozen rebuild_input.py only with authorized local raw objects; restore_run.py needs a genuine root release and independently preserved expected results. No release or historical execution is authorized by this publication review.",
+    "Full originals, raw market archives, eventual full feature/NAV/fill outputs and private Library archives are excluded unless separately authorized; do not git-add their containing directories."
+  ],
+  "historical_runs": 0,
+  "repository_writes": 0,
+  "remote_writes": 0,
+  "original_bytes_modified": false,
+  "requires_root_final_review": true
+}

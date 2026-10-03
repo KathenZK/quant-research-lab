@@ -1,0 +1,189 @@
+{
+  "schema": "independent-checkpoint-and-additive-acceptance-review/v1",
+  "created_at_utc": "2026-10-03T22:20:23.906348+00:00",
+  "reviewer": "root/m1266_packet",
+  "status": "PASS_CHECKPOINT003_AND_PUBLIC_ADDITIVE_ACCEPTANCE_NOT_BATCH020_HISTORY_RELEASE",
+  "repository": "quant-research-lab",
+  "branch": "codex/batch020-prehistory-checkpoint-20261003",
+  "base_commit": "bfd07a458f782deda314edc3adf6afbf10e99ca0",
+  "checkpoint": {
+    "path": "research/public-strategies/progress-20261003-batch020-checkpoint003.json",
+    "bytes": 46864,
+    "sha256": "42d93ede44551551faaf8a20f58237b8085637f74a046c957f86f5449b070f4a"
+  },
+  "M1266_acceptance": {
+    "path": "research/public-strategies/M1266/recovery/coordinator-acceptance-20261003/acceptance.safe.json",
+    "bytes": 4384,
+    "sha256": "05d0d1511fad0793e5582a7a4166c74f45e9f754a7799b3e52ce2cf33d019a0d"
+  },
+  "staged_inventory": {
+    "path": "STAGED-INVENTORY.safe.json",
+    "bytes": 16667,
+    "sha256": "7b19f0a1dc325e0ee47099410f538b4607049abd6e1a1cbb1be2c4078624360b"
+  },
+  "rejected_candidate_review": {
+    "path": "REJECTED-002.safe.json",
+    "bytes": 869,
+    "sha256": "c3939b8ba33514ae8c67fb2a76e311db18bc48bca3854220ae361f790ad7dd1e"
+  },
+  "checks_passed": [
+    "Exactly 85 staged files in reviewed publication scope",
+    "Exact declared base commit",
+    "Exact declared integration branch",
+    "Checkpoint003 exact expected bytes",
+    "Previous checkpoint links last published001 exact hash",
+    "Rejected002 original exact bytes retained in private review directory",
+    "Rejected002 excluded from staged publication",
+    "Original002 retained unchanged at its worktree path",
+    "Published001 baseline totals42/171/21",
+    "New003 totals43/175/22",
+    "Unique accepted ID set adds only M1266",
+    "Only existing M1266 four original configurations and one control added",
+    "Strict0 and seven blocked IDs unchanged",
+    "Historical release is boolean false with separate explanatory status",
+    "Stale draft-C0 statement corrected with explicit snapshot/current distinction",
+    "Prior totals explicitly attributed to001",
+    "Rejected candidate disclosed without replacing its bytes or continuity parent",
+    "M1266 root acceptance exact pin",
+    "All12 M1266 original77633 bytes equal originalcommit and independent inventory",
+    "Copied public boundary receipt unchanged from independent original",
+    "Copied receipt cross-review unchanged from independent original",
+    "Acceptance binds actual35-check receipt review",
+    "Acceptance pins both actual original private receipts; originals excluded from public index",
+    "Acceptance exactC0 and original release link verified against received originals",
+    "Seven public result anchors match original receipt evidence",
+    "Parent292 restore separated from root receipt reception and432 addendum",
+    "Declared original historical QA counts agree with received cross-review",
+    "Acceptance base/control all numeric fields equal frozen public metrics",
+    "Checkpoint quality equals acceptance exactly",
+    "Acceptance remains adapted diagnostic strict0/trustedfalse/OOSfalse/PITunknown",
+    "Duplicated current M1266 and nextbatch019 records synchronized",
+    "Additive README explains old pending snapshot, limited recovery, sensitivity and noSite",
+    "M2903 exact allowed inventory counts",
+    "M2903 all original files equal frozen source commit and boundary pins",
+    "M2903 C0 exact unique payload count",
+    "M2903 every C0 payload exact in staged index",
+    "M2903 checkpoint links exact C0 and independent receipt",
+    "M2903 historical0/control0/rootreleasefalse",
+    "M3710 exact allowed inventory counts",
+    "M3710 all original files equal frozen source commit and boundary pins",
+    "M3710 C0 exact unique payload count",
+    "M3710 every C0 payload exact in staged index",
+    "M3710 checkpoint links exact C0 and independent receipt",
+    "M3710 historical0/control0/rootreleasefalse",
+    "Actual private persistence blocker confirms tools/list401 before saved receipts for5 attempted artifacts",
+    "Public checkpoint accurately reports unsaved batch020 backup and closed gate",
+    "M3710 actual local archive bytes match new003 metadata",
+    "M3710 actual local manifest bytes match new003 metadata",
+    "M3710 local verification receipt agrees with653/652 and does not imply remote persistence",
+    "M0974 extra QA explicitly parent message only, no C0/release claims",
+    "Graph activity recorded as in-progress without display delivery orSite activation",
+    "All85 staged UTF8 payloads scanned: no private storage IDs, private user paths, key payload markers or rawmarket CSV rows; JSON syntax valid",
+    "Public staged set limited to approved code/specs/docs and compact receipts, no archive or data files",
+    "Staged diff whitespace check PASS",
+    "Index links003 and excludes rejected002: research/README.md",
+    "Index links003 and excludes rejected002: research/public-strategies/README.md",
+    "Staged paths and bytes unchanged throughout this review"
+  ],
+  "counts": {
+    "previous_ids": 42,
+    "accepted_ids": 43,
+    "previous_strategy_configurations": 171,
+    "strategy_configurations": 175,
+    "previous_controls": 21,
+    "controls": 22,
+    "strict_reproductions": 0,
+    "blocked_ids": 7,
+    "increment_ids": [
+      "M1266"
+    ],
+    "increment_original_strategies": 4,
+    "increment_original_controls": 1
+  },
+  "frozen_originals": {
+    "M1266": {
+      "source_commit": "18abce049b3b260bee9e594354f5c8ddb10155b8",
+      "original_files": 12,
+      "original_bytes": 77633
+    },
+    "M2903": {
+      "source_commit": "be3504678189975acb4118cc202a9d9497018dcf",
+      "original_files": 36,
+      "original_bytes": 129141,
+      "C0_payloads_verified": 18,
+      "C0_sha256": "eab148e33d268a7de91ed8386064c6aeec2243c6b270847e6aa9d6d06bd9b699",
+      "independent_review_sha256": "a721e2a4a04cb71f3ea2bf0d71fd5454c89bf3986333d01f900d39bc2253f047"
+    },
+    "M3710": {
+      "source_commit": "88f5c31b66592e8917d14f5afe140e20c137bc11",
+      "original_files": 34,
+      "original_bytes": 169689,
+      "C0_payloads_verified": 33,
+      "C0_sha256": "1d30c90f0d1ba1b18b1800d3c100bdb9fbafcbc568f0d14a02961be75f0e3da9",
+      "independent_review_sha256": "4ac745ba19c17be659805053cb9559b120ac5f35996f3e8c3260dd808116c4df"
+    }
+  },
+  "M1266_evidence_boundary": {
+    "original_historical_and_parent_Library_receipts_received_byte_exact": true,
+    "parent_archive_members": 292,
+    "matching_result_files": 7,
+    "matching_result_bytes": 4660509,
+    "parent_numeric_leaf_comparisons": 323587,
+    "parent_prefix_checks": 23,
+    "parent_future_checks": 5,
+    "root_full_archive_restoration_performed": false,
+    "local_historical_replay_performed": false,
+    "later432entry_addendum_covered_by_these_receipts": false,
+    "frozen_pending_public_projections_preserved_with_additive_current_status": true,
+    "base_total_return_pct_rounded": 60.13,
+    "base_MDD_pct_rounded": -19.13,
+    "base_Sharpe_rounded": 1.036,
+    "declared_fixed90percent_signalquantity_control_return_pct_rounded": 419.02,
+    "fee0_fee20_delay2_sensitivity_returns_pct_rounded": [
+      65.49,
+      52.4,
+      78.21
+    ],
+    "cost_lag_cases_have_no_matched_control_and_do_not_establish_superiority": true
+  },
+  "batch020_persistence": {
+    "verified_blocker_bytes": 1756,
+    "verified_blocker_sha256": "ea61482d4f9276e1017f32e54a20e3878d46c4906d9df2b07b8f53f9808a4c49",
+    "failure": "HTTP401 at tools/list before upload receipts",
+    "attempted_files": 5,
+    "saved_files": 0,
+    "remote_backup_claimed": false,
+    "local_disk_is_not_durable_backup": true,
+    "M3710_local_package_receipt_sha256": "14828ca9c0a73620b34cc484c97caa5e197cae648f0f3a2e8e3ef198ed7457b6"
+  },
+  "public_boundary": {
+    "private_Library_identifiers_found": 0,
+    "private_annotations_or_original_catalog_payloads_found": 0,
+    "raw_market_or_full_historical_arrays_staged": 0,
+    "full_private_M1266_C0_staged": false,
+    "M2903_M3710_only_preapproved_C0_metadata_staged": true,
+    "input_source_manifest_is_public_URL_size_hash_recipe_not_raw_market_data": true
+  },
+  "remaining_execution_blockers": [
+    "Batch020 Library persistence remains HTTP401 with0 saved files; no root history release for any of the three IDs."
+  ],
+  "blocking_findings_for_reviewed_publication": [],
+  "limitations": [
+    "Read-only integration review of exact staged bytes and existing original/safe evidence. No independent historical rerun or fresh Library access.",
+    "M2903/M3710 synthetic math execution is attributed to pinned independent reviews; this review verifies their exact code/C0/evidence linkage without rerunning them.",
+    "M0974 new QA is explicitly parent-message evidence, not locally received original receipts; no count increment.",
+    "Main CI and remote delivery facts are carried from coordinator records; no new network verification performed here.",
+    "M3710 archive and manifest outer bytes rehashed;653-member fresh-unpack result is checked against existing package/verifier receipts, not independently rerun here.",
+    "Retained last_remote_restore_comparison timestamp refers to root remote-core comparison; parent M1266 Library restore remains separately identified by exact original receipt.",
+    "No Graph entity revision, Site publication, research release or global-progress write performed by reviewer."
+  ],
+  "actions": {
+    "historical_runs": 0,
+    "synthetic_strategy_runs": 0,
+    "real_features_computed": 0,
+    "network_requests": 0,
+    "repository_writes": 0,
+    "global_progress_writes": 0,
+    "private_receipt_writes_only": true
+  }
+}

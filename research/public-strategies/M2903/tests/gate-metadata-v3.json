@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "checks": 30,
+  "observations": [
+    {
+      "case": "valid fixture only",
+      "result": "ACCEPTED_FIXTURE"
+    },
+    {
+      "case": "source_commit [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit 40",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "source_commit None",
+      "result": "REJECTED"
+    },
+    {
+      "case": "C0_sha256 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+      "result": "REJECTED"
+    },
+    {
+      "case": "C0_sha256 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "C0_sha256 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "C0_sha256 True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_reference_sha256 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_reference_sha256 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_reference_sha256 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_reference_sha256 True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_remote_acceptance_sha256 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_remote_acceptance_sha256 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_remote_acceptance_sha256 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "control_remote_acceptance_sha256 True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review sha256 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review sha256 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review sha256 True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review local_path True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review local_path []",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review local_path '../review.txt'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review local_path '/tmp/m2903-metadata-rd55mesh/absent'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review local_path 'bad\\x00path'",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review status True",
+      "result": "REJECTED"
+    },
+    {
+      "case": "review status ['PASS']",
+      "result": "REJECTED"
+    }
+  ],
+  "synthetic_only": true,
+  "historical_features": 0,
+  "historical_runs": 0,
+  "actual_function": "run_replay.check_gate",
+  "authorization_issued": false
+}

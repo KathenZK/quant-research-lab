@@ -1,0 +1,18 @@
+{
+  "id": "M3710-catalog-v1-prehistory-20261003",
+  "kind": "family-local-exposure-intent",
+  "family": "M3710",
+  "prepared_at": "2026-10-03T21:45:50.419986+00:00",
+  "window_start": "2023-01-01T00:00:00Z",
+  "window_end_exclusive": "2025-01-01T00:00:00Z",
+  "out_of_sample": false,
+  "planned_strategy_configurations": 4,
+  "actual_historical_runs": 0,
+  "new_controls": 0,
+  "cumulative_trial_count": null,
+  "cumulative_trial_count_unknown_reason": "Prior catalog/human strategy and parameter exposures incomplete; shared2023/2024 window and M1258control already known.",
+  "input_sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+  "indicator_initialization_fixed_before_historical_features": true,
+  "global_writer": "root only",
+  "selection_reason": "Frozen SMA20 catalog state; no result-based parameter or window choice"
+}

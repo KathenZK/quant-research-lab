@@ -1,0 +1,11 @@
+{
+  "commit": "5e92b97a3f5d1c07d980516d0e06d8991d2024ac",
+  "rules": {
+    "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M3710-root-frozen-rules.json",
+    "sha256": "e5200ca8aa62f787e32101702e2d638c0d37959b5ff6ff5f713058544156eb6d"
+  },
+  "batch_contract": {
+    "path": "research/public-strategies/catalog-daily-next3-batch020-output-contract-20261003.json",
+    "sha256": "5a15f69fca876a4ea3872a2b94ac5f379adfec6e5f11b88de9c4c8ffe64a3d2b"
+  }
+}

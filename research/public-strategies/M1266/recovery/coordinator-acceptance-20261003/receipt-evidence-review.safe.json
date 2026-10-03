@@ -1,0 +1,153 @@
+{
+  "C0_sha256": "adcf2862aaa7af28b19ced8432c62c23e314fd4ba6e3ec1e687cfd679c08a0f7",
+  "blockers_to_receipt_evidence_review": [],
+  "checks_passed": [
+    "Historical independent receipt exact6862-byte pin",
+    "Library original-recovery receipt exact2705-byte pin",
+    "Both original receipt statuses explicitly PASS",
+    "Both receipts bind actual received exact C0",
+    "Both receipts bind actual root release bytes",
+    "Actual release scope remains M1266 four cases plus one control",
+    "Actual locally available code pin: m1266_engine_v1.py",
+    "Actual locally available code pin: run_m1266_v1.py",
+    "Actual locally available code pin: decimal_oracle-frozen-copy.py",
+    "Historical reviewer-script hash internally consistent; script not received or executed here",
+    "Historical input hash/length agree with C0; no input read",
+    "Historical input window/cardinalities match frozen contract",
+    "Parent verification and recovery132-pin claims match actual C0 cardinality",
+    "Independent historical five-case review counts consistent",
+    "Detailed numeric and causality counts match earlier parent report",
+    "All seven filename/length/SHA anchors match historical review, Library replay and exact public delivery",
+    "Seven replayed result anchors total4660509 bytes",
+    "Separate result-manifest pin agrees with seven-file inventory",
+    "Recovery and independent review do not add trials or controls",
+    "Parent attests immutable execution code and pre-processing release gate",
+    "Parent review is offline and backup receipt asserts private-only storage",
+    "Received recovery receipt covers original292-entry archive",
+    "Original backup has archive plus separate manifest",
+    "Private backup object identity/hash/version matches earlier recorded parent report",
+    "Parent receipt includes returned file reference and explicit local readback destination (not accessed here)",
+    "Private backup object identity/hash/version matches earlier recorded parent report",
+    "Parent receipt includes returned file reference and explicit local readback destination (not accessed here)",
+    "Release → original execution → independent review → Library recovery → parent report chronology consistent",
+    "Parent historical review reports required disk reserve",
+    "Earlier failed evidence retained; historical review reports no unresolved failure",
+    "Terminal open-position caveats agree with public report",
+    "Public report quoted historical receipt/counts now supported by actual received receipt bytes",
+    "Prior public12 static-review receipt preserved",
+    "Historical receipt preserves adapted/non-OOS/PIT/control limitations",
+    "Safe receipt excludes all private storage references and parent absolute paths"
+  ],
+  "created_at_utc": "2026-10-03T22:03:07.241191+00:00",
+  "limitations": [
+    "The receipts document parent-side historical review and actual private Library recovery; neither is re-described as local historical or Library execution.",
+    "The seven full historical result files and17079-byte historical reviewer script were not transferred in this small receipt packet.",
+    "This packet documents the original292-entry backup, not the later432-entry public-delivery addendum.",
+    "Root retains sole authority for research acceptance and global-count changes; existing strict0/trustedfalse/OOSfalse/PIT_UNKNOWN status remains."
+  ],
+  "local_review_scope": {
+    "actual_receipt_bytes_received": true,
+    "actual_receipts_statically_reviewed": true,
+    "global_progress_changed": false,
+    "historical_controls": 0,
+    "historical_features_computed": false,
+    "historical_result_bytes_received": false,
+    "historical_review_script_received_or_run": false,
+    "historical_strategy_runs": 0,
+    "local_Library_materialization": false,
+    "local_original_runner_replay": false,
+    "market_input_bytes_read": false,
+    "network_calls": 0,
+    "repositories_modified": false,
+    "root_research_acceptance_issued": false
+  },
+  "parent_Library_recovery_evidence": {
+    "actual_saved_bytes_readback_and_original_guarded_runner_restore": "PASS according to received exact original receipt",
+    "archive_bytes": 11924259,
+    "archive_sha256": "ce05edd19ef9426b9b09145a769cd1e4da289ee54ef3d8de25dfc9c7a787aa68",
+    "later_432_entry_addendum_covered_by_these_two_receipts": false,
+    "parent_readback_paths_not_assumed_local": true,
+    "private_storage_ids_redacted": true,
+    "scope": "Original v1 full evidence archive292 entries and separate manifest; contains execution and preparation roots.",
+    "standalone_manifest_bytes": 65375,
+    "standalone_manifest_sha256": "35690a2bff2863f2ecef1786bdf4653780c80606adc8a9228677b9c77c009e1d"
+  },
+  "parent_actual_historical_evidence": {
+    "C0_pins_verified": 132,
+    "additional_trials_from_reviews_and_recovery": 0,
+    "byte_exact_result_bytes": 4660509,
+    "byte_exact_result_files": 7,
+    "future_perturbation_checks": 5,
+    "independent_numerical_case_comparisons": 5,
+    "numeric_leaf_comparisons": 323587,
+    "original_new_controls": 1,
+    "original_strategy_configurations": 4,
+    "prefix_causality_checks": 23
+  },
+  "previous_gap_resolved": "The exact original6862-byte historical independent receipt and2705-byte Library-recovery receipt are now locally readable and hash verified. This replaces reliance on a summary of those receipts, while preserving the boundary between parent execution and this local static review.",
+  "privacy": {
+    "Library_and_download_file_ids_excluded_from_safe_receipts": true,
+    "original_JSON_private_only": true,
+    "parent_absolute_paths_excluded": true
+  },
+  "public_result_anchors": [
+    {
+      "bytes": 957642,
+      "path": "base.json",
+      "sha256": "7a64884387ec30fd7fc8dea29f182c915b53fbe81f94fb0484be12f4f16d8e29"
+    },
+    {
+      "bytes": 846812,
+      "path": "buyhold-base.json",
+      "sha256": "89e855de624d8ee634b7b6863639e54603a95ca78cad52f3bc354be025ecb570"
+    },
+    {
+      "bytes": 936342,
+      "path": "delay2.json",
+      "sha256": "21d823ed34379c0cfc6c24401b0337e1f3fe043f22d6feba255295042bdb64b7"
+    },
+    {
+      "bytes": 957063,
+      "path": "fee0.json",
+      "sha256": "488a5b0a25211f539ef8e3144321866e16271daf0618d9f8a4e0ee69c98fb476"
+    },
+    {
+      "bytes": 957662,
+      "path": "fee20.json",
+      "sha256": "5bcb5c701849eddb066d5f3788f3c23c93366226f686dcca0860073fc95a09d4"
+    },
+    {
+      "bytes": 831,
+      "path": "manifest.json",
+      "sha256": "da4887ee75ab33cdefeae5a330e56a0bb6da8de750df625caf8802e601848d8e"
+    },
+    {
+      "bytes": 4157,
+      "path": "summary.json",
+      "sha256": "5b564339701ffa677ec98611c3b5a8d2ebbfd5de800feb44418d34a90dcb8446"
+    }
+  ],
+  "received_packet": {
+    "CRC_all_pass": true,
+    "byte_acceptance_sha256": "2a657ed0baea9512eb40692f6c4eba20941a51c97488efdd8f78057ed43a44ff",
+    "member_count": 2,
+    "zip_bytes": 4151,
+    "zip_sha256": "26c4d36fd58ad02b236e3496533d0441382a060035e81d0e684054210183c7dd"
+  },
+  "root_release_sha256": "debb6431803fc180c5fa31e7572b4c248d37c62be01b1886c30145885efd5225",
+  "schema": "M1266-private-parent-historical-receipts-static-evidence-review/v1",
+  "status": "PASS_ORIGINAL_RECEIPT_BYTES_AND_CROSS_EVIDENCE_CONSISTENCY",
+  "transmission": "Raw forwarded chunks and explicit source-correction record retained privately; final package and both original members match independently supplied exact hashes. No guessed or repaired payload content.",
+  "verified_receipt_pins": [
+    {
+      "bytes": 6862,
+      "path": "review/historical-independent/final-review-v1.json",
+      "sha256": "616592f4697faf978bd86c89bcee11d4a843426155b410c0e55146382687c778"
+    },
+    {
+      "bytes": 2705,
+      "path": "private-backup/library-full-readback-recovery-v1.json",
+      "sha256": "d462151577009a8febd41d2a2ff36d3606b38f59d6b7e634d5afe2737f6bd738"
+    }
+  ]
+}

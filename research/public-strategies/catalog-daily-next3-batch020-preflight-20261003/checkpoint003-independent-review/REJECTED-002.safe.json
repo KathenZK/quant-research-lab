@@ -1,0 +1,22 @@
+{
+  "schema": "independent-prepublication-rejection/v1",
+  "checkpoint": 2,
+  "bytes": 44575,
+  "sha256": "078bafecdba36388067d89d1d5f0289ac3eb64d3a68ae7fcfa229c0e5399c3e3",
+  "status": "REJECTED_BEFORE_PUBLICATION_ORIGINAL_BYTES_PRESERVED",
+  "blocking_findings": [
+    {
+      "field": "contract.pre_code_independent_review",
+      "finding": "Unqualified noactualimplementationC0yet contradicts two actual exact C0 records."
+    },
+    {
+      "field": "next_batch020.historical_release",
+      "finding": "Changed bool false to a nonempty string; keep boolean false and separate text status."
+    }
+  ],
+  "clarification_requested": "next_batch017.counting_note must attribute42/171/21 to checkpoint001.",
+  "resolution": "New checkpoint003;002 original bytes unchanged and not staged.",
+  "research_runs": 0,
+  "repository_mutations": 0,
+  "network_requests": 0
+}

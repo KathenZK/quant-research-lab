@@ -1,0 +1,22 @@
+{
+  "commit": "9d2836c0385aa35353016629b66ecc2a1595ad94",
+  "status": "PRE_C0_RELEASE_TYPE_VALIDATION_GAP",
+  "observations": [
+    {
+      "case": "list40",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "case": "nonhex40",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "case": "valid_hex",
+      "outcome": "ACCEPTED"
+    }
+  ],
+  "market_files_read": 0,
+  "features": 0,
+  "history": 0,
+  "scope": "Only check_gate on clearly labelled artificial private C0 metadata; no valid release issued and no account execution"
+}

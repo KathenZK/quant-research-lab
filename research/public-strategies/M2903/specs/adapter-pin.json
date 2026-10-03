@@ -1,0 +1,20 @@
+{
+  "status": "INDEPENDENTLY_VERIFIED_REMOTE_PINNED",
+  "remote_commit": "43becf3c521eeb884dfc239883ee5cb5106d3646",
+  "original_source_commit": "ba5edc400c1881a62c7485898f69fbbeb5046c46",
+  "root": "research/_shared-kernels/catalog-daily-input-view",
+  "files": {
+    "v1/adapter.py": {
+      "bytes": 8485,
+      "sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22"
+    },
+    "v1/manifest.json": {
+      "bytes": 934,
+      "sha256": "fa2f58d33d4c11c5b0436c67623cc3ea70755b2ac795fe35dcb20f75d6150bca"
+    }
+  },
+  "independent_review": {
+    "path": "reviews/v1-independent-20261003.json",
+    "sha256": "9039c85ddbd122eadc8f931d46f9f812ec621fce621367612928e5119a91ce0d"
+  }
+}

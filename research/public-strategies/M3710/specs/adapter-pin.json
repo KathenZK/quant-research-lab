@@ -1,0 +1,29 @@
+{
+  "root": "research/_shared-kernels/catalog-daily-input-view",
+  "version": "v1",
+  "source_commit": "ba5edc400c1881a62c7485898f69fbbeb5046c46",
+  "remote_commit": "43becf3c521eeb884dfc239883ee5cb5106d3646",
+  "status": "INDEPENDENT_QA_PASS_REMOTE_OBJECTS_FETCHED_EXACT",
+  "files": {
+    "README.md": {
+      "bytes": 611,
+      "sha256": "f0b56649796aede7f14b85c81f2b7fc33a5305521adbca4eb26b4a7d3ceb5e04"
+    },
+    "v1/README.md": {
+      "bytes": 5799,
+      "sha256": "acf7c4f8795c94329258c27e61e7346171e212b1d74921e65026bdf0ff287e04"
+    },
+    "v1/adapter.py": {
+      "bytes": 8485,
+      "sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22"
+    },
+    "v1/manifest.json": {
+      "bytes": 934,
+      "sha256": "fa2f58d33d4c11c5b0436c67623cc3ea70755b2ac795fe35dcb20f75d6150bca"
+    },
+    "v1/tests/test_adapter.py": {
+      "bytes": 8492,
+      "sha256": "1300a5bb130f9f532f24caba29f801fbcdda8cc8c9a2c0379249aa2cd8f2db40"
+    }
+  }
+}

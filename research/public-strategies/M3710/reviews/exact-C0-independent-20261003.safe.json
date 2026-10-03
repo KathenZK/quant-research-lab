@@ -1,0 +1,121 @@
+{
+  "schema": "independent-prehistory-code-review/v1",
+  "id": "M3710",
+  "status": "PASS",
+  "scope": "Exact C0 code and synthetic-only independent review; not root history authorization",
+  "source_commit": "88f5c31b66592e8917d14f5afe140e20c137bc11",
+  "pre_C0_source_commit": "3615f1b97cdfedcfb3cbf7ba2946ea1deb8a6de3",
+  "C0": {
+    "path": "specs/C0-v1.json",
+    "bytes": 6255,
+    "sha256": "1d30c90f0d1ba1b18b1800d3c100bdb9fbafcbc568f0d14a02961be75f0e3da9",
+    "payload_count": 33,
+    "all_payloads_exact": true,
+    "only_C0_added_after_pre_C0": true
+  },
+  "rules_sha256": "e5200ca8aa62f787e32101702e2d638c0d37959b5ff6ff5f713058544156eb6d",
+  "strategy_configurations": 4,
+  "new_controls": 0,
+  "checks": {
+    "independent_indicator_states": 9141,
+    "independent_sequences": 11,
+    "independent_prefix_future_comparisons": 198,
+    "author_indicator_checks_replayed": 32,
+    "independent_account_component_states": 8772,
+    "independent_account_component_fills": 2349,
+    "independent_account_component_synthetic_cases": 12,
+    "component_case_disclosure": "Three fabricated sequences times four fixed configurations; validation fixtures, not additional research trials",
+    "consumer_synthetic_checks": 62,
+    "consumer_serialized_nav_rows": 2924,
+    "consumer_serialized_months": 96,
+    "author_gate_checks_replayed": 29,
+    "author_gate_price_read_attempts": 0,
+    "author_gate_engine_import_attempts": 0,
+    "additional_independent_boundaries": 13,
+    "fresh_process_byteexact_files": 38
+  },
+  "findings": [],
+  "semantics": [
+    "SMA20 includes current close; left-to-right Decimal50 ROUND_HALF_EVEN summation, no rolling-sum substitution",
+    "Ready index19, state close>SMA entry and close<=SMA exit, first eval requires no prior cross",
+    "Full831 feature trace before offset69 projection; all input/view/eval mappings retained",
+    "Four frozen cases use unchanged dailycashv1, no new controls or M1266 fixedqty lifecycle",
+    "Exact33 C0 paths, strict byte/int/hash and path normalization, early -O/-OO rejection",
+    "Runtime mismatch rejects before input; invalid input identity rejects before features; changed cached dependency bytes reject",
+    "Disk check retains5GiB plus256MiB estimated output allowance",
+    "Fresh process comparison uses generated synthetic inputs, not Library restoration or actual market replay"
+  ],
+  "adapter_review": {
+    "reviewer": "root/m1266_packet",
+    "status": "PASS_CODE_AND_SYNTHETIC_ONLY_NOT_HISTORY_GATE",
+    "sha256": "9039c85ddbd122eadc8f931d46f9f812ec621fce621367612928e5119a91ce0d",
+    "not_self_certification": true
+  },
+  "historical_runs": 0,
+  "real_input_reads": 0,
+  "historical_features": 0,
+  "history_authorized": false,
+  "limitations": [
+    "Source rule remains catalog hypothesis, strict reproduction0",
+    "No real input, historical features or strategy returns were computed",
+    "Adapter author reviewed consumer integration; adapter implementation acceptance is separately bound to another reviewer",
+    "Frozen numpy sample-standard-deviation warnings occur for one-bar artificial prefixes only; no production kernel changes"
+  ],
+  "evidence": [
+    {
+      "path": "check_math.py",
+      "bytes": 1855,
+      "sha256": "ad7970bfb89fcd1fcf2edd12a912beee1a2d900433665d1f17feba23ef4c0f70"
+    },
+    {
+      "path": "independent_oracle.py",
+      "bytes": 1573,
+      "sha256": "40b377600f30dae9f11ff8123fce9135ff9e6be19031ee56978689ac5c32297d"
+    },
+    {
+      "path": "check_account.py",
+      "bytes": 2894,
+      "sha256": "6905055c0d60014551247688532f0ea31c2ef3421eb6bb6ae4362b8bfcecc79e"
+    },
+    {
+      "path": "check_boundaries.py",
+      "bytes": 2642,
+      "sha256": "73ec363555a4cc39cea048cd544ec5db2f69d2ef9464a1caad295e4f7baf2fd9"
+    },
+    {
+      "path": "math-review.safe.json",
+      "bytes": 527,
+      "sha256": "94311c68f5df6dde5f3e861aaec2b361c579e02e6c7164e712ce290cfdad098f"
+    },
+    {
+      "path": "account-component.safe.json",
+      "bytes": 353,
+      "sha256": "9314571f187dd7d20ce62c1551118ead0e61c268b6e8cb78f4462e4e4485f7ac"
+    },
+    {
+      "path": "consumer-replay.safe.json",
+      "bytes": 4343,
+      "sha256": "6584d5737f67c0e14cedbd76de2be03a1cf3ff5e23b8819dd3e99f8ddf3049ea"
+    },
+    {
+      "path": "consumer-fresh-process.safe.json",
+      "bytes": 4343,
+      "sha256": "6584d5737f67c0e14cedbd76de2be03a1cf3ff5e23b8819dd3e99f8ddf3049ea"
+    },
+    {
+      "path": "gate-replay.safe.json",
+      "bytes": 1307,
+      "sha256": "19b51dc6df140f4ede532024b3672b1363d61e24de324ac32adc7d2a16227e0a"
+    },
+    {
+      "path": "independent-gates.safe.json",
+      "bytes": 543,
+      "sha256": "8f3d7fc72f6536afcd2b2144cd3a3d46e8f3116470820a6ae349f9b1641b0a9d"
+    },
+    {
+      "path": "isolated-source-manifest.json",
+      "bytes": 8275,
+      "sha256": "5c5e7f140648a930fafc7025316f9f543d652ea0c4d70fe4a65440a8853fa103"
+    }
+  ]
+}

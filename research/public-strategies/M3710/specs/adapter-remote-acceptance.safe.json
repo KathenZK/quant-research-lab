@@ -1,0 +1,40 @@
+{
+  "id": "M3710",
+  "status": "PASS_EXACT_REMOTE_ADAPTER_OBJECTS",
+  "checked_utc": "2026-10-03T21:47:24.440825+00:00",
+  "remote": "Lab origin",
+  "branch": "codex/catalog-daily-input-view-integration-20261003",
+  "requested_commit": "43becf3c521eeb884dfc239883ee5cb5106d3646",
+  "actual_fetch_head": "5a83c71664812b52a6493519cf9b6a0d988e16f3",
+  "requested_commit_is_ancestor_of_actual_fetch_head": true,
+  "consumed_commit": "43becf3c521eeb884dfc239883ee5cb5106d3646",
+  "source_commit": "ba5edc400c1881a62c7485898f69fbbeb5046c46",
+  "files": {
+    "README.md": {
+      "bytes": 611,
+      "sha256": "f0b56649796aede7f14b85c81f2b7fc33a5305521adbca4eb26b4a7d3ceb5e04"
+    },
+    "v1/README.md": {
+      "bytes": 5799,
+      "sha256": "acf7c4f8795c94329258c27e61e7346171e212b1d74921e65026bdf0ff287e04"
+    },
+    "v1/adapter.py": {
+      "bytes": 8485,
+      "sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22"
+    },
+    "v1/manifest.json": {
+      "bytes": 934,
+      "sha256": "fa2f58d33d4c11c5b0436c67623cc3ea70755b2ac795fe35dcb20f75d6150bca"
+    },
+    "v1/tests/test_adapter.py": {
+      "bytes": 8492,
+      "sha256": "1300a5bb130f9f532f24caba29f801fbcdda8cc8c9a2c0379249aa2cd8f2db40"
+    }
+  },
+  "all_git_blob_and_worktree_bytes_equal": true,
+  "independent_review_sha256": "9039c85ddbd122eadc8f931d46f9f812ec621fce621367612928e5119a91ce0d",
+  "ci_status": "Not independently queried by this consumer; this verifies pinned Git bytes only.",
+  "historical_runs": 0,
+  "controls": 0,
+  "strategy_features_read": false
+}
