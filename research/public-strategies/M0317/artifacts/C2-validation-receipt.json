@@ -1,0 +1,14 @@
+{
+  "id": "M0317",
+  "checkpoint": "C2",
+  "status": "PASS_DECLARED_HYPOTHESIS_ONLY",
+  "completed_at_utc": "2026-10-03T11:06:42.264970+00:00",
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "summary_sha256": "e02dcdc574f32f68179a7f2bd17df1a7a2befdcb995faa69498fbe5e9231b373",
+  "independent_decision_oracle": "artifacts/independent-real-result-audit.json",
+  "execution_prefixes": "55 exact case-prefix comparisons",
+  "local_recovery": "22 output files; only peak RSS permitted to differ",
+  "strict_reproductions": 0,
+  "C3": "PENDING_PARENT_REMOTE_SAVE_AND_READBACK",
+  "global_counts_or_indexes_modified": false
+}

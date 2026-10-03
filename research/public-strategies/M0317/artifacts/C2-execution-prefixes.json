@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "cuts": [
+    300,
+    500,
+    680,
+    682,
+    683,
+    684,
+    1000,
+    2000,
+    3000,
+    4000,
+    4572
+  ],
+  "cases": {
+    "base": {
+      "prefixes": 11,
+      "nav_and_fills_exact": true
+    },
+    "fee0": {
+      "prefixes": 11,
+      "nav_and_fills_exact": true
+    },
+    "fee20": {
+      "prefixes": 11,
+      "nav_and_fills_exact": true
+    },
+    "delay2": {
+      "prefixes": 11,
+      "nav_and_fills_exact": true
+    },
+    "buyhold": {
+      "prefixes": 11,
+      "nav_and_fills_exact": true
+    }
+  },
+  "full_results_used_as_reference": true,
+  "no_refitting_or_parameter_changes": true
+}

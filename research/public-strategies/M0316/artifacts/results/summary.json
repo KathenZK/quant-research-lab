@@ -1,0 +1,162 @@
+{
+  "id": "M0316",
+  "origin_run_id": "M0316-20261003-first-replay",
+  "variant_id": "M0316-BTCUSDT-4H-HLHB-LIMIT-20261003",
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0,
+  "trusted": false,
+  "oos_claim": false,
+  "promotion": false,
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "engine_sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d",
+  "actual_strategy_ids": 1,
+  "strategy_configurations": 4,
+  "controls": 1,
+  "parameter_searches": 0,
+  "peak_rss_kib": 85652,
+  "results": {
+    "base": {
+      "case": {
+        "name": "base",
+        "fee_bps": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.10611717655261022,
+        "annualized_return": -0.05447368579782974,
+        "max_drawdown": 0.36732732899795395,
+        "sharpe_daily": -0.14528039054835987,
+        "sharpe_4h": -0.14882005759494701,
+        "final_equity": 89388.28234473898,
+        "final_cash": 89388.28234473898,
+        "final_quantity": 0.0,
+        "fill_events": 46,
+        "completed_roundtrips": 23,
+        "winning_roundtrip_fraction": 0.4782608695652174,
+        "fees_paid": 3230.3571796279793,
+        "position_bar_fraction": 0.2389420884632923,
+        "orders": 30,
+        "timeout_orders": 0,
+        "trailing_activations": 11,
+        "roi_suppressed_position_bars": 29,
+        "observations": 4386,
+        "daily_observations": 731
+      }
+    },
+    "fee0": {
+      "case": {
+        "name": "fee0",
+        "fee_bps": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.13323671999700204,
+        "annualized_return": -0.0689077154605019,
+        "max_drawdown": 0.3590006209932888,
+        "sharpe_daily": -0.22004311426001033,
+        "sharpe_4h": -0.22261721502606652,
+        "final_equity": 86676.32800029979,
+        "final_cash": 86676.32800029979,
+        "final_quantity": 0.0,
+        "fill_events": 46,
+        "completed_roundtrips": 23,
+        "winning_roundtrip_fraction": 0.4782608695652174,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.23233014135886912,
+        "orders": 30,
+        "timeout_orders": 0,
+        "trailing_activations": 11,
+        "roi_suppressed_position_bars": 29,
+        "observations": 4386,
+        "daily_observations": 731
+      }
+    },
+    "fee20": {
+      "case": {
+        "name": "fee20",
+        "fee_bps": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.12214667831567716,
+        "annualized_return": -0.06297823772936484,
+        "max_drawdown": 0.36817698711318614,
+        "sharpe_daily": -0.18581098051738978,
+        "sharpe_4h": -0.1881474244206016,
+        "final_equity": 87785.33216843229,
+        "final_cash": 87785.33216843229,
+        "final_quantity": 0.0,
+        "fill_events": 46,
+        "completed_roundtrips": 23,
+        "winning_roundtrip_fraction": 0.4782608695652174,
+        "fees_paid": 8017.277205076903,
+        "position_bar_fraction": 0.24783401732786137,
+        "orders": 30,
+        "timeout_orders": 0,
+        "trailing_activations": 9,
+        "roi_suppressed_position_bars": 29,
+        "observations": 4386,
+        "daily_observations": 731
+      }
+    },
+    "delay2": {
+      "case": {
+        "name": "delay2",
+        "fee_bps": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "total_return": -0.0692255721328412,
+        "annualized_return": -0.035186144387806984,
+        "max_drawdown": 0.30108941960979585,
+        "sharpe_daily": -0.06059824698661946,
+        "sharpe_4h": -0.0632344520910439,
+        "final_equity": 93077.44278671588,
+        "final_cash": 93077.44278671588,
+        "final_quantity": 0.0,
+        "fill_events": 36,
+        "completed_roundtrips": 18,
+        "winning_roundtrip_fraction": 0.4444444444444444,
+        "fees_paid": 2659.51139022183,
+        "position_bar_fraction": 0.2165982672138623,
+        "orders": 29,
+        "timeout_orders": 6,
+        "trailing_activations": 8,
+        "roi_suppressed_position_bars": 20,
+        "observations": 4386,
+        "daily_observations": 731
+      }
+    },
+    "buyhold": {
+      "case": {
+        "name": "buyhold",
+        "fee_bps": 8,
+        "delay_bars": 1,
+        "buy_hold": true
+      },
+      "metrics": {
+        "total_return": 4.418734870164824,
+        "annualized_return": 1.3251285506066521,
+        "max_drawdown": 0.29653763754503293,
+        "sharpe_daily": 2.005619423482871,
+        "sharpe_4h": 2.056546179595957,
+        "final_equity": 541873.4870164824,
+        "final_cash": 4999.999999999985,
+        "final_quantity": 5.737298955036359,
+        "fill_events": 1,
+        "completed_roundtrips": 0,
+        "winning_roundtrip_fraction": null,
+        "fees_paid": 75.93924860111912,
+        "position_bar_fraction": 1.0,
+        "orders": 1,
+        "timeout_orders": 0,
+        "trailing_activations": 0,
+        "roi_suppressed_position_bars": 0,
+        "observations": 4386,
+        "daily_observations": 731
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "M0316",
+  "checkpoint": "C1",
+  "status": "FROZEN_BEFORE_FIRST_RETURNS",
+  "frozen_at_utc": "2026-10-03T11:05:41.397150+00:00",
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "engine_sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d",
+  "source_qa": "PASS",
+  "independent_static_review": "PASS_C1_DRAFT_EXECUTION_STATIC_REVIEW_NOT_FINAL_FREEZE",
+  "returns_seen_before_freeze": false,
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    },
+    {
+      "name": "buyhold",
+      "fee_bps": 8,
+      "delay_bars": 1,
+      "buy_hold": true
+    }
+  ],
+  "strict_reproductions": 0
+}

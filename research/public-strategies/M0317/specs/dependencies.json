@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA-Lib": "0.6.8"
+  },
+  "talib_c_version": "b'0.6.4 (Oct 20 2025 20:23:51)'",
+  "talib_file_hashes": {
+    "_ta_lib.cpython-312-x86_64-linux-gnu.so": "ee9ae58a5d61f670ff4319b62550ff9808c17418b5e570364b0c7341b268fed5",
+    "abstract.py": "b468b649c6d19551ee0b3ef04755f50e0a8a87aff1b3180b337ee2afc0fbb89b",
+    "__init__.py": "6583ddf64cb66c0e19e63bcb703637f874f7e34272b4cd800e1df284ac7097ee"
+  },
+  "original_author_runtime": "unknown; no full Freqtrade install or execution parity claimed"
+}

@@ -1,0 +1,828 @@
+{
+  "id": "M0316",
+  "status": "PASS_REVIEWER_SYNTHETICS_FULL_PREFIXES_AND_RECOVERY",
+  "at_utc": "2026-10-03T11:10:10.903891+00:00",
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "engine_sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d",
+  "auditor_sha256": "597c4233a3241424adb599aa3461c170fd06ec2acfead89dbafc7048c803a496",
+  "worker_synthetics_independently_rerun": [
+    "unmarketable_limit_unfilled_terminal",
+    "favorable_buy_gap_slip_capped",
+    "buy_slip_not_above_limit",
+    "intrabar_limit_exact_bounded_time",
+    "same_entry_bar_limit_then_market_stop",
+    "low_before_high_path_is_explicit",
+    "fee_aware_trailing_same_entry_bar",
+    "exact_offset_no_positive_trailing",
+    "strict_greater_offset_positive",
+    "fees_delay_trailing_activation",
+    "entry_signal_suppresses_roi",
+    "roi_unsuppressed_opens_at_fee_aware_target",
+    "signal_limit_sell_cannot_cross_below_limit",
+    "unfilled_exit_competes_with_market_stop",
+    "timeout_does_not_auto_rehang",
+    "halt_open_resume14_not12",
+    "prehalt_intrabar_bound"
+  ],
+  "reviewer_added_cases": [
+    "exact offset raises original-ratio stop, without positive activation",
+    "entry/exit conflict blocks opening",
+    "favorable signal exit raw-open slip respects lower sell limit",
+    "signal conflict never disables protective stop",
+    "intrabar halt entry bounded14..16 and ROI origin16"
+  ],
+  "prefix_checks": [
+    {
+      "case": "base",
+      "cut": 187,
+      "fills": 0,
+      "nav_rows": 1
+    },
+    {
+      "case": "base",
+      "cut": 188,
+      "fills": 0,
+      "nav_rows": 2
+    },
+    {
+      "case": "base",
+      "cut": 189,
+      "fills": 0,
+      "nav_rows": 3
+    },
+    {
+      "case": "base",
+      "cut": 190,
+      "fills": 0,
+      "nav_rows": 4
+    },
+    {
+      "case": "base",
+      "cut": 676,
+      "fills": 4,
+      "nav_rows": 490
+    },
+    {
+      "case": "base",
+      "cut": 677,
+      "fills": 5,
+      "nav_rows": 491
+    },
+    {
+      "case": "base",
+      "cut": 678,
+      "fills": 5,
+      "nav_rows": 492
+    },
+    {
+      "case": "base",
+      "cut": 679,
+      "fills": 5,
+      "nav_rows": 493
+    },
+    {
+      "case": "base",
+      "cut": 680,
+      "fills": 5,
+      "nav_rows": 494
+    },
+    {
+      "case": "base",
+      "cut": 681,
+      "fills": 5,
+      "nav_rows": 495
+    },
+    {
+      "case": "base",
+      "cut": 682,
+      "fills": 5,
+      "nav_rows": 496
+    },
+    {
+      "case": "base",
+      "cut": 683,
+      "fills": 5,
+      "nav_rows": 497
+    },
+    {
+      "case": "base",
+      "cut": 684,
+      "fills": 5,
+      "nav_rows": 498
+    },
+    {
+      "case": "base",
+      "cut": 685,
+      "fills": 5,
+      "nav_rows": 499
+    },
+    {
+      "case": "base",
+      "cut": 731,
+      "fills": 6,
+      "nav_rows": 545
+    },
+    {
+      "case": "base",
+      "cut": 1462,
+      "fills": 12,
+      "nav_rows": 1276
+    },
+    {
+      "case": "base",
+      "cut": 2193,
+      "fills": 20,
+      "nav_rows": 2007
+    },
+    {
+      "case": "base",
+      "cut": 3001,
+      "fills": 29,
+      "nav_rows": 2815
+    },
+    {
+      "case": "base",
+      "cut": 4386,
+      "fills": 44,
+      "nav_rows": 4200
+    },
+    {
+      "case": "base",
+      "cut": 4571,
+      "fills": 46,
+      "nav_rows": 4385
+    },
+    {
+      "case": "base",
+      "cut": 4572,
+      "fills": 46,
+      "nav_rows": 4386
+    },
+    {
+      "case": "fee0",
+      "cut": 187,
+      "fills": 0,
+      "nav_rows": 1
+    },
+    {
+      "case": "fee0",
+      "cut": 188,
+      "fills": 0,
+      "nav_rows": 2
+    },
+    {
+      "case": "fee0",
+      "cut": 189,
+      "fills": 0,
+      "nav_rows": 3
+    },
+    {
+      "case": "fee0",
+      "cut": 190,
+      "fills": 0,
+      "nav_rows": 4
+    },
+    {
+      "case": "fee0",
+      "cut": 676,
+      "fills": 4,
+      "nav_rows": 490
+    },
+    {
+      "case": "fee0",
+      "cut": 677,
+      "fills": 5,
+      "nav_rows": 491
+    },
+    {
+      "case": "fee0",
+      "cut": 678,
+      "fills": 5,
+      "nav_rows": 492
+    },
+    {
+      "case": "fee0",
+      "cut": 679,
+      "fills": 5,
+      "nav_rows": 493
+    },
+    {
+      "case": "fee0",
+      "cut": 680,
+      "fills": 5,
+      "nav_rows": 494
+    },
+    {
+      "case": "fee0",
+      "cut": 681,
+      "fills": 5,
+      "nav_rows": 495
+    },
+    {
+      "case": "fee0",
+      "cut": 682,
+      "fills": 5,
+      "nav_rows": 496
+    },
+    {
+      "case": "fee0",
+      "cut": 683,
+      "fills": 5,
+      "nav_rows": 497
+    },
+    {
+      "case": "fee0",
+      "cut": 684,
+      "fills": 5,
+      "nav_rows": 498
+    },
+    {
+      "case": "fee0",
+      "cut": 685,
+      "fills": 5,
+      "nav_rows": 499
+    },
+    {
+      "case": "fee0",
+      "cut": 731,
+      "fills": 6,
+      "nav_rows": 545
+    },
+    {
+      "case": "fee0",
+      "cut": 1462,
+      "fills": 12,
+      "nav_rows": 1276
+    },
+    {
+      "case": "fee0",
+      "cut": 2193,
+      "fills": 20,
+      "nav_rows": 2007
+    },
+    {
+      "case": "fee0",
+      "cut": 3001,
+      "fills": 29,
+      "nav_rows": 2815
+    },
+    {
+      "case": "fee0",
+      "cut": 4386,
+      "fills": 44,
+      "nav_rows": 4200
+    },
+    {
+      "case": "fee0",
+      "cut": 4571,
+      "fills": 46,
+      "nav_rows": 4385
+    },
+    {
+      "case": "fee0",
+      "cut": 4572,
+      "fills": 46,
+      "nav_rows": 4386
+    },
+    {
+      "case": "fee20",
+      "cut": 187,
+      "fills": 0,
+      "nav_rows": 1
+    },
+    {
+      "case": "fee20",
+      "cut": 188,
+      "fills": 0,
+      "nav_rows": 2
+    },
+    {
+      "case": "fee20",
+      "cut": 189,
+      "fills": 0,
+      "nav_rows": 3
+    },
+    {
+      "case": "fee20",
+      "cut": 190,
+      "fills": 0,
+      "nav_rows": 4
+    },
+    {
+      "case": "fee20",
+      "cut": 676,
+      "fills": 4,
+      "nav_rows": 490
+    },
+    {
+      "case": "fee20",
+      "cut": 677,
+      "fills": 5,
+      "nav_rows": 491
+    },
+    {
+      "case": "fee20",
+      "cut": 678,
+      "fills": 5,
+      "nav_rows": 492
+    },
+    {
+      "case": "fee20",
+      "cut": 679,
+      "fills": 5,
+      "nav_rows": 493
+    },
+    {
+      "case": "fee20",
+      "cut": 680,
+      "fills": 5,
+      "nav_rows": 494
+    },
+    {
+      "case": "fee20",
+      "cut": 681,
+      "fills": 5,
+      "nav_rows": 495
+    },
+    {
+      "case": "fee20",
+      "cut": 682,
+      "fills": 5,
+      "nav_rows": 496
+    },
+    {
+      "case": "fee20",
+      "cut": 683,
+      "fills": 5,
+      "nav_rows": 497
+    },
+    {
+      "case": "fee20",
+      "cut": 684,
+      "fills": 5,
+      "nav_rows": 498
+    },
+    {
+      "case": "fee20",
+      "cut": 685,
+      "fills": 5,
+      "nav_rows": 499
+    },
+    {
+      "case": "fee20",
+      "cut": 731,
+      "fills": 6,
+      "nav_rows": 545
+    },
+    {
+      "case": "fee20",
+      "cut": 1462,
+      "fills": 12,
+      "nav_rows": 1276
+    },
+    {
+      "case": "fee20",
+      "cut": 2193,
+      "fills": 20,
+      "nav_rows": 2007
+    },
+    {
+      "case": "fee20",
+      "cut": 3001,
+      "fills": 29,
+      "nav_rows": 2815
+    },
+    {
+      "case": "fee20",
+      "cut": 4386,
+      "fills": 44,
+      "nav_rows": 4200
+    },
+    {
+      "case": "fee20",
+      "cut": 4571,
+      "fills": 46,
+      "nav_rows": 4385
+    },
+    {
+      "case": "fee20",
+      "cut": 4572,
+      "fills": 46,
+      "nav_rows": 4386
+    },
+    {
+      "case": "delay2",
+      "cut": 187,
+      "fills": 0,
+      "nav_rows": 1
+    },
+    {
+      "case": "delay2",
+      "cut": 188,
+      "fills": 0,
+      "nav_rows": 2
+    },
+    {
+      "case": "delay2",
+      "cut": 189,
+      "fills": 0,
+      "nav_rows": 3
+    },
+    {
+      "case": "delay2",
+      "cut": 190,
+      "fills": 0,
+      "nav_rows": 4
+    },
+    {
+      "case": "delay2",
+      "cut": 676,
+      "fills": 4,
+      "nav_rows": 490
+    },
+    {
+      "case": "delay2",
+      "cut": 677,
+      "fills": 4,
+      "nav_rows": 491
+    },
+    {
+      "case": "delay2",
+      "cut": 678,
+      "fills": 5,
+      "nav_rows": 492
+    },
+    {
+      "case": "delay2",
+      "cut": 679,
+      "fills": 5,
+      "nav_rows": 493
+    },
+    {
+      "case": "delay2",
+      "cut": 680,
+      "fills": 5,
+      "nav_rows": 494
+    },
+    {
+      "case": "delay2",
+      "cut": 681,
+      "fills": 5,
+      "nav_rows": 495
+    },
+    {
+      "case": "delay2",
+      "cut": 682,
+      "fills": 5,
+      "nav_rows": 496
+    },
+    {
+      "case": "delay2",
+      "cut": 683,
+      "fills": 5,
+      "nav_rows": 497
+    },
+    {
+      "case": "delay2",
+      "cut": 684,
+      "fills": 5,
+      "nav_rows": 498
+    },
+    {
+      "case": "delay2",
+      "cut": 685,
+      "fills": 5,
+      "nav_rows": 499
+    },
+    {
+      "case": "delay2",
+      "cut": 731,
+      "fills": 6,
+      "nav_rows": 545
+    },
+    {
+      "case": "delay2",
+      "cut": 1462,
+      "fills": 12,
+      "nav_rows": 1276
+    },
+    {
+      "case": "delay2",
+      "cut": 2193,
+      "fills": 18,
+      "nav_rows": 2007
+    },
+    {
+      "case": "delay2",
+      "cut": 3001,
+      "fills": 27,
+      "nav_rows": 2815
+    },
+    {
+      "case": "delay2",
+      "cut": 4386,
+      "fills": 34,
+      "nav_rows": 4200
+    },
+    {
+      "case": "delay2",
+      "cut": 4571,
+      "fills": 36,
+      "nav_rows": 4385
+    },
+    {
+      "case": "delay2",
+      "cut": 4572,
+      "fills": 36,
+      "nav_rows": 4386
+    },
+    {
+      "case": "buyhold",
+      "cut": 187,
+      "fills": 1,
+      "nav_rows": 1
+    },
+    {
+      "case": "buyhold",
+      "cut": 188,
+      "fills": 1,
+      "nav_rows": 2
+    },
+    {
+      "case": "buyhold",
+      "cut": 189,
+      "fills": 1,
+      "nav_rows": 3
+    },
+    {
+      "case": "buyhold",
+      "cut": 190,
+      "fills": 1,
+      "nav_rows": 4
+    },
+    {
+      "case": "buyhold",
+      "cut": 676,
+      "fills": 1,
+      "nav_rows": 490
+    },
+    {
+      "case": "buyhold",
+      "cut": 677,
+      "fills": 1,
+      "nav_rows": 491
+    },
+    {
+      "case": "buyhold",
+      "cut": 678,
+      "fills": 1,
+      "nav_rows": 492
+    },
+    {
+      "case": "buyhold",
+      "cut": 679,
+      "fills": 1,
+      "nav_rows": 493
+    },
+    {
+      "case": "buyhold",
+      "cut": 680,
+      "fills": 1,
+      "nav_rows": 494
+    },
+    {
+      "case": "buyhold",
+      "cut": 681,
+      "fills": 1,
+      "nav_rows": 495
+    },
+    {
+      "case": "buyhold",
+      "cut": 682,
+      "fills": 1,
+      "nav_rows": 496
+    },
+    {
+      "case": "buyhold",
+      "cut": 683,
+      "fills": 1,
+      "nav_rows": 497
+    },
+    {
+      "case": "buyhold",
+      "cut": 684,
+      "fills": 1,
+      "nav_rows": 498
+    },
+    {
+      "case": "buyhold",
+      "cut": 685,
+      "fills": 1,
+      "nav_rows": 499
+    },
+    {
+      "case": "buyhold",
+      "cut": 731,
+      "fills": 1,
+      "nav_rows": 545
+    },
+    {
+      "case": "buyhold",
+      "cut": 1462,
+      "fills": 1,
+      "nav_rows": 1276
+    },
+    {
+      "case": "buyhold",
+      "cut": 2193,
+      "fills": 1,
+      "nav_rows": 2007
+    },
+    {
+      "case": "buyhold",
+      "cut": 3001,
+      "fills": 1,
+      "nav_rows": 2815
+    },
+    {
+      "case": "buyhold",
+      "cut": 4386,
+      "fills": 1,
+      "nav_rows": 4200
+    },
+    {
+      "case": "buyhold",
+      "cut": 4571,
+      "fills": 1,
+      "nav_rows": 4385
+    },
+    {
+      "case": "buyhold",
+      "cut": 4572,
+      "fills": 1,
+      "nav_rows": 4386
+    }
+  ],
+  "prefix_risk_and_order_history_checked": true,
+  "recovery_source": "separate raw rebuild snapshot, same canonical SHA; no network",
+  "recovery_files": [
+    {
+      "name": "base-daily-nav.csv",
+      "primary_sha256": "adc9eadd824644831781018991d38727888460eb4ffd279677bcc37133f84a1b",
+      "recovered_sha256": "adc9eadd824644831781018991d38727888460eb4ffd279677bcc37133f84a1b",
+      "bytes": 100708,
+      "financial_content_equal": true
+    },
+    {
+      "name": "base-events.json",
+      "primary_sha256": "937407a9e79a67153da2d5e0c0bbd193d8674a95563f0ae72e6cd94e5bc7e3ee",
+      "recovered_sha256": "937407a9e79a67153da2d5e0c0bbd193d8674a95563f0ae72e6cd94e5bc7e3ee",
+      "bytes": 386509,
+      "financial_content_equal": true
+    },
+    {
+      "name": "base-nav.csv",
+      "primary_sha256": "84f4f81b2f2c22c71ed21daea0d4797f248a5e6eeb45cc177224f634b7e73117",
+      "recovered_sha256": "84f4f81b2f2c22c71ed21daea0d4797f248a5e6eeb45cc177224f634b7e73117",
+      "bytes": 554283,
+      "financial_content_equal": true
+    },
+    {
+      "name": "base-trades.csv",
+      "primary_sha256": "38207d6be90c8a2a3ec92dd2281487bbf15e1e42bf3fbfcdc4fa8575b121c230",
+      "recovered_sha256": "38207d6be90c8a2a3ec92dd2281487bbf15e1e42bf3fbfcdc4fa8575b121c230",
+      "bytes": 15213,
+      "financial_content_equal": true
+    },
+    {
+      "name": "buyhold-daily-nav.csv",
+      "primary_sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "recovered_sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "bytes": 109748,
+      "financial_content_equal": true
+    },
+    {
+      "name": "buyhold-events.json",
+      "primary_sha256": "de0c66bbd231f0c7e4a463067ac5ea495a89d67f38f1f618ef4a6084b2c2aee5",
+      "recovered_sha256": "de0c66bbd231f0c7e4a463067ac5ea495a89d67f38f1f618ef4a6084b2c2aee5",
+      "bytes": 351,
+      "financial_content_equal": true
+    },
+    {
+      "name": "buyhold-nav.csv",
+      "primary_sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "recovered_sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "bytes": 608938,
+      "financial_content_equal": true
+    },
+    {
+      "name": "buyhold-trades.csv",
+      "primary_sha256": "9700b841edb469b82e80aefa55cade495c5a37fb58d7037d17138eedde5da0a2",
+      "recovered_sha256": "9700b841edb469b82e80aefa55cade495c5a37fb58d7037d17138eedde5da0a2",
+      "bytes": 590,
+      "financial_content_equal": true
+    },
+    {
+      "name": "delay2-daily-nav.csv",
+      "primary_sha256": "740eacc06b52ec15f1ac1331c2aef8640eb3162f0a5a78bfce03637ec9480b8c",
+      "recovered_sha256": "740eacc06b52ec15f1ac1331c2aef8640eb3162f0a5a78bfce03637ec9480b8c",
+      "bytes": 100197,
+      "financial_content_equal": true
+    },
+    {
+      "name": "delay2-events.json",
+      "primary_sha256": "96f83e94c1c80436e9acbe73fffb2a145521dca72f49c773a87cafea56827938",
+      "recovered_sha256": "96f83e94c1c80436e9acbe73fffb2a145521dca72f49c773a87cafea56827938",
+      "bytes": 351405,
+      "financial_content_equal": true
+    },
+    {
+      "name": "delay2-nav.csv",
+      "primary_sha256": "518a89b4d6f02d25afafe6bbec5d4b32e05c2d73e11a01e21325abf58d2e6179",
+      "recovered_sha256": "518a89b4d6f02d25afafe6bbec5d4b32e05c2d73e11a01e21325abf58d2e6179",
+      "bytes": 551750,
+      "financial_content_equal": true
+    },
+    {
+      "name": "delay2-trades.csv",
+      "primary_sha256": "b4d56c197b7ed8820bf29896d5f211a554b3718b25e3e57708fa1443744dfdbd",
+      "recovered_sha256": "b4d56c197b7ed8820bf29896d5f211a554b3718b25e3e57708fa1443744dfdbd",
+      "bytes": 11915,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee0-daily-nav.csv",
+      "primary_sha256": "2f02d3802ac7097473ab6833f30e6c01aaf5dfd6d098ea338874582bfe64f0db",
+      "recovered_sha256": "2f02d3802ac7097473ab6833f30e6c01aaf5dfd6d098ea338874582bfe64f0db",
+      "bytes": 100727,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee0-events.json",
+      "primary_sha256": "974027f6ff112aa92f2ff9bcdead2e71e99435a2524c9c1993d38f3707481905",
+      "recovered_sha256": "974027f6ff112aa92f2ff9bcdead2e71e99435a2524c9c1993d38f3707481905",
+      "bytes": 376102,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee0-nav.csv",
+      "primary_sha256": "61b5e4925219144baf411331e9b1adeeb570eb2d1695fed5ed4788cbd2528f4e",
+      "recovered_sha256": "61b5e4925219144baf411331e9b1adeeb570eb2d1695fed5ed4788cbd2528f4e",
+      "bytes": 554483,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee0-trades.csv",
+      "primary_sha256": "b083a8254a782c62f72073443a1ba3ee99726f523ead06ada7222c2e7c9ef9ee",
+      "recovered_sha256": "b083a8254a782c62f72073443a1ba3ee99726f523ead06ada7222c2e7c9ef9ee",
+      "bytes": 14366,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee20-daily-nav.csv",
+      "primary_sha256": "a170dd880bec0184bd873aa8a7602e9106a516d523c9d867677f894e39f674ea",
+      "recovered_sha256": "a170dd880bec0184bd873aa8a7602e9106a516d523c9d867677f894e39f674ea",
+      "bytes": 100745,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee20-events.json",
+      "primary_sha256": "edfb625eaa84739d5d207feef520859b14592002809dc954b900a297a47b1542",
+      "recovered_sha256": "edfb625eaa84739d5d207feef520859b14592002809dc954b900a297a47b1542",
+      "bytes": 399868,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee20-nav.csv",
+      "primary_sha256": "f3538e7368ec5cd097c196311c5b65bdb301daf7f61e275fa98cfd89e7f6a77a",
+      "recovered_sha256": "f3538e7368ec5cd097c196311c5b65bdb301daf7f61e275fa98cfd89e7f6a77a",
+      "bytes": 554545,
+      "financial_content_equal": true
+    },
+    {
+      "name": "fee20-trades.csv",
+      "primary_sha256": "d6dcb3269f91ec621c422726b926db5a918884b61e2890e035a0dd77d5fca1a8",
+      "recovered_sha256": "d6dcb3269f91ec621c422726b926db5a918884b61e2890e035a0dd77d5fca1a8",
+      "bytes": 15184,
+      "financial_content_equal": true
+    },
+    {
+      "name": "signals.csv",
+      "primary_sha256": "f2b1bc37d6688cfcdf8931abb09ca6355877e4f3da6d66324ae4f55dfac01ec0",
+      "recovered_sha256": "f2b1bc37d6688cfcdf8931abb09ca6355877e4f3da6d66324ae4f55dfac01ec0",
+      "bytes": 542394,
+      "financial_content_equal": true
+    },
+    {
+      "name": "summary.json",
+      "primary_sha256": "de301ecfa0aa74602fe3fb60ff8b6fc4a3c3dd710f7452e95ba45ee31b526cd9",
+      "recovered_sha256": "12785d9a36f66ee2113c46fce76284c1f2312a0f2832221f4758defa1b3dd10f",
+      "bytes": 5187,
+      "financial_content_equal": true
+    }
+  ],
+  "allowed_recovery_difference": "summary peak_rss_kib only",
+  "offsite_backup": false,
+  "strict_reproductions": 0,
+  "new_market_requests": 0
+}

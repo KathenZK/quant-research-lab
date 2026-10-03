@@ -1,0 +1,74 @@
+{
+  "id": "M0317",
+  "revision": "recovery-recipe-v1",
+  "recorded_at_utc": "2026-10-03T11:29:57.308537+00:00",
+  "scope": "documentation/light-manifest comparator only; no C1 source/spec/risk/strategy change",
+  "reason": "v0 incorrectly described optional --expected-manifest as required and did not distinguish published light manifest from full snapshot manifest containing protocol",
+  "old_publication_manifest_sha256": "d34ef0d6255c4f5beaeada0cd144ba6731a9a18ac575c4245a0e2074ba59519c",
+  "old_reproduce_sha256": "7d7af186256d7f3ce38a37f3945f5502b57f4be18e16a40e92c0fca7dd08d55d",
+  "old_reproduce_bytes": 3337,
+  "new_reproduce_sha256": "f980111740d51cab8f6b3781926db07e2a96bf13c1906912239ebbaa604937ac",
+  "original_files_changed": [
+    "REPRODUCE.md",
+    "decision-log.md"
+  ],
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "frozen_object_count": 18,
+  "all_frozen_objects_unchanged": true,
+  "all_existing_other_public_objects_unchanged": true,
+  "strategy_results_unchanged": true,
+  "new_market_requests": 0,
+  "new_replay_runs": 0,
+  "comparator": {
+    "path": "scripts/compare_rebuild_manifest.py",
+    "sha256": "67c840d9e70eb3792b7f0788d27502ce1e243e8e5111f07c541f27cb2c057d45",
+    "basis": "M0275 comparator approach strengthened after independent QA; identical calculation to M0316 new comparator except stable ID",
+    "upgrades": [
+      "full protocol verified against builder AST VERSION",
+      "schema against builder AST NATIVE+ADDED",
+      "scope start/end and identity",
+      "ordered unique 25 months",
+      "canonical actual bytes and4572 CSV rows",
+      "resolved file paths confined to snapshot"
+    ],
+    "frozen_builder_modified": false
+  },
+  "actual_offline_runs": [
+    {
+      "snapshot": "snapshot=dot-b001-primary-v1",
+      "command": "python scripts/compare_rebuild_manifest.py --snapshot <shared-data-root>/snapshot=dot-b001-primary-v1 --output artifacts/recovery-recipe-primary-light-match.json",
+      "exit_code": 0,
+      "receipt": "artifacts/recovery-recipe-primary-light-match.json",
+      "receipt_sha256": "ebb67177cfb222c19a777f2aa7ef293dd6496133e4b929bbc9b4fb83e921d292"
+    },
+    {
+      "snapshot": "snapshot=dot-b001-rebuild-v1",
+      "command": "python scripts/compare_rebuild_manifest.py --snapshot <shared-data-root>/snapshot=dot-b001-rebuild-v1 --output artifacts/recovery-recipe-rebuild-light-match.json",
+      "exit_code": 0,
+      "receipt": "artifacts/recovery-recipe-rebuild-light-match.json",
+      "receipt_sha256": "b0b8a6cd5ff7e1acf3cc61cb6a45741845318186f700959efc40799d1e489f75"
+    }
+  ],
+  "correct_future_recipe": "If authorized, new capture with --timeframe4h --target --terms-reviewed and WITHOUT --expected-manifest; compare new snapshot against light manifest with comparator, then audit_raw. Full historical snapshot manifest may optionally be used with --expected-manifest. Never pass light manifest to that argument.",
+  "old_version_retained": true,
+  "C3": "parent preserves remote version0 and saves same identity version1; remote readback pending",
+  "intermediate_candidate_retained_privately": true,
+  "shell_execution_gate": "All Bash recipes start set -euo pipefail with defined placeholder variables or explicit ${VAR:?} required-variable checks; any comparison/audit failure prevents following commands.",
+  "shell_syntax_checks": [
+    {
+      "block": 1,
+      "syntax": "PASS_BASH_N_ONLY",
+      "commands_executed": false
+    },
+    {
+      "block": 2,
+      "syntax": "PASS_BASH_N_ONLY",
+      "commands_executed": false
+    },
+    {
+      "block": 3,
+      "syntax": "PASS_BASH_N_ONLY",
+      "commands_executed": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "M0316",
+  "checkpoint": "C2",
+  "status": "PASS_DECLARED_HYPOTHESIS_ONLY",
+  "completed_at_utc": "2026-10-03T11:16:01.636881+00:00",
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "summary_sha256": "de301ecfa0aa74602fe3fb60ff8b6fc4a3c3dd710f7452e95ba45ee31b526cd9",
+  "independent_decision_oracle": "artifacts/independent-real-result-audit.json",
+  "independent_execution_tests": "17 original+5 added cases;105 all-event case-prefix comparisons",
+  "worker_execution_prefixes": 45,
+  "recovery": "fresh child+independent reviewer process;21 bytes-identical files and summary financial equality excluding peakRSS",
+  "strict_reproductions": 0,
+  "C3": "PENDING_PARENT_REMOTE_SAVE_READBACK",
+  "global_counts_or_indexes_modified": false,
+  "publication_manifest_final_audit": "separate post-lock receipt; no cyclic embedded manifest hash"
+}

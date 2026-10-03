@@ -1,0 +1,64 @@
+{
+  "status": "PASS_C0_SOURCE_INPUTS_INDICATORS_ONLY",
+  "at_utc": "2026-10-03T10:57:48.449763+00:00",
+  "assignment_commit": "344e8b361d28004ce36949efe3b3aeda65b5a9f9",
+  "strict_reproductions": 0,
+  "fidelity_ceiling": "HYPOTHESIS",
+  "data_status": "DIAGNOSTIC_ONLY",
+  "engine_imported": false,
+  "strategy_returns_seen": false,
+  "new_market_requests": 0,
+  "auditor_sha256": "1091d61ce172a30e7a872225037fe3a9312adf631bc5aaf0162e0ec24f92de58",
+  "stages": {
+    "source_input_indicator": "PASS",
+    "execution_static": "NOT_RUN",
+    "ledger_risk_metrics": "NOT_RUN",
+    "recovery": "NOT_RUN",
+    "publication": "NOT_RUN"
+  },
+  "id": "M0316",
+  "sources": [
+    {
+      "id": "M0316",
+      "sha256": "bd4523d134b686b012947896ffd7a5a299add87ac12aa0d18fac36c9e7ca3822",
+      "bytes": 3821,
+      "status": "PASS_HASH_AND_REVIEWED_AST",
+      "ast_sha256": "d426d749e1eb43f21522d72ad9ffa7855d0971d37db1a04cdca70552071039c0"
+    }
+  ],
+  "datasets": [
+    {
+      "snapshot": "snapshot=dot-b001-primary-v1",
+      "status": "PASS_NATIVE_BYTES_GRID_ROW_INTEGRITY",
+      "rows": 4572,
+      "canonical_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+      "manifest_sha256": "f3dff3ccf7df26088643644b7859999063b79ddb354a0fb360208c583fa9760c",
+      "finality": "NOT_ESTABLISHED",
+      "trusted": false,
+      "archive_objects_individually_verified": 75
+    },
+    {
+      "snapshot": "snapshot=dot-b001-rebuild-v1",
+      "status": "PASS_NATIVE_BYTES_GRID_ROW_INTEGRITY",
+      "rows": 4572,
+      "canonical_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+      "manifest_sha256": "f130c0699fd184961d46b0badfc65576a1aa2524ac4eb08a803cfbbaff8224cb",
+      "finality": "NOT_ESTABLISHED",
+      "trusted": false,
+      "archive_objects_individually_verified": 75
+    }
+  ],
+  "signal_counts": {
+    "hlhb_entry": 33,
+    "hlhb_exit": 32
+  },
+  "indicator_max_abs_difference_decimal_vs_talib": {
+    "rsi": 1.3073986337985843e-12,
+    "ema5": 1.4551915228366852e-11,
+    "ema10": 1.4551915228366852e-11,
+    "adx": 4.583000645652646e-13
+  },
+  "original_combined_audit_sha256": "ce28821bb190dcfb7da696bce5ce8fbf3144d891e1b77c6d29033b10ee0cfc8d",
+  "projection_note": "ID-only evidence projection; original source and full native archive checks unchanged",
+  "projected_at_utc": "2026-10-03T11:14:23.387707+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "M0316",
+  "status": "PASS_C1_DRAFT_EXECUTION_STATIC_REVIEW_NOT_FINAL_FREEZE",
+  "at_utc": "2026-10-03T11:05:20.780152+00:00",
+  "draft_protocol_sha256": "b0d8e563d5c9f7a1546ca189955ca011692e8ccaa9b8344a79fb58dd2f839fe2",
+  "engine_sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d",
+  "worker_synthetic_sha256": "6b1c012ef6db95cf34a24f1f4ecf35a314368de5426e8ad23333fa789d69eae9",
+  "real_returns_seen_by_reviewer": false,
+  "source_indicator_input_audit_sha256": "ce28821bb190dcfb7da696bce5ce8fbf3144d891e1b77c6d29033b10ee0cfc8d",
+  "checked": [
+    "actual (open+close)/2 RSI10; close EMA5/10; ADX14 and inclusive prior/strict current simultaneous crosses",
+    "source entry/exit limit GTC, market stops; stacking actualFalse distinct from source string",
+    "quote prior signal close; one-observation GTC timeout; no queue, no partials, touch assumed",
+    "favorable opening slip limited by quote; intrabar exact limit; no market substitution",
+    "fee-aware trailing offset strict-greater positive and equality oldstop update",
+    "ROI suppressed by visible delayed entry signal; native minutes retained with explicit open-observed tier proxy",
+    "intrabar entry age origin upper bound+1ms explicit causal delay",
+    "explicit O-L-H-C synthetic path, not native reference nor conservative bound",
+    "stop priority at open, concurrent signal limit/ROI first path touch with signal ties",
+    "risk cancels pending sell; terminal cancellation distinct from timeout",
+    "halt12label effective14;08bucket intrabar upper11:26:59.999",
+    "cost/delay four cases and buyhold control fixed before results"
+  ],
+  "worker_synthetic_cases_reviewed": 17,
+  "limitations": [
+    "independent synthetic execution pending",
+    "final timestamp and frozen_file_hashes absent at this draft review; require final hash gate",
+    "real ledger/risk/metrics, recovery, publication NOT_RUN",
+    "repo CI/global registration separate from strategy evidence PASS"
+  ],
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0
+}

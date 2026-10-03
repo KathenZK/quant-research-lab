@@ -1,0 +1,87 @@
+{
+  "status": "PASS_INDEPENDENT_DECIMAL_ALL_CASE_EXECUTION_AND_METRICS",
+  "id": "M0317",
+  "at_utc": "2026-10-03T11:09:33.342044+00:00",
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "summary_sha256": "e02dcdc574f32f68179a7f2bd17df1a7a2befdcb995faa69498fbe5e9231b373",
+  "auditor_sha256": "d4509db531b79154d59394dbea955647ecebde526b8c2f3128a42b8380961916",
+  "indicator_oracle_sha256": "66431eb0f52e14837c1b1c4753c14cc0c0d116e9991230ed59ec88bcbc71c9fb",
+  "engine_imported": false,
+  "market_requests": 0,
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "cases": [
+    {
+      "name": "base",
+      "status": "PASS_ALL_LEDGER_NAV_RISK_METRICS",
+      "fill_events": 201,
+      "nav_rows": 4386,
+      "daily_rows": 731,
+      "max_abs_account_difference": 9.098015784066013e-10,
+      "orders": 0,
+      "risk_events": 0,
+      "roi_boundary_candidates": 287,
+      "total_return": 3.0499442134713552,
+      "max_drawdown": 0.3270706630427063
+    },
+    {
+      "name": "fee0",
+      "status": "PASS_ALL_LEDGER_NAV_RISK_METRICS",
+      "fill_events": 205,
+      "nav_rows": 4386,
+      "daily_rows": 731,
+      "max_abs_account_difference": 1.9002168386213355e-09,
+      "orders": 0,
+      "risk_events": 0,
+      "roi_boundary_candidates": 294,
+      "total_return": 3.5440339768481017,
+      "max_drawdown": 0.32265697893519363
+    },
+    {
+      "name": "fee20",
+      "status": "PASS_ALL_LEDGER_NAV_RISK_METRICS",
+      "fill_events": 191,
+      "nav_rows": 4386,
+      "daily_rows": 731,
+      "max_abs_account_difference": 9.36454976056292e-10,
+      "orders": 0,
+      "risk_events": 0,
+      "roi_boundary_candidates": 274,
+      "total_return": 2.179627291210347,
+      "max_drawdown": 0.34518959999536836
+    },
+    {
+      "name": "delay2",
+      "status": "PASS_ALL_LEDGER_NAV_RISK_METRICS",
+      "fill_events": 201,
+      "nav_rows": 4386,
+      "daily_rows": 731,
+      "max_abs_account_difference": 3.697367091018831e-10,
+      "orders": 0,
+      "risk_events": 0,
+      "roi_boundary_candidates": 286,
+      "total_return": 3.0637593369464144,
+      "max_drawdown": 0.3270706630427063
+    },
+    {
+      "name": "buyhold",
+      "status": "PASS_ALL_LEDGER_NAV_RISK_METRICS",
+      "fill_events": 1,
+      "nav_rows": 4386,
+      "daily_rows": 731,
+      "max_abs_account_difference": 1.2908498885081982e-10,
+      "orders": 0,
+      "risk_events": 0,
+      "roi_boundary_candidates": 0,
+      "total_return": 4.4187348701648235,
+      "max_drawdown": 0.2965376375450329
+    }
+  ],
+  "strict_reproductions": 0,
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "remaining": [
+    "synthetic branch coverage review",
+    "recovery and execution prefixes",
+    "public/private final manifests"
+  ]
+}

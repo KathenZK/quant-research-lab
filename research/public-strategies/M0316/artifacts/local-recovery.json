@@ -1,0 +1,39 @@
+{
+  "status": "PASS_LOCAL_RECOVERY",
+  "independent_data_snapshot_input": "/workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-rebuild-v1/BTCUSDT-4h-202212-202412-native12.csv",
+  "fresh_subprocess": true,
+  "command": [
+    "/workspace/shared/dot-public-strategies-20261003/.venv/bin/python",
+    "/workspace/shared/dot-public-strategies-20261003-b003/research/public-strategies/M0316/scripts/run_replay.py",
+    "--input",
+    "/workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-rebuild-v1/BTCUSDT-4h-202212-202412-native12.csv",
+    "--output",
+    "/workspace/shared/dot-public-strategies-20261003-b003/work-M0316/recovery-run"
+  ],
+  "returncode": 0,
+  "matched_files": [
+    "base-daily-nav.csv",
+    "base-events.json",
+    "base-nav.csv",
+    "base-trades.csv",
+    "buyhold-daily-nav.csv",
+    "buyhold-events.json",
+    "buyhold-nav.csv",
+    "buyhold-trades.csv",
+    "delay2-daily-nav.csv",
+    "delay2-events.json",
+    "delay2-nav.csv",
+    "delay2-trades.csv",
+    "fee0-daily-nav.csv",
+    "fee0-events.json",
+    "fee0-nav.csv",
+    "fee0-trades.csv",
+    "fee20-daily-nav.csv",
+    "fee20-events.json",
+    "fee20-nav.csv",
+    "fee20-trades.csv",
+    "signals.csv"
+  ],
+  "summary_matches_excluding_peak_rss": true,
+  "offsite_restore": false
+}

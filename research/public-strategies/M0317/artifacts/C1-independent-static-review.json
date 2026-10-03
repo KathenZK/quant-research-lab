@@ -1,0 +1,29 @@
+{
+  "status": "PASS_C1_STATIC_CONTRACT_AND_HASH_REVIEW_NOT_RESULTS",
+  "id": "M0317",
+  "at_utc": "2026-10-03T11:00:14.808652+00:00",
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "engine_sha256": "fc2f7fec19d2f9199eca05ce563ad22a6b55f771d38dbb78721b8130b2722d80",
+  "frozen_files_checked": 18,
+  "returns_seen_by_reviewer": false,
+  "checked": [
+    "source defaults decimal4 preserved; impossible sell unchanged",
+    "framework trailingFalse and inherited limit/GTC acknowledged",
+    "market execution override explicit HYPOTHESIS",
+    "closed signal delay1/2 no preevaluation orders",
+    "stop then ROI open/intrabar priority; no samebar reentry",
+    "native minute ROI keys, causal effective-open tier freeze, boundary proxy explicit",
+    "fee-inclusive budget and fee-aware target plus adverse slip",
+    "March24 resume mapping14:00, previous intrabar bound11:26:59.999",
+    "terminal inventory marked without phantom sell",
+    "cost+delay sensitivity frozen before returns"
+  ],
+  "limitations": [
+    "synthetic execution tests not yet independently run",
+    "real ledger, risk, metrics, prefixes, recovery, final publication NOT_RUN",
+    "not native Freqtrade or strict author reproduction"
+  ],
+  "strict_reproductions": 0,
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "fidelity_class": "HYPOTHESIS"
+}

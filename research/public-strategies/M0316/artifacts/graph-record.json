@@ -1,0 +1,51 @@
+{
+  "id": "M0316",
+  "name": "hlhb：BTC现货4h RSI/EMA同根交叉",
+  "status": "tested_hypothesis_only",
+  "reason": "原指标与风险参数，限价GTC/timeout、O-L-H-C与ROI时钟明确补充假设；四预冻case均负收益且落后同币买持，未晋升。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0316-HLHB"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_sha256_verified",
+    "source_rule_attribution_status": "native_strategy_class_indicators_signals_matched; explicit_runtime_hypotheses",
+    "independent_validation": "PASS_INDEPENDENT_DECIMAL_ALL_CASE_EXECUTION_AND_METRICS",
+    "causality_validation": "PASS_45_EXECUTION_PREFIXES",
+    "local_recovery": "PASS_LOCAL_RECOVERY",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "strict_reproductions": 0,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0316-20261003-first-replay",
+      "variant_id": "M0316-BTCUSDT-4H-HLHB-LIMIT-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+      "manifest_sha256": "1c890a7d17358e5811af1fedd7666c5b9752779af5d047b1dcec6c94763c937c",
+      "family": "PUBLIC-M0316-HLHB"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0316-20261003-first-replay",
+      "variant_id": "M0316-BTCUSDT-4H-HLHB-LIMIT-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+      "manifest_sha256": "1c890a7d17358e5811af1fedd7666c5b9752779af5d047b1dcec6c94763c937c"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 with Binance additional terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "native archive canonicalization; RSI/EMA/ADX signals, hypothesized limit/cost/risk accounting, metrics and month-end normalization"
+  }
+}

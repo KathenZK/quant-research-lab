@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "cases": [
+    "unmarketable_limit_unfilled_terminal",
+    "favorable_buy_gap_slip_capped",
+    "buy_slip_not_above_limit",
+    "intrabar_limit_exact_bounded_time",
+    "same_entry_bar_limit_then_market_stop",
+    "low_before_high_path_is_explicit",
+    "fee_aware_trailing_same_entry_bar",
+    "exact_offset_no_positive_trailing",
+    "strict_greater_offset_positive",
+    "fees_delay_trailing_activation",
+    "entry_signal_suppresses_roi",
+    "roi_unsuppressed_opens_at_fee_aware_target",
+    "signal_limit_sell_cannot_cross_below_limit",
+    "unfilled_exit_competes_with_market_stop",
+    "timeout_does_not_auto_rehang",
+    "halt_open_resume14_not12",
+    "prehalt_intrabar_bound"
+  ],
+  "count": 17,
+  "real_strategy_returns_computed": false,
+  "method": "worker synthetic tests; independent reviewer separate"
+}

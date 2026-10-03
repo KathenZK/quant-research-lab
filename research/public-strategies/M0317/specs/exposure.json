@@ -1,0 +1,24 @@
+{
+  "id": "M0317",
+  "recorded_before_results_utc": "2026-10-03T10:59:07.111210+00:00",
+  "evaluation": [
+    "2023-01-01T00:00:00Z",
+    "2025-01-01T00:00:00Z"
+  ],
+  "window_previously_exposed": true,
+  "prior_known_usage": [
+    "M0256 BTCUSDT4h",
+    "M0275 BTCUSDT4h"
+  ],
+  "parallel_window_usage": [
+    "M0316"
+  ],
+  "historical_total_search_count": "UNKNOWN",
+  "current_strategy_ids": 1,
+  "strategy_configurations": 4,
+  "controls": 1,
+  "parameter_searches": 0,
+  "oos_claim": false,
+  "DSR_PBO_claim": false,
+  "window_or_parameter_change_after_results_forbidden": true
+}

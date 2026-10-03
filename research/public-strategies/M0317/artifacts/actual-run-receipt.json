@@ -1,0 +1,15 @@
+{
+  "id": "M0317",
+  "started_at_utc": "2026-10-03T11:01:00Z",
+  "finished_at_utc": "2026-10-03T11:01:03Z",
+  "command": "/workspace/shared/dot-public-strategies-20261003/.venv/bin/python /workspace/shared/dot-public-strategies-20261003-b003/research/public-strategies/M0317/scripts/run_replay.py --input /workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-primary-v1/BTCUSDT-4h-202212-202412-native12.csv --output /workspace/shared/dot-public-strategies-20261003-b003/work-M0317/first-run --spec /workspace/shared/dot-public-strategies-20261003-b003/research/public-strategies/M0317/specs/protocol.json",
+  "exit_code": 0,
+  "market_replay_performed": true,
+  "source_precheck_started_utc": "2026-10-03T10:53:45Z",
+  "new_market_requests": 0,
+  "threads": 1,
+  "RLIMIT_AS_bytes": 1073741824,
+  "peak_rss_kib": 88272,
+  "engine_sha256": "fc2f7fec19d2f9199eca05ce563ad22a6b55f771d38dbb78721b8130b2722d80",
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae"
+}
