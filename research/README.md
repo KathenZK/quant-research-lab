@@ -356,3 +356,5 @@
 - [批017共享恢复诊断](public-strategies/catalog-hypothesis-batch017-execution-20261003/README.md)：三 ID 的公开代码、指纹及离线重建配方；不代替完整私有备份。
 
 - [批019 M1266固定数量预检](public-strategies/catalog-fixedqty-batch019-preflight-20261003/README.md)：规则及831行输入已冻结，4策略+1控制计划，母端dot未启动；需实际C0独审后放行。
+
+- [批018 M1347实际远端恢复](public-strategies/catalog-hypothesis-batch018-recovery-20261003/README.md)：30结果长度/hash及清单原字节通过；零新增试验/对照，完整私包备份缺口单列。

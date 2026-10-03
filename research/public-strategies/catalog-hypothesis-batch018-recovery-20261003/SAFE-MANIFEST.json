@@ -1,0 +1,21 @@
+{
+  "schema": "M1347-remote-core-safe-delivery/v1",
+  "payloads": [
+    {
+      "path": "M1347-remote-core-recovery.safe.json",
+      "bytes": 7866,
+      "sha256": "391607af41116b3e9e69be88bb3cef6fb7946cd8321a0d396d3d87b6745fa969"
+    },
+    {
+      "path": "REMOTE-CORE-RESTORE.md",
+      "bytes": 8780,
+      "sha256": "52346effd632ddb631a6c8b94ebcbdb9d9bff81ab7d4168d42e5f1463765e079"
+    },
+    {
+      "path": "remote-core-files.json",
+      "bytes": 27257,
+      "sha256": "404d9fd4745a0b490e76d29b514e07c775bcf0571a2f7579a31ea0718f0982b0"
+    }
+  ],
+  "manifest_lists_itself": false
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "M1347-actual-remote-core-recovery/v1",
+  "id": "M1347",
+  "status": "REMOTE_HASH_REFERENCE_REBUILD_PASS",
+  "finished_utc": "2026-10-03T19:27:10.192937+00:00",
+  "source": {
+    "repository": "quant-research-lab",
+    "remote": "origin",
+    "branch": "codex/catalog-monthturn-batch018-20261003",
+    "commit": "2d1a1257e6fa6e43dafa3cff81e24aad2f318855",
+    "actual_remote_fetch": true,
+    "fetch_utc": "2026-10-03T19:23:46.701780+00:00",
+    "publication_manifest_sha256": "684cefa26887cdf2420e71d8b728d2e686f8cb5a6fed8c36c26a2f20a5306859",
+    "publication_objects": 67,
+    "publication_bytes": 270695,
+    "kernel_original_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "kernel_actual_remote_fetch": true,
+    "kernel_original_objects": 4,
+    "current_local_kernel_README_used": false,
+    "supports": 2,
+    "remote_object_list": {
+      "path": "remote-core-files.json",
+      "bytes": 27257,
+      "sha256": "404d9fd4745a0b490e76d29b514e07c775bcf0571a2f7579a31ea0718f0982b0"
+    },
+    "worker_source_or_old_financial_results_fallback": false
+  },
+  "execution": {
+    "original_rebuild_input_CLI": true,
+    "original_restore_core_CLI": true,
+    "original_independent_account_verifier": true,
+    "original_causality_CLI": true,
+    "execution_or_comparison_code_modified": false,
+    "portable_original_root_release": "Existing approved C0 gate; only its pinned independent-review local_path remapped by original restore code.",
+    "C0_and_kernel_immutable_objects": 32,
+    "restore_engine_executions": 1,
+    "existing_configurations_recovered": 4,
+    "new_research_trials": 0,
+    "new_controls": 0,
+    "strict_reproductions": 0
+  },
+  "input": {
+    "external_lawful_cache_dependency": true,
+    "raw_in_Git": false,
+    "raw_objects": 50,
+    "ZIP_CRC_checks": 25,
+    "provider_checksums": 25,
+    "canonical_bytes": 128196,
+    "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "canonical_rows": 762,
+    "prewarm_rows": 31,
+    "evaluation_rows": 731,
+    "new_market_requests": 0,
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT_finality": "NOT_PROVEN"
+  },
+  "comparison": {
+    "expected_only_from_remote_manifest": true,
+    "expected_manifest_sha256": "efae9bdac67125d12fde252f1e8fd1a506e455c6fbe215ea397e989cd3133d95",
+    "result_payload_lengths_and_SHA256_equal": 30,
+    "result_manifest_byte_equal": true,
+    "total_output_files": 31,
+    "full_prior_financial_payloads_read": false,
+    "semantics": "Remote hash reference rebuild: each new payload matched independent remote bytes-length/SHA256; only the manifests themselves were directly byte-compared. No original full payload availability is claimed.",
+    "self_comparison": false
+  },
+  "verification": {
+    "independent_Decimal_account": {
+      "status": "PASS",
+      "features": 762,
+      "nav_rows": 2924,
+      "decision_rows": 2924,
+      "monthly_rows": 96,
+      "fill_rows": 188,
+      "strategy_configurations": 4,
+      "new_control_configurations": 0,
+      "source_signal": "Independent ordinal/nextmonth calendar features; no price indicator",
+      "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+      "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+      "engine_runs": 0
+    },
+    "causality": {
+      "status": "PASS",
+      "prefix_cases": 16,
+      "future_mutations": 16,
+      "price_independent_calendar": true,
+      "account_engine_reruns": 0,
+      "new_controls": 0,
+      "limit": "Feature causality only; synthetic suite and independent result audit cover account chronology"
+    },
+    "original_control_reference_read_only_files": 7,
+    "control_reexecuted": false,
+    "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+  },
+  "environment": {
+    "exact_python_and_all_packages_asserted": true,
+    "environment_lock_sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "offline_guard": "Python socket audit deny inherited through PYTHONPATH; not an OS network namespace",
+    "guard_selftest_socket_creation_denied": true,
+    "guarded_recovery_python_processes": 5,
+    "network_attempts_during_recovery": 0,
+    "actual_Git_commit_fetches": 2,
+    "remote_branch_readback": true,
+    "nonblocking_exclusive_flock": true,
+    "minimum_free_disk_bytes": 11210665984
+  },
+  "resources": [
+    {
+      "stage": "input-rebuild",
+      "start_utc": "2026-10-03T19:27:09.374805+00:00",
+      "end_utc": "2026-10-03T19:27:09.530582+00:00",
+      "returncode": 0,
+      "wall_seconds": 0.1557904920045985,
+      "cpu_seconds": 0.155169,
+      "max_rss_kib": 27616,
+      "stdout_sha256": "b1339819e4968d240eb19b0f676d72eb98bc796e65b14f6a0b9ebe61c065fc85",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "restore-core",
+      "start_utc": "2026-10-03T19:27:09.530773+00:00",
+      "end_utc": "2026-10-03T19:27:09.914849+00:00",
+      "returncode": 0,
+      "wall_seconds": 0.384134706997429,
+      "cpu_seconds": 0.3834289999999999,
+      "max_rss_kib": 29548,
+      "stdout_sha256": "119f8c730628d725cb30bfb19909aa49dee7ba00bb53e270fceaf8823080dee5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "feature-causality",
+      "start_utc": "2026-10-03T19:27:09.915080+00:00",
+      "end_utc": "2026-10-03T19:27:10.185398+00:00",
+      "returncode": 0,
+      "wall_seconds": 0.270332348998636,
+      "cpu_seconds": 0.26976100000000003,
+      "max_rss_kib": 29548,
+      "stdout_sha256": "00314a1c6cc6f495f28d8ee32d206b45bf2c50dd0cd30c43a92f5d9da62088f5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": {
+    "fetch_receipt_sha256": "adcdec400e3e0338e44f36132ca3f8c88aea1dbd861d2c75cceb3ef42da3db3d",
+    "remote_object_receipt_sha256": "ac67493cfae957ef76c6e07938e24cede9008296391bd2382e937b3e6fe14041",
+    "private_comparison_sha256": "1ffdab36a9e34e4094e0e1ade72e2e558ad704f55a29b591f555423aa52c45d8",
+    "input_rebuild_receipt_sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909",
+    "original_restore_receipt_sha256": "a6f0f77a5c53be9f9873363569039c04a3b06919a7a7899c962fb114b912024d",
+    "original_account_verifier_receipt_sha256": "35c4710a5f91e34ee190afee0e93fb758decd8404f0707241f10fb2c76ac6a78",
+    "causality_receipt_sha256": "dd76beb45c03431987fe323697b586d8f8a0f5303b290f27a471c021632dab75",
+    "actual_orchestration_sha256": "5e48b68a3dd8692d800f4bbd44ea2b9b7e7e9f1d5ce48593ddfe4970e5916e82",
+    "prior_local_acceptance_sha256": "83dfab37efc69bf40c39abbc615a99138636d340f623ef9dced63cab6c3852b4"
+  },
+  "limitations": [
+    "This is actual Git-core recovery using an external legally retained raw cache, not a claim that Git contains raw market or the complete private package.",
+    "Library complete private archive remains unverified/unuploaded due to known HTTP401; this successful Git core recovery does not close that separate gap.",
+    "Author webpage and original runtime remain unverified; this is a catalog hypothesis with ADAPTED execution, exposed 2023–2024 window, strict0 and no promotion.",
+    "An exact preinstalled runtime is required. Future public-source availability and identical data bytes are not guaranteed; fail on missing data or changed hashes.",
+    "Python socket audit guard is inherited by all tested Python replay children, not an operating-system network namespace.",
+    "Existing M1258 control was hash-checked without replay; no extra control or strategy parameter experiment was created."
+  ],
+  "blockers_for_this_remote_core_recovery": []
+}
