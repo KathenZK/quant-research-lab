@@ -21,3 +21,5 @@ v2：[实际候选与真实研究阻断](diagnostics/platform-v2.md) ·
 v3：[统一研究与证据结果](diagnostics/evidence-research-v3.md)。原始语料 strict parsed 260；三个显式派生模板只缺数据；eligible/正式回测仍为 0。两个真实行情私有诊断不计正式回测。
 
 研究完整性 v1：[当前 main 复现与修复](diagnostics/research-integrity-fixes-v1.md) · [稳定包接口](../../../docs/research/ResearchIntegrityAssessment-v1.md)。历史与探索继续计算，确认性结论须有独立留存的协议和适用统计证据。
+
+首次逐策略输入诊断：[M0004 数据缺口与重建配方](diagnostics/M0004-20261003.md)，数据审计 1，回测 0；官方 NAV 不替代可交易行情。
