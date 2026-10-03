@@ -362,3 +362,5 @@
 - [批019协调检查点002](public-strategies/progress-20261003-batch019-checkpoint002.json)：42 ID / 171策略配置 / 21对照；展示交付与M1266首次运行门禁单列，不新增研究计数。
 
 - [批020三策略日线准备](public-strategies/catalog-daily-next3-batch020-preflight-20261003/README.md)：M2903／M3710／M0974，12配置计划、0新增对照；规则及输入独审通过，实际代码C0门禁前不运行。
+
+- [M1266 三EMA固定数量研究](public-strategies/M1266/M1266.md)：4策略配置与1个声明控制，历史独审及私有恢复已交付；冻结诊断保持严格复现0，协调验收与展示激活分开记录。

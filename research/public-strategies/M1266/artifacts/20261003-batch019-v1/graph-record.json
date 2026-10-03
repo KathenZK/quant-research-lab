@@ -1,0 +1,45 @@
+{
+  "audit": {
+    "OOS": false,
+    "PIT": "UNKNOWN",
+    "accepted": false,
+    "historical_verification_status": "PASS_INDEPENDENT_REVIEW",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "publication_review_status": "PENDING_EXACT_ALLOWLIST_REVIEW",
+    "source_rule_attribution_status": "SELF_AUTHORED_PARAPHRASE_OF_SELECTED_CORRECTED_SOURCE",
+    "source_verification_status": "CORRECTED_PUBLIC_ATTACHMENT_HASH_VERIFIED",
+    "strict_reproductions": 0,
+    "trusted": false,
+    "window_OOS": false
+  },
+  "coverage_history": [
+    {
+      "OOS": false,
+      "accepted": false,
+      "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+      "evaluation_start": "2023-01-01T00:00:00Z",
+      "new_controls": 1,
+      "strategy_configurations": 4
+    }
+  ],
+  "entity_integration_status": "NOT_PERFORMED",
+  "entity_revision_status": "NOT_ISSUED_NOT_INVENTED",
+  "id": "M1266",
+  "name": "BTC日线三EMA回撤入场与持仓收盘峰值退出",
+  "original_record_policy": "Original 11 catalog fields preserved privately; this self-authored projection does not replace or expose that record.",
+  "record_kind": "PUBLIC_SAFE_LOCAL_PROJECTION_NOT_ENTITY_REVISION",
+  "related_results": [
+    {
+      "classification": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+      "detail_path": "graph-detail.json",
+      "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+      "metrics_path": "metrics.json",
+      "run_id": "M1266-catalog-batch019-20261003-v1",
+      "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING"
+    }
+  ],
+  "selected_source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+  "site_activation_status": "NOT_PERFORMED",
+  "source_url": "https://www.quantconnect.com/forum/discussion/11340/btc-3-emas-strategy/"
+}

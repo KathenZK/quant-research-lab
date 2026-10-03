@@ -1,0 +1,186 @@
+{
+  "audit": {
+    "OOS": false,
+    "PIT": "UNKNOWN",
+    "accepted": false,
+    "historical_verification_status": "PASS_INDEPENDENT_REVIEW",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "publication_review_status": "PENDING_EXACT_ALLOWLIST_REVIEW",
+    "source_rule_attribution_status": "SELF_AUTHORED_PARAPHRASE_OF_SELECTED_CORRECTED_SOURCE",
+    "source_verification_status": "CORRECTED_PUBLIC_ATTACHMENT_HASH_VERIFIED",
+    "strict_reproductions": 0,
+    "trusted": false,
+    "window_OOS": false
+  },
+  "cases": [
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 8,
+      "name": "base",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 0,
+      "name": "fee0",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 20,
+      "name": "fee20",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 2,
+      "fee_bps_each_side": 8,
+      "name": "delay2",
+      "slippage_bps_each_side": 2
+    }
+  ],
+  "classification": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+  "data_attribution": {
+    "code_license_scope": "This attribution and derived-data license do not relicense repository code or third-party strategy source.",
+    "coverage": "Dataset-derived report tables, result summaries, metrics and normalized equity/drawdown curves.",
+    "derived_data_license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "Frozen-window selection; strategy accounting and statistical calculation; initial-capital normalization; monthly display sampling. No raw dataset redistribution.",
+    "provider": "Binance Vision",
+    "source_portal": "https://data.binance.vision/",
+    "terms_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/TERMS_AND_CONDITIONS.md",
+    "terms_version": "1.0; last updated 2026-08-26; approved unchanged terms",
+    "use_scope": "Non-commercial historical personal research"
+  },
+  "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+  "fee_control_limitation": "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+  "id": "M1266",
+  "metrics": {
+    "additional_native_bar_lag": {
+      "full": {
+        "annualization": 365,
+        "cagr": 0.33441285635425355,
+        "closed_roundtrips": 19,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 0.2448700410396717,
+        "fees_paid": 3574.251828994915,
+        "fill_count": 39,
+        "final_equity": 178206.5636868741,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.17195960766935203,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.2398943261801845,
+        "sharpe_zero_cash": 1.2398943261801845,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 0.782065636868741
+      }
+    },
+    "cost_sensitivity": {
+      "0": {
+        "full": {
+          "annualization": 365,
+          "cagr": 0.2859686278147581,
+          "closed_roundtrips": 23,
+          "end": "2024-12-31",
+          "end_exclusive": "2025-01-01",
+          "exposure": 0.2640218878248974,
+          "fees_paid": 0.0,
+          "fill_count": 46,
+          "final_equity": 165485.52376487278,
+          "initial_equity": 100000.0,
+          "max_drawdown": -0.18235807336933973,
+          "monthly_count": 24,
+          "observations": 731,
+          "rejected_order_count": 0,
+          "sharpe": 1.0999446763918925,
+          "sharpe_zero_cash": 1.0999446763918925,
+          "start": "2023-01-01",
+          "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+          "total_return": 0.6548552376487278
+        }
+      },
+      "20": {
+        "full": {
+          "annualization": 365,
+          "cagr": 0.23416401514119892,
+          "closed_roundtrips": 23,
+          "end": "2024-12-31",
+          "end_exclusive": "2025-01-01",
+          "exposure": 0.2640218878248974,
+          "fees_paid": 9647.361161873416,
+          "fill_count": 46,
+          "final_equity": 152403.9051931725,
+          "initial_equity": 100000.0,
+          "max_drawdown": -0.20445462519606877,
+          "monthly_count": 24,
+          "observations": 731,
+          "rejected_order_count": 0,
+          "sharpe": 0.9397478549429087,
+          "sharpe_zero_cash": 0.9397478549429087,
+          "start": "2023-01-01",
+          "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+          "total_return": 0.5240390519317251
+        }
+      }
+    },
+    "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+    "fee_control_limitation": "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+    "implementation_fidelity": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+    "periods": {
+      "full": {
+        "annualization": 365,
+        "cagr": 0.2650132062311941,
+        "closed_roundtrips": 23,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 0.2640218878248974,
+        "fees_paid": 3960.7990367528923,
+        "fill_count": 46,
+        "final_equity": 160128.9409251135,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.19125945285310425,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.035960765406854,
+        "sharpe_zero_cash": 1.035960765406854,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 0.601289409251135
+      }
+    },
+    "same_instrument_benchmark": {
+      "full": {
+        "annualization": 365,
+        "cagr": 1.2756357339635358,
+        "closed_roundtrips": 0,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 1.0,
+        "fees_paid": 72.0116574069059,
+        "fill_count": 1,
+        "final_equity": 519019.7131310156,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.25515131000092506,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.9943251995902143,
+        "sharpe_zero_cash": 1.9943251995902143,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 4.190197131310156
+      }
+    }
+  },
+  "new_controls": 1,
+  "number_representation": "JSON numbers are display projections of saved Decimal50 results; exact private outputs remain authoritative.",
+  "run_id": "M1266-catalog-batch019-20261003-v1",
+  "schema": "M1266-lightweight-metrics/v1",
+  "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+  "strategy_configurations": 4
+}

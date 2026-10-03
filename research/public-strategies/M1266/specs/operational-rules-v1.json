@@ -1,0 +1,165 @@
+{
+  "OOS": false,
+  "PIT": "UNKNOWN",
+  "audit": {
+    "OOS": false,
+    "PIT": "UNKNOWN",
+    "accepted": false,
+    "historical_verification_status": "PASS_INDEPENDENT_REVIEW",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "publication_review_status": "PENDING_EXACT_ALLOWLIST_REVIEW",
+    "source_rule_attribution_status": "SELF_AUTHORED_PARAPHRASE_OF_SELECTED_CORRECTED_SOURCE",
+    "source_verification_status": "CORRECTED_PUBLIC_ATTACHMENT_HASH_VERIFIED",
+    "strict_reproductions": 0,
+    "trusted": false,
+    "window_OOS": false
+  },
+  "benchmark": {
+    "comparability": "Same evaluation dates and base costs; strategy cannot first signal before Jan1 close, whereas control is intentionally signaled at Dec31 close.",
+    "execution": "First evaluation open 2023-01-01, lag1, fee8bps and slip2bps per side; same fixed-quantity cash rejection policy.",
+    "fee_control_limitation": "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+    "holding": "No rebalance or sale; residual cash after fill need not equal 10%; exposure weight need not remain 90%.",
+    "if_rejected": "Remain cash for entire window; no retry.",
+    "name": "buyhold-base",
+    "new_controls": 1,
+    "sizing": "Unconditional signal at last warmup close 2022-12-31: q=0.9*100000/close; frozen quantity."
+  },
+  "cases": [
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 8,
+      "name": "base",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 0,
+      "name": "fee0",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 1,
+      "fee_bps_each_side": 20,
+      "name": "fee20",
+      "slippage_bps_each_side": 2
+    },
+    {
+      "delay_bars": 2,
+      "fee_bps_each_side": 8,
+      "name": "delay2",
+      "slippage_bps_each_side": 2
+    }
+  ],
+  "classification": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+  "entry": {
+    "frozen": "Freeze q, signal index, due index and signal-close high seed at signal; never resize or recompute at fill.",
+    "quantity": "q=Decimal(0.9)*equity_at_signal/signal_close - actual_BTC_units; flat-only implies units=0",
+    "when": "flat and EMA20 > close > EMA50 > EMA100; every inequality strict"
+  },
+  "execution": {
+    "buy_cash": "principal=q*buy_price; fee=principal*fee_rate; required=principal+fee; accept iff required<=cash; subtract that same required once.",
+    "buy_price": "eligible_raw_open*(1+slippage_bps/10000)",
+    "decimal_operation_order": "All intermediates Decimal50 ROUND_HALF_EVEN; do not regroup cash expressions.",
+    "event_order": "At most one existing intent executed or rejected per open; then update completed-close indicators and held exit or flat entry. No same-open round trip.",
+    "not_modeled": [
+      "minimum lot/step",
+      "partial fills",
+      "queue",
+      "depth",
+      "market impact",
+      "cash interest",
+      "leverage",
+      "funding"
+    ],
+    "pending": "Earliest BUY or SELL remains latched until due open. Disappearing raw entry does not cancel BUY; recovering price does not cancel SELL. Repeats never postpone.",
+    "rejection": "Insufficient cash: no fill, no fee, no clip/epsilon/resize; clear only that intent; preserve cash; a qualifying later close may create a new order.",
+    "sell_cash": "notional=actual_qty*sell_price; fee=notional*fee_rate; proceeds=notional-fee; cash_after=cash_before+proceeds.",
+    "sell_price": "eligible_raw_open*(1-slippage_bps/10000)",
+    "terminal": "Mark final raw close without forced sale or fee; retain out-of-window pending intent without consuming another bar."
+  },
+  "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+  "exit": {
+    "high": "Store signal-close seed in BUY intent. Flat pending closes do not raise it. Activate only on actual BUY, then update using completed held closes.",
+    "predicate": "After high=max(high,close): close<=EMA50 OR close<Decimal(0.95)*high. Exactly 0.95*high is not a high-drawdown exit by itself.",
+    "priority": "At completed close, held exit branch precedes flat entry branch; a flat downtrend guard cannot suppress held exit.",
+    "reset": "Clear high only on actual sale; do not seed it from raw or slipped fill open; no intrabar high/low trigger."
+  },
+  "id": "M1266",
+  "identity": {
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_rows": 731,
+    "evaluation_start": "2023-01-01T00:00:00Z",
+    "exchange": "Binance",
+    "initial_equity": "100000",
+    "market_type": "spot",
+    "quote_currency": "USDT",
+    "symbol": "BTCUSDT",
+    "timeframe": "UTC 1d",
+    "warmup_end": "2022-12-31",
+    "warmup_rows": 100,
+    "warmup_start": "2022-09-23"
+  },
+  "indicators": {
+    "arithmetic": "Decimal precision 50; ROUND_HALF_EVEN",
+    "periods": [
+      20,
+      50,
+      100
+    ],
+    "recursion": "alpha=Decimal(2)/Decimal(n+1); previous+alpha*(close-previous)",
+    "seed": "At n-th selected close, left-to-right sum of first n selected closes divided by Decimal(n).",
+    "source": "completed raw daily close",
+    "warmup": "Use exactly 100 preceding complete closes; no earlier raw rows, no fills, no inherited strategy intent."
+  },
+  "limitations": [
+    "原作者明确披露展示区间经过挑选，并称更长区间表现更差。",
+    "BTCUSD/Bitfinex 2020–2021 改为 BTCUSDT/Binance 2023–2024；未验证原LEAN二进制、账户费用及买入力等价性。",
+    "独立历史数值、因果性及隔离恢复验证PASS；协调者验收和公开范围审查仍待完成，未发布或登记实体版本。",
+    "strict_reproductions=0、trusted=false、OOS=false、PIT=UNKNOWN；旧窗口已有研究曝光，旧搜索次数UNKNOWN。",
+    "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+    "收盘触发与下一指定开盘成交只是代理；不保证盘中5%止损、连续流动性、最小下单量、部分成交或冲击成本。",
+    "25个展示点不能重算731日Sharpe或日内/日频最大回撤；月末drawdown来自完整731日权益路径。",
+    "公开文档不提供原文附件、完整目录记录、原始市场行、全量账户流水或私有输入清单元数据。",
+    "结果不支持策略优越性、推广或实盘建议；delay2较佳仅是预冻结敏感性结果，不据此调参。"
+  ],
+  "lineage": {
+    "engine_sha256": "8fc21d238aa4c49fbd6c0a79ecfbd97fedc7d60b37e6df160aaf91eec40d05f5",
+    "entity_revision_status": "NOT_ISSUED_NOT_INVENTED",
+    "independent_synthetic_oracle_sha256": "1ee12de5d62034272feba0a313baf20aeeec265c0f1c2e7f909d62879e7daf88",
+    "private_provenance_projection": "WITHHELD_PENDING_FIELD_LEVEL_PUBLICATION_REVIEW",
+    "runner_sha256": "8d1f52b13e11e40f9fbb73715ca67242753192484be9d0c9549e2640f54cc2f7",
+    "selected_source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913"
+  },
+  "run_id": "M1266-catalog-batch019-20261003-v1",
+  "runtime": {
+    "binary_equivalence_to_original_LEAN": false,
+    "decimal_version": "1.70",
+    "libmpdec": "4.0.0",
+    "optimization": 0,
+    "precision": 50,
+    "python": "CPython 3.12.14",
+    "rounding": "ROUND_HALF_EVEN",
+    "third_party_runtime_dependencies": []
+  },
+  "schema": "M1266-self-authored-operational-rules/v1",
+  "source": {
+    "author_selection_warning": "Author disclosed a cherry-picked example and worse performance over a longer period.",
+    "full_text_or_attachment_redistribution": false,
+    "original_identity": "BTCUSD; BitfinexCash; Daily; 2020-01-01 through 2021-05-01; initial capital 100000; 100-day warmup",
+    "selected_attachment": "corrected attachment0",
+    "selected_source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+    "url": "https://www.quantconnect.com/forum/discussion/11340/btc-3-emas-strategy/"
+  },
+  "statistics": {
+    "cagr": "(final_equity/100000)**(365/731)-1",
+    "closed_roundtrips": "actual BUY/SELL pairs only; rejected intents and terminal unclosed holding excluded",
+    "drawdown": "NAV/running maximum including initial100000 - 1; negative convention",
+    "exposure": "daily closes with positive actual BTC quantity / 731",
+    "monthly": "24 complete calendar months; first denominator100000, thereafter previous month-end",
+    "returns": "731 daily-close equity returns, first divided by initial100000; warmup excluded",
+    "sharpe": "mean/sample-ddof1 standard deviation * sqrt365; zero cash interest; null if identical returns or zero variance"
+  },
+  "strict_reproductions": 0,
+  "trusted": false
+}

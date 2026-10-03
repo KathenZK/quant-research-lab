@@ -1,0 +1,449 @@
+{
+  "audit": {
+    "OOS": false,
+    "PIT": "UNKNOWN",
+    "accepted": false,
+    "historical_verification_status": "PASS_INDEPENDENT_REVIEW",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "publication_review_status": "PENDING_EXACT_ALLOWLIST_REVIEW",
+    "source_rule_attribution_status": "SELF_AUTHORED_PARAPHRASE_OF_SELECTED_CORRECTED_SOURCE",
+    "source_verification_status": "CORRECTED_PUBLIC_ATTACHMENT_HASH_VERIFIED",
+    "strict_reproductions": 0,
+    "trusted": false,
+    "window_OOS": false
+  },
+  "benchmark_curve": [
+    {
+      "date": "2023-01-01",
+      "drawdown": 0.0,
+      "equity": 1.0
+    },
+    {
+      "date": "2023-01-31",
+      "drawdown": -0.024141746924527363,
+      "equity": 1.3572718604909275
+    },
+    {
+      "date": "2023-02-28",
+      "drawdown": -0.06377921358719343,
+      "equity": 1.3581662893525195
+    },
+    {
+      "date": "2023-03-31",
+      "drawdown": 0.0,
+      "equity": 1.64781053686195
+    },
+    {
+      "date": "2023-04-30",
+      "drawdown": -0.0382086068451445,
+      "equity": 1.6895859140744462
+    },
+    {
+      "date": "2023-05-31",
+      "drawdown": -0.100857070388549,
+      "equity": 1.5795309039187253
+    },
+    {
+      "date": "2023-06-30",
+      "drawdown": -0.006779729819947988,
+      "equity": 1.7569830873987522
+    },
+    {
+      "date": "2023-07-31",
+      "drawdown": -0.06677352926060073,
+      "equity": 1.6895336846518716
+    },
+    {
+      "date": "2023-08-31",
+      "drawdown": -0.16568669155521612,
+      "equity": 1.5104591247331174
+    },
+    {
+      "date": "2023-09-30",
+      "drawdown": -0.13498080908647353,
+      "equity": 1.5660497282731116
+    },
+    {
+      "date": "2023-10-31",
+      "drawdown": 0.0,
+      "equity": 1.9837333171114904
+    },
+    {
+      "date": "2023-11-30",
+      "drawdown": -0.003383036378630992,
+      "equity": 2.151530674205987
+    },
+    {
+      "date": "2023-12-31",
+      "drawdown": -0.04103678982553842,
+      "equity": 2.399599757289457
+    },
+    {
+      "date": "2024-01-31",
+      "drawdown": -0.08961976425793206,
+      "equity": 2.4157266796223715
+    },
+    {
+      "date": "2024-02-29",
+      "drawdown": -0.02024956177107479,
+      "equity": 3.4250047771172936
+    },
+    {
+      "date": "2024-03-31",
+      "drawdown": -0.023932318688860484,
+      "equity": 3.9771693360688363
+    },
+    {
+      "date": "2024-04-30",
+      "drawdown": -0.1655716157066126,
+      "equity": 3.4000336725617273
+    },
+    {
+      "date": "2024-05-31",
+      "drawdown": -0.07386920325499427,
+      "equity": 3.773692210621501
+    },
+    {
+      "date": "2024-06-30",
+      "drawdown": -0.13753205502272847,
+      "equity": 3.5142860785004064
+    },
+    {
+      "date": "2024-07-31",
+      "drawdown": -0.112750675775162,
+      "equity": 3.615262418088374
+    },
+    {
+      "date": "2024-08-31",
+      "drawdown": -0.18824362890504598,
+      "equity": 3.3076523373262114
+    },
+    {
+      "date": "2024-09-30",
+      "drawdown": -0.1301138907641048,
+      "equity": 3.5445127687025533
+    },
+    {
+      "date": "2024-10-31",
+      "drawdown": -0.037124201563550376,
+      "equity": 3.92341655533569
+    },
+    {
+      "date": "2024-11-30",
+      "drawdown": -0.02466396720415792,
+      "equity": 5.344273383849086
+    },
+    {
+      "date": "2024-12-31",
+      "drawdown": -0.11632290117036463,
+      "equity": 5.190197131310156
+    }
+  ],
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "drawdown": 0.0,
+      "equity": 1.0
+    },
+    {
+      "date": "2023-01-31",
+      "drawdown": 0.0,
+      "equity": 1.0
+    },
+    {
+      "date": "2023-02-28",
+      "drawdown": -0.06313135911937912,
+      "equity": 1.0537953204420638
+    },
+    {
+      "date": "2023-03-31",
+      "drawdown": -0.1027132032315694,
+      "equity": 1.009273430947837
+    },
+    {
+      "date": "2023-04-30",
+      "drawdown": -0.1090031451786573,
+      "equity": 1.0021984674999591
+    },
+    {
+      "date": "2023-05-31",
+      "drawdown": -0.15292581916006404,
+      "equity": 0.9527939872097424
+    },
+    {
+      "date": "2023-06-30",
+      "drawdown": -0.15292581916006404,
+      "equity": 0.9527939872097424
+    },
+    {
+      "date": "2023-07-31",
+      "drawdown": -0.1787484614825255,
+      "equity": 0.9237485282697558
+    },
+    {
+      "date": "2023-08-31",
+      "drawdown": -0.19125945285310425,
+      "equity": 0.9096760920870115
+    },
+    {
+      "date": "2023-09-30",
+      "drawdown": -0.19125945285310425,
+      "equity": 0.9096760920870115
+    },
+    {
+      "date": "2023-10-31",
+      "drawdown": -0.19125945285310425,
+      "equity": 0.9096760920870115
+    },
+    {
+      "date": "2023-11-30",
+      "drawdown": -0.151618369837347,
+      "equity": 0.9542646138460436
+    },
+    {
+      "date": "2023-12-31",
+      "drawdown": -0.07714850485152483,
+      "equity": 1.0380287530344865
+    },
+    {
+      "date": "2024-01-31",
+      "drawdown": -0.11541178588010771,
+      "equity": 1.0095790752418856
+    },
+    {
+      "date": "2024-02-29",
+      "drawdown": -0.01940888857912843,
+      "equity": 1.406497404057379
+    },
+    {
+      "date": "2024-03-31",
+      "drawdown": -0.0380005573973691,
+      "equity": 1.4994923557892734
+    },
+    {
+      "date": "2024-04-30",
+      "drawdown": -0.1364589814026621,
+      "equity": 1.346022771898901
+    },
+    {
+      "date": "2024-05-31",
+      "drawdown": -0.1364589814026621,
+      "equity": 1.346022771898901
+    },
+    {
+      "date": "2024-06-30",
+      "drawdown": -0.14425584606319808,
+      "equity": 1.3338696058575914
+    },
+    {
+      "date": "2024-07-31",
+      "drawdown": -0.14425584606319808,
+      "equity": 1.3338696058575914
+    },
+    {
+      "date": "2024-08-31",
+      "drawdown": -0.18305506945382582,
+      "equity": 1.2733922954680899
+    },
+    {
+      "date": "2024-09-30",
+      "drawdown": -0.18305506945382582,
+      "equity": 1.2733922954680899
+    },
+    {
+      "date": "2024-10-31",
+      "drawdown": -0.18305506945382582,
+      "equity": 1.2733922954680899
+    },
+    {
+      "date": "2024-11-30",
+      "drawdown": -0.05617539456187344,
+      "equity": 1.6956523015171014
+    },
+    {
+      "date": "2024-12-31",
+      "drawdown": -0.10869914573494248,
+      "equity": 1.6012894092511352
+    }
+  ],
+  "curve_meta": {
+    "benchmark_point_count": 25,
+    "drawdown": "Month-end values sampled from full daily drawdown with initial capital anchor; not recomputed from the 25 display points.",
+    "initial_anchor_date": "2023-01-01",
+    "initial_anchor_phase": "before first evaluation open, not Jan1 close",
+    "normalized_to_initial": 100000,
+    "numeric_precision": "float display projection only; Decimal50 source retained privately",
+    "point_count": 25,
+    "resolution": "initial pre-open capital anchor plus 24 calendar month-end closes",
+    "source_observations": 731
+  },
+  "data_attribution": {
+    "code_license_scope": "This attribution and derived-data license do not relicense repository code or third-party strategy source.",
+    "coverage": "Dataset-derived report tables, result summaries, metrics and normalized equity/drawdown curves.",
+    "derived_data_license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "Frozen-window selection; strategy accounting and statistical calculation; initial-capital normalization; monthly display sampling. No raw dataset redistribution.",
+    "provider": "Binance Vision",
+    "source_portal": "https://data.binance.vision/",
+    "terms_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/TERMS_AND_CONDITIONS.md",
+    "terms_version": "1.0; last updated 2026-08-26; approved unchanged terms",
+    "use_scope": "Non-commercial historical personal research"
+  },
+  "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+  "family": "PUBLIC-M1266-DAILY-THREE-EMA-FIXED-QTY",
+  "fidelity_class": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+  "fidelity_reason": "Selected corrected public source is verified, with explicit market, data, indicator and execution adaptations; original engine/brokerage equivalence is unproven.",
+  "id": "M1266",
+  "limitations": [
+    "原作者明确披露展示区间经过挑选，并称更长区间表现更差。",
+    "BTCUSD/Bitfinex 2020–2021 改为 BTCUSDT/Binance 2023–2024；未验证原LEAN二进制、账户费用及买入力等价性。",
+    "独立历史数值、因果性及隔离恢复验证PASS；协调者验收和公开范围审查仍待完成，未发布或登记实体版本。",
+    "strict_reproductions=0、trusted=false、OOS=false、PIT=UNKNOWN；旧窗口已有研究曝光，旧搜索次数UNKNOWN。",
+    "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+    "收盘触发与下一指定开盘成交只是代理；不保证盘中5%止损、连续流动性、最小下单量、部分成交或冲击成本。",
+    "25个展示点不能重算731日Sharpe或日内/日频最大回撤；月末drawdown来自完整731日权益路径。",
+    "公开文档不提供原文附件、完整目录记录、原始市场行、全量账户流水或私有输入清单元数据。",
+    "结果不支持策略优越性、推广或实盘建议；delay2较佳仅是预冻结敏感性结果，不据此调参。"
+  ],
+  "lineage": {
+    "engine_sha256": "8fc21d238aa4c49fbd6c0a79ecfbd97fedc7d60b37e6df160aaf91eec40d05f5",
+    "entity_revision_status": "NOT_ISSUED_NOT_INVENTED",
+    "independent_synthetic_oracle_sha256": "1ee12de5d62034272feba0a313baf20aeeec265c0f1c2e7f909d62879e7daf88",
+    "private_provenance_projection": "WITHHELD_PENDING_FIELD_LEVEL_PUBLICATION_REVIEW",
+    "runner_sha256": "8d1f52b13e11e40f9fbb73715ca67242753192484be9d0c9549e2640f54cc2f7",
+    "selected_source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913"
+  },
+  "metrics": {
+    "additional_native_bar_lag": {
+      "full": {
+        "annualization": 365,
+        "cagr": 0.33441285635425355,
+        "closed_roundtrips": 19,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 0.2448700410396717,
+        "fees_paid": 3574.251828994915,
+        "fill_count": 39,
+        "final_equity": 178206.5636868741,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.17195960766935203,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.2398943261801845,
+        "sharpe_zero_cash": 1.2398943261801845,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 0.782065636868741
+      }
+    },
+    "cost_sensitivity": {
+      "0": {
+        "full": {
+          "annualization": 365,
+          "cagr": 0.2859686278147581,
+          "closed_roundtrips": 23,
+          "end": "2024-12-31",
+          "end_exclusive": "2025-01-01",
+          "exposure": 0.2640218878248974,
+          "fees_paid": 0.0,
+          "fill_count": 46,
+          "final_equity": 165485.52376487278,
+          "initial_equity": 100000.0,
+          "max_drawdown": -0.18235807336933973,
+          "monthly_count": 24,
+          "observations": 731,
+          "rejected_order_count": 0,
+          "sharpe": 1.0999446763918925,
+          "sharpe_zero_cash": 1.0999446763918925,
+          "start": "2023-01-01",
+          "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+          "total_return": 0.6548552376487278
+        }
+      },
+      "20": {
+        "full": {
+          "annualization": 365,
+          "cagr": 0.23416401514119892,
+          "closed_roundtrips": 23,
+          "end": "2024-12-31",
+          "end_exclusive": "2025-01-01",
+          "exposure": 0.2640218878248974,
+          "fees_paid": 9647.361161873416,
+          "fill_count": 46,
+          "final_equity": 152403.9051931725,
+          "initial_equity": 100000.0,
+          "max_drawdown": -0.20445462519606877,
+          "monthly_count": 24,
+          "observations": 731,
+          "rejected_order_count": 0,
+          "sharpe": 0.9397478549429087,
+          "sharpe_zero_cash": 0.9397478549429087,
+          "start": "2023-01-01",
+          "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+          "total_return": 0.5240390519317251
+        }
+      }
+    },
+    "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+    "fee_control_limitation": "Only one base 8 bps fee / 2 bps slippage buy-and-hold control. No independently matched fee0, fee20, or delay2 control was run; those cases are strategy-only sensitivities.",
+    "implementation_fidelity": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+    "periods": {
+      "full": {
+        "annualization": 365,
+        "cagr": 0.2650132062311941,
+        "closed_roundtrips": 23,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 0.2640218878248974,
+        "fees_paid": 3960.7990367528923,
+        "fill_count": 46,
+        "final_equity": 160128.9409251135,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.19125945285310425,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.035960765406854,
+        "sharpe_zero_cash": 1.035960765406854,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 0.601289409251135
+      }
+    },
+    "same_instrument_benchmark": {
+      "full": {
+        "annualization": 365,
+        "cagr": 1.2756357339635358,
+        "closed_roundtrips": 0,
+        "end": "2024-12-31",
+        "end_exclusive": "2025-01-01",
+        "exposure": 1.0,
+        "fees_paid": 72.0116574069059,
+        "fill_count": 1,
+        "final_equity": 519019.7131310156,
+        "initial_equity": 100000.0,
+        "max_drawdown": -0.25515131000092506,
+        "monthly_count": 24,
+        "observations": 731,
+        "rejected_order_count": 0,
+        "sharpe": 1.9943251995902143,
+        "sharpe_zero_cash": 1.9943251995902143,
+        "start": "2023-01-01",
+        "status": "HISTORICAL_VERIFIED_COORDINATOR_ACCEPTANCE_PENDING",
+        "total_return": 4.190197131310156
+      }
+    }
+  },
+  "name": "BTC日线三EMA回撤入场与持仓收盘峰值退出",
+  "origin_run_id": "M1266-catalog-batch019-20261003-v1",
+  "run_id": "M1266-catalog-batch019-20261003-v1",
+  "spec": {
+    "operational_rules_path": "../../specs/operational-rules-v1.json",
+    "rule_summary": "空仓严格EMA20>完成收盘>EMA50>EMA100时，以信号收盘权益90%冻结数量；持仓收盘跌至EMA50或较持仓收盘峰值跌超5%时退出。",
+    "selected_source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+    "source_url": "https://www.quantconnect.com/forum/discussion/11340/btc-3-emas-strategy/"
+  },
+  "variant_id": "M1266-catalog-batch019-20261003-v1-base"
+}
