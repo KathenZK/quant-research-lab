@@ -303,5 +303,5 @@
 
 - [root batch011来源预检](public-strategies/root-batch011-preflight-20261003/README.md)：diagnostic_topic；M0260/M0265/M0282/M0283已分配，逐ID C0与独立验收后才计完成。
 
-- [M0298 Scalp](public-strategies/M0298/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
+- [M0298 Simple](public-strategies/M0298/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
 - [M0304 Strategy002](public-strategies/M0304/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
