@@ -1,0 +1,56 @@
+{
+  "verified_at": "2026-10-03T06:22:09.061389+00:00",
+  "remote_commit": "6adfbbeac7c0851ac4e4492bc110f287651a756e",
+  "status": "PASS",
+  "method": "Fresh directory; ten files fetched from immutable remote commit; official provider archives redownloaded and checked against published frozen input hash; remote code rerun and independent verifier passed.",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "result_sha256": {
+    "fee20-trades.csv": "08595eb4ead2a0a2042d3fe8bebcd357444e2eb13d3a063c556f1dce9e16bc80",
+    "lag2-trades.csv": "9b334318b6bfe7eec5dca081b13bac0f9581b478a0d3c7e21ddfaa647fbe4e62",
+    "summary.json": "a8941d6cdb767b12fbec960836042b6b83ddcf8fa0f4b27587a6669952f04c42",
+    "fee0-nav.csv": "d7ca3cb9153559df9c269d014846af7d9f7d8612e435c9c959b3ccaaa339c687",
+    "fee20-nav.csv": "889951c56c391e590ecaea000063f5aea2e30494b9e726bc2722e2e79fd8f051",
+    "fee0-trades.csv": "7b85ef926fc3bdac99548d60ab99c2670d79f85dde9bf9ac979c65194e8a9c80",
+    "buyhold-trades.csv": "4481e3843e5bad2a5634b45732f067d25154cce006df5c885ed41f2a011deee6",
+    "buyhold-nav.csv": "ddf22ba489e0976cf9b138974c22461c057a4bfc34aacf410b4d5e5754ffbd80",
+    "base-trades.csv": "075269a4321baa7042381ee742c3d78a03a2aef7e6de406de1a777e04f00110a",
+    "lag2-nav.csv": "176e12c23a294dcf376700cfb53ef04ee48d3a5825ef13ca4ef4d0fbbc27287f",
+    "base-nav.csv": "87b253fb1108e30e6378cb7212e067d460999a6d34fd2a77ad4d3d9a8bf0a004"
+  },
+  "independent_validation": {
+    "base": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 3,
+      "max_equity_difference": 4.987232387065887e-07
+    },
+    "fee0": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 3,
+      "max_equity_difference": 4.995963536202908e-07
+    },
+    "fee20": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 3,
+      "max_equity_difference": 4.996545612812042e-07
+    },
+    "lag2": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 3,
+      "max_equity_difference": 4.990433808416128e-07
+    },
+    "buyhold": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 1,
+      "max_equity_difference": 4.994799382984638e-07
+    }
+  },
+  "limitations": [
+    "Official input reconstruction is not an off-site snapshot backup; withdrawn or revised archives can prevent future exact reconstruction.",
+    "Restored scripts ran in the existing uv.lock-pinned cloud Python environment; no separate machine/container claimed."
+  ]
+}
