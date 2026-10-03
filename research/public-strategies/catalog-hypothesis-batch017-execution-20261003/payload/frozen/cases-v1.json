@@ -1,0 +1,26 @@
+[
+  {
+    "name": "base",
+    "fee_bps_each_side": 8,
+    "slippage_bps_each_side": 2,
+    "delay_bars": 1
+  },
+  {
+    "name": "fee0",
+    "fee_bps_each_side": 0,
+    "slippage_bps_each_side": 2,
+    "delay_bars": 1
+  },
+  {
+    "name": "fee20",
+    "fee_bps_each_side": 20,
+    "slippage_bps_each_side": 2,
+    "delay_bars": 1
+  },
+  {
+    "name": "delay2",
+    "fee_bps_each_side": 8,
+    "slippage_bps_each_side": 2,
+    "delay_bars": 2
+  }
+]

@@ -1,0 +1,201 @@
+{
+  "schema": "batch017-independent-M1349-prehistory-v2/v1",
+  "status": "PASS",
+  "strategy_ids": [
+    "M1349"
+  ],
+  "strategy_configurations": 4,
+  "new_controls": 0,
+  "M1349_historical_runs": 0,
+  "prior_completed_ids": [
+    "M1346",
+    "M1270"
+  ],
+  "prior_C0_v1_unchanged": true,
+  "kernel_commit": "d306d09907562dc7c6c3482bbeb202458cd7b03c",
+  "execution_policy": {
+    "max_completed_closes": 25
+  },
+  "coverage": {
+    "source_control_input_bindings": "Previously independently verified unchanged exact pins",
+    "pure_features": "Independent Decimal50 ROC25 strict below -0.10, ready index25, no warmup intent; raw_exit always0",
+    "actual_lifecycle": "Entry open count0 and same close count1, mandatory25 at e+24, sells e+25/e+26; repeated raw_entry cannot cancel/postpone; counter/latch clear on actual sale",
+    "absence_of_recovery_exit": "ROC recovery never cancels lag2 pendingBUY and never produces early exit",
+    "terminal": "Unfilled mandatory sell and residual inventory/counter/latch preserved, no forced liquidation",
+    "account": "Exact Decimal values under frozen operations, every fill/nav/monthly/pending/roundtrip field; no tolerance or quantization",
+    "statistics": "Independent stdlib vs frozen numpy metrics, agreed relative1e-12 floating-output tolerance and exact zero",
+    "causality": "32 prefix and32 future perturbations with actual v2 lifecycle",
+    "serialization": "Two independently created full consumer artifact replicas byte identical, including 43 files each",
+    "runtime": "Exact existing runtime lock asserted",
+    "negative_check": "Deliberately corrupted completed-close lifecycle is rejected"
+  },
+  "synthetic_counts": {
+    "synthetic_engine_calls": 94,
+    "lifecycle_rows": 9340,
+    "prefix_checks": 32,
+    "future_checks": 32
+  },
+  "synthetic_account_counts": {
+    "simulations": 0,
+    "nav_rows_audited": 9338,
+    "fills_audited": 312,
+    "prefix_comparisons": 0,
+    "future_comparisons": 0,
+    "signal_rows_compared": 12382
+  },
+  "wrapper_replicas": 2,
+  "wrapper_lifecycle_rows_checked": 5848,
+  "pins": [
+    {
+      "path": "source/run_m1349_v2.py",
+      "bytes": 6593,
+      "sha256": "605abae4b0396656de08c4ff9a7eb059d7d3cce37ef523a57ebb276b05774e03"
+    },
+    {
+      "path": "source/daily_three_signals.py",
+      "bytes": 3880,
+      "sha256": "2b892666b161cedcda35abd99be13aba8a9f891aa280eb3f2d986a9d98daea1c"
+    },
+    {
+      "path": "source/timed_run.py",
+      "bytes": 1523,
+      "sha256": "85f06488c1fa910c73cec6506af4aef1dd4ac8e746a067239b6381cf6b825b5c"
+    },
+    {
+      "path": "source/offline-guard/sitecustomize.py",
+      "bytes": 437,
+      "sha256": "0e3e1233db1ef0d6fe7d3d250005434dd861590d0cc9bec3a4b4ae878ad01594"
+    },
+    {
+      "path": "frozen/runtime-v1.json",
+      "bytes": 363,
+      "sha256": "65d47ee6e423681adbc5795f5d44192084bbb6c50b0c7b791470591563cbcce1"
+    },
+    {
+      "path": "frozen/M1349-root-frozen-rules.json",
+      "bytes": 12837,
+      "sha256": "fde35a953c04aff2982e4ba57693d6f28d0576a92f1fa492660dc0712331b249"
+    },
+    {
+      "path": "frozen/M1349-catalog-original-fields.json",
+      "bytes": 2173,
+      "sha256": "076dbf301fc6690357c42b3c9a35d7f01e7be5de7bf3b8ecba0b1146715f2be7"
+    },
+    {
+      "path": "frozen/M1349-source-record.json",
+      "bytes": 3132,
+      "sha256": "c3c501a2fac943309f71ecb8f7163c964dfdb386d67ba9553b465eb82090ef50"
+    },
+    {
+      "path": "frozen/M1349-original11.csv",
+      "bytes": 1237,
+      "sha256": "2ce6df4d6d3a8128bf9789a3dd7df7ebed65640bf9e17c80d9c1e03fba5291e6"
+    },
+    {
+      "path": "frozen/cases-v1.json",
+      "bytes": 447,
+      "sha256": "0ad62d335d9032e0e291a9f54f96446b2c455cc5447c44b5cfbba43c6ccbc7ac"
+    },
+    {
+      "path": "frozen/statistics-v1.json",
+      "bytes": 1436,
+      "sha256": "5554f6f67d0956388aefb2b75dfe348e652b923b4cc1b91cf15b8fe23a2e560e"
+    },
+    {
+      "path": "frozen/catalog-hypothesis-batch017-output-contract-20261003.json",
+      "bytes": 5120,
+      "sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade"
+    },
+    {
+      "path": "frozen/buyhold-reference-v1.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "frozen/M1258-private-output-manifest.json",
+      "bytes": 5279,
+      "sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7"
+    },
+    {
+      "path": "frozen/M1258-coordinator-acceptance.safe.json",
+      "bytes": 3065,
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    {
+      "path": "frozen/M1258-remote-core-recovery.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "path": "review/independent/source-control-binding-review-v1.json",
+      "bytes": 4081,
+      "sha256": "846352d570fa81bfa98d02548e729be787c173315d34ac64362a9ba965a56337"
+    },
+    {
+      "path": "review/independent/input-QA-independent-v1.json",
+      "bytes": 9785,
+      "sha256": "b963439473029d07f662128dec2c4f57aeb960c322b154abcd2812cc8fed2717"
+    },
+    {
+      "path": "review/independent/M1349-synthetic-kernel-v2-v1.json",
+      "bytes": 1221,
+      "sha256": "6305d888d06253e04eb2075ec85a28a01f8842b7a2927d43393a78f85d549627"
+    },
+    {
+      "path": "review/independent/M1349-wrapper-v2-v1.json",
+      "bytes": 4636,
+      "sha256": "8dcc00b2a65c0209b61ae451ad15c906d2d8892870ec04b115044df85e62b39f"
+    },
+    {
+      "path": "review/independent/test_m1349_kernel_v2.py",
+      "bytes": 9618,
+      "sha256": "a8545f68ac8df8b9fdd39e7f18a16e7af02cd207060dbd5cb232f0afabd9f18d"
+    },
+    {
+      "path": "review/independent/verify_m1349_wrapper_v2.py",
+      "bytes": 6664,
+      "sha256": "5c7b82d49b06edd69f700c81205637b1164613d04730774fe369890d38ffdf59"
+    },
+    {
+      "path": "review/independent/test_kernel_v2.py",
+      "bytes": 17387,
+      "sha256": "17b156a2343a5d5baefede216e1a1f54f8a37c22bcb2b3389a5a0586dce02f35"
+    },
+    {
+      "path": "review/independent/verify_history_v1.py",
+      "bytes": 9987,
+      "sha256": "bc674a440797176ceecf528460e0ef5f3af6c3a4dce3cf7dd7e9a3de1b987b11"
+    },
+    {
+      "path": "kernel/v2/README.md",
+      "bytes": 3699,
+      "sha256": "60979d769e0e09ee0f0cae8c3ff879129014d18931c21eaf1eb1a26eedee361f"
+    },
+    {
+      "path": "kernel/v2/engine.py",
+      "bytes": 11513,
+      "sha256": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219"
+    },
+    {
+      "path": "kernel/v2/manifest.json",
+      "bytes": 1536,
+      "sha256": "0f5d96e56c1dfe396320d5d80932d09218291379495045a31b0564c1ef16bb5a"
+    },
+    {
+      "path": "kernel/v2/tests/synthetic-receipt.json",
+      "bytes": 2491,
+      "sha256": "d8933bd0175b83c10afc0c7cdab0ca7077757607cdbd6ef1062d49c1ad409369"
+    },
+    {
+      "path": "kernel/v2/tests/test_lifecycle.py",
+      "bytes": 9843,
+      "sha256": "ceea3ed5bd9faaa4aca8e2ec57130225f3784b04cb72a4f10987f5be5c7a21a8"
+    },
+    {
+      "path": "kernel/v2/verify_account.py",
+      "bytes": 10965,
+      "sha256": "191961bece1b80c02d074894a8f48fde8c3f6360b5ab564cc69484fae3b14712"
+    }
+  ],
+  "release_boundary": "Consumer executable QA passes for the four frozen M1349 cases only. Parent must freeze separate C0-v2 and exposure before history and request final binding check. Existing v1 C0/rules/results remain immutable."
+}

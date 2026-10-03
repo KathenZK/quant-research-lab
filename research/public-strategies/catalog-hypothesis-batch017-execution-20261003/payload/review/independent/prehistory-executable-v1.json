@@ -1,0 +1,198 @@
+{
+  "schema": "batch017-independent-prehistory-executable/v1",
+  "status": "PASS",
+  "strategy_ids": [
+    "M1346",
+    "M1270"
+  ],
+  "strategy_configurations": 8,
+  "new_controls": 0,
+  "historical_strategy_runs": 0,
+  "kernel_version": "v1",
+  "immutable_kernel_engine_sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+  "kernel_origin_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+  "M1349_status": "NOT_RELEASED: only pure indicator/event-boundary tests performed; actual held-counter/latch execution awaits approved kernel v2 and independent gate",
+  "correction": {
+    "original_test_status": "FAIL_LEXICAL_ORACLE_TEST_OVERRESTRICTION",
+    "retained_failure": "review/independent/synthetic-independent-v1.json",
+    "explanation": "Initial independent oracle required lexical equality across algebraically equivalent sell-fee formulas. The frozen contract requires exact Decimal50 numerical operations and Decimal str/no quantization for frozen implementation serialization; it does not require independent algebraic forms to retain the same trailing-zero exponent. The coordinator confirmed this is an oracle-test bug, not a trading or kernel change. Original evidence, root rules and kernel remain unchanged.",
+    "corrected_comparison": "Exact Decimal numerical equality with zero absolute error, no tolerance or quantization; the unchanged implementation must additionally replay byte-for-byte.",
+    "verification": {
+      "literal_full_case_fill_decimal_fields": 10318,
+      "literal_full_case_nav_decimal_fields": 17544,
+      "literal_numeric_errors": 0,
+      "literal_representation_only_differences": 61,
+      "broad_fee_numeric_comparisons": 12312,
+      "broad_numeric_errors": 0
+    }
+  },
+  "coverage": {
+    "source_and_control_binding": "PASS",
+    "fifty_raw_objects_CRC_byte_rebuild_full_row_QA": "PASS",
+    "strict_Decimal_signal_readiness_equality_and_threshold": "PASS",
+    "pending_opposite_before_position_gating": "PASS",
+    "pending_same_direction_earliest_due_and_absence_retention": "PASS",
+    "no_warmup_orders_no_terminal_forced_sale": "PASS",
+    "calendar_month_year_leap_and_full_cash_months": "PASS",
+    "M1270_delay2_zero_fills_and_105_cancellations": "PASS",
+    "full_account_monthly_exposure_metrics": "PASS",
+    "prefix_future": "PASS",
+    "open_fill_current_close_isolation": "PASS",
+    "repeated_wrapper_byte_identical": "PASS",
+    "runtime_exact_lock": "PASS",
+    "stock_verifier_signal_label_note": "The copied verifier reports a legacy Fraction label. This review actually supplies independent direct Decimal50 strict close comparisons or UTC calendar flags; no Fraction indicator implementation is claimed."
+  },
+  "synthetic_counts": {
+    "simulations": 129,
+    "nav_rows_audited": 18482,
+    "fills_audited": 3185,
+    "prefix_comparisons": 54,
+    "future_comparisons": 54,
+    "signal_rows_compared": 23121
+  },
+  "wrapper_replicas": 4,
+  "wrapper_output_files_each_replica": 43,
+  "pins": [
+    {
+      "path": "source/daily_three_signals.py",
+      "bytes": 3880,
+      "sha256": "2b892666b161cedcda35abd99be13aba8a9f891aa280eb3f2d986a9d98daea1c"
+    },
+    {
+      "path": "source/run_v1.py",
+      "bytes": 7157,
+      "sha256": "ded93a161eb532dace3fb4ca5f4c103ebf2a7ddc074ec8bc0028c657b73ea3a9"
+    },
+    {
+      "path": "source/timed_run.py",
+      "bytes": 1523,
+      "sha256": "85f06488c1fa910c73cec6506af4aef1dd4ac8e746a067239b6381cf6b825b5c"
+    },
+    {
+      "path": "source/rebuild_daily_input.py",
+      "bytes": 3749,
+      "sha256": "deb3450d9647802bf06f255cb0075c9f15acdf53e0c2652823b936e3cedfb7a1"
+    },
+    {
+      "path": "source/acquire_daily.py",
+      "bytes": 4171,
+      "sha256": "93b14087dfad5f9b2a6cf6a94268f093b298d5a0b5a94aa6a1907659900c1619"
+    },
+    {
+      "path": "source/test_signal_adapters.py",
+      "bytes": 3701,
+      "sha256": "0b805eb177456a09858686e804ba63939cc170249d4c69faea19cd1c12c7b84b"
+    },
+    {
+      "path": "kernel/v1/engine.py",
+      "bytes": 9243,
+      "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+    },
+    {
+      "path": "kernel/v1/verify_account.py",
+      "bytes": 8744,
+      "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+    },
+    {
+      "path": "kernel/v1/manifest.json",
+      "bytes": 1038,
+      "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+    },
+    {
+      "path": "frozen/runtime-v1.json",
+      "bytes": 363,
+      "sha256": "65d47ee6e423681adbc5795f5d44192084bbb6c50b0c7b791470591563cbcce1"
+    },
+    {
+      "path": "review/independent/prehistory-document-review-v1.json",
+      "bytes": 8781,
+      "sha256": "0a67d425c499cd5e40812ebe7ec2a9cc5f320f7f80ff9b4a51ec2bb6b7a2dfd5"
+    },
+    {
+      "path": "review/independent/source-control-binding-review-v1.json",
+      "bytes": 4081,
+      "sha256": "846352d570fa81bfa98d02548e729be787c173315d34ac64362a9ba965a56337"
+    },
+    {
+      "path": "review/independent/input-QA-independent-v1.json",
+      "bytes": 9785,
+      "sha256": "b963439473029d07f662128dec2c4f57aeb960c322b154abcd2812cc8fed2717"
+    },
+    {
+      "path": "review/independent/synthetic-independent-v1.json",
+      "bytes": 5013,
+      "sha256": "e4dc3a3303acfed319abc97dbdd7170ebae3af32aa2c352f01e8964960ba7a6c"
+    },
+    {
+      "path": "review/independent/synthetic-independent-v2.json",
+      "bytes": 965,
+      "sha256": "705aa0c4412ea546e2b26deba425cd1e3b574fd1d461c1a2c22d0915a937771c"
+    },
+    {
+      "path": "review/independent/wrapper-independent-v1.json",
+      "bytes": 4947,
+      "sha256": "63e3d9fdb5cfc824beee5dc5a39327196706b4a4541ea59deef91e3830e72e19"
+    },
+    {
+      "path": "review/independent/literal-fee-order-difference-v1.json",
+      "bytes": 5327,
+      "sha256": "e48575709cda056db4a231b1d9733929b3df5dd596ac7e1db7726e54a99bd7b3"
+    },
+    {
+      "path": "review/independent/decimal-fee-equivalence-v1.json",
+      "bytes": 2451,
+      "sha256": "994af65bb77e8765fe8d8ead0466173b4a2f418d857e58c0455f7be2fb60c5b0"
+    },
+    {
+      "path": "review/independent/test_kernel_v1.py",
+      "bytes": 17353,
+      "sha256": "2d0a8385db5aa98e52dcdaf70032b459cf8bf68305213a50c241ba26b8ec0963"
+    },
+    {
+      "path": "review/independent/test_kernel_v2.py",
+      "bytes": 17387,
+      "sha256": "17b156a2343a5d5baefede216e1a1f54f8a37c22bcb2b3389a5a0586dce02f35"
+    },
+    {
+      "path": "review/independent/verify_wrapper_v1.py",
+      "bytes": 5542,
+      "sha256": "83d71ccfe7f25e022bf7b91c68057b35c44a1418609bade83b3ae5ef6d307087"
+    },
+    {
+      "path": "review/independent/verify_input_v1.py",
+      "bytes": 5944,
+      "sha256": "e0d42f34441d6137444fe99300f3d38a4c220d8db03d53522a5905a4cf7ab971"
+    },
+    {
+      "path": "review/independent/compare_literal_fee_order_v1.py",
+      "bytes": 3532,
+      "sha256": "6ff0b12071f06acc19cc071e12a031276b82ad7c9e0aee6191cc54c7a26a775e"
+    },
+    {
+      "path": "review/independent/prove_decimal_fee_equivalence_v1.py",
+      "bytes": 3047,
+      "sha256": "3af8b77ccdf41c2cc0901bd18bc904329800664730b684177271c16f6d5be8a5"
+    },
+    {
+      "path": "review/independent/manual-account-vectors-v1.json",
+      "bytes": 3274,
+      "sha256": "f3b73f7a4a18dad06d9f0e5c318e2d70fdec8a348a94d97f32143f84953e83d4"
+    },
+    {
+      "path": "review/independent/prehistory-test-requirements-v1.md",
+      "bytes": 6897,
+      "sha256": "378c2804dcf198154e957babe326c31d3e47288cdb937e98a6a7d8808593aa53"
+    },
+    {
+      "path": "review/input-QA-v1.json",
+      "bytes": 697,
+      "sha256": "108312712e60c36fe836f5c300933933fcaf76085c4a0f9494ea30b44e363038"
+    },
+    {
+      "path": "review/input-acquisition-v1.json",
+      "bytes": 58566,
+      "sha256": "c5fcdcf6d7b04b408fa9a57231f7f323268b306cea1fce75f207f20b818506be"
+    }
+  ],
+  "release_boundary": "Executable/data/source/control prehistory gates pass only for these eight compatible cases. Parent must freeze C0/exposure with these exact pins before any history; reviewer will perform final C0 binding check. This receipt does not release M1349 or create any new control."
+}

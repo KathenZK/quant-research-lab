@@ -1,0 +1,22 @@
+{
+  "schema": "research-remote-recovery-scope-addendum/v1",
+  "recorded_at_utc": "2026-10-03T16:19:04.784638+00:00",
+  "basis": "User authorization clarified by parent on2026-10-03; mandatory remote recoverable core distinguished from unbacked private full archive.",
+  "preservation": "Existing C0, result files, failed versions and earlier contracts are immutable. This explicit addendum governs delivery/expansion interpretation and the next batch; it does not retroactively alter any trading rule or claim an upload.",
+  "mandatory_core": [
+    "Remote repository retains self-authored executable code, locked parameters, stable ID, original catalog/provenance, research classification, perIDMarkdown,lightweight results and full-result hash commitment",
+    "Data source/version/hash/coverage/QA/terms and executable reconstruction recipe are retained; allowed private cache or approvedpublic archives may supply the market bytes",
+    "Fetch actual remote core bytes into a new workspace and rebuild results against fixed output hashes; independently validate accounts/metrics and record runtime/input dependencies",
+    "Persist public core recovery receipt; original rawdata availability is not guaranteed and missinglicensedinput is an explicit recovery dependency"
+  ],
+  "private_full_archive": "Preserve local immutable ZIP and standalone manifest. Upload to private Library when authorized route works; existingHTTP401 remains an unresolved gap, not full private-backup success. No public rawdata or full private ledgers.",
+  "expansion_rule": "A validated remote recoverable core can satisfy the next-batch durability gate under the clarified authorization, with privateZIP gap separately disclosed. Hash lists alone without code/rules/actualrebuild cannot satisfy this gate.",
+  "prohibited": [
+    "credential read/create",
+    "permission orsecurity changes",
+    "restricted-source bypass",
+    "old evidence deletion",
+    "rawprivateorpersonalannotations public publishing",
+    "paid data or live trading"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "batch017-independent-M1349-C0-binding/v1",
+  "status": "PASS",
+  "C0_sha256": "1b7389015fb57787ef67aa661e13a825d15db6d1c61683d538fef79cbfb68e17",
+  "C0_bytes": 8372,
+  "C0_pins_verified": 39,
+  "M1349_prehistory_pins_verified": 30,
+  "prior_v1_C0_pins_unchanged": 51,
+  "strategy_ids": [
+    "M1349"
+  ],
+  "strategy_configurations": 4,
+  "new_controls": 0,
+  "M1349_historical_runs_before_release": 0,
+  "execution_policy": {
+    "max_completed_closes": 25
+  },
+  "source_kernel_rules_cases_runtime_input": "EXACT",
+  "prior_completed_v1_cases": 8,
+  "M1349_prior_results": "None in designated historical output roots; synthetic results only and C0 declaration states unseen",
+  "release": "Parent may execute only the four frozen M1349 cases on unchanged pinned v2; no new controls."
+}

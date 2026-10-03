@@ -1,0 +1,16 @@
+{
+  "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+  "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+  "total_return": "E_last/100000-1",
+  "cagr": "(E_last/100000)**(365/n)-1, n=731",
+  "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+  "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+  "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+  "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+  "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+  "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+  "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+  "fee_total": "sum exact Decimal fees; represented decimaltext",
+  "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+  "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+}
