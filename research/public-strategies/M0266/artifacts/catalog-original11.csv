@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0266,CombinedBinHAndCluc,加密现货,BinHV45 硬编码阈值（bbdelta>收盘×0.008、closedelta>收盘×0.0175、tail<bbdelta×0.25）或 Cluc（收盘<EMA50 且 <0.985×BB20 下轨、量<30 均量×20）做多；收盘>BB 中轨平多。,berlinguyinca / freqtrade/freqtrade-strategies,CombinedBinHAndCluc,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py,CombinedBinHAndCluc.py,高,,未知
