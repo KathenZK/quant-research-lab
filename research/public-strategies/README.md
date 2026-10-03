@@ -51,3 +51,6 @@
 [dot batch006来源预检](dot-batch006-preflight-20261003/README.md)：M0253/M0272/M0264/M0266为唯一dot后续批次，当前仅源审，历史运行0。
 
 [root batch011来源预检](root-batch011-preflight-20261003/README.md)：M0260/M0265/M0282/M0283已分配，逐ID C0与独立验收后才计完成。
+
+- [M0298 Scalp](M0298/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
+- [M0304 Strategy002](M0304/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。

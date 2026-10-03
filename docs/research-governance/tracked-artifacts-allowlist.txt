@@ -1017,3 +1017,62 @@ research/public-strategies/M0307/artifacts/20261003-batch009/results/summary.jso
 research/public-strategies/M0307/artifacts/20261003-batch009/source-qa.json
 research/public-strategies/M0307/artifacts/20261003-batch009/stage-timing.json
 research/public-strategies/M0307/artifacts/20261003-batch009/trade-sample-manifest.json
+
+# dot004 approved frozen evidence; precise paths only
+research/public-strategies/M0298/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/M0298-C0-release-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/M0298-historical-ledger-audit-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/base-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/buyhold-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/curve-meta.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/data-recovery-safe-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/delay2-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/fee0-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/fee20-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/full-local-result-hashes.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/history-input-feature-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/independent-canonical-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/independent-historical-fill-pricing-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/portable-historical-ledger-replay-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/real-input-feature-causality-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/recovery-receipt.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/shared-Decimal-ledger-audit-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/summary.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/synthetic-capacity-test-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/synthetic-engine-test-v3.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/graph-record.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-scalar-oracle-replay.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/offline-code-recovery-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/source-synthetic-preflight-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/graph-record.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-scalar-oracle-replay.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/offline-code-recovery-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/source-synthetic-preflight-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/catalog-record.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/C0-input-and-causality.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/catalog-record.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/clean-recovery.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/data-recovery-safe-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/documentation-revision-2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-canonical-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-historical-ledger-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-synthetic-Decimal.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/result-manifest.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/run-observation.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/summary.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/synthetic-execution-prefix.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/synthetic-execution-tests.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-scalar-recovery.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/preparation-revision-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/synthetic-formula-validation.json  # dot004 M0298/M0304
