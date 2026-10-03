@@ -1,0 +1,70 @@
+{
+  "id": "M0293",
+  "status": "PASS",
+  "checks": {
+    "base": {
+      "fills": 128,
+      "march24_fills": 0,
+      "no_timestamp_bounds_overlap_known_halt": true,
+      "all_signal_closes_before_execution_lower_bound": true,
+      "descriptive_calendar_returns": {
+        "2023": -0.029789999539704737,
+        "2024": 0.6050913132444156
+      },
+      "sell_reasons": {
+        "exit_signal": 64
+      }
+    },
+    "fee0": {
+      "fills": 128,
+      "march24_fills": 0,
+      "no_timestamp_bounds_overlap_known_halt": true,
+      "all_signal_closes_before_execution_lower_bound": true,
+      "descriptive_calendar_returns": {
+        "2023": 0.017017298614198095,
+        "2024": 0.6877134892865393
+      },
+      "sell_reasons": {
+        "exit_signal": 64
+      }
+    },
+    "fee20": {
+      "fills": 128,
+      "march24_fills": 0,
+      "no_timestamp_bounds_overlap_known_halt": true,
+      "all_signal_closes_before_execution_lower_bound": true,
+      "descriptive_calendar_returns": {
+        "2023": -0.09598658389307146,
+        "2024": 0.4886906054061648
+      },
+      "sell_reasons": {
+        "exit_signal": 64
+      }
+    },
+    "delay2": {
+      "fills": 128,
+      "march24_fills": 0,
+      "no_timestamp_bounds_overlap_known_halt": true,
+      "all_signal_closes_before_execution_lower_bound": true,
+      "descriptive_calendar_returns": {
+        "2023": 0.06457703321512698,
+        "2024": 0.8896157169919292
+      },
+      "sell_reasons": {
+        "exit_signal": 64
+      }
+    },
+    "buyhold": {
+      "fills": 1,
+      "march24_fills": 0,
+      "no_timestamp_bounds_overlap_known_halt": true,
+      "all_signal_closes_before_execution_lower_bound": true,
+      "descriptive_calendar_returns": {
+        "2023": 1.4759353934919632,
+        "2024": 1.1885606887837454
+      },
+      "sell_reasons": {}
+    }
+  },
+  "new_strategy_trials": 0
+}

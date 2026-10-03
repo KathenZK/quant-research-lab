@@ -1,0 +1,89 @@
+{
+  "id": "M0293",
+  "status": "PASS",
+  "verified_at_utc": "2026-10-03T11:07:12.209467+00:00",
+  "new_directory": "/workspace/quant-recovery/m0293-20261003/recovery-v1",
+  "restored_result_files": 18,
+  "all_result_files_byte_identical": true,
+  "source_restore": "PASS",
+  "data_restore": "PASS",
+  "independent_accounting": "PASS",
+  "protocol_sha256": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "new_strategy_trials": 0,
+  "data_mode": "offline new-directory copy plus75 raw hashes/checksums/CRC/rowQA and raw-to-canonical rebuild;0newmarketrequests",
+  "files": {
+    "fee20-trades.csv": {
+      "sha256": "c63426ba930256d3fa1530e2e577452534651da36653bdd9bc04eb5b69c1937e",
+      "bytes": 37127
+    },
+    "base-daily-nav.csv": {
+      "sha256": "c0528db5f14eacdd9e86c53d6ec74ee288061c8a0993714d6fb2f4687de1dc66",
+      "bytes": 98576
+    },
+    "signals.csv": {
+      "sha256": "f94ca71ec04201763b9661491f18dfd9f0b0b797b2c2551567da024d8d16f025",
+      "bytes": 329626
+    },
+    "summary.json": {
+      "sha256": "c25178d4b6c5a92f5c1347dc45d3580ef61c46919fc6b970fb8ef58b1238d430",
+      "bytes": 5691
+    },
+    "fee0-nav.csv": {
+      "sha256": "3865abcb98dce12c5f85e1a2ce245b1ad691e76c0b717eb4c17394db013e04d3",
+      "bytes": 540746
+    },
+    "fee20-nav.csv": {
+      "sha256": "2986b7b506c9d29b2934dcb26bf4a6f7ae4a316c4b718db326fe21a00732285e",
+      "bytes": 543927
+    },
+    "fee0-trades.csv": {
+      "sha256": "eaa30f07d490a9553771b5d5ef14cff40d428afc543c6ef09fe1194f9e14522f",
+      "bytes": 34938
+    },
+    "buyhold-trades.csv": {
+      "sha256": "7b6a0c7df436c86c312c71a3818f07c10c1b384203aac73fb6c1946c6beaed7f",
+      "bytes": 497
+    },
+    "buyhold-nav.csv": {
+      "sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "bytes": 608938
+    },
+    "buyhold-daily-nav.csv": {
+      "sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "bytes": 109748
+    },
+    "fee0-daily-nav.csv": {
+      "sha256": "538e945be8d34814c8517ab1d759b63643de68207b693fee4d6b7648602c9fd9",
+      "bytes": 98429
+    },
+    "delay2-daily-nav.csv": {
+      "sha256": "21902e01ed983841990e890e2fbb8097735e4be9694467ee01a178aa92b4ed8a",
+      "bytes": 98657
+    },
+    "base-trades.csv": {
+      "sha256": "1460427f924647868ebe580e11b2697a808489be605e76445accc9eea20b05ab",
+      "bytes": 37101
+    },
+    "delay2-nav.csv": {
+      "sha256": "662234841d25997ab5a88ffef94dbdb291e06146432603bff82a0b3f8caa5b28",
+      "bytes": 542253
+    },
+    "fee20-daily-nav.csv": {
+      "sha256": "6a30eeaa9630aac4cedd218f497daaecdb7627fa71e354779e90cbc3f57dd7d0",
+      "bytes": 98958
+    },
+    "delay2-trades.csv": {
+      "sha256": "ef7a7f89ce0795b6fb804ff0dfb216e60d6d22dcdf299451f86d97227f3174c1",
+      "bytes": 37041
+    },
+    "base-nav-light.csv": {
+      "sha256": "c0528db5f14eacdd9e86c53d6ec74ee288061c8a0993714d6fb2f4687de1dc66",
+      "bytes": 98576
+    },
+    "base-nav.csv": {
+      "sha256": "abee398ff30720fa30fab4c4b2f4c0beaa62aeebd725c110aa1594f8cd496f4e",
+      "bytes": 541591
+    }
+  }
+}

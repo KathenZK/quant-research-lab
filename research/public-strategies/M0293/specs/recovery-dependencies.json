@@ -1,0 +1,33 @@
+{
+  "id": "M0293",
+  "scope": "thin recovery package with exact shared dependencies; not a full-input offline backup",
+  "required_repository_dependencies": [
+    {
+      "path": "research/public-strategies/M0256/scripts/rebuild_official_bars.py",
+      "sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+      "bytes": 18608,
+      "fixed_commit": "a99669624fca97a2cd1fb6862f442f9196529cec",
+      "source_url": "https://github.com/KathenZK/quant-research-lab/blob/a99669624fca97a2cd1fb6862f442f9196529cec/research/public-strategies/M0256/scripts/rebuild_official_bars.py",
+      "purpose": "required by audit_input.py and rebuild.py; preserve original relative path"
+    },
+    {
+      "path": "research/public-strategies/M0256/artifacts/20261003-first-replay/4h-input-manifest-light.json",
+      "sha256": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594",
+      "bytes": 33052,
+      "fixed_commit": "a99669624fca97a2cd1fb6862f442f9196529cec",
+      "source_url": "https://github.com/KathenZK/quant-research-lab/blob/a99669624fca97a2cd1fb6862f442f9196529cec/research/public-strategies/M0256/artifacts/20261003-first-replay/4h-input-manifest-light.json",
+      "purpose": "required by audit_input.py and rebuild.py; preserve original relative path"
+    }
+  ],
+  "external_required_inputs": {
+    "market_snapshot": "complete immutable4h snapshot with manifest/archives/canonical, expected canonicalSHA9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c; not included in thin bundle",
+    "source_snapshot": "three files in specs/source-manifest.json; included only in private thin bundle runtime-sources, not public Git",
+    "python_dependencies": "specs/requirements.lock.txt plus recorded environment; wheels not included"
+  },
+  "original_freeze_parent_spec": {
+    "path": "research/public-strategies/M0286/specs/M0286-first-replay.json",
+    "fixed_commit": "a99669624fca97a2cd1fb6862f442f9196529cec",
+    "needed_for": "original C0 freeze provenance only; do not refreeze existing evidence; not needed for run/rebuild"
+  },
+  "library_backup_status": "NOT_UPLOADED; root-reported helper401; local archive is not remote persistence"
+}

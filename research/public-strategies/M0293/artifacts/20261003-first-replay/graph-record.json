@@ -1,0 +1,52 @@
+{
+  "id": "M0293",
+  "name": "ReinforcedAverageStrategy：BTC现货4h EMA交叉与48h SMA过滤",
+  "status": "tested_hypothesis_only",
+  "reason": "原始信号和48h闭合合并核对通过；SMA50预热不足如实保留；常量ROI50%、止损20%，非原框架严格复现。",
+  "tested_variants": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "families": [
+    "PUBLIC-M0293-REINFORCED-AVERAGE"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_bytes_verified_original_class_signal_arrays_identical",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "strict_replication": false,
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_proven": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0293-20261003-first-replay",
+      "variant_id": "M0293-BTCUSDT-4H-EMA8-21-48H-SMA50-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69",
+      "manifest_sha256": "320618eb5b07f9a54cb2a8252b48953d3af15e1a82e93b4cf423bf3e25f5db58",
+      "family": "PUBLIC-M0293-REINFORCED-AVERAGE"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0293-20261003-first-replay",
+      "variant_id": "M0293-BTCUSDT-4H-EMA8-21-48H-SMA50-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69",
+      "manifest_sha256": "320618eb5b07f9a54cb2a8252b48953d3af15e1a82e93b4cf423bf3e25f5db58"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 plus Binance Dataset Terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "EMA8/21 and closed48h SMA50 calculation, declared OHLC execution/accounting, metrics and daily sampling"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "M0293",
+  "files": [
+    {
+      "filename": "M0293-ReinforcedAverageStrategy.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ReinforcedAverageStrategy.py",
+      "sha256": "50c8e88441ffead38fd1e1b3d49b151a001068f5eff01a23c10178b1f2c87e38",
+      "bytes": 3502
+    },
+    {
+      "filename": "technical-util-1.5.3.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/technical/util.py",
+      "sha256": "8f16e768c44c3c2b3171a4c04cc834fa26caf1ac6a8cf209affbfb31fd1fac3d",
+      "bytes": 4293
+    },
+    {
+      "filename": "qtpylib-indicators.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/vendor/qtpylib/indicators.py",
+      "sha256": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760",
+      "bytes": 19688
+    }
+  ],
+  "attribution": "Gert Wohlgemuth / freqtrade-strategies; technical and Freqtrade contributors; qtpylib Ran Aroussi",
+  "original_runtime_known": false,
+  "technical_reference": "1.5.3 / 8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+  "catalog_identity_verified": {
+    "library_file_id": "libfile_296b8fa9c4348191a5c6d138830f8494",
+    "read_line": 296,
+    "original_id": "M0293",
+    "name": "ReinforcedAverageStrategy",
+    "private_full_table_not_copied": true
+  }
+}

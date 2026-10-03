@@ -1,0 +1,18 @@
+{
+  "id": "M0293-20261003-first-replay-exposure",
+  "kind": "exposure",
+  "family": "PUBLIC-M0293-REINFORCED-AVERAGE",
+  "window_start": "2023-01-01T00:00:00Z",
+  "window_end": "2025-01-01T00:00:00Z",
+  "evidence_class": "historical_replay",
+  "trial_count": 4,
+  "control_configurations": 1,
+  "historical_total_search_count": "UNKNOWN",
+  "window_previously_exposed": true,
+  "oos_claim": false,
+  "selection_reason": "Coordinator exclusive assignment; original fixed signals and4 predeclared execution cases, no search; global query empty does not prove no prior exposure",
+  "artifacts": {
+    "specs/M0293-first-replay.json": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69"
+  },
+  "recorded_at_utc": "2026-10-03T11:04:02.635916+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "M0293",
+  "status": "PASS",
+  "cuts": [
+    {
+      "prefix_rows": 601,
+      "future_price_multiplier": 3,
+      "five_case_events_and_nav_unchanged": true
+    },
+    {
+      "prefix_rows": 611,
+      "future_price_multiplier": 3,
+      "five_case_events_and_nav_unchanged": true
+    },
+    {
+      "prefix_rows": 624,
+      "future_price_multiplier": 3,
+      "five_case_events_and_nav_unchanged": true
+    },
+    {
+      "prefix_rows": 1500,
+      "future_price_multiplier": 3,
+      "five_case_events_and_nav_unchanged": true
+    },
+    {
+      "prefix_rows": 3000,
+      "future_price_multiplier": 3,
+      "five_case_events_and_nav_unchanged": true
+    }
+  ],
+  "new_strategy_trials": 0
+}

@@ -1,0 +1,16 @@
+{
+  "id": "M0293",
+  "status": "PASS",
+  "rows": 4572,
+  "consumed_indicators_equal": 3,
+  "entry_exit_arrays_identical": true,
+  "original_risk": {
+    "minimal_roi": {
+      "0": 0.5
+    },
+    "stoploss": -0.2,
+    "trailing": false
+  },
+  "resample_interval_minutes": 2880,
+  "harness": "Original class methods and exact pinned technical/qtpylib; empty IStrategy base and explicit4h-to240 minute conversion; not full Freqtrade engine"
+}
