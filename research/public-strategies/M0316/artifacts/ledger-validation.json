@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "validation_method": "independent Decimal ledger; no engine import",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "cases": {
+    "base": {
+      "fill_events": 46,
+      "nav_rows": 4386,
+      "max_equity_error_usdt": 4.766775749136927e-11,
+      "final_equity": 89388.28234473898,
+      "total_fees": 3230.3571796279793,
+      "status": "PASS"
+    },
+    "fee0": {
+      "fill_events": 46,
+      "nav_rows": 4386,
+      "max_equity_error_usdt": 2.79694102673656e-11,
+      "final_equity": 86676.3280002998,
+      "total_fees": 0.0,
+      "status": "PASS"
+    },
+    "fee20": {
+      "fill_events": 46,
+      "nav_rows": 4386,
+      "max_equity_error_usdt": 6.37536336604158e-11,
+      "final_equity": 87785.33216843235,
+      "total_fees": 8017.277205076902,
+      "status": "PASS"
+    },
+    "delay2": {
+      "fill_events": 36,
+      "nav_rows": 4386,
+      "max_equity_error_usdt": 3.041372315935145e-11,
+      "final_equity": 93077.44278671588,
+      "total_fees": 2659.5113902218286,
+      "status": "PASS"
+    },
+    "buyhold": {
+      "fill_events": 1,
+      "nav_rows": 4386,
+      "max_equity_error_usdt": 1.0278090830367415e-10,
+      "final_equity": 541873.4870164824,
+      "total_fees": 75.93924860111912,
+      "status": "PASS"
+    }
+  },
+  "limits": [
+    "uses recorded fills, checks arithmetic/signals/timing but cannot independently resolve OHLC intrabar path",
+    "separate source/formula/prefix checks validate signal generation"
+  ]
+}

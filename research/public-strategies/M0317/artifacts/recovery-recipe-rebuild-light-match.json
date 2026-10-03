@@ -1,0 +1,550 @@
+{
+  "status": "PASS_OFFLINE_LIGHT_MANIFEST_AND_FROZEN_BUILDER",
+  "id": "M0317",
+  "snapshot_manifest_sha256": "f130c0699fd184961d46b0badfc65576a1aa2524ac4eb08a803cfbbaff8224cb",
+  "light_manifest_sha256": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594",
+  "light_has_protocol": false,
+  "full_protocol_verified_against_builder_AST": "binance-vision-spot-btcusdt-native12-v1",
+  "builder_sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+  "source_objects_checked": 75,
+  "objects": [
+    {
+      "month": "2022-12",
+      "kind": "zip",
+      "path": "archives/2022-12/BTCUSDT-4h-2022-12.zip",
+      "bytes": 11891,
+      "sha256": "e365e7bcb44d0d35790a8b7f1a80977ece878a64ab71e2a9deaaca5620207969"
+    },
+    {
+      "month": "2022-12",
+      "kind": "checksum",
+      "path": "archives/2022-12/BTCUSDT-4h-2022-12.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "b53ef5ef0d35aca811e2e550e8a35fa0143913d1999666fcdd32999a6296d88d"
+    },
+    {
+      "month": "2022-12",
+      "kind": "csv",
+      "path": "archives/2022-12/BTCUSDT-4h-2022-12.csv",
+      "bytes": 30694,
+      "sha256": "2d264bcd43614781b79092dca9bde2218615e38285b4aecae6a850b412955201"
+    },
+    {
+      "month": "2023-01",
+      "kind": "zip",
+      "path": "archives/2023-01/BTCUSDT-4h-2023-01.zip",
+      "bytes": 12103,
+      "sha256": "9f995d87e5de9f26c5a2a2073943479388c5e3e2bdbaf57dc3b6e925564ab43e"
+    },
+    {
+      "month": "2023-01",
+      "kind": "checksum",
+      "path": "archives/2023-01/BTCUSDT-4h-2023-01.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "d610e15e66f7a3bc60b0102a092d990b041c095e32c74297631413165036934d"
+    },
+    {
+      "month": "2023-01",
+      "kind": "csv",
+      "path": "archives/2023-01/BTCUSDT-4h-2023-01.csv",
+      "bytes": 30835,
+      "sha256": "12e8ba2b41489933d3f3882c24ee482c7633c667354fb0d7a37944c8f52c175b"
+    },
+    {
+      "month": "2023-02",
+      "kind": "zip",
+      "path": "archives/2023-02/BTCUSDT-4h-2023-02.zip",
+      "bytes": 11076,
+      "sha256": "bef28416b5ecc05f7a0b8536ad1aa2b38f6a28fb6cf93de83bc079827c76a879"
+    },
+    {
+      "month": "2023-02",
+      "kind": "checksum",
+      "path": "archives/2023-02/BTCUSDT-4h-2023-02.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "92417b5cf0b6b41dc7f8db37b2bd57bb3d2a8c5b2b3c6e10e318530b7d1f9a6d"
+    },
+    {
+      "month": "2023-02",
+      "kind": "csv",
+      "path": "archives/2023-02/BTCUSDT-4h-2023-02.csv",
+      "bytes": 27955,
+      "sha256": "cbd4d9d4260d67a6641a75bd8a5d6a055c09e5cdd1acdd92b86f40c04c27e599"
+    },
+    {
+      "month": "2023-03",
+      "kind": "zip",
+      "path": "archives/2023-03/BTCUSDT-4h-2023-03.zip",
+      "bytes": 12128,
+      "sha256": "717838cee19bf2448f8114430770e527e4f49b8448dab85dab81f30469fbfe48"
+    },
+    {
+      "month": "2023-03",
+      "kind": "checksum",
+      "path": "archives/2023-03/BTCUSDT-4h-2023-03.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "d723fee4396cc9eb6dec391bb6d38a75779e51976de9f45eee7dd3bd54fdca3e"
+    },
+    {
+      "month": "2023-03",
+      "kind": "csv",
+      "path": "archives/2023-03/BTCUSDT-4h-2023-03.csv",
+      "bytes": 30877,
+      "sha256": "5a1e3846fd5f76b30c0bf04a8f2cc28be38ef0890975a8dcaf15f9b9b55e33e7"
+    },
+    {
+      "month": "2023-04",
+      "kind": "zip",
+      "path": "archives/2023-04/BTCUSDT-4h-2023-04.zip",
+      "bytes": 11337,
+      "sha256": "05af7d6318cfd578e7bbced1f3ac568f0fb281518f174365578b58fd27eb19d3"
+    },
+    {
+      "month": "2023-04",
+      "kind": "checksum",
+      "path": "archives/2023-04/BTCUSDT-4h-2023-04.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "725a1f5f7bfcce8f1816388d3ba7e786c547a38c969ca17309ec30f98faedef7"
+    },
+    {
+      "month": "2023-04",
+      "kind": "csv",
+      "path": "archives/2023-04/BTCUSDT-4h-2023-04.csv",
+      "bytes": 29300,
+      "sha256": "4e6f62f9a5aadc66e5ff7c10a9fa6f9c721ab41d9b49a08d5d5cea34f5b0a077"
+    },
+    {
+      "month": "2023-05",
+      "kind": "zip",
+      "path": "archives/2023-05/BTCUSDT-4h-2023-05.zip",
+      "bytes": 11643,
+      "sha256": "4ffaf612de992ac4d43e8c1170c52192fb94f1fd0db227445b1d71c3d8345f18"
+    },
+    {
+      "month": "2023-05",
+      "kind": "checksum",
+      "path": "archives/2023-05/BTCUSDT-4h-2023-05.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "4031525c27bba68d60b2090549cf0af91924be36845500519fb12847da630648"
+    },
+    {
+      "month": "2023-05",
+      "kind": "csv",
+      "path": "archives/2023-05/BTCUSDT-4h-2023-05.csv",
+      "bytes": 30149,
+      "sha256": "070a70601abac0ddc81692bd04d063aad8cc88a16c558a881a60c99bbaea9335"
+    },
+    {
+      "month": "2023-06",
+      "kind": "zip",
+      "path": "archives/2023-06/BTCUSDT-4h-2023-06.zip",
+      "bytes": 11263,
+      "sha256": "b12334aaac1aaa68fbc0ffd165cb04f56337644dc4e4ff5c44db61b5a6d30f49"
+    },
+    {
+      "month": "2023-06",
+      "kind": "checksum",
+      "path": "archives/2023-06/BTCUSDT-4h-2023-06.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "2a9ea9b7c4fab13b22c32f19117e09c4fb29d6856600886ae1581a106a30313a"
+    },
+    {
+      "month": "2023-06",
+      "kind": "csv",
+      "path": "archives/2023-06/BTCUSDT-4h-2023-06.csv",
+      "bytes": 29182,
+      "sha256": "1697e68c2375c5d53d2ec4e0fb944cb837480e687629de9f09bf22cd3b8ddc09"
+    },
+    {
+      "month": "2023-07",
+      "kind": "zip",
+      "path": "archives/2023-07/BTCUSDT-4h-2023-07.zip",
+      "bytes": 11475,
+      "sha256": "d5299a068d3bd76164447e7dde9378caa03435db200145934fccc3c69e82a3a9"
+    },
+    {
+      "month": "2023-07",
+      "kind": "checksum",
+      "path": "archives/2023-07/BTCUSDT-4h-2023-07.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "ec9bdb25c58dc5f80d428be051084bf9bfdf0f2547b8e9a8c7aa958566d9dd87"
+    },
+    {
+      "month": "2023-07",
+      "kind": "csv",
+      "path": "archives/2023-07/BTCUSDT-4h-2023-07.csv",
+      "bytes": 29969,
+      "sha256": "5017607b4882093ae83026d87f478eb90607d21177762eff959d82be70e6cf56"
+    },
+    {
+      "month": "2023-08",
+      "kind": "zip",
+      "path": "archives/2023-08/BTCUSDT-4h-2023-08.zip",
+      "bytes": 11420,
+      "sha256": "df3803780ba9cf57558e19b8f94eacf554ba0f45eb53ebe3edad8e0f7920b63e"
+    },
+    {
+      "month": "2023-08",
+      "kind": "checksum",
+      "path": "archives/2023-08/BTCUSDT-4h-2023-08.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "6f45fba3c00ab5e1b21c7466814675227639a7593a747bdec3bc873dabe0536a"
+    },
+    {
+      "month": "2023-08",
+      "kind": "csv",
+      "path": "archives/2023-08/BTCUSDT-4h-2023-08.csv",
+      "bytes": 29971,
+      "sha256": "8e547aade1d9eee4cc0f0cd829dc70aaf9ff1dfff5b13921182e097113025cb8"
+    },
+    {
+      "month": "2023-09",
+      "kind": "zip",
+      "path": "archives/2023-09/BTCUSDT-4h-2023-09.zip",
+      "bytes": 11101,
+      "sha256": "c8365cc2810efed9b00a666edbb61976f8e428f789b6763748a04f74954dcb8d"
+    },
+    {
+      "month": "2023-09",
+      "kind": "checksum",
+      "path": "archives/2023-09/BTCUSDT-4h-2023-09.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "0791ee28e86a8f8b22a01936eb70556588ab7ed41dec8bb6dac057519268cc98"
+    },
+    {
+      "month": "2023-09",
+      "kind": "csv",
+      "path": "archives/2023-09/BTCUSDT-4h-2023-09.csv",
+      "bytes": 28969,
+      "sha256": "07d1b2f4bdb33b27f695e34f86e668358efdec551e874fd43b2d5f06089cbd2f"
+    },
+    {
+      "month": "2023-10",
+      "kind": "zip",
+      "path": "archives/2023-10/BTCUSDT-4h-2023-10.zip",
+      "bytes": 11599,
+      "sha256": "db1623dbcdd6f1ae3920c9cfc0bcffbc2852e281bda744aa42c0960ef48c2db2"
+    },
+    {
+      "month": "2023-10",
+      "kind": "checksum",
+      "path": "archives/2023-10/BTCUSDT-4h-2023-10.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "4a8408486564f73936375b0939dc0c66aff1835abef181f545e8d589155603f0"
+    },
+    {
+      "month": "2023-10",
+      "kind": "csv",
+      "path": "archives/2023-10/BTCUSDT-4h-2023-10.csv",
+      "bytes": 30112,
+      "sha256": "f964a745f0aad0f27cbcfabae4f23356194713f1189298d33cae59eb800b7c47"
+    },
+    {
+      "month": "2023-11",
+      "kind": "zip",
+      "path": "archives/2023-11/BTCUSDT-4h-2023-11.zip",
+      "bytes": 11270,
+      "sha256": "6d4c95621fab4b82d8e3edce2e110257646ff9facd3f1f527302aa821e232243"
+    },
+    {
+      "month": "2023-11",
+      "kind": "checksum",
+      "path": "archives/2023-11/BTCUSDT-4h-2023-11.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "cf9d11916a140cd0d863c5515b64d802bbc31ab8a266a548f40558184e9e03a5"
+    },
+    {
+      "month": "2023-11",
+      "kind": "csv",
+      "path": "archives/2023-11/BTCUSDT-4h-2023-11.csv",
+      "bytes": 29202,
+      "sha256": "780ea7b851ff00612887c5ab48c8519ef26594bb657643a801e3ef29fb343bb8"
+    },
+    {
+      "month": "2023-12",
+      "kind": "zip",
+      "path": "archives/2023-12/BTCUSDT-4h-2023-12.zip",
+      "bytes": 11700,
+      "sha256": "0bd4980aeef150995d746a768d99d590e92858fc0119ddb004c0b69329e6344c"
+    },
+    {
+      "month": "2023-12",
+      "kind": "checksum",
+      "path": "archives/2023-12/BTCUSDT-4h-2023-12.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "d20130b779807443818a6dd3fa1c99852b1a8e7bdb052b12246e66b51b91bda3"
+    },
+    {
+      "month": "2023-12",
+      "kind": "csv",
+      "path": "archives/2023-12/BTCUSDT-4h-2023-12.csv",
+      "bytes": 30253,
+      "sha256": "0f73fc2d4039a9318591b09e1f6a4ebcecaef8a56a75cec3a72e6881c8ec0881"
+    },
+    {
+      "month": "2024-01",
+      "kind": "zip",
+      "path": "archives/2024-01/BTCUSDT-4h-2024-01.zip",
+      "bytes": 11751,
+      "sha256": "87e793786cacd14285fe8a54c2a96bdb7f618861e30c63ba962b09e5500bc937"
+    },
+    {
+      "month": "2024-01",
+      "kind": "checksum",
+      "path": "archives/2024-01/BTCUSDT-4h-2024-01.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "16c980487fcf0b326721e98bfaac896b51efb1d857f137f9f770b89a0e3bb57d"
+    },
+    {
+      "month": "2024-01",
+      "kind": "csv",
+      "path": "archives/2024-01/BTCUSDT-4h-2024-01.csv",
+      "bytes": 30282,
+      "sha256": "1ae43bb0edfccd8d35c5112378dabff946ec21895fbca42482d4620d02a799e9"
+    },
+    {
+      "month": "2024-02",
+      "kind": "zip",
+      "path": "archives/2024-02/BTCUSDT-4h-2024-02.zip",
+      "bytes": 10973,
+      "sha256": "26a3131bf90b9697c8df77bca1ca4784cc33019cc9f01606951337c4f79d4651"
+    },
+    {
+      "month": "2024-02",
+      "kind": "checksum",
+      "path": "archives/2024-02/BTCUSDT-4h-2024-02.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "804fa5baa6768a7e38209c632a0e717613c7d867d79e7d00a81f7a5bbae073c9"
+    },
+    {
+      "month": "2024-02",
+      "kind": "csv",
+      "path": "archives/2024-02/BTCUSDT-4h-2024-02.csv",
+      "bytes": 28328,
+      "sha256": "a7d11efe7d2cb0d09fe41e3f68b12e83bc981fa1cb3e442d0eaacb98152848f6"
+    },
+    {
+      "month": "2024-03",
+      "kind": "zip",
+      "path": "archives/2024-03/BTCUSDT-4h-2024-03.zip",
+      "bytes": 11890,
+      "sha256": "d5a4624e4242675bb269b347102f74b8b60097d48b1b1c004195072cbfc4b676"
+    },
+    {
+      "month": "2024-03",
+      "kind": "checksum",
+      "path": "archives/2024-03/BTCUSDT-4h-2024-03.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "85da703d68a5e687d600a4456abae787b9a3706ff50fd24065d48b8b1e8775c0"
+    },
+    {
+      "month": "2024-03",
+      "kind": "csv",
+      "path": "archives/2024-03/BTCUSDT-4h-2024-03.csv",
+      "bytes": 30411,
+      "sha256": "37abfd5ddc16279260024f04f9713caadf840692c1879059904e0a9025bccb92"
+    },
+    {
+      "month": "2024-04",
+      "kind": "zip",
+      "path": "archives/2024-04/BTCUSDT-4h-2024-04.zip",
+      "bytes": 11461,
+      "sha256": "63b2d48021d7f12fdaf8029237ac64346af23f7b95a49c471d881288a73ffee7"
+    },
+    {
+      "month": "2024-04",
+      "kind": "checksum",
+      "path": "archives/2024-04/BTCUSDT-4h-2024-04.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "f515cd44f024b54be6386b7c055739a9f7ce7f0e5432b60af92b11d49af0f592"
+    },
+    {
+      "month": "2024-04",
+      "kind": "csv",
+      "path": "archives/2024-04/BTCUSDT-4h-2024-04.csv",
+      "bytes": 29348,
+      "sha256": "63f56d4b2a2686e7341e2cb426114699202eada5d2cfd65c035cbb15cdaee230"
+    },
+    {
+      "month": "2024-05",
+      "kind": "zip",
+      "path": "archives/2024-05/BTCUSDT-4h-2024-05.zip",
+      "bytes": 11746,
+      "sha256": "b6d8088ebd2716ecdb04124a4af791de6a0e1fdf5c0b31c2391a1df9b5c8eada"
+    },
+    {
+      "month": "2024-05",
+      "kind": "checksum",
+      "path": "archives/2024-05/BTCUSDT-4h-2024-05.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "47eaec89efe3a4b3ec67aed15de524dbc41335cff24caa7e8b2744aa24d56989"
+    },
+    {
+      "month": "2024-05",
+      "kind": "csv",
+      "path": "archives/2024-05/BTCUSDT-4h-2024-05.csv",
+      "bytes": 30233,
+      "sha256": "758f25326569d45a4393fafe6b27990b21fa9146b380c02df0470599f9884f5b"
+    },
+    {
+      "month": "2024-06",
+      "kind": "zip",
+      "path": "archives/2024-06/BTCUSDT-4h-2024-06.zip",
+      "bytes": 11269,
+      "sha256": "05996239fd3588ff8867b5386398b5576854d4dce6d3dc4ad0a9987951d38b2a"
+    },
+    {
+      "month": "2024-06",
+      "kind": "checksum",
+      "path": "archives/2024-06/BTCUSDT-4h-2024-06.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "55d127db9f31375c8ec9174ca6de3ed8a0ea56cc9013fbd00513d096bbd81ab1"
+    },
+    {
+      "month": "2024-06",
+      "kind": "csv",
+      "path": "archives/2024-06/BTCUSDT-4h-2024-06.csv",
+      "bytes": 29150,
+      "sha256": "8fd3df8d3d8eca9d66b913c58657d9cda8d15d59dfa6f9ffc927414bd0dad002"
+    },
+    {
+      "month": "2024-07",
+      "kind": "zip",
+      "path": "archives/2024-07/BTCUSDT-4h-2024-07.zip",
+      "bytes": 11706,
+      "sha256": "dcd22aa66b00f95902b3c1f5a029726976623efea0cd58197d9b37df7e5be05b"
+    },
+    {
+      "month": "2024-07",
+      "kind": "checksum",
+      "path": "archives/2024-07/BTCUSDT-4h-2024-07.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "6d9950f0fae8aab5702cec36f5ccaa714498fa90545ac233ca287a410c1bde7b"
+    },
+    {
+      "month": "2024-07",
+      "kind": "csv",
+      "path": "archives/2024-07/BTCUSDT-4h-2024-07.csv",
+      "bytes": 30233,
+      "sha256": "7f642e901793ecec2648f2c59979a835c3eab1a757b485a4d4a5628303ba0228"
+    },
+    {
+      "month": "2024-08",
+      "kind": "zip",
+      "path": "archives/2024-08/BTCUSDT-4h-2024-08.zip",
+      "bytes": 11770,
+      "sha256": "1d9601f4af9b0a8b3228e2fc993ac5f3b54343d7a8c12b5a9ad7896b3235f15c"
+    },
+    {
+      "month": "2024-08",
+      "kind": "checksum",
+      "path": "archives/2024-08/BTCUSDT-4h-2024-08.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "b8d30413db121d23db37fa749ce575237c30a705083008bc09748e14c968ff96"
+    },
+    {
+      "month": "2024-08",
+      "kind": "csv",
+      "path": "archives/2024-08/BTCUSDT-4h-2024-08.csv",
+      "bytes": 30220,
+      "sha256": "bcb9cbe04fcbb708444fd6cef5e38e3161f614078fd0c064c5c44b5f3eb91db4"
+    },
+    {
+      "month": "2024-09",
+      "kind": "zip",
+      "path": "archives/2024-09/BTCUSDT-4h-2024-09.zip",
+      "bytes": 11232,
+      "sha256": "1bde0d4857164c91a8e36a0b2797927daae0220f86ea399b842fa3b96ff5ac08"
+    },
+    {
+      "month": "2024-09",
+      "kind": "checksum",
+      "path": "archives/2024-09/BTCUSDT-4h-2024-09.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "e6eb466f730c8fe06ec31fa8bb79fc965b9fe35a1c9ad721e922f149e8e5e571"
+    },
+    {
+      "month": "2024-09",
+      "kind": "csv",
+      "path": "archives/2024-09/BTCUSDT-4h-2024-09.csv",
+      "bytes": 29211,
+      "sha256": "87966d4cb79acea0cfd4e900d58378c2b179068d859ede6f099a6649a6f1b2ce"
+    },
+    {
+      "month": "2024-10",
+      "kind": "zip",
+      "path": "archives/2024-10/BTCUSDT-4h-2024-10.zip",
+      "bytes": 11697,
+      "sha256": "063ca82b5bd76f4aeb88b7b027a12dadcbb419f07e452da153fc329928c76e76"
+    },
+    {
+      "month": "2024-10",
+      "kind": "checksum",
+      "path": "archives/2024-10/BTCUSDT-4h-2024-10.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "3d7f4b3fa86bfbd1cefb6f927b21443ae79f8cfa2b673c9fe4a56c46f62306a7"
+    },
+    {
+      "month": "2024-10",
+      "kind": "csv",
+      "path": "archives/2024-10/BTCUSDT-4h-2024-10.csv",
+      "bytes": 30185,
+      "sha256": "f5583282ca1e9a1871d0d53578dce3f44695a92a2d2eb0f53475d5ff637fb345"
+    },
+    {
+      "month": "2024-11",
+      "kind": "zip",
+      "path": "archives/2024-11/BTCUSDT-4h-2024-11.zip",
+      "bytes": 11527,
+      "sha256": "1d4d448b72743a188008cd6d960e049268d0deeae13b2ea57c42b4ed7a9cadea"
+    },
+    {
+      "month": "2024-11",
+      "kind": "checksum",
+      "path": "archives/2024-11/BTCUSDT-4h-2024-11.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "d27058abc048e28db7bfd0d5cdf9c472d330487fdc136c82c1fe889204a9e061"
+    },
+    {
+      "month": "2024-11",
+      "kind": "csv",
+      "path": "archives/2024-11/BTCUSDT-4h-2024-11.csv",
+      "bytes": 29475,
+      "sha256": "f494d441e657f467a5e5a907ea727c7d4bcf0ccc5c0d3bd6cb31c544689b4153"
+    },
+    {
+      "month": "2024-12",
+      "kind": "zip",
+      "path": "archives/2024-12/BTCUSDT-4h-2024-12.zip",
+      "bytes": 11931,
+      "sha256": "d5c3eab8b58c5791f10836645e7992d6627119ec224fd7b2345fdec39527d3fd"
+    },
+    {
+      "month": "2024-12",
+      "kind": "checksum",
+      "path": "archives/2024-12/BTCUSDT-4h-2024-12.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "e48a4b827a3f6ca5f09f4cfff426c619f1fa8f5b53acc7d109d4d0ca9b7fe9f7"
+    },
+    {
+      "month": "2024-12",
+      "kind": "csv",
+      "path": "archives/2024-12/BTCUSDT-4h-2024-12.csv",
+      "bytes": 30593,
+      "sha256": "1e6ec88ac8911e58733af53cee41f261d1f5ae2c6662d37cb31ed31ffb9eced0"
+    }
+  ],
+  "canonical": {
+    "sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "bytes": 1298564,
+    "rows": 4572
+  },
+  "timeframe": "4h",
+  "schema_verified": true,
+  "scope_identity_verified": true,
+  "trusted": false,
+  "new_market_requests": 0,
+  "returns_computed": false,
+  "at_utc": "2026-10-03T11:25:48.928943+00:00",
+  "comparison_script_sha256": "67c840d9e70eb3792b7f0788d27502ce1e243e8e5111f07c541f27cb2c057d45"
+}

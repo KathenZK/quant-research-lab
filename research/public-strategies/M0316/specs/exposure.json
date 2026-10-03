@@ -1,0 +1,22 @@
+{
+  "id": "M0316",
+  "registered_at_utc": "2026-10-03T10:59:19.878172+00:00",
+  "evaluation": [
+    "2023-01-01T00:00:00Z",
+    "2025-01-01T00:00:00Z"
+  ],
+  "warmup_start": "2022-12-01T00:00:00Z",
+  "prior_exposure": "same BTCUSDT 2023-2024 window used by other public-catalog diagnostics; not fresh holdout",
+  "historical_search_count": "UNKNOWN",
+  "new_rule_parameter_searches": 0,
+  "planned_cases": [
+    "base8bps",
+    "fee0",
+    "fee20",
+    "delay2",
+    "buyhold"
+  ],
+  "returns_seen_for_this_id": false,
+  "oos_claim": false,
+  "DSR_PBO_valid": false
+}

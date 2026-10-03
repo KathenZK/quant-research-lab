@@ -1,0 +1,17 @@
+{
+  "id": "M0316",
+  "publication_revision": 1,
+  "status": "PASS_LOCAL_V1_RECONSTRUCTION_FIX_PENDING_INDEPENDENT_REVIEW",
+  "at_utc": "2026-10-03T11:30:26.834944+00:00",
+  "previous_publication_manifest_sha256": "62ab095975a9963f03a6db14276d93187cf41b30f9dd1fe80c452eafadbf6f93",
+  "changed_existing_files": [
+    "decision-log.md",
+    "diagnostics/rebuild-20261003.md"
+  ],
+  "unchanged_existing_files": 55,
+  "frozen_objects_unchanged": 26,
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "markdown_relative_links_checked": 25,
+  "reconstruction_only": true,
+  "no_new_strategy_returns_or_network_requests": true
+}

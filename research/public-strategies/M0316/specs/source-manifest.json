@@ -1,0 +1,29 @@
+{
+  "strategy_source": {
+    "id": "M0316",
+    "filename": "M0316-hlhb.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/hlhb.py",
+    "bytes": 3821,
+    "sha256": "bd4523d134b686b012947896ffd7a5a299add87ac12aa0d18fac36c9e7ca3822",
+    "fetched_at_utc": "2026-10-03T10:28:37.253521+00:00"
+  },
+  "repository_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "original_runtime": "UNKNOWN",
+  "full_third_party_source_published": false,
+  "license": "GPL-3.0",
+  "private_master": {
+    "id": "M0316",
+    "master_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "selected_row_sha256": "28ea87836342cd2b183747b108cf0bcf0c48eeab1dc67201de26f00d52854980",
+    "row_not_published": true
+  },
+  "assignment_commit": "344e8b361d28004ce36949efe3b3aeda65b5a9f9",
+  "local_source_verified_at_utc": "2026-10-03T11:02:08.421728+00:00",
+  "reference_framework": {
+    "commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/interface.py",
+    "bytes": 80064,
+    "sha256": "561656e2e97d3509798e40d486e918394aceab0987218513fb4f66ce5c05f478",
+    "scope": "trailing threshold reference only; not original author runtime; execution path differs"
+  }
+}

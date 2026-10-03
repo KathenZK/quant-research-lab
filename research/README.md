@@ -277,3 +277,7 @@
 - [M0275 主账](public-strategies/M0275/m0275-core-ledger.md)：Heracles原生4h、4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。
 
 - [M0293 ReinforcedAverageStrategy](public-strategies/M0293/README.md)：4h 假设回测4配置与1买持；48h SMA50可用时点、源类信号和独立账户已核验，严格复现0。
+
+- [M0316 hlhb](public-strategies/M0316/README.md)：4h假设回测4配置和1对照，严格0。
+- [M0317 mabStra](public-strategies/M0317/README.md)：保留原默认卖出区间矛盾，4h假设回测4配置和1对照，严格0。
+- [M0316/M0317来源预检](public-strategies/dot-next-preflight-20261003/README.md)：diagnostic_topic；预检不增加回测计数。

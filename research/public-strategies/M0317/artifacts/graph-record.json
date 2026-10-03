@@ -1,0 +1,50 @@
+{
+  "id": "M0317",
+  "name": "mabStra：BTC现货4h源码默认阈值诊断",
+  "status": "tested_hypothesis_only",
+  "reason": "固定SMA7/14/28及Decimal4默认参数，保留矛盾卖出区间；原ROI分钟阶梯、4h开盘观察和market执行代理。4386根买入条件全真、卖出恒假，净收益/回撤/日Sharpe落后同仓位买持；非作者优化复原，未晋升。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0317-MABSTRA"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_sha256_verified",
+    "source_rule_attribution_status": "original_AST_default_signals_and_fixed_risk_preserved_market_execution_proxy_declared",
+    "independent_validation": "PASS_INDEPENDENT_DECIMAL_ALL_CASE_EXECUTION_AND_METRICS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS_LOCAL_RECOVERY",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0317-20261003-first-replay",
+      "variant_id": "M0317-BTCUSDT-4H-MABSTRA-DEFAULT-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+      "manifest_sha256": "1fbb2afbb6576938bae66fd6eed9002dcfe0aeb94aa6a3520764f4e64a032111",
+      "family": "PUBLIC-M0317-MABSTRA"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0317-20261003-first-replay",
+      "variant_id": "M0317-BTCUSDT-4H-MABSTRA-DEFAULT-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+      "manifest_sha256": "1fbb2afbb6576938bae66fd6eed9002dcfe0aeb94aa6a3520764f4e64a032111"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 with Binance additional terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "native archive canonicalization, SMA ratio indicators, assumed fills/costs/risk accounting, metrics and month-end normalization"
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "schema": "public-strategy-publication-manifest/v1",
+  "id": "M0316",
+  "origin_run_id": "M0316-20261003-first-replay",
+  "variant_id": "M0316-BTCUSDT-4H-HLHB-LIMIT-20261003",
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0,
+  "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+  "public_allowlist": {
+    "ATTRIBUTION.md": {
+      "bytes": 1927,
+      "sha256": "7368e1af69e6392999e10e92e65af79581c1e579b5ca498713d32257803b663a"
+    },
+    "LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "README.md": {
+      "bytes": 1162,
+      "sha256": "b90aa99c6938e6940a7b2f6a902be2b65b545e5e71eb44db011244e17c2b31d4"
+    },
+    "artifacts/C0-primary-raw-audit.json": {
+      "bytes": 749,
+      "sha256": "91effc5cd08b9cc5dcde6a2d4fed44881d75595ad4bc6376b11c779987b6d6ad"
+    },
+    "artifacts/C0-rebuild-raw-audit.json": {
+      "bytes": 749,
+      "sha256": "c90819982df6e945f6400d425e1d353c8b7e6800ddc60640061db8518baf61f4"
+    },
+    "artifacts/C0-signal-causality.json": {
+      "bytes": 727,
+      "sha256": "a4186148c861ee15745f5851978f922cc2755047072e450cd3ee5e855a378cb6"
+    },
+    "artifacts/C0-source-input-qa.json": {
+      "bytes": 656,
+      "sha256": "6b9444f422488427e564052cacd6b6aefa80753a9a11b3066be9b0ef20f84e36"
+    },
+    "artifacts/C0-synthetic-validation.json": {
+      "bytes": 844,
+      "sha256": "6b1c012ef6db95cf34a24f1f4ecf35a314368de5426e8ad23333fa789d69eae9"
+    },
+    "artifacts/C1-freeze-receipt.json": {
+      "bytes": 929,
+      "sha256": "568648826c7ec0ba4c88465c6982981b31145db15386aa49cb636a6f06059e4e"
+    },
+    "artifacts/C2-validation-receipt.json": {
+      "bytes": 894,
+      "sha256": "d377ef178ea59e57e768c9dd96a560f1952813b784f78d166a63eb197191687f"
+    },
+    "artifacts/execution-prefix-causality.json": {
+      "bytes": 4634,
+      "sha256": "27cf9c57a678f8869a4f4f2e23b6a48ee80a55adea29a3f8123278b3bd02bbc2"
+    },
+    "artifacts/execution-receipt.json": {
+      "bytes": 933,
+      "sha256": "e284427bd95b56346b6d48ec1b6e01b0ca22e466b9d498ac929fe32d11b5cdf0"
+    },
+    "artifacts/graph-record.json": {
+      "bytes": 2221,
+      "sha256": "c1dc106cfd51505308e8f3307e4ef5e0547ac7ca29b0b67a37ae74a2ff5621ff"
+    },
+    "artifacts/independent-C0-source-indicator-audit.json": {
+      "bytes": 2377,
+      "sha256": "e8ca6fc3e9e72ae5087acdc4a531bd54a2744090f6d7e703475c77317c92e508"
+    },
+    "artifacts/independent-C1-final-freeze.json": {
+      "bytes": 645,
+      "sha256": "da5c29b0c9d95dd3089e8559685ac31486c9ebb7fb6a2e7996d2b50861c5c83e"
+    },
+    "artifacts/independent-C1-static-review.json": {
+      "bytes": 2108,
+      "sha256": "bbf8031d1dde27e255cb1aaab9c2594f12ee7b636c423ca823cd2f157104127b"
+    },
+    "artifacts/independent-execution-recovery-audit.json": {
+      "bytes": 18179,
+      "sha256": "3b169cc25677c41cd5e283fb09aed95ecbe25ade35f296eb924d1ff11f61a059"
+    },
+    "artifacts/independent-real-result-audit.json": {
+      "bytes": 2847,
+      "sha256": "4db1899c61c4ea8a0036f27227433f5c5e19b4a1365f7b12d2084a1c0cb1e82b"
+    },
+    "artifacts/ledger-validation.json": {
+      "bytes": 1615,
+      "sha256": "2c4a010785e60dd61e85053c8b0699db3d04371375c255c007b3d54c94271063"
+    },
+    "artifacts/local-recovery.json": {
+      "bytes": 1463,
+      "sha256": "044a12f299b305a481f8e1c0b31d6e88051ab0bec34dc4ce30d78a96d0216e80"
+    },
+    "artifacts/package-validation.json": {
+      "bytes": 2002,
+      "sha256": "c3255367356c5aeb82927dba8b2e4acbdc7f26957c956f8cb7d45981f3b836f0"
+    },
+    "artifacts/portable-independent-audit.json": {
+      "bytes": 2847,
+      "sha256": "6fdc9aa8655be3370e64e7de6b8ef5f58203bb9af4f65a5f69c0342e65834f7c"
+    },
+    "artifacts/reconstruction-v1-compatibility-qa.json": {
+      "bytes": 1300,
+      "sha256": "dfc23ddd657aab435a2d5b98181b465f698b10843b14770129cec5a1d799e45b"
+    },
+    "artifacts/reconstruction-v1-package-validation.json": {
+      "bytes": 662,
+      "sha256": "d2cbc8aecce33a0b513cf22265bdfe340c2b9094b2ee64ab61dd3d59ca9f46c4"
+    },
+    "artifacts/reconstruction-v1-primary-light-check.json": {
+      "bytes": 17910,
+      "sha256": "59f868a379b4a50a4009b7fc13ec869deed71af3b4bc0f6d069c983ab0612754"
+    },
+    "artifacts/reconstruction-v1-rebuild-light-check.json": {
+      "bytes": 17910,
+      "sha256": "1b05e3d0e8f0a8025a93a5b4b449ff9a3538a15f537a2161b61bf09ab3a59925"
+    },
+    "artifacts/result-manifest.json": {
+      "bytes": 4468,
+      "sha256": "1c890a7d17358e5811af1fedd7666c5b9752779af5d047b1dcec6c94763c937c"
+    },
+    "artifacts/results/base-trades.csv": {
+      "bytes": 15213,
+      "sha256": "38207d6be90c8a2a3ec92dd2281487bbf15e1e42bf3fbfcdc4fa8575b121c230"
+    },
+    "artifacts/results/calendar-year-attribution.csv": {
+      "bytes": 349,
+      "sha256": "322a101724b3d675bfa394d964d4bb425d611e5ecb71889a3a798ad779a5b099"
+    },
+    "artifacts/results/metrics.csv": {
+      "bytes": 1434,
+      "sha256": "2b2fc91c496ff98e7893ebb7ec810bf0a3428026fe7811d3a8cd273636d3ef0e"
+    },
+    "artifacts/results/month-end-nav-light.csv": {
+      "bytes": 2929,
+      "sha256": "1612612c318644af640bc2a02bad7935571b689a7594fb568bc6097ed39e43f4"
+    },
+    "artifacts/results/summary.json": {
+      "bytes": 5187,
+      "sha256": "de301ecfa0aa74602fe3fb60ff8b6fc4a3c3dd710f7452e95ba45ee31b526cd9"
+    },
+    "artifacts/results/trade-diagnostics.json": {
+      "bytes": 1353,
+      "sha256": "8902aff7590e1bfa585ecfde41a5d9db8984f83627f984e2507e9c59e25553cb"
+    },
+    "decision-log.md": {
+      "bytes": 2056,
+      "sha256": "0de6fef4663597b0bd0941587b0509e6eef810a5558371852e6fd046514327be"
+    },
+    "diagnostics/M0316-20261003.md": {
+      "bytes": 8213,
+      "sha256": "9f951dc2c369449bab99b475e7eeff13d003355d8c80750a9d6c9a3056ba1b44"
+    },
+    "diagnostics/rebuild-20261003.md": {
+      "bytes": 7466,
+      "sha256": "cf1b57b27a54a0ca79b694e7cabb677ff5b7798ede3b21091013f5592eed306a"
+    },
+    "m0316-core-ledger.md": {
+      "bytes": 1167,
+      "sha256": "25060c642b2391a06c049d4d11ed37f04a21728db123513be1e4a91ae8a9205d"
+    },
+    "scripts/audit_raw.py": {
+      "bytes": 4073,
+      "sha256": "b4601a55807845238877d9cf7bd51cb5b593c1ac9781d50174e8bec8c006698b"
+    },
+    "scripts/check_execution_prefixes.py": {
+      "bytes": 1211,
+      "sha256": "c09168419fb2f21419bbc26c6e63db16b5f8b364a0b8b5e79233344b6c964f42"
+    },
+    "scripts/check_signals.py": {
+      "bytes": 3718,
+      "sha256": "aa7e4bdf214da8cadf021d059dedaaa97f42a4fcc3a2930ad31d20c7fac8a5a0"
+    },
+    "scripts/compare_rebuild_manifest.py": {
+      "bytes": 4201,
+      "sha256": "16c583fbba6b6035e94d03a769acbde822cb5643d9c4884fd47100b65e0812ce"
+    },
+    "scripts/export_graph_private.py": {
+      "bytes": 4693,
+      "sha256": "b03d716d8973b1739a0fdfe64910efd33df6d0377bf0f4333332ee6c0ee4fff0"
+    },
+    "scripts/export_light.py": {
+      "bytes": 2664,
+      "sha256": "815cd3c01cbbedc367f0266687ab8b684e075841947f0008d87103b6aee3f1c5"
+    },
+    "scripts/fetch_sources.py": {
+      "bytes": 787,
+      "sha256": "659d704c441296bdcec061c2952f2c205b2b07096885d1ef01777a9776f10e95"
+    },
+    "scripts/freeze_protocol.py": {
+      "bytes": 1315,
+      "sha256": "c95600e0810082f44748256166ef717b72e258198e0179a9d19c342c10bd77d1"
+    },
+    "scripts/independent_audit.py": {
+      "bytes": 13933,
+      "sha256": "95d290093da63f8103df27af270125c6c4cd9eb6ec85706aa5a2e43ecc36e18f"
+    },
+    "scripts/independent_features.py": {
+      "bytes": 3236,
+      "sha256": "7cdd67b74e6b10e648a985c535d386c416a3ab16ee472835220a9c2c745fbdaa"
+    },
+    "scripts/rebuild_official_bars.py": {
+      "bytes": 18608,
+      "sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b"
+    },
+    "scripts/recover.py": {
+      "bytes": 1488,
+      "sha256": "3d99f0da3ccb21d0a320deb6b227261ee600419b568e7cb413172f5c04eb1a7a"
+    },
+    "scripts/run_replay.py": {
+      "bytes": 13012,
+      "sha256": "5f6bf38383649555e3c18c6a22d3c754d6265373c2fc096fab33adfc46ec776d"
+    },
+    "scripts/test_rebuild_official_bars.py": {
+      "bytes": 7072,
+      "sha256": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817"
+    },
+    "scripts/test_synthetic.py": {
+      "bytes": 4075,
+      "sha256": "1d464bdc589a7b7fa438c1f80c41265429a8109520985219de86d180befe6cd7"
+    },
+    "scripts/validate_ledger.py": {
+      "bytes": 3591,
+      "sha256": "88e7a146482d0e3d610c2a9d738e3b7becaf93247e5af73f8ac29dcfa6e6c8c5"
+    },
+    "specs/data-source-documents-inherited.json": {
+      "bytes": 2891,
+      "sha256": "ac66dd5ff4fc3522e6867afc66b7ed96105e544c4f38aa893ac3a85f87c32f2f"
+    },
+    "specs/exposure.json": {
+      "bytes": 568,
+      "sha256": "f9ab5c1c86736335d1a1b495deaf49666e3adc6b94b8bd68dbd12617a20de756"
+    },
+    "specs/input-manifest-inherited.json": {
+      "bytes": 33052,
+      "sha256": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594"
+    },
+    "specs/input-rebuild-inherited.json": {
+      "bytes": 1324,
+      "sha256": "e6bc91227956b11aa4162fe48e5e43d32ee843d763d9417d50b27f8fffb0fc0a"
+    },
+    "specs/market-halt-evidence-inherited.json": {
+      "bytes": 2714,
+      "sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999"
+    },
+    "specs/protocol.json": {
+      "bytes": 9730,
+      "sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289"
+    },
+    "specs/requirements.lock.json": {
+      "bytes": 255,
+      "sha256": "fed0fb5c6df4f03b900e2ec8e8e9410b6f03b7f80ceb2548b94f2bbd58fd75aa"
+    },
+    "specs/requirements.txt": {
+      "bytes": 41,
+      "sha256": "df13474509d1791ce13f64043b087acab8ef027d7bbd62144b575e7e75c03f61"
+    },
+    "specs/source-manifest.json": {
+      "bytes": 1392,
+      "sha256": "99acbcb6537301c0b9ac1add9de2126ab448de3ac6d7e496a7a87f90f2d586bd"
+    }
+  },
+  "self_excluded": true,
+  "manifest_itself_additional_public_candidate": "publication-manifest.json",
+  "excluded": [
+    "raw market data and native archives",
+    "full third-party source",
+    "native4h/daily NAV and full features",
+    "private-graph/graph-detail.private.json",
+    "all work-M0316 logs/full outputs"
+  ],
+  "public_derivative_data_license": "Binance CC BY-NC-SA4.0 plus pinned additional terms; see ATTRIBUTION.md",
+  "software_license": "GPL-3.0-or-later adaptation with separate upstream licenses",
+  "C3": "parent remote save and actual readback required",
+  "immutable_after_final_independent_qa": true,
+  "publication_revision": 1,
+  "previous_publication_manifest_sha256": "62ab095975a9963f03a6db14276d93187cf41b30f9dd1fe80c452eafadbf6f93",
+  "revision_scope": "non-frozen reconstruction instructions; new offline light/full comparator and existing-snapshot QA only. All26 C1 frozen objects and all return evidence unchanged."
+}

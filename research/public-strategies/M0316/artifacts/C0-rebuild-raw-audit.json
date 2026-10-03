@@ -1,0 +1,14 @@
+{
+  "status": "PASS_RAW_TO_CANONICAL_INDEPENDENT_AUDIT",
+  "snapshot": "/workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-rebuild-v1",
+  "checked_rows": 4572,
+  "checked_archive_triplets": 25,
+  "native_fields_lossless": true,
+  "builder_module_imported": false,
+  "canonical_csv_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "manifest_sha256": "f130c0699fd184961d46b0badfc65576a1aa2524ac4eb08a803cfbbaff8224cb",
+  "auditor_sha256": "b4601a55807845238877d9cf7bd51cb5b593c1ac9781d50174e8bec8c006698b",
+  "at_utc": "2026-10-03T10:59:58.449078+00:00",
+  "trusted": false,
+  "finality_or_tradability_approval": false
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS_SOURCE_INDICATORS_SIGNALS_PREFIX",
+  "source_sha256": "bd4523d134b686b012947896ffd7a5a299add87ac12aa0d18fac36c9e7ca3822",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "rows": 4572,
+  "columns": [
+    "hl2",
+    "rsi",
+    "ema5",
+    "ema10",
+    "adx"
+  ],
+  "native_class_called": true,
+  "framework_interface_stub": true,
+  "qtpylib_cross_semantics_reimplemented_not_original_runtime": true,
+  "prefix_lengths": [
+    31,
+    80,
+    185,
+    186,
+    300,
+    678,
+    679,
+    680,
+    1500,
+    2500,
+    3500,
+    4571
+  ],
+  "synthetic_bars": 96,
+  "strategy_return_computed": false,
+  "startup_bars": 30,
+  "position_stacking_runtime_assumption": false
+}

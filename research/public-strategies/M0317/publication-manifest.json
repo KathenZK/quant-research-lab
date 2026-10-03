@@ -1,0 +1,250 @@
+{
+  "id": "M0317",
+  "origin_run_id": "M0317-20261003-first-replay",
+  "variant_id": "M0317-BTCUSDT-4H-MABSTRA-DEFAULT-20261003",
+  "status": "COMPLETED_DIAGNOSTIC_REPLAY_VALIDATED_AND_LOCALLY_REBUILT",
+  "created_at_utc": "2026-10-03T11:31:00.929407+00:00",
+  "self_excluded": true,
+  "public_allowlist": {
+    "ATTRIBUTION.md": {
+      "bytes": 2553,
+      "sha256": "e2d5e414932fbeb5d7d2fb1f1e8007a97d3ebcd9b032a43629c6ae154311e4cd"
+    },
+    "LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "M0317-core-ledger.md": {
+      "bytes": 1458,
+      "sha256": "464f6f5f17a34188bc49cf96ba72f4e719fa4624719bbc94528851233a57c5ce"
+    },
+    "README.md": {
+      "bytes": 2517,
+      "sha256": "565c33f82c0ac96dbac2c09a675644126de1dfd858f9ab93e1c74b5720c6636c"
+    },
+    "REPRODUCE.md": {
+      "bytes": 7282,
+      "sha256": "f980111740d51cab8f6b3781926db07e2a96bf13c1906912239ebbaa604937ac"
+    },
+    "artifacts/C0-primary-raw-audit.json": {
+      "bytes": 749,
+      "sha256": "621d231ead90a1f38a9df54e3c95c128d1e8eb39f4ca3b9f05aa48d4506051ca"
+    },
+    "artifacts/C0-rebuild-raw-audit.json": {
+      "bytes": 749,
+      "sha256": "07f427c47c24008ebbf5d2819c7371997471b6e60b5bd271ebd287b4d3effa3c"
+    },
+    "artifacts/C0-source-signals.json": {
+      "bytes": 2578,
+      "sha256": "bdf3402d9e2cc08d0528ddba3f2a6e27e4c50f5307825c4aebe77e8e3e3d1801"
+    },
+    "artifacts/C1-independent-static-review.json": {
+      "bytes": 1368,
+      "sha256": "a39cc8b99e87a332194e7c064f75a365ed294387a2f70aa556469bf9326dad70"
+    },
+    "artifacts/C1-synthetic-risk.json": {
+      "bytes": 902,
+      "sha256": "afd6702bc8d5f5bf78f81acd180e66aae5649873705e6d536323e80cd076a63d"
+    },
+    "artifacts/C2-execution-prefixes.json": {
+      "bytes": 813,
+      "sha256": "fbd7b203aedfc2e72eaebb214d05bc883fca66b0632ac4300cd14ba295754199"
+    },
+    "artifacts/C2-independent-decimal-ledger.json": {
+      "bytes": 1622,
+      "sha256": "aa68999d7f47c5cd5133f4369c8db79cb2786749343028b848f6788d3ec59788"
+    },
+    "artifacts/C2-validation-receipt.json": {
+      "bytes": 663,
+      "sha256": "132bd3fabbb92043d25bd7473cb305bd39accb12f7472a38394d77003e1d62d8"
+    },
+    "artifacts/actual-run-receipt.json": {
+      "bytes": 1094,
+      "sha256": "c2a0a2df84a307e26ca3b2bfeeef1872e33742bf823060af6a42639b7aa65d14"
+    },
+    "artifacts/archive-builder-tests.json": {
+      "bytes": 498,
+      "sha256": "bec513e44429c1ad53f8efd8bf9f316a2fd3a469781aa8d6786cc4df5aca8c1a"
+    },
+    "artifacts/graph-record.json": {
+      "bytes": 2305,
+      "sha256": "428bbbc7295d2faa39710b4256ea3d37efdaeb23f31102dbcd5b20a7ee8873a8"
+    },
+    "artifacts/independent-real-result-audit.json": {
+      "bytes": 2830,
+      "sha256": "6ede6537fcc231fb1383a06d95954fdc283fe9b4d49d2884890c69f14ca33b32"
+    },
+    "artifacts/local-recovery.json": {
+      "bytes": 6992,
+      "sha256": "d2b5175a41d3b6785d6986cbf821da1b4451031f5b30905ddf06eb24384f37fa"
+    },
+    "artifacts/portable-independent-oracle.json": {
+      "bytes": 2830,
+      "sha256": "a662a94e74f6f649dc44acd773873c2808a057485fa0ef99403f7e611a0cbf37"
+    },
+    "artifacts/recovery-recipe-primary-light-match.json": {
+      "bytes": 17910,
+      "sha256": "ebb67177cfb222c19a777f2aa7ef293dd6496133e4b929bbc9b4fb83e921d292"
+    },
+    "artifacts/recovery-recipe-rebuild-light-match.json": {
+      "bytes": 17910,
+      "sha256": "b0b8a6cd5ff7e1acf3cc61cb6a45741845318186f700959efc40799d1e489f75"
+    },
+    "artifacts/recovery-recipe-revision.json": {
+      "bytes": 3687,
+      "sha256": "b437c111884796a101ceba3ae96c51d72a7a5e050ca37cced99a82028231c60a"
+    },
+    "artifacts/result-manifest.json": {
+      "bytes": 4520,
+      "sha256": "1fbb2afbb6576938bae66fd6eed9002dcfe0aeb94aa6a3520764f4e64a032111"
+    },
+    "artifacts/results/base-trades.csv": {
+      "bytes": 63065,
+      "sha256": "8fabfac9bd9fd556112e3fc6cadbba26c10f64c50cb2c57b7df7bac868636327"
+    },
+    "artifacts/results/calendar-year-attribution.csv": {
+      "bytes": 328,
+      "sha256": "b6491be3e09381db5d94fbb56e8ad229978f5f732d7531aeeb855d6afb28ab24"
+    },
+    "artifacts/results/metrics.csv": {
+      "bytes": 1596,
+      "sha256": "fea1d2cdf67068ccbb23ea0046c92030dd85591839348862187ad87297106e70"
+    },
+    "artifacts/results/month-end-nav-light.csv": {
+      "bytes": 2841,
+      "sha256": "91a7763e1ec43b337a15a93c38809e3654ea2530449d35bfc76bea94e4c163b2"
+    },
+    "artifacts/results/summary.json": {
+      "bytes": 5492,
+      "sha256": "e02dcdc574f32f68179a7f2bd17df1a7a2befdcb995faa69498fbe5e9231b373"
+    },
+    "artifacts/results/trade-diagnostics.json": {
+      "bytes": 1268,
+      "sha256": "8c7e9b47e3f8056f631f1a9845a2534afb127d6608df16a016b208152aafc264"
+    },
+    "decision-log.md": {
+      "bytes": 2432,
+      "sha256": "4f668115ea7055eb803e78015c5224d1d928be3725688aa72800372bfd183962"
+    },
+    "diagnostics/M0317-default-replay-report.md": {
+      "bytes": 8768,
+      "sha256": "88d49531301e94a2ed477a4ee1041fcfaf244af8759717968a8a7c92441917c5"
+    },
+    "scripts/audit_raw.py": {
+      "bytes": 4073,
+      "sha256": "b4601a55807845238877d9cf7bd51cb5b593c1ac9781d50174e8bec8c006698b"
+    },
+    "scripts/check_execution_prefixes.py": {
+      "bytes": 1493,
+      "sha256": "45100ec4ed50c9b93b8b30cf427ecee151e79b322a2b8e1c5df26144e274a693"
+    },
+    "scripts/check_signals.py": {
+      "bytes": 5541,
+      "sha256": "1f272498470afd7f1364b77f6004b296355278c195c0234adb0e004276e704c7"
+    },
+    "scripts/compare_rebuild_manifest.py": {
+      "bytes": 4201,
+      "sha256": "67c840d9e70eb3792b7f0788d27502ce1e243e8e5111f07c541f27cb2c057d45"
+    },
+    "scripts/export_graph_private.py": {
+      "bytes": 5850,
+      "sha256": "48fb3777be14ae577cbb66ceb1d2c911235f1fd0530e2ca12e5737f7ced02868"
+    },
+    "scripts/export_light.py": {
+      "bytes": 5649,
+      "sha256": "b21cfa0cc4ff3b6949e3edcaf1d9e9476259acf1b191c301c19c8d25b784c498"
+    },
+    "scripts/independent_indicators.py": {
+      "bytes": 2545,
+      "sha256": "66431eb0f52e14837c1b1c4753c14cc0c0d116e9991230ed59ec88bcbc71c9fb"
+    },
+    "scripts/independent_oracle.py": {
+      "bytes": 13717,
+      "sha256": "d4509db531b79154d59394dbea955647ecebde526b8c2f3128a42b8380961916"
+    },
+    "scripts/prepare_freeze.py": {
+      "bytes": 8710,
+      "sha256": "ad284537aa5f03dfeb7507fc773494f18cf260958d52b3176bad9b1211d51a62"
+    },
+    "scripts/publication_manifest.py": {
+      "bytes": 2855,
+      "sha256": "9d4824f8ca6d9ffae44b59d46f96c1d4727c5cfd88e1d4bfd567c55993d04bcc"
+    },
+    "scripts/rebuild_official_bars.py": {
+      "bytes": 18608,
+      "sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b"
+    },
+    "scripts/recover.py": {
+      "bytes": 2256,
+      "sha256": "ce89ae0164c923d16c7c04617fe745628b951cc0a58e9e942e5e0e6bfd96aa50"
+    },
+    "scripts/run_replay.py": {
+      "bytes": 10625,
+      "sha256": "fc2f7fec19d2f9199eca05ce563ad22a6b55f771d38dbb78721b8130b2722d80"
+    },
+    "scripts/test_rebuild_official_bars.py": {
+      "bytes": 7072,
+      "sha256": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817"
+    },
+    "scripts/test_synthetic.py": {
+      "bytes": 4081,
+      "sha256": "e56f6d0e137cd66c5215714120b58cc54580e2b8c3641d9bafe1eef16757ba58"
+    },
+    "scripts/validate_ledger.py": {
+      "bytes": 3422,
+      "sha256": "61bedb259fafa56edd04a3f56b60fc410cfbbcaad87d18adfe2b8304ae7a8c05"
+    },
+    "specs/data-source-documents-inherited.json": {
+      "bytes": 2891,
+      "sha256": "ac66dd5ff4fc3522e6867afc66b7ed96105e544c4f38aa893ac3a85f87c32f2f"
+    },
+    "specs/dependencies.json": {
+      "bytes": 583,
+      "sha256": "506a3254538c94b09d853a2189d6bb22c8f5ea705e749da406b53d8c143d43ed"
+    },
+    "specs/exposure.json": {
+      "bytes": 586,
+      "sha256": "de4afa432c57a43e8e397bb8f33178ba9200bbcef1f871e49c29e993a16eae03"
+    },
+    "specs/input-manifest-inherited.json": {
+      "bytes": 33052,
+      "sha256": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594"
+    },
+    "specs/input-rebuild-inherited.json": {
+      "bytes": 1324,
+      "sha256": "e6bc91227956b11aa4162fe48e5e43d32ee843d763d9417d50b27f8fffb0fc0a"
+    },
+    "specs/market-halt-evidence-inherited.json": {
+      "bytes": 2714,
+      "sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999"
+    },
+    "specs/protocol.json": {
+      "bytes": 9101,
+      "sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae"
+    },
+    "specs/source-manifest.json": {
+      "bytes": 2083,
+      "sha256": "53f2983c9c79a726c017b9da21eed934b4a1763615032bbbd97194f6c45f9b4f"
+    }
+  },
+  "manifest_itself_public_candidate": true,
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0,
+  "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+  "raw_market_data": false,
+  "full_third_party_source": false,
+  "large_nav_or_features": false,
+  "private_graph_detail": false,
+  "software_license": "GPL-3.0-or-later scripts; original GPLv3 repository attribution retained",
+  "data_derivative_license": "Binance CC BY-NC-SA4.0 plus pinned additional terms; personal nonproduction scope",
+  "excluded_private_material": [
+    "work-M0317/sources",
+    "work-M0317/first-run",
+    "work-M0317/recovery-run",
+    "work-M0317/private-graph",
+    "shared raw market snapshots"
+  ],
+  "C3": "PENDING_PARENT_REMOTE_SAVE_AND_READBACK",
+  "global_manifest_or_counts_modified": false
+}
