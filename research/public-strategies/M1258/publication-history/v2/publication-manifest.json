@@ -1,10 +1,10 @@
 {
-  "schema": "M1258-publication-manifest/v3",
-  "created_utc": "2026-10-03T17:33:47.491499+00:00",
+  "schema": "M1258-publication-manifest/v2",
+  "created_utc": "2026-10-03T17:14:42.129608+00:00",
   "id": "M1258",
   "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
   "C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
-  "scope": "M1258 only; exact code/catalog/rules/environment/QA plus derived aggregate/monthly/25point normalizedcurve and hash-only privateoutput commitment; no raw market bytes/fullledgers. Manifest itself excluded from self-list. Added coordinator safe acceptance; original v1manifest preserved. No original payload/C0 modification. Revision3 appends independently reviewed display v2 candidates/export helpers/safe receipts and separate display docs; original41payloads and frozen docs unchanged.",
+  "scope": "M1258 only; exact code/catalog/rules/environment/QA plus derived aggregate/monthly/25point normalizedcurve and hash-only privateoutput commitment; no raw market bytes/fullledgers. Manifest itself excluded from self-list. Added coordinator safe acceptance; original v1manifest preserved. No original payload/C0 modification.",
   "files": [
     {
       "path": "M1258-core-ledger.md",
@@ -20,11 +20,6 @@
       "path": "M1258.md",
       "bytes": 8220,
       "sha256": "b18e5a592a79f1ea3e4696ea5d5d35a330398c7dfc984570c9ac4d318e396d4b"
-    },
-    {
-      "path": "README-display-v1.md",
-      "bytes": 4694,
-      "sha256": "5a70fbc52d708695560120791c53d6a33236862a643d1cdad1ca291357b04de4"
     },
     {
       "path": "README-results-v1.md",
@@ -107,41 +102,6 @@
       "sha256": "94fcce1fb45564d9b4d10fdf2a20891d4a49a57f9083e0a16c1bead6c3d88f0e"
     },
     {
-      "path": "artifacts/20261003-public-display-prep/base-nav-sampled.json",
-      "bytes": 2594,
-      "sha256": "3e2cb5012893d5e657a9054f69ffb0709246d2421071a2b0cd00b08ba793806d"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/graph-detail.json",
-      "bytes": 18786,
-      "sha256": "2a8b2b20fac61ad245c10ddfc138d6bb553c4e7beaa7ff6b0495e2c4c85ec93d"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/graph-record.json",
-      "bytes": 49063,
-      "sha256": "6301427a9b8e61c51b3a4a82ae3d4ca3e634e2c976241803eb754079091ff3e2"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/public-display-manifest.json",
-      "bytes": 8555,
-      "sha256": "4df8a5cd4f04fd2178439e83d73e2f994c03ea4ace1946eab455779909b616e6"
-    },
-    {
-      "path": "artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json",
-      "bytes": 15575,
-      "sha256": "635eeba8b4446df5e8bd299f40a8c037b6538e30b32cd81873094c35c0240de8"
-    },
-    {
-      "path": "artifacts/20261003-public-display-review/review.safe.json",
-      "bytes": 3157,
-      "sha256": "295fe6863c9f6bf25c892fe340d249150dcd2f2b9eae6232e3e43bdb5f0f312d"
-    },
-    {
-      "path": "decision-log-display-v1.md",
-      "bytes": 1074,
-      "sha256": "16dc00715315443d423defaf9634be89f944797cf6192b61d7b29da083bda182"
-    },
-    {
       "path": "decision-log-results-v1.md",
       "bytes": 613,
       "sha256": "3df51fd55799c6fec2e485c7ed871048653932e39e23a9290b2def8a5d1a17c9"
@@ -152,19 +112,9 @@
       "sha256": "80c047a07e36959e5ff5e85a924d08ccdb5d28f475ee6e3e2b7694f914a8a96e"
     },
     {
-      "path": "publication-history/revision-v3.json",
-      "bytes": 2070,
-      "sha256": "0768c012aeacf6c79c96ee6dd7d864590c988d83229747dfcf89b51a4831a146"
-    },
-    {
       "path": "publication-history/v1/publication-manifest.json",
       "bytes": 6826,
       "sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81"
-    },
-    {
-      "path": "publication-history/v2/publication-manifest.json",
-      "bytes": 8299,
-      "sha256": "c5ffe77738fa5a63d6ddf5bbfa1d094c6f10bf4481af7335173b29fa15656ce2"
     },
     {
       "path": "recovery/REMOTE-CORE-RESTORE.md",
@@ -205,26 +155,6 @@
       "path": "scripts/check_synthetic.py",
       "bytes": 5831,
       "sha256": "5ebe2a3f4067c080a932f3da91ee8fea1675e411a700bedcb6f14aec25572085"
-    },
-    {
-      "path": "scripts/public-display-v2/common_public_display.py",
-      "bytes": 17351,
-      "sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13"
-    },
-    {
-      "path": "scripts/public-display-v2/export_m1258.py",
-      "bytes": 15485,
-      "sha256": "35d95b7513561f1127a418233cea718d51a1cc7cba8f71627dee04146e57a4ab"
-    },
-    {
-      "path": "scripts/public-display-v2/frozen_export.py",
-      "bytes": 19561,
-      "sha256": "266c93afa0829b0e504b2e008e1ed0ae1b43a4b5fd2869ffaeb047e41fba3128"
-    },
-    {
-      "path": "scripts/public-display-v2/verify_m1258.py",
-      "bytes": 8601,
-      "sha256": "4021b3515adbe6d69ea7b8f0145fc018dc121a658c27b737efa6842cd85f83bf"
     },
     {
       "path": "scripts/rebuild_input.py",
@@ -282,18 +212,16 @@
       "sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a"
     }
   ],
-  "payload_count": 55,
-  "payload_bytes": 362582,
+  "payload_count": 41,
+  "payload_bytes": 187717,
   "C0_original_objects_unchanged": 19,
   "full_author_webpage_or_code_included": false,
   "Library_remote_private_backup_verified": false,
   "root_remote_core_recovery_pending": false,
-  "publication_revision": 3,
-  "previous_publication_sha256": "c5ffe77738fa5a63d6ddf5bbfa1d094c6f10bf4481af7335173b29fa15656ce2",
-  "previous_publication_path": "publication-history/v2/publication-manifest.json",
+  "publication_revision": 2,
+  "previous_publication_sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81",
+  "previous_publication_path": "publication-history/v1/publication-manifest.json",
   "root_remote_core_verified_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
   "original_36_payload_files_unchanged": true,
-  "independent_remote_core_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
-  "original_41_payload_files_unchanged": true,
-  "publication_status": "PUBLIC_DERIVATIVES_STAGED_PENDING_PARENT_INTEGRATION_SITE_NOT_DEPLOYED"
+  "independent_remote_core_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
 }

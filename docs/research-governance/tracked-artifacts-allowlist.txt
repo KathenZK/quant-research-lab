@@ -1329,3 +1329,11 @@ research/public-strategies/M1258/artifacts/20261003-catalog-v1/prehistory-review
 research/public-strategies/M1258/artifacts/20261003-catalog-v1/private-output-manifest.json  # M1258 approved lightweight result/QA/hash commitment
 research/public-strategies/M1258/artifacts/20261003-catalog-v1/summary.json  # M1258 approved lightweight result/QA/hash commitment
 research/public-strategies/M1258/artifacts/20261003-catalog-v1/synthetic-prehistory.json  # M1258 approved lightweight result/QA/hash commitment
+
+# M1258 independently reviewed public display v2 and safe receipts; exact paths
+research/public-strategies/M1258/artifacts/20261003-public-display-prep/base-nav-sampled.json  # M1258 additive display publication
+research/public-strategies/M1258/artifacts/20261003-public-display-prep/graph-detail.json  # M1258 additive display publication
+research/public-strategies/M1258/artifacts/20261003-public-display-prep/graph-record.json  # M1258 additive display publication
+research/public-strategies/M1258/artifacts/20261003-public-display-prep/public-display-manifest.json  # M1258 additive display publication
+research/public-strategies/M1258/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # M1258 additive display publication
+research/public-strategies/M1258/artifacts/20261003-public-display-review/review.safe.json  # M1258 additive display publication
