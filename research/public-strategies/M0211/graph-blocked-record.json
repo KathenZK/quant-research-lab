@@ -1,0 +1,18 @@
+{
+  "id": "M0211",
+  "name": "布林复合评分",
+  "status": "blocked_rule_execution",
+  "reason": "README阈值未被代码使用，缺数据采集和完整交易调度，不能凭字段名补出策略。",
+  "tested_variants": 0,
+  "families": [],
+  "audit": {
+    "source_rule_attribution_status": "not_implemented",
+    "strict_reproduction_status": "NOT_ESTABLISHED",
+    "strategy_backtest_runs": 0,
+    "nav_and_trades_unavailable_reason": "README阈值未被代码使用，缺数据采集和完整交易调度，不能凭字段名补出策略。"
+  },
+  "implementations": [],
+  "related_results": [],
+  "imported": false,
+  "report": "diagnostics/M0211-source-preflight-20261003.md"
+}

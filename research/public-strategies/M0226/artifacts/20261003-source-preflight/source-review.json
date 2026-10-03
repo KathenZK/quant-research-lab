@@ -1,0 +1,45 @@
+{
+  "id": "M0226",
+  "status": "BLOCKED_RULE_EXECUTION",
+  "reviewed_at": "2026-10-03T07:11:59.161902+00:00",
+  "sources": [
+    {
+      "url": "https://x.com/CryptoPainter/status/2072460264499454292",
+      "result": "403 Forbidden",
+      "http_status": 403
+    },
+    {
+      "url": "https://zamantika.com/CryptoPainter/status/2072460264499454292",
+      "result": "URL not accessible via tool",
+      "http_status": null
+    },
+    {
+      "url": "https://x.com/CryptoPainter/status/2071622855419441569",
+      "result": "403 Forbidden",
+      "http_status": 403
+    }
+  ],
+  "normal_open_attempts": 3,
+  "retries": 0,
+  "original_text_verified": false,
+  "original_bytes_acquired": false,
+  "source_sha256": null,
+  "source_hash_status": "UNKNOWN",
+  "catalog_confirmed_by_coordinator": true,
+  "missing_rules": [
+    "long MA period/type/distance",
+    "RSI period/smoothing",
+    "exact amount mapping and bounds",
+    "external funding vs prefunded account",
+    "cashflow dates/currency/budget",
+    "execution time/venue/costs",
+    "exit/terminal valuation"
+  ],
+  "cashflow_warning": "Do not apply self-financing return formula to externally funded accumulation; first define cashflows and evaluation method",
+  "research_ids": 1,
+  "strategy_runs": 0,
+  "strict_reproductions": 0,
+  "ready_to_run": false,
+  "model": "UNKNOWN",
+  "reasoning_effort": "UNKNOWN"
+}

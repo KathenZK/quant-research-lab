@@ -451,6 +451,26 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0220/scripts/export_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",
+    ),
+    AuxiliaryClassification(
         "research/public-strategies/M0233/scripts/build_evidence.py",
         "main", "frozen-artifact-consumer",
         "Reads pinned source and diagnostic evidence only; source-signal parity does not imply execution fidelity.",

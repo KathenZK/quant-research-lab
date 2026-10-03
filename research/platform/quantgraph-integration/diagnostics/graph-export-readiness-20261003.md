@@ -25,3 +25,9 @@
 - Graph `scripts/site_sync.py:198`：授权/owner-private参数；`scripts/stage_sites.py:54`：原项目checkout校验；`sites/README.md`：原React UI、不可变数据同步、批注持久overlay和访问前提。
 
 本诊断不输出任何批注、私有catalog内容、凭证或Site服务头。
+
+## 后续只读进展
+
+通过Sites原生只读数据库接口已核实D1表名，并只读取qg_settings中的active_batch；因此父批次值已取得，不再列作未知。没有读取qg_feedback/qg_notes或凭证，未修改数据库/权限。Sites版本接口还返回版本8的归档指纹和文件引用：164536320字节、19885文件。此归档可能提供构建基线，但本执行器通用download_file上限32MiB，尚未取得归档字节，不能据元数据声称恢复成功；未绕限制或猜下载URL。精确站点身份/归档引用/父批次保存在私有协调记录，不加入公开Git。
+
+仍缺已验证私有runtime及可读取的完整基线字节、可用的源码/服务发布通道。当前接口只读能力并不等于可写发布权限。Graph最终可查看仍是任务目标；Git提交、Graph导入、站点激活必须有各自回执，不能因PR存在就称已上站。

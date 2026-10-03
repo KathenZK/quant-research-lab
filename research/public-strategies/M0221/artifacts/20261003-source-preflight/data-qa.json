@@ -1,0 +1,14 @@
+{
+  "rows": 792,
+  "start": "2022-11-01",
+  "end": "2024-12-31",
+  "duplicate_dates": 0,
+  "gaps": 0,
+  "hashrate_missing": 0,
+  "hashrate_finite_positive": true,
+  "completion_fields_present": true,
+  "completion_lag_after_day_end_seconds_min": 8164.0,
+  "completion_lag_after_day_end_seconds_max": 426210.0,
+  "pit_values_verified": false,
+  "backtests": 0
+}

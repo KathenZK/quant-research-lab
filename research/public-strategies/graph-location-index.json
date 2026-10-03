@@ -68,6 +68,55 @@
       "graph_record": "M0233/artifacts/20261003-first-replay/graph-record.json",
       "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
       "imported": false
+    },
+    {
+      "id": "M0004",
+      "classification": "NOT_IMPLEMENTED",
+      "directory": "research/public-strategies/M0004",
+      "report": "M0004/M0004.md",
+      "graph_record": "M0004/graph-blocked-record.json",
+      "imported": false
+    },
+    {
+      "id": "M0211",
+      "classification": "NOT_IMPLEMENTED",
+      "directory": "research/public-strategies/M0211",
+      "report": "M0211/diagnostics/M0211-source-preflight-20261003.md",
+      "graph_record": "M0211/graph-blocked-record.json",
+      "imported": false
+    },
+    {
+      "id": "M0232",
+      "classification": "NOT_IMPLEMENTED",
+      "directory": "research/public-strategies/M0232",
+      "report": "M0232/README.md",
+      "graph_record": "M0232/graph-blocked-record.json",
+      "imported": false
+    },
+    {
+      "id": "M0221",
+      "classification": "NOT_IMPLEMENTED",
+      "directory": "research/public-strategies/M0221",
+      "report": "M0221/diagnostics/M0221-source-data-preflight-20261003.md",
+      "graph_record": "M0221/graph-blocked-record.json",
+      "imported": false
+    },
+    {
+      "id": "M0226",
+      "classification": "NOT_IMPLEMENTED",
+      "directory": "research/public-strategies/M0226",
+      "report": "M0226/diagnostics/M0226-20261003-source-preflight.md",
+      "graph_record": "M0226/graph-blocked-record.json",
+      "imported": false
+    },
+    {
+      "id": "M0220",
+      "classification": "HYPOTHESIS",
+      "directory": "research/public-strategies/M0220",
+      "report": "M0220/diagnostics/M0220-20261003.md",
+      "graph_record": "M0220/artifacts/20261003-first-replay/graph-record.json",
+      "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
+      "imported": false
     }
   ],
   "note": "Current path projection only; frozen input-reference and manifest path strings retain historical meaning through migration maps. Full detail curves remain private; no site import receipt."

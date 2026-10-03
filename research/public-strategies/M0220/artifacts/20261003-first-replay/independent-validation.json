@@ -1,0 +1,32 @@
+{
+  "base": {
+    "status": "PASS",
+    "daily_rows": 617,
+    "fills": 58,
+    "max_equity_error": 4.986213752999902e-08
+  },
+  "fee0": {
+    "status": "PASS",
+    "daily_rows": 617,
+    "fills": 58,
+    "max_equity_error": 4.9942173063755035e-08
+  },
+  "fee20": {
+    "status": "PASS",
+    "daily_rows": 617,
+    "fills": 58,
+    "max_equity_error": 4.9954905989579856e-08
+  },
+  "lag2": {
+    "status": "PASS",
+    "daily_rows": 617,
+    "fills": 56,
+    "max_equity_error": 4.989487933926284e-08
+  },
+  "buyhold": {
+    "status": "PASS",
+    "daily_rows": 617,
+    "fills": 1,
+    "max_equity_error": 4.9976733862422407e-08
+  }
+}

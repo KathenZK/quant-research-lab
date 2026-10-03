@@ -1,0 +1,21 @@
+{
+  "id": "M0221",
+  "status": "BLOCKED_RULE_EXECUTION",
+  "research_ids_reviewed": 1,
+  "backtest_runs": 0,
+  "strict_reproductions": 0,
+  "primary_blocker": "Author buy indicator lacks executable exit, sizing and repeated-signal state contract",
+  "hashrate_data_retrieved": true,
+  "hashrate_qa_window": {
+    "start": "2022-11-01",
+    "end": "2024-12-31",
+    "rows": 792,
+    "missing": 0
+  },
+  "pit_verified": false,
+  "pit_limitation": "AssetEODCompletionTime exists but value vintage/revision not authenticated; no same-midnight use",
+  "third_party_exit_is_original": false,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "completed_at": "2026-10-03T07:13:38.205414+00:00"
+}

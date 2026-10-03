@@ -1,0 +1,56 @@
+{
+  "schema": "public-catalog-external-claim/v1",
+  "assigned_at": "2026-10-03T07:24:18.122641+00:00",
+  "coordinator": "Codex /root only",
+  "executor": "dot external environment",
+  "branch": "dot/public-strategies-20261003-b001",
+  "base_commit": "797a8e7d1dda2a1009ab03baac0bf770dab8a806",
+  "claims": [
+    {
+      "id": "M0256",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "sha256": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094",
+      "bytes": 2630,
+      "owner": "external:dot",
+      "status": "ASSIGNED_NOT_STARTED",
+      "library_ref": "libfile_296b8fa9c4348191a5c6d138830f8494",
+      "library_start_line": 259,
+      "symbol": "BTCUSDT",
+      "market_type": "spot",
+      "timeframe": "4h",
+      "input_start": "2022-12-01",
+      "evaluation_start": "2023-01-01",
+      "evaluation_end": "2024-12-31",
+      "classification": "HYPOTHESIS unless separately demonstrated source/engine equivalence; strict not presumed",
+      "output_prefix": "research/public-strategies/M0256/"
+    },
+    {
+      "id": "M0259",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BbandRsi.py",
+      "sha256": "65718e8d0c14094b67be82b66238ea60a4af4bbf6fd9a6e1879dad5c48125547",
+      "bytes": 1854,
+      "owner": "external:dot",
+      "status": "ASSIGNED_NOT_STARTED",
+      "library_ref": "libfile_296b8fa9c4348191a5c6d138830f8494",
+      "library_start_line": 262,
+      "symbol": "BTCUSDT",
+      "market_type": "spot",
+      "timeframe": "1h",
+      "input_start": "2022-12-01",
+      "evaluation_start": "2023-01-01",
+      "evaluation_end": "2024-12-31",
+      "classification": "HYPOTHESIS unless separately demonstrated source/engine equivalence; strict not presumed",
+      "output_prefix": "research/public-strategies/M0259/"
+    }
+  ],
+  "not_assigned": [
+    "M0253"
+  ],
+  "global_writes_allowed": false,
+  "shared_filesystem_assumed": false,
+  "library_large_snapshot_required": false,
+  "graph_imported": false,
+  "mode": "END_TO_END_SMALL_SAMPLE_ONLY",
+  "bulk_backtest_and_graph_import_gate": "NOT_PASSED",
+  "bulk_execution_allowed": false
+}

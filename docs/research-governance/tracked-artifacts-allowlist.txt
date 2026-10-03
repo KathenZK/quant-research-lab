@@ -620,3 +620,25 @@ research/public-strategies/M0211/artifacts/20261003-source-preflight/source-mani
 research/public-strategies/M0211/artifacts/20261003-source-preflight/preflight-decision.json
 research/public-strategies/M0232/artifacts/20261003-source-preflight/source-review.json
 research/public-strategies/M0232/artifacts/20261003-source-preflight/publication-filelist.json
+
+# Cloud batch004 reviewed lightweight evidence
+research/public-strategies/M0220/artifacts/20261003-source-preflight/source-provenance.json
+research/public-strategies/M0220/artifacts/20261003-source-preflight/input-coverage-only.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/exposure.jsonl
+research/public-strategies/M0220/artifacts/20261003-first-replay/input-reference.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/validation.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/independent-validation.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/causality-validation.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/local-recovery.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/graph-record.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/base-nav-light.csv
+research/public-strategies/M0220/artifacts/20261003-first-replay/results/summary.json
+research/public-strategies/M0220/artifacts/20261003-first-replay/results/base-trades.csv
+research/public-strategies/M0221/artifacts/20261003-source-preflight/source-manifest.json
+research/public-strategies/M0221/artifacts/20261003-source-preflight/supplemental-source-manifest.json
+research/public-strategies/M0221/artifacts/20261003-source-preflight/data-qa.json
+research/public-strategies/M0221/artifacts/20261003-source-preflight/preflight-decision.json
+research/public-strategies/M0221/artifacts/20261003-source-preflight/access-audit.json
+research/public-strategies/M0226/artifacts/20261003-source-preflight/source-review.json
+research/public-strategies/M0226/artifacts/20261003-source-preflight/publication-filelist.json

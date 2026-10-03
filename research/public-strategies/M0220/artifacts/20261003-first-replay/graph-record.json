@@ -1,0 +1,30 @@
+{
+  "id": "M0220",
+  "name": "周20EMA与低点跟踪止损",
+  "status": "tested_hypothesis_only",
+  "reason": "源代码锚定假设真实回测，收益与回撤均劣于同成本持有；严格0。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0220-BTC-MOMENTUM"
+  ],
+  "audit": {
+    "source_verification_status": "author_source_readable",
+    "source_rule_attribution_status": "public_source_anchored_hypothesis"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0220-BTCUSDT-WEEKLY20EMA-LOWTRAIL-20261003",
+      "family": "PUBLIC-M0220-BTC-MOMENTUM",
+      "origin_run_id": "M0220-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0220-20261003-first-replay",
+      "variant_id": "M0220-BTCUSDT-WEEKLY20EMA-LOWTRAIL-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "94dda14cf3da031e6069d56705b716d982bbb7aa9163a222fdbef060d25e1b41"
+    }
+  ]
+}
