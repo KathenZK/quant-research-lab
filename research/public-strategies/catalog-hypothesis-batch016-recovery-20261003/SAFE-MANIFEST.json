@@ -1,0 +1,26 @@
+{
+  "schema": "safe-delivery-manifest/v2",
+  "status": "PASS",
+  "remote_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+  "files": [
+    {
+      "file": "REMOTE-CORE-RESTORE.md",
+      "bytes": 9402,
+      "sha256": "d9fdec76ed63b5d0e67cf811e2cffeff74b192f03fdf015538c339bf1c2f7932"
+    },
+    {
+      "file": "batch016-remote-core-recovery.safe.json",
+      "bytes": 11323,
+      "sha256": "03d1351041be15781f582ec44ba0d4eeb773e61e497c52778955cf88316b6881"
+    },
+    {
+      "file": "restore_remote_core.py",
+      "bytes": 7826,
+      "sha256": "7b0a8ce8f37d69dc811764530433dc8dc9a5c5265d6c7fdfc820597d8b7402e5"
+    }
+  ],
+  "self_excluded": true,
+  "supersedes_invalid_manifest_sha256": "094e13e5a4be41153a891cb2c7f8ada44a559aa017e41069f8f9194a9ed50958",
+  "correction": "Prior manifest incorrectly included its own zero-byte pre-write hash. That failed evidence remains retained privately; these three payloads are byte-identical to v1. No engine, oracle or research rerun.",
+  "privacy_review": "No workspace/cache paths, private Library IDs, credentials, raw market rows or complete financial ledgers; only public provenance and verification metadata."
+}
