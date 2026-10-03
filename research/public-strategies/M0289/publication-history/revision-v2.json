@@ -1,0 +1,29 @@
+{
+  "schema": "public-display-additive-revision/v1",
+  "id": "M0289",
+  "revision": 2,
+  "created_at_utc": "2026-10-03T16:51:17.291119+00:00",
+  "publication_base_commit": "a1a4e09cf9f88d4ca11481cddc59e407f8bb6e12",
+  "original_public_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+  "previous_publication_manifest_sha256": "7e98f610a6758332599e5cc66d5e47489b35ec1b4e242a610cecde15c8b599c5",
+  "source_frozen_evidence_unchanged": true,
+  "display_manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "display_schema_version": "quantgraph-public-derived-display-manifest/v2",
+  "independent_review_sha256": "1028dfa88dee02a57948d2e1c34d023d342ee71053695a9daebddca4c181006f",
+  "exact_12_files_sha256": "76a05ca8061e38228dff9145cfd67a09b611d051144ac7f736b2ada36ebe422e",
+  "additive_paths": [
+    "artifacts/20261003-public-display-prep/graph-record.json",
+    "artifacts/20261003-public-display-prep/graph-detail.json",
+    "artifacts/20261003-public-display-prep/public-display-manifest.json",
+    "artifacts/20261003-public-display-prep/base-nav-light.csv"
+  ],
+  "exporter": "research/public-strategies/M0287/scripts/public-display-v2/export.py",
+  "frozen_helper_sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13",
+  "research_fidelity": "ADAPTED",
+  "graph_fidelity": "ADAPTED",
+  "new_research_runs": 0,
+  "new_control_runs": 0,
+  "strict_reproductions": 0,
+  "site_deployment": false,
+  "private_daily_nav_accessed": false
+}

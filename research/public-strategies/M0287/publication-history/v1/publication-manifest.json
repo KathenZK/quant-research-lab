@@ -13,43 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5937,
-      "sha256": "b479da9cc4394ea8fbaa0f92f2ade6f213d81a37629f90720669879862371da3"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/base-nav-light.csv",
-      "bytes": 32882,
-      "sha256": "45e6874b636452175a5869717cface0e124f07166a8237e994ff2913770285f7"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/graph-detail.json",
-      "bytes": 97305,
-      "sha256": "7b2a1b39240e51ddcbc7f6ca19297397e92ebe276907ab777b61f618f06b80fe"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/graph-record.json",
-      "bytes": 18112,
-      "sha256": "e23a673fdb69a834b0d7ef20be2de30ff34b8cc11291ae8adc805c461a1f57ba"
-    },
-    {
-      "path": "artifacts/20261003-public-display-prep/public-display-manifest.json",
-      "bytes": 10580,
-      "sha256": "172d2faf0551add33dab7eedf42648789c0b03fc1592f5fa3d5deb693b479d62"
-    },
-    {
-      "path": "artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json",
-      "bytes": 41593,
-      "sha256": "045f98638375592d4e522ccb466beb18cc9a5b47509a22fa1e12203a24113f41"
-    },
-    {
-      "path": "artifacts/20261003-public-display-review/EXACT-12-FILES.json",
-      "bytes": 2827,
-      "sha256": "76a05ca8061e38228dff9145cfd67a09b611d051144ac7f736b2ada36ebe422e"
-    },
-    {
-      "path": "artifacts/20261003-public-display-review/independent-review.safe.json",
-      "bytes": 2263,
-      "sha256": "1028dfa88dee02a57948d2e1c34d023d342ee71053695a9daebddca4c181006f"
+      "bytes": 5085,
+      "sha256": "89b97914071f777423b5a779c967f3002c1b556dce2af967a9602822c80f7322"
     },
     {
       "path": "artifacts/catalog-original11.csv",
@@ -113,8 +78,8 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1047,
-      "sha256": "b4d726aa77595002bd3246776bd8e2df705492cc29c7afc59f1acde1c7268886"
+      "bytes": 649,
+      "sha256": "fc4b36806620a8d8c6bfc7e97ca72f0f0a3bde973752531ff3078bc44fb02999"
     },
     {
       "path": "history/adapter-before-pandas-ta-column-fix.py",
@@ -132,49 +97,9 @@
       "sha256": "7a1d071dbe2264e91a977430042e4a137ddea72a509388c8cc8c64d4676a6515"
     },
     {
-      "path": "publication-history/revision-v2.json",
-      "bytes": 1462,
-      "sha256": "7d064ee0851ab5f40e39cabeb69ad87034113367cedb2139a31ca477c0fb9669"
-    },
-    {
-      "path": "publication-history/v1/README.md.snapshot",
-      "bytes": 5085,
-      "sha256": "89b97914071f777423b5a779c967f3002c1b556dce2af967a9602822c80f7322"
-    },
-    {
-      "path": "publication-history/v1/decision-log.md.snapshot",
-      "bytes": 649,
-      "sha256": "fc4b36806620a8d8c6bfc7e97ca72f0f0a3bde973752531ff3078bc44fb02999"
-    },
-    {
-      "path": "publication-history/v1/publication-manifest.json",
-      "bytes": 4345,
-      "sha256": "3e320bbf4c9d8ea97630852344a70ed9ec90c8f8571d25c2fd8a4f41541a4edf"
-    },
-    {
       "path": "scripts/adapter.py",
       "bytes": 363,
       "sha256": "8f1d81d7c94ec040aa0adb1b182be58d5089866dc721131b65f72592c55035fd"
-    },
-    {
-      "path": "scripts/public-display-v2/README.md",
-      "bytes": 3821,
-      "sha256": "d006290940ff6c8ade087c2b24d0914e7cfb272f2c712faef57d22291852fd45"
-    },
-    {
-      "path": "scripts/public-display-v2/common_public_display.py",
-      "bytes": 17351,
-      "sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13"
-    },
-    {
-      "path": "scripts/public-display-v2/export.py",
-      "bytes": 19561,
-      "sha256": "266c93afa0829b0e504b2e008e1ed0ae1b43a4b5fd2869ffaeb047e41fba3128"
-    },
-    {
-      "path": "scripts/public-display-v2/verify.py",
-      "bytes": 12490,
-      "sha256": "cb1458de4037c900d8662ba4927b3fdd8a33c09103292a902ae80e6e24eb2cbe"
     },
     {
       "path": "specs/C0.json",
@@ -202,12 +127,9 @@
       "sha256": "fa6ccc292ca604b0246264c81c8dd015f33b27d3e1c0edbfffd0cb8bee3e02e3"
     }
   ],
-  "publication_status": "PUBLIC_DERIVATIVES_STAGED_PENDING_PARENT_INTEGRATION_SITE_NOT_DEPLOYED",
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
   "raw_market_data": false,
   "full_ledgers": false,
   "private_Library_IDs": false,
-  "shared_kernel_modified": false,
-  "revision": 2,
-  "previous_publication_manifest_sha256": "3e320bbf4c9d8ea97630852344a70ed9ec90c8f8571d25c2fd8a4f41541a4edf",
-  "revision_scope": "additive reviewed public display v2 derivatives, frozen offline export and acceptance receipts; original C0 and results unchanged"
+  "shared_kernel_modified": false
 }

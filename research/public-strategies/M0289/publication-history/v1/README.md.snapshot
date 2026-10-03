@@ -2,18 +2,19 @@
 research_classification: strategy_family
 ---
 
-# M0287 · MultiRSI 研究回测
+# M0289 · PowerTower 研究回测
 
 结论：HYPOTHESIS_NOT_STRICT / ADAPTED_EXECUTION_PROXY，仅诊断；严格复现数0。目录类型strategy_family仅用于保存策略主账，不提升策略或数据等级。
 
-基准配置2024年BTCUSDT现货原生5m：收益-48.56%，最大回撤51.50%，日频Sharpe -3.1333，完整往返584次，期末权益51437.929015 USDT。
+基准配置2024年BTCUSDT现货原生5m：收益0.00%，最大回撤0.00%，日频Sharpe 未定义（恒定权益），完整往返0次，期末权益100000.000000 USDT。
 
 ## 固定源规则
 
-- 入场：SMA5≥SMA200，且原生5m RSI14 < 40m RSI14−20。保留源码比较方向，不按bearish注释反转。
-- 信号退出：原生RSI14同时大于10m RSI14与40m RSI14。
-- 10m/40m仅由已持有5m完整组OHLCV聚合；高周期值在该组末根5m收盘后可用，ffill且不backfill。原生、10m、40m RSI经独立Wilder递推核验，首次有效高周期RSI索引29/119、SMA200索引199。
-- 固定止损-5.00%；ROI分钟表{"0": 0.01}。
+- 入场：对j=0,1,2，close[t−j] > close[t−j−2]^3.849须全部成立。
+- 信号退出：对j=0,1,2，close[t−j] < close[t−j−2]^3.798任一成立。无volume过滤。
+- 保留绝对价格幂次和单位敏感性，不规范化BTC价格、不改指数制造交易。源码startup_candle_count=30，评估前已有8928根预热。
+- ROI原始分钟表0/39/56/159，对应5m开盘首次适用0/40/60/160分钟；严格大于ROI阈值。
+- 固定止损-28.80%；ROI分钟表{"0": 0.213, "39": 0.048, "56": 0.029, "159": 0}。
 - 初始100000 USDT，95%可用现金预算含买入费，仅多头1倍最多一仓、不加仓、小数完整成交。
 - 信号在当根收盘后可用，延迟1根或2根开盘执行；预热信号不下单，同bar卖出不再入场，入出信号冲突时两者均忽略。
 - 信号卖出优先；开盘越止损先止损，否则严格越ROI退出；盘内止损先于ROI，双阈值可达的路径不确定性单独计数。两ID均无信号盈利门控。
@@ -23,10 +24,12 @@ research_classification: strategy_family
 
 |配置|每边费率|信号延迟|收益|最大回撤|日Sharpe|往返|期末权益USDT|
 |---|---:|---:|---:|---:|---:|---:|---:|
-|base|8bps|1根|-48.56%|51.50%|-3.1333|584|51437.929015|
-|fee0|0bps|1根|26.85%|21.69%|1.2173|598|126850.767750|
-|fee20|20bps|1根|-85.63%|86.01%|-9.5616|569|14372.114425|
-|delay2|8bps|2根|-52.62%|54.24%|-3.5967|577|47384.875995|
+|base|8bps|1根|0.00%|0.00%|未定义（恒定权益）|0|100000.000000|
+|fee0|0bps|1根|0.00%|0.00%|未定义（恒定权益）|0|100000.000000|
+|fee20|20bps|1根|0.00%|0.00%|未定义（恒定权益）|0|100000.000000|
+|delay2|8bps|2根|0.00%|0.00%|未定义（恒定权益）|0|100000.000000|
+
+本次四配置均无交易，净值恒为初始现金，收益/回撤/手续费严格为0，Sharpe与胜率为null，不误填0；这是固定绝对幂次在该BTC价格单位与窗口的结果，不等于所有资产均无效。
 
 只引用既有M0311同窗口买入持有：收益115.03%、最大回撤32.02%、日Sharpe 1.7447。本批新增控制0；精确摘要SHA已核验，原基准曲线字节未持有，所以Graph不虚构曲线。
 
@@ -45,14 +48,8 @@ research_classification: strategy_family
 - [协议](specs/protocol.json)、[C0](specs/C0.json)、[规则卡](specs/source-rule-card.json)、[完整指标](artifacts/results/summary.json)、[核验摘要](artifacts/results/validation-summary.json)、[主账](artifacts/results/core-ledger.json)。
 - 私有恢复包含源码、许可证、依赖锁、固定内核、完整信号/账户/成交记录；全量原始OHLCV不上传，恢复依赖此前授权的相同SHA本地数据。公开仅日曲线与机械选定的非统计成交样本，零交易样本为空。
 - 依赖二进制不随包分发；恢复使用固定已有runtime。Library远端读回及确定性重放由单独收据绑定归档SHA，此报告不把本地打包误称异地备份完成。
-- 实际首轮开始2026-10-03T15:28:57.223123+00:00，结束2026-10-03T15:29:11.210992+00:00；wall 13.988秒、CPU 13.984秒，累计峰值RSS 772558848字节。
+- 实际首轮开始2026-10-03T15:29:11.212233+00:00，结束2026-10-03T15:29:21.295648+00:00；wall 10.083秒、CPU 10.082秒，累计峰值RSS 772558848字节。
 - 此为公开候选/私有Graph记录，未在本执行任务写Git、Site或Graph；全局集成由协调者处理。
 
-来源：https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py
-源码SHA256：0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06；合同SHA256：2de86c76de5751fca58ce116e8275935f1a1985ede624e239f060831d4ade1fc。
-
-## 已审展示派生（2026-10-03）
-
-366个日收盘点按原USDT权益/100000转换，首样本不重定基；全5m源回撤与日频显示回撤分列。保留SMA比较方向及原费用敏感性结果。
-
-[结构化记录](artifacts/20261003-public-display-prep/graph-record.json)、[详情](artifacts/20261003-public-display-prep/graph-detail.json)、[派生manifest](artifacts/20261003-public-display-prep/public-display-manifest.json)、[轻量曲线](artifacts/20261003-public-display-prep/base-nav-light.csv)与[可重建工具及独审清单](scripts/public-display-v2/README.md)作为附加公开证据保存。manifest类型为PUBLIC_DERIVED_DISPLAY_MANIFEST/v2，生成时STAGED_NOT_IMPORTED状态原样冻结；此处不声明Graph默认16条已适配或Site已部署。新增回测0、控制0、严格复现0；C0与原结果未改。
+来源：https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py
+源码SHA256：ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41；合同SHA256：2de86c76de5751fca58ce116e8275935f1a1985ede624e239f060831d4ade1fc。

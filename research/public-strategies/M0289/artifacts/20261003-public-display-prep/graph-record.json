@@ -1,0 +1,426 @@
+{
+  "audit": {
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "definition_bound": false,
+    "deployed": false,
+    "oos_claim": false,
+    "promotion": false,
+    "strict_replication": false,
+    "trusted_input": false
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "metrics": {
+      "annualized_return": 1.1458107566464215,
+      "daily_observations": 366,
+      "end": "2025-01-01T00:00:00Z",
+      "fees_paid": 75.9392486011191,
+      "final_cash": 5000.0,
+      "final_equity": 215030.41230956875,
+      "final_quantity": 2.2444901717274597,
+      "intrabar_stop_roi_ambiguities": 0,
+      "max_drawdown": 0.32021064669603316,
+      "observations": 105408,
+      "position_bar_fraction": 1.0,
+      "round_trips": 0,
+      "same_bar_stop_roi_hits": 0,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "start": "2024-01-01T00:00:00Z",
+      "total_return": 1.1503041230956876,
+      "trades": 1,
+      "winning_round_trip_fraction": null
+    },
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "new_control_runs": 0,
+    "origin_run_id": "M0311-20261003-first-replay",
+    "path_base": "repository_root",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57"
+  },
+  "control_configurations": 0,
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "hypothesis": null,
+    "paper": null,
+    "status": "NOT_ESTABLISHED_IN_APPROVED_SOURCE"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "PUBLIC-M0289-POWERTOWER"
+  ],
+  "fidelity_class": "ADAPTED",
+  "id": "M0289",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "PUBLIC-M0289-POWERTOWER",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "c53a5d7433c7470045fd2b3e8e826b5db660669a7ef6b7c2627a4e9c1559536b",
+      "origin_run_id": "M0289-20261003-dot-b007-v1",
+      "protocol_sha256": "d2b31e0809b76e80597a933cba7766de1536a5dedb1986fce45889c7e90747e7",
+      "variant_id": "M0289-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "2024 already exposed in previous research; no holdout or OOS inference; unknown historical search count remains unknown; DSR/PBO unavailable",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready",
+    "BTCUSDTspot single instance rather than original multiasset universe",
+    "95%cash/fee/slippage/nextopen/stop-and-ROI OHLCfills are ADAPTED_EXECUTION_PROXY, never strict",
+    "Any alteration to normalize prices, fix scale dependence or change exponents is separate HYPOTHESIS, not performed",
+    "Zero-trade null Sharpe is undefined, never zero or an execution error; parameters are not changed to produce trades.",
+    "Display equity uses original absolute USDT / frozen100000, not first-sample rebasing; source native drawdown stays separate.",
+    "No benchmark curve reconstructed; reused M0311 summary only.",
+    "Price-to-a-noninteger-power comparisons depend strongly on currency unit/price scale; 0.1/1/10 synthetic fixtures differ. No claim of historical signal/trade frequency or returns."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "name": "PowerTower：BTC现货5m执行代理",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "保留绝对价格3.849/3.798次幂、全部三条件/任一退出与无量过滤；四配置零交易，Sharpe未定义。 base收益0.0000%，完整往返0次；仅执行改编诊断。",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "c53a5d7433c7470045fd2b3e8e826b5db660669a7ef6b7c2627a4e9c1559536b",
+      "origin_run_id": "M0289-20261003-dot-b007-v1",
+      "protocol_sha256": "d2b31e0809b76e80597a933cba7766de1536a5dedb1986fce45889c7e90747e7",
+      "variant_id": "M0289-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "results": {
+    "base": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 8,
+        "name": "base"
+      },
+      "metrics": {
+        "annualized_return": 0.0,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 100000.0,
+        "final_equity": 100000.0,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.0,
+        "observations": 105408,
+        "position_bar_fraction": 0.0,
+        "round_trips": 0,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.0,
+        "trades": 0,
+        "winning_round_trip_fraction": null
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "delay_bars": 2,
+        "fee_bps": 8,
+        "name": "delay2"
+      },
+      "metrics": {
+        "annualized_return": 0.0,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 100000.0,
+        "final_equity": 100000.0,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.0,
+        "observations": 105408,
+        "position_bar_fraction": 0.0,
+        "round_trips": 0,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.0,
+        "trades": 0,
+        "winning_round_trip_fraction": null
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 0,
+        "name": "fee0"
+      },
+      "metrics": {
+        "annualized_return": 0.0,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 100000.0,
+        "final_equity": 100000.0,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.0,
+        "observations": 105408,
+        "position_bar_fraction": 0.0,
+        "round_trips": 0,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.0,
+        "trades": 0,
+        "winning_round_trip_fraction": null
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 20,
+        "name": "fee20"
+      },
+      "metrics": {
+        "annualized_return": 0.0,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 100000.0,
+        "final_equity": 100000.0,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.0,
+        "observations": 105408,
+        "position_bar_fraction": 0.0,
+        "round_trips": 0,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.0,
+        "trades": 0,
+        "winning_round_trip_fraction": null
+      }
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "catalog_omissions": [
+      "exit comparison direction is vague in catalog; original source uses <, never mirror >",
+      "ROI table at0/39/56/159 omitted from catalog",
+      "startup30 and original GTC limit orders/default framework flags omitted",
+      "Author original runtime and complete operational cost/universe config unproven"
+    ],
+    "execution": {
+      "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+      "budget_includes_buy_fee": true,
+      "cash_budget_fraction": 0.95,
+      "cash_currency": "USDT",
+      "cash_interest": 0,
+      "direction": "long_only",
+      "exit_profit_offset": 0.0,
+      "exit_profit_only": false,
+      "fractional_fills": true,
+      "funding": "not applicable spot without borrowing",
+      "initial_cash": 100000,
+      "intrabar_execution_latest_overrides": {},
+      "leverage": 1,
+      "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+      "max_positions": 1,
+      "open_execution_overrides": {},
+      "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+      "proxy_changes": {
+        "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+        "pending": "No restinglimit states/timeouts/cancellations or partialfills",
+        "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+        "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+        "stop": "Original limit stop replaced by market-style gap/threshold full fill"
+      },
+      "proxy_label": "ADAPTED_EXECUTION_PROXY",
+      "pyramiding": false,
+      "sequence": [
+        "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+        "flat entry due from previous closedbar; never same-bar reentry after sale",
+        "open<=stop triggers stop gap; else open>ROI strict gap",
+        "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+        "mark remaining position at rawclose; no terminal forced sale"
+      ],
+      "slippage_bps": 2,
+      "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded"
+    },
+    "parameters": {
+      "external_config_overrides": {},
+      "full_effective_attributes": {
+        "can_short": false,
+        "exit_profit_offset": 0.0,
+        "exit_profit_only": false,
+        "ignore_roi_if_entry_signal": false,
+        "minimal_roi": {
+          "0": 0.213,
+          "159": 0,
+          "39": 0.048,
+          "56": 0.029
+        },
+        "order_time_in_force": {
+          "entry": "GTC",
+          "exit": "GTC"
+        },
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60
+        },
+        "position_adjustment_enable": false,
+        "startup_candle_count": 30,
+        "stoploss": -0.288,
+        "timeframe": "5m",
+        "trailing_stop": false,
+        "use_custom_roi": false,
+        "use_custom_stoploss": false,
+        "use_exit_signal": true
+      },
+      "loaded_parameter_values": {
+        "buy_pow": 3.849,
+        "sell_pow": 3.798
+      },
+      "parameter_sidecars": false
+    },
+    "risk": {
+      "minimal_roi": {
+        "0": 0.213,
+        "159": 0,
+        "39": 0.048,
+        "56": 0.029
+      },
+      "stoploss": -0.288
+    },
+    "source_signal_rules": {
+      "causality": "Only current/positive shifts0..4. Closed native5m decision then nextopen is execution proxy assumption",
+      "entry": "For j=0,1,2, close[t-j] > close[t-j-2] ** 3.849; all three true",
+      "exit": "For any j=0,1,2, close[t-j] < close[t-j-2] ** 3.798",
+      "volume_filter": "NONE in original; do not invent",
+      "warmup": "Original startup_candle_count30; shared2024 input has8928 prep bars"
+    },
+    "source_specific_requirements": {
+      "ROI_5m_open_first_eligible_minutes": [
+        0,
+        40,
+        60,
+        160
+      ],
+      "ROI_original_minutes": [
+        0,
+        39,
+        56,
+        159
+      ],
+      "entry": "For every j=0,1,2: close[t-j] > close[t-j-2] ** 3.849",
+      "exit": "For any j=0,1,2: close[t-j] < close[t-j-2] ** 3.798",
+      "price_unit_dependence": "Preserve absolute price powers; no normalization or changed exponent to create trades. Report zero-trade outcome truthfully if observed.",
+      "volume_filter": "NONE"
+    }
+  },
+  "signals": {
+    "collisions": 0,
+    "entry_rows": 0,
+    "exit_rows": 114334
+  },
+  "source": {
+    "bytes": 4317,
+    "class_name": "PowerTower",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+    "id": "M0289",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "path": "user_data/strategies/PowerTower.py",
+    "private_original_preserved": true,
+    "repository": "freqtrade/freqtrade-strategies",
+    "sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py"
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 4721,
+      "path": "research/public-strategies/M0289/specs/C0.json",
+      "sha256": "5f68e6b7f1d816dcaf1aebd459f915122f90179d07b196c3ea01c4a89519f5c7",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/specs/C0.json"
+    },
+    "attribution": {
+      "bytes": 1027,
+      "path": "research/public-strategies/M0289/ATTRIBUTION.md",
+      "sha256": "8543ac1651baa580c288dc13eba22fd233ce1a612e8ea3dc01f5510750fdb12d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/ATTRIBUTION.md"
+    },
+    "base_daily": {
+      "bytes": 49912,
+      "path": "research/public-strategies/M0289/artifacts/results/base-daily-equity.json",
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/base-daily-equity.json"
+    },
+    "delay2_daily": {
+      "bytes": 49912,
+      "path": "research/public-strategies/M0289/artifacts/results/delay2-daily-equity.json",
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/delay2-daily-equity.json"
+    },
+    "fee0_daily": {
+      "bytes": 49912,
+      "path": "research/public-strategies/M0289/artifacts/results/fee0-daily-equity.json",
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/fee0-daily-equity.json"
+    },
+    "fee20_daily": {
+      "bytes": 49912,
+      "path": "research/public-strategies/M0289/artifacts/results/fee20-daily-equity.json",
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/fee20-daily-equity.json"
+    },
+    "protocol": {
+      "bytes": 22093,
+      "path": "research/public-strategies/M0289/specs/protocol.json",
+      "sha256": "d2b31e0809b76e80597a933cba7766de1536a5dedb1986fce45889c7e90747e7",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/specs/protocol.json"
+    },
+    "publication_manifest": {
+      "bytes": 3979,
+      "path": "research/public-strategies/M0289/publication-manifest.json",
+      "sha256": "7e98f610a6758332599e5cc66d5e47489b35ec1b4e242a610cecde15c8b599c5",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 5461,
+      "path": "research/public-strategies/M0289/README.md",
+      "sha256": "850a96ec38739a5e4df6ae0622c134c47f10cd2a877cc8ee110751fa7cd8a8ab",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/README.md"
+    },
+    "source_rule_card": {
+      "bytes": 4443,
+      "path": "research/public-strategies/M0289/specs/source-rule-card.json",
+      "sha256": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/specs/source-rule-card.json"
+    },
+    "summary": {
+      "bytes": 5890,
+      "path": "research/public-strategies/M0289/artifacts/results/summary.json",
+      "sha256": "a984a979408462d2ebdd4f0169a87eb2e485b618b95334c5804f02ef7f1b0070",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/summary.json"
+    },
+    "validation_summary": {
+      "bytes": 692,
+      "path": "research/public-strategies/M0289/artifacts/results/validation-summary.json",
+      "sha256": "5e278694aa4b00219002e23e755e25b715b615b9f23b4cd5a2c6c0d7a1785434",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0289/artifacts/results/validation-summary.json"
+    }
+  },
+  "status": "tested_adapted_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}

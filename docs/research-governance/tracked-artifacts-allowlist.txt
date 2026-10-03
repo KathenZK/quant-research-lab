@@ -1296,3 +1296,20 @@ research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-
 research/public-strategies/M1358/artifacts/20261003-coldstart-v2/resource-measurement-note.json  # M1358 approved public evidence
 research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json  # M1358 approved public evidence
 research/public-strategies/M1358/artifacts/20261003-coldstart-v2/synthetic-v2.json  # M1358 approved public evidence
+
+# Independently reviewed dot007/M1358 public display v2; exact paths only
+research/public-strategies/M0287/artifacts/20261003-public-display-prep/base-nav-light.csv  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-prep/graph-detail.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-prep/graph-record.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-prep/public-display-manifest.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-review/EXACT-12-FILES.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0287/artifacts/20261003-public-display-review/independent-review.safe.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0289/artifacts/20261003-public-display-prep/base-nav-light.csv  # approved derived display or safe acceptance receipt
+research/public-strategies/M0289/artifacts/20261003-public-display-prep/graph-detail.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0289/artifacts/20261003-public-display-prep/graph-record.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M0289/artifacts/20261003-public-display-prep/public-display-manifest.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M1358/artifacts/20261003-public-display-prep/base-nav-sampled.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M1358/artifacts/20261003-public-display-prep/graph-detail.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M1358/artifacts/20261003-public-display-prep/graph-record.json  # approved derived display or safe acceptance receipt
+research/public-strategies/M1358/artifacts/20261003-public-display-prep/public-display-manifest.json  # approved derived display or safe acceptance receipt
