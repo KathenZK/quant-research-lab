@@ -753,3 +753,25 @@ research/public-strategies/M0275/artifacts/results/month-end-nav-light.csv
 research/public-strategies/M0275/artifacts/results/summary.json
 research/public-strategies/M0275/artifacts/results/trade-diagnostics.json
 research/public-strategies/M0275/artifacts/synthetic-validation.json
+
+# M0293 frozen diagnostic replay, individually reviewed lightweight artifacts
+research/public-strategies/M0293/artifacts/20261003-first-replay/base-nav-light.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/causality-validation.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/environment.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/execution-receipt.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/execution-time-validation.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/freeze-receipt.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/graph-projection-receipt.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/graph-record.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/independent-validation.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/input-manifest-light.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/local-recovery.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/original-source-validation.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/base-trades.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/buyhold-trades.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/delay2-trades.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/fee0-trades.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/fee20-trades.csv
+research/public-strategies/M0293/artifacts/20261003-first-replay/results/summary.json
+research/public-strategies/M0293/artifacts/research-exposure-ledger.jsonl

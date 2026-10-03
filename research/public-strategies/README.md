@@ -23,6 +23,7 @@
 | M0275 | [Heracles](M0275/README.md) | 4h假设回测4配置及1买持，严格0 |
 | M0286 | [MultiMa](M0286/README.md) | TEMA信号核验及4配置假设回测、1买持，严格0 |
 | M0288 | [PatternRecognition](M0288/README.md) | 原生参考引擎假设回测4配置及1买持，严格0 |
+| M0293 | [ReinforcedAverageStrategy](M0293/README.md) | EMA8/21与已收盘48h SMA50假设回测4配置及1买持，严格0 |
 
 本次目录迁移发生在三个执行者完成之后，由单一协调者串行执行。各ID的 path-migration-20261003.json 记录旧根、新根及原始文件哈希；冻结JSON内历史路径与哈希链不改写，按映射解释。修改过的操作文档原字节保存在各ID的 artifacts/path-migration-20261003/original-documents/。这保留证据与历史commit身份，不表示再次回测或升级可信度。
 
