@@ -1,0 +1,40 @@
+{
+  "id": "M0287",
+  "started_at_utc": "2026-10-03T15:28:57.223123+00:00",
+  "completed_at_utc": "2026-10-03T15:29:11.210992+00:00",
+  "wall_seconds": 13.987884549002047,
+  "cpu_seconds": 13.983699417999999,
+  "peak_rss_bytes_process_cumulative": 772558848,
+  "cases": [
+    {
+      "case": "base",
+      "wall_seconds": 2.4899698459994397,
+      "cpu_seconds": 2.488281886,
+      "status": "COMPLETED",
+      "rows": 105408
+    },
+    {
+      "case": "fee0",
+      "wall_seconds": 2.4858248609962175,
+      "cpu_seconds": 2.4851190279999997,
+      "status": "COMPLETED",
+      "rows": 105408
+    },
+    {
+      "case": "fee20",
+      "wall_seconds": 2.4542395079988637,
+      "cpu_seconds": 2.453373510999999,
+      "status": "COMPLETED",
+      "rows": 105408
+    },
+    {
+      "case": "delay2",
+      "wall_seconds": 2.525377424004546,
+      "cpu_seconds": 2.524808511,
+      "status": "COMPLETED",
+      "rows": 105408
+    }
+  ],
+  "completed_strategy_configurations": 4,
+  "summary_sha256": "516ebf2b8b84ce5d20f779acbf30c7eef4c357a12d8d910a8913a4b164a49392"
+}

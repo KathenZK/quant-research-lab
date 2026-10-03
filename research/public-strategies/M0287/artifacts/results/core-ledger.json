@@ -1,0 +1,170 @@
+{
+  "id": "M0287",
+  "origin_run_id": "M0287-20261003-dot-b007-v1",
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "stage": "EXECUTED_DIAGNOSTIC",
+  "strategy_configurations": 4,
+  "new_control_configurations": 0,
+  "reused_unique_control": "M0311-20261003-first-replay",
+  "strict_reproductions": 0,
+  "trusted": false,
+  "PIT_proven": false,
+  "core_finality_proven": false,
+  "OOS": false,
+  "run_hashes": {
+    "protocol_sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124",
+    "C0_sha256": "6f4d664059798508748ff01c03c8f98c8a3648908bf53e4fc44052c4965956e6",
+    "summary_sha256": "516ebf2b8b84ce5d20f779acbf30c7eef4c357a12d8d910a8913a4b164a49392",
+    "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "source_sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+    "kernel_files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    },
+    "assignment_contract_sha256": "2de86c76de5751fca58ce116e8275935f1a1985ede624e239f060831d4ade1fc"
+  },
+  "all_cases": {
+    "base": {
+      "configuration": {
+        "name": "base",
+        "fee_bps": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.48562070984691186,
+        "annualized_return": -0.4846855535522455,
+        "max_drawdown": 0.5150198345647721,
+        "sharpe": -3.1332788924902775,
+        "sharpe_5m": -3.0594189692544926,
+        "final_equity": 51437.929015308815,
+        "trades": 1168,
+        "round_trips": 584,
+        "winning_round_trip_fraction": 0.4863013698630137,
+        "fees_paid": 70093.07252545598,
+        "position_bar_fraction": 0.16754895264116576,
+        "final_cash": 51437.929015308815,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "name": "fee0",
+        "fee_bps": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.26850767749591853,
+        "annualized_return": 0.2676836192450336,
+        "max_drawdown": 0.2169198235220331,
+        "sharpe": 1.2172769949740256,
+        "sharpe_5m": 1.2559896444172363,
+        "final_equity": 126850.76774959186,
+        "trades": 1196,
+        "round_trips": 598,
+        "winning_round_trip_fraction": 0.6120401337792643,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.16604052823315119,
+        "final_cash": 126850.76774959186,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "name": "fee20",
+        "fee_bps": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.8562788557501797,
+        "annualized_return": -0.8555150798297406,
+        "max_drawdown": 0.8600511858280965,
+        "sharpe": -9.561591078042436,
+        "sharpe_5m": -8.73962667772751,
+        "final_equity": 14372.114424982032,
+        "trades": 1138,
+        "round_trips": 569,
+        "winning_round_trip_fraction": 0.28295254833040423,
+        "fees_paid": 104160.85011773923,
+        "position_bar_fraction": 0.16874430783242259,
+        "final_cash": 14372.114424982032,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "name": "delay2",
+        "fee_bps": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.5261512400454564,
+        "annualized_return": -0.5251833073259744,
+        "max_drawdown": 0.5424391396164355,
+        "sharpe": -3.5966667805226242,
+        "sharpe_5m": -3.4154781618813788,
+        "final_equity": 47384.875995454364,
+        "trades": 1154,
+        "round_trips": 577,
+        "winning_round_trip_fraction": 0.464471403812825,
+        "fees_paid": 64255.708073323054,
+        "position_bar_fraction": 0.16746357012750454,
+        "final_cash": 47384.875995454364,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    }
+  },
+  "qa": {
+    "source_signal": "PASS",
+    "independent_complete_group_OHLCV_Wilder_RSI": "PASS",
+    "absolute_power_rules_and_no_volume_filter": "NOT_APPLICABLE",
+    "prefix_future_perturbation": "PASS",
+    "frozen_decimal_oracle": "PASS",
+    "supplementary_event_time_notional_all_metrics": "PASS",
+    "source_audit_sha256": "5f026c88b7dd5ce9b0e068ef50a1265cad54aba3929a0e272d4569eb16481d1e",
+    "oracle_sha256": "38c9a87a1eebca1a41e0b0ff9c0d34bf8eef6893329972c23b08defce55717f0",
+    "supplement_sha256": "5b77ad670797a33da9584837bb7aa7d09394599f01fa89d70a4c5641de1cb483",
+    "public_samples_not_statistical": true,
+    "tolerance": {
+      "absolute": 0,
+      "relative": 1e-09,
+      "expected_zero": "exact"
+    }
+  },
+  "known_limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "2024 already exposed in previous research; no holdout or OOS inference; unknown historical search count remains unknown; DSR/PBO unavailable",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready"
+  ]
+}

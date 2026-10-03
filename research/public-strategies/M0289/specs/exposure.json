@@ -1,0 +1,14 @@
+{
+  "recorded_at_utc": "2026-10-03T15:18:06.369459+00:00",
+  "record_id": "M0289",
+  "window": "2024-01-01/2025-01-01",
+  "already_exposed": true,
+  "reference": "M0311 prior exposure plus b004/b006 completed diagnostics",
+  "prior_exposure_evidence_sha256": "b3e4c00d7dc11237e308543cf251d1ecdb9879b012268df754b4d16fe87796e2",
+  "known_prior_search_count": null,
+  "new_strategy_configurations_planned": 4,
+  "parameter_optimization_trials": 0,
+  "historical_returns_seen": false,
+  "OOS": false,
+  "DSR_PBO_claim": false
+}

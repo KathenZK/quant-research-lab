@@ -1,0 +1,114 @@
+{
+  "id": "M0289",
+  "name": "PowerTower",
+  "status": "PASS_SOURCE_SYNTHETIC_READY_NOT_C0",
+  "original_11_fields": {
+    "id": "M0289",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/PowerTower.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "中",
+    "名称": "PowerTower",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "PowerTower",
+    "规则": "5m；连续三根收盘大于各自向前 2 根收盘的 buy_pow=3.849 次幂做多；对应 sell_pow=3.798 任一成立平多；止损 -28.8%。",
+    "页码或文件": "PowerTower.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0289.json",
+    "blob_sha256": "a11d209dbb8f988eac4a2f639ffc52f6221cb2190e2e355c4afe495e7ef38427"
+  },
+  "source": {
+    "id": "M0289",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+    "bytes": 4317,
+    "sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "PowerTower",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "can_short": false,
+    "minimal_roi": {
+      "0": 0.213,
+      "39": 0.048,
+      "56": 0.029,
+      "159": 0
+    },
+    "stoploss": -0.288,
+    "trailing_stop": false,
+    "startup_candle_count": 30
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false,
+  "effective_parameters": {
+    "buy_pow": 3.849,
+    "sell_pow": 3.798
+  },
+  "effective_flags": {
+    "timeframe": "5m",
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 30
+  },
+  "minimal_roi": {
+    "0": 0.213,
+    "39": 0.048,
+    "56": 0.029,
+    "159": 0
+  },
+  "stoploss": -0.288,
+  "original_order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "original_order_time_in_force": {
+    "entry": "GTC",
+    "exit": "GTC"
+  },
+  "synthetic_receipt": "M0289-synthetic-ready.json",
+  "synthetic_receipt_sha256": "aac8931e39384ef33b8b0a814d5f962724962203bb00b2b7ddee2e755ffa16e8",
+  "rules": {
+    "entry": "For j=0,1,2, close[t-j] > close[t-j-2] ** 3.849; all three true",
+    "exit": "For any j=0,1,2, close[t-j] < close[t-j-2] ** 3.798",
+    "volume_filter": "NONE in original; do not invent",
+    "causality": "Only current/positive shifts0..4. Closed native5m decision then nextopen is execution proxy assumption",
+    "warmup": "Original startup_candle_count30; shared2024 input has8928 prep bars"
+  },
+  "catalog_omissions": [
+    "exit comparison direction is vague in catalog; original source uses <, never mirror >",
+    "ROI table at0/39/56/159 omitted from catalog",
+    "startup30 and original GTC limit orders/default framework flags omitted",
+    "Author original runtime and complete operational cost/universe config unproven"
+  ],
+  "hypotheses": [
+    "BTCUSDTspot single instance rather than original multiasset universe",
+    "95%cash/fee/slippage/nextopen/stop-and-ROI OHLCfills are ADAPTED_EXECUTION_PROXY, never strict",
+    "Any alteration to normalize prices, fix scale dependence or change exponents is separate HYPOTHESIS, not performed"
+  ],
+  "economic_warning": "Price-to-a-noninteger-power comparisons depend strongly on currency unit/price scale; 0.1/1/10 synthetic fixtures differ. No claim of historical signal/trade frequency or returns."
+}
