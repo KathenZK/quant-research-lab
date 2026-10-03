@@ -1,0 +1,20 @@
+{
+  "input_rows": 762,
+  "first_full_week_label": "2022-12-11 00:00:00+00:00",
+  "twentieth_full_week_label": "2023-04-23 00:00:00+00:00",
+  "first_daily_signal_after_20_full_weeks": "2023-04-24 00:00:00+00:00",
+  "first_next_open": "2023-04-25 00:00:00+00:00",
+  "full_weeks": 108,
+  "partial_weeks": [
+    {
+      "label": "2022-12-04 00:00:00+00:00",
+      "days": 4
+    },
+    {
+      "label": "2025-01-05 00:00:00+00:00",
+      "days": 2
+    }
+  ],
+  "proposed_evaluation_daily_bars": 617,
+  "prior_weekly_ema_seed_available": false
+}

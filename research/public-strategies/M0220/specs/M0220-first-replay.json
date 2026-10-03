@@ -1,0 +1,21 @@
+{
+ "record_id":"M0220","variant_id":"M0220-BTCUSDT-WEEKLY20EMA-LOWTRAIL-20261003","family":"PUBLIC-M0220-BTC-MOMENTUM","fidelity":"HYPOTHESIS",
+ "source_url":"https://courses.theartoftrading.com/pages/bitcoin-momentum-strategy","source_sha256":"8231266815c7ce26940f3254cd7574057612f0ad388b57a45874fa23e4cebc04",
+ "catalog_discrepancies":["trail base highest(low,7), not catalog swing high","previous caution determines0.2ATR multiplier with current ATR","source ratchet only up and reset on entry signal","close<weeklyEMA explicit exit"],
+ "symbol":"BTCUSDT","market_type":"spot","timeframe":"daily UTC chart with previous complete UTC Mon-Sun weekly EMA",
+ "initial_cash":10000,"fee_bps":10,"slippage_bps":2,"allocation":"100% cash inclusive of entry fee: notional=cash/(1+fee); fractional fills; no margin or negative cash",
+ "weekly_ema":"alpha2/21, seed first complete week close; map only to following UTC Mon-Sun days, never map final weekly close into same week; require20 complete weekly observations",
+ "daily_ema":"alpha2/21, seed first input close; all raw daily closes",
+ "atr":"Wilder ATR5; TR=max(H-L,abs(H-prevC),abs(L-prevC)), initial TR=H-L, seed first5 TR arithmetic mean",
+ "entry":"close>previous_completed_week_EMA20 and not caution and flat; next raw open; reset trail at entry signal",
+ "caution":"bullish and (max(high,last7)-currentlow>1.5*ATR5 or close<dailyEMA20)",
+ "trail":"when long, candidate=max(low,last7)-currentATR5*(0.2 if previous_day_caution else1); initialize if unset, otherwise max(previoustrail,candidate)",
+ "exit":"after current close ratchet update, close<trail OR close<weeklyEMA triggers next raw open sell-all; not intraday stop and not same-close execution",
+ "execution":"first process pending order at raw open with adverse2bps, then end-of-day indicators/trail/signals; no pyramiding, leverage, shorts, forced terminal close; lag2 keeps stale orders and ignores buys while long/sells while flat",
+ "input_start":"2022-12-01","first_decision_close":"2023-04-24","first_evaluation_date":"2023-04-25","evaluation_end":"2024-12-31","evaluation_days":617,
+ "input_sha256":"48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+ "predeclared_cases":["base fee10 lag1","fee0 lag1","fee20 lag1","fee10 lag2","buyhold fee10 lag1 first evaluation open fee-inclusive100%cash"],
+ "cash_interest":0,"funding":0,"evidence_class":"historical_replay","oos_claim":false,
+ "assumptions":["UTC weekly boundary/platform mapping not proven identical to original chart","20week warmup does not remove seed sensitivity","fee-inclusive cash budget differs from unresolved Pine100%equity fee treatment","2bps slip and full fill hypothesis","venue/sample/source data version differ from original"],
+ "model_effort":"UNKNOWN","run_gate":"Do not compute returns until coordinator explicitly releases after batch003 CI and remote reconstruction"
+}

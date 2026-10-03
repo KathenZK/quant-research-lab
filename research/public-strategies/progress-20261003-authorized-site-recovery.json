@@ -1,0 +1,111 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T08:11:15.414912+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "004",
+  "tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233"
+  ],
+  "strategy_config_runs": 35,
+  "benchmark_runs": 9,
+  "strict_reproductions": 0,
+  "blocked_ids": {
+    "M0004": "issuer data incomplete",
+    "M0211": "source execution rules incomplete",
+    "M0221": "author exit/sizing absent; hashrate PIT not authenticated",
+    "M0226": "amount formula/cashflow rules absent",
+    "M0232": "full source login gated; matching futures/intraday input absent"
+  },
+  "external_claims": {
+    "dot": {
+      "ids": [
+        "M0256",
+        "M0259"
+      ],
+      "state": "PARENT_REPORTED_M0256_M0259_MARKET_DOWNLOAD_AND_EXECUTION_RESUMED_AFTER_CONSENT"
+    }
+  },
+  "previous_remote_commit": "797a8e7d1dda2a1009ab03baac0bf770dab8a806",
+  "previous_ci": "success:37105391603/111152763592",
+  "previous_restore": {
+    "downloaded_files": 97,
+    "identical_replay_files": 44
+  },
+  "this_batch_remote_save": "a7b7ea4c09863306ed41427c19af072c0db20139 verified; follow-up metadata save receipt is separate",
+  "large_snapshot_backup_required_for_progress": false,
+  "retention": "Code/strategy Markdown/light results and verified reconstruction recipes; no promise that public sources remain available",
+  "graph_imported": false,
+  "graph_deployed": false,
+  "library_backup_id": null,
+  "full_6973_archive_byte_recovery": false,
+  "actual_current_round_model": "UNKNOWN",
+  "actual_current_round_effort": "UNKNOWN",
+  "next_round_model_setting": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "parent_confirmed_saved": true
+  },
+  "qa_restore_and_static_review_excluded_from_trial_counts": true,
+  "mode": "END_TO_END_SMALL_SAMPLE_ONLY",
+  "bulk_backtest_and_graph_import_gate": "NOT_PASSED",
+  "bulk_execution_allowed": false,
+  "checkpoint": "AUTHORIZED_SITE_RECOVERY_ENVIRONMENT_BLOCK",
+  "latest_research_remote_commit": "a7b7ea4c09863306ed41427c19af072c0db20139",
+  "latest_research_ci": {
+    "status": "completed",
+    "conclusion": "success",
+    "run_id": 37106778838
+  },
+  "new_strategy_config_runs": 0,
+  "new_benchmark_runs": 0,
+  "new_market_downloads": 0,
+  "public_derived_release": "NOT_AUTOMATICALLY_AUTHORIZED; PRIVATE_SITE_SUBJECT_TO_ATTRIBUTION_AND_SAME_LICENSE",
+  "graph_native_package": "PREPARATION_ONLY_4_DRAFTS_5_NATIVE_FILES_MISSING",
+  "site_checkout": "BLOCKED_OFFICIAL_WORKFLOW_SCRIPT_UNAVAILABLE",
+  "latest_restore": {
+    "verified_at": "2026-10-03T07:34:09.862734+00:00",
+    "remote_files_byte_verified": 56,
+    "M0220_replayed_identical_files": 11
+  },
+  "this_checkpoint_scope": "preparation code, synthetic tests and diagnostics only; private derived drafts excluded from Git",
+  "latest_metadata_remote_commit": "1297284f5b38cbb0e7c33b569fede24d7542e6b3",
+  "latest_metadata_ci": {
+    "run_id": 37107766484,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "graph_preparation": {
+    "original_files_byte_preserved": 26,
+    "draft_projection_files": 4,
+    "total_bytes_verified": 521264,
+    "test_cases": 18,
+    "native_import_ready": false,
+    "catalog_binding": "MISSING_PRIVATE_CATALOG",
+    "new_trials": 0
+  },
+  "authorization_received_at": "2026-10-03T08:03:59Z",
+  "user_research_consent": "APPROVED_PERSONAL_NON_PRODUCTION_ASSIGNED_TWO_SAMPLES",
+  "site_scoped_git_credential": "CREATED_SUCCESSFULLY_SESSION_MEMORY_ONLY",
+  "site_publish_on_push": false,
+  "site_source_recovered": false,
+  "private_runtime_recovered": false,
+  "latest_preparation_remote_commit": "d818efc0b1203371d78845f0399bc4071718f905",
+  "latest_preparation_ci": {
+    "run_id": 37108689326,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "remote_preparation_restore": {
+    "at": "2026-10-03T08:09:32.774479+00:00",
+    "remote_code_and_docs_files_verified": 7,
+    "identical_preparation_files": 31,
+    "new_trials": 0
+  }
+}

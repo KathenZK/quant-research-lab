@@ -1,0 +1,16 @@
+{
+  "files": [
+    "research/public-strategies/M0226/README.md",
+    "research/public-strategies/M0226/decision-log.md",
+    "research/public-strategies/M0226/diagnostics/M0226-20261003-source-preflight.md",
+    "research/public-strategies/M0226/artifacts/20261003-source-preflight/source-review.json"
+  ],
+  "sha256": {
+    "research/public-strategies/M0226/README.md": "77153a74b63d2d3abf36a05f5ea999b44d8e835b926216398fa58a503bb89b15",
+    "research/public-strategies/M0226/decision-log.md": "ac58de0921ea7654d8a917d80e8883e7e79d3a6b2cd48a4eb8409a4b55a47202",
+    "research/public-strategies/M0226/diagnostics/M0226-20261003-source-preflight.md": "5cb942805ab5f69464a2c674415c51ddc10e02fbb4492603fe7b64096746b800",
+    "research/public-strategies/M0226/artifacts/20261003-source-preflight/source-review.json": "40eb5c371da4ff090f4e3dc6b83a50a0d4f99287f77782c916c26350834b552f"
+  },
+  "strategy_runs": 0,
+  "source_fulltext_included": false
+}

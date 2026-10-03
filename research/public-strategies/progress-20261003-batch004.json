@@ -1,0 +1,59 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T07:31:03.815372+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "004",
+  "tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233"
+  ],
+  "strategy_config_runs": 35,
+  "benchmark_runs": 9,
+  "strict_reproductions": 0,
+  "blocked_ids": {
+    "M0004": "issuer data incomplete",
+    "M0211": "source execution rules incomplete",
+    "M0221": "author exit/sizing absent; hashrate PIT not authenticated",
+    "M0226": "amount formula/cashflow rules absent",
+    "M0232": "full source login gated; matching futures/intraday input absent"
+  },
+  "external_claims": {
+    "dot": {
+      "ids": [
+        "M0256",
+        "M0259"
+      ],
+      "state": "ASSIGNED_NOT_STARTED"
+    }
+  },
+  "previous_remote_commit": "797a8e7d1dda2a1009ab03baac0bf770dab8a806",
+  "previous_ci": "success:37105391603/111152763592",
+  "previous_restore": {
+    "downloaded_files": 97,
+    "identical_replay_files": 44
+  },
+  "this_batch_remote_save": "pending; subsequent immutable receipt recorded in PR",
+  "large_snapshot_backup_required_for_progress": false,
+  "retention": "Code/strategy Markdown/light results and verified reconstruction recipes; no promise that public sources remain available",
+  "graph_imported": false,
+  "graph_deployed": false,
+  "library_backup_id": null,
+  "full_6973_archive_byte_recovery": false,
+  "actual_current_round_model": "UNKNOWN",
+  "actual_current_round_effort": "UNKNOWN",
+  "next_round_model_setting": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "parent_confirmed_saved": true
+  },
+  "qa_restore_and_static_review_excluded_from_trial_counts": true,
+  "mode": "END_TO_END_SMALL_SAMPLE_ONLY",
+  "bulk_backtest_and_graph_import_gate": "NOT_PASSED",
+  "bulk_execution_allowed": false
+}

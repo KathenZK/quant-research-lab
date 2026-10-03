@@ -8,3 +8,5 @@ research_classification: strategy_family
 [主账](m0216-core-ledger.md) · [逐策略报告](diagnostics/M0216-20261003.md) · [冻结规格](specs/M0216-first-replay.json) · [决策记录](decision-log.md)。
 
 代码位于 scripts；本地冻结输入、日净值、成交、独立验证、来源和环境指纹位于 artifacts/20261003-first-replay。公开Git排除完整输入与大部分曲线，只含基准净值、成交和汇总；按重建配方取得输入并验hash后才可恢复运行。该目录的数据及衍生物单独适用 CC BY-NC-SA 4.0，见其 LICENSE.md；不授权生产使用。Graph 导出遵循现有详情记录结构，尚未部署。
+
+- [行情许可补充核验](diagnostics/data-license-review-20261003.md)：获取日期、条款固定版本与当前发布暂停状态。

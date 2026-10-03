@@ -9,3 +9,5 @@
 - [复建步骤与公开范围](diagnostics/rebuild-20261003.md)
 
 代码位于 `scripts/`，个人研究完整产物留在 `artifacts/20261003-first-replay/`，仅批准的轻量结果可公开。2023–2024 窗口已被 M0216 曝光，不能声称未看样本外。没有修改生产 runner。
+
+- [行情许可补充核验](diagnostics/data-license-review-20261003.md)：获取日期、条款固定版本与当前发布暂停状态。

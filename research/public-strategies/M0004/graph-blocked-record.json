@@ -1,0 +1,18 @@
+{
+  "id": "M0004",
+  "name": "多资产十二个月动量",
+  "status": "blocked_data",
+  "reason": "缺可交易日行情、复权链及充分预热，不能用发行人NAV替代成交价。",
+  "tested_variants": 0,
+  "families": [],
+  "audit": {
+    "source_rule_attribution_status": "not_implemented",
+    "strict_reproduction_status": "NOT_ESTABLISHED",
+    "strategy_backtest_runs": 0,
+    "nav_and_trades_unavailable_reason": "缺可交易日行情、复权链及充分预热，不能用发行人NAV替代成交价。"
+  },
+  "implementations": [],
+  "related_results": [],
+  "imported": false,
+  "report": "M0004.md"
+}
