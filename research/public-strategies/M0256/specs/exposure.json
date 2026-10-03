@@ -1,0 +1,31 @@
+{
+  "record_id": "M0256",
+  "recorded_before_returns_at_utc": "2026-10-03T08:23:13.758120Z",
+  "protocol_sha256": "30940aa783ec8e3ec78d8e4ee8c635728560d7508a7c97bf2ad42d7cbe7c1858",
+  "source_manifest_sha256": "279f5fbea5c15154d873db4233550b12e0e04486ce67cbd6650e826a05e0724b",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "code_hashes": {
+    "scripts/check_causality.py": "98331101e322cf339573d904a771036465be6386f3efbbe3597eca1c4b4dbe09",
+    "scripts/check_halt_evidence.py": "cbcf8d35ea800b47dd1b0dc917ee885cb7859ec34112451e020278292b12cbdb",
+    "scripts/export_graph.py": "b2806527ccaeae7a782f9406eeaa2cf330e89eb5021804e99402d0906c7cf4cd",
+    "scripts/fetch_sources.py": "2a0c17046e914168cbef76b3f7076a84bb81c7f0b8eb5158e3f0e2558150c3d6",
+    "scripts/freeze_protocol.py": "46115ae15b6d54e6aafd9c6745ecb3f9d06b98d2769cd1be5746fa5e12b3e8dc",
+    "scripts/rebuild.py": "95241650cdbdb1dddc57d945d7c29c9605bedc3ee823cfda54449fa70aa5a836",
+    "scripts/rebuild_official_bars.py": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+    "scripts/run_replay.py": "8f4faaa2a713b6de30d17917b99167fca143b7eec905cb004344d6d40f2342df",
+    "scripts/test_rebuild_official_bars.py": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817",
+    "scripts/test_units.py": "e95253f2915a3aaf10fdae1c17adfb58b1aa15ee2381fadce55e7022fec19127",
+    "scripts/validate_independent.py": "7852d4c5d2304611d0d5646bc68a920c87e9e608241cc703bd4bf9a8a15ccc30"
+  },
+  "first_execution_attempt": 1,
+  "strategy_ids": 1,
+  "predeclared_strategy_configurations": 4,
+  "predeclared_controls": 1,
+  "hyperopt": false,
+  "historical_window_already_exposed": true,
+  "prior_catalog_search_count": "UNKNOWN",
+  "pure_oos": false,
+  "actual_model": "UNKNOWN",
+  "actual_reasoning_effort": "UNKNOWN",
+  "note": "QA/rebuild repeats are replay attempts, not new strategy IDs; preserve failed outputs and revisions if any; no model/effort backfill"
+}

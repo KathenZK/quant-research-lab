@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "test_type": "SYNTHETIC_UNIT_TEST_NOT_BACKTEST",
+  "risk_scenarios": [
+    "stop",
+    "roi",
+    "dual",
+    "gap_stop",
+    "gap_roi",
+    "signal_priority",
+    "baseline_2bps_both_sides",
+    "roi_net_after_slip_49.97pct",
+    "extra_one_bar_delay",
+    "halted_12h_open_deferred_to14h_no_fill_at13h_closed_bar_cutoff"
+  ],
+  "indicator_checks": [
+    "TA-Lib SMA seed / alpha2/(N+1) Decimal parity",
+    "cross equality and NaN",
+    "volume>0 filter",
+    "original pinned source method parity"
+  ],
+  "fee_budget": "95% inclusive; no negative cash",
+  "timing": "first close signal fills actual next open"
+}

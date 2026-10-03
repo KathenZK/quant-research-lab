@@ -1,0 +1,68 @@
+{
+  "id": "M0259",
+  "status": "DATA_BLOCKED",
+  "evaluation_start": "2023-01-01T00:00:00Z",
+  "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+  "input_start": "2022-12-01T00:00:00Z",
+  "input_end_exclusive": "2025-01-01T00:00:00Z",
+  "market_replay_runs": 0,
+  "tested_strategy_configurations": 0,
+  "tested_execution_sensitivity_cases": 0,
+  "tested_buyhold_controls": 0,
+  "parameter_searches": 0,
+  "formal_input_code_spec_exposure_freeze": "NOT_WRITTEN",
+  "fidelity_class_if_executed": "HYPOTHESIS",
+  "evidence_type": "data_quality_blocker_not_strategy_performance",
+  "blocking_facts": {
+    "monthly_rows": 743,
+    "monthly_expected": 744,
+    "daily_rows": 23,
+    "daily_expected": 24,
+    "daily_equals_monthly_same_day": true,
+    "missing_hour_utc": "2023-03-24T13:00:00Z",
+    "partial_zero_volume_hour_utc": "2023-03-24T12:00:00Z",
+    "native_close_utc": "2023-03-24T12:39:41.646Z"
+  },
+  "not_run": [
+    "full market replay",
+    "market indicator/ledger validation",
+    "market future perturbation",
+    "return reconstruction",
+    "result Graph detail"
+  ],
+  "performed": [
+    "hash-pinned source retrieval and actual source redownload",
+    "synthetic indicator/risk/independent-ledger and daily export tests",
+    "synthetic exact original class signal comparison",
+    "official monthly and daily checksum/CRC checks",
+    "independent original-row grid and native daily/monthly equivalence audit",
+    "blocked freeze refusal"
+  ],
+  "next_action": "retain original-window DATA_BLOCKED; any trading-pause-aware adaptation needs a separate explicit contract and approval, not silent window replacement",
+  "rights": {
+    "attribution": "Binance Vision",
+    "license": "CC BY-NC-SA4.0 plus Binance Dataset Terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+  },
+  "strict_reproduction": false,
+  "oos_claim": false,
+  "promoted": false,
+  "live_ready": false,
+  "data_quality_status": "REJECTED",
+  "full_window_qa": {
+    "months": 25,
+    "actual_rows": 18287,
+    "expected_rows": 18288,
+    "observed_rejected_csv": {
+      "bytes": 5133368,
+      "path": "BTCUSDT-1h-202212-202412-native12-REJECTED.csv",
+      "rows": 18287,
+      "sha256": "db094a83de18f45f50313b775a4ac54d93cdf0f4ea7456e28f196f8c8b834d2d"
+    },
+    "source_full_manifest_sha256": "df9c1d2953d799c73dc974b5d6e5db7349987e8d51c6649faa0bb5f1c74c7373",
+    "recapture_scope": "2022-12 through2023-03 four months ZIP/CHECKSUM/CSV=12 objects independently re-fetched and hash-equal; remaining21 months first capture only",
+    "full_window_double_capture_or_rebuild": false,
+    "other_gaps_duplicates_order_basic_value_errors": 0
+  },
+  "revision_at_utc": "2026-10-03T08:25:38Z"
+}

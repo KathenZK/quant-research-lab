@@ -1,0 +1,40 @@
+{
+  "id": "M0259",
+  "name": "BbandRsi",
+  "status": "data_blocked",
+  "reason": "原2023–2024窗口DATA_BLOCKED：官方1h全25月18287/18288根，唯一缺2023-03-24 13:00UTC，12:00零量bar原生close_time12:39:41.646；日档重复同样23/24根。无其它缺口/重复/乱序/基本值错误仍不足通过原契约。真实回测0。",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0259-BBRSI"
+  ],
+  "audit": {
+    "source_verification_status": "readable_hash_verified",
+    "source_rule_attribution_status": "public_source_anchored_hypothesis",
+    "data_status": "DATA_BLOCKED",
+    "monthly_checksum_crc": "PASS",
+    "daily_checksum_crc": "PASS",
+    "hourly_grid": "FAIL",
+    "native_close_phase": "FAIL",
+    "daily_monthly_native_rows_equal": true,
+    "market_replay_runs": 0,
+    "synthetic_validation": "PASS_ONLY_NOT_MARKET_EVIDENCE",
+    "full_framework_backtest": "NOT_RUN",
+    "provider_clock_newer_bucket": "UNAVAILABLE_HTTP451_NO_BYPASS",
+    "oos_claim": false,
+    "promoted": false,
+    "live_ready": false,
+    "graph_definition_bound": false,
+    "graph_page_verified": false,
+    "data_quality_status": "REJECTED",
+    "full_window_observed_rows": 18287,
+    "full_window_expected_rows": 18288,
+    "months_observed": 25,
+    "full_window_double_capture": false,
+    "first_four_months_independent_recapture": "12 ZIP/CHECKSUM/CSV objects hash-equal"
+  },
+  "implementations": [],
+  "related_results": [],
+  "attribution": "Binance Vision",
+  "license": "CC BY-NC-SA4.0 plus Binance Dataset Terms",
+  "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+}

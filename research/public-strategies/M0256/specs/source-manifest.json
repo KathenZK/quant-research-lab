@@ -1,0 +1,66 @@
+{
+  "source_retrieval_date_utc": "2026-10-03",
+  "retrieval_method": "authorized GitHub file connector, base64 decoded before SHA256 verification",
+  "files": [
+    {
+      "filename": "AverageStrategy.py",
+      "repository": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "raw_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "sha256": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094",
+      "bytes": 2630,
+      "license": "GPL-3.0",
+      "attribution": "Gert Wohlgemuth / freqtrade-strategies"
+    },
+    {
+      "filename": "qtpylib_indicators.py",
+      "repository": "freqtrade/freqtrade",
+      "commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+      "path": "freqtrade/vendor/qtpylib/indicators.py",
+      "raw_url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/vendor/qtpylib/indicators.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/vendor/qtpylib/indicators.py",
+      "sha256": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760",
+      "bytes": 19688,
+      "license": "Apache-2.0 header, distributed in GPL-3.0 Freqtrade",
+      "attribution": "Ran Aroussi, QTPyLib (2016–2018); Freqtrade contributors"
+    },
+    {
+      "filename": "ta_EMA.c",
+      "repository": "TA-Lib/ta-lib",
+      "commit": "43f9d5042ecc4bd367941846494ad907bf20ea50",
+      "path": "src/ta_func/ta_EMA.c",
+      "raw_url": "https://raw.githubusercontent.com/TA-Lib/ta-lib/43f9d5042ecc4bd367941846494ad907bf20ea50/src/ta_func/ta_EMA.c",
+      "url": "https://github.com/TA-Lib/ta-lib/blob/43f9d5042ecc4bd367941846494ad907bf20ea50/src/ta_func/ta_EMA.c",
+      "sha256": "bd72cda380bf1b319371b667a622f8d7ec1ff7ec697e4b7cbfeec157682fd948",
+      "bytes": 23650,
+      "license": "BSD-3-Clause source header",
+      "attribution": "TA-Lib contributors, Mario Fortier"
+    },
+    {
+      "filename": "LICENSE.freqtrade-strategies.txt",
+      "repository": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "license": "GPL-3.0",
+      "attribution": "Free Software Foundation"
+    },
+    {
+      "filename": "freqtrade-backtesting.md",
+      "repository": "freqtrade/freqtrade",
+      "commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+      "path": "docs/backtesting.md",
+      "raw_url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/docs/backtesting.md",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c66e221012cd4d68cfdacf4735b38af33a487961/docs/backtesting.md",
+      "sha256": "da78657a3ffa9ef0b010463907ba2ffbf32a70ec6b8a529a6e6b642e9fab56b5",
+      "bytes": 49207,
+      "license": "GPL-3.0 repository",
+      "attribution": "Freqtrade contributors"
+    }
+  ]
+}

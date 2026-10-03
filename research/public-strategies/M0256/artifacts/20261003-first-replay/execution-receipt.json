@@ -1,0 +1,22 @@
+{
+  "id": "M0256",
+  "origin_run_id": "M0256-20261003-first-replay",
+  "receipt_created_utc": "2026-10-03T08:33:19.266298+00:00",
+  "protocol_frozen_utc": "2026-10-03T08:23:13.758120Z",
+  "first_summary_written_utc": "2026-10-03T08:23:48.718108+00:00",
+  "research_attempts": 1,
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "parameter_searches": 0,
+  "post_result_engine_changes": 0,
+  "exact_rebuild_passes": 1,
+  "deterministic_outputs_compared": 18,
+  "frozen_code_source_and_support_hashes_unchanged": true,
+  "roi_stop_historical_exits": 0,
+  "halt_proxy_historical_fills_all_cases": 0,
+  "roi_stop_and_halt_proxy_validation_scope": "synthetic fixtures only; no historical hits",
+  "graph_status": "FILES_GENERATED_NOT_IMPORTED",
+  "actual_model": "UNKNOWN",
+  "actual_reasoning_effort": "UNKNOWN"
+}

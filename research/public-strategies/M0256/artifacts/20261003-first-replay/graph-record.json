@@ -1,0 +1,50 @@
+{
+  "id": "M0256",
+  "name": "AverageStrategy：BTC现货4h EMA8/21",
+  "status": "tested_hypothesis_only",
+  "reason": "单标的假设实例回测与独立校验；保留ROI50%/stop−20%，非原框架严格复现，历史窗口已曝光。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0256-EMA-CROSS"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_sha256_verified",
+    "source_rule_attribution_status": "original_source_signals_and_risk_preserved_execution_assumptions_declared",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0256-20261003-first-replay",
+      "variant_id": "M0256-BTCUSDT-4H-EMA8-21-LONG-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "30940aa783ec8e3ec78d8e4ee8c635728560d7508a7c97bf2ad42d7cbe7c1858",
+      "manifest_sha256": "bf782e6623338923f6776176fea1bbb61e9d96a9038cc3e38c111c8325331674",
+      "family": "PUBLIC-M0256-EMA-CROSS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0256-20261003-first-replay",
+      "variant_id": "M0256-BTCUSDT-4H-EMA8-21-LONG-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "30940aa783ec8e3ec78d8e4ee8c635728560d7508a7c97bf2ad42d7cbe7c1858",
+      "manifest_sha256": "bf782e6623338923f6776176fea1bbb61e9d96a9038cc3e38c111c8325331674"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 with Binance additional terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "EMA calculation, assumed execution/accounting, metrics and daily sampling"
+  }
+}

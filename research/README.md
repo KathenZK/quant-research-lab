@@ -257,3 +257,8 @@
 
 [M0220主账](public-strategies/M0220/m0220-core-ledger.md)：20完整周预热后的周线动量假设，explore。
 [M0221](public-strategies/M0221/README.md) 与 [M0226](public-strategies/M0226/README.md)：具体规则阻塞，均0回测。
+
+## 公开策略 M0256 / M0259
+
+- [M0256 主账](public-strategies/M0256/m0256-core-ledger.md)：BTC现货4h EMA8/21，4个假设配置及1个买持对照；DIAGNOSTIC_ONLY，严格复现0，未晋级。
+- [M0259 主账](public-strategies/M0259/m0259-core-ledger.md)：BbandRsi原定1h窗口的数据完整性阻塞，实际市场回测0；保留缺口与停市异常证据。

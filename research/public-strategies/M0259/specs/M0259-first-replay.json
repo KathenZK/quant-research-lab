@@ -1,0 +1,190 @@
+{
+  "record_id": "M0259",
+  "run_id": "M0259-20261003-first-replay",
+  "variant_id": "M0259-BTCUSDT-1H-BBRSI-20261003",
+  "family": "PUBLIC-M0259-BBRSI",
+  "fidelity_class": "HYPOTHESIS",
+  "purpose": "one predeclared exploratory historical execution diagnostic, no optimization or promotion",
+  "spec_prepared_at_utc": "2026-10-03T07:50:23Z",
+  "source_manifest": "sources/manifest.json",
+  "source_sha256": "65718e8d0c14094b67be82b66238ea60a4af4bbf6fd9a6e1879dad5c48125547",
+  "framework_version": "2025.9",
+  "framework_commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+  "signal": {
+    "entry": "RSI14(close)<30 AND close<BB20x2.lower(HLC3); no volume filter in original",
+    "exit": "RSI14(close)>70",
+    "rsi": "TA-Lib0.6.8/C0.6.4 default Wilder initialization and compatibility0, unstable0; index0..13 NaN",
+    "bollinger": "qtpylib at frozen commit; HLC3, rolling window20, min_periods1, sample standard deviation ddof1",
+    "equality": "strict RSI<30, close<lower, RSI>70; equality gives no corresponding signal",
+    "warmup": "full December2022 history; last warmup close signal may execute first evaluation open"
+  },
+  "risk": {
+    "minimal_roi": {
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "stop_trigger": "raw low <= actual slipped entry price*0.75; gap below stop executes raw open then adverse exit slip",
+    "roi_trigger": "raw high >= actual entry fill*(1+entry_fee_rate)*1.10/(1-exit_fee_rate); gap above target executes raw open then adverse exit slip",
+    "roi_slippage_note": "trigger includes entry/exit fees but not future exit slip; exact target with2bps exit slip realizes9.978% net, not guaranteed10%",
+    "trailing": false
+  },
+  "position": {
+    "initial_cash_usdt": 100000.0,
+    "buy_fraction_current_cash_including_entry_fee": 0.95,
+    "quantity": "budget/[actual_entry_fill*(1+fee)]",
+    "max_positions": 1,
+    "fractional_fills": true,
+    "short": false,
+    "leverage": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable to spot, no funding cashflow",
+    "market_impact": "fixed slip assumption, no volume participation or exchange precision/minimum/notional model"
+  },
+  "execution": {
+    "signal_lag_bars": 1,
+    "signal_time": "after complete source bar closes, references only i-lag at destination open i",
+    "entry": "actual raw open_i*(1+0.0002), fee on executed notional, state signals may persist",
+    "exit_signal": "actual raw open_i*(1-0.0002) when RSI exit signal i-lag true",
+    "priority": [
+      "existing inventory: due known exit signal at open",
+      "otherwise existing inventory open-gap stop or ROI",
+      "then intrabar stop before ROI, including entry bar",
+      "mark retained position at actual bar close"
+    ],
+    "same_bar": "no reentry after exit; if flat start and source entry available, buy at open then process risk range; never execute at indicator/synthetic price",
+    "path_ambiguity": "count high/low range overlaps separately from true unresolved paths; known open-gap or scheduled open exits resolve chronology; inner-bar both thresholds use stop-first, OHLC cannot establish actual path",
+    "delayed_signals": "lag2 sensitivity references i-2 at open; delayed raw signal is acted on if flat at execution; no cancellation using future information",
+    "terminal": "no forced liquidation; report raw-close equity and separate hypothetical after-cost liquidation estimate",
+    "fee_bps_each_side": 8,
+    "adverse_slippage_bps_each_side": 2,
+    "risk_order_deviation": "explicit independent chronological gap model; not exact Freqtrade execution, orderbook or its close-rate rounding"
+  },
+  "input": {
+    "exchange": "binance",
+    "native_symbol": "BTCUSDT",
+    "symbol": "BTC/USDT",
+    "market_type": "spot",
+    "timeframe": "1h",
+    "source": "Binance Vision official monthly klines ZIP+CHECKSUM",
+    "input_start": "2022-12-01T00:00:00Z",
+    "input_end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_start": "2023-01-01T00:00:00Z",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "mandatory_strategy_fields": [
+      "open",
+      "high",
+      "low",
+      "close"
+    ],
+    "qa_fields": [
+      "open_time",
+      "close_time",
+      "volume",
+      "quote_volume",
+      "trade_count",
+      "taker_buy_base_volume",
+      "taker_buy_quote_volume"
+    ],
+    "zero_volume": "must report, never silently delete or add absent source volume>0 signal filter",
+    "row_policy": "reject missing/out-of-order/duplicate/invalid rows, no sorting/dedup/fill repairs",
+    "profile": "explicit offline diagnostic exception per pinned batch handoff; not canonical perpetual dataset or TRUSTED load",
+    "finality_and_rights": "full input QA and actual authorization prerequisite; no fake is_closed or vwap",
+    "strict_finality_blocker": "Spot REST time request HTTP451; provider clock/newer-current-bucket not available, do not bypass. Archive diagnostic only."
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "lag_bars": 1,
+      "buyhold": false,
+      "slippage_bps": 2
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "lag_bars": 1,
+      "buyhold": false,
+      "slippage_bps": 2
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "lag_bars": 1,
+      "buyhold": false,
+      "slippage_bps": 2
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "lag_bars": 2,
+      "buyhold": false,
+      "slippage_bps": 2
+    },
+    {
+      "name": "buyhold",
+      "fee_bps": 8,
+      "lag_bars": 1,
+      "buyhold": true,
+      "slippage_bps": 2
+    }
+  ],
+  "buyhold": "95% initial cash fee-inclusive buy first evaluation open, mark same final close, no forced exit; same fee8/slip2",
+  "metrics": {
+    "return": "final close-marked equity/initial cash-1, includes initial fill cost",
+    "cagr": "(final/initial)^(365/731)-1",
+    "max_drawdown": "negative min(hourly equity / running hourly peak including initial cash -1)",
+    "sharpe": "UTC daily last hourly close returns including first day vs initial100000; sample std ddof1, rf0, sqrt365"
+  },
+  "exposure": {
+    "already_seen_window": true,
+    "prior_strategies": "at least earlier public strategy batch; exact past search count UNKNOWN",
+    "oos_claim": false,
+    "reliable_DSR_PBO": false,
+    "strategy_configurations": 1,
+    "sensitivity_cases": 3,
+    "buyhold_controls": 1,
+    "parameter_searches": 0,
+    "source_asset_selection": "source does not specify asset universe; BTCUSDT is predeclared illustrative instance"
+  },
+  "validation": [
+    "unchanged original BbandRsi class populate methods through import-only IStrategy shim; exact indicators/signals and source risk parameters checked; full framework not run",
+    "independent stdlib RSI+BB+ledger, no primary-engine import",
+    "all hourly equity, fills, fees, PnL, signals, daily metrics",
+    "eight future perturbation cuts including intraday, Sunday and Monday boundaries",
+    "synthetic risk-order/gap/fee tests",
+    "identical frozen code/input rerun to fresh directory"
+  ],
+  "limitations": [
+    "retrospective archive does not establish contemporaneous availability or historical PIT tradability",
+    "no proven intrabar tick path",
+    "historically exposed window, not independent OOS",
+    "full framework backtester not run",
+    "fees and fills are assumed, not account-specific",
+    "not promoted, not live-ready; no trading orders"
+  ],
+  "result_license": "Binance-derived results/charts/Graph outputs: CC BY-NC-SA4.0 and frozen Binance additional terms; software licenses are separate",
+  "spec_status": "DATA_BLOCKED_DRAFT_NOT_FROZEN",
+  "data_authorization": {
+    "accepted_at_utc": "2026-10-03T08:03:59Z",
+    "scope": "user accepted frozen Binance terms for this bounded personal-research batch; Graph Site operation also approved in same reply",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+  },
+  "startup_gate": {
+    "status": "DATA_BLOCKED",
+    "observed_month": "2023-03",
+    "observed_hourly_rows": 743,
+    "expected_hourly_rows": 744,
+    "missing_open_utc": "2023-03-24T13:00:00Z",
+    "partial_zero_volume_bar_open_utc": "2023-03-24T12:00:00Z",
+    "actual_native_close_utc": "2023-03-24T12:39:41.646Z",
+    "action": "do not compute returns, do not repair or alter window; retain original contract and await source cross-check",
+    "official_daily_cross_check": "CONFIRMED23/24 rows, all native fields match monthly same day; original contract remains blocked",
+    "full_window_observed_rows": 18287,
+    "full_window_expected_rows": 18288,
+    "observed_months": 25,
+    "other_gaps_duplicates_order_basic_value_errors": 0,
+    "rejected_csv_sha256": "db094a83de18f45f50313b775a4ac54d93cdf0f4ea7456e28f196f8c8b834d2d",
+    "rejected_input_not_frozen_or_consumable": true
+  }
+}

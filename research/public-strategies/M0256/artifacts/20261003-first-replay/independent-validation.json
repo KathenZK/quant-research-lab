@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "method": "independent stdlib Decimal EMA + Decimal event ledger, no engine/TA-Lib/qtpylib import",
+  "indicator_max_absolute_errors": {
+    "ema8": 1.4551915228366852e-11,
+    "ema21": 2.9103830456733704e-11
+  },
+  "signals_rows": 4572,
+  "cases": {
+    "base": {
+      "bar_ledger_rows": 4386,
+      "daily_rows": 731,
+      "fills": 174,
+      "summary_metrics_checked": 17,
+      "status": "PASS"
+    },
+    "fee0": {
+      "bar_ledger_rows": 4386,
+      "daily_rows": 731,
+      "fills": 174,
+      "summary_metrics_checked": 17,
+      "status": "PASS"
+    },
+    "fee20": {
+      "bar_ledger_rows": 4386,
+      "daily_rows": 731,
+      "fills": 174,
+      "summary_metrics_checked": 17,
+      "status": "PASS"
+    },
+    "delay2": {
+      "bar_ledger_rows": 4386,
+      "daily_rows": 731,
+      "fills": 174,
+      "summary_metrics_checked": 17,
+      "status": "PASS"
+    },
+    "buyhold": {
+      "bar_ledger_rows": 4386,
+      "daily_rows": 731,
+      "fills": 1,
+      "summary_metrics_checked": 17,
+      "status": "PASS"
+    }
+  },
+  "tolerance": "max(1e-6 absolute, 1e-10 relative); indicators 1e-8 absolute or 1e-10 relative"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "DATA_BLOCKED_CONFIRMED",
+  "crosscheck": "independent local checksum/CRC and all-native-field comparison",
+  "daily_rows": 23,
+  "expected_daily_rows": 24,
+  "monthly_same_day_rows": 23,
+  "native_rows_equal": true,
+  "missing_open_utc": [
+    "2023-03-24T13:00:00Z"
+  ],
+  "partial_bar_open_utc": "2023-03-24T12:00:00Z",
+  "partial_bar_native_close_utc": "2023-03-24T12:39:41.646Z",
+  "partial_bar_volume_zero": true,
+  "partial_bar_trades_zero": true,
+  "daily_zip_sha256": "ea9d94f28a39ad8029c9c2863cbb7769137188edd957fea35d0313ae4183561f",
+  "daily_zip_bytes": 1506,
+  "daily_checksum_sha256": "838a86096f5a24e520a31d14e8b41428a781b0647f970142d5639a6fb1108243",
+  "daily_checksum_bytes": 91,
+  "daily_csv_sha256": "17bb536be486876f0c73ced1ef1a0d46ce5cca3d4a08baa30343a04cb3aa9c76",
+  "daily_csv_bytes": 3667,
+  "monthly_csv_sha256": "9608d74f112518d3e4941cd9673f96f887f752120a7ed6c29240a75795f15974",
+  "repair_performed": false,
+  "market_runs": 0,
+  "attribution": "Binance Vision",
+  "license": "CC BY-NC-SA 4.0 plus Binance Dataset Terms"
+}

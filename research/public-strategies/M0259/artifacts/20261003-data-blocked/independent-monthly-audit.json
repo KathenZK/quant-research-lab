@@ -1,0 +1,41 @@
+{
+  "id": "M0259",
+  "status": "DATA_BLOCKED",
+  "month": "2023-03",
+  "timeframe": "1h",
+  "observed_rows": 743,
+  "expected_rows": 744,
+  "missing_open_utc": [
+    "2023-03-24T13:00:00.000Z"
+  ],
+  "extra_open_utc": [],
+  "duplicate_opens": 0,
+  "original_order_strictly_increasing": true,
+  "nonconforming_native_close_times": [
+    {
+      "open_utc": "2023-03-24T12:00:00.000Z",
+      "actual_close_utc": "2023-03-24T12:39:41.646Z",
+      "expected_close_utc": "2023-03-24T12:59:59.999Z",
+      "volume_zero": true,
+      "trades_zero": true
+    }
+  ],
+  "zero_volume_rows": 1,
+  "archive": {
+    "filename": "BTCUSDT-1h-2023-03.zip",
+    "sha256": "7f2afb8e0179a57ac31eab5205660298ba5eb77039ac2e21aef9b715ff3d06ce",
+    "bytes": 44928,
+    "official_checksum": "PASS",
+    "zip_crc": "PASS",
+    "checksum_sha256": "0723db47f2c7d886dc8c832edeeb6e4d72c3b8e0da9404e12a718b19f8dbe21b",
+    "checksum_bytes": 88,
+    "csv_sha256": "9608d74f112518d3e4941cd9673f96f887f752120a7ed6c29240a75795f15974",
+    "csv_bytes": 120871
+  },
+  "scope": "row/clock-grid metadata only; no indicator or return calculation; no repairs",
+  "market_runs": 0,
+  "normalized_input_published": false,
+  "attribution": "Binance Vision",
+  "license": "CC BY-NC-SA 4.0 and Binance Dataset Terms",
+  "additional_terms": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+}

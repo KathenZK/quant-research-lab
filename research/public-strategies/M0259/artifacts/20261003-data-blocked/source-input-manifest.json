@@ -1,0 +1,95 @@
+{
+  "state": "FULL_WINDOW_RAW_OBSERVED_REJECTED",
+  "sources": [
+    {
+      "kind": "monthly",
+      "bytes": 44928,
+      "fetch_completed_at_utc": "2026-10-03T08:06:01.304061Z",
+      "fetch_started_at_utc": "2026-10-03T08:05:52.546477Z",
+      "path": "BTCUSDT-1h-2023-03.zip",
+      "sha256": "7f2afb8e0179a57ac31eab5205660298ba5eb77039ac2e21aef9b715ff3d06ce",
+      "status": 200,
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03.zip"
+    },
+    {
+      "kind": "monthly",
+      "bytes": 88,
+      "fetch_completed_at_utc": "2026-10-03T08:05:52.395896Z",
+      "fetch_started_at_utc": "2026-10-03T08:05:47.244289Z",
+      "path": "BTCUSDT-1h-2023-03.zip.CHECKSUM",
+      "sha256": "0723db47f2c7d886dc8c832edeeb6e4d72c3b8e0da9404e12a718b19f8dbe21b",
+      "status": 200,
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03.zip.CHECKSUM"
+    },
+    {
+      "kind": "daily",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03-24.zip.CHECKSUM",
+      "path": "BTCUSDT-1h-2023-03-24.zip.CHECKSUM",
+      "status": 200,
+      "fetch_started_utc": "2026-10-03T08:08:56.223464+00:00",
+      "fetch_ended_utc": "2026-10-03T08:09:05.467674+00:00",
+      "bytes": 91,
+      "sha256": "838a86096f5a24e520a31d14e8b41428a781b0647f970142d5639a6fb1108243"
+    },
+    {
+      "kind": "daily",
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1h/BTCUSDT-1h-2023-03-24.zip",
+      "path": "BTCUSDT-1h-2023-03-24.zip",
+      "status": 200,
+      "fetch_started_utc": "2026-10-03T08:09:05.667821+00:00",
+      "fetch_ended_utc": "2026-10-03T08:09:16.170963+00:00",
+      "bytes": 1506,
+      "sha256": "ea9d94f28a39ad8029c9c2863cbb7769137188edd957fea35d0313ae4183561f"
+    },
+    {
+      "kind": "daily",
+      "path": "BTCUSDT-1h-2023-03-24.csv",
+      "bytes": 3667,
+      "sha256": "17bb536be486876f0c73ced1ef1a0d46ce5cca3d4a08baa30343a04cb3aa9c76",
+      "extracted_at_utc": "2026-10-03T08:09:16.372118+00:00"
+    },
+    {
+      "kind": "official_context",
+      "url": "https://www.binance.com/en/support/announcement/detail/813a31506e9f478ea8c1058b425df87a",
+      "path": "announcement.html",
+      "status": 200,
+      "bytes": 100463,
+      "sha256": "b508aabfc782adb6066a1ded8d835ab6c5220368c074763c1c0c8be179006f93",
+      "fetch_started_utc": "2026-10-03T08:10:16.749878+00:00",
+      "fetch_ended_utc": "2026-10-03T08:10:25.552494+00:00"
+    },
+    {
+      "kind": "official_context",
+      "url": "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113",
+      "path": "postmortem.html",
+      "status": 200,
+      "bytes": 104674,
+      "sha256": "e10d574df64cfd22914fb0d663f964293c936b2b5280ceca804dbc25cb223083",
+      "fetch_started_utc": "2026-10-03T08:10:25.552557+00:00",
+      "fetch_ended_utc": "2026-10-03T08:10:33.263166+00:00"
+    }
+  ],
+  "full_input_sha256_not_available": false,
+  "why": "All25 source months observed;18287/18288 rows, original contract still rejects input. Rejected raw CSV hash is evidence only, not an accepted frozen replay input.",
+  "raw_rows_or_HTML_in_public_package": false,
+  "attribution": "Binance Vision; Binance official maintenance announcement",
+  "license": "CC BY-NC-SA4.0 and Binance Dataset Terms for archive-derived diagnostics",
+  "accepted_input_sha256_available": false,
+  "full_window_raw_observation": {
+    "manifest_sha256": "df9c1d2953d799c73dc974b5d6e5db7349987e8d51c6649faa0bb5f1c74c7373",
+    "manifest_bytes": 98218,
+    "rejected_csv": {
+      "bytes": 5133368,
+      "path": "BTCUSDT-1h-202212-202412-native12-REJECTED.csv",
+      "rows": 18287,
+      "sha256": "db094a83de18f45f50313b775a4ac54d93cdf0f4ea7456e28f196f8c8b834d2d"
+    },
+    "summary_file": "full-window-qa-summary.json",
+    "months": 25,
+    "observed_rows": 18287,
+    "expected_rows": 18288,
+    "consumer_eligible": false,
+    "strategy_returns_permitted": false,
+    "recapture_scope": "2022-12 through2023-03 four months ZIP/CHECKSUM/CSV=12 objects independently re-fetched and hash-equal; remaining21 months first capture only"
+  }
+}

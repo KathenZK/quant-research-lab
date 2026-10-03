@@ -1,0 +1,15 @@
+{
+  "status": "PASS_FIELD_PRESERVING_PROJECTION",
+  "source_daily_ledger_sha256": "d03de04333f7c660f1a59d64ffbd9bf0a820f0c545e46da5c5659153e52644b4",
+  "source_daily_independent_validation_sha256": "f321ffe970ccbbfe387a6579776b46006549bff53e33310c4a9796b5d6d57ae7",
+  "public_projection_sha256": "29d2fd8aa94aaeb4b1f3b60267fa5dd519207c8f580670a7bbba8748622a9c53",
+  "rows": 731,
+  "columns": [
+    "date",
+    "timestamp_utc",
+    "equity",
+    "nav"
+  ],
+  "method": "exact CSV field strings, no recomputation or parameter change; source complete daily ledger separately validated by Decimal implementation",
+  "raw_market_columns_published": false
+}
