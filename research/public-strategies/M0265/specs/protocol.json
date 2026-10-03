@@ -1,0 +1,323 @@
+{
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research."
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "slippage_bps": 2,
+    "open_execution_overrides": {},
+    "intrabar_execution_latest_overrides": {},
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable spot without borrowing",
+    "fractional_fills": true,
+    "sequence": [
+      "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+      "flat entry due from previous closedbar; never same-bar reentry after sale",
+      "open<=stop triggers stop gap; else open>ROI strict gap",
+      "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+      "mark remaining position at rawclose; no terminal forced sale"
+    ],
+    "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+    "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+    "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded",
+    "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+    "proxy_label": "ADAPTED_EXECUTION_PROXY",
+    "proxy_changes": {
+      "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+      "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+      "stop": "Original limit stop replaced by market-style gap/threshold full fill",
+      "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+      "pending": "No restinglimit states/timeouts/cancellations or partialfills"
+    },
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    }
+  ],
+  "benchmark_reference": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "metrics": {
+    "sharpe": "UTC366 daily returns, initialcash included, ddof1 sqrt365 riskfree0",
+    "sharpe_5m": "105408 native bar-close returns sqrt365*288 ddof1",
+    "max_drawdown": "all105408 bar-close equity states plus initial cash; not intrabar drawdown",
+    "annualized_return": "(final/initial)^(365/366)-1",
+    "exposure": "fraction of bar-close states invested"
+  },
+  "buyhold": "same95%fee-inclusive cash at first evalopen; same fee8/slip2bps; no stop/ROI; same finalmark",
+  "qtpylib": {
+    "commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+    "path": "technical/vendor/qtpylib/indicators.py"
+  },
+  "dependencies": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "TA-Lib": "0.6.8",
+      "freqtrade": "2026.9",
+      "technical": "1.7.0",
+      "ft-pandas-ta": "0.3.16"
+    },
+    "TA_core": "0.6.4",
+    "warmup": 8928
+  },
+  "dataQA_reference": {
+    "inputQA_path": "../../M0311/specs/implementer-input-qa.json",
+    "inputQA_sha256": "c8171b1bee63a2ce7760775a59aa101d4308fcf869d0b87245256007664015e0",
+    "prior_offline_recovery_path": "../../M0311/artifacts/20261003-first-replay/local-recovery.json",
+    "prior_offline_recovery_sha256": "cfeede45f0c9e19aa6e11d271a04f002db2e77c3c10af0e9cec5742b7d8963b6",
+    "batch_restore": "one shared rawarchive reconstruction followed by eachID output comparison; no perID data copies"
+  },
+  "validation_contract": {
+    "expected_zero": "exact Decimal",
+    "nonzero_relative_tolerance": 1e-09,
+    "absolute_tolerance": 0,
+    "fixed_account_domain": [
+      100000,
+      0.95,
+      2
+    ],
+    "independent_event_scope": "bar_index/side/reason/signal_index/reference/fill/quantity/fees/cash/position; phase/time/notional not independently recomputed",
+    "no_historical_returns_seen_before_freeze": true,
+    "supplemental_event_auditor": "ID-local audit_execution.py separately checks event notional/fee/phase/native-open/intrabar bounds; no exact intrabar timestamp claim"
+  },
+  "record_id": "M0265",
+  "name": "CofiBitStrategy",
+  "family": "PUBLIC-M0265-COFIBITSTRATEGY",
+  "run_id": "M0265-20261003-batch011",
+  "variant_id": "M0265-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003",
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "evidence_class": "historical_replay",
+  "source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+    "sha256": "c565296f014ade283b684cae3ff375bd1b80c8696d7b8498b2b5915d2a6553ff",
+    "bytes": 3058,
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "CofiBitStrategy"
+  },
+  "parameters": {
+    "loaded_parameter_values": {
+      "buy_fastx": 25,
+      "buy_adx": 25,
+      "sell_fastx": 75
+    },
+    "constructor_values": {
+      "buy_fastx": "IntParameter(20, 30, default=25)",
+      "buy_adx": "IntParameter(20, 30, default=25)",
+      "sell_fastx": "IntParameter(70, 80, default=75)"
+    },
+    "startup_candle_count_original": 0,
+    "external_config": false,
+    "external_sidecar": false,
+    "hyperopt": false,
+    "effective_flags": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "buy_params": {
+        "buy_fastx": 25,
+        "buy_adx": 25
+      },
+      "sell_params": {
+        "sell_fastx": 75
+      },
+      "minimal_roi": {
+        "40": 0.05,
+        "30": 0.06,
+        "20": 0.07,
+        "0": 0.1
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m"
+    }
+  },
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "risk": {
+    "ROI_comparison": "strict favorable high/open>fee-inclusive threshold; equality no trigger",
+    "ROI_transition": "All keys align to5m opens; no minute rounding needed",
+    "stop_comparison": "low<=entry_fill*(1+stoploss), gap fill at open; market-style proxy",
+    "signal_profit_gate": "If exit_profit_onlyTrue, raw_open*(1-fee)/(entry_fill*(1+fee))-1>0 strictly; gate before adverse exit slippage, so marginal realized sale can be slightly negative; only signal exits gated",
+    "minimal_roi": {
+      "40": 0.05,
+      "30": 0.06,
+      "20": 0.07,
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "trailing": false
+  },
+  "signals": {
+    "source_predicates": {
+      "populate_entry_trend": [
+        "((dataframe['open'] < dataframe['ema_low']) & qtpylib.crossed_above(dataframe['fastk'], dataframe['fastd']) & (dataframe['fastk'] < self.buy_fastx.value) & (dataframe['fastd'] < self.buy_fastx.value) & (dataframe['adx'] > self.buy_adx.value), 'enter_long')"
+      ],
+      "populate_exit_trend": [
+        "((dataframe['open'] >= dataframe['ema_high']) | (qtpylib.crossed_above(dataframe['fastk'], self.sell_fastx.value) | qtpylib.crossed_above(dataframe['fastd'], self.sell_fastx.value)), 'exit_long')"
+      ]
+    },
+    "catalog_differences": "Catalog Stoch(5,3,3) is imprecise; actual STOCHF extra args accepted by pinned binding, exactly fastK5/fastD3/SMA0. Params25/25/75, no search.",
+    "availability": "closed native5m only, no warmup orders",
+    "warmup_bars": 8928,
+    "raw_price_execution": "rawOHLCV only",
+    "NaN": "Native TA NaN preserved, comparisons false, no imputation"
+  },
+  "exposure": {
+    "recorded_before_performance": true,
+    "known_previous_window_exposed_IDs": 22,
+    "window_already_seen": true,
+    "availability_selected": true,
+    "OOS": false,
+    "historical_total_search_count": "UNKNOWN",
+    "new_strategy_configurations": 4,
+    "new_controls": 0,
+    "reused_controls": 1,
+    "parameter_searches": 0,
+    "base_commit": "eca7ad8e41d4b8aa4d3fd18bced178f2e5f45530",
+    "assignment": "root batch011 exclusive to root/m0288",
+    "original_runtime_missing": true
+  },
+  "authorization_contract_sha256": "bb37d34c36cb8db8b548bd1f98f9485225290bb2bdcb25c539e18e32879ca4ba",
+  "special_warning": "Catalog Stoch(5,3,3) is imprecise; actual STOCHF extra args accepted by pinned binding, exactly fastK5/fastD3/SMA0. Params25/25/75, no search.",
+  "frozen_at_utc": "2026-10-03T14:20:36.177432+00:00",
+  "code_hashes": {
+    "scripts/adapter.py": "d13e2f7d9bbe545524d26794137ad5a527d8002169ada7c1c9152b0b678487a0",
+    "scripts/audit_execution.py": "a7588f2873d4c68f7fb0acbb72f7375740c515b13c7fb8f12c8a419d574e4a52",
+    "scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60"
+  },
+  "kernel": {
+    "path": "research/_shared-kernels/native5m-execution-proxy/v1",
+    "files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "supporting_hashes": {
+    "specs/audit-execution-synthetic.json": "6e57efe304393b264df08acdac79f9da165f80dcd631a087a71f295e56b6d322",
+    "specs/catalog-original-fields.json": "334aed816cb6ac73e6e4d6293cc712e43f76dba384f9cae5c05e4d24c43fcb18",
+    "specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "specs/independent-source-review.json": "ad1442dbad762126749551e90be74953e6db530f9cd0a80c69c5e4f3f0ca00c2",
+    "specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "specs/shared-input-qa.json": "e29f4fa8de0be72a1b8341177acc3422142540f06d94b79c902294dc78d720ad",
+    "specs/source-rule-card.json": "71ec4ce7910d9d7349a7f1c504ffac2c1bacf3ef54367f68feaaa67d8f64df7f",
+    "specs/synthetic-boundary-qa.json": "fc58ed7480098d6433d464acbe7d44b488598d7f94e71f5f30771dbe33af6f2d",
+    "specs/synthetic-source-qa.json": "0419d5f668b1974283ccbf855ae44cbb8f95fcbdf2288bbc681f9a4799ac1b6d"
+  }
+}

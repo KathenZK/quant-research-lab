@@ -1,0 +1,18 @@
+{
+  "record_id": "M0282",
+  "fields": {
+    "id": "M0282",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/MACDStrategy.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "MACDStrategy",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "MACDStrategy",
+    "规则": "MACD>信号线且 CCI<=-48（buy_params）做多；MACD<信号线且 CCI>=687 平多。",
+    "页码或文件": "MACDStrategy.py"
+  },
+  "status": "CATALOG_REPORTED_NOT_AUTHORITATIVE; source byte QA controls this research",
+  "field_review": "Public strategy descriptions and URLs only; private provenance fingerprints removed"
+}

@@ -1,0 +1,18 @@
+{
+  "record_id": "M0283",
+  "fields": {
+    "id": "M0283",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/MACDStrategy_crossed.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "MACDStrategy_crossed",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "MACDStrategy_crossed",
+    "规则": "MACD 上穿信号线且 CCI<=-50 做多；MACD 下穿信号线且 CCI>=100 平多。",
+    "页码或文件": "MACDStrategy_crossed.py"
+  },
+  "status": "CATALOG_REPORTED_NOT_AUTHORITATIVE; source byte QA controls this research",
+  "field_review": "Public strategy descriptions and URLs only; private provenance fingerprints removed"
+}
