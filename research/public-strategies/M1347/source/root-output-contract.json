@@ -1,0 +1,75 @@
+{
+  "schema": "catalog-hypothesis-execution-output-contract/v1",
+  "coordinator": "root only",
+  "batch": "018",
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "strategy_ids": [
+    "M1347"
+  ],
+  "assignments": {
+    "M1347": "root/m0288; assigned notstarted"
+  },
+  "fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "strategy_configurations_per_id": 4,
+  "new_control_configurations_per_id": 0,
+  "total_planned_strategy_configurations": 4,
+  "total_planned_new_controls": 0,
+  "rules": {
+    "M1347": {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/M1347-root-frozen-rules.json",
+      "bytes": 14981,
+      "sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4"
+    }
+  },
+  "remote_recovery_scope_addendum": {
+    "path": "research/public-strategies/remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+  },
+  "gates_before_history": [
+    "RootclaimsisolatedM1347familyoutputs; no overlapwithothercurrentclaims. Batch016 remoteactualrecovery accepted.",
+    "Input sourcehash/grid/OHLCV/CRC and exact50raw->48e4canonical reconstruction pass; no newmarketneeded.",
+    "Code/runtime/C0/exposure locked before first newstrategyreturn, exactDecimaloperations/statistics/pending frozen; independent synthetic/numerical/calendar/causality/account QApass.",
+    "Reuse existing validated repository code through immutable SHA-pinned sharedkernel per repository policy if shared across families; no new platform or call to another strategy runner.",
+    "M1258 exact100%control is actually accepted with outputhash/publiccorepin and matchingidentity before reuse; do not run extra control on assumption.",
+    "RootauthorizedGitcore remote recovery verification and pinnedrequiredM1258controlaccepted. PrivateLibraryZIP401gap is separatelyreported, not a blanketLibrary-upload historyblocker."
+  ],
+  "output_contract": [
+    "One independent ChineseMarkdown forM1347 withpublicoriginalruleexcerpt/provenance and fulloriginal11fields privatehashbinding; never publish internalcuration. Explain24/7UTCcalendar, optimization-selectedwindow, Yahoo-to-Binance researchinstance andnextopenexecutionproxy, costs/control/QA/metrics/NAV/trades/failures/nextresearch.",
+    "Private fullfeature/decision/pending/fill/nativeNAV/dailyNAV/monthlyreport artifacts with deterministic resultmanifest; zero-trade states/cash periods never omitted",
+    "Four frozen strategy configurations perID only. Reuse actually accepted exactM1258buyhold, 0newcontrols; no search or extra variants.",
+    "Full independent account and metric validation,causalprefix/future checks,immutablefailedruns and postreturndecisionlog",
+    "Safe Graph-compatible record/detail/normalized lightcurve labelledhypothesis; no invented entity revision and noSiteactivation",
+    "Remote allowed corecode/docs/lightresults/fingerprints/rebuildrecipe and actualremote recoveryverification; local privateZIP+standalonemanifest; Library saveif available honestly reported"
+  ],
+  "data_authorization": "Reuse approved exactBinanceBTCUSDTspot daily48e4 dataset. Parent may use its own verifiedcache; bounded official-archive reconstruction only under existing applicable authorization/terms, exacthash/CRC required. Stop on access/auth/payment/newterms/restrictedresponse; no alternatevenue/bypass.",
+  "disk_reserve_bytes": 5368709120,
+  "global_progress_writer": "root only",
+  "status": "ROOT_FROZEN_ASSIGNED_PRE_CODE_C0",
+  "format_reference_commit": "c1036fd3c57d672b9f1a0f873548d3eb98d955ba",
+  "historical_runs": 0,
+  "claims": 1,
+  "created_at_utc": "2026-10-03T18:14:46.745449+00:00",
+  "benchmark_hard_gate": "Exact actualM1258control+remote accepted pins filled in everyrule; no hypothetical control or extra control authorized. IndependentcodeC0 gatesstillapply.",
+  "frozen_at_utc": "2026-10-03T18:14:46.745449+00:00",
+  "implementation_base_commit": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+  "historical_runs_at_freeze": 0,
+  "new_strategy_returns_exposure_at_freeze": false,
+  "output_branch": "codex/catalog-monthturn-m1347-20261003",
+  "ownership_check": {
+    "prior_claim_json_files_checked": 10,
+    "IDs_absent_from_existing_family_roots": true,
+    "nonoverlap_with": [
+      "M1180",
+      "M1346",
+      "M1349",
+      "M1270",
+      "M1396",
+      "M1463"
+    ],
+    "executor_is_not_counted_as_started": true
+  },
+  "source_scope": "Fixed2400localpublicsource-record subset, notall6973readinessverification"
+}

@@ -1,0 +1,181 @@
+{
+  "status": "PASS_PRE_CODE_CONTRACT_REVIEW",
+  "id": "M1347",
+  "reviewed_commit": "65d18701b642e0aa1747154a7ef536984652e9d8",
+  "base_commit": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+  "checked_utc": "2026-10-03T18:22:03.537008+00:00",
+  "contract_sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553",
+  "rules_sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4",
+  "claims_sha256": "58723a46312f3e42fb1a4a28721a53656b46de6e38a634e3126c3e3a890e1146",
+  "source": {
+    "checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+    "record_sha256": "bd6ca3e115811c155149780835f0a6428c685f80893d8bc56b44cbfb6313d6f9",
+    "git_blob": "29887ad8c1c01a6de84fd7dedca71c4bcca11e5c",
+    "original_fields_verified": 11,
+    "public_nonrule_fields_exact": 10,
+    "literal_operational_excerpt_exact": true,
+    "full_original_rule_private": true,
+    "original_Graph_flags_unchanged": true,
+    "author_webpage_verified": false,
+    "source_row_hash_preserved": true,
+    "original_source_CSV_row_not_independently_rederived": true
+  },
+  "ownership": {
+    "prior_claim_files_checked": 10,
+    "prior_claim_conflicts": 0,
+    "existing_family_at_base": false,
+    "assigned_owner": "root/m0288",
+    "stage": "ASSIGNED_NOT_STARTED"
+  },
+  "calendar": {
+    "month_boundaries_checked": 4800,
+    "Gregorian_century_leap_rules_checked": true,
+    "signal_label": "UTC bar-open date; close known at following midnight; lag1 fill then, lag2 one day later",
+    "calendar_dates_only_no_market_rows": true,
+    "symbolic_schedules": {
+      "1": {
+        "calendar_only": true,
+        "evaluation_dates": 731,
+        "symbolic_buys": 24,
+        "symbolic_sells": 23,
+        "first_fill": [
+          "BUY",
+          "2023-01-30",
+          "2023-01-29"
+        ],
+        "first_sell": [
+          "SELL",
+          "2023-02-04",
+          "2023-02-03"
+        ],
+        "last_fill": [
+          "BUY",
+          "2024-12-30",
+          "2024-12-29"
+        ],
+        "terminal_long": true,
+        "terminal_pending": false,
+        "initial_flat_exit_ignored": true
+      },
+      "2": {
+        "calendar_only": true,
+        "evaluation_dates": 731,
+        "symbolic_buys": 24,
+        "symbolic_sells": 23,
+        "first_fill": [
+          "BUY",
+          "2023-01-31",
+          "2023-01-29"
+        ],
+        "first_sell": [
+          "SELL",
+          "2023-02-05",
+          "2023-02-03"
+        ],
+        "last_fill": [
+          "BUY",
+          "2024-12-31",
+          "2024-12-29"
+        ],
+        "terminal_long": true,
+        "terminal_pending": false,
+        "initial_flat_exit_ignored": true
+      }
+    },
+    "indicator_or_price_filter": false,
+    "warmup_orders_forbidden": true,
+    "terminal_forced_exit": false
+  },
+  "capital": {
+    "allocation": "100% fee-inclusive",
+    "Decimal_precision": 50,
+    "money_quantity_QA": "Exact Decimal numerical equality; zero tolerance and no quantization; identity/time/counters exact",
+    "same_implementation_recovery": "exact serialized bytes",
+    "four_cases": [
+      "base",
+      "fee0",
+      "fee20",
+      "delay2"
+    ],
+    "immutable_v1_unchanged": true
+  },
+  "control": {
+    "id": "M1258",
+    "files_hash_checked": 7,
+    "reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+    "remote_acceptance_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+    "reuse": "One existing base8bps+slip2bps benchmark; fee0/fee20 strategies are not matched-control experiments",
+    "new_controls": 0
+  },
+  "scale_gate": {
+    "commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "receipt_sha256": "03d1351041be15781f582ec44ba0d4eeb773e61e497c52778955cf88316b6881",
+    "delivery_main": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+    "verified": true
+  },
+  "pending_gates": [
+    "Actual per-ID code, runtime lock and C0 have not been reviewed in this contract task. No first-history release is granted here.",
+    "Implementation must prove Gregorian/UTC labels, warmup intent exclusion, delayed-order phases, Decimal exact numeric oracle, causal checks, full-window data QA and fixed control gate before first returns.",
+    "Shared v1 verify_account compares financial strings exactly; keep v1 frozen. Any additional numeric-equality verification needed for equivalent Decimal trailing-zero forms must be explicit per-ID QA, zero tolerance, with failed evidence preserved."
+  ],
+  "contract_blockers": [],
+  "limitations": [
+    "Catalog HYPOTHESIS and ADAPTED execution only; source page/runtime unverified, strict0 and not OOS.",
+    "Monthly window was optimization-selected according to the catalog; Yahoo-to-Binance and 24/7 UTC are declared research adaptations.",
+    "Existing Library401/private-backup gap remains separately reported; Git core prior recovery does not claim full private archive persistence."
+  ],
+  "counts": {
+    "new_history": 0,
+    "new_controls": 0,
+    "new_market_requests": 0,
+    "actual_strategy_engine_runs": 0
+  },
+  "checked_files": [
+    {
+      "path": "research/README.md",
+      "bytes": 63934,
+      "sha256": "8f676c44d580f0185ec526c6a5ad78dd024f6350675b141d3db2d155f100f9cc"
+    },
+    {
+      "path": "research/public-strategies/README.md",
+      "bytes": 8796,
+      "sha256": "2297fae76fa32de73eb9a22aa53ee43048f2fd27e3910627d0a885ef298a92af"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-output-contract-20261003.json",
+      "bytes": 4664,
+      "sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/M1347-catalog-public-fields.json",
+      "bytes": 1875,
+      "sha256": "af1f54439cdde98b5ca32752b885e7bc0d1660c357bb1543a73cf58f080d6819"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/M1347-root-frozen-rules.json",
+      "bytes": 14981,
+      "sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/QA-plan.json",
+      "bytes": 838,
+      "sha256": "beb4936f71a57aa6fad61b7861e1e4d8524dfecda15089889d23b2c622e7d24d"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/README.md",
+      "bytes": 693,
+      "sha256": "a6daa3a023c3a68ac09d18a81d1225d9b5c22902eafe61e89001d4122fa927f7"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch018-preflight-20261003/decision-log.md",
+      "bytes": 353,
+      "sha256": "70b0b119a0aaf42049b892c239766fd249f61359f5f3dab6412b8c44445b8e41"
+    },
+    {
+      "path": "research/public-strategies/claims-20261003-batch018.json",
+      "bytes": 745,
+      "sha256": "58723a46312f3e42fb1a4a28721a53656b46de6e38a634e3126c3e3a890e1146"
+    }
+  ],
+  "private_checks_sha256": "45dc093fb98676ffd1ecb48e6239538492397af8ff8146291400cdaa9aafe1f9"
+}
