@@ -1313,3 +1313,19 @@ research/public-strategies/M1358/artifacts/20261003-public-display-prep/base-nav
 research/public-strategies/M1358/artifacts/20261003-public-display-prep/graph-detail.json  # approved derived display or safe acceptance receipt
 research/public-strategies/M1358/artifacts/20261003-public-display-prep/graph-record.json  # approved derived display or safe acceptance receipt
 research/public-strategies/M1358/artifacts/20261003-public-display-prep/public-display-manifest.json  # approved derived display or safe acceptance receipt
+
+# M1258 frozen catalog hypothesis: safe derived artifacts only
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/buyhold-reference-v1.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/causality.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/execution-complete.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-detail.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-record.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/independent-prehistory-gate-pin.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/input-QA.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/input-provenance-interpretation.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/local-recovery.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/oracle.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/prehistory-review.safe.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/private-output-manifest.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/summary.json  # M1258 approved lightweight result/QA/hash commitment
+research/public-strategies/M1258/artifacts/20261003-catalog-v1/synthetic-prehistory.json  # M1258 approved lightweight result/QA/hash commitment
