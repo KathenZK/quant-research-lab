@@ -1,0 +1,261 @@
+{
+  "record_id": "M0304",
+  "name": "Strategy002",
+  "status": "C0_FROZEN_AWAITING_INDEPENDENT_APPROVAL",
+  "stage": "EXECUTION_C0_PRE_RETURN",
+  "created_at_utc": "2026-10-03T12:24:57.497238+00:00",
+  "fixed_lab_commit": "48851ef54b5fba6fef1da6825983864e1665fe1e",
+  "contract_original_base": "d5a0c5ee6ac7ddc56159b3d5969c5267ca83bf96",
+  "base_note": "Parent handoff pins48851ef; immutable inherited output contract retains its earlier creation base; no alteration of inherited evidence.",
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "promotion": false,
+  "oos_claim": false,
+  "source_class_attributes_file": "source-ast-attributes.json",
+  "original_author_universe_cost_runtime": "UNKNOWN",
+  "indicator_contract": {
+    "timeframe": "native5m",
+    "slowk": "TA-Lib STOCH high/low/close: fastk5, slowk3 SMA(mat0), slowd3 SMA(mat0); use slowk (lookback8)",
+    "rsi": "TA-Lib RSI(close,14), compatibility0 and unstable period0; lookback14",
+    "fisher_rsi": "exp(2*0.1*(RSI-50)); (exp-1)/(exp+1), no clipping",
+    "bb_lower": "typical=(high+low+close)/3; rolling20 min_periods1 mean minus2*sample_std(ddof1); first bar NaN",
+    "sar": "TA-Lib SAR(high,low,acceleration=.02,maximum=.2); lookback1",
+    "hammer": "TA-Lib CDLHAMMER(open,high,low,close) default candle settings from frozen TA-Lib C binary; lookback11; exact100 required",
+    "entry": "rsi<30 AND slowk<20 AND bb_lower>close AND CDLHAMMER==100",
+    "exit": "sar>close AND fisher_rsi>.3",
+    "missing": "NaN comparison false; no fills, no interpolation",
+    "volume": "No source signal volume clause added; real input quality must reject nonpositive volume independently",
+    "warmup": "All8928 December2023 native5m bars preceding evaluation; compute continuous indicators without resetting Jan1; startup_candle_count source absent, reference default0; no warmup trading or inherited pending orders",
+    "signal_collision": "Keep both booleans; simultaneous entry/exit suppresses signal entry/exit but not risk. With RSI<30 and monotonic Fisher>.3 this is logically impossible for a consistent same-bar RSI except implementation errors."
+  },
+  "runtime_resolution": {
+    "precedence": [
+      "external runtime config",
+      "same-name sidecar special params",
+      "class attributes",
+      "IStrategy/resolver default"
+    ],
+    "repository_sidecar_present": false,
+    "research_sidecar_loaded": false,
+    "research_external_strategy_overrides": {},
+    "original_author_external_config": "UNKNOWN",
+    "reference_framework_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+    "reference_scope": "default precedence and indicator references only; never treated as original author runtime"
+  },
+  "execution_plan": {
+    "implemented": true,
+    "cash_currency": "USDT",
+    "initial_cash": 100000,
+    "cash_budget_fraction": 0.95,
+    "fee_included_in_budget": true,
+    "max_positions": 1,
+    "long_only": true,
+    "leverage": 1,
+    "position_stacking": false,
+    "fractional_quantity": true,
+    "exchange_lot_tick_min_notional": "not modeled; diagnostic limitation",
+    "entry_order_type": "limit",
+    "exit_order_type": "limit",
+    "stop_order_type": "market",
+    "stoploss_on_exchange": false,
+    "time_in_force": "GTC",
+    "signal_order_timing": "At evaluation bar k open, use completed bar k-delay_bars; source signal index must be within evaluation. Base earliest2024-01-01T00:05Z; delay2 earliest00:10Z.",
+    "limit_quote": "fixed close of signal bar k-delay_bars; no repricing",
+    "timeout": "pending order survives only current5m observed bar; cancel next open (300seconds), terminal cancellation at end; no implicit rehang absent newly selected delayed signal",
+    "fill": "Full fill at touch inclusive; buy if low<=limit, sell if high>=limit under chosen path. Favorable marketable open applies2bps adverse slip capped to limit. Intrabar limit fill exact limit. No queue/partial-fill model.",
+    "slippage_bps": 2,
+    "market_stop": "2bps adverse below triggered market reference, including gaps",
+    "reservation": "deduct only on fill, budget95% of available cash including fee; no borrowing, no multiple open orders",
+    "samebar_path": "deterministic diagnostic O-L-H-C, not a conservative bound or a claim of native Freqtrade matching",
+    "priority": "Marketable open entry first; then open stop gap before signal limit before ROI. Ascending segment earliest touched signal/ROI limit, ties signal first. Descending segment market stop first encountered. Newly filled entry sees remaining path only; no same-bar reentry after exit.",
+    "timestamp_precision": "Open a bar proxy; intrabar exact time null with bar-open/close interval bounds, no invented path-segment timestamps",
+    "terminal": "mark final bar close, no forced sale or hypothetical exit fee",
+    "cash_interest": 0,
+    "funding": "not applicable to unlevered spot"
+  },
+  "risk_plan": {
+    "minimal_roi": {
+      "0": 0.05,
+      "20": 0.04,
+      "30": 0.03,
+      "60": 0.01
+    },
+    "stoploss": -0.1,
+    "stop_level": "entry_fill*.9 fixed, may gap through; fees/slippage additional",
+    "trailing_stop": false,
+    "inactive_source_attributes": {
+      "trailing_stop_positive": 0.01,
+      "trailing_stop_positive_offset": 0.02
+    },
+    "trailing_note": "Never activate or update trailing; positive/offset attributes are inert.",
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "exit_profit_offset": 0,
+    "ignore_roi_if_entry_signal": false,
+    "profit_gate": "At execution bar open before placing an indicator SELL limit, compute quote*(1-exit_fee)/(entry_fill*(1+entry_fee))-1. Require strict>0. quote=observed bar open, fee rate from current case, not raw price appreciation. Initial buy cost denominator includes entry fee.",
+    "profit_gate_timing": "Check once at order decision, not signal generation and not retrospectively at fill. No order on failed gate. Passing order remains live for one bar without rechecking. Slippage/pricing movement may still produce a net-losing signal fill; this is not silently prevented.",
+    "profit_gate_scope": "indicator exit only; never blocks stoploss or ROI",
+    "roi_clock": "floor elapsed wall-clock minutes from fill open; intrabar fill age origin conservatively bar-close+1ms. Choose active tier at each next open and hold for that bar; no lower tier from future intrabar time.",
+    "roi_price": "entry_fill*(1+entry_fee)*(1+roi)/(1-exit_fee), treated as limit; exact threshold inclusive in this diagnostic plan, a declared engine assumption",
+    "source_framework_priority_difference": "Reference lists signal then stop then ROI; this plan uses explicit path/open-stop-first. Therefore HYPOTHESIS, not strict reproduction."
+  },
+  "input_expected_only": {
+    "exchange": "Binance",
+    "market": "BTCUSDT spot",
+    "timeframe": "5m",
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "evaluation_start": "2024-01-01T00:00:00Z",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "rows": 114336,
+    "evaluation_rows": 105408,
+    "warmup_rows": 8928,
+    "bytes": 31428289,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "expected_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+    "source_objects": 39,
+    "recovered_here": true,
+    "qa_passed_here": true,
+    "selection": "calendar2024 availability selected after earlier2023 raw QA failure before these candidate returns; not OOS and not comparable with old2year total returns",
+    "scope": "explicit spot diagnostic outside perpV3 catalog; no trusted-loader/PIT/finality/tradability claim"
+  },
+  "preregistered_cases": [
+    {
+      "name": "base",
+      "fee_bps_per_side": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_per_side": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_per_side": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_per_side": 8,
+      "delay_bars": 2
+    }
+  ],
+  "preregistered_control": {
+    "name": "buyhold",
+    "fee_bps_per_side": 8,
+    "entry_slippage_bps": 2,
+    "entry": "95% cash budget including fee at2024-01-01 open market; hold same window, no stop or forced terminal sale"
+  },
+  "metrics_plan": {
+    "total_return": "final marked equity/100000-1",
+    "annualized_return": "(final/initial)^(365/366)-1",
+    "max_drawdown": "full105408-bar5m close equity plus initial cash, running peak; never recompute from daily sampling; not intrabar MDD",
+    "sharpe_daily": "UTC daily-close arithmetic return; sample std ddof1; sqrt365; rf0",
+    "sharpe_5m": "all5m returns, ddof1, sqrt(365*288), rf0",
+    "exposure": "fraction of5m bar closes with position, not exact elapsed seconds"
+  },
+  "exposure": {
+    "predeclared_strategy_configurations": 4,
+    "predeclared_controls": 1,
+    "actual_historical_strategy_configurations": 0,
+    "actual_historical_controls": 0,
+    "parameter_searches_this_task": 0,
+    "previous_window_exposures": "UNKNOWN; existing catalog evidence does not reset historical reuse",
+    "performance_viewed_by_this_task": false,
+    "DSR_PBO": "not computable reliably with unknown prior search count"
+  },
+  "gates_remaining": [
+    "independent C0 approval bound to this protocol and implementation hash",
+    "run4preregistered cases+1control without search",
+    "independent all-event Decimal and fullbar metrics audit",
+    "clean frozen historical recovery on independently rebuilt input",
+    "light public projection and private Graph verification"
+  ],
+  "data_c0": "PASS_RAW_INPUT_AND_INDEPENDENT_REBUILD_PENDING_EXECUTION_C0_REVIEW",
+  "historical_runs": 0,
+  "historical_control_runs": 0,
+  "results": null,
+  "full_execution_engine_available": true,
+  "frozen_at_utc": "2026-10-03T12:47:57.712661+00:00",
+  "origin_run_id": "M0304-20261003-calendar2024-v1",
+  "variant_id": "M0304-BTCUSDT-5M-STRATEGY002-LIMIT-20261003",
+  "inherited_plan_sha256": "4a0ef73546e93fff34e98be0552815c7515eb2176805f8a70087efb82e9764b9",
+  "preparation_public_manifest_sha256": "1306bcde0863928e2a04e9d6e8a3ff27a2c32d6a8d8849c2f648690735122303",
+  "implementation_files": {
+    "check_execution_prefix.py": "968d606ecd57548ad4d419c4d8777d1013646ef8bdad0a531cac8f539c8b310e",
+    "check_input_and_causality.py": "63269e25b133d2edb77fd8cde1cb7d38ea606fea7a1bc67a8578e59b9135b81a",
+    "formula_probe.py": "c3a04df2889c25bc2d37e5cee354bd7609bf4bb05888e632020926aac5d48d28",
+    "recover_run.py": "d92f3aabb4084d615bb242edb2ac57adedeaa738c773550b1c1c8f5ce40b417b",
+    "replay_engine.py": "525be5ffa69a6c4977286e48bf8acaf897ce059fd26d4737728c494b6ca57818",
+    "test_execution.py": "a5f1f32ccced5b960361f7cf45ad10f9e47382d9a10906c874e69e1e105e59c7"
+  },
+  "environment": {
+    "status": "SAME_FROZEN_DEPENDENCIES_USED_FOR_EXECUTION",
+    "observed_at_utc": "2026-10-03T12:22:26.753130+00:00",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "TA-Lib": "0.6.8"
+    },
+    "talib_C": "b'0.6.4 (Oct 20 2025 20:23:51)'",
+    "talib_binary_sha256": "ee9ae58a5d61f670ff4319b62550ff9808c17418b5e570364b0c7341b268fed5",
+    "talib_binary_bytes": 14198209,
+    "talib_compatibility": 0,
+    "unstable_period_RSI": 0,
+    "indicator_defaults": {
+      "STOCH": {
+        "parameters": {
+          "fastk_period": 5,
+          "slowk_period": 3,
+          "slowk_matype": 0,
+          "slowd_period": 3,
+          "slowd_matype": 0
+        },
+        "lookback": 8
+      },
+      "RSI": {
+        "parameters": {
+          "timeperiod": 14
+        },
+        "lookback": 14
+      },
+      "SAR": {
+        "parameters": {
+          "acceleration": 0.02,
+          "maximum": 0.2
+        },
+        "lookback": 1
+      },
+      "CDLHAMMER": {
+        "parameters": {},
+        "lookback": 11
+      }
+    },
+    "blas_threads": 1,
+    "python_memory_ceiling_bytes": 1073741824,
+    "new_dependencies_installed": false
+  },
+  "evidence_hashes": {
+    "data-recovery-safe-v2.json": "ddb81501a8ea706ad6b60c21ed6c8da01bfba48f99911f479340632c5738d783",
+    "independent-canonical-qa-v1.json": "96dbc05f4eac6ce02335e63d02ced1de9e21c200129af7f00d5908f372ee4c44",
+    "C0-input-and-causality.json": "d78b2d1b9527581593f6997d2bb14f2cec5fcc3d675c6c5bd4b6114da5bc83e9",
+    "synthetic-execution-tests.json": "4765900d9a27d4e52f3b041037120966652ed997fb9e3f653c5b34d3d24d0ec9",
+    "synthetic-execution-prefix.json": "e9e2ebf49821e8a03afbf8db81364a0bec47bcd9eb24de8fba1ddb7f0c503e9e",
+    "synthetic-fixtures.json": "d2557ec3500ab87e8cc1f7de20ea89717761a3d991704a4813033c193f9089ad"
+  },
+  "source_manifest_sha256": "b877936b44c61d54255a57e112fa31571a09be1e7f2a1673f30a5460dce2950f",
+  "source_attributes_sha256": "9fa8f5187dd551116e02f54482871b4c1e1c13c14aabb9cbc79706de83b5b5c2",
+  "returns_computed_before_freeze": false,
+  "actual_historical_runs_before_freeze": 0,
+  "implementation_adjustments_before_returns": [
+    "Runtime and data contract assertions added; no original strategy rule changes.",
+    "Range stop/ROI ambiguity accounting includes both open-held and intrabar newly-filled exposure, without duplication.",
+    "Buyhold order metadata correctly market/limit null/tif null; strategy order metadata limit/GTC.",
+    "Execution code explicitly enforces plan frozen flags, fee-aware decision gate and no trailing."
+  ]
+}

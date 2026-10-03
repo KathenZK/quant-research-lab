@@ -1,0 +1,49 @@
+{
+  "schema": "independent-source-reference-chain/v1",
+  "external_code_executed": false,
+  "market_data_loaded": false,
+  "records": [
+    {
+      "reference": "freqtrade/vendor/qtpylib/indicators.py",
+      "git_blob_sha": "4088292f2e64039c1809dca9fe9f7077c6606244",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/vendor/qtpylib/indicators.py",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "freqtrade/strategy/interface.py",
+      "git_blob_sha": "671c6179e67f5af6f9d1ecef81269b47699eae01",
+      "url": "https://github.com/freqtrade/freqtrade/blob/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "technical_qtpylib",
+      "git_blob_sha": "a9e1a9f7e464c08068f40f040c3a281ae48979e8",
+      "url": "https://github.com/freqtrade/technical/blob/1.7.0/technical/qtpylib.py",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "qtpylib_final",
+      "git_blob_sha": "a8485f03318f685756b45e6e780b72ce38805d41",
+      "url": "https://github.com/freqtrade/technical/blob/1.7.0/technical/vendor/qtpylib/indicators.py",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "src/ta_func/ta_CDLHAMMER.c",
+      "git_blob_sha": "47e8a0ddcff6cd6068559b1b4fa8c4ef0648e58f",
+      "url": "https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_func/ta_CDLHAMMER.c",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "src/ta_func/ta_SAR.c",
+      "git_blob_sha": "2b48d81d914c68c0effd43e9829a51937010b8d2",
+      "url": "https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_func/ta_SAR.c",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    },
+    {
+      "reference": "src/ta_common/ta_global.c",
+      "git_blob_sha": "53965cfb8a98aed601387947b9c94f452d131325",
+      "url": "https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_common/ta_global.c",
+      "mode": "READ_ONLY_REFERENCE_NOT_ORIGINAL_RUNTIME"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "record_id": "M0298",
+  "status": "PASS_SYNTHETIC_CODE_RECOVERY_ONLY",
+  "method": "fresh private directory, copied exact source bytes and script; separate Python process; complete semantic JSON equality after excluding variable peak RSS",
+  "source_sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+  "script_sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0",
+  "original_synthetic_receipt_sha256": "da52d8c731f2504a3d37cf31898ec36d397c21c84d9729062d7679287128faa8",
+  "raw_input_recovered": false,
+  "historical_runs": 0,
+  "remote_backup_proven": false,
+  "historical_ledger_verified": false
+}

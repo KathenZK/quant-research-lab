@@ -1,0 +1,72 @@
+{
+  "schema": "independent-realized-fill-pricing-audit/v1",
+  "status": "PASS_ALL_REALIZED_FILL_QUOTES_AND_BAR_BOUNDS",
+  "at_utc": "2026-10-03T13:02:46.583991+00:00",
+  "checks": [
+    {
+      "record_id": "M0298",
+      "case": "base",
+      "all_realized_fill_quotes_checked": 485,
+      "max_price_error": 2.72972972973e-11
+    },
+    {
+      "record_id": "M0298",
+      "case": "fee0",
+      "all_realized_fill_quotes_checked": 557,
+      "max_price_error": 2.099819963993e-11
+    },
+    {
+      "record_id": "M0298",
+      "case": "fee20",
+      "all_realized_fill_quotes_checked": 421,
+      "max_price_error": 2.70114251353e-11
+    },
+    {
+      "record_id": "M0298",
+      "case": "delay2",
+      "all_realized_fill_quotes_checked": 364,
+      "max_price_error": 3.025025025025e-11
+    },
+    {
+      "record_id": "M0298",
+      "case": "buyhold",
+      "all_realized_fill_quotes_checked": 1,
+      "max_price_error": 0
+    },
+    {
+      "record_id": "M0304",
+      "case": "base",
+      "all_realized_fill_quotes_checked": 48,
+      "max_price_error": 7.48919135308e-12
+    },
+    {
+      "record_id": "M0304",
+      "case": "fee0",
+      "all_realized_fill_quotes_checked": 48,
+      "max_price_error": 6e-12
+    },
+    {
+      "record_id": "M0304",
+      "case": "fee20",
+      "all_realized_fill_quotes_checked": 44,
+      "max_price_error": 2.198396793587e-11
+    },
+    {
+      "record_id": "M0304",
+      "case": "delay2",
+      "all_realized_fill_quotes_checked": 30,
+      "max_price_error": 1e-11
+    },
+    {
+      "record_id": "M0304",
+      "case": "buyhold",
+      "all_realized_fill_quotes_checked": 1,
+      "max_price_error": 0
+    }
+  ],
+  "total_fills": 1999,
+  "market_input": "same frozen canonical hash; read only",
+  "new_historical_runs": 0,
+  "strict_reproductions": 0,
+  "scope": "Every realized fill matched source signal-bar limit, eligible bar open/range, stop/ROI trigger and separately declared fee/friction/slippage model. OHLC path remains a diagnostic assumption, not observed tick ordering."
+}

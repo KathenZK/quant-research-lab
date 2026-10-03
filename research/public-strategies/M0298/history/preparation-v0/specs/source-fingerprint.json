@@ -1,0 +1,97 @@
+{
+  "record_id": "M0298",
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/Simple.py",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+    "bytes": 2695,
+    "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "retrieval_method": "GitHub connector; exact UTF-8 bytes; AST only, not executed",
+    "license": "GPL-3.0",
+    "author": "Gert Wohlgemuth"
+  },
+  "catalog_provenance": {
+    "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "csv_line_including_header": 299
+  },
+  "reference_sources": [
+    {
+      "role": "reference_interface_only_not_original_runtime",
+      "repository": "freqtrade/freqtrade",
+      "ref": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/strategy/interface.py",
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "observed_defaults": {
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60
+        },
+        "order_time_in_force": {
+          "entry": "GTC",
+          "exit": "GTC"
+        },
+        "trailing_stop": false,
+        "can_short": false,
+        "startup_candle_count": 0,
+        "position_adjustment_enable": false
+      },
+      "collision": "entry suppressed by simultaneous exit; signal exit suppressed by simultaneous entry"
+    },
+    {
+      "role": "reference_resolver_defaults_only_not_original_runtime",
+      "repository": "freqtrade/freqtrade",
+      "ref": "1f394eaebc2f46a83d26971388628707802f8602",
+      "path": "freqtrade/resolvers/strategy_resolver.py",
+      "retrieved_lines": [
+        55,
+        125
+      ],
+      "sha256_of_retrieved_extract": "1166034384fd461f80054f22c0712c2585580a6d3c035833a5476b8740da497a",
+      "defaults": {
+        "use_exit_signal": true,
+        "exit_profit_only": false,
+        "ignore_roi_if_entry_signal": false,
+        "exit_profit_offset": 0.0
+      },
+      "precedence": [
+        "external runtime config",
+        "strategy including loaded sidecar overrides",
+        "resolver default"
+      ]
+    },
+    {
+      "role": "reference_qtp_formula",
+      "repository": "freqtrade/technical",
+      "ref": "1.7.0",
+      "path": "technical/vendor/qtpylib/indicators.py",
+      "git_blob_sha": "a8485f03318f685756b45e6e780b72ce38805d41",
+      "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+      "semantics": {
+        "window": 12,
+        "stds": 2,
+        "input": "close",
+        "min_periods": 1,
+        "std_ddof": 1,
+        "first_bar_standard_deviation": "NaN"
+      }
+    },
+    {
+      "role": "preexisting_qtp_formula_cross_reference",
+      "repository": "freqtrade/freqtrade",
+      "ref": "c66e221012cd4d68cfdacf4735b38af33a487961",
+      "path": "freqtrade/vendor/qtpylib/indicators.py",
+      "sha256": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760",
+      "executed": false
+    }
+  ],
+  "original_author_universe_cost_runtime": "UNKNOWN",
+  "sidecar_same_name_json_present": false,
+  "sidecar_evidence": "fixed source preflight supplied at Lab handoff",
+  "original_external_config": "UNKNOWN; not silently assumed absent",
+  "strict_reproduction_eligible": false,
+  "strategy_source_publicly_redistributed": false
+}

@@ -1,0 +1,14 @@
+{
+  "record_id": "M0304",
+  "start_utc": "2026-10-03T12:51:16Z",
+  "executor_process_id": 2,
+  "exit_code": 0,
+  "exit_observed_by_utc": "2026-10-03T12:51:44Z",
+  "exact_process_completion_time": "not separately instrumented",
+  "strategy_configs": 4,
+  "controls": 1,
+  "recovery_repeated_same_configs": true,
+  "searches": 0,
+  "strict_reproductions": 0,
+  "peak_rss_kib": 195468
+}

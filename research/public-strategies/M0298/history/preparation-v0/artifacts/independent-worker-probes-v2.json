@@ -1,0 +1,303 @@
+{
+  "schema": "independent-worker-probe-audit/v1",
+  "status": "PASS_SYNTHETIC_PROBES_ONLY",
+  "at_utc": "2026-10-03T12:28:33.256082+00:00",
+  "synthetic_rows": 6000,
+  "reviewed_scripts": {
+    "M0298": {
+      "path": "research/public-strategies/M0298/scripts/preflight_synthetic.py",
+      "sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0"
+    },
+    "M0304": {
+      "path": "research/public-strategies/M0304/scripts/formula_probe.py",
+      "sha256": "c3a04df2889c25bc2d37e5cee354bd7609bf4bb05888e632020926aac5d48d28"
+    }
+  },
+  "max_abs_errors": {
+    "M0298": {
+      "macd": 0.0,
+      "macdsignal": 0.0,
+      "macdhist": 0.0,
+      "rsi": 1.4210854715202004e-14,
+      "bb_lowerband": 9.723066796141211e-11,
+      "bb_middleband": 5.684341886080802e-14,
+      "bb_upperband": 9.723066796141211e-11,
+      "enter_long": 0,
+      "exit_long": 0
+    },
+    "M0304": {
+      "slowk": 3.126388037344441e-13,
+      "rsi": 1.4210854715202004e-14,
+      "fisher_rsi": 1.4259426972529354e-15,
+      "bb_lowerband": 6.104983185650781e-11,
+      "sar": 0.0,
+      "CDLHAMMER": 0,
+      "enter_long": 0,
+      "exit_long": 0
+    }
+  },
+  "decimal_limit_helper_cases": [
+    {
+      "side": "buy",
+      "limit": "98",
+      "price": null,
+      "reason": "timeout_cancel"
+    },
+    {
+      "side": "buy",
+      "limit": "99",
+      "price": "99",
+      "reason": "intrabar"
+    },
+    {
+      "side": "buy",
+      "limit": "100",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "buy",
+      "limit": "101",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "buy",
+      "limit": "102",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "sell",
+      "limit": "98",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "sell",
+      "limit": "99",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "sell",
+      "limit": "100",
+      "price": "100",
+      "reason": "open"
+    },
+    {
+      "side": "sell",
+      "limit": "101",
+      "price": "101",
+      "reason": "intrabar"
+    },
+    {
+      "side": "sell",
+      "limit": "102",
+      "price": null,
+      "reason": "timeout_cancel"
+    }
+  ],
+  "decimal_fee_gate_cases": [
+    {
+      "fee_bps": "0",
+      "quote": "99",
+      "decimal_profit": "-0.01",
+      "gate": false
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100",
+      "decimal_profit": "0",
+      "gate": false
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100.1",
+      "decimal_profit": "0.001",
+      "gate": true
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100.16",
+      "decimal_profit": "0.0016",
+      "gate": true
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100.17",
+      "decimal_profit": "0.0017",
+      "gate": true
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100.3",
+      "decimal_profit": "0.003",
+      "gate": true
+    },
+    {
+      "fee_bps": "0",
+      "quote": "100.33",
+      "decimal_profit": "0.0033",
+      "gate": true
+    },
+    {
+      "fee_bps": "0",
+      "quote": "101",
+      "decimal_profit": "0.01",
+      "gate": true
+    },
+    {
+      "fee_bps": "8",
+      "quote": "99",
+      "decimal_profit": "-0.01158273381294964028776978417266187050359712230216",
+      "gate": false
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100",
+      "decimal_profit": "-0.00159872102318145483613109512390087929656274980016",
+      "gate": false
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100.1",
+      "decimal_profit": "-0.00060031974420463629096722621902478017585931254996",
+      "gate": false
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100.16",
+      "decimal_profit": "-0.00000127897681854516386890487609912070343725019984",
+      "gate": false
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100.17",
+      "decimal_profit": "0.0000985611510791366906474820143884892086330935252",
+      "gate": true
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100.3",
+      "decimal_profit": "0.0013964828137490007993605115907274180655475619504",
+      "gate": true
+    },
+    {
+      "fee_bps": "8",
+      "quote": "100.33",
+      "decimal_profit": "0.0016960031974420463629096722621902478017585931255",
+      "gate": true
+    },
+    {
+      "fee_bps": "8",
+      "quote": "101",
+      "decimal_profit": "0.0083852917665867306155075939248601119104716227018",
+      "gate": true
+    },
+    {
+      "fee_bps": "16",
+      "quote": "99",
+      "decimal_profit": "-0.01316293929712460063897763578274760383386581469649",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100",
+      "decimal_profit": "-0.00319488817891373801916932907348242811501597444089",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100.1",
+      "decimal_profit": "-0.00219808306709265175718849840255591054313099041534",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100.16",
+      "decimal_profit": "-0.0016",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100.17",
+      "decimal_profit": "-0.00150031948881789137380191693290734824281150159744",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100.3",
+      "decimal_profit": "-0.00020447284345047923322683706070287539936102236422",
+      "gate": false
+    },
+    {
+      "fee_bps": "16",
+      "quote": "100.33",
+      "decimal_profit": "0.0000945686900958466453674121405750798722044728435",
+      "gate": true
+    },
+    {
+      "fee_bps": "16",
+      "quote": "101",
+      "decimal_profit": "0.0067731629392971246006389776357827476038338658147",
+      "gate": true
+    },
+    {
+      "fee_bps": "20",
+      "quote": "99",
+      "decimal_profit": "-0.01395209580838323353293413173652694610778443113772",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100",
+      "decimal_profit": "-0.00399201596806387225548902195608782435129740518962",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100.1",
+      "decimal_profit": "-0.00299600798403193612774451097804391217564870259481",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100.16",
+      "decimal_profit": "-0.00239840319361277445109780439121756487025948103792",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100.17",
+      "decimal_profit": "-0.00229880239520958083832335329341317365269461077844",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100.3",
+      "decimal_profit": "-0.00100399201596806387225548902195608782435129740519",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "100.33",
+      "decimal_profit": "-0.00070518962075848303393213572854291417165668662675",
+      "gate": false
+    },
+    {
+      "fee_bps": "20",
+      "quote": "101",
+      "decimal_profit": "0.0059680638722554890219560878243512974051896207585",
+      "gate": true
+    }
+  ],
+  "collision_helper_pass": true,
+  "full_execution_oracle": "NOT_RUN_NO_ENGINE_OR_EVENTS",
+  "all_event_ledger_audit": "NOT_RUN",
+  "priority_timeout_full_engine_tests": "NOT_RUN",
+  "historical_strategy_runs": 0,
+  "historical_control_runs": 0,
+  "strict_reproductions": 0,
+  "limits": "These helper and formula checks do not validate full order lifecycle, event priorities, accounting, full-ledger Decimal reconciliation, historical execution, runtime equivalence, or market-data recovery."
+}

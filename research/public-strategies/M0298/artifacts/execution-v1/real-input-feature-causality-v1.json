@@ -1,0 +1,27 @@
+{
+  "record_id": "M0298",
+  "status": "PASS_REAL_INPUT_FEATURE_CAUSALITY_ONLY",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "code_sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0",
+  "checks": [
+    {
+      "prefix_rows": 9000,
+      "all_columns_exact_prefix": true,
+      "future_perturbation_prefix_exact": true
+    },
+    {
+      "prefix_rows": 40000,
+      "all_columns_exact_prefix": true,
+      "future_perturbation_prefix_exact": true
+    },
+    {
+      "prefix_rows": 100000,
+      "all_columns_exact_prefix": true,
+      "future_perturbation_prefix_exact": true
+    }
+  ],
+  "historical_account_runs": 0,
+  "metrics_computed": false,
+  "universal_causality_proof": false,
+  "peak_rss_bytes": 163291136
+}

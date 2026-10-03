@@ -1,0 +1,32 @@
+{
+  "schema": "public-safe-data-recovery-blocker/v1",
+  "status": "BLOCKED_NO_MARKET_RUN",
+  "observed_failure_at_utc": "2026-10-03T12:17:23.507340Z",
+  "request_attempts": 1,
+  "requested_method": "GET",
+  "requested_url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/5m/BTCUSDT-5m-2023-12.zip.CHECKSUM",
+  "observed_error": "CaptureError: UNAVAILABLE; URLError: Tunnel connection failed: 403 Forbidden",
+  "http_origin_status_known": false,
+  "error_scope": "Tunnel denial is observed; do not infer an origin-server response or its cause",
+  "complete_source_objects_recovered": 0,
+  "complete_monthly_archives_recovered": 0,
+  "canonical_input_published": false,
+  "local_full_input_qa_passed": false,
+  "local_independent_raw_rebuild_completed": false,
+  "historical_strategy_runs": 0,
+  "historical_control_runs": 0,
+  "process_exit_code": "UNKNOWN",
+  "network_retries": 0,
+  "alternate_host_used": false,
+  "timeframe_or_window_substitution": false,
+  "required_action": "Stop at first 403; no retry, source switching, proxy, or restriction bypass",
+  "receipt_evidence": "Independent read of existing capture.log and failure.json; no new request or process poll by auditor",
+  "publication_scope": "Only minimal public blocker facts; no local paths, private Library identifiers, credentials, or HTTP request identifiers",
+  "expected_input_only": {
+    "rows": 114336,
+    "evaluation_rows": 105408,
+    "source_objects": 39,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "warning": "These are frozen expected values, not a claim of local recovery"
+  }
+}

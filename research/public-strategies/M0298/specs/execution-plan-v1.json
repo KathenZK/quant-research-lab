@@ -1,0 +1,202 @@
+{
+  "schema": "M0298-native5m-execution-protocol/v1",
+  "record_id": "M0298",
+  "origin_run_id": "M0298-calendar2024-execution-v1-20261003",
+  "variant_id": "M0298-BTCUSDT-NATIVE5M-SIMPLE-20261003-v1",
+  "status": "READY_FOR_C0_AUDIT_NO_HISTORICAL_RETURNS",
+  "preparation_plan_sha256": "27b2a48746c2ac50e697285c45a99989b5d272428a5a0699be402dfce192f2f3",
+  "lab_handoff_commit": "48851ef54b5fba6fef1da6825983864e1665fe1e",
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/Simple.py",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+    "bytes": 2695,
+    "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "retrieval_method": "GitHub connector; exact UTF-8 bytes; AST only, not executed",
+    "license": "GPL-3.0",
+    "author": "Gert Wohlgemuth"
+  },
+  "rules": {
+    "class_attributes": {
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m"
+    },
+    "MACD": {
+      "fastperiod": 12,
+      "slowperiod": 26,
+      "signalperiod": 9,
+      "library": "TA-Lib 0.6.8 wrapper/0.6.4 C"
+    },
+    "RSI": {
+      "timeperiod": 7
+    },
+    "BB": {
+      "input": "close",
+      "window": 12,
+      "stds": 2,
+      "min_periods": 1,
+      "ddof": 1
+    },
+    "entry": "macd>0 and macd>macdsignal and bb_upperband>bb_upperband.shift(1) and rsi>70",
+    "exit": "rsi>80",
+    "raw_collision_preserved": true,
+    "collision_effective_entry": false,
+    "collision_effective_signal_exit": false,
+    "ROI_ignored_by_entry": false
+  },
+  "input": {
+    "provider": "Binance Vision",
+    "market": "BTCUSDT spot",
+    "native_timeframe": "5m",
+    "start_inclusive": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "rows": 114336,
+    "bytes": 31428289,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "expected_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+    "expected_source_objects": 39,
+    "local_recovery_passed": true
+  },
+  "evaluation": {
+    "start_inclusive": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_bars": 105408,
+    "warmup_bars": 8928,
+    "selection": "availability-selected before candidate returns after prior 2023 QA failure",
+    "oos": false,
+    "directly_comparable_to_previous_two_year_total_returns": false,
+    "prior_search_count": "UNKNOWN",
+    "actual_history_exposure_from_this_plan": false
+  },
+  "execution": {
+    "initial_cash_USDT": 100000,
+    "stake_cash_fraction": 0.95,
+    "max_open_positions": 1,
+    "position": "spot long only; no leverage, shorting, funding or pyramiding",
+    "entry_signal_time": "only fully closed bar; lag1 executes at next native5m open; lag2 at second following open",
+    "entry_and_signal_exit_price": "signal bar close limit; improved fill at eligible open when marketable, else touch within eligible bar; fractional full fills assumed",
+    "time_in_force": "GTC with explicit strategy timeout cancellation at the end of one eligible 5m bar; no carryover",
+    "buyhold": "95% of initial cash at first evaluation open, base fees and execution friction; no signals, ROI or stop",
+    "exit_profit_only": false,
+    "ROI_target": "net1% including both fees and cash friction: entry_price*(1+fee+friction)*1.01/(1-fee-friction)",
+    "stop_trigger": "entry_fill*0.75; gap below stop takes opening price",
+    "stop_order": "market risk-exit substitution; this differs from reference default limit and precludes strict reproduction",
+    "open_event_priority": [
+      "stop_gap",
+      "marketable_signal_exit",
+      "ROI_gap"
+    ],
+    "intrabar_priority": [
+      "stop",
+      "signal_exit_limit",
+      "ROI_limit"
+    ],
+    "intrabar_entry_policy": "do not recognize same-bar ROI after intrabar limit entry; stop may still fire; open-filled entries permit stop then ROI",
+    "same_bar_reentry": false,
+    "terminal": "mark existing position at last close; no forced liquidation; estimated liquidation net value separate",
+    "fees_bps_per_side": 8,
+    "execution_friction_bps_per_side": 2,
+    "friction_treatment": "separate adverse cash cost, not a price fill outside the limit",
+    "queue_partial_fills_latency_tick_lot_min_notional": "unmodelled unknown; diagnostic assumption",
+    "MDD": "all105408 native5m close equities plus initial cash; daily display sampling is not MDD input",
+    "Sharpe": "UTC daily close returns, sqrt365, sample ddof1, rf0",
+    "not_original_framework_engine": true,
+    "warmup_bootstrap": "Initial account flat/cash; signal at evaluation index i comes from full-input index i-lag, including closed warmup-tail bars. lag1 first activation can use2023-12-31T23:55Z, lag2 can use23:50Z. No pre-evaluation position or order is carried.",
+    "touch_comparisons": "Limit touch/stop/ROI use inclusive<=or>=; raw source entry/exit indicator inequalities remain strict.",
+    "cash_accounting": "Entry budget=cash*.95; notional=budget/(1+fee+friction), qty=notional/fill; subtract budget. Exit proceeds=qty*fill*(1-fee-friction). Commission/friction reported separately at each fill; no borrowed cash.",
+    "resource_limits": {
+      "RLIMIT_AS_bytes": 1073741824,
+      "RSS_budget_bytes": 1073741824,
+      "BLAS_threads": 1,
+      "configuration_scheduling": "serial, release previous arrays before next configuration"
+    },
+    "output_precision": "CSV float17significant digits; JSON roundtrip float; no display rounding in full ledger"
+  },
+  "configurations": [
+    {
+      "id": "base",
+      "fee_bps": 8,
+      "lag_bars": 1
+    },
+    {
+      "id": "fee0",
+      "fee_bps": 0,
+      "lag_bars": 1
+    },
+    {
+      "id": "fee20",
+      "fee_bps": 20,
+      "lag_bars": 1
+    },
+    {
+      "id": "delay2",
+      "fee_bps": 8,
+      "lag_bars": 2
+    }
+  ],
+  "controls": [
+    {
+      "id": "buyhold",
+      "fee_bps": 8,
+      "execution_friction_bps": 2,
+      "same_window": true
+    }
+  ],
+  "data_receipt_sha256": "ddb81501a8ea706ad6b60c21ed6c8da01bfba48f99911f479340632c5738d783",
+  "fidelity_class": "HYPOTHESIS",
+  "research_status": "DIAGNOSTIC_ONLY",
+  "strict_reproduction_eligible": false,
+  "strict_reproductions": 0,
+  "PIT_proven": false,
+  "historical_finality_proven": false,
+  "tradability_proven": false,
+  "trusted_input": false,
+  "parameter_search_count": 0,
+  "prior_search_count": "UNKNOWN",
+  "oos": false,
+  "promotion": false,
+  "deployed": false,
+  "pre_return_decisions": [
+    {
+      "change": "No strategy parameter/config search or source rule changes from preparation plan",
+      "reason": "User authorized original fixed task"
+    },
+    {
+      "clarification": "Warmup-tail signals may activate first evaluation bar; account starts flat",
+      "reason": "Explicitly freeze existing closed-signal i-lag behavior before results, not silently unify with otherID"
+    },
+    {
+      "clarification": "HardRLIMIT_AS1GiB plusRSS guard",
+      "reason": "Independent reviewer requested enforcing budget before allocations"
+    },
+    {
+      "implementation_note": "Full engine built after originalblockedpackage; old21file evidence remains byte-identical",
+      "reason": "Successful same-source authorized recovery is new evidence, not rewriting oldblockedstate"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4 (Oct 20 2025 20:23:51)",
+    "compatibility": 0,
+    "unstable_period_RSI": 0,
+    "unstable_period_EMA": 0,
+    "blas_threads": 1,
+    "observed_peak_rss_bytes": 77037568,
+    "python_peak_budget_bytes": 1073741824,
+    "dependencies_installed_or_upgraded": false
+  },
+  "pre_returns_gate": {
+    "historical_account_runs": 0,
+    "data_QA": "PASS_DIAGNOSTIC_ONLY",
+    "engine_independent_audit": "PENDING",
+    "C0": "NOT_YET_WRITTEN"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "M0298",
+  "name": "Simple：MACD/BB/RSI原生5m",
+  "status": "BLOCKED_SOURCE_INPUT",
+  "reason": "原源码AST与合成因果核验完成；固定输入恢复首请求Tunnel403，历史策略和基准均未运行。",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0298-SIMPLE"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AST_PASS",
+    "causality_validation": "SYNTHETIC_PREFIX_PASS_ONLY",
+    "data_quality_status": "BLOCKED_SOURCE_INPUT",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "independent_ledger_validation": "NOT_RUN",
+    "raw_input_recovery": "NOT_COMPLETED",
+    "local_recovery": "PASS_SYNTHETIC_CODE_ONLY",
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false,
+    "independent_formula_validation": "PASS_SYNTHETIC_SCALAR_ORACLE_ONLY",
+    "independent_limit_helper_validation": "PASS_10_DECIMAL_HELPER_CASES_ONLY"
+  },
+  "implementations": [],
+  "related_results": [],
+  "counts": {
+    "planned_strategy_configurations": 4,
+    "planned_controls": 1,
+    "actual_strategy_runs": 0,
+    "actual_control_runs": 0,
+    "strict_reproductions": 0
+  },
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/Simple.py",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+    "bytes": 2695,
+    "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "retrieval_method": "GitHub connector; exact UTF-8 bytes; AST only, not executed",
+    "license": "GPL-3.0",
+    "author": "Gert Wohlgemuth"
+  },
+  "metrics": null,
+  "curve": null
+}

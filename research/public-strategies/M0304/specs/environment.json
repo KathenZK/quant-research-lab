@@ -1,0 +1,48 @@
+{
+  "status": "PREPARATION_ENVIRONMENT_ONLY_NOT_DATA_C0",
+  "observed_at_utc": "2026-10-03T12:22:26.753130+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA-Lib": "0.6.8"
+  },
+  "talib_C": "b'0.6.4 (Oct 20 2025 20:23:51)'",
+  "talib_binary_sha256": "ee9ae58a5d61f670ff4319b62550ff9808c17418b5e570364b0c7341b268fed5",
+  "talib_binary_bytes": 14198209,
+  "talib_compatibility": 0,
+  "unstable_period_RSI": 0,
+  "indicator_defaults": {
+    "STOCH": {
+      "parameters": {
+        "fastk_period": 5,
+        "slowk_period": 3,
+        "slowk_matype": 0,
+        "slowd_period": 3,
+        "slowd_matype": 0
+      },
+      "lookback": 8
+    },
+    "RSI": {
+      "parameters": {
+        "timeperiod": 14
+      },
+      "lookback": 14
+    },
+    "SAR": {
+      "parameters": {
+        "acceleration": 0.02,
+        "maximum": 0.2
+      },
+      "lookback": 1
+    },
+    "CDLHAMMER": {
+      "parameters": {},
+      "lookback": 11
+    }
+  },
+  "blas_threads": 1,
+  "python_memory_ceiling_bytes": 1073741824,
+  "new_dependencies_installed": false
+}

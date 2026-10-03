@@ -1,0 +1,45 @@
+{
+  "status": "PASS_SYNTHETIC_105408_BAR_4_PLUS_1_ONLY",
+  "cases": [
+    {
+      "case": "base",
+      "bars": 105408,
+      "fills": 105407,
+      "orders": 105407,
+      "curve_memory_bytes": 7589508
+    },
+    {
+      "case": "fee0",
+      "bars": 105408,
+      "fills": 105407,
+      "orders": 105407,
+      "curve_memory_bytes": 7589508
+    },
+    {
+      "case": "fee20",
+      "bars": 105408,
+      "fills": 105407,
+      "orders": 105407,
+      "curve_memory_bytes": 7589508
+    },
+    {
+      "case": "delay2",
+      "bars": 105408,
+      "fills": 105408,
+      "orders": 105408,
+      "curve_memory_bytes": 7589508
+    },
+    {
+      "case": "buyhold",
+      "bars": 105408,
+      "fills": 1,
+      "orders": 0,
+      "curve_memory_bytes": 7589508
+    }
+  ],
+  "peak_rss_bytes": 297709568,
+  "elapsed_seconds": 4.8228217540017795,
+  "historical_runs": 0,
+  "no_historical_data_read": true,
+  "no_synthetic_performance_used_for_selection": true
+}

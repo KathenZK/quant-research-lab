@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PINNED_INPUT_AND_FEATURES_ONLY_NO_ACCOUNT_SIMULATION",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "rows": 114336,
+  "evaluation_rows": 105408,
+  "feature_columns": [
+    "macd",
+    "macdsignal",
+    "macdhist",
+    "rsi",
+    "bb_lowerband",
+    "bb_middleband",
+    "bb_upperband",
+    "enter_long",
+    "exit_long"
+  ],
+  "all_eval_features_finite": true,
+  "historical_account_runs": 0,
+  "peak_rss_bytes": 175652864
+}

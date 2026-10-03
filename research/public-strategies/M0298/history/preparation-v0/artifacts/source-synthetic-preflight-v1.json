@@ -1,0 +1,129 @@
+{
+  "record_id": "M0298",
+  "stage": "BLOCKED_SOURCE_INPUT",
+  "historical_runs": 0,
+  "source": {
+    "status": "PASS_AST_ONLY",
+    "source_bytes": 2695,
+    "source_sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "class": "Simple",
+    "all_explicit_class_attributes": {
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m"
+    },
+    "indicator_calls": [
+      "ta.MACD(dataframe)",
+      "ta.RSI(dataframe, timeperiod=7)",
+      "qtpylib.bollinger_bands(dataframe['close'], window=12, stds=2)"
+    ],
+    "raw_signal_conditions": {
+      "entry": "(dataframe['macd'] > 0) & (dataframe['macd'] > dataframe['macdsignal']) & (dataframe['bb_upperband'] > dataframe['bb_upperband'].shift(1)) & (dataframe['rsi'] > 70)",
+      "exit": "dataframe['rsi'] > 80"
+    },
+    "method_ast_sha256": {
+      "populate_indicators": "fdf2bed5c0b2d488da97359e4e26e66aba880951099c9424f688a1ec0f84f1b4",
+      "populate_entry_trend": "ddb96b64256d2fde7fb5dbe116b670ffa2bbe55be457730787ec2c6554ec7053",
+      "populate_exit_trend": "cfdc5ee1992d3b9688cab2c44b586afaf2e210713a6df730941f0fdbe32a6d09"
+    },
+    "third_party_code_executed": false,
+    "market_data_read": false
+  },
+  "synthetic": {
+    "status": "PASS_SYNTHETIC_ONLY",
+    "invented_bars": 2400,
+    "causal_prefix_checks": [
+      {
+        "prefix_rows": 120,
+        "prefix_identical": true,
+        "future_perturbation_prefix_identical": true
+      },
+      {
+        "prefix_rows": 800,
+        "prefix_identical": true,
+        "future_perturbation_prefix_identical": true
+      },
+      {
+        "prefix_rows": 1700,
+        "prefix_identical": true,
+        "future_perturbation_prefix_identical": true
+      }
+    ],
+    "rsi_threshold_collision_tests": [
+      {
+        "rsi": 70,
+        "raw_entry": false,
+        "raw_exit": false,
+        "effective_entry_exit": [
+          false,
+          false
+        ]
+      },
+      {
+        "rsi": 70.0001,
+        "raw_entry": true,
+        "raw_exit": false,
+        "effective_entry_exit": [
+          true,
+          false
+        ]
+      },
+      {
+        "rsi": 80,
+        "raw_entry": true,
+        "raw_exit": false,
+        "effective_entry_exit": [
+          true,
+          false
+        ]
+      },
+      {
+        "rsi": 80.0001,
+        "raw_entry": true,
+        "raw_exit": true,
+        "effective_entry_exit": [
+          false,
+          false
+        ]
+      },
+      {
+        "rsi": 90,
+        "raw_entry": true,
+        "raw_exit": true,
+        "effective_entry_exit": [
+          false,
+          false
+        ]
+      }
+    ],
+    "limit_boundary_test_count": 6,
+    "bb_independent_moment_checks": 5,
+    "native_5m_2024_grid_rows": 105408,
+    "nan_warmup_checked": true,
+    "first_MACD_valid_index": 33,
+    "first_RSI_valid_index": 7,
+    "signal_collision_policy": "raw signals retained; entry and signal exit both suppressed; ROI remains independently eligible in draft plan",
+    "all_tests_passed": true,
+    "historical_runs": 0,
+    "historical_ledger_validation": "NOT_RUN",
+    "universal_causality_proof": false,
+    "execution_engine_validation": "LIMIT_BOUNDARY_HELPER_ONLY_NOT_HISTORICAL_ENGINE"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4 (Oct 20 2025 20:23:51)",
+    "compatibility": 0,
+    "unstable_period_RSI": 0,
+    "unstable_period_EMA": 0,
+    "blas_threads": 1,
+    "script_sha256": "8ca9c07e0e73a37c84009a93b6c10d98d80d7dca494c0da4302b119b09c098c0"
+  },
+  "peak_rss_bytes": 77037568,
+  "peak_budget_bytes": 1073741824
+}
