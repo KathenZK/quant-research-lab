@@ -1,0 +1,146 @@
+{
+  "schema_version": "quant-source-preflight/v1",
+  "record_id": "M1358",
+  "status": "SOURCE_SEMANTICS_REVIEWED_C0_NOT_READY",
+  "as_of_utc": "2026-10-03T15:13:07.227427+00:00",
+  "scope": {
+    "source_review_only": true,
+    "new_id_claims": 0,
+    "historical_runs": 0,
+    "market_requests": 0,
+    "global_writes": 0,
+    "git_commits": 0,
+    "strict_reproductions": 0
+  },
+  "catalog_pin": {
+    "commit": "26712be68a662d15dcdb636a197a8062457246b5",
+    "path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1358.json",
+    "git_blob": "e1a37c5c5be0188805abc3d57c4c337d4086c632",
+    "all_11_fields_reviewed": true,
+    "original_record_unchanged": true
+  },
+  "source": {
+    "url": "https://www.quantconnect.com/forum/discussion/13690/ema-crossover-on-crypto/",
+    "author": "Andy Lee",
+    "title": "EMA crossover on crypto",
+    "observed_thread_datePublished": "2022-05-13 01:26:56",
+    "date_timezone": null,
+    "capture_utc": "2026-10-03T15:05:40.247923+00:00",
+    "html_sha256": "cca062d41efd117848eb34a564ea83c02fc3c4cc5c8649b40f65365623c5afee",
+    "visible_class_sha256": "b568553dabbe304d814d4e15d5ebbab1a343b4688b16fea1573d433600833eba",
+    "complete_visible_class": true,
+    "complete_original_project_verified": false,
+    "original_runtime_pin": null,
+    "revision_semantics": "Captured current rendered bytes; original author revision/edit history not established.",
+    "license_status": "FORUM_CODE_REDISTRIBUTION_NOT_ESTABLISHED",
+    "fulltext_external_transfer_allowed": false
+  },
+  "rules": {
+    "instrument": "BTCUSDT",
+    "security_type": "Crypto",
+    "market": "Binance",
+    "resolution": "Daily",
+    "original_start": [
+      2021,
+      4,
+      1
+    ],
+    "original_end": [
+      2022,
+      3,
+      31
+    ],
+    "cash_call": {
+      "currency": "USDT",
+      "amount": 100000
+    },
+    "account_currency_explicitly_set": false,
+    "brokerage_account_type": "Margin",
+    "fast_period": 13,
+    "slow_period": 48,
+    "entry": "slow ready AND quantity <= 0 AND fast > slow -> target allocation 1",
+    "exit": "slow ready AND quantity > 0 AND fast < slow -> liquidate",
+    "signal_type": "state comparison, no prior-value crossing gate",
+    "equality": "no action",
+    "normal_generated_exposure": "long/flat; no short order in class",
+    "explicit_warmup": null,
+    "explicit_stop_roi_trailing": null,
+    "previous_time_field": "assigned but unused in decisions",
+    "explicit_fees_slippage_calendar_timezone": null
+  },
+  "current_lean_reference": {
+    "commit": "705b9551be1aaa821c7f77896a7eb8fcd07b92ee",
+    "author_runtime_equivalence_claimed": false,
+    "files_with_verified_git_blobs": 17,
+    "license": "Apache-2.0 for Lean repository only, not forum code",
+    "ema": {
+      "alpha": "2/(period+1)",
+      "ready": "Samples >= period",
+      "first_ready_value": "SMA of first period samples",
+      "before_ready_value": 0,
+      "automatic_indicator_warmup_default": false
+    },
+    "account_model": {
+      "spot_margin_max_leverage": 3,
+      "target_one_is_three_times_leverage": false,
+      "fee_maker_taker_rate": "0.001 / 0.001",
+      "spot_buy_fee_currency": "BTC",
+      "spot_sell_fee_currency": "USDT",
+      "slippage": "NullSlippageModel",
+      "margin_interest": "Null model",
+      "fill": "ImmediateFillModel; current/latest price branch, pending-before-bar branch may use open; exact engine timeline unexecuted",
+      "free_portfolio_value_percentage_default": "0.0025",
+      "minimum_order_margin_portfolio_percentage_default": "0.001"
+    },
+    "cash_warning": "Static current reference constructor starts USD 100000. SetCash(USDT,100000) adds/sets USDT and does not itself change account currency or clear USD. End-to-end author/current startup has not been run. Do not assume a 100000-USDT-only account or silently clear USD.",
+    "clock": {
+      "algorithm_default": "America/New_York",
+      "binance_data_exchange": "UTC",
+      "calendar": "continuous all seven days, no listed holidays",
+      "required_validation": "UTC bar open/end mapping, algorithm local start/end, indicator update before OnData, same-bar/next-bar order event alignment"
+    }
+  },
+  "available_daily_input_metadata": {
+    "dataset_id": "binance.spot.BTCUSDT.1d.M0216.20261003",
+    "sha256_reported_in_existing_manifest": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows_reported": 762,
+    "input_start": "2022-12-01T00:00:00+00:00",
+    "last_bar_open": "2024-12-31T00:00:00+00:00",
+    "warmup_rows_before_2023_01_01": 31,
+    "required_to_be_ready_before_eval": 48,
+    "deficit_completed_daily_samples": 17,
+    "pit_proven": false,
+    "tradability_proven": false,
+    "review_scope": "metadata only; canonical input bytes/returns not opened or revalidated here",
+    "input_manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc"
+  },
+  "synthetic_validation": {
+    "status": "PASS",
+    "cases": 18,
+    "report_sha256": "ea48dd68ce60393e082d411dbc2539a1c7cefae31f528ff939a4f4b661324790",
+    "scope": "actual visible Python OnData/Initialize in stub + mathematical EMA reference; no actual Lean runtime/C# equivalence/account/fills/history"
+  },
+  "c0_requirements": [
+    "Fix runtime and original-source revision/rights scope. Current Lean is a reference, not proven original environment.",
+    "Resolve account base currency, existing USD cash, USDT conversion feeds, Margin buying power/lot sizes and full-allocation sizing by actual no-market synthetic engine startup; any SetAccountCurrency/reset change is an explicit adaptation.",
+    "Freeze source-start readiness vs pre-evaluation warmup before data/returns. Original class has no explicit warmup and waits during run; preserve first 47 unavailable decisions if starting unseeded. Do not inject the reply variant 5x-period warmup into original.",
+    "If an adapted common-window protocol requires readiness before 2023-01-01 UTC, obtain and QA at least 17 additional completed daily samples before current December start. A contiguous 48-bar prehistory would be 2022-11-14 through 2022-12-31 UTC under explicit UTC-close convention; actual Lean timezone endpoints must be verified first.",
+    "Original 2021-04-01 through 2022-03-31 window is absent from current 2022-12..2024-12 input. Fetch original window later if reproducing it; a 2023/2024 window is a declared new diagnostic, not original-window replication or new OOS.",
+    "Pin EMA SMA seed, current-state signals, daily close/event timing, gap/fill-forward policy, fee currency, lot/min-notional, terminal marking and benchmark. Do not install original-absent ROI/stop/trailing defaults.",
+    "Using shared cash95%, next-open fills, slip2bps or fee8/0/20 is an explicit adapted execution contract. Existing native5m kernel cannot be consumed unchanged for this source."
+  ],
+  "decision": "Signal-level candidate is viable, but not yet eligible for C0 or strict history. A declared ADAPTED diagnostic can be proposed after the above account/time/warmup choices and input QA; none selected or run now.",
+  "evidence_urls": {
+    "forum": "https://www.quantconnect.com/forum/discussion/13690/ema-crossover-on-crypto/",
+    "terms": "https://www.quantconnect.com/terms/",
+    "current_binance_docs": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/brokerages/supported-models/binance",
+    "ema": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Indicators/ExponentialMovingAverage.cs",
+    "cash_initialization": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Common/Securities/SecurityPortfolioManager.cs",
+    "cashbook": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Common/Securities/CashBook.cs",
+    "binance_model": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Common/Brokerages/BinanceBrokerageModel.cs",
+    "fees": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Common/Orders/Fees/BinanceFeeModel.cs",
+    "sizing": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Common/Algorithm/Framework/Portfolio/PortfolioTarget.cs",
+    "calendar": "https://github.com/QuantConnect/Lean/blob/705b9551be1aaa821c7f77896a7eb8fcd07b92ee/Data/market-hours/market-hours-database.json"
+  },
+  "publication": "Self-authored sourcecard for parent review. No full forum text, original catalog row digest or Library reference included. Not published; forum snapshots/code and original catalog stay local and are excluded from safe handoff."
+}

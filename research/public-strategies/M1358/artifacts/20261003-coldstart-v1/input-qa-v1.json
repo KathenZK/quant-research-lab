@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "raw_objects": 50,
+  "provider_checksums": 25,
+  "zip_CRCs": 25,
+  "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "offline_rebuild_exact": true,
+  "total_rows": 762,
+  "evaluation_rows": 731,
+  "prefeed_rows": 0,
+  "features_or_returns_computed": false,
+  "network_requests": 0,
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "PIT": "NOT_PROVEN",
+  "trusted": false
+}
