@@ -1,0 +1,56 @@
+{
+  "schema": "dot009-exact-display-candidates/v1",
+  "source_commit": "08e6ab4a49a808f53f06e509f06cb2c453f007d5",
+  "files": {
+    "research/public-strategies/M1270/artifacts/20261003-public-display-prep/base-nav-sampled.json": {
+      "bytes": 2619,
+      "sha256": "a62a2c1eb7b2134801ea5c94f4cf4f68f5ff93633189973e9b1e8b9c43bb3dd6"
+    },
+    "research/public-strategies/M1270/artifacts/20261003-public-display-prep/graph-detail.json": {
+      "bytes": 26921,
+      "sha256": "fe49eb959e06a6dc78a3faf8d36b1c17bab2b6002b61b451cb15a783b4e0e7de"
+    },
+    "research/public-strategies/M1270/artifacts/20261003-public-display-prep/graph-record.json": {
+      "bytes": 28296,
+      "sha256": "b7c81d44770d55b910d2e06ecf0d56f4035a7247a085a7e50110ab8b35855bd0"
+    },
+    "research/public-strategies/M1270/artifacts/20261003-public-display-prep/public-display-manifest.json": {
+      "bytes": 11119,
+      "sha256": "4c6864364d9cd5dfc1415aa572150b054b7328d644fd0aa600bdac8221af6fdf"
+    },
+    "research/public-strategies/M1346/artifacts/20261003-public-display-prep/base-nav-sampled.json": {
+      "bytes": 2600,
+      "sha256": "ec9de108e8620a64c4d7473c3cd56e7798879b968bf9523df0222c5515b25217"
+    },
+    "research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-detail.json": {
+      "bytes": 26226,
+      "sha256": "6df3dfc4d3cb1e12df0a3f9d2e717ef456b94982502ab9487971a35524db21e4"
+    },
+    "research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-record.json": {
+      "bytes": 27709,
+      "sha256": "d6164a9362d794b921252fef85f7731c5ac2f5ae160615cdbfaea699fc97f84f"
+    },
+    "research/public-strategies/M1346/artifacts/20261003-public-display-prep/public-display-manifest.json": {
+      "bytes": 11104,
+      "sha256": "7f5fc59c64093164302e1bac5d94d8beecfe07cbba9b861ffc130a96902670bf"
+    },
+    "research/public-strategies/M1349/artifacts/20261003-public-display-prep/base-nav-sampled.json": {
+      "bytes": 2472,
+      "sha256": "eef0bc3f5d0f54f31da3d459ac280f951d062cf450d84f3a6b02f181e00d27cd"
+    },
+    "research/public-strategies/M1349/artifacts/20261003-public-display-prep/graph-detail.json": {
+      "bytes": 27427,
+      "sha256": "9b47c813b6427d44aa9efc1daa845c925ac32941ddc487dac7af09060d482311"
+    },
+    "research/public-strategies/M1349/artifacts/20261003-public-display-prep/graph-record.json": {
+      "bytes": 29862,
+      "sha256": "de01de8069564820afba0b6b7f41ca290cd05e0c519440d19ebf5fa7d490d78d"
+    },
+    "research/public-strategies/M1349/artifacts/20261003-public-display-prep/public-display-manifest.json": {
+      "bytes": 11107,
+      "sha256": "781a969d92bbac961cc14589cf7310d1fc3c3eb28d868679fe78f3d43317bb43"
+    }
+  },
+  "candidate_count": 12,
+  "candidate_bytes": 207462
+}

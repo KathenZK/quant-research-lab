@@ -1,0 +1,240 @@
+{
+  "Graph_imported": false,
+  "Site_deployed": false,
+  "actual_strategy_configurations": 4,
+  "added_payload_count": 14,
+  "baseline_shared_files_unchanged": 62,
+  "files": [
+    {
+      "bytes": 5997,
+      "path": "research/public-strategies/M1346/README-display-v1.md",
+      "sha256": "3abe5cd7c4345794e91614f8b66382d9045bc2913d1899a2e95e7d7f64a14352"
+    },
+    {
+      "bytes": 9094,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json",
+      "sha256": "3eafe865cd504941fe95c3b590ac679c1ee22ef0cb0f3c6e5b10459efc6e9c4d"
+    },
+    {
+      "bytes": 2184,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json",
+      "sha256": "3bba85d88996cafdb680797f09cfc103bfec476361c67a6509e5c7b597212e19"
+    },
+    {
+      "bytes": 2600,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json",
+      "sha256": "0fb5a0865e4b5104e806a09aed46c6a8108a6cc192e80d414357d81e3c4dce35"
+    },
+    {
+      "bytes": 11487,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json",
+      "sha256": "99ac7e858f339e3c88194e17d835f79de45fbbf34af9c0ee10d29a7a4857e3b3"
+    },
+    {
+      "bytes": 2600,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-prep/base-nav-sampled.json",
+      "sha256": "ec9de108e8620a64c4d7473c3cd56e7798879b968bf9523df0222c5515b25217"
+    },
+    {
+      "bytes": 26226,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-detail.json",
+      "sha256": "6df3dfc4d3cb1e12df0a3f9d2e717ef456b94982502ab9487971a35524db21e4"
+    },
+    {
+      "bytes": 27709,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-record.json",
+      "sha256": "d6164a9362d794b921252fef85f7731c5ac2f5ae160615cdbfaea699fc97f84f"
+    },
+    {
+      "bytes": 11104,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-prep/public-display-manifest.json",
+      "sha256": "7f5fc59c64093164302e1bac5d94d8beecfe07cbba9b861ffc130a96902670bf"
+    },
+    {
+      "bytes": 17674,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json",
+      "sha256": "570bbf9613097e4ecb4c7ca4375c9aac97f5e597970da815f920c521eb402717"
+    },
+    {
+      "bytes": 2761,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-review/EXACT-12-FILES.json",
+      "sha256": "93900f367e94d68a6cbe7ae9c8113f521d98a0d546b7b4b32ce2ce5d56fd3242"
+    },
+    {
+      "bytes": 5178,
+      "path": "research/public-strategies/M1346/artifacts/20261003-public-display-review/review.safe.json",
+      "sha256": "c3566692c4ee2a9ccb7f8606c6c117d511bcd2024679bd57ac2b2a16263ab9de"
+    },
+    {
+      "bytes": 917,
+      "path": "research/public-strategies/M1346/decision-log-display-v1.md",
+      "sha256": "0ce1ac37991396ff58e71d0451927190affef625d5d598a048aa61cb3b54969f"
+    },
+    {
+      "bytes": 17351,
+      "path": "research/public-strategies/M1346/scripts/public-display-v2/common_public_display.py",
+      "sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13"
+    },
+    {
+      "bytes": 12472,
+      "path": "research/public-strategies/M1346/scripts/public-display-v2/export_dot009.py",
+      "sha256": "ef92d7cb7238163a72f696d785112a77ea3bda280bc3509cd10ce9cbd8cd0b05"
+    },
+    {
+      "bytes": 19561,
+      "path": "research/public-strategies/M1346/scripts/public-display-v2/frozen_export.py",
+      "sha256": "266c93afa0829b0e504b2e008e1ed0ae1b43a4b5fd2869ffaeb047e41fba3128"
+    },
+    {
+      "bytes": 14808,
+      "path": "research/public-strategies/M1346/scripts/public-display-v2/selected-public-source-lock.json",
+      "sha256": "4379e8c4897b9ae8d3eeaaf3a467549a71abd79600026b2da463a7f682b3d9f1"
+    },
+    {
+      "bytes": 4088,
+      "path": "research/public-strategies/M1346/scripts/public-display-v2/verify_dot009.py",
+      "sha256": "03fd86370414ce78271712589c9586dedb0527e3cc659c440394f16107a04377"
+    },
+    {
+      "bytes": 1913,
+      "path": "research/public-strategies/M1346/source/catalog-original-fields.json",
+      "sha256": "41056e93ba2f52554b0ec7e9176591c8deb5fa1e186eed719991a51d3b045dcb"
+    },
+    {
+      "bytes": 12079,
+      "path": "research/public-strategies/M1346/source/root-frozen-rules.json",
+      "sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668"
+    },
+    {
+      "bytes": 10579,
+      "path": "research/public-strategies/M1346/specs/C0.json",
+      "sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb"
+    },
+    {
+      "bytes": 4190,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "bytes": 447,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json",
+      "sha256": "0ad62d335d9032e0e291a9f54f96446b2c455cc5447c44b5cfbba43c6ccbc7ac"
+    },
+    {
+      "bytes": 6820,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json",
+      "sha256": "b108f7dfa0458cbff6c0a751d319da7dd0f66871d809bc7debd32506861af37f"
+    },
+    {
+      "bytes": 1436,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json",
+      "sha256": "5554f6f67d0956388aefb2b75dfe348e652b923b4cc1b91cf15b8fe23a2e560e"
+    }
+  ],
+  "historical_publication_manifest_existed": false,
+  "historical_shared_README_preserved_at": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/README-original-dot009.md",
+  "historical_shared_files_preserved": 59,
+  "id": "M1346",
+  "integration_base_commit": "420a0532a57b89b57045bf3e1ddb062e263edf44",
+  "manifest_kind": "APPROVED_PUBLIC_DISPLAY_SOURCE_INVENTORY",
+  "matched_cost_controls_available": false,
+  "not_original_publication_manifest": true,
+  "original_C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+  "original_family_files_unchanged": 12,
+  "original_metric_observations": 731,
+  "payload_bytes": 231275,
+  "payload_count": 25,
+  "preserved_objects_method": "Git object identities against integration_base_commit; private bodies not read",
+  "previous_publication_manifest": null,
+  "private_full_curves_included": false,
+  "private_notes_or_library_identifiers_included": false,
+  "projection_new_controls": 0,
+  "projection_new_trials": 0,
+  "public_curve_points": 25,
+  "publication_scope": "New selective inventory of approved public display sources and additive derived payloads; not a historical research or full-output manifest",
+  "raw_market_data_included": false,
+  "reused_control_id": "M1258",
+  "reused_control_uniqueness_scope": "One shared base control across M1346/M1349/M1270",
+  "revision": 1,
+  "schema": "dot009-additive-public-display-publication/v1",
+  "selected_C0_pin_count": 6,
+  "selected_source_role_count": 11,
+  "self_excluded": true,
+  "source_artifacts": {
+    "C0": {
+      "bytes": 10579,
+      "path": "research/public-strategies/M1346/specs/C0.json",
+      "sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/specs/C0.json"
+    },
+    "cases": {
+      "bytes": 447,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json",
+      "sha256": "0ad62d335d9032e0e291a9f54f96446b2c455cc5447c44b5cfbba43c6ccbc7ac",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json"
+    },
+    "catalog": {
+      "bytes": 1913,
+      "path": "research/public-strategies/M1346/source/catalog-original-fields.json",
+      "sha256": "41056e93ba2f52554b0ec7e9176591c8deb5fa1e186eed719991a51d3b045dcb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/source/catalog-original-fields.json"
+    },
+    "control_projection": {
+      "bytes": 6820,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json",
+      "sha256": "b108f7dfa0458cbff6c0a751d319da7dd0f66871d809bc7debd32506861af37f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json"
+    },
+    "control_reference": {
+      "bytes": 4190,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json"
+    },
+    "curve": {
+      "bytes": 2600,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json",
+      "sha256": "0fb5a0865e4b5104e806a09aed46c6a8108a6cc192e80d414357d81e3c4dce35",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/light-curve.json"
+    },
+    "original_detail": {
+      "bytes": 9094,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json",
+      "sha256": "3eafe865cd504941fe95c3b590ac679c1ee22ef0cb0f3c6e5b10459efc6e9c4d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 2184,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json",
+      "sha256": "3bba85d88996cafdb680797f09cfc103bfec476361c67a6509e5c7b597212e19",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/graph-record.json"
+    },
+    "rules": {
+      "bytes": 12079,
+      "path": "research/public-strategies/M1346/source/root-frozen-rules.json",
+      "sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/source/root-frozen-rules.json"
+    },
+    "statistics": {
+      "bytes": 1436,
+      "path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json",
+      "sha256": "5554f6f67d0956388aefb2b75dfe348e652b923b4cc1b91cf15b8fe23a2e560e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json"
+    },
+    "summary": {
+      "bytes": 11487,
+      "path": "research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json",
+      "sha256": "99ac7e858f339e3c88194e17d835f79de45fbbf34af9c0ee10d29a7a4857e3b3",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/08e6ab4a49a808f53f06e509f06cb2c453f007d5/research/public-strategies/M1346/artifacts/20261003-batch017-v1/summary.json"
+    }
+  },
+  "source_commit": "08e6ab4a49a808f53f06e509f06cb2c453f007d5",
+  "source_contract": "CATALOG_CLOSE25_LEVEL_FULLCASH_REUSED_CONTROL_V1",
+  "source_lock": {
+    "bytes": 14808,
+    "path": "research/public-strategies/M1346/scripts/public-display-v2/selected-public-source-lock.json",
+    "sha256": "4379e8c4897b9ae8d3eeaaf3a467549a71abd79600026b2da463a7f682b3d9f1"
+  },
+  "source_lock_kind": "SELECTED_APPROVED_GIT_SOURCE_LOCK_NOT_PUBLICATION_MANIFEST",
+  "strict_reproductions": 0
+}

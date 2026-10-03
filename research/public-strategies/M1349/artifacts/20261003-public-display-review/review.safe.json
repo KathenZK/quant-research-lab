@@ -1,0 +1,158 @@
+{
+  "approved_source_role_reads": 33,
+  "approved_unique_source_objects": 25,
+  "artifacts": {
+    "delivery_manifest_sha256": "570bbf9613097e4ecb4c7ca4375c9aac97f5e597970da815f920c521eb402717",
+    "review_script_sha256": "d75beff5d8b9fd906374b1125b157c142156c73767e561742f68c8e4595320fc"
+  },
+  "author49guards_not_claimed_as_independent": true,
+  "candidate_bytes": 207462,
+  "candidate_files": 12,
+  "cases": [
+    {
+      "id": "M1346",
+      "metric_observations": 731,
+      "new_controls": 0,
+      "new_projection_trials": 0,
+      "original_strategy_configurations": 4,
+      "points": 25,
+      "source_contract": "CATALOG_CLOSE25_LEVEL_FULLCASH_REUSED_CONTROL_V1",
+      "source_fields": 11,
+      "source_selected_C0_pins": 6
+    },
+    {
+      "id": "M1349",
+      "metric_observations": 731,
+      "new_controls": 0,
+      "new_projection_trials": 0,
+      "original_strategy_configurations": 4,
+      "points": 25,
+      "source_contract": "CATALOG_ROC25_NEG10_HOLD25_FULLCASH_REUSED_CONTROL_V1",
+      "source_fields": 11,
+      "source_selected_C0_pins": 6
+    },
+    {
+      "id": "M1270",
+      "metric_observations": 731,
+      "new_controls": 0,
+      "new_projection_trials": 0,
+      "original_strategy_configurations": 4,
+      "points": 25,
+      "source_contract": "CATALOG_UTC_SUNDAY_MONDAY_RAW_CANCEL_FULLCASH_REUSED_CONTROL_V1",
+      "source_fields": 11,
+      "source_selected_C0_pins": 6
+    }
+  ],
+  "checked_utc": "2026-10-03T19:16:51.765426+00:00",
+  "cpu_seconds": 0.07931015599999999,
+  "findings": [],
+  "fresh_build_byte_equal_files": 13,
+  "handoff_sha256": "37a95b3110fe2bf505aca5d64259dfd2f0962ecfaef541af4aebe2df219a387a",
+  "independent_checks": [
+    "Actual pinned Git33roles/25unique public objects; no original publicationmanifest claimed",
+    "Independent actual builder fresh13files exact;12payload207462B+outermanifest",
+    "M1346 independent source/rules11fields/metrics-types/25points/control/transport6/profile/hash/defaultfull review",
+    "M1349 independent source/rules11fields/metrics-types/25points/control/transport6/profile/hash/defaultfull review",
+    "M1270 independent source/rules11fields/metrics-types/25points/control/transport6/profile/hash/defaultfull review",
+    "Actual UI defaultfull benchmark/cost lookup and numeric bps labels; extracted real metricValue executed for0/null/undefined"
+  ],
+  "independent_selected_rejection_tests": 14,
+  "max_rss_kib": 15744,
+  "new_controls": 0,
+  "original_strategy_configurations": 12,
+  "original_strategy_ids": 3,
+  "outer_manifest_files": 1,
+  "projection_new_strategy_runs": 0,
+  "rejection_tests": [
+    {
+      "layer": "builder semantic validator",
+      "name": "nullSharpe_to0"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "zeroReturn_to_missing"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "slip2_to0"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "time25_to24"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "fullcash_to95"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "extraControl"
+    },
+    {
+      "layer": "builder semantic validator",
+      "name": "dropOriginalRule"
+    },
+    {
+      "layer": "builder role-lock guard",
+      "name": "sourcePathEscape"
+    },
+    {
+      "layer": "builder ID guard",
+      "name": "unassignedID"
+    },
+    {
+      "layer": "builder immutable-output guard",
+      "name": "overwriteExistingOutput"
+    },
+    {
+      "layer": "independent candidate validator",
+      "name": "missingDefaultFullBenchmark"
+    },
+    {
+      "layer": "independent candidate validator",
+      "name": "wrongProfile"
+    },
+    {
+      "layer": "independent candidate validator",
+      "name": "transportHashMismatch"
+    },
+    {
+      "layer": "independent candidate validator",
+      "name": "doubleNormalization"
+    }
+  ],
+  "remaining_blockers": [],
+  "reviewer": "root/m0288",
+  "scope": {
+    "Graph_writes": false,
+    "Site_writes": false,
+    "global_writes": false,
+    "private_ZIP_read": false,
+    "private_full_NAV_read": false,
+    "private_full_ledger_read": false,
+    "private_inventory_body_read": false,
+    "raw_market_read": false,
+    "repository_writes": false,
+    "source_C0_full_revalidation_claim": false
+  },
+  "source_commit": "08e6ab4a49a808f53f06e509f06cb2c453f007d5",
+  "source_lock_not_original_publication_manifest": true,
+  "source_lock_sha256": "4379e8c4897b9ae8d3eeaaf3a467549a71abd79600026b2da463a7f682b3d9f1",
+  "status": "PASS_INDEPENDENT_PUBLIC_DISPLAY_REVIEW",
+  "ui_consumer": {
+    "actual_metricValue_outputs": [
+      "0.00%",
+      "未提供",
+      "未提供",
+      "0.00"
+    ],
+    "default_period": "full",
+    "limitation": "Static data-binding review plus executed metricValue; no browser render/Site deployment. Current component has no separate lag metric table; lag container preserved for downstream consumers.",
+    "path": "web/src/CorpusResearch.tsx",
+    "sha256": "b8061f388bf9bca8683a429c18cd92a258ed5b1188defb7a555f99b51cb289e8"
+  },
+  "unique_reused_control_ids": [
+    "M1258"
+  ],
+  "wall_seconds": 0.22721846000058576
+}

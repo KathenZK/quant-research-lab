@@ -1400,6 +1400,29 @@ research/public-strategies/M1463/artifacts/20261003-public-display-review/DELIVE
 research/public-strategies/M1463/artifacts/20261003-public-display-review/EXACT-8-FILES.json  # catalog pair display publication
 research/public-strategies/M1463/artifacts/20261003-public-display-review/review.safe.json  # catalog pair display publication
 
+# dot009 independently reviewed additive display and safe receipts; exact approved paths
+research/public-strategies/M1270/artifacts/20261003-public-display-prep/base-nav-sampled.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-prep/graph-detail.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-prep/graph-record.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-prep/public-display-manifest.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-review/EXACT-12-FILES.json  # dot009 additive display publication
+research/public-strategies/M1270/artifacts/20261003-public-display-review/review.safe.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-prep/base-nav-sampled.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-detail.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-prep/graph-record.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-prep/public-display-manifest.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-review/EXACT-12-FILES.json  # dot009 additive display publication
+research/public-strategies/M1346/artifacts/20261003-public-display-review/review.safe.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-prep/base-nav-sampled.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-prep/graph-detail.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-prep/graph-record.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-prep/public-display-manifest.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-review/EXACT-12-FILES.json  # dot009 additive display publication
+research/public-strategies/M1349/artifacts/20261003-public-display-review/review.safe.json  # dot009 additive display publication
+
 # M1347 frozen research outputs and additive projection v2; exact reviewed paths
 research/public-strategies/M1347/artifacts/20261003-catalog-v1/account-validation.safe.json  # M1347 diagnostic publication
 research/public-strategies/M1347/artifacts/20261003-catalog-v1/base-monthly.csv  # M1347 diagnostic publication
