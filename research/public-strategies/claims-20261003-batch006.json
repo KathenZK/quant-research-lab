@@ -1,0 +1,47 @@
+{
+  "schema": "public-catalog-parallel-claims/v1",
+  "assigned_at_utc": "2026-10-03T10:58:01.155946+00:00",
+  "coordinator": "Codex /root only",
+  "base_commit": "a99669624fca97a2cd1fb6862f442f9196529cec",
+  "claims": [
+    {
+      "id": "M0293",
+      "owner": "codex executor m0286 continuing in dedicated m0293 worktree",
+      "status": "ASSIGNED_NOT_STARTED",
+      "output_prefix": "research/public-strategies/M0293/",
+      "source": {
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ReinforcedAverageStrategy.py",
+        "bytes": 3502,
+        "sha256": "50c8e88441ffead38fd1e1b3d49b151a001068f5eff01a23c10178b1f2c87e38"
+      },
+      "native_timeframe": "4h",
+      "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+      "input_bytes": 1298564,
+      "input_quality": "DIAGNOSTIC_ONLY",
+      "precheck_sha256": "dd1a3d4463639e6e3687250f742a06de624f019143c2d61c2c5df7aad758ab92",
+      "fidelity_ceiling": "HYPOTHESIS",
+      "new_source_download_required": false,
+      "new_market_data_required": false,
+      "required_before_replay": [
+        "freeze protocol/spec/code/source/data hashes before historical performance",
+        "reuse only exact official 4h input with independent raw/canonical QA",
+        "preserve closed48h merge +44h and source warmup NaN behavior",
+        "inherit March24 spot halt handling and verify actual fill times",
+        "predeclare costs/extra-lag/control and independent validation"
+      ]
+    }
+  ],
+  "external_claims_not_touched": {
+    "M0275": "dot b002 replay QA done per parent; remote acceptance pending",
+    "M0274": "dot b002 DATA_BLOCKED,0 valid replay",
+    "M0316": "dot b003 C0 started per parent",
+    "M0317": "dot b003 C0 started per parent",
+    "M0257": "dot reserved",
+    "M0273": "dot reserved"
+  },
+  "strict_reproductions": 0,
+  "new_strategy_runs": 0,
+  "no_global_edits_by_executor": true,
+  "site_writer": "dot only via v9 authenticated owner path",
+  "corpus_priority": "original6973 complete knowledge source records before any new collection intake"
+}
