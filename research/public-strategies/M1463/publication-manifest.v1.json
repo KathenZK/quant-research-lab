@@ -1,0 +1,261 @@
+{
+  "schema": "batch016-fixed-publication/v1",
+  "id": "M1463",
+  "files": [
+    {
+      "path": "research/_shared-kernels/catalog-daily-cash/README.md",
+      "bytes": 617,
+      "sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+    },
+    {
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/engine.py",
+      "bytes": 9243,
+      "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+    },
+    {
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/manifest.json",
+      "bytes": 1038,
+      "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+    },
+    {
+      "path": "research/_shared-kernels/catalog-daily-cash/v1/verify_account.py",
+      "bytes": 8744,
+      "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+    },
+    {
+      "path": "research/public-strategies/M1463/M1463-core-ledger.md",
+      "bytes": 1069,
+      "sha256": "78625e73e7cf1c5131f7cfaa8e6398303993e326ffd4e3eabc12b86e130f2758"
+    },
+    {
+      "path": "research/public-strategies/M1463/M1463-result-ledger-v1.md",
+      "bytes": 379,
+      "sha256": "9e5177d6c87cff1e8d32f62df953e36e00a011ffc5d04f42273d7d7626b4f4db"
+    },
+    {
+      "path": "research/public-strategies/M1463/M1463.md",
+      "bytes": 8065,
+      "sha256": "dda69292031a3ba0bc1419942401dc1d322a7c28034be35c031d8c5e831209bb"
+    },
+    {
+      "path": "research/public-strategies/M1463/README-results-v1.md",
+      "bytes": 209,
+      "sha256": "01bffad7843023b4ab900b437649f812cc63f75f00f30510a1c857762feaeab5"
+    },
+    {
+      "path": "research/public-strategies/M1463/README.md",
+      "bytes": 919,
+      "sha256": "88c43c25de5c5f8487fd9cb6c5fa2476e982438751a4c05dada27e4e4553f530"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/LICENSE-results.md",
+      "bytes": 516,
+      "sha256": "2b09dc6a16d3e9aa91007552619ee00799828597e620b00201dd83971d923fa9"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/execution-receipt.v1.json",
+      "bytes": 330,
+      "sha256": "020071bb1abdc8588eab9191d8bab84ef7af31204a8b6c34a061c4425d2667b9"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/exposure.jsonl",
+      "bytes": 1211,
+      "sha256": "bd457ec2eca1d8ec44fd087bf7cfc72a047340103e83aa2cbd5eae66cedf487c"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-detail.json",
+      "bytes": 11200,
+      "sha256": "da60261540f338030eae1cb3228ac3889c85f682e2ae3b91e595cf174a133ced"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/graph-record.json",
+      "bytes": 918,
+      "sha256": "e5226f0b1fb7fea96e40b8c1465fdebf9d9c6119e844c9a023a9d9cb48f6170d"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/history-causality.v1.json",
+      "bytes": 1457,
+      "sha256": "a6af6a203a65b0941e2a66bccb5ca01eac48e3de1faaccf3aba314839ebeeb5a"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/independent-ledger.v1.json",
+      "bytes": 490,
+      "sha256": "cb4dc100ed0fa255040ec28fccd1f434daa227744c6d8dbb9c76a0eb207d2f64"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/input-QA.json",
+      "bytes": 452,
+      "sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/local-recovery.json",
+      "bytes": 210,
+      "sha256": "d590903a4fb4e2b85f1c2e5643acabd7ce3c96f78caea21464256b5baad61aa3"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/private-archive.safe.json",
+      "bytes": 792,
+      "sha256": "02de4bbe23803032a4ac57a6859c4c9578da664e75271b1f85d8c86fb2b8c123"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/private-output-manifest.json",
+      "bytes": 4260,
+      "sha256": "fbd8aa6085f08b4546b03c1c703b7b885198ea87b9b345cfca454ecc11c9f881"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/summary.json",
+      "bytes": 3935,
+      "sha256": "ce30612dd5784f08dea323921e01ce933789e720943319d44a640ae82832cc49"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/synthetic-causality.json",
+      "bytes": 1456,
+      "sha256": "f58f966d446416dd2cbaec94348e498818f3cda41e0801873558712fc920144a"
+    },
+    {
+      "path": "research/public-strategies/M1463/artifacts/20261003-catalog-v1/synthetic-prehistory.json",
+      "bytes": 3417,
+      "sha256": "56b061e6a9efe169c27a02a33c65cc5b8bd896ec73ce7ae6d3b21dd3686afe13"
+    },
+    {
+      "path": "research/public-strategies/M1463/decision-log-results-v1.md",
+      "bytes": 854,
+      "sha256": "7b07ea79278a069e733557a230f6e6bdb48521862b73255a559e24f2ef755399"
+    },
+    {
+      "path": "research/public-strategies/M1463/decision-log.md",
+      "bytes": 912,
+      "sha256": "48c489246e7164847363f0e2e31598cabe4e7b6c5cd39748fc6203f932f0c96e"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/REMOTE-CORE-RESTORE.md",
+      "bytes": 1517,
+      "sha256": "f75380571a06293e38261e7e9396e0592c648699fb174597f7628e30a6afa9b9"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/coordinator-acceptance.safe.json",
+      "bytes": 3065,
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/prehistory-authorization.safe.json",
+      "bytes": 2309,
+      "sha256": "89bb60bdf22a52adc00dece93b454aeb88d052ddb055d5ce940e4b7b1b5164e9"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/prehistory-independent-review.safe.json",
+      "bytes": 2513,
+      "sha256": "82ea37d40a5919b83a43536463ea599c0674d7ba6359914dff48eab39cd46899"
+    },
+    {
+      "path": "research/public-strategies/M1463/recovery/control-release-v1/release.json",
+      "bytes": 2039,
+      "sha256": "51823b3b465f2f8ab75b37e56277c36264a21e624ddf9a146c76fcbcf666fbaf"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/README.md",
+      "bytes": 926,
+      "sha256": "950f07bc8a64c251213acb46459f1b858f7449864e3643b6c9f621c76b9eb287"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/build_private_archive_v1.py",
+      "bytes": 3496,
+      "sha256": "b9d40566e6a47c3d6de7d6f9bc1e235c856b01214c5362fb267e9242d59a1451"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/check_causality.py",
+      "bytes": 3747,
+      "sha256": "52522cfe510ee12f2caf2a65e82614678c1421e65a00718ae27076d4730597e1"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/check_synthetic.py",
+      "bytes": 9430,
+      "sha256": "687db5413b94960240bb76a86baa479840a482b5b750dbd01eaf41be51390980"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/kernel_loader.py",
+      "bytes": 725,
+      "sha256": "79c145afa650c8e2ab03b76632ed0b50c8f025123ac3835be8d01d05ff124ded"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/oracle.py",
+      "bytes": 2180,
+      "sha256": "440aefbf2d33fc83be0f148f0ef8531a70bc1e808c97abd6c58f7da76d50bb76"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/postprocess_v1.py",
+      "bytes": 5922,
+      "sha256": "220e0bae9149199ed1266bd048e305b069b35a2c71cde9cba95c43d9a910fad4"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/rebuild_input.py",
+      "bytes": 2176,
+      "sha256": "9057b3d800717797258a36aa351547095f95d0e8486559eac2013846c4c961ab"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/restore_run.py",
+      "bytes": 2643,
+      "sha256": "e5a67ffdb9e9f5c18771ebdb0528af069d7baa4f90eb6916daccbebcd5b491cb"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/run_replay.py",
+      "bytes": 3071,
+      "sha256": "06f338dc0978ea299a7dde52aa028cda462abd47d3cfb7909eed0ea107d6eda4"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/signals.py",
+      "bytes": 1789,
+      "sha256": "d6553d44f9fdc92b924b87f4b3e9bef75a1431ade6d1b567dabbf1bbcc0ca716"
+    },
+    {
+      "path": "research/public-strategies/M1463/scripts/verify_replay.py",
+      "bytes": 928,
+      "sha256": "ebcd4fd311902e41fba4905b2129ec044c34865f859bcea9fc9becb3313b7fa4"
+    },
+    {
+      "path": "research/public-strategies/M1463/source/catalog-original-fields.json",
+      "bytes": 2787,
+      "sha256": "44c44e534e31eb94efe6fcd4bf0bff5db257bf9647eebb8fb5e687a762c5b252"
+    },
+    {
+      "path": "research/public-strategies/M1463/source/root-frozen-rules.json",
+      "bytes": 10228,
+      "sha256": "3dbbcee4df9a25f201b76edec58b9b2fb3f7fa8ce3beecd90e1f39e296f49f5f"
+    },
+    {
+      "path": "research/public-strategies/M1463/specs/C0-v1.json",
+      "bytes": 5233,
+      "sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80"
+    },
+    {
+      "path": "research/public-strategies/M1463/specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "path": "research/public-strategies/M1463/specs/kernel-pin.json",
+      "bytes": 347,
+      "sha256": "3487c12dd67ae13e699974ddd42c50d3d7337c767646c1f6d7121859ddbcea33"
+    },
+    {
+      "path": "research/public-strategies/M1463/specs/protocol-v1.json",
+      "bytes": 19420,
+      "sha256": "169f2ea4f9d29455356c427f6c051a6ca152dab0565a7da1329eabff2e8d3f34"
+    }
+  ],
+  "original_C0_sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80",
+  "actual_strategy_configurations": 4,
+  "new_controls": 0,
+  "strict_reproductions": 0,
+  "public_curve_points": 25,
+  "private_full_curves_included": false,
+  "private_raw_or_original_curation_included": false,
+  "self_excluded": true,
+  "remote_core_restoration_this_id": "PENDING_COORDINATOR",
+  "Library_private_backup": "NOT_UPLOADED"
+}

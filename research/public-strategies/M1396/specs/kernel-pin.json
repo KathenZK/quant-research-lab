@@ -1,0 +1,8 @@
+{
+  "path": "research/_shared-kernels/catalog-daily-cash/v1",
+  "files": {
+    "engine.py": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+    "verify_account.py": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+  },
+  "manifest_sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+}

@@ -1,0 +1,85 @@
+{
+  "status": "PASS_INDEPENDENT_M1258_PUBLIC_DISPLAY_V2_REVIEW",
+  "source_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+  "publication_manifest_sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81",
+  "source_objects": 37,
+  "source_bytes": 157863,
+  "C0_public_payloads_verified": 19,
+  "independent_fresh_export_files": 5,
+  "fresh_vs_first_vs_rebuild_byte_equal": true,
+  "curve_points": 25,
+  "metrics_observations_only": 731,
+  "original_strategy_cases": 4,
+  "original_new_fullcash_control": 1,
+  "projection_new_trials": 0,
+  "projection_new_controls": 0,
+  "fullcash": "100%fee-inclusive explicit; not M1358 95%control",
+  "profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "schema": "quantgraph-public-derived-display-manifest/v2",
+  "independent_selected_guard_tests": [
+    {
+      "test": "double_normalization",
+      "status": "REJECTED",
+      "error": "NAV rescaled/rebased"
+    },
+    {
+      "test": "absolute_unit_label",
+      "status": "REJECTED",
+      "error": "Curve unit mismatch"
+    },
+    {
+      "test": "731displaypoints",
+      "status": "REJECTED",
+      "error": "Sample/full observation count mismatch"
+    },
+    {
+      "test": "source_hash_mismatch",
+      "status": "REJECTED",
+      "error": "Selected source reference mismatch"
+    },
+    {
+      "test": "wrong_profile",
+      "status": "REJECTED",
+      "error": "Display profile mismatch"
+    },
+    {
+      "test": "existing_output_refused",
+      "status": "REJECTED",
+      "error": "Immutable output directory already exists"
+    }
+  ],
+  "guard_tests_run_by_reviewer": 6,
+  "worker21guards": "Not rerun or claimed as reviewer work",
+  "private_NAV_read": false,
+  "site_operations": 0,
+  "repository_edits": 0,
+  "global_edits": 0,
+  "limits": [
+    "Offlinecandidate preparation only, notGraph20activation or sourceauthorverification.",
+    "Original25points preservedexact; no claim to publish/recompute full731NAV.",
+    "37Gitpublicobjects includeopaqueprivate-output inventory; no referencedprivatepayload read."
+  ],
+  "files": {
+    "DELIVERY-MANIFEST.json": {
+      "bytes": 15575,
+      "sha256": "635eeba8b4446df5e8bd299f40a8c037b6538e30b32cd81873094c35c0240de8"
+    },
+    "research/public-strategies/M1258/artifacts/20261003-public-display-prep/base-nav-sampled.json": {
+      "bytes": 2594,
+      "sha256": "3e2cb5012893d5e657a9054f69ffb0709246d2421071a2b0cd00b08ba793806d"
+    },
+    "research/public-strategies/M1258/artifacts/20261003-public-display-prep/graph-detail.json": {
+      "bytes": 18786,
+      "sha256": "2a8b2b20fac61ad245c10ddfc138d6bb553c4e7beaa7ff6b0495e2c4c85ec93d"
+    },
+    "research/public-strategies/M1258/artifacts/20261003-public-display-prep/graph-record.json": {
+      "bytes": 49063,
+      "sha256": "6301427a9b8e61c51b3a4a82ae3d4ca3e634e2c976241803eb754079091ff3e2"
+    },
+    "research/public-strategies/M1258/artifacts/20261003-public-display-prep/public-display-manifest.json": {
+      "bytes": 8555,
+      "sha256": "4df8a5cd4f04fd2178439e83d73e2f994c03ea4ace1946eab455779909b616e6"
+    }
+  },
+  "exporter_sha256": "35d95b7513561f1127a418233cea718d51a1cc7cba8f71627dee04146e57a4ab"
+}

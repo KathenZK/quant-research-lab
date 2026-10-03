@@ -1,0 +1,65 @@
+{
+  "status": "ROOT_APPROVED_HISTORY_AFTER_INDEPENDENT_QA",
+  "id": "M1463",
+  "C0_sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80",
+  "control_independently_accepted": true,
+  "release_commit": "2d4da814b23fc861a73850a5691a1104d6e7766d",
+  "release_sha256": "51823b3b465f2f8ab75b37e56277c36264a21e624ddf9a146c76fcbcf666fbaf",
+  "independent_review_sha256": "82ea37d40a5919b83a43536463ea599c0674d7ba6359914dff48eab39cd46899",
+  "root_authorization": "Explicit parent instruction batch016; four fixed cases perID, zero newcontrols",
+  "recorded_at_utc": "2026-10-03T17:20:15.988809+00:00",
+  "control": {
+    "remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "identity": {
+      "id": "M1258",
+      "case": "buyhold",
+      "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+      "initial_cash": "100000",
+      "fraction": "1",
+      "entry_fee_inclusive": true,
+      "fee_bps": 8,
+      "slippage_bps": 2,
+      "evaluation_start_ms": 1672531200000,
+      "evaluation_end_ms": 1735689600000,
+      "observations": 731,
+      "Decimal_precision": 50
+    },
+    "files": [
+      {
+        "path": "buyhold-decisions.csv",
+        "bytes": 104465,
+        "sha256": "19504c9f22b4beb590b2557fba407f386a349fd6233b683ea6dac0ab5a7bf27b"
+      },
+      {
+        "path": "buyhold-fills.csv",
+        "bytes": 409,
+        "sha256": "d1d455ce41ae73763a76212d0a6fc8226506d4bd329905f1d1e3e5999a6eb74f"
+      },
+      {
+        "path": "buyhold-monthly.csv",
+        "bytes": 3027,
+        "sha256": "acf6f1d7769b498bcf7ec657f39ffe045798a0413617274286e159467a40b17d"
+      },
+      {
+        "path": "buyhold-nav.csv",
+        "bytes": 127882,
+        "sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664"
+      },
+      {
+        "path": "buyhold-pending.csv",
+        "bytes": 130,
+        "sha256": "dd7074fbd9d99e5f3f560d891bfe30f78c6aed5d051215b1fb14296259687a5e"
+      },
+      {
+        "path": "buyhold-roundtrips.csv",
+        "bytes": 112,
+        "sha256": "36a3c6e8fc36325190f5a98f1446d35515fc81d4196da29d8d316e6fbad1463c"
+      },
+      {
+        "path": "buyhold-summary.json",
+        "bytes": 766,
+        "sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "fields": {
+    "id": "M1463",
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-bollinger-bands-trading-strategy-performance-backtest/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "可回测": "高",
+    "名称": "比特币布林：收盘上破上轨(20日,2σ)做多，收盘回到中轨离场（Key Takeaways；正式Trading Rules会员墙）",
+    "市场": "加密（Bitcoin；日线布林）",
+    "提出日期": "2026-01-25",
+    "标题": "比特币布林：收盘上破上轨(20日,2σ)做多，收盘回到中轨离场（Key Takeaways；正式Trading Rules会员墙）",
+    "规则": "本条只写源文件已印出的规则。本条只写QuantifiedStrategies《Bitcoin Bollinger Bands Trading Strategy》免费Key Takeaways与正文已印句，不是会员墙正式Trading Rules小节。标的比特币；布林用20日SMA与±2标准差。Key Takeaways写：上轨突破触发做多入场；中轨交叉作为离场；只强调多头侧更有效。正式Trading Rules与做空规则段会员墙，本条不补会员正文，也不把下轨均值回归写成默认。页面写回测约2015至今；未印仓位%、手续费。提出日期取datetime首条。 不是M0184四小时布林下轨均值回归，也不是M0819 SPY布林+RSI均值回归：本条是比特币布林(20,2)收盘上破上轨做多、收盘回到中轨离场（只做多；Key Takeaways；正式Trading Rules会员墙不补）。 计入加密。 提出日期按源文件原样保留2026-01-25。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "redacted_fields": {
+    "别名来源": {
+      "reason": "Internal catalog curation retained privately, not redistributed",
+      "utf8_bytes": 335,
+      "sha256": "9faca0d8ca7d7ed066b49ac634039b1d59e51ef7a9a7a6bc09e11573608c683b",
+      "public_alias_url": "https://www.quantifiedstrategies.com/bitcoin-bollinger-bands-trading-strategy/"
+    }
+  },
+  "original_field_count": 11,
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "source_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0015-v2/metadata/source-records/M1463.json",
+  "blob_sha256": "2816331871a4d8a182fe9a9be69e11c0b5c34bd66ae44666c30c4f292790bef2",
+  "provenance": {
+    "csv_row_ordinal": 1463,
+    "csv_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "row_sha256": "e725460f620869492fa765bc86b3e1d4b9b5d8070ae54dd1fd7a9d9e5ff9d943",
+    "rule_sha256": "711b059c95104236cdccac7f27de4bca5178c84695a073b52354ea080b1737d1"
+  },
+  "review_scope": "Explicit per-field public source/rule review; existing source record all_fields_reviewed flag is unchanged. Whole original11 binding retained in private evidence; publication excludes internal curation."
+}

@@ -1,0 +1,168 @@
+{
+  "status": "ROOT_FROZEN_CATALOG_HYPOTHESIS_PRE_CODE_C0",
+  "source_layer": "Fixed catalog rules, authorpage/runtime notverified; noauthorpage fetched in this preflight. This separately authorized catalog hypothesis doesnotrequireauthorfulltext.",
+  "classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY; strict0",
+  "authorization_boundary": "Assigned parent single dot executor for next batch; implementation/C0/independentQA before historical execution. Publicscope review and any specific approval blockers must be respected; this doesnotgrant any bypass or unrelated publication.",
+  "instrument": "Bitcoin retained; Binance spot BTCUSDT quote/venue is explicit research instance, not original author assertion.",
+  "input_period": "2022-12-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; do not change input",
+  "evaluation": "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+  "monthly_reporting": "Month return=end equity/previous month end equity-1; first denominator100000. Continuous account and indicators, no monthly resetting or selective omission of cash/zero-trade months.",
+  "capital": {
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "fraction": "1",
+    "entry_fee_inclusive": true,
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "buy_order_of_operations": [
+      "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+      "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+      "fee=cash_before-notional",
+      "quantity=notional/fill",
+      "cash_after=Decimal(0)"
+    ],
+    "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+    "sell_order_of_operations": [
+      "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+      "notional=quantity_before*fill",
+      "fee=notional*Decimal(fee_bps)/10000",
+      "cash_after=cash_before+notional-fee",
+      "quantity_after=Decimal(0)"
+    ],
+    "funding_interest_borrow": 0,
+    "leverage": 1,
+    "max_positions": 1,
+    "fractional_fills": true,
+    "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+  },
+  "cost_cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "execution": {
+    "at_open": "Execute earliest-due pending action if due_index<=currentindex and actual holdings permit. Stale is logged/discarded; no sameopen roundtrip or reentry. No out-of-window fill.",
+    "at_close_sequence": [
+      "Update completed-bar indicators. Compute raw entry and exit independent of holdings.",
+      "Raw opposite event cancels pending opposite intent before position gating; if both events arise exit/cancel-buy has priority.",
+      "Schedule buy only if flat and raw entry; sell only if long and raw exit.",
+      "Same-direction repeat retains original earliest due; absent event does not cancel an existing intent.",
+      "All calendar labels refer to UTC bar-open date; signal close knowledge becomes actionable at following bar open or declared lag2.",
+      "No warmup intents, equality neutral except explicit previous-side inclusive crossing condition."
+    ],
+    "lag2": "Raw opposite event at t+1 cancels pending intent due t+2. Absence of event retains original intent/due, no repeated deferral."
+  },
+  "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+  "benchmark": {
+    "new_control_configurations": 0,
+    "required_existing_control": "Actually completed/rootaccepted M1258 fullcash feeinclusive100000USDT Decimal50 daily48e4 initial2023-01-01open/end2024-12-31close basefee8bps+slip2bps,731bars and identicalstatistics",
+    "status": "ACTUAL_M1258_CONTROL_AND_REMOTE_CORE_RESTORE_VERIFIED",
+    "required_pins": {
+      "control_output_manifest_sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7",
+      "control_summary_sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142",
+      "control_daily_nav_sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664",
+      "remote_public_core_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+      "remote_recovery_receipt_sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b",
+      "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "receipt_and_reference_delivery_commit": "2d4da814b23fc861a73850a5691a1104d6e7766d",
+      "independent_remote_recovery_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    "gate_before_history": "Verify the exact publiccontrolcard and original7outputhashes/data/cost/valuation/statistics against the assignedrecipe; reuseonly, no newcontrolrun. Root verified remote recovery; still require actualcodeC0 andindependentQA for these strategies.",
+    "QA_recovery_runs_count_as_new_controls": false,
+    "control_reference_path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/buyhold-reference-v1.json",
+    "accepted_recovery_path": "research/public-strategies/M1258/recovery/remote-core-v1/M1258-remote-core-recovery.safe.json"
+  },
+  "precision": "Frozen: Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+  "QA_gate": "Recheck exact inputhash/grid/uniqueness/close_time/finite positiveOHLC/nonnegativevolume/trades/OHLC bounds; reject any failure, no imputation/drop/forwardfill. Existing QA accepted input may have low-activity bars; do not silently add volume filter. Known intradayhaltmetadata retained; dailyOHLC does not prove continuous executable liquidity; no daily-midnightoverride for2023-03-24.",
+  "PIT": "UNKNOWN/DIAGNOSTIC_ONLY; no as-of/finality/trusted/live-readiness claim",
+  "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+  "id": "M1270",
+  "timeframe": "1d; catalog day-based rules",
+  "expected_evaluation_bars": 731,
+  "known_halt": "Known2023-03-24 halt is intraday; no daily-midnight override. No general tradability claim.",
+  "input": {
+    "input_name": "input.csv",
+    "bytes": 128196,
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "evaluation_rows": 731,
+    "warmup_rows": 31,
+    "manifest_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+    "manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "rebuild_script": "research/public-strategies/M0216/scripts/rebuild_inputs.py",
+    "rebuild_script_sha256": "52b48a659791d6d8a9c817fce761f423831f45b46deb4978107941cfc4c950a1",
+    "fetch_dependency": "research/public-strategies/M0216/scripts/fetch_inputs.py",
+    "fetch_dependency_sha256": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+    "reacquire_command_template": "In an isolated repository checkout without retained M0216 input.csv: python research/public-strategies/M0216/scripts/rebuild_inputs.py --raw-dir NEW_PRIVATE_RAW_DIRECTORY --staging-dir NEW_PRIVATE_STAGING_DIRECTORY",
+    "raw_validation": "50 fixed ZIP/CHECKSUM objects,25 provider checksum andZIPCRC; canonical byte rebuild; no current finality or PIT guarantee."
+  },
+  "statistics": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "total_return": "E_last/100000-1",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+  },
+  "capital_provenance": "Catalog position fraction unspecified; rootselects100%fee-inclusivecash researchhypothesis. Catalog literalclose executions replaced by rawnextopen/declaredlag, not authorframeworkreplication.",
+  "cold_start": "Noindicatorwarmuprequired;31pre-evalbars ignoredfororders. Keep731evalbars, allcashlag2 andall24months.",
+  "source_original_binding": {
+    "checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+    "record_sha256": "4a35f01c6b8f28533434430d93a34ece87a9d615312994e5beaba77519768d0a",
+    "git_blob_sha1": "02efe41e4cc19e8ec41a8ef111521d85c3854e19",
+    "public_boundary": "Exact original11 fields separately reviewed and preserved in catalog-original-fields.json; private binding remains retained. No privatepersonalannotations or sourcefulltext redistribution."
+  },
+  "source_url": "https://www.quantifiedstrategies.com/best-day-to-buy-bitcoin/",
+  "source_row_sha256": "7c9e3cb5cf58eaab674edee24c920c1cadcba7b2934ccdc83e506b8989234917",
+  "source_rule_sha256": "516ed1c9548309d6ebca4102a0772bf0e60bea37dfb025de6ff50a39a3d58963",
+  "frozen_at_utc": "2026-10-03T17:22:47.305997+00:00",
+  "required_private_logs": [
+    "Full raw feature/decision flags/readiness",
+    "Pendingintent before/aftercancel/schedule/execute;createdindex,dueindex,reason,cancelreason",
+    "Full fillledger withsignalavailability/time/fee/notional/cash/quantity",
+    "EverydailyNAVbar inclcash/zeroactivity;24monthreport",
+    "Residualinventory/unexecutedterminalintent",
+    "Frozen inputs/code/environment and deterministichashmanifest"
+  ],
+  "indicator": "No priceindicator; rawcalendar events fromUTCdailybar-open date.",
+  "entry": "Rawentry=UTCweekdaySunday independentlyholdings; flat schedulesbuy.",
+  "exit": "Rawexit=UTCweekdayMonday independentlyholdings; firstcancelpendingbuy evenwhileflat, then iflong schedulesell.",
+  "calendar_execution": {
+    "lag1": "Sundayclose signal->Mondayopen buy;Mondayclose signal->Tuesdayopen sell. Marketproxy, notliteralclose execution.",
+    "lag2": "Sundayclose schedulesTuesdayopenbuy;Mondayclose rawsellcancels it whileflat; positiongatedsell notscheduled. Hencezeroentries/exits underunbrokenweeklycalendar is expected before performance.",
+    "no_paired_queue": "Do notscheduleMondaypendingexitwhileflat andretainTuesdaybuy; no pairedcalendarqueue orpolicychange to manufacturetrades.",
+    "clock": "Dailyopen-date labelsSunday/Monday; exclusivefollowingmidnightclosetimestamp doesnotrelabelweekday.",
+    "warmup": "Noimportedwarmuporder. Firstevaluation2023-01-01Sundayclosecan scheduleJan2openbuy inlag1;lag2canceledJan2close."
+  },
+  "economic_hypothesis": "UTCweekdayseasonality; catalogclaimMondaybest isreported, notindependentlyverified or expected to persist.",
+  "source_original_fields": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1270-catalog-original-fields.json"
+}

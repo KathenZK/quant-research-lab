@@ -1,0 +1,1537 @@
+{
+  "audit": {
+    "PIT": "NOT_PROVEN",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "strict_reproductions": 0
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "allocation": {
+      "Decimal_precision": 50,
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "currency": "USDT",
+      "entry_fee_inclusive": true,
+      "fraction": "1",
+      "fractional_fills": true,
+      "funding_interest_borrow": 0,
+      "initial_cash": "100000",
+      "leverage": 1,
+      "max_positions": 1,
+      "rounding": "ROUND_HALF_EVEN",
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "configuration": {
+      "delay_bars": 0,
+      "entry": "first evaluation open; fullcash fee-inclusive; no exit",
+      "fee_bps_each_side": 8,
+      "name": "buyhold",
+      "new_controls": 1,
+      "slippage_bps_each_side": 2
+    },
+    "evidence_role": "summary",
+    "kind": "ACTUAL_ORIGINAL_NEW_CONTROL",
+    "name": "buyhold",
+    "new_controls_at_original_run": 1,
+    "result": {
+      "cagr": 1.3744318581300612,
+      "cancelled_intents": 0,
+      "case": "buyhold",
+      "closed_roundtrips": 0,
+      "delay_bars": 0,
+      "exposure_fraction": 1.0,
+      "fee_bps": 8,
+      "fills": 1,
+      "final_equity": 565129.9863331392,
+      "kind": "CONTROL",
+      "losing_roundtrips": 0,
+      "max_drawdown": -0.261513750538678,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 0,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 2.016493590663557,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": true,
+      "total_fees": "79.936051159072741806554756195043964828137490008",
+      "total_return": 4.651299863331392,
+      "win_rate": null,
+      "winning_roundtrips": 0
+    }
+  },
+  "catalog_fields": {
+    "id": "M1258",
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-rsi-trading-strategy/",
+    "作者或机构": "Oddmund Groette / QuantifiedStrategies.com",
+    "别名来源": "https://www.quantifiedstrategies.com/bitcoin-rsi-trading-strategy/",
+    "可回测": "高",
+    "名称": "比特币：5日RSI上穿50做多、下穿50离场（文中随机举例的动量设定）",
+    "市场": "加密（Bitcoin）",
+    "提出日期": "2026-01-25",
+    "标题": "比特币：5日RSI上穿50做多、下穿50离场（文中随机举例的动量设定）",
+    "规则": "本条只写源文件已印出的规则。本条只写同站《Bitcoin RSI Trading Strategy》免费正文里明确举出的一组动量规则：入场为五期 RSI 上破 50，离场为五期 RSI 下破 50，按收盘；文写假设每笔满仓。不是均值回归网格最优行（该段未把单一参数组写成默认规则），也不是 M1104 的 RSI(5) 与 ZigZag。页面未印手续费。提出日期取 datePublished。 不是M1104 RSI(5)上穿75/下穿25叠加ZigZag，也不是M0974 RSI(50)对SMA(25)金叉：本条是比特币五期RSI上穿50做多、下穿50离场、满仓假设。 计入加密。 提出日期按源文件原样保留2026-01-25。",
+    "页码或文件": "公开页/已印出规则"
+  },
+  "configuration_runs": 4,
+  "control_configurations": 1,
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "hypothesis": null,
+    "paper": null,
+    "status": "NOT_ESTABLISHED_IN_SELECTED_SOURCE_CARD"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "daily-rsi5-cross50-fullcash"
+  ],
+  "fidelity_class": "HYPOTHESIS",
+  "id": "M1258",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "daily-rsi5-cross50-fullcash",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "4df8a5cd4f04fd2178439e83d73e2f994c03ea4ace1946eab455779909b616e6",
+      "origin_run_id": "m1258-catalog-rsi5-20261003-v1",
+      "protocol_sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a",
+      "variant_id": "M1258-catalog-rsi5-v1-base"
+    }
+  ],
+  "limitations": [
+    "HYPOTHESIS，不是作者严格复现。",
+    "账户/因果检查不证明真实成交或未来获利。",
+    "原始行情及完整账户不入Git。",
+    "本地完整私有ZIP不是远端备份。",
+    "Only the original25 public points are retained;731 is the original metrics observation count, not display point count.",
+    "OriginalGraph HYPOTHESIS and research HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED stay separate from ADAPTED_EXECUTION_PROXY.",
+    "Original run executed4 strategy configurations plus1 new100%fee-inclusive buyhold; this display preparation executes0new trials or controls.",
+    "Original private-output inventory is not a display manifest and never authorizes reading privateNAV or ledgers."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "metric_conventions": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "total_return": "E_last/100000-1",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade"
+  },
+  "monthly": {
+    "base": [
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 29,
+        "end_equity_multiple": 1.3856132138369677,
+        "month": "2023-01",
+        "return_fraction": 0.3856132138369677,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 28,
+        "days_long": 14,
+        "end_equity_multiple": 1.3294862990533665,
+        "month": "2023-02",
+        "return_fraction": -0.04050691363441717,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 19,
+        "end_equity_multiple": 1.6913660712898557,
+        "month": "2023-03",
+        "return_fraction": 0.27219518733977044,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 4,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 1.6518067196738968,
+        "month": "2023-04",
+        "return_fraction": -0.023388994427321314,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.499912039169055,
+        "month": "2023-05",
+        "return_fraction": -0.0919566912373556,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 16,
+        "end_equity_multiple": 1.6574722012038006,
+        "month": "2023-06",
+        "return_fraction": 0.10504626799451064,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.5076322801059665,
+        "month": "2023-07",
+        "return_fraction": -0.09040267522375785,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 9,
+        "end_equity_multiple": 1.3444734797819413,
+        "month": "2023-08",
+        "return_fraction": -0.10822188041274708,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 12,
+        "end_equity_multiple": 1.3530987583792269,
+        "month": "2023-09",
+        "return_fraction": 0.00641535792783691,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 25,
+        "end_equity_multiple": 1.7627564733828842,
+        "month": "2023-10",
+        "return_fraction": 0.3027552220167248,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 27,
+        "end_equity_multiple": 1.6910390688035561,
+        "month": "2023-11",
+        "return_fraction": -0.04068480567919642,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 21,
+        "end_equity_multiple": 1.7276370471229927,
+        "month": "2023-12",
+        "return_fraction": 0.02164230205830226,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 15,
+        "end_equity_multiple": 1.6446542824955235,
+        "month": "2024-01",
+        "return_fraction": -0.04803252208886079,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 29,
+        "days_long": 27,
+        "end_equity_multiple": 2.307362057798355,
+        "month": "2024-02",
+        "return_fraction": 0.40294655378713934,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 24,
+        "end_equity_multiple": 2.5137911189270246,
+        "month": "2024-03",
+        "return_fraction": 0.08946539639541468,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 13,
+        "end_equity_multiple": 2.18943546833797,
+        "month": "2024-04",
+        "return_fraction": -0.12903047041056495,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 20,
+        "end_equity_multiple": 2.0700042039585815,
+        "month": "2024-05",
+        "return_fraction": -0.05454888536634999,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 6,
+        "end_equity_multiple": 2.0064464520585528,
+        "month": "2024-06",
+        "return_fraction": -0.030704165614003905,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.192887094830433,
+        "month": "2024-07",
+        "return_fraction": 0.09292081659124166,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 12,
+        "end_equity_multiple": 1.8960631721034058,
+        "month": "2024-08",
+        "return_fraction": -0.13535759475568412,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 2.0256178457490557,
+        "month": "2024-09",
+        "return_fraction": 0.06832824747180126,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.144410116231989,
+        "month": "2024-10",
+        "return_fraction": 0.058644956516467235,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 24,
+        "end_equity_multiple": 2.847288293908507,
+        "month": "2024-11",
+        "return_fraction": 0.32777227282977367,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.750120765699299,
+        "month": "2024-12",
+        "return_fraction": -0.034126339934417146,
+        "sell_fills": 3
+      }
+    ],
+    "buyhold": [
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 1.396587201937684,
+        "month": "2023-01",
+        "return_fraction": 0.3965872019376837,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 28,
+        "days_long": 28,
+        "end_equity_multiple": 1.397580056620008,
+        "month": "2023-02",
+        "return_fraction": 0.0007109149224242199,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 1.7190976861340395,
+        "month": "2023-03",
+        "return_fraction": 0.23005310357076034,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 1.7654701598458784,
+        "month": "2023-04",
+        "return_fraction": 0.026974891587529543,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 1.6433043433807746,
+        "month": "2023-05",
+        "return_fraction": -0.06919732728632949,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 1.8402839342933466,
+        "month": "2023-06",
+        "return_fraction": 0.11986799140768127,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 1.7654121829301221,
+        "month": "2023-07",
+        "return_fraction": -0.04068489104751903,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 1.5666316840718746,
+        "month": "2023-08",
+        "return_fraction": -0.11259721711465932,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 1.6283396559274224,
+        "month": "2023-09",
+        "return_fraction": 0.039388946670069286,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 2.0919864865652613,
+        "month": "2023-10",
+        "return_fraction": 0.2847359449547817,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 2.2782488030298254,
+        "month": "2023-11",
+        "return_fraction": 0.08903609925816482,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 2.5536162036757504,
+        "month": "2023-12",
+        "return_fraction": 0.12086801067544341,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 2.571517784267875,
+        "month": "2024-01",
+        "return_fraction": 0.007010286262421488,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 29,
+        "days_long": 29,
+        "end_equity_multiple": 3.6918600807826163,
+        "month": "2024-02",
+        "return_fraction": 0.43567355565993426,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 4.304786598820855,
+        "month": "2024-03",
+        "return_fraction": 0.16602105838970682,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 3.6641410757891153,
+        "month": "2024-04",
+        "return_fraction": -0.14882166823489504,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 4.07891819785416,
+        "month": "2024-05",
+        "return_fraction": 0.11319900448312237,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 3.790966182931914,
+        "month": "2024-06",
+        "return_fraction": -0.07059519239040682,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 3.9030542828009454,
+        "month": "2024-07",
+        "return_fraction": 0.02956715899331565,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 3.5615938021192073,
+        "month": "2024-08",
+        "return_fraction": -0.08748545522064739,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 3.824519115073379,
+        "month": "2024-09",
+        "return_fraction": 0.07382237491477175,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 4.245118689688477,
+        "month": "2024-10",
+        "return_fraction": 0.10997449926643348,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 5.82233116088585,
+        "month": "2024-11",
+        "return_fraction": 0.37153554152171775,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 0,
+        "days": 31,
+        "days_long": 31,
+        "end_equity_multiple": 5.651299863331392,
+        "month": "2024-12",
+        "return_fraction": -0.029375054909867946,
+        "sell_fills": 0
+      }
+    ],
+    "delay2": [
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 28,
+        "end_equity_multiple": 1.3853747397790621,
+        "month": "2023-01",
+        "return_fraction": 0.3853747397790622,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 1,
+        "days": 28,
+        "days_long": 14,
+        "end_equity_multiple": 1.340276160688208,
+        "month": "2023-02",
+        "return_fraction": -0.03255334300237511,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 1.5806609660262003,
+        "month": "2023-03",
+        "return_fraction": 0.17935468255628664,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 22,
+        "end_equity_multiple": 1.5149278705998643,
+        "month": "2023-04",
+        "return_fraction": -0.04158582823209068,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 8,
+        "end_equity_multiple": 1.4144360144370611,
+        "month": "2023-05",
+        "return_fraction": -0.06633441638578584,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 1,
+        "days": 30,
+        "days_long": 14,
+        "end_equity_multiple": 1.5987574319629747,
+        "month": "2023-06",
+        "return_fraction": 0.13031442613490904,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 11,
+        "end_equity_multiple": 1.5700694174822882,
+        "month": "2023-07",
+        "return_fraction": -0.017943944407791027,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 8,
+        "end_equity_multiple": 1.4446166306617256,
+        "month": "2023-08",
+        "return_fraction": -0.07990270074920283,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 11,
+        "end_equity_multiple": 1.4538676746543937,
+        "month": "2023-09",
+        "return_fraction": 0.006403805546963981,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 25,
+        "end_equity_multiple": 1.7914616192323551,
+        "month": "2023-10",
+        "return_fraction": 0.232204037866247,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 0,
+        "days": 30,
+        "days_long": 30,
+        "end_equity_multiple": 1.9509663737795195,
+        "month": "2023-11",
+        "return_fraction": 0.08903609925816482,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 24,
+        "end_equity_multiple": 2.0878427676645104,
+        "month": "2023-12",
+        "return_fraction": 0.07015825373751892,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 15,
+        "end_equity_multiple": 2.0060255765584745,
+        "month": "2024-01",
+        "return_fraction": -0.03918742942389194,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 0,
+        "days": 29,
+        "days_long": 29,
+        "end_equity_multiple": 2.879997872242474,
+        "month": "2024-02",
+        "return_fraction": 0.43567355565993426,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 23,
+        "end_equity_multiple": 3.280134967242481,
+        "month": "2024-03",
+        "return_fraction": 0.138936593966455,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 13,
+        "end_equity_multiple": 2.764642787339289,
+        "month": "2024-04",
+        "return_fraction": -0.15715578323795387,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 17,
+        "end_equity_multiple": 2.735006264732614,
+        "month": "2024-05",
+        "return_fraction": -0.010719837927125902,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 6,
+        "end_equity_multiple": 2.627572769020883,
+        "month": "2024-06",
+        "return_fraction": -0.03928089565902122,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 19,
+        "end_equity_multiple": 2.665580174258478,
+        "month": "2024-07",
+        "return_fraction": 0.014464834498858834,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 9,
+        "end_equity_multiple": 2.5298058511746806,
+        "month": "2024-08",
+        "return_fraction": -0.05093612429855649,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 1,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 2.77684890429889,
+        "month": "2024-09",
+        "return_fraction": 0.09765296930177417,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.8321682171076965,
+        "month": "2024-10",
+        "return_fraction": 0.019921614288471164,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 24,
+        "end_equity_multiple": 3.41503444346429,
+        "month": "2024-11",
+        "return_fraction": 0.20580212108722692,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 19,
+        "end_equity_multiple": 3.146760196218083,
+        "month": "2024-12",
+        "return_fraction": -0.0785568203447059,
+        "sell_fills": 3
+      }
+    ],
+    "fee0": [
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 29,
+        "end_equity_multiple": 1.386721704408037,
+        "month": "2023-01",
+        "return_fraction": 0.38672170440803727,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 28,
+        "days_long": 14,
+        "end_equity_multiple": 1.3358831748734583,
+        "month": "2023-02",
+        "return_fraction": -0.036660946008832226,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 19,
+        "end_equity_multiple": 1.7063152321201498,
+        "month": "2023-03",
+        "return_fraction": 0.2772937515900526,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 4,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 1.677105437779227,
+        "month": "2023-04",
+        "return_fraction": -0.017118638919157398,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.5326620882453454,
+        "month": "2023-05",
+        "return_fraction": -0.0861265763499932,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 16,
+        "end_equity_multiple": 1.70181164480159,
+        "month": "2023-06",
+        "return_fraction": 0.11036324174358214,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.5566567313992608,
+        "month": "2023-07",
+        "return_fraction": -0.08529434725971255,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 9,
+        "end_equity_multiple": 1.395987652778509,
+        "month": "2023-08",
+        "return_fraction": -0.10321419962404188,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 12,
+        "end_equity_multiple": 1.411703353938174,
+        "month": "2023-09",
+        "return_fraction": 0.011257765158871766,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 25,
+        "end_equity_multiple": 1.8420488384852942,
+        "month": "2023-10",
+        "return_fraction": 0.3048412992337251,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 27,
+        "end_equity_multiple": 1.7756079370325382,
+        "month": "2023-11",
+        "return_fraction": -0.03606902274501572,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 21,
+        "end_equity_multiple": 1.8271449612031359,
+        "month": "2023-12",
+        "return_fraction": 0.029025002139114305,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 15,
+        "end_equity_multiple": 1.7463534871060389,
+        "month": "2024-01",
+        "return_fraction": -0.04421733130790974,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 29,
+        "days_long": 27,
+        "end_equity_multiple": 2.457893295647173,
+        "month": "2024-02",
+        "return_fraction": 0.4074431744745207,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 24,
+        "end_equity_multiple": 2.686372347412665,
+        "month": "2024-03",
+        "return_fraction": 0.09295727042753202,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 13,
+        "end_equity_multiple": 2.35288856267264,
+        "month": "2024-04",
+        "return_fraction": -0.12413907739231089,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 20,
+        "end_equity_multiple": 2.2406148953936253,
+        "month": "2024-05",
+        "return_fraction": -0.047717375595333456,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 6,
+        "end_equity_multiple": 2.1805240566737796,
+        "month": "2024-06",
+        "return_fraction": -0.02681890531183379,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.394606705458521,
+        "month": "2024-07",
+        "return_fraction": 0.0981794482521363,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 12,
+        "end_equity_multiple": 2.087108765342003,
+        "month": "2024-08",
+        "return_fraction": -0.1284127115386316,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 2.2350742836060786,
+        "month": "2024-09",
+        "return_fraction": 0.07089497237573511,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.381342044083052,
+        "month": "2024-10",
+        "return_fraction": 0.06544201306856952,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 24,
+        "end_equity_multiple": 3.1720141623322924,
+        "month": "2024-11",
+        "return_fraction": 0.33202795046340905,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 3.0760455182586735,
+        "month": "2024-12",
+        "return_fraction": -0.030254796845880397,
+        "sell_fills": 3
+      }
+    ],
+    "fee20": [
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 29,
+        "end_equity_multiple": 1.3839537968144087,
+        "month": "2023-01",
+        "return_fraction": 0.3839537968144085,
+        "sell_fills": 0
+      },
+      {
+        "buy_fills": 2,
+        "days": 28,
+        "days_long": 14,
+        "end_equity_multiple": 1.3199483556614275,
+        "month": "2023-02",
+        "return_fraction": -0.04624824997793213,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 19,
+        "end_equity_multiple": 1.669189503160108,
+        "month": "2023-03",
+        "return_fraction": 0.2645869787259028,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 4,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 1.6145742555356721,
+        "month": "2023-04",
+        "return_fraction": -0.03271962082258386,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.4520960704658155,
+        "month": "2023-05",
+        "return_fraction": -0.10063221590012958,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 16,
+        "end_equity_multiple": 1.5931214519609942,
+        "month": "2023-06",
+        "return_fraction": 0.09711849261456891,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 10,
+        "end_equity_multiple": 1.4369751211897257,
+        "month": "2023-07",
+        "return_fraction": -0.09801282292637871,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 9,
+        "end_equity_multiple": 1.2707458788526342,
+        "month": "2023-08",
+        "return_fraction": -0.11567997238495266,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 12,
+        "end_equity_multiple": 1.2697231522979977,
+        "month": "2023-09",
+        "return_fraction": -0.0008048238217069865,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 1,
+        "days": 31,
+        "days_long": 25,
+        "end_equity_multiple": 1.6501732867227916,
+        "month": "2023-10",
+        "return_fraction": 0.29963235193139487,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 27,
+        "end_equity_multiple": 1.5716793562665576,
+        "month": "2023-11",
+        "return_fraction": -0.047567083461956434,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 21,
+        "end_equity_multiple": 1.5884432227792369,
+        "month": "2023-12",
+        "return_fraction": 0.010666212828869308,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 15,
+        "end_equity_multiple": 1.503103081598285,
+        "month": "2024-01",
+        "return_fraction": -0.05372564782745946,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 29,
+        "days_long": 27,
+        "end_equity_multiple": 2.0986754098239717,
+        "month": "2024-02",
+        "return_fraction": 0.3962285325051698,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 24,
+        "end_equity_multiple": 2.275485627841166,
+        "month": "2024-03",
+        "return_fraction": 0.08424848225196672,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 3,
+        "days": 30,
+        "days_long": 13,
+        "end_equity_multiple": 1.9652972554982102,
+        "month": "2024-04",
+        "return_fraction": -0.13631743859320372,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 20,
+        "end_equity_multiple": 1.8381361036801993,
+        "month": "2024-05",
+        "return_fraction": -0.06470326636963376,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 6,
+        "end_equity_multiple": 1.771036491381406,
+        "month": "2024-06",
+        "return_fraction": -0.03650415884027881,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 3,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 1.9217163311525705,
+        "month": "2024-07",
+        "return_fraction": 0.08508003110293583,
+        "sell_fills": 3
+      },
+      {
+        "buy_fills": 5,
+        "days": 31,
+        "days_long": 12,
+        "end_equity_multiple": 1.641777378524129,
+        "month": "2024-08",
+        "return_fraction": -0.1456713189612876,
+        "sell_fills": 5
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 20,
+        "end_equity_multiple": 1.7476571787969573,
+        "month": "2024-09",
+        "return_fraction": 0.06449096062464256,
+        "sell_fills": 1
+      },
+      {
+        "buy_fills": 4,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 1.8324719789439503,
+        "month": "2024-10",
+        "return_fraction": 0.04853057062677329,
+        "sell_fills": 4
+      },
+      {
+        "buy_fills": 2,
+        "days": 30,
+        "days_long": 24,
+        "end_equity_multiple": 2.4214545384603428,
+        "month": "2024-11",
+        "return_fraction": 0.32141422421958205,
+        "sell_fills": 2
+      },
+      {
+        "buy_fills": 2,
+        "days": 31,
+        "days_long": 18,
+        "end_equity_multiple": 2.3248243227409975,
+        "month": "2024-12",
+        "return_fraction": -0.03990585583357127,
+        "sell_fills": 3
+      }
+    ]
+  },
+  "name": "比特币 RSI5 跨50满仓（日线目录假设）",
+  "new_control_runs": 1,
+  "projection_profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "CATALOG_HYPOTHESIS / ADAPTED_EXECUTION_PROXY；1规则实现、4策略配置、1新买持，strict0",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "4df8a5cd4f04fd2178439e83d73e2f994c03ea4ace1946eab455779909b616e6",
+      "origin_run_id": "m1258-catalog-rsi5-20261003-v1",
+      "protocol_sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a",
+      "variant_id": "M1258-catalog-rsi5-v1-base"
+    }
+  ],
+  "research_fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "results": {
+    "base": {
+      "cagr": 0.6572016936773524,
+      "cancelled_intents": 0,
+      "case": "base",
+      "closed_roundtrips": 70,
+      "delay_bars": 1,
+      "exposure_fraction": 0.5841313269493844,
+      "fee_bps": 8,
+      "fills": 140,
+      "final_equity": 275012.0765699299,
+      "kind": "STRATEGY",
+      "losing_roundtrips": 46,
+      "max_drawdown": -0.31254387921099047,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 140,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.5246151975291922,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": false,
+      "total_fees": "20581.051769314872534953174780592090388600438305568",
+      "total_return": 1.750120765699299,
+      "win_rate": 0.34285714285714286,
+      "winning_roundtrips": 24
+    },
+    "buyhold": {
+      "cagr": 1.3744318581300612,
+      "cancelled_intents": 0,
+      "case": "buyhold",
+      "closed_roundtrips": 0,
+      "delay_bars": 0,
+      "exposure_fraction": 1.0,
+      "fee_bps": 8,
+      "fills": 1,
+      "final_equity": 565129.9863331392,
+      "kind": "CONTROL",
+      "losing_roundtrips": 0,
+      "max_drawdown": -0.261513750538678,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 0,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 2.016493590663557,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": true,
+      "total_fees": "79.936051159072741806554756195043964828137490008",
+      "total_return": 4.651299863331392,
+      "win_rate": null,
+      "winning_roundtrips": 0
+    },
+    "delay2": {
+      "cagr": 0.7725205870765328,
+      "cancelled_intents": 34,
+      "case": "delay2",
+      "closed_roundtrips": 36,
+      "delay_bars": 2,
+      "exposure_fraction": 0.5813953488372093,
+      "fee_bps": 8,
+      "fills": 72,
+      "final_equity": 314676.0196218083,
+      "kind": "STRATEGY",
+      "losing_roundtrips": 22,
+      "max_drawdown": -0.27086223872115456,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 106,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.7411723910584034,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": false,
+      "total_fees": "12912.566707176194918147456580273697513096203267766",
+      "total_return": 2.146760196218083,
+      "win_rate": 0.3888888888888889,
+      "winning_roundtrips": 14
+    },
+    "fee0": {
+      "cagr": 0.7525184326266128,
+      "cancelled_intents": 0,
+      "case": "fee0",
+      "closed_roundtrips": 70,
+      "delay_bars": 1,
+      "exposure_fraction": 0.5841313269493844,
+      "fee_bps": 0,
+      "fills": 140,
+      "final_equity": 307604.5518258673,
+      "kind": "STRATEGY",
+      "losing_roundtrips": 46,
+      "max_drawdown": -0.2896212132811812,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 140,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.6739962792780572,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": false,
+      "total_fees": "0E-44",
+      "total_return": 2.0760455182586735,
+      "win_rate": 0.34285714285714286,
+      "winning_roundtrips": 24
+    },
+    "fee20": {
+      "cagr": 0.5238578670601741,
+      "cancelled_intents": 0,
+      "case": "fee20",
+      "closed_roundtrips": 70,
+      "delay_bars": 1,
+      "exposure_fraction": 0.5841313269493844,
+      "fee_bps": 20,
+      "fills": 140,
+      "final_equity": 232482.43227409973,
+      "kind": "STRATEGY",
+      "losing_roundtrips": 46,
+      "max_drawdown": -0.34554932420208906,
+      "monthly_observations": 24,
+      "observations": 731,
+      "queued_intents": 140,
+      "retained_intents": 0,
+      "sharpe_zero_cash": 1.300606675050349,
+      "slippage_bps": 2,
+      "stale_intents": 0,
+      "terminal_pending": null,
+      "terminal_position_open": false,
+      "total_fees": "46979.673205517938321012638404399031933845051044877",
+      "total_return": 1.3248243227409975,
+      "win_rate": 0.34285714285714286,
+      "winning_roundtrips": 24
+    }
+  },
+  "reused_control_configurations": 0,
+  "rules": {
+    "RSI5": "Close deltas at indices1..5; seed mean gain/loss at index5. Wilder alpha1/5 thereafter, prev+(x-prev)/5. Both means0 -> RSI50; loss0 gain>0 ->100; gain0 loss>0 ->0; otherwise100-100/(1+gain/loss). Five-period Wilder and flat50 are research conventions, not verified author settings.",
+    "capital": {
+      "Decimal_precision": 50,
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "currency": "USDT",
+      "entry_fee_inclusive": true,
+      "fraction": "1",
+      "fractional_fills": true,
+      "funding_interest_borrow": 0,
+      "initial_cash": "100000",
+      "leverage": 1,
+      "max_positions": 1,
+      "rounding": "ROUND_HALF_EVEN",
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "cold_start": "31dailybars before eval;RSIready byindex5. Start evalcash, no warmup intent fills firstopen;firstevaluationclose may signal using priorreadyRSI and fill secondopen. No arbitrary200daywarmup.",
+    "cost_cases": [
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 8,
+        "name": "base",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 0,
+        "name": "fee0",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 1,
+        "fee_bps_each_side": 20,
+        "name": "fee20",
+        "slippage_bps_each_side": 2
+      },
+      {
+        "delay_bars": 2,
+        "fee_bps_each_side": 8,
+        "name": "delay2",
+        "slippage_bps_each_side": 2
+      }
+    ],
+    "entry": "Flat and previous ready RSI<=50 and current RSI>50; equality is neutral, crossing requires strict current>50.",
+    "exit": "Long and previous ready RSI>=50 and current RSI<50. At exactly50 retain current holdings. Opposite crossover cancels pending opposite intent; no persistent above50 repeated entries.",
+    "known_halt": "No daily midnight-open override: the known intraday2023-03-24 pause does not coincide with daily execution opens. No general all-history tradability claim.",
+    "raw_cross_cancellation": "entry=previous-ready RSI<=50 and current>50; exit=previous-ready RSI>=50 and current<50; computed independently of holdings so a raw opposite cross cancels a pending order even when no new order is eligible",
+    "same_side_pending": "Retain original earliest due; no postponement. Opposite raw cross cancels before holding-eligible scheduling.",
+    "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy."
+  },
+  "source": {
+    "catalog_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+    "catalog_original_fields": "catalog-original-fields.json",
+    "catalog_rule": "RSI5 up-cross50 fullcash long; down-cross50 exit; completed close signal",
+    "fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+    "id": "M1258",
+    "license": "Only user-supplied catalog fields and independently written implementation distributed. Original webpage/fulltext not retrieved or redistributed.",
+    "original_framework_verified": false,
+    "original_webpage": "https://www.quantifiedstrategies.com/bitcoin-rsi-trading-strategy/",
+    "research_choices": [
+      "Binance spotBTCUSDT UTC1d",
+      "Wilder means seeded from5deltas; flat50",
+      "Decimal50",
+      "100% fee-inclusive fractionalfill",
+      "nextopen/slippage/fee/delay",
+      "31priorbars continuous warmup; no warmuporders"
+    ],
+    "source_verified": false,
+    "strict_reproduction_count": 0
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 3546,
+      "path": "research/public-strategies/M1258/specs/C0-v1.json",
+      "sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/specs/C0-v1.json"
+    },
+    "catalog_fields": {
+      "bytes": 1726,
+      "path": "research/public-strategies/M1258/source/catalog-original-fields.json",
+      "sha256": "06e5ee2a48230f8d3fbd1d35a8a990d239b825a7f7e6c2ec2940235c2f2bbcae",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/source/catalog-original-fields.json"
+    },
+    "original_detail": {
+      "bytes": 9105,
+      "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-detail.json",
+      "sha256": "ff06aaa27a216b19db46b48c454e357e0fc35fa0143111f9309b28d993bf9deb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 904,
+      "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-record.json",
+      "sha256": "575b538bfed36bf78539f404e727708a676c0800729cd9cbe21c15f22c2b78a4",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/artifacts/20261003-catalog-v1/graph-record.json"
+    },
+    "protocol": {
+      "bytes": 14276,
+      "path": "research/public-strategies/M1258/specs/protocol-v1.json",
+      "sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/specs/protocol-v1.json"
+    },
+    "publication_manifest": {
+      "bytes": 6826,
+      "path": "research/public-strategies/M1258/publication-manifest.json",
+      "sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/publication-manifest.json"
+    },
+    "rules": {
+      "bytes": 10303,
+      "path": "research/public-strategies/M1258/source/root-frozen-rules.json",
+      "sha256": "eccfd386fe9fb17206bff6ea344e99cabb938c5bda06330767c08f58279bdbce",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/source/root-frozen-rules.json"
+    },
+    "source_card": {
+      "bytes": 915,
+      "path": "research/public-strategies/M1258/source/sourcecard.safe.json",
+      "sha256": "ca92281d99f2aea29fcf0f447da536bfb2eb330ae72b0e7b8b2144cb0b2fccaf",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/source/sourcecard.safe.json"
+    },
+    "summary": {
+      "bytes": 33713,
+      "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/summary.json",
+      "sha256": "a12f6254843e5b6c3693600a555ff10bcecaddacde4aad6acae8f8f6036e219d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153/research/public-strategies/M1258/artifacts/20261003-catalog-v1/summary.json"
+    }
+  },
+  "source_status": "tested_proxy_only",
+  "status": "tested_hypothesis_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}

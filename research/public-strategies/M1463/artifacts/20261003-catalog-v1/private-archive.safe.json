@@ -1,0 +1,17 @@
+{
+  "status": "LOCAL_PRIVATE_ARCHIVE_VERIFIED",
+  "id": "M1463",
+  "archive_bytes": 702112,
+  "archive_sha256": "3eceec19f4099a44205922366476bf88a0fb716c21c18719ec8048608d8af804",
+  "standalone_manifest_sha256": "4da16f72ebf446c5cf8daf1953370d6ed136b8e50dc6adc887ef77607bef0ac5",
+  "payloads": 202,
+  "manifest_members": 1,
+  "crc_and_all_payload_hashes_verified": true,
+  "canonical_input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "control_files": 7,
+  "new_control_runs": 0,
+  "remote_Library_saved": false,
+  "Library_backup_id": null,
+  "remote_private_backup_gap": "Existing Library uploadHTTP401; no current upload or blind retry; localZIP is not durable backup",
+  "public_scope": "Only this safe receipt, never ZIP or private manifest contents"
+}

@@ -1,0 +1,356 @@
+{
+  "status": "PASS_INDEPENDENT_CONTRACT_REVIEW_PRE_CODE_ONLY",
+  "completed_utc": "2026-10-03T17:30:07.687106+00:00",
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch017-output-contract-20261003.json",
+    "bytes": 5120,
+    "sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade"
+  },
+  "ids": [
+    "M1346",
+    "M1349",
+    "M1270"
+  ],
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "source_fields_checked": 33,
+  "original_bindings": [
+    {
+      "id": "M1346",
+      "checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+      "path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1346.json",
+      "record_sha256": "e74b2f8f2759cd82f7751b238b6b7d8e97b460ad34f11c71db4eb53cf91fc04b",
+      "git_blob": "e8a00346163b251fba4ff3df1cff03e440f41f5d",
+      "original_fields_checked": 11,
+      "all_fields_equal": true,
+      "Graph_original_flags_unmodified": true
+    },
+    {
+      "id": "M1349",
+      "checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+      "path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0014-v2/metadata/source-records/M1349.json",
+      "record_sha256": "c3c501a2fac943309f71ecb8f7163c964dfdb386d67ba9553b465eb82090ef50",
+      "git_blob": "477ecbf25efc4e9e5b09a80f3ef245c70321ba7c",
+      "original_fields_checked": 11,
+      "all_fields_equal": true,
+      "Graph_original_flags_unmodified": true
+    },
+    {
+      "id": "M1270",
+      "checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+      "path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0013-v2/metadata/source-records/M1270.json",
+      "record_sha256": "4a35f01c6b8f28533434430d93a34ece87a9d615312994e5beaba77519768d0a",
+      "git_blob": "02efe41e4cc19e8ec41a8ef111521d85c3854e19",
+      "original_fields_checked": 11,
+      "all_fields_equal": true,
+      "Graph_original_flags_unmodified": true
+    }
+  ],
+  "contract_files": [
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-output-contract-20261003.json",
+      "bytes": 5120,
+      "sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade"
+    },
+    {
+      "path": "research/public-strategies/claims-20261003-batch017.json",
+      "bytes": 1457,
+      "sha256": "c39b08f4933aafae4f18e3d051cf9a8b16b41bc60b95bac4d30d8d7a2a277964"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1270-catalog-original-fields.json",
+      "bytes": 1943,
+      "sha256": "c1b72c34eee7b0fc70bb63b9593b506acc2527372ebbac9020e5b661eda87f79"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1270-root-frozen-rules.json",
+      "bytes": 12725,
+      "sha256": "389eedaf79f4776420ccbfdf71afe1614b15bfdad2b16a7b9549d8afc81a5aaa"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1346-catalog-original-fields.json",
+      "bytes": 1913,
+      "sha256": "41056e93ba2f52554b0ec7e9176591c8deb5fa1e186eed719991a51d3b045dcb"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1346-root-frozen-rules.json",
+      "bytes": 12079,
+      "sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1349-catalog-original-fields.json",
+      "bytes": 2173,
+      "sha256": "076dbf301fc6690357c42b3c9a35d7f01e7be5de7bf3b8ecba0b1146715f2be7"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/M1349-root-frozen-rules.json",
+      "bytes": 12837,
+      "sha256": "fde35a953c04aff2982e4ba57693d6f28d0576a92f1fa492660dc0712331b249"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/README.md",
+      "bytes": 843,
+      "sha256": "fbfa1eaf181a66980fef7cbdf23756442994675edf5bfe6ce49f0f1b9979b812"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch017-preflight-20261003/decision-log.md",
+      "bytes": 327,
+      "sha256": "26cbb7fcc6ed5e1f3094e3468de4c0b19e205cb7324fa9c9a560d543f0c5e32f"
+    }
+  ],
+  "checks_count": 129,
+  "checks": [
+    "root_contract_exact_pin",
+    "rule_pin_M1346",
+    "fixed_original_bytes_M1346",
+    "fixed_gitblob_M1346",
+    "exact11fields_M1346",
+    "provenance_M1346",
+    "public_alias_none_M1346",
+    "fields_no_sensitive_markers_M1346",
+    "row_rule_binding_M1346",
+    "rule_pin_M1349",
+    "fixed_original_bytes_M1349",
+    "fixed_gitblob_M1349",
+    "exact11fields_M1349",
+    "provenance_M1349",
+    "public_alias_none_M1349",
+    "fields_no_sensitive_markers_M1349",
+    "row_rule_binding_M1349",
+    "rule_pin_M1270",
+    "fixed_original_bytes_M1270",
+    "fixed_gitblob_M1270",
+    "exact11fields_M1270",
+    "provenance_M1270",
+    "public_alias_none_M1270",
+    "fields_no_sensitive_markers_M1270",
+    "row_rule_binding_M1270",
+    "claims_assigned_not_started",
+    "counts12_and0",
+    "no_prior_claim_overlap_claims-20261003-batch006.json",
+    "no_prior_claim_overlap_claims-20261003-batch010.json",
+    "no_prior_claim_overlap_claims-20261003-batch011.json",
+    "no_prior_claim_overlap_claims-20261003-batch012.json",
+    "no_prior_claim_overlap_claims-20261003-batch013.json",
+    "no_prior_claim_overlap_claims-20261003-batch015.json",
+    "no_prior_claim_overlap_claims-20261003-batch016.json",
+    "no_prior_claim_overlap_claims-20261003-dot001.json",
+    "no_prior_claim_overlap_claims-20261003-parallel005.json",
+    "no_existing_family_roots",
+    "actual_control_card_pin",
+    "control_card_preserved_at_delivery",
+    "all37_result_manifest_pin",
+    "all7_control_output_hashes",
+    "control_summary_NAV_pins",
+    "coordinator_receipt_f0b3_pin",
+    "independent_receipt_448e_pin",
+    "coordinator_accepted_actual_remote",
+    "independent_actual_fetch_recovery",
+    "actual37plusmanifest_remote_recovery",
+    "matching_fullcash_capital_M1346",
+    "matching_statistics_M1346",
+    "same_accepted_control_zero_new_M1346",
+    "input_window_match_M1346",
+    "four_cost_configs_M1346",
+    "matching_fullcash_capital_M1349",
+    "matching_statistics_M1349",
+    "same_accepted_control_zero_new_M1349",
+    "input_window_match_M1349",
+    "four_cost_configs_M1349",
+    "matching_fullcash_capital_M1270",
+    "matching_statistics_M1270",
+    "same_accepted_control_zero_new_M1270",
+    "input_window_match_M1270",
+    "four_cost_configs_M1270",
+    "benchmark_exact_budget_fees",
+    "benchmark_exact_window",
+    "1346ready25_0.1",
+    "1346equal_no_events_0.1",
+    "1346ready25_100",
+    "1346equal_no_events_100",
+    "1346ready25_1E-200",
+    "1346equal_no_events_1E-200",
+    "1346level_repeat_not_cross",
+    "raw_opposite_cancel_before_position_BUY",
+    "raw_opposite_cancel_before_position_SELL",
+    "equal_no_event_keeps_pending",
+    "same_side_keeps_earliest_due",
+    "1349strictROC_90",
+    "1349strictROC_89.9999999999",
+    "1349strictROC_90.0000000001",
+    "1349level_not_cross",
+    "1349ROC_recovery_no_exit_keeps_pendingbuy",
+    "time24_noexit_e0_lag1",
+    "time25_lock_e0_lag1",
+    "sale_due_and_reset_e0_lag1",
+    "time24_noexit_e0_lag2",
+    "time25_lock_e0_lag2",
+    "lag2_latch_cannotcancel_postpone_e0",
+    "sale_due_and_reset_e0_lag2",
+    "time24_noexit_e5_lag1",
+    "time25_lock_e5_lag1",
+    "sale_due_and_reset_e5_lag1",
+    "time24_noexit_e5_lag2",
+    "time25_lock_e5_lag2",
+    "lag2_latch_cannotcancel_postpone_e5",
+    "sale_due_and_reset_e5_lag2",
+    "1270Sundaylabel_nextMonday_thenTuesday",
+    "1270all_lag1_fill_weekdays",
+    "1270calendar_lag1_105pairs_terminalflat",
+    "1270lag2_zero_fills_rawMonday_cancels_105",
+    "fullcash_exactclosure_100000_0",
+    "Fraction_account_algebra_100000_0",
+    "fullcash_exactclosure_100000_8",
+    "Fraction_account_algebra_100000_8",
+    "fullcash_exactclosure_100000_20",
+    "Fraction_account_algebra_100000_20",
+    "fullcash_exactclosure_1E-100_0",
+    "Fraction_account_algebra_1E-100_0",
+    "fullcash_exactclosure_1E-100_8",
+    "Fraction_account_algebra_1E-100_8",
+    "fullcash_exactclosure_1E-100_20",
+    "Fraction_account_algebra_1E-100_20",
+    "fullcash_exactclosure_1E-400_0",
+    "Fraction_account_algebra_1E-400_0",
+    "fullcash_exactclosure_1E-400_8",
+    "Fraction_account_algebra_1E-400_8",
+    "fullcash_exactclosure_1E-400_20",
+    "Fraction_account_algebra_1E-400_20",
+    "zero_cash_Sharpe_null",
+    "drawdown_initial_anchor",
+    "Sharpe_sample_ddof1",
+    "original_file_unchanged_catalog-hypothesis-batch017-output-contract-20261003.json",
+    "original_file_unchanged_claims-20261003-batch017.json",
+    "original_file_unchanged_M1270-catalog-original-fields.json",
+    "original_file_unchanged_M1270-root-frozen-rules.json",
+    "original_file_unchanged_M1346-catalog-original-fields.json",
+    "original_file_unchanged_M1346-root-frozen-rules.json",
+    "original_file_unchanged_M1349-catalog-original-fields.json",
+    "original_file_unchanged_M1349-root-frozen-rules.json",
+    "original_file_unchanged_README.md",
+    "original_file_unchanged_decision-log.md"
+  ],
+  "synthetic": {
+    "time_exit_cases": [
+      {
+        "entry_index": 0,
+        "delay_bars": 1,
+        "actual_sale_index": 25,
+        "completed_long_closes": 25
+      },
+      {
+        "entry_index": 0,
+        "delay_bars": 2,
+        "actual_sale_index": 26,
+        "completed_long_closes": 26
+      },
+      {
+        "entry_index": 5,
+        "delay_bars": 1,
+        "actual_sale_index": 30,
+        "completed_long_closes": 25
+      },
+      {
+        "entry_index": 5,
+        "delay_bars": 2,
+        "actual_sale_index": 31,
+        "completed_long_closes": 26
+      }
+    ],
+    "calendar_only_cases": [
+      {
+        "delay_bars": 1,
+        "calendar_dates": 731,
+        "synthetic_state_fills": 210,
+        "cancellations": 0,
+        "terminal_pending": null
+      },
+      {
+        "delay_bars": 2,
+        "calendar_dates": 731,
+        "synthetic_state_fills": 0,
+        "cancellations": 105,
+        "terminal_pending": null
+      }
+    ]
+  },
+  "benchmark_proof_mapping": {
+    "control_reference": {
+      "commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+      "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/buyhold-reference-v1.json",
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    "control_output_manifest": {
+      "commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+      "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/private-output-manifest.json",
+      "sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7"
+    },
+    "coordinator_receipt": {
+      "commit": "2d4da814b23fc861a73850a5691a1104d6e7766d",
+      "path": "research/public-strategies/M1258/recovery/coordinator-v1/acceptance.safe.json",
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    "independent_receipt": {
+      "commit": "2d4da814b23fc861a73850a5691a1104d6e7766d",
+      "path": "research/public-strategies/M1258/recovery/remote-core-v1/M1258-remote-core-recovery.safe.json",
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    }
+  },
+  "benchmark_control_outputs": [
+    {
+      "path": "buyhold-decisions.csv",
+      "bytes": 104465,
+      "sha256": "19504c9f22b4beb590b2557fba407f386a349fd6233b683ea6dac0ab5a7bf27b"
+    },
+    {
+      "path": "buyhold-fills.csv",
+      "bytes": 409,
+      "sha256": "d1d455ce41ae73763a76212d0a6fc8226506d4bd329905f1d1e3e5999a6eb74f"
+    },
+    {
+      "path": "buyhold-monthly.csv",
+      "bytes": 3027,
+      "sha256": "acf6f1d7769b498bcf7ec657f39ffe045798a0413617274286e159467a40b17d"
+    },
+    {
+      "path": "buyhold-nav.csv",
+      "bytes": 127882,
+      "sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664"
+    },
+    {
+      "path": "buyhold-pending.csv",
+      "bytes": 130,
+      "sha256": "dd7074fbd9d99e5f3f560d891bfe30f78c6aed5d051215b1fb14296259687a5e"
+    },
+    {
+      "path": "buyhold-roundtrips.csv",
+      "bytes": 112,
+      "sha256": "36a3c6e8fc36325190f5a98f1446d35515fc81d4196da29d8d316e6fbad1463c"
+    },
+    {
+      "path": "buyhold-summary.json",
+      "bytes": 766,
+      "sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142"
+    }
+  ],
+  "prior_claim_files_checked": 9,
+  "mandatory_fixes": [],
+  "implementation_gate_still_required": true,
+  "remaining_required_tests": [
+    "Actual newfamily code/C0/runtime exactfreeze and independentgate before real historical results.",
+    "M1346 level/equality/cause/pending;M1349 strictROC and actualfilled-entry25close latch;M1270 UTCopen-date andlag2cancel must be checked against implementation.",
+    "Exact reusedcontrol/datahashes andstatistics must be rebound in eachC0, no newbuyhold.",
+    "Fullledger/feature/decision/time/notional/monthly/oracle/oncefreshrestore for eventual12 strategy configurations."
+  ],
+  "authorization_boundary": "Review only; does not authorize current historicalexecution orpublication, does not supersede any specific approval rejection or otherfamily block.",
+  "strategy_history_runs": 0,
+  "new_control_runs": 0,
+  "market_requests": 0,
+  "Git_writes": 0,
+  "Graph_Site_writes": 0,
+  "other_family_private_files_read": false,
+  "limitations": [
+    "Source rules are catalog hypotheses; original webpages/runtime not verified.",
+    "Crossenvironment parent executor process liveness not inferred fromlocalisolation; claims read asassignednotstarted.",
+    "This reviewer did not redoM1258engine orreadprivatecontrolNAV; exact publicoutputfingerprints plusactualremote independentreceipt were matched."
+  ]
+}

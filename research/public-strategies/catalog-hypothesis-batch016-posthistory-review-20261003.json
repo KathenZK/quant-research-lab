@@ -1,0 +1,69 @@
+{
+  "status": "PASS_INDEPENDENT_POSTHISTORY_ACCEPTANCE",
+  "source_commit": "2da261781a543fc86a0803228f0f058e98e54d19",
+  "IDs": {
+    "M1396": {
+      "payloads": 30,
+      "local_fresh_results_byte_equal": 31,
+      "archive_sha256": "4dc690c70e53b58f977ec087928543e96e9f05a9231abc8413039d1dec0dbdea",
+      "archive_bytes": 825236,
+      "archive_payloads_crc_hash_fresh_restored": 202,
+      "control_files_byte_equal": 7,
+      "public_members": 49,
+      "graph_points": 25,
+      "new_controls": 0,
+      "remote_Library_saved": false
+    },
+    "M1463": {
+      "payloads": 30,
+      "local_fresh_results_byte_equal": 31,
+      "archive_sha256": "3eceec19f4099a44205922366476bf88a0fb716c21c18719ec8048608d8af804",
+      "archive_bytes": 702112,
+      "archive_payloads_crc_hash_fresh_restored": 202,
+      "control_files_byte_equal": 7,
+      "public_members": 49,
+      "graph_points": 25,
+      "new_controls": 0,
+      "remote_Library_saved": false
+    }
+  },
+  "public_union": 96,
+  "preC0_all_tracked_blobs_unchanged": true,
+  "decisions_checked": 5848,
+  "events_checked": 1296,
+  "roundtrips_checked": 322,
+  "ledger": {
+    "status": "PASS_INDEPENDENT_ACTUAL_LEDGER",
+    "IDs": [
+      {
+        "id": "M1396",
+        "feature_rows_checked": 762,
+        "account_states_checked": 2924,
+        "fills_checked": 488,
+        "months_checked": 96,
+        "prefix_future_cases": 0
+      },
+      {
+        "id": "M1463",
+        "feature_rows_checked": 762,
+        "account_states_checked": 2924,
+        "fills_checked": 156,
+        "months_checked": 96,
+        "prefix_future_cases": 0
+      }
+    ],
+    "states_checked": 5848,
+    "fill_records_checked": 644,
+    "wall_seconds": 0.2730304049982806,
+    "cpu_seconds": 0.6681743880000001,
+    "max_rss_kib": 30796,
+    "new_engine_runs": 0,
+    "checked_utc": "2026-10-03T17:30:34.859388+00:00"
+  },
+  "limitations": [
+    "Local ZIP/fresh extraction is not remote Library backup; remote upload gap remains.",
+    "Worker fresh source+input recovery receipts checked and 31 output bytes compared; independent review performed no extra historical engine runs.",
+    "Catalog HYPOTHESIS, no strict reproduction or OOS claim."
+  ],
+  "checked_utc": "2026-10-03T17:33:45.937619+00:00"
+}
