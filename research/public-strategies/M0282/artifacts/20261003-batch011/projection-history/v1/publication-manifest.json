@@ -1,7 +1,6 @@
 {
   "id": "M0282",
-  "revision": 2,
-  "created_at_utc": "2026-10-03T14:32:46.417176+00:00",
+  "created_at_utc": "2026-10-03T14:27:25.584200+00:00",
   "files": [
     {
       "path": "research/public-strategies/M0282/ATTRIBUTION.md",
@@ -59,14 +58,9 @@
       "sha256": "3c842519a1a3d4f54a2b134659e1f1005a1a97598fa80fa487dd034416ccb9e6"
     },
     {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/graph-projection-receipt-v2.json",
-      "bytes": 1419,
-      "sha256": "147bf6f72165ea4bd99894b44d46b5d7994d3c95c3f08083efe0803c64df9743"
-    },
-    {
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/graph-projection-receipt.json",
-      "bytes": 1419,
-      "sha256": "147bf6f72165ea4bd99894b44d46b5d7994d3c95c3f08083efe0803c64df9743"
+      "bytes": 235,
+      "sha256": "cabd0b174d2388bd544e8836aa81a63d08cf1fc62b55f5469df889e44febde57"
     },
     {
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/graph-record.json",
@@ -87,21 +81,6 @@
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/prefix-qa.json",
       "bytes": 650,
       "sha256": "f283a2de0099b1e9724d662601e3a642d921d97b76ee4e04c3bef17f65c7d875"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/revision-log.json",
-      "bytes": 369,
-      "sha256": "3d5b363dfdd5ae87909816fd848d034d2241d20a63a00d2800b90d4d95acc1cd"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json",
-      "bytes": 235,
-      "sha256": "cabd0b174d2388bd544e8836aa81a63d08cf1fc62b55f5469df889e44febde57"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json",
-      "bytes": 8660,
-      "sha256": "d0fc60718eb0a4e5e70e0e858ba76284572ee32f3778ca7320c38bf7495d63d0"
     },
     {
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/result-manifest.json",
@@ -230,6 +209,5 @@
     }
   ],
   "self_excluded": true,
-  "history": "Original v1 manifest/receipt bytes preserved under artifacts/20261003-batch011/projection-history/v1; prior commit retains all v1 targets",
-  "public_boundary": "Reviewed source/code/spec/aggregate/daily derived NAV/trade samples only. No raw market, full5m logs, Library IDs or private context fingerprints."
+  "public_boundary": "Only reviewed code, protocols, provenance URLs/hashes, aggregate results, daily derived NAV and explicit trade samples. No raw market input or full5m logs; no Library IDs/private context fingerprint."
 }
