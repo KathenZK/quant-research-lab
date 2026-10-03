@@ -262,3 +262,11 @@
 
 - [M0256 主账](public-strategies/M0256/m0256-core-ledger.md)：BTC现货4h EMA8/21，4个假设配置及1个买持对照；DIAGNOSTIC_ONLY，严格复现0，未晋级。
 - [M0259 主账](public-strategies/M0259/m0259-core-ledger.md)：BbandRsi原定1h窗口的数据完整性阻塞，实际市场回测0；保留缺口与停市异常证据。
+
+## 公开策略 M0288
+
+- [M0288 主账](public-strategies/M0288/m0288-core-ledger.md)：BTC现货日线高浪线形态，原生参考引擎4个假设配置及1个买持；DIAGNOSTIC_ONLY，严格0，未晋级。
+
+## 公开策略 M0286
+
+- [M0286 主账](public-strategies/M0286/m0286-core-ledger.md)：BTC现货4h MultiMa，完整原类信号核对，4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。

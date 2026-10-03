@@ -1,0 +1,14 @@
+{
+  "record_id": "M0288",
+  "frozen_at_utc": "2026-10-03T10:06:54.025078+00:00",
+  "window": "2023-01-01..2024-12-31",
+  "previously_exposed": true,
+  "original_author_hyperopt_search_mentioned": true,
+  "prior_search_count": "unknown; source comment mentions a1000-epoch process but provenance not reproduced",
+  "selection_rule": "assigned stable ID before local return observation; exact source viability then pinned BTC1d diagnostic",
+  "new_unique_strategy_configurations": 4,
+  "new_unique_benchmark_configurations": 1,
+  "verification_reruns_not_counted_as_new_configurations": true,
+  "oos_claim": false,
+  "strict_reproductions": 0
+}

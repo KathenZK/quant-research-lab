@@ -1,0 +1,193 @@
+{
+  "record_id": "M0288",
+  "state": "REVIEWED_LIGHT_FILES_READY_FOR_COORDINATOR_REMOTE_SAVE",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1401,
+      "sha256": "c6472d10c0866b462903b607edaf883ac46dff7759ae2bfafc7237b62062b78a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1478,
+      "sha256": "8178d15aa9f5e9128b36b8718e657bd6640973899354d4018cfbcb1c6dc3f87b"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/base-daily-nav-light.csv",
+      "bytes": 43612,
+      "sha256": "44a59970f7a6d62192f198e872d1778a2b56e64e4cb8c482b4a0dd0307b8a6b0"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/base-trades.csv",
+      "bytes": 4059,
+      "sha256": "4a41a777d5958017885a2bb10a26dfb673e1891ca3fe5058d608f0da649334bb"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/buyhold-daily-nav-light.csv",
+      "bytes": 46262,
+      "sha256": "7c0248d509f03f9ac037a98567ff8a5654877be78c2699ce7cf7fb18d4d087c9"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/delay2-trades.csv",
+      "bytes": 3285,
+      "sha256": "7c66c3369fc45215d4165a1e8ff2a88c119f93ac4462346839696ff81ba544ec"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/fee0-trades.csv",
+      "bytes": 3747,
+      "sha256": "34423030f4601b9f4ee7f084704a9be776f5cb3fc4b2e1410db22ce7a88f7278"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/fee20-trades.csv",
+      "bytes": 3614,
+      "sha256": "297a5a7b11b8a54408a41b0673073f1b29497c6ea7275ef78e85992068b0fd78"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/graph-record.json",
+      "bytes": 1969,
+      "sha256": "5a23fc752170e542b362282b04b7adefbbb962bddad1531043315e41bcede9f2"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/independent-validation.json",
+      "bytes": 3071,
+      "sha256": "a77265dc313ef2928bc72a786601d6b7445745b3542f74a66841c252371db647"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/recovery-validation.json",
+      "bytes": 2357,
+      "sha256": "5001d1deb32ce8ca7f4ec447da68a2d16e688ff9510eaabc948cd60164b02c7b"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/result-manifest.json",
+      "bytes": 3494,
+      "sha256": "e24eb81fa8f48a11eccaf5323116c69bac4dcd4daa31058adb079bd943a3370a"
+    },
+    {
+      "path": "artifacts/20261003-first-replay/summary.json",
+      "bytes": 3688,
+      "sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1022,
+      "sha256": "6d81c73479ad7ba287aca54c3f28b7b1f59669a1c1970633faa5822824f5e7fa"
+    },
+    {
+      "path": "diagnostics/M0288-20261003.md",
+      "bytes": 8074,
+      "sha256": "ef5d9841d93effee8a0813bcf13199b0972a7e99c02afd9f923d2c3cbf820887"
+    },
+    {
+      "path": "diagnostics/final-validation.json",
+      "bytes": 881,
+      "sha256": "a9fed51de8ad10102917e1898673320280aa6229a763c501e371f7367626f19f"
+    },
+    {
+      "path": "diagnostics/rebuild-20261003.md",
+      "bytes": 3342,
+      "sha256": "f885904d3671828d9285bc3048f60261c2e5c6e96b9239289c709d24cd381c01"
+    },
+    {
+      "path": "m0288-core-ledger.md",
+      "bytes": 1697,
+      "sha256": "e741c5402ac80861a99685695b8ddf0431d55871cfffbf047f636dbb557294b5"
+    },
+    {
+      "path": "scripts/export_graph.py",
+      "bytes": 7418,
+      "sha256": "2f4d72517f995958d2ccab2224ecf30e2580714a6b4b169de83c40368cd1ec37"
+    },
+    {
+      "path": "scripts/rebuild_inputs.py",
+      "bytes": 2382,
+      "sha256": "648cf97bbcd017f64e3db925b05ce3e33c64b7cdf457b32ad7a19900efc3b949"
+    },
+    {
+      "path": "scripts/run_replay.py",
+      "bytes": 11853,
+      "sha256": "825d2f71ea0062ec7f783989e5365379bf1bb392d27a2ffa685d028ae2f6a746"
+    },
+    {
+      "path": "scripts/validate_replay.py",
+      "bytes": 10805,
+      "sha256": "d27cf1c91dc3763dda812bfddc87d36592cdb5def177000abc6fccf59a00248b"
+    },
+    {
+      "path": "scripts/verify_recovery.py",
+      "bytes": 1275,
+      "sha256": "43f28c9c7848f72e8ec0a69887037af9bfeaeaf4c40929917928efad9917756d"
+    },
+    {
+      "path": "specs/M0288-first-replay.json",
+      "bytes": 4015,
+      "sha256": "a13acd951d8303644b035b964d7f5ad27f7449699d9dab5496d9a964fb725613"
+    },
+    {
+      "path": "specs/code-manifest.json",
+      "bytes": 822,
+      "sha256": "d934b98b9dd61e9d80e595a69a22032c269725e799e890c2a49d7f349c2b9d8c"
+    },
+    {
+      "path": "specs/data-qa.json",
+      "bytes": 8736,
+      "sha256": "f463ffa91258436f461de5d7dce2c82b92bd763d016cb5e4f048716a4358c439"
+    },
+    {
+      "path": "specs/environment.json",
+      "bytes": 2929,
+      "sha256": "666f31567d54c2e800dbd8963a8d52e56a97449761de1df8ce485cdcabaf9c5c"
+    },
+    {
+      "path": "specs/exposure.json",
+      "bytes": 643,
+      "sha256": "22ba501af6cdbe77f41498da95c9e8bdfcf023f5e3ffbb929f11646d23913a11"
+    },
+    {
+      "path": "specs/framework-source-manifest.json",
+      "bytes": 2710,
+      "sha256": "64b9b7bc9f4439295de91bec54fd886fa371ba97a06a4f92d98fa73f8e5dfd6f"
+    },
+    {
+      "path": "specs/rebuild-dependencies.json",
+      "bytes": 358,
+      "sha256": "8b6a10e402dcfa7cbb25851e05cc378cec5dc041c2c9518453cbfb7c2667a7dc"
+    },
+    {
+      "path": "specs/requirements.lock.txt",
+      "bytes": 1562,
+      "sha256": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e"
+    },
+    {
+      "path": "specs/source-preflight-checkpoint.json",
+      "bytes": 1160,
+      "sha256": "d43c5ea3e99ccf7c7ee34c33fe31be898e7bed6c873b10c965646d74134ff5dc"
+    }
+  ],
+  "public_file_count_including_this_manifest": 33,
+  "excluded": [
+    "raw market CSV and ZIP",
+    "full original source files",
+    "full unbound Graph detail",
+    "private runtime directories and dependency wheels"
+  ],
+  "artifact_allowlist_paths_required": [
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/base-daily-nav-light.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/base-trades.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/buyhold-daily-nav-light.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/delay2-trades.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/fee0-trades.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/fee20-trades.csv",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/graph-record.json",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/independent-validation.json",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/recovery-validation.json",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/result-manifest.json",
+    "research/public-strategies/M0288/artifacts/20261003-first-replay/summary.json"
+  ],
+  "global_registration_owner": "root coordinator; executor did not edit index or allowlist",
+  "private_detail": {
+    "sha256": "335f2ba32fb633640d2c2aff92056da44ef328fdb4e374f98ea6d3cbb418b4d1",
+    "bytes": 195704,
+    "state": "unbound; not deployed"
+  }
+}

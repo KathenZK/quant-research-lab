@@ -1,0 +1,25 @@
+{
+  "record_id": "M0288",
+  "created_at_utc": "2026-10-03T10:06:54.025078+00:00",
+  "status": "SOURCE_SEMANTICS_VERIFIED_PRE_RETURNS",
+  "source_sha256": "cce61e4af8ed3cb8e78a5d9713aba7891ec08d1bdb1da9911c3f550424db795d",
+  "source_bytes": 2674,
+  "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PatternRecognition.py",
+  "framework_reference": "freqtrade2026.9 / 1f394eaebc2f46a83d26971388628707802f8602",
+  "verified": [
+    "unchanged original class imports using actual installed dependencies",
+    "actual CategoricalParameter accepts default0",
+    "actual ft_load_hyper_params changes CDL2CROWS/0 to CDLHIGHWAVE/-100",
+    "unchanged populate_exit_trend emits all NaN on flat-index synthetic frame with pandas2.2.3; separate expression probe agrees pandas3.0.2"
+  ],
+  "limitations": [
+    "No original author runtime or hyperopt universe provided",
+    "Historical returns not yet observed",
+    "No completed run or strict reproduction claimed"
+  ],
+  "counts": {
+    "research_ids_preflight": 1,
+    "strategy_runs": 0,
+    "strict_reproductions": 0
+  }
+}

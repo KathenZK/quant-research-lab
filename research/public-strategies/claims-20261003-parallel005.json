@@ -1,0 +1,95 @@
+{
+  "schema": "public-catalog-parallel-claims/v1",
+  "assigned_at_utc": "2026-10-03T10:06:59.331827+00:00",
+  "authorization": "2026-10-03 09:57:40 UTC parallel replay resumed; 10:03:23 UTC give dot more bounded batches",
+  "coordinator": "Codex /root only",
+  "base_commit": "8661e31456a44887903327c82cf0f97604fd3b03",
+  "dot_branch": "dot/public-strategies-20261003-b002",
+  "coordinator_branch": "codex/public-strategies-20261003-batch005",
+  "graph_is_backtest_prerequisite": false,
+  "site_writer": "dot Site worker exclusively",
+  "reserve_bytes": 5368709120,
+  "initial_free_bytes": 29420220416,
+  "claims": [
+    {
+      "id": "M0275",
+      "owner": "dot",
+      "status": "ASSIGNED_NOT_STARTED",
+      "timeframe": "4h",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Heracles.py",
+      "sha256": "5b25d85297329243d7a3c65770975b5a70e52ec2684b1e007e5d8a3d1a7e3718",
+      "bytes": 3867,
+      "output_prefix": "research/public-strategies/M0275/",
+      "source_verified_locally": true
+    },
+    {
+      "id": "M0274",
+      "owner": "dot",
+      "status": "ASSIGNED_NOT_STARTED",
+      "timeframe": "12h",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/GodStra.py",
+      "sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+      "bytes": 6802,
+      "output_prefix": "research/public-strategies/M0274/",
+      "source_verified_locally": true
+    },
+    {
+      "id": "M0257",
+      "owner": "dot",
+      "status": "RESERVED_NEXT_SOURCE_DATA_PREFLIGHT",
+      "timeframe": "1h",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AwesomeMacd.py",
+      "sha256": "8872b23514791b1e81a67e9d486e4efdd20fc08732ee5c0bf87312a82ff8a4c7",
+      "bytes": 1935,
+      "output_prefix": "research/public-strategies/M0257/",
+      "source_verified_locally": true
+    },
+    {
+      "id": "M0273",
+      "owner": "dot",
+      "status": "RESERVED_NEXT_SOURCE_DATA_PREFLIGHT",
+      "timeframe": "1h",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Freqtrade_backtest_validation_freqtrade1.py",
+      "sha256": "758d3730e57c7337f988ac68420d8140a0bff72d99fa9182017cd1f8b160c869",
+      "bytes": 1646,
+      "output_prefix": "research/public-strategies/M0273/",
+      "source_verified_locally": true
+    },
+    {
+      "id": "M0286",
+      "owner": "codex-m0286",
+      "status": "STARTED_SOURCE_VERIFIED_INPUT_RECAPTURE_RUNNING",
+      "timeframe": "4h",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/MultiMa.py",
+      "sha256": "cae77a6c8f983377e392a2c66bfc541e7c1400fae03c3a413194902b2eda6626",
+      "bytes": 3464,
+      "output_prefix": "research/public-strategies/M0286/",
+      "source_verified_locally": true
+    },
+    {
+      "id": "M0288",
+      "owner": "codex-m0288",
+      "status": "STARTED_SOURCE_SEMANTICS_PREFLIGHT",
+      "timeframe": "1d",
+      "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PatternRecognition.py",
+      "sha256": "cce61e4af8ed3cb8e78a5d9713aba7891ec08d1bdb1da9911c3f550424db795d",
+      "bytes": 2674,
+      "output_prefix": "research/public-strategies/M0288/",
+      "source_verified_locally": true
+    }
+  ],
+  "previous_completed_ids_not_assigned": [
+    "M0256",
+    "M0259"
+  ],
+  "new_completed_ids": 0,
+  "new_strategy_runs": 0,
+  "strict_reproductions": 0,
+  "shared_filesystem_assumed": false,
+  "global_writes_allowed_to_executors": false,
+  "source_index": {
+    "library_ref": "libfile_296b8fa9c4348191a5c6d138830f8494",
+    "read_mode": "verified rendered selected rows, not whole-file byte recovery",
+    "total_corpus_bytes_not_recovered_here": true
+  }
+}

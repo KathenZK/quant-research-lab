@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "filename": "MultiMa.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/MultiMa.py",
+      "sha256": "cae77a6c8f983377e392a2c66bfc541e7c1400fae03c3a413194902b2eda6626",
+      "bytes": 3464
+    },
+    {
+      "filename": "hyper.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/hyper.py",
+      "sha256": "ca611132fa1d9869d4548e8f51d452fe82c35830f3a0593bccdaf0ac292ae4e7",
+      "bytes": 8317,
+      "retrieved_at_utc": "2026-10-03T10:05:26.414800+00:00"
+    },
+    {
+      "filename": "parameters.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/parameters.py",
+      "sha256": "b5d31e7d1429b2a9a1b97676a0c46920b4f2dbf2a4e311d09ffc9dd8909aaa92",
+      "bytes": 13252,
+      "retrieved_at_utc": "2026-10-03T10:05:26.699596+00:00"
+    },
+    {
+      "filename": "interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/interface.py",
+      "sha256": "561656e2e97d3509798e40d486e918394aceab0987218513fb4f66ce5c05f478",
+      "bytes": 80064,
+      "retrieved_at_utc": "2026-10-03T10:05:26.923692+00:00"
+    },
+    {
+      "filename": "backtesting.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/optimize/backtesting.py",
+      "sha256": "68795912e0ba569f3aca2b3024a92be3fccd7d48b8d906d7a75931752094beb8",
+      "bytes": 78420,
+      "retrieved_at_utc": "2026-10-03T10:05:27.181484+00:00"
+    },
+    {
+      "filename": "ta_TEMA.c",
+      "url": "https://raw.githubusercontent.com/TA-Lib/ta-lib/43f9d5042ecc4bd367941846494ad907bf20ea50/src/ta_func/ta_TEMA.c",
+      "sha256": "731c460a040dacf01bc1f2157267624fbdc50dda9c30011002d4168b2840908e",
+      "bytes": 22096
+    }
+  ],
+  "original_author": "@Mablue (Masoud Azizi)",
+  "strategy_license": "GPL-3.0",
+  "framework_semantics_reference": "Freqtrade 2025.9; not asserted as original author runtime",
+  "catalog_binding": "Coordinator verified existing M0286=MultiMa in Library; private catalog not copied"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PREPARED_NOT_IMPORTED",
+  "id": "M0286",
+  "private_detail_sha256": "660fddd2d2852920bd2340221c2d28ee7a194087dc29466c164ab54ab6a32daa",
+  "private_detail_bytes": 128016,
+  "definition_bound": false,
+  "deployed": false
+}

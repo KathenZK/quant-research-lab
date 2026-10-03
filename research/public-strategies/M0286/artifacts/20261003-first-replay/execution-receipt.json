@@ -1,0 +1,18 @@
+{
+  "id": "M0286",
+  "status": "COMPLETED_VALIDATED",
+  "completed_at_utc": "2026-10-03T10:13:42.272246+00:00",
+  "timestamp_basis": "first summary.json filesystem modification time recorded after the run; not a fabricated start time",
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "controls": 1,
+  "strict_replications": 0,
+  "new_parameter_searches": 0,
+  "data_state": "DIAGNOSTIC_ONLY",
+  "fidelity_class": "HYPOTHESIS",
+  "snapshot_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "protocol_sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50",
+  "disk_free_bytes_at_finalize": 28400566272,
+  "remote_save": "coordinator pending; local disk is not durable backup",
+  "site_deployed": false
+}

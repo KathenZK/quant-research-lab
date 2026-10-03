@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "id": "M0286",
+  "minimal_roi": {
+    "0": 0.523,
+    "1553": 0.123,
+    "2332": 0.076,
+    "3169": 0
+  },
+  "stoploss": -0.345,
+  "trailing_stop": false,
+  "timeframe": "4h"
+}

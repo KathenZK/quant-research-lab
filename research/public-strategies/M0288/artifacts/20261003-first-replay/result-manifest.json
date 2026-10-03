@@ -1,0 +1,103 @@
+{
+  "record_id": "M0288",
+  "origin_run_id": "M0288-20261003-native-diagnostic-v1",
+  "files": {
+    "base-daily-nav-light.csv": {
+      "sha256": "44a59970f7a6d62192f198e872d1778a2b56e64e4cb8c482b4a0dd0307b8a6b0",
+      "bytes": 43612
+    },
+    "base-trades.csv": {
+      "sha256": "4a41a777d5958017885a2bb10a26dfb673e1891ca3fe5058d608f0da649334bb",
+      "bytes": 4059
+    },
+    "buyhold-daily-nav-light.csv": {
+      "sha256": "7c0248d509f03f9ac037a98567ff8a5654877be78c2699ce7cf7fb18d4d087c9",
+      "bytes": 46262
+    },
+    "delay2-trades.csv": {
+      "sha256": "7c66c3369fc45215d4165a1e8ff2a88c119f93ac4462346839696ff81ba544ec",
+      "bytes": 3285
+    },
+    "fee0-trades.csv": {
+      "sha256": "34423030f4601b9f4ee7f084704a9be776f5cb3fc4b2e1410db22ce7a88f7278",
+      "bytes": 3747
+    },
+    "fee20-trades.csv": {
+      "sha256": "297a5a7b11b8a54408a41b0673073f1b29497c6ea7275ef78e85992068b0fd78",
+      "bytes": 3614
+    },
+    "independent-validation.json": {
+      "sha256": "a77265dc313ef2928bc72a786601d6b7445745b3542f74a66841c252371db647",
+      "bytes": 3071
+    },
+    "recovery-validation.json": {
+      "sha256": "5001d1deb32ce8ca7f4ec447da68a2d16e688ff9510eaabc948cd60164b02c7b",
+      "bytes": 2357
+    },
+    "summary.json": {
+      "sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521",
+      "bytes": 3688
+    }
+  },
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "protocol_sha256": "a13acd951d8303644b035b964d7f5ad27f7449699d9dab5496d9a964fb725613",
+  "private_full_results": [
+    {
+      "path": "base-daily-nav.csv",
+      "bytes": 51455,
+      "sha256": "dd97ad5f60eec7d75c2882f02effae32a494d9fa9b3c5bfde3e6d26ac8d70b96"
+    },
+    {
+      "path": "base-trades.csv",
+      "bytes": 4059,
+      "sha256": "4a41a777d5958017885a2bb10a26dfb673e1891ca3fe5058d608f0da649334bb"
+    },
+    {
+      "path": "buyhold-daily-nav.csv",
+      "bytes": 50801,
+      "sha256": "c9f16e8c2f63ad8fcea1bcc65e8908cce625158384bf6ac2d1bde965130450ba"
+    },
+    {
+      "path": "delay2-daily-nav.csv",
+      "bytes": 51692,
+      "sha256": "5a7e908a85c9c8fa2dbc0c2aef8ce2c7d4d7c8d419e118cf89caafafce530a97"
+    },
+    {
+      "path": "delay2-trades.csv",
+      "bytes": 3285,
+      "sha256": "7c66c3369fc45215d4165a1e8ff2a88c119f93ac4462346839696ff81ba544ec"
+    },
+    {
+      "path": "fee0-daily-nav.csv",
+      "bytes": 51240,
+      "sha256": "18c02632dedc1d4969eb706d5905fd337616c8f27dd4607cde7b99d78a5f1111"
+    },
+    {
+      "path": "fee0-trades.csv",
+      "bytes": 3747,
+      "sha256": "34423030f4601b9f4ee7f084704a9be776f5cb3fc4b2e1410db22ce7a88f7278"
+    },
+    {
+      "path": "fee20-daily-nav.csv",
+      "bytes": 51429,
+      "sha256": "c56e1abe2ee4331b04173d7d35050a19a03de3cda259d5886b13c2a47eecfc53"
+    },
+    {
+      "path": "fee20-trades.csv",
+      "bytes": 3614,
+      "sha256": "297a5a7b11b8a54408a41b0673073f1b29497c6ea7275ef78e85992068b0fd78"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3688,
+      "sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance Vision",
+    "license": "CC BY-NC-SA 4.0",
+    "additional_terms": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "Native Freqtrade simulated trades, USDT daily NAV and derived metrics"
+  },
+  "state": "LOCAL_VALIDATED_AWAITING_COORDINATOR_REMOTE_SAVE"
+}

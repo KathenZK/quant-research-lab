@@ -1,0 +1,11 @@
+{
+  "id": "M0286",
+  "state": "FROZEN_NOT_EXECUTED",
+  "frozen_at_utc": "2026-10-03T10:12:50.396082+00:00",
+  "protocol_sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "controls": 1,
+  "strict_replication": false
+}

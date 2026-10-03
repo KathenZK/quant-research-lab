@@ -1,0 +1,24 @@
+{
+  "record_id": "M0288",
+  "checked_at_utc": "2026-10-03T10:18:30.544204+00:00",
+  "status": "PASS_FAMILY_SCOPE_PENDING_GLOBAL_REGISTRATION",
+  "source_risk_accounting_and_causality": "PASS; independent-validation.json",
+  "fresh_download_replay": "PASS;10 complete files byte-identical",
+  "graph_projection_rebuild": "PASS;11 light artifacts and private detail byte-identical",
+  "ruff": "PASS",
+  "compileall": "PASS",
+  "family_document_checks": {
+    "passed": 14,
+    "deselected": 2,
+    "reason": "Both global index registration checks delegated exclusively to coordinator; not treated as passed"
+  },
+  "relative_markdown_links": "PASS",
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "benchmark_configurations": 1,
+  "strict_reproductions": 0,
+  "source_blocked_ids": 0,
+  "remote_saved_by_this_executor": false,
+  "graph_imported": false,
+  "deployed": false
+}

@@ -1,0 +1,99 @@
+{
+  "record_id": "M0288",
+  "run_id": "M0288-20261003-native-diagnostic-v1",
+  "frozen_at_utc": "2026-10-03T10:06:54.025078+00:00",
+  "fidelity_class": "HYPOTHESIS",
+  "research_stage": "explore",
+  "evidence_class": "retrospective_historical_replay",
+  "source_sha256": "cce61e4af8ed3cb8e78a5d9713aba7891ec08d1bdb1da9911c3f550424db795d",
+  "framework_version": "2026.9",
+  "framework_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "original_runtime_known": false,
+  "source_parameters": {
+    "buy_pr1": "CDLHIGHWAVE",
+    "buy_vol1": -100,
+    "minimal_roi": {
+      "0": 0.936,
+      "5271": 0.332,
+      "18147": 0.086,
+      "48152": 0
+    },
+    "stoploss": -0.288,
+    "trailing_stop": true,
+    "trailing_stop_positive": 0.032,
+    "trailing_stop_positive_offset": 0.084,
+    "trailing_only_offset_is_reached": true
+  },
+  "signal": "TA-Lib CDLHIGHWAVE(open,high,low,close)==-100; unchanged original source methods with actual Freqtrade parameter lifecycle",
+  "exit_signal": "Execute original dataframe.loc[(),exit_long]=1; verified no rows selected on flat index, no signal exit emitted. Native ROI/stop/trailing remain enabled. No source edit.",
+  "selection": {
+    "symbol": "BTC/USDT",
+    "market": "spot",
+    "timeframe": "1d",
+    "universe_origin": "researcher single asset diagnostic, author universe absent"
+  },
+  "input": {
+    "relative_reference": "../M0216/artifacts/20261003-first-replay/input.csv",
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "start": "2022-12-01T00:00:00Z",
+    "cutoff_exclusive": "2025-01-01T00:00:00Z",
+    "data_profile": "official Binance Vision native spot1d diagnostic; not canonical perpetual bundle",
+    "data_quality": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "pit_proven": false,
+    "historical_tradability_proven": false
+  },
+  "evaluation": {
+    "start": "2023-01-01T00:00:00Z",
+    "last_bar_open": "2024-12-31T00:00:00Z",
+    "warmup": "2022-12 indicator-only; no pending warmup entry",
+    "window_previously_exposed": true,
+    "independent_oos": false,
+    "prior_search_count": "unknown; source reports173/1000 hyperopt epoch and retrospective author metrics, not reproduced"
+  },
+  "execution": {
+    "engine": "installed native Freqtrade2026.9 Backtesting with unchanged original strategy",
+    "initial_cash": 100000,
+    "stake_currency": "USDT",
+    "max_open_trades": 1,
+    "tradable_balance_ratio": 0.95,
+    "stake_amount": "unlimited",
+    "entry_timing": "closed signal to next candle open; one additional bar for delay2 sensitivity",
+    "market_metadata": "explicit static offline diagnostic pair: fractional amount precision1e-8, price precision0.01; no historical lot/min-notional/PIT claim",
+    "slippage_bps": 0,
+    "fill": "native Freqtrade within-candle assumptions and full fill, no orderbook/impact model",
+    "terminal": "native force_exit for open position at last bar; preserve actual returned trade closing rate/time",
+    "leverage": 1,
+    "direction": "long_only",
+    "cash_interest": 0,
+    "funding": "none spot"
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "signal_delay_bars": 2
+    }
+  ],
+  "benchmark": "95% cash budget BTC buy-and-hold first evaluation open to final bar close,8bps each side; terminal difference disclosed",
+  "metrics": "UTC daily close NAV from exact trade ledger; sample daily Sharpe sqrt365, initial-equity included drawdown; no intraday path claim",
+  "economic_hypothesis": "Bearish high-wave candle marks indecision; reversal may yield risk-controlled long opportunities. Source supplies no paper or independent economic test; sign/long direction is an empirical hypothesis.",
+  "strict_reproductions": 0,
+  "promotion": "none"
+}

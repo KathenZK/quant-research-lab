@@ -1,0 +1,107 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T10:28:44.970731+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "005",
+  "checkpoint": 2,
+  "new_accepted_ids": [
+    "M0286",
+    "M0288"
+  ],
+  "new_strategy_configurations": 8,
+  "new_controls": 2,
+  "strict_reproductions": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0288",
+    "M0286"
+  ],
+  "cumulative_strategy_configurations": 47,
+  "cumulative_controls": 12,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259"
+  ],
+  "active_not_counted_complete": {},
+  "external_claims": {
+    "M0275": "dot claimed/preparing per parent; no completion receipt",
+    "M0274": "DATA_BLOCKED:2024-02 12h archive Tunnel403;14months through2024-01 validated;0 valid backtests;offline source QA ongoing per parent",
+    "M0257": "dot reserved source/data preflight only",
+    "M0273": "dot reserved source/data preflight only"
+  },
+  "M0288_validation": {
+    "root_independent_ledger": "PASS",
+    "recreated_outputs_identical": 10,
+    "run_id": "M0288-20261003-native-diagnostic-v1",
+    "fidelity": "HYPOTHESIS",
+    "code_commit_executor": "2c0b26ff2158c091350b6460a4c7068619953271",
+    "raw_inputs_public": false
+  },
+  "M0256_M0259_library": {
+    "library_file_id": "libfile_9df3017ee3008191840664f5975b1879",
+    "version": 0,
+    "restore_receipt_from_parent": true,
+    "manifest_members_verified": 93,
+    "recreated_outputs_identical": 18
+  },
+  "M0288_library": {
+    "state": "BLOCKED_BEFORE_UPLOAD",
+    "reason": "Current supported prepared-upload helper returned HTTP401 during app tool discovery",
+    "library_file_id": null,
+    "local_archive_sha256": "301b40f3af53cbf320363fe317aa87600a49e98f8918133b76e4eab65e718e4f",
+    "independent_manifest_sha256": "3ce8e0a3c10274cb19d080b22542bf111e44d78b877103721cbbbb9e184b2f46",
+    "remote_git_save": "e81300d1f11f611e32d4e93a4441688a6aea207c;38 changed files read back byte-identical"
+  },
+  "graph": {
+    "metadata_main_commit": "af2b1c3ef3c004b9b50f13880b5349e219747fdb",
+    "metadata_branch_ci": "both passed",
+    "sample_library_file_id": "libfile_4df280019a108191a32c1268f7f7973a",
+    "sample_library_local_restore": "download failed; remote save acknowledged",
+    "site_writer": "dot exclusively",
+    "site_new_results_imported": false,
+    "site_deployed": false,
+    "live_site_baseline_parent_reported": {
+      "runs": 71,
+      "execution_versions": 2525
+    },
+    "full_private_validate_release": "blocked:330 missing locked raw files,0 mismatches",
+    "metadata_main_ci": "both passed:37116151112/37116151124"
+  },
+  "frozen_evidence_overwritten": false,
+  "full_6973_archive_byte_recovery": false,
+  "strict_count_excludes_legacy_proxy_trials": true,
+  "large_raw_or_curve_snapshot_is_not_current_expansion_gate": true,
+  "graph_import_is_not_backtest_prerequisite": "explicit user authorization 2026-10-03T09:57:40Z; ongoing assigned batches only",
+  "restorations_and_rechecks_are_not_new_trials": true,
+  "M0286_validation": {
+    "root_independent_decimal_ledger": "PASS",
+    "recreated_outputs_identical": 18,
+    "strategy_configurations": 4,
+    "controls": 1,
+    "fidelity": "HYPOTHESIS",
+    "frozen_manifest_sha256": "194f5583f5b07482401b701e54f89b8b1548d805b054416218537f7e95d16315"
+  },
+  "legacy_6973_persistence": {
+    "user_priority": "persist all original IDs before new collection intake",
+    "expected_bytes": 6470637,
+    "expected_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "expected_unique_ids": 6973,
+    "expected_gaps": 46,
+    "type_column": null,
+    "current_executor_original_bytes": "BLOCKED:standard Library download failed",
+    "candidate_ingestion": "paused; new candidates not added",
+    "current_action": "general resumable metadata tooling and fixture tests; await verified source bytes"
+  }
+}

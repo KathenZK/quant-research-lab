@@ -1,0 +1,57 @@
+{
+  "repository": "freqtrade/freqtrade",
+  "ref_requested": "stable",
+  "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "resolved_at": "2026-10-03T10:04:56.009833+00:00",
+  "files": [
+    {
+      "path": "freqtrade/strategy/parameters.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/parameters.py",
+      "sha256": "f0b9830e7652f49b9d782ae7ab082960b68db238d44d3cc96f59133fbf35505b",
+      "bytes": 15212,
+      "file": "freqtrade-freqtrade__strategy__parameters.py"
+    },
+    {
+      "path": "freqtrade/strategy/hyper.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/hyper.py",
+      "sha256": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+      "bytes": 7650,
+      "file": "freqtrade-freqtrade__strategy__hyper.py"
+    },
+    {
+      "path": "freqtrade/strategy/interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "bytes": 81628,
+      "file": "freqtrade-freqtrade__strategy__interface.py"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/optimize/backtesting.py",
+      "sha256": "1b185dfe44e5b0cbab0f2e35fae8c6f545c9aa987d556cd019bea1bd8880bfd1",
+      "bytes": 82552,
+      "file": "freqtrade-freqtrade__optimize__backtesting.py"
+    },
+    {
+      "path": "freqtrade/resolvers/strategy_resolver.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/resolvers/strategy_resolver.py",
+      "sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+      "bytes": 13694,
+      "file": "freqtrade-freqtrade__resolvers__strategy_resolver.py"
+    },
+    {
+      "path": "freqtrade/__init__.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/__init__.py",
+      "sha256": "95845714fc8f4a97c0379e2d2980181e3aac0d81398b89ff134254fe69d5c817",
+      "bytes": 972,
+      "file": "freqtrade-freqtrade____init__.py"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/LICENSE",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "bytes": 35141,
+      "file": "freqtrade-LICENSE"
+    }
+  ]
+}

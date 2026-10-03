@@ -1,0 +1,13 @@
+{
+  "code_sha256": {
+    "scripts/export_graph.py": "2f4d72517f995958d2ccab2224ecf30e2580714a6b4b169de83c40368cd1ec37",
+    "scripts/rebuild_inputs.py": "648cf97bbcd017f64e3db925b05ce3e33c64b7cdf457b32ad7a19900efc3b949",
+    "scripts/run_replay.py": "825d2f71ea0062ec7f783989e5365379bf1bb392d27a2ffa685d028ae2f6a746",
+    "scripts/validate_replay.py": "d27cf1c91dc3763dda812bfddc87d36592cdb5def177000abc6fccf59a00248b",
+    "scripts/verify_recovery.py": "43f28c9c7848f72e8ec0a69887037af9bfeaeaf4c40929917928efad9917756d"
+  },
+  "base_lab_commit": "8661e31456a44887903327c82cf0f97604fd3b03",
+  "source_sha256": "cce61e4af8ed3cb8e78a5d9713aba7891ec08d1bdb1da9911c3f550424db795d",
+  "runtime_evidence": "specs/environment.json",
+  "result_summary_sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521"
+}

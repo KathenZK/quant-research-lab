@@ -1,0 +1,6 @@
+{
+  "m0216_fetch_inputs_sha256": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+  "input_manifest_reference": "../M0216/artifacts/20261003-first-replay/input-manifest.json",
+  "input_manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+  "lab_main_at_start": "8661e31456a44887903327c82cf0f97604fd3b03"
+}
