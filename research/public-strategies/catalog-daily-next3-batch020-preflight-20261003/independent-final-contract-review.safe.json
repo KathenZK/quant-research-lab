@@ -1,0 +1,149 @@
+{
+  "status": "PASS_FINAL_FROZEN_CONTRACT_SEMANTIC_AND_PIN_REVIEW_NOT_CODE_OR_HISTORY_GATE",
+  "batch": "020",
+  "contract_sha256": "5a15f69fca876a4ea3872a2b94ac5f379adfec6e5f11b88de9c4c8ffe64a3d2b",
+  "contract_bytes": 7092,
+  "verified_pins": [
+    {
+      "name": "M2903",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M2903-root-frozen-rules.json",
+      "bytes": 17147,
+      "sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2"
+    },
+    {
+      "name": "M3710",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M3710-root-frozen-rules.json",
+      "bytes": 17318,
+      "sha256": "e5200ca8aa62f787e32101702e2d638c0d37959b5ff6ff5f713058544156eb6d"
+    },
+    {
+      "name": "M0974",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-root-frozen-rules.json",
+      "bytes": 18920,
+      "sha256": "b3c6077f6440c5f41bc3958278650fad9124b403d49ef91fb4a6d115e733bfbb"
+    },
+    {
+      "name": "M2903-source-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M2903-source-review.safe.json",
+      "bytes": 4735,
+      "sha256": "5ec34bf7cea7524820168dc8127da31841557d3d3c9d040462b670a5e5142dc9"
+    },
+    {
+      "name": "M3710-source-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M3710-source-review.safe.json",
+      "bytes": 9785,
+      "sha256": "387340040ae9bd5f165da3b8cc5611cb8132405791d346bccc98bd384c630e8e"
+    },
+    {
+      "name": "M0974-source-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-source-review.safe.json",
+      "bytes": 5590,
+      "sha256": "d6e78f5391d4f712f8f9a48c01e36bb75338caebcae8ad6c19868a4381c2ee37"
+    },
+    {
+      "name": "independent-draft-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/independent-draft-review.safe.json",
+      "bytes": 6310,
+      "sha256": "6737baef2c2464dd812226f853d055cea2f41a24014b6a81acf868db8498b9f8"
+    },
+    {
+      "name": "M0974-independent-input-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-independent-input-review.safe.json",
+      "bytes": 6926,
+      "sha256": "1bdba0db3cbd2a65b3f2d2181bb802e6daade51f65167fd60597fc806fbea63d"
+    },
+    {
+      "name": "input-view-831-review.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/input-view-831-review.safe.json",
+      "bytes": 619,
+      "sha256": "cee8c483d3d5682f8113895fc90301dba4841e07fb6cbc2996fc64b99febb566"
+    },
+    {
+      "name": "M0974-warmup-choice.safe.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-warmup-choice.safe.json",
+      "bytes": 1547,
+      "sha256": "4d70efc0fab9cefe35c400abce71b9ca26cff88f55eed4a27754cd7ea6809bec"
+    },
+    {
+      "name": "M0974-input-manifest.json",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-input-manifest.json",
+      "bytes": 49479,
+      "sha256": "9740c7618456526f48f4fff608e3723c84b45b32e2a3529db34ddd08f3793cbc"
+    },
+    {
+      "name": "build_m0974_input.py",
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/build_m0974_input.py",
+      "bytes": 6217,
+      "sha256": "6eb1967288700fa0a581acece954250209800cdb8077232b748465d014c93834"
+    }
+  ],
+  "semantic_diff": {
+    "trading_rule_or_parameter_drift": false,
+    "unchanged": [
+      "capital/accountmath",
+      "4cost/lagcases",
+      "execution/pendingcancelrules",
+      "entry/exit",
+      "indicatorparameters/seed/recurrence",
+      "statistics",
+      "oldcontrolidentity",
+      "firstevalcoldstart"
+    ],
+    "review_suggestions_closed": [
+      "Allcanonical/accountview/evalindexnamespacesandterminalfutureordinaldisclosure",
+      "M0974originalindex-to-spotandflatRSI50explicitassumption",
+      "Legacy401statementrestrictedtobatch016",
+      "M3710primaryonlybibliography/noSMA20verificationclaim;T-billtozero-yieldcashdisclosure",
+      "M0974actual1466/735/731inputpinandindependentdataPASSbound"
+    ],
+    "assignments": "Threeuniqueowners/branches;sharedthinadapterseparatetasknotimplemented"
+  },
+  "claims_check": {
+    "files_scanned": 13,
+    "prior_files": 12,
+    "targetIDs_only_in_batch020_claim": true,
+    "target_family_roots_absent": true,
+    "owners_branches_match_contract": true,
+    "M1266_M1180_not_assigned_here": true,
+    "stage": "ASSIGNED_NOT_STARTED",
+    "accepted_new": 0
+  },
+  "M0974_data_binding": {
+    "input_bytes": 247171,
+    "canonical_sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+    "independent_QA_sha256": "1bdba0db3cbd2a65b3f2d2181bb802e6daade51f65167fd60597fc806fbea63d",
+    "manifest_sha256": "9740c7618456526f48f4fff608e3723c84b45b32e2a3529db34ddd08f3793cbc",
+    "rows": 1466,
+    "warmup": 735,
+    "eval": 731,
+    "view_offset": 704,
+    "view_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "data_QA_reexecuted_here": false,
+    "basis": "Readandhashverifiedindependentdatareceipt/manifest/builderbindings;noactualmarketbytesreadorindicatorcomputedinthisreview."
+  },
+  "public_boundary": {
+    "source_bodies_rawmarket_private": true,
+    "source_rule_equivalence_not_overclaimed": true,
+    "safe_files_no_machinepaths_LibraryIDs_orcredentialpatterns": true,
+    "license_and_nonproduction_attribution_limits_preserved": true,
+    "original_source_flags_unchanged": true
+  },
+  "counts": {
+    "historical_runs": 0,
+    "controls_run": 0,
+    "features_computed": 0,
+    "planned_strategy_configurations": 12,
+    "planned_new_controls": 0,
+    "claims_written_by_reviewer": 0,
+    "repository_or_global_writes": 0
+  },
+  "remaining_gates": [
+    "Implementthinadapteronlyunderseparatetask;freezeandindependentlyQAactualcode/manifest/remote pin",
+    "Perfamilyimplementation+runtime/exposure/C0 beforehistoricalfeatures",
+    "Independentactualcode/synthetic/order/account/causality/recoveryQA",
+    "RootseparateexactC0release"
+  ],
+  "new_blocking_findings": [],
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

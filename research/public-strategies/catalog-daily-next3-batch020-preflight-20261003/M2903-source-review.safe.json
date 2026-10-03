@@ -1,0 +1,73 @@
+{
+  "id": "M2903",
+  "source_access_status": "BLOCKED_BOT_VERIFICATION_HTTP200_NOT_ARTICLE",
+  "original_record": {
+    "bytes": 3130,
+    "sha256": "274235f61369feb87540d33b23c0edb173e5fe03ac34958ba7a4c5e70ca9de69",
+    "reported_fields_read": 11,
+    "publication_flags_unchanged": true
+  },
+  "fetch": {
+    "url": "https://www.quantifiedstrategies.com/can-you-beat-the-market-with-just-one-rule/",
+    "captured_utc": "2026-10-03T20:47:38.641499+00:00",
+    "original_sha256": "274235f61369feb87540d33b23c0edb173e5fe03ac34958ba7a4c5e70ca9de69",
+    "status": 200,
+    "final_url": "https://www.quantifiedstrategies.com/can-you-beat-the-market-with-just-one-rule/",
+    "content_type": "text/html",
+    "last_modified": null,
+    "bytes": 1980,
+    "sha256": "13f7ba7af2c4806821334d23c269917240875b666d9993986af80cc8451d55ce"
+  },
+  "primary_article_verified": false,
+  "source_version": "No article version obtained; hash binds only bot-challenge response. Catalog date2025-07-30 remains catalog-reported, not independently verified.",
+  "stopped": {
+    "challenge_not_solved": true,
+    "no_post_or_cookie_auth": true,
+    "no_alternate_host_or_proxy": true,
+    "no_retry": true
+  },
+  "catalog_supported_rule": "Bitcoin daily close crossing above EMA20 enters long; crossing below exits. It is an event rule, not a persistent close>EMA state rule. No short-side rule is stated.",
+  "unverified_article_details": [
+    "Exact quote/venue/data provider and session labels",
+    "Author evaluation dates (catalog publication date is not evaluation window)",
+    "Commission/slippage/capital/allocation/interest",
+    "EMA seed and equality convention",
+    "Order time/fill, pending-order/collision behavior",
+    "Source code/version and any additional unstated risk condition",
+    "Catalog claim approximately56% exposure not independently verified and not used for selection"
+  ],
+  "adapted_candidate": {
+    "status": "CATALOG_HYPOTHESIS_ELIGIBLE_PENDING_ROOT_CONTRACT",
+    "basis": "Previously authorized catalog-explicit-rule hypothesis; source access failure remains separately visible. Not strict or author-confirmed execution.",
+    "preserve": "EMA20 daily crossover long/flat, no other filters or EMA periods added.",
+    "suggested_cross": "buy C[t]>E[t] and C[t-1]<=E[t-1]; sell C[t]<E[t] and C[t-1]>=E[t-1]. Previous equality counts; current equality does not. This common mathematical convention is a declared hypothesis, not confirmed article semantics.",
+    "market_window": "BinanceBTCUSDT spot UTC daily2023–2024 is explicitly chosen input proxy; neither venue nor quote is attributed to author. Existing approved831row input provides100 prior closes; no data request needed.",
+    "seed": "Candidate EMA alpha2/21, SMA first20 close seed at index19, recursive update thereafter; first evaluation uses previous EMA too. This is chosen math, not confirmed source. With100 prior closes,80recursive warmup updates remain after seed: residual multiplier(19/21)^80, not zero and not PIT proof.",
+    "sizing": "Not given by catalog. Root must explicitly choose cash allocation/capital. Do not inherit M1266 nominal90% or signal-fixed quantity as source defaults.",
+    "execution": "Propose close signal nextUTCsessionopen, with retained pending market intents and predeclared lag sensitivity. A flat initial state must wait for a new cross; do not enter solely because price already above EMA at window start. Root freezes order priority, cost accounting, end-window pending/holding, and no forced liquidation.",
+    "kernel": "May reuse approved dailycash accounting only after matching allocation and warmup interface; old31warmup/762row gates cannot accept831/100 silently. No kernel modified.",
+    "control": "Any comparison needs explicitly matching allocation/cost/window control pin or separately authorized new control; not assumed here."
+  },
+  "synthetic_followup": [
+    "EMA seed first valid index19 and independent recurrence",
+    "previous equality versus current equality and NaN readiness",
+    "initial aboveEMA without cross remainsflat",
+    "buy/sell signal event truth table, lagged intent and same-open no reentry",
+    "fee-inclusive quantity/cash precision and pending window end",
+    "100warmup interface and canonical input hash guard"
+  ],
+  "counts": {
+    "primary_get": 1,
+    "article_pages_read": 0,
+    "historical_features": 0,
+    "historical_runs": 0,
+    "accounts": 0,
+    "controls": 0,
+    "claims": 0,
+    "market_requests": 0,
+    "repo_global_writes": 0
+  },
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "publication": "Only self-written safe receipt/URL/hashes eligible; original11field record and rawresponse remain private. No full article/code obtained."
+}

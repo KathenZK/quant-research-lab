@@ -1,0 +1,1447 @@
+{
+  "PIT": false,
+  "caveats": [
+    "No is_closed flag fabricated; close_time/grid/checksum do not prove PIT or finality",
+    "Native daily aggregates do not prove intraday continuous tradability; known 2023-03-24 intraday exchange halt remains",
+    "Earlier26 raw December2020 rows are excluded from canonical view; do not feed them to future indicators",
+    "No trusted lake status or perpetual identity borrowed"
+  ],
+  "closed_bar_authority_proven": false,
+  "columns": [
+    "open_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "close_time",
+    "quote_volume",
+    "trade_count",
+    "taker_base",
+    "taker_quote",
+    "ignore"
+  ],
+  "controls": 0,
+  "cutoff_exclusive": "2025-01-01T00:00:00Z",
+  "dataset_id": "binance.spot.BTCUSDT.native1d.20201227-20241231.M0974-input-v1",
+  "duplicate_rows": 0,
+  "evaluation_rows": 731,
+  "evaluation_start": "2023-01-01T00:00:00Z",
+  "excluded_early_source_rows": 26,
+  "finality": false,
+  "history_runs": 0,
+  "identity": {
+    "exchange": "binance",
+    "market_type": "spot",
+    "session_policy": "continuous_24_7",
+    "source": "BinanceVision monthly native trade-price klines",
+    "symbol": "BTCUSDT",
+    "timeframe": "UTC1d"
+  },
+  "indicator_values_computed": false,
+  "input_bytes": 247171,
+  "input_sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+  "input_start": "2020-12-27T00:00:00Z",
+  "layer": "cache",
+  "license": "CC-BY-NC-SA-4.0 plus BinanceVisionDatasetTerms",
+  "missing_bars": 0,
+  "monthly_QA": [
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2020-12",
+      "native_csv_bytes": 5179,
+      "native_csv_sha256": "ff7c942cf9c50cb11ff7e6fa1a51b6a4a1a04e210dee17dd1ff0b8eb32201515",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "d1399cd3"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-01",
+      "native_csv_bytes": 5224,
+      "native_csv_sha256": "966115b78f05c1858885807c92120754a41eccf97e68e1305e96c341f2a8c043",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "e77a9035"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-02",
+      "native_csv_bytes": 4709,
+      "native_csv_sha256": "de6ccb9c1ac6785e04e5775d4dbcd8d2881616d631e3bd8588963571b88eda5b",
+      "provider_checksum": "PASS",
+      "rows": 28,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "43860588"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-03",
+      "native_csv_bytes": 5209,
+      "native_csv_sha256": "1eb0638c748ed52f89b6ef16232f87908a34cab50509ef863d0e4531fe125b48",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "3cfd26b5"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-04",
+      "native_csv_bytes": 5043,
+      "native_csv_sha256": "d71aa1f2e1d9e17ef9f8a28198fd36a616ed489ace277ca65c98827f139dcfec",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "1b4d4fc9"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-05",
+      "native_csv_bytes": 5226,
+      "native_csv_sha256": "947729d31208efb54fffc809a74e597dde88158f749cb2a42e94765fa21e42ec",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "11f84f7c"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-06",
+      "native_csv_bytes": 5047,
+      "native_csv_sha256": "863a4f155d5da1b0118cd569fe46ac432494e374fa6c186a7b9267e8443fcc1f",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "58ea7875"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-07",
+      "native_csv_bytes": 5182,
+      "native_csv_sha256": "19fbc85068696b5acce0e052d9102573bca0b58a15d1c3b7126a0f31403566eb",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "729212bf"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-08",
+      "native_csv_bytes": 5201,
+      "native_csv_sha256": "85aba404f244255df0431503e2691edba2a3d4bb00c2530a23709c791dcfaaa3",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "1f6b5c9b"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-09",
+      "native_csv_bytes": 5025,
+      "native_csv_sha256": "2d8c91bd0172132bf63e00f443b86c7f20ba6928589874bdd6c70172b6bc9c6f",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "ffded8e3"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-10",
+      "native_csv_bytes": 5201,
+      "native_csv_sha256": "54b8e594a398cc9a90fd52daeb756b9ba749921dbd5609394d3d21318490b14e",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "a85546d3"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-11",
+      "native_csv_bytes": 5029,
+      "native_csv_sha256": "bcccfefa41e001b6ef58a9b05b61d4aa901bb8699b39535e85e588b91cc169b3",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "dc3cb1ee"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2021-12",
+      "native_csv_bytes": 5178,
+      "native_csv_sha256": "73b1e76da09c5e6dd7474e235e2a4fe1aa28e2933f70b5c937292cfc2c026f08",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "32fa890d"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-01",
+      "native_csv_bytes": 5162,
+      "native_csv_sha256": "4d85f5fbeac1e0cd6881af096c1cca036dcaf3ba15d211ee2adaf7353334e48d",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "caf06a4f"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-02",
+      "native_csv_bytes": 4669,
+      "native_csv_sha256": "5daf83e78cdeff7ac3763b74bf7f844cad22deff675f08a24df9b9887c607402",
+      "provider_checksum": "PASS",
+      "rows": 28,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "593ef2dd"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-03",
+      "native_csv_bytes": 5181,
+      "native_csv_sha256": "f4be1fb405a9c38bd71837af6c819d645916d672015f9b1e5ccf3e479810b38e",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "e10a790f"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-04",
+      "native_csv_bytes": 5000,
+      "native_csv_sha256": "0ba84b42c58e9f4ae73f76c1db4d40b99c36a766dd9f2a758768dfc324f75dec",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "ccf8a063"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-05",
+      "native_csv_bytes": 5187,
+      "native_csv_sha256": "c5bf6ac0a1eed08b7eff286c4c8085ca5ac111d95dd7144f05be32693758b3c2",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "7610b6b0"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-06",
+      "native_csv_bytes": 5025,
+      "native_csv_sha256": "8315707d80c2c3489f7ca125d948e46d68e797efed1bf651f048efa99e86321f",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "042b590c"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-07",
+      "native_csv_bytes": 5231,
+      "native_csv_sha256": "33571a8e68168d2dc41dd8f829d30023118322d3dfa6110f17499aa2aecb1ac1",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "697af6c3"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-08",
+      "native_csv_bytes": 5247,
+      "native_csv_sha256": "48fe34417a3e4e936c976b7123b2fd1f90e8bc836fb30e19389b1ad40c8c94a3",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "4f0890a6"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-09",
+      "native_csv_bytes": 5097,
+      "native_csv_sha256": "6f867ed6f7b93d9f7bf7b924c18534e1156d27f59c3bfdc5f9578eac8e93bb5e",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "b2110163"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-10",
+      "native_csv_bytes": 5260,
+      "native_csv_sha256": "dcfcd3ad15e8e54cbd1d9b9d99f8fa7be1252bc3fbf9d57c3aa5c93f1e1d01fb",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "85b2e7aa"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-11",
+      "native_csv_bytes": 5098,
+      "native_csv_sha256": "905aeddab9911058aed3ec241f2343bb5bfbd9cb17fb7442cc7251704fe09381",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "a27d7c8d"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2022-12",
+      "native_csv_bytes": 5248,
+      "native_csv_sha256": "0b1499cba8c468a2a98dd81bd39fa5cd3105bafb1cd2f54b79b75106956ef395",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "a590bd97"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-01",
+      "native_csv_bytes": 5259,
+      "native_csv_sha256": "50ba15bf92b8dc1877ed6dedb8385b2a887e2743dc80aae0a2b761a87bd92267",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "23d04d4e"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-02",
+      "native_csv_bytes": 4766,
+      "native_csv_sha256": "28a35f85dce57836fcadc0830166a4a923aee8169308b9be3f4c3b25faf93bf9",
+      "provider_checksum": "PASS",
+      "rows": 28,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "74693dc6"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-03",
+      "native_csv_bytes": 5269,
+      "native_csv_sha256": "66b5bb6979331b5ab5528afd98f88d328971132a8e46c1a84047ac5826cdad22",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "0079a1d5"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-04",
+      "native_csv_bytes": 4998,
+      "native_csv_sha256": "4aa56d9d2e8706048304eb5f6d9e0670ebe7490834a629b2676764a862bd3235",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "0cd4511c"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-05",
+      "native_csv_bytes": 5144,
+      "native_csv_sha256": "41996e40181457d7b8dd65dfb1a386fb3c86e311ea8b91235e69b056c8410e17",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "c89b24cd"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-06",
+      "native_csv_bytes": 4980,
+      "native_csv_sha256": "a768a81e390a73ce97af452eab2aee4e0faaf877feb918caed4cd5f2e3158869",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "5a8f86b5"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-07",
+      "native_csv_bytes": 5122,
+      "native_csv_sha256": "5c7dbacd4e81fbbaf9b7ccde7acc32bc0e6f58a3519b44dd192e9be6c1a44d08",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "c542effd"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-08",
+      "native_csv_bytes": 5121,
+      "native_csv_sha256": "cb2ea116053d79f1e03e640abe146a4b29723c374d2177821bef81aa60f0f1e2",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "93db6653"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-09",
+      "native_csv_bytes": 4945,
+      "native_csv_sha256": "432cd0f16a240a72ec427a1a11b3fb5a8f1610a14bb1232b7c6ccf22290dd7ec",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "4280fbac"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-10",
+      "native_csv_bytes": 5152,
+      "native_csv_sha256": "acda83e452ccc039e13b70562dc098903ef7d8a100510a9af7445d430df83393",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "510b10e4"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-11",
+      "native_csv_bytes": 4988,
+      "native_csv_sha256": "fc5629b029b2f9f19e2210ba7000dbf861b671ad6b1c7e810459d5ae5a99d874",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "5806960e"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2023-12",
+      "native_csv_bytes": 5173,
+      "native_csv_sha256": "67d2ead50107db29a12798bfe2362256155cb0b61c1c4126f803095dcfca4052",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "aab0b3ae"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-01",
+      "native_csv_bytes": 5179,
+      "native_csv_sha256": "70be8ffeceecd76de13970e869e443497a92cd5c8976c4a76e11b3ef768a3380",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "905e88b2"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-02",
+      "native_csv_bytes": 4844,
+      "native_csv_sha256": "89e233c0628996c11a756f99b7f8dc5e652556c212ab4062dd051ddcecd7e0ae",
+      "provider_checksum": "PASS",
+      "rows": 29,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "301e0377"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-03",
+      "native_csv_bytes": 5202,
+      "native_csv_sha256": "fe0dd5047f264423081b928b1c2608c8f90b5f35f6ee7a29d9293404c2f5c5c7",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "bfab8374"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-04",
+      "native_csv_bytes": 5024,
+      "native_csv_sha256": "815f9d747d33da4f06859d4d4fbc59e7c5e4656bbbbf391c7567bd9988461993",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "7590e21c"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-05",
+      "native_csv_bytes": 5170,
+      "native_csv_sha256": "c914b616fd2c599ccb435c9b4e6b7bb18e9d8dddca3482d7e3b1908bcc884280",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "9703d975"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-06",
+      "native_csv_bytes": 4981,
+      "native_csv_sha256": "6ac045cf7a0222c3911d4e9dcbaeb167e9f288325a46836ea0144139d19d1906",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "b30e8f94"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-07",
+      "native_csv_bytes": 5177,
+      "native_csv_sha256": "4fd7f6ecec6773e4b2ac9cc9010d6d4c6ae3fb3279cd442f5a4028dfcc9208d5",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "f0797964"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-08",
+      "native_csv_bytes": 5169,
+      "native_csv_sha256": "d06980b63d16bdccbd53508c60a781e98ab863aff73f310f1ea8440f6537ffba",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "ab6fd0d4"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-09",
+      "native_csv_bytes": 4992,
+      "native_csv_sha256": "13f8cbbf65133a6e4332850a4d41227d6c9e10525cad620d2956383b63d9b1f6",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "12c6e731"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-10",
+      "native_csv_bytes": 5163,
+      "native_csv_sha256": "c28a229ed80e8f898eef2e30c4bcd2f051f0e8c797c92522a7b7c650ed84341d",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "80e42912"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-11",
+      "native_csv_bytes": 5036,
+      "native_csv_sha256": "75a04e5173157bebc0e98afa53802da9ec1d01dece786ac7d34ad56c464ef705",
+      "provider_checksum": "PASS",
+      "rows": 30,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "b68e112d"
+    },
+    {
+      "OHLCV": "PASS",
+      "ZIP_CRC": "PASS",
+      "grid": "PASS",
+      "month": "2024-12",
+      "native_csv_bytes": 5228,
+      "native_csv_sha256": "c12895cefd0147f30e13813c28a8a4f5032586e2bba00682b359b588a696d87f",
+      "provider_checksum": "PASS",
+      "rows": 31,
+      "zero_counts": {
+        "quote_volume": 0,
+        "trade_count": 0,
+        "volume": 0
+      },
+      "zip_CRC": "59c8a963"
+    }
+  ],
+  "native_decimal_strings_preserved": true,
+  "objects": [
+    {
+      "bytes": 2231,
+      "name": "BTCUSDT-1d-2020-12.zip",
+      "sha256": "77e2c7fa9a940828b3f36f7212f6def777acfc1402d173bdfad958d2e37ea469",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2020-12.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2020-12.zip.CHECKSUM",
+      "sha256": "d7f4ac7d5be8435a4cffebaaa3894112f8ea282b94f24ac842fa146917c4bea9",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2020-12.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2295,
+      "name": "BTCUSDT-1d-2021-01.zip",
+      "sha256": "6ff53d94f600e2a208882bfd5c00e2133cff8f07e57b7f373af29f85f86e0284",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-01.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-01.zip.CHECKSUM",
+      "sha256": "72eaa7cb939fa9154b4f7d0fadecba2cb3dbeab2e6134b9bdaf7ca7de325805a",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-01.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2103,
+      "name": "BTCUSDT-1d-2021-02.zip",
+      "sha256": "f18254dc4a70f396494be83a6081cfafd1935aaef42aef5a12f18b0244edeb27",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-02.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-02.zip.CHECKSUM",
+      "sha256": "15ac316d6a4d564d8716ba3cbfa19ee19e359a3ef4d7117c9cb50227d70861af",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-02.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2282,
+      "name": "BTCUSDT-1d-2021-03.zip",
+      "sha256": "f43e48b5efc8e0b06e0520b91aad4e5668844c766933c0c5cf403115dba03303",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-03.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-03.zip.CHECKSUM",
+      "sha256": "391f801e7cad5064b2c1346d6203f1c53078deab679234df0fbb38f6c962efbd",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-03.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2189,
+      "name": "BTCUSDT-1d-2021-04.zip",
+      "sha256": "3dd852f06608173dec98b7210f6a38728ef221f08717b362b4f3f09436e0a5fe",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-04.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-04.zip.CHECKSUM",
+      "sha256": "d5c5c5995743b15c0759d16fb0b2a81356a8c410bd8421d0a238f4b9c99ad473",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-04.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2283,
+      "name": "BTCUSDT-1d-2021-05.zip",
+      "sha256": "3122e1ebaa1376937d479964563dced19f850636a700bb7cb97d7872ea8c8f28",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-05.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-05.zip.CHECKSUM",
+      "sha256": "cf9274c954a51b98dcc60ea7fe4fbea70c99bb9a209b8b5e845206748bda1145",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-05.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2204,
+      "name": "BTCUSDT-1d-2021-06.zip",
+      "sha256": "9875e11e890f75ef6eb0188ef7f952e5c0ba6919bd6d72d3da4d6847b84c5ccf",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-06.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-06.zip.CHECKSUM",
+      "sha256": "f5a5f36cffba5eee4056792a6946a3e99ee4db52b4cec5766e9a7a34beabcda8",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-06.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2264,
+      "name": "BTCUSDT-1d-2021-07.zip",
+      "sha256": "636f588a6abb568f977aea3ae798f34ced4135f2f96fbc1493a2f9ab54a844eb",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-07.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-07.zip.CHECKSUM",
+      "sha256": "92f4dd51269ae0c6594700d0b3dd07eef6a4c0651859d9ae536da4ac7deed492",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-07.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2246,
+      "name": "BTCUSDT-1d-2021-08.zip",
+      "sha256": "68612e3fb74c184f97e4d3b2e061dd3743156401a6813ab897014b0b35caedd7",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-08.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-08.zip.CHECKSUM",
+      "sha256": "c85cec46b9b63ae8838d885d01fa7db644473141b518987b152a00e6cb0dd79e",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-08.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2156,
+      "name": "BTCUSDT-1d-2021-09.zip",
+      "sha256": "9f6535a0fe8a417b0909d230e4a02f6a9933eb23c770f54c9f6bf140e8d02257",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-09.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-09.zip.CHECKSUM",
+      "sha256": "6ebb428fc8a0ad23af7bffd52de4ff26972685113ec6b8e3f67ba448356685db",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-09.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2210,
+      "name": "BTCUSDT-1d-2021-10.zip",
+      "sha256": "ba50ff3dab5726ca8b9fa26065fe3a8f612aed4baa978ecdd9d39647cd108684",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-10.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-10.zip.CHECKSUM",
+      "sha256": "ede05b913e28d99d4719dd1f797da9bc810552fe6c498006ba7c27a2556667cf",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-10.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2166,
+      "name": "BTCUSDT-1d-2021-11.zip",
+      "sha256": "64162d8ec11458e9d02f49d8569e47765517852bcf0a908cd4d71211e3912e62",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-11.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-11.zip.CHECKSUM",
+      "sha256": "f9f37887289f4dbebe24b1f0f2f3e38875fb383e09e2ead186ac22b8bc60da08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-11.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2196,
+      "name": "BTCUSDT-1d-2021-12.zip",
+      "sha256": "6231b57d3a3b71fb76a1a34078a01a01275a59870857bf60408ccd3ba4618e75",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-12.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2021-12.zip.CHECKSUM",
+      "sha256": "5bf2e3dc5aec8c3acb6a20be925e0828064e34fad162657083ab045943a3b412",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-12.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2183,
+      "name": "BTCUSDT-1d-2022-01.zip",
+      "sha256": "a4a2e0432a8f0b42e2da71ac26599b2e6385b579ca4feba692a95cb897decdcd",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-01.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-01.zip.CHECKSUM",
+      "sha256": "8d8e07a36ae514a0b6926792707bfaa810d406cec0930fee27adb41879c7e137",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-01.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2011,
+      "name": "BTCUSDT-1d-2022-02.zip",
+      "sha256": "faffa5eadb9ebf0b32742773777596d0dbf3f282e94a16dd05cf1eb7b53a3763",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-02.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-02.zip.CHECKSUM",
+      "sha256": "9e8ef1a0ff37732b65bdd9535668cffaac0ada816684e53ee2c1edd64c8d21ad",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-02.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2206,
+      "name": "BTCUSDT-1d-2022-03.zip",
+      "sha256": "452129b478585b18931f728f89daed9d2a19d4824b932af7a099366efd4db639",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-03.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-03.zip.CHECKSUM",
+      "sha256": "0aebf864c31b47a428382b4a2ccdfa3f2fd91e993dadda1e700ea182ac58b8b0",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-03.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2117,
+      "name": "BTCUSDT-1d-2022-04.zip",
+      "sha256": "70413f67212d012ebfd600a6ebf20c03a9c8311bf764ab6d21d1bfd2d21d1b19",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-04.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-04.zip.CHECKSUM",
+      "sha256": "6a072d8953153971f017ed72b4f8c7ed6eb4374bfab40feab72f32ccef7381d6",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-04.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2212,
+      "name": "BTCUSDT-1d-2022-05.zip",
+      "sha256": "53eee1be2d5b461dabc67645ad706610b0465d8bbacd5f9cd99fc790c68f18f5",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-05.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-05.zip.CHECKSUM",
+      "sha256": "c0d5cbd2418e556a4885350865f2755752aa3a0077b24358e4e318793f39430b",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-05.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2169,
+      "name": "BTCUSDT-1d-2022-06.zip",
+      "sha256": "dd5047ce33c16231bcb01f534951a709937bbfe0c0667c61f20f188cf9b94de4",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-06.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-06.zip.CHECKSUM",
+      "sha256": "154490cabd8b5c8a4447e3b2b1bd09d111df617c82d1da22e6ad91204f9163f1",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-06.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2245,
+      "name": "BTCUSDT-1d-2022-07.zip",
+      "sha256": "216567f1a8bc1dbeaada097f7eddff12dafde177c16b26507c762a613a57eb5f",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-07.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-07.zip.CHECKSUM",
+      "sha256": "2f9ed3c390498a19aa7998a87d443f9f3be4712888eea9a178f09324353f7d24",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-07.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2237,
+      "name": "BTCUSDT-1d-2022-08.zip",
+      "sha256": "fc8bd69e95141afb6f83c5a4450c3f6b49c4a1cb16e42d90eb960c3ffa9e766e",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-08.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-08.zip.CHECKSUM",
+      "sha256": "7725126f2d9f8f2adbfb10557c42e5352afd1767d674c0c03c5af70d16b753b8",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-08.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2213,
+      "name": "BTCUSDT-1d-2022-09.zip",
+      "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-09.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-09.zip.CHECKSUM",
+      "sha256": "bb00e1e35f8030ffbb7c07df13bdea9dafa95b7e5d873ef617b207d8a4901015",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-09.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2219,
+      "name": "BTCUSDT-1d-2022-10.zip",
+      "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-10.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-10.zip.CHECKSUM",
+      "sha256": "9593c36f1c40cfa130f8ef6f72acc414da61a7028df0aa5113e1bc97042903c2",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-10.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2191,
+      "name": "BTCUSDT-1d-2022-11.zip",
+      "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-11.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-11.zip.CHECKSUM",
+      "sha256": "f14ecab2b0c8fcec6a329b007d5b499bd8ffe7663c5677fa129c498251d6db37",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-11.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2222,
+      "name": "BTCUSDT-1d-2022-12.zip",
+      "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-12.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2022-12.zip.CHECKSUM",
+      "sha256": "69270bc38bf2bce2ef473bab3846e9119952f597dc44e1f9c4062acbfef364cf",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-12.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2250,
+      "name": "BTCUSDT-1d-2023-01.zip",
+      "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-01.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-01.zip.CHECKSUM",
+      "sha256": "dee4c03862bcec3cb77c43d50973d450ea4b3a6c6114005c2b230a9aad01d454",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-01.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2072,
+      "name": "BTCUSDT-1d-2023-02.zip",
+      "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-02.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-02.zip.CHECKSUM",
+      "sha256": "5947aa09bcce8b0af5a71bed3241b0680bed9a05b57ba22ce4d8580032b66f29",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-02.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2265,
+      "name": "BTCUSDT-1d-2023-03.zip",
+      "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-03.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-03.zip.CHECKSUM",
+      "sha256": "4ae87b95b41803371c50754d4e9d66bfdc29009b17452dc5b499784525cff52e",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-03.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2108,
+      "name": "BTCUSDT-1d-2023-04.zip",
+      "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-04.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-04.zip.CHECKSUM",
+      "sha256": "ff934dc2f11da5df37b475a7ae4f392ef7df9d7945a820b7c51295e0e355c6ab",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-04.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2168,
+      "name": "BTCUSDT-1d-2023-05.zip",
+      "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-05.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-05.zip.CHECKSUM",
+      "sha256": "bc849dbfcc027fcc1e03c93e00616938644079ae632f4eea20a77256c80f2ba1",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-05.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2099,
+      "name": "BTCUSDT-1d-2023-06.zip",
+      "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-06.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-06.zip.CHECKSUM",
+      "sha256": "6db68d70a6c9c6701ec1bf0d9737bff3344838fc5b6c8b515f01d12e7d289e02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-06.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2132,
+      "name": "BTCUSDT-1d-2023-07.zip",
+      "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-07.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-07.zip.CHECKSUM",
+      "sha256": "364fe4b0962f9e1836a12bab7b47164f0117ad06bf516d3c6ffbd105b927ff4b",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-07.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2160,
+      "name": "BTCUSDT-1d-2023-08.zip",
+      "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-08.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-08.zip.CHECKSUM",
+      "sha256": "9d3396b6e98ead2e00c7aa5fcb51132ce4f10a40e15c24e6632d0032cdd1e21f",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-08.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2080,
+      "name": "BTCUSDT-1d-2023-09.zip",
+      "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-09.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-09.zip.CHECKSUM",
+      "sha256": "4ba133f29316eafef1a8af1d25f78e3690538f479625ee855a1ac284d8d7df82",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-09.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2154,
+      "name": "BTCUSDT-1d-2023-10.zip",
+      "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-10.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-10.zip.CHECKSUM",
+      "sha256": "55a9c4cef733df85900e7abbb0119629afdbc427e435e0e554db4fc0af1105ae",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-10.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2102,
+      "name": "BTCUSDT-1d-2023-11.zip",
+      "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-11.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-11.zip.CHECKSUM",
+      "sha256": "12583d6752383ddf5e070e25306c7fe425f7a57249cda15b2af940da5000a4fa",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-11.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2177,
+      "name": "BTCUSDT-1d-2023-12.zip",
+      "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-12.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2023-12.zip.CHECKSUM",
+      "sha256": "c02ae2a53fecc777a02272345ace99488ca15a19cbd7ea9a0a7265d057029ae9",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-12.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2190,
+      "name": "BTCUSDT-1d-2024-01.zip",
+      "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-01.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-01.zip.CHECKSUM",
+      "sha256": "71b077b0fdf209e46fce5e951ce9e6c7e5cbfa24da0615b1abc014eff610bfa2",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-01.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2053,
+      "name": "BTCUSDT-1d-2024-02.zip",
+      "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-02.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-02.zip.CHECKSUM",
+      "sha256": "f1b2d31240117fc874dfaadbf1d53322881b178b7e86f23a0ecd9580f1154672",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-02.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2224,
+      "name": "BTCUSDT-1d-2024-03.zip",
+      "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-03.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-03.zip.CHECKSUM",
+      "sha256": "2e25240c502df99c33605676d89ce121ae749242885e576f5738b085ec5beb80",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-03.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2141,
+      "name": "BTCUSDT-1d-2024-04.zip",
+      "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-04.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-04.zip.CHECKSUM",
+      "sha256": "ea23a2ea25f9fd86b3e3bfc6bf80b5530f70b2ba86d6b05710f93f4d61248a90",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-04.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2185,
+      "name": "BTCUSDT-1d-2024-05.zip",
+      "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-05.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-05.zip.CHECKSUM",
+      "sha256": "2ad2d24b78bab81ba229d216441330003fd24138f1dc43d2a84be072b0adca39",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-05.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2095,
+      "name": "BTCUSDT-1d-2024-06.zip",
+      "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-06.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-06.zip.CHECKSUM",
+      "sha256": "7d4f2d0569b4465ea956474827ed5f3aae670d8272e64e578dea0542bf5b9cf5",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-06.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2203,
+      "name": "BTCUSDT-1d-2024-07.zip",
+      "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-07.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-07.zip.CHECKSUM",
+      "sha256": "e8f15da5d2588d694e9c5cd6d2b7b5a351a356083ef4f42e8d22fc13bbe48ead",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-07.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2190,
+      "name": "BTCUSDT-1d-2024-08.zip",
+      "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-08.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-08.zip.CHECKSUM",
+      "sha256": "875dcd65e6d6595bb50280408f5eb54f0404c01a93ad4b6322f9f1c053006bf0",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-08.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2106,
+      "name": "BTCUSDT-1d-2024-09.zip",
+      "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-09.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-09.zip.CHECKSUM",
+      "sha256": "26d0bdd27f946237638a33025086796747d41e276019784c2e60a45fdf1935f3",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-09.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2203,
+      "name": "BTCUSDT-1d-2024-10.zip",
+      "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-10.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-10.zip.CHECKSUM",
+      "sha256": "bf315ea2b65839fbd220d29bbee4f2844b50b48ab5c0daecc2329a6d6156a7aa",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-10.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2157,
+      "name": "BTCUSDT-1d-2024-11.zip",
+      "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-11.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-11.zip.CHECKSUM",
+      "sha256": "0cc578524970a94a4bff742840013f82d997afb119e558f08a86f0ceba467654",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-11.zip.CHECKSUM"
+    },
+    {
+      "bytes": 2218,
+      "name": "BTCUSDT-1d-2024-12.zip",
+      "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-12.zip"
+    },
+    {
+      "bytes": 88,
+      "name": "BTCUSDT-1d-2024-12.zip.CHECKSUM",
+      "sha256": "6bcfb157f3058010bc0331caa2e0039f9593c91fcee335474ca246363d4e4a90",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-12.zip.CHECKSUM"
+    }
+  ],
+  "old762_bytes": 128196,
+  "old762_exact_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "old762_rebuild_hash_equal": true,
+  "old762_slice_offset": 704,
+  "quality": "DIAGNOSTIC_ONLY",
+  "raw_source_rows": 1492,
+  "registered_status": "UNACCEPTED",
+  "rows": 1466,
+  "scope": "EXPLICIT_DIAGNOSTIC",
+  "serialization": "Python csv.writer default excel dialect; UTF-8; CRLF; native12 field order; no numeric rewriting",
+  "strategy_features_computed": false,
+  "terms_sha256": "dcf358e9d18f598a7a635fac80f6e643fa24a0e111a4d39bda47f1e246b31eb1",
+  "tradability": false,
+  "unexpected_intervals": 0,
+  "warmup_last": "2022-12-31T00:00:00Z",
+  "warmup_rows": 735,
+  "warmup_selection": "Coordinator prior decision: 735 closes; RSI50 seed residual weight only, not RSI value/crossover-error guarantee; no RSI computed here",
+  "zero_counts": {
+    "quote_volume": 0,
+    "trade_count": 0,
+    "volume": 0
+  }
+}

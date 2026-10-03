@@ -1,0 +1,206 @@
+{
+  "schema": "quant-research-source-review/v1",
+  "record_id": "M3710",
+  "created_utc": "2026-10-03T20:59:03.093179+00:00",
+  "status": "SOURCE_REVIEW_COMPLETE_STRICT_BLOCKED_ADAPTED_CATALOG_HYPOTHESIS_POSSIBLE",
+  "scope": "Source-only independent review; not a research result or execution contract.",
+  "input_integrity": {
+    "bytes": 2746,
+    "sha256": "48f256ba95983a82b57e63b23060a43c1257f6ce726a4840c29c6c0f69db413c",
+    "all_11_fields_read": true,
+    "rule_utf8_sha256": "c3a2757961fcbc207aff5ba2aea0ac9d1a9fa4c3e765b140a9d845e41f381ad9",
+    "original_flags_changed": false,
+    "private_catalog_fields_published": false
+  },
+  "rule_provenance": "SMA20 and strict > / <= state mapping remain catalog-reported transcription; neither CXO article nor original paper full text was obtained.",
+  "primary_bibliography": {
+    "title": "Learning and Predictability via Technical Analysis: Evidence from Bitcoin and Stocks with Hard-to-Value Fundamentals",
+    "authors": [
+      "Andrew Detzel",
+      "Hong Liu",
+      "Jack Strauss",
+      "Guofu Zhou",
+      "Yingzi Zhu"
+    ],
+    "publication": "Financial Management 50 (2021), 107–137",
+    "author_pages": [
+      "https://www.andrewdetzel.com/",
+      "https://guofuzhou.github.io/zpublications.html"
+    ],
+    "official_author_identity": "https://olin.washu.edu/faculty/guofu-zhou",
+    "author_link_target": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3115846",
+    "link_chain_verified_from_saved_html": true,
+    "full_paper_downloaded": false,
+    "original_2018_version_verified": false,
+    "catalog_date_2018_03_01_verified": false,
+    "bibliography_does_not_validate_SMA20_details": true
+  },
+  "access": [
+    {
+      "requested_url": "https://www.andrewdetzel.com/",
+      "final_url": "https://www.andrewdetzel.com/",
+      "status": 200,
+      "fetched_utc": "2026-10-03T20:50:25.663416+00:00",
+      "bytes": 179423,
+      "sha256": "dca1ec465059431ae448a0ab624bcd9ce3a43fca454f21dffbf6dd7c8508509a",
+      "content_type": "text/html; charset=utf-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://www.cxoadvisory.com/technical-trading/timing-bitcoin-with-smas/",
+      "final_url": "https://www.cxoadvisory.com/technical-trading/timing-bitcoin-with-smas/",
+      "status": 403,
+      "fetched_utc": "2026-10-03T20:48:55.557538+00:00",
+      "bytes": 17,
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "content_type": "text/plain; charset=UTF-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3115846",
+      "final_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3115846",
+      "status": 403,
+      "fetched_utc": "2026-10-03T20:50:25.378230+00:00",
+      "bytes": 17,
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "content_type": "text/plain; charset=UTF-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://olin.washu.edu/faculty/guofu-zhou",
+      "final_url": "https://olin.washu.edu/faculty/guofu-zhou",
+      "status": 200,
+      "fetched_utc": "2026-10-03T20:55:35.712351+00:00",
+      "bytes": 112749,
+      "sha256": "efc6d7e921925c84365a89440dcdf9ccbe853643cd5903139c4a5550ad04478a",
+      "content_type": "text/html; charset=UTF-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/fima.12310",
+      "final_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/fima.12310",
+      "status": 403,
+      "fetched_utc": "2026-10-03T20:51:09.275390+00:00",
+      "bytes": 6153,
+      "sha256": "8f2ddeec261703d436b31eefff02ed94f8f7f6ba4193c6bd3dfd30041809f553",
+      "content_type": "text/html; charset=UTF-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://guofuzhou.github.io/",
+      "final_url": "https://guofuzhou.github.io/",
+      "status": 200,
+      "fetched_utc": "2026-10-03T20:55:35.481054+00:00",
+      "bytes": 7170,
+      "sha256": "a292bb551f069886c1e9d7b1967f4b7ea64553fd5016444c281b8a1568c98d95",
+      "content_type": "text/html; charset=utf-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    },
+    {
+      "requested_url": "https://guofuzhou.github.io/zpublications.html",
+      "final_url": "https://guofuzhou.github.io/zpublications.html",
+      "status": 200,
+      "fetched_utc": "2026-10-03T20:55:35.527477+00:00",
+      "bytes": 217897,
+      "sha256": "4e167de37fe86a50e0a4a076d7435a7136c03be05e93a056f54b7891735fc426",
+      "content_type": "text/html; charset=utf-8",
+      "authentication_used": false,
+      "access_control_bypass": false
+    }
+  ],
+  "blocked_site_policy": "Each blocked URL had one direct unauthenticated GET; stopped on 403. No proxy, mirror, login, credential, paywall workaround or fulltext retry.",
+  "rule_and_execution_gaps": [
+    {
+      "topic": "rule form",
+      "catalog": "Daily BTC price above SMA20 => BTC target; price less than or equal => cash target. State rule, not an MA-cross event.",
+      "primary_verification": "UNVERIFIED",
+      "adaptation": "Preserve this catalog state rule; do not interpret the word higher as OHLC high."
+    },
+    {
+      "topic": "price and averaging window",
+      "catalog": "Price and SMA20 named; price field and current-day inclusion not specified in catalog.",
+      "primary_verification": "UNKNOWN",
+      "adaptation": "Root selected daily close and arithmetic mean of current close plus 19 preceding complete daily closes. Explicit assumption, not verified author wording."
+    },
+    {
+      "topic": "cash or T-bill",
+      "catalog": "Cash/T-bill stated without maturity, rate source, accrual or reinvestment rule.",
+      "primary_verification": "UNKNOWN",
+      "adaptation": "Root selected zero return on idle cash; this is a cash proxy, not a reproduced Treasury-bill return series."
+    },
+    {
+      "topic": "asset/data",
+      "catalog": "Bitcoin daily, crypto.",
+      "primary_verification": "Paper title confirms Bitcoin subject, not source feed/exchange/currency/data version.",
+      "adaptation": "Later contract must name the existing lawful daily instrument/input and distinguish it from unknown original feed; no market data was read/acquired here."
+    },
+    {
+      "topic": "decision and execution clock",
+      "catalog": "Daily only.",
+      "primary_verification": "UNKNOWN",
+      "adaptation": "Later contract must freeze UTC completed-bar time, next executable open and lag/pending behavior; no same-close fill may be attributed to the original paper."
+    },
+    {
+      "topic": "sample and warmup",
+      "catalog": "Proposal date 2018-03-01 reported; no sample boundaries or initialization supplied.",
+      "primary_verification": "Original proposal date, exact 2018 version and sample UNKNOWN. The later paper appears on author bibliography as Financial Management 50 (2021), 107–137.",
+      "adaptation": "Later contract must freeze evaluation window and causal minimum-20-observation initialization without deleting cash periods or choosing dates after returns."
+    },
+    {
+      "topic": "portfolio and costs",
+      "catalog": "Hold BTC or cash; no sizing, execution costs, precision, stop, leverage or terminal liquidation details.",
+      "primary_verification": "UNKNOWN",
+      "adaptation": "Sizing, fee-inclusive budget, costs, delays and terminal treatment must be explicit experimental assumptions; no unspecified author risk rule should be invented."
+    }
+  ],
+  "classification": {
+    "proposed_future_class": "CATALOG_HYPOTHESIS / ADAPTED / DIAGNOSTIC_ONLY",
+    "strict_reproduction_eligible": false,
+    "strict_reproductions": 0,
+    "trusted": false,
+    "pit_finality_proven": false,
+    "current_execution_authorization": false,
+    "formal_contract_frozen": false,
+    "root_only_claim_and_contract_writer": true
+  },
+  "root_selected_adaptations_pending_contract": [
+    "Daily SMA20 state rule from catalog",
+    "Current close included in simple arithmetic 20-close mean",
+    "Idle cash return zero"
+  ],
+  "remaining_contract_fields": [
+    "Input/instrument/version/coverage and PIT limitations",
+    "Completed UTC daily signal timestamp and future fill timing",
+    "Window/warmup and unavailable-bar handling",
+    "Budget/fees/delay/pending/collision handling",
+    "Terminal positions, benchmark identity and research count"
+  ],
+  "activity": {
+    "new_historical_runs": 0,
+    "new_controls": 0,
+    "market_data_acquisitions": 0,
+    "historical_features_or_returns_read": false,
+    "new_claims": 0,
+    "C0_created": false,
+    "repository_writes": 0,
+    "global_progress_writes": 0,
+    "remote_writes": 0,
+    "engine_started": false
+  },
+  "storage_boundary": {
+    "saved_locally_private": "Actual response bodies and full 11-field catalog audit",
+    "allowed_safe_payload": "Self-authored summary, public URLs, bibliographic facts, status and hashes only",
+    "no_permission_to_republish_full_webpages_or_paper_claimed": true,
+    "library_backup_attempted": false,
+    "remote_persistence_verified": false,
+    "temporary_disk_is_not_backup": true,
+    "free_disk_bytes_at_review": 10445733888
+  },
+  "conclusion": "Source investigation is complete at the authorized boundary. Root may separately freeze a catalog-based adapted diagnostic with the stated assumptions. Strict replication is blocked by inaccessible article/paper and unresolved original execution/data/cash rules. No backtest has been run."
+}
