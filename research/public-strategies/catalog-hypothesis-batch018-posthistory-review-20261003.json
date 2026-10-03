@@ -1,0 +1,160 @@
+{
+  "schema": "M1347-independent-posthistory-acceptance/v1",
+  "id": "M1347",
+  "status": "PASS_LOCAL_RESEARCH_LEDGER_RESTORE_PUBLIC_GRAPH_V2_AND_PRIVATE_ARCHIVE",
+  "checked_utc": "2026-10-03T19:16:54.415241+00:00",
+  "source_commit": "5ccadf192dfc6381721058d28887cd9bc435a20c",
+  "result_commit": "fd3086ba2cfc6c7bed2ccf81ba2d662901cf8571",
+  "C0_sha256": "95c1aaee84657d0d3639c94d282e6e4bfa9934ba9f3b4c6fa5aaed13355dfed3",
+  "publication_manifest_sha256": "684cefa26887cdf2420e71d8b728d2e686f8cb5a6fed8c36c26a2f20a5306859",
+  "research": {
+    "IDs": 1,
+    "original_strategy_configurations": 4,
+    "new_control_configurations": 0,
+    "strict_reproductions": 0,
+    "new_research_runs_for_this_QA": 0,
+    "classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY",
+    "promotion": false
+  },
+  "actual_execution": {
+    "start_utc": "2026-10-03T18:46:39.316264Z",
+    "end_utc": "2026-10-03T18:46:39.486805Z",
+    "root_release_sha256": "a4215a61fa3f785e58a8b1aaecc4ff3cd830f4aacc6852be698a28e6082cc21e",
+    "case_names": [
+      "base",
+      "fee0",
+      "fee20",
+      "delay2"
+    ]
+  },
+  "independent_checks": {
+    "source_calendar_features": 762,
+    "evaluation_days_per_case": 731,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "fills": 188,
+    "pending_events": 376,
+    "closed_roundtrips": 92,
+    "monthly_rows": 96,
+    "signal_availability_and_execution_phase_checks": 188,
+    "money_quantity_comparison": "Independent Decimal50 account; finite numerical exact equality, no epsilon or quantization; expected zero exact.",
+    "metrics_comparison": "Independent stdlib statistics; relative tolerance1e-12 and absolute0, expectedzero exact; initialcash anchor and sample standard deviation ddof1.",
+    "terminal": "Each case retains one open long position with cash0; no forced close or unearned exitfee; terminalpending null. Each has47 queued intents and no cancellation/retention/stale events.",
+    "cases_metadata_fees_slippage_lag": true
+  },
+  "frozen_and_recovery": {
+    "C0_family_objects": 28,
+    "pinned_kernel_objects": 4,
+    "unchanged_objects": 32,
+    "result_payloads": 30,
+    "result_manifest_sha256": "efae9bdac67125d12fde252f1e8fd1a506e455c6fbe215ea397e989cd3133d95",
+    "original_and_once_fresh_restore_bytes_equal_objects": 31,
+    "existing_control_hash_verified_files": 7,
+    "control_replayed": false,
+    "third_engine_replay": false
+  },
+  "graph_and_public": {
+    "public_objects_including_manifest": 67,
+    "all_fixed_git_and_manifest_lengths_hashes_pass": true,
+    "active_projection": "artifacts/20261003-graph-projection-v2",
+    "sample_points": 25,
+    "metrics_native_days": 731,
+    "sample_normalization": "Daily equity divided by initial100000; no second rebasing; drawdown uses full daily history with initialanchor.",
+    "independent_public_derivation_byte_equal_files": 4,
+    "default_full_period_base_benchmark_delay_cost_correct": true,
+    "cost_labels_bps": [
+      "0",
+      "20"
+    ],
+    "cost_variant_slippage_bps": 2,
+    "benchmark": "Previously executed M1258 base8bps fee /2bps slippage; no newly costmatched fee0/fee20 benchmarks.",
+    "consumer_sha256": "b8061f388bf9bca8683a429c18cd92a258ed5b1188defb7a555f99b51cb289e8",
+    "prior_display_defect": "v1 lacked default full benchmark/delay/cost mappings and used fee0/fee20 keys; independently detected, retained unchanged, resolved by v2 append-only projection.",
+    "numeric_metric_and_curve_values_unchanged": true,
+    "private_full_catalog_and_raw_market_and_full_daily_accounts_not_public": true
+  },
+  "private_archive": {
+    "status": "LOCAL_FULL_PACKAGE_HASH_CRC_AND_VERIFY_ONLY_PASS",
+    "archive_name": "M1347-private-recovery-v2.zip",
+    "bytes": 485980,
+    "sha256": "4c180dac3749272763250684e92d32d5349480c9ec0162cee40359f9522523a9",
+    "independent_manifest_bytes": 33056,
+    "independent_manifest_sha256": "8471472dd3553bb01707084d835c29b42ca7818d4471b90bda438449749f94ae",
+    "payloads": 176,
+    "total_members": 177,
+    "member_paths_unique_safe": true,
+    "all_members_hash_bytes_crc_verified": true,
+    "raw_objects": 50,
+    "provider_checksum_and_nested_zip_crc_pairs": 25,
+    "canonical_copies": 1,
+    "full_results_including_manifest": 31,
+    "existing_control_files": 7,
+    "public_core_objects": 65,
+    "nonrecursive_outer_descriptors_excluded": 2,
+    "private_catalog_original_hash_checked": true,
+    "original_author_webpage_or_runtime_included": false,
+    "portable_root_gate_only_review_path_remap": true,
+    "old_v1_archive_retained": true,
+    "verify_only_did_not_replay": true
+  },
+  "evidence": {
+    "independent_actual_ledger_receipt_sha256": "a31b5de0ecbeb9b55f773341b6fe6e652f1b26e7446102e8326f74b6b8fe53f0",
+    "independent_public_archive_receipt_sha256": "8ba3359e639df0e9afdf86f55fb6f9d3d5d5328cb76b95fadb41b723363fca9b",
+    "retained_v1_display_review_sha256": "e602d0540aa6ddded6492bd02d6478dec624b6fbe3fea1a25e67911b1dd7c0f1",
+    "own_actual_ledger_checker_sha256": "424de35a64df651038783493d31d63a18ff8f6d0637f081f2e1e35b132e8dd2b",
+    "own_public_archive_checker_sha256": "0587fbc6577fc63db6ba95d3ce40c332636f8a7af07220a1b2cb323395bccba3",
+    "worker_final_handoff_sha256": "5207b7848adea4a075ca45a0bf7b0aeae34b25bf7eed6e8f01fc1730db0dcbd0"
+  },
+  "findings": [
+    {
+      "case": "base",
+      "total_return": -0.2770307401887361,
+      "max_drawdown": -0.30107527020456715,
+      "fills": 47,
+      "closed_roundtrips": 23
+    },
+    {
+      "case": "fee0",
+      "total_return": -0.24932981184676672,
+      "max_drawdown": -0.2909379383158097,
+      "fills": 47,
+      "closed_roundtrips": 23
+    },
+    {
+      "case": "fee20",
+      "total_return": -0.31667658659112585,
+      "max_drawdown": -0.3224012530648144,
+      "fills": 47,
+      "closed_roundtrips": 23
+    },
+    {
+      "case": "delay2",
+      "total_return": -0.16064815751310413,
+      "max_drawdown": -0.32468898802084045,
+      "fills": 47,
+      "closed_roundtrips": 23
+    }
+  ],
+  "scientific_conclusion": "All four predetermined configurations lost money. This exposed-window diagnostic provides no support for promoting the catalog hypothesis; strict0 remains.",
+  "remaining_gates": {
+    "Library_full_private_archive": "UNVERIFIED_KNOWN_HTTP401; no new retry; localZIP is not remote backup.",
+    "M1347_actual_remote_core_recovery": "PENDING_SEPARATE_GATE; this review verifies fixed local Git objects, not an actual M1347 remote fetch/rebuild.",
+    "Graph_site_publication": "NOT_PERFORMED_BY_THIS_REVIEW"
+  },
+  "limitations": [
+    "Catalog operational rule adapted to UTC24/7 BTC spot and next-open/lag2; author webpage and original runtime remain unverified.",
+    "Market input DIAGNOSTIC_ONLY, trustedfalse, PIT/finality unproven; historical trustedtrue metadata does not upgrade this run.",
+    "2023–2024 window previously exposed and availability-selected; not untouched OOS.",
+    "100% fee-inclusive fractional holdings, no minimum trade size/tick rounding and no live fill assertion.",
+    "Recovery requires exact preinstalled environment and retained data cache or a successful future authorized reconstruction; future provider availability is not guaranteed."
+  ],
+  "reviewer_resources": {
+    "actual_ledger_wall_seconds": 0.10818365799786989,
+    "actual_ledger_cpu_seconds": 0.10815750299999999,
+    "public_archive_wall_seconds": 0.34771525099495193,
+    "public_archive_cpu_seconds": 0.085125374,
+    "max_rss_kib": 30960,
+    "free_disk_bytes_after": 11551408128
+  },
+  "blockers_for_this_local_acceptance": []
+}
