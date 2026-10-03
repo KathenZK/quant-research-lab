@@ -11,3 +11,5 @@
 - [作者署名与许可](SOURCE-ATTRIBUTION.md)
 
 旧预审草案原样保留，不再代表当前运行状态。作者HTML/Pine原文、行情和多配置曲线仅本地。模型effort UNKNOWN。唯一协调者管理全局进度、远端保存与Graph集成。
+
+- [行情许可补充核验](diagnostics/data-license-review-20261003.md)：获取日期、条款固定版本与当前发布暂停状态。
