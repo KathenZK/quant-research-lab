@@ -31,4 +31,4 @@
 
 | [native5m-execution-proxy/](native5m-execution-proxy/README.md) | `v1` | BTCUSDT现货5m固定OHLC成交代理与独立Decimal校验；消费者逐文件SHA256 pin | M0300、M0302、M0305、M0306、M0307；原M0311不迁移 |
 
-| [catalog-daily-cash/](catalog-daily-cash/README.md) | `v1` | 日线全现金 Decimal50 账户、延迟意图、月收益和独立核算；不含持仓时长退出机制 | M1396、M1463 |
+| [catalog-daily-cash/](catalog-daily-cash/README-versions.md) | `v2` | 保留v1账户；v2可选实际成交后持仓收盘计时、强制退出锁存和独立核算 | M1396、M1463及M1346/M1270继续v1；M1349需自身C0后采用v2 |

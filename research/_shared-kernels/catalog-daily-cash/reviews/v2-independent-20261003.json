@@ -1,0 +1,71 @@
+{
+  "status": "PASS_SYNTHETIC_POLICY_BOUNDARIES",
+  "commit": "96a2e401e78e9e0567e343d8a55f43342bd0ed0c",
+  "synthetic_cases": [
+    "single_then_recover:lag1",
+    "always_oversold:lag1",
+    "late_entry:lag1",
+    "terminal_due:lag1",
+    "repeated_before_fill:lag1",
+    "single_then_recover:lag2",
+    "always_oversold:lag2",
+    "late_entry:lag2",
+    "terminal_due:lag2",
+    "repeated_before_fill:lag2"
+  ],
+  "nav_states": 900,
+  "fills": 28,
+  "default_v1_JSON_CSV_metrics_byte_equal_cases": 10,
+  "invalid_policies_rejected_before_input_access": 10,
+  "terminal_pending_no_overrun": true,
+  "v1_unchanged": true,
+  "hashes": {
+    "research/_shared-kernels/catalog-daily-cash/v2/manifest.json": "0f5d96e56c1dfe396320d5d80932d09218291379495045a31b0564c1ef16bb5a",
+    "research/_shared-kernels/catalog-daily-cash/v2/README.md": "60979d769e0e09ee0f0cae8c3ff879129014d18931c21eaf1eb1a26eedee361f",
+    "research/_shared-kernels/catalog-daily-cash/v2/engine.py": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219",
+    "research/_shared-kernels/catalog-daily-cash/v2/verify_account.py": "191961bece1b80c02d074894a8f48fde8c3f6360b5ab564cc69484fae3b14712",
+    "research/_shared-kernels/catalog-daily-cash/v2/tests/synthetic-receipt.json": "d8933bd0175b83c10afc0c7cdab0ca7077757607cdbd6ef1062d49c1ad409369",
+    "research/_shared-kernels/catalog-daily-cash/v2/tests/test_lifecycle.py": "ceea3ed5bd9faaa4aca8e2ec57130225f3784b04cb72a4f10987f5be5c7a21a8"
+  },
+  "new_history": 0,
+  "checked_utc": "2026-10-03T17:59:31.192182+00:00",
+  "shared_fill_reconcile_metrics_AST_identical": true,
+  "all_base_tracked_blob_modes_unchanged": true,
+  "added_files": 7,
+  "manifest_members_verified": 5,
+  "independent_verifier": {
+    "status": "PASS",
+    "features": 762,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "monthly_rows": 96,
+    "fill_rows": 216,
+    "strategy_configurations": 4,
+    "new_control_configurations": 0,
+    "source_signal": "family independent Fraction features supplied and verified separately",
+    "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+    "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+    "engine_runs": 0,
+    "execution_policy": {
+      "max_completed_closes": 25
+    },
+    "lifecycle": "independent actual buy index -> completed closes; sticky timeexit until sale",
+    "raw_signal_validation": "caller supplies independently checked raw events; no adapter holding state",
+    "rejected_mutations": [
+      "held_completed_bars",
+      "quantity"
+    ],
+    "market_input": false,
+    "new_history": 0
+  },
+  "limits": [
+    "Synthetic only; does not authorize consumer history before strategy-specific C0/source/indicator QA and root gate.",
+    "Policy accepts positive integer limits; only frozen consumer max_completed_closes=25 is approved for M1349.",
+    "Independent oracle first draft multiplied fee before division; corrected to frozen precomputed rate arithmetic order. This was review-harness error, no frozen implementation modified."
+  ],
+  "private_scripts_sha256": {
+    "review.py": "bc51efa0e08a0bce1f9a2008317a825a550480b309c9e09e5040aa7c6fdcdf51",
+    "verify_test.py": "dc4d99c900d4af5bb5d92c06c93b235e73e1e3bea064eb32eef613aff54fc6b2",
+    "oracle.py": "f963e6bba584116a310c155e3914b404b2a46f80a23077a874a0e5f2b10e66da"
+  }
+}

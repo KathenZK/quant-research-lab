@@ -342,3 +342,5 @@
 - [M1463 布林带目录假设](public-strategies/M1463/README-results-v1.md)：4策略配置、0新控制；独立核算通过，原C0保留。
 
 - [catalog-daily-cash 共享日线全现金内核](_shared-kernels/catalog-daily-cash/README.md)：v1冻结、逐文件SHA256 pin，M1396/M1463消费；持仓计时退出需另建版本。
+
+- [catalog-daily-cash v2 版本增补](_shared-kernels/catalog-daily-cash/README-versions.md)：可选实际成交后计时退出；[独立合成复核](_shared-kernels/catalog-daily-cash/reviews/v2-independent-20261003.json)通过，不代表M1349已运行或自身C0已放行。
