@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "features": 762,
+  "nav_rows": 3655,
+  "decision_rows": 3655,
+  "monthly_rows": 120,
+  "fill_rows": 493,
+  "strategy_configurations": 4,
+  "new_control_configurations": 1,
+  "source_signal": "independent exact Fraction Wilder/strict crosses",
+  "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+  "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+  "engine_runs": 0
+}
