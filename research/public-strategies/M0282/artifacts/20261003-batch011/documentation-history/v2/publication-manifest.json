@@ -1,7 +1,7 @@
 {
   "id": "M0282",
-  "revision": 3,
-  "created_at_utc": "2026-10-03T14:35:47.580536+00:00",
+  "revision": 2,
+  "created_at_utc": "2026-10-03T14:32:46.417176+00:00",
   "files": [
     {
       "path": "research/public-strategies/M0282/ATTRIBUTION.md",
@@ -20,8 +20,8 @@
     },
     {
       "path": "research/public-strategies/M0282/M0282.md",
-      "bytes": 9063,
-      "sha256": "8a9b3b18e0ec6abfa10d5fa271df3ff0aa2b8b8183a5d2b2cba992128bc912a3"
+      "bytes": 8814,
+      "sha256": "026ac742f71220c14d02babf3ef50b167446e9ffda89c781ae5f85b637094f5a"
     },
     {
       "path": "research/public-strategies/M0282/README.md",
@@ -42,21 +42,6 @@
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/delay2-nav-light.csv",
       "bytes": 25222,
       "sha256": "a96ed0ba4592a4afb8e73d4d391010dfd60b03040cfcba0b20c1a17ed146216d"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/revision-v3.json",
-      "bytes": 677,
-      "sha256": "8de0a6fe4e19bbfeada7efbf1f86925f71b21dcb6d80c4c6589f2b7088142681"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/M0282.md.snapshot",
-      "bytes": 8814,
-      "sha256": "026ac742f71220c14d02babf3ef50b167446e9ffda89c781ae5f85b637094f5a"
-    },
-    {
-      "path": "research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json",
-      "bytes": 9727,
-      "sha256": "3872ecb7203e52696ac03e47cda17a7a39b86264766c4d4ccee6e5bcb8d7e302"
     },
     {
       "path": "research/public-strategies/M0282/artifacts/20261003-batch011/event-qa.json",
@@ -245,6 +230,6 @@
     }
   ],
   "self_excluded": true,
-  "history": "Projectionv1 and documentationv2 original bytes preserved inside ID tree and earlier commits",
-  "public_boundary": "Reviewed code/protocol/source fields, derived daily NAV/summary/samples only; no raw market/full ledger/Library IDs/private read fingerprints"
+  "history": "Original v1 manifest/receipt bytes preserved under artifacts/20261003-batch011/projection-history/v1; prior commit retains all v1 targets",
+  "public_boundary": "Reviewed source/code/spec/aggregate/daily derived NAV/trade samples only. No raw market, full5m logs, Library IDs or private context fingerprints."
 }

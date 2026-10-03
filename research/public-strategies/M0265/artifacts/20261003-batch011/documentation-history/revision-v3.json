@@ -1,0 +1,10 @@
+{
+  "old_report_sha256": "33e1ccf8d92b9a01bef21d245514ba9f434540e9c9f724d63fee847644bc8948",
+  "new_report_sha256": "977f5bb613c07c675b4178cf34f9c3e45a04bd49b6cf3f5b718d3508370bb6cb",
+  "base_final_quantity": 0.0,
+  "exit_profit_only": false,
+  "history_snapshot": "research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/M0265.md.snapshot",
+  "snapshot_format": "Exact original Markdown bytes; .snapshot suffix retains original relative-link context without presenting moved links as live references",
+  "original_context": "research/public-strategies/M0265/M0265.md",
+  "prior_commit": "4a7c36eef675d9241236671e8d63b95396ca2170"
+}
