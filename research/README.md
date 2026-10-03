@@ -360,3 +360,5 @@
 - [批018 M1347实际远端恢复](public-strategies/catalog-hypothesis-batch018-recovery-20261003/README.md)：30结果长度/hash及清单原字节通过；零新增试验/对照，完整私包备份缺口单列。
 
 - [批019协调检查点002](public-strategies/progress-20261003-batch019-checkpoint002.json)：42 ID / 171策略配置 / 21对照；展示交付与M1266首次运行门禁单列，不新增研究计数。
+
+- [M1266 三EMA固定数量研究](public-strategies/M1266/M1266.md)：4策略配置与1个声明控制，历史独审及私有恢复已交付；冻结诊断保持严格复现0，协调验收与展示激活分开记录。

@@ -1448,3 +1448,8 @@ research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/graph-de
 research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/graph-record.json  # M1347 diagnostic publication
 research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/public-display-manifest.json  # M1347 diagnostic publication
 research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/verification.safe.json  # M1347 diagnostic publication
+
+# M1266 reviewed narrow diagnostic publication; exact three artifact paths
+research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-detail.json  # M1266 diagnostic publication
+research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-record.json  # M1266 diagnostic publication
+research/public-strategies/M1266/artifacts/20261003-batch019-v1/metrics.json  # M1266 diagnostic publication
