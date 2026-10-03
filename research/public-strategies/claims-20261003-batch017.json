@@ -1,0 +1,40 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T17:22:47.305997+00:00",
+  "coordinator": "root only",
+  "batch": "017",
+  "claims": [
+    {
+      "id": "M1346",
+      "owner": "parent single dot executor nextbatch",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "branch": "dot/public-strategies-20261003-b009-daily3",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ExactcodeC0+independentQA; actualacceptedM1258controlidentity check"
+    },
+    {
+      "id": "M1349",
+      "owner": "parent single dot executor nextbatch",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "branch": "dot/public-strategies-20261003-b009-daily3",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ExactcodeC0+independentQA; actualacceptedM1258controlidentity check"
+    },
+    {
+      "id": "M1270",
+      "owner": "parent single dot executor nextbatch",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "branch": "dot/public-strategies-20261003-b009-daily3",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ExactcodeC0+independentQA; actualacceptedM1258controlidentity check"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch017-output-contract-20261003.json",
+    "bytes": 5120,
+    "sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0
+}
