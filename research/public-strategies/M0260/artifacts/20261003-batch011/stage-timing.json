@@ -1,0 +1,68 @@
+{
+  "run": {
+    "stage": "M0260-run",
+    "start_utc": "2026-10-03T14:21:02.098199+00:00",
+    "end_utc": "2026-10-03T14:21:18.195147+00:00",
+    "wall_seconds": 16.097002416001487,
+    "cpu_user_seconds": 15.63177,
+    "cpu_system_seconds": 0.44339199999999995,
+    "peak_child_rss_kib": 645540,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0260-source",
+    "start_utc": "2026-10-03T14:21:18.226022+00:00",
+    "end_utc": "2026-10-03T14:21:20.740294+00:00",
+    "wall_seconds": 2.5142824040012783,
+    "cpu_user_seconds": 2.302866,
+    "cpu_system_seconds": 0.207968,
+    "peak_child_rss_kib": 387668,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0260-oracle",
+    "start_utc": "2026-10-03T14:21:20.774791+00:00",
+    "end_utc": "2026-10-03T14:21:28.245825+00:00",
+    "wall_seconds": 7.4710398399984115,
+    "cpu_user_seconds": 7.070574,
+    "cpu_system_seconds": 0.398538,
+    "peak_child_rss_kib": 885120,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "event": {
+    "stage": "M0260-event",
+    "start_utc": "2026-10-03T14:21:28.278377+00:00",
+    "end_utc": "2026-10-03T14:21:28.863982+00:00",
+    "wall_seconds": 0.5856135889989673,
+    "cpu_user_seconds": 0.5201399999999999,
+    "cpu_system_seconds": 0.06493299999999999,
+    "peak_child_rss_kib": 203136,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0260-prefix",
+    "start_utc": "2026-10-03T14:21:28.898931+00:00",
+    "end_utc": "2026-10-03T14:21:43.723279+00:00",
+    "wall_seconds": 14.82435570799862,
+    "cpu_user_seconds": 13.935957,
+    "cpu_system_seconds": 0.876373,
+    "peak_child_rss_kib": 641728,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0260-restore",
+    "start_utc": "2026-10-03T14:24:45.620404+00:00",
+    "end_utc": "2026-10-03T14:25:01.279034+00:00",
+    "wall_seconds": 15.658642775000772,
+    "cpu_user_seconds": 15.236208,
+    "cpu_system_seconds": 0.417692,
+    "peak_child_rss_kib": 644148,
+    "exit_code": 0,
+    "threads": 1
+  }
+}
