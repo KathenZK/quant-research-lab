@@ -1,0 +1,264 @@
+{
+  "schema": "dot009-independent-remote-core-review/v1",
+  "source_commit": "08e6ab4a49a808f53f06e509f06cb2c453f007d5",
+  "fetch": "Actual origin branch fetched; exact FETCH_HEAD matched",
+  "status": "PASS_RESEARCH_REMOTE_CORE__NOT_GRAPH_READY",
+  "scope": {
+    "new_files": 95,
+    "new_bytes": 556164,
+    "family_files": {
+      "M1346": 12,
+      "M1349": 12,
+      "M1270": 12
+    },
+    "shared_execution_files": 59,
+    "canonical_readonly_kernel_dependencies": 9,
+    "original_strategy_configurations": 12,
+    "QA_restore_configurations": 12,
+    "new_strategy_runs": 0,
+    "new_controls": 0,
+    "strict_reproductions": 0
+  },
+  "checks": {
+    "raw_objects": 50,
+    "provider_checksums": 25,
+    "zip_crcs": 25,
+    "canonical_input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "canonical_input_rows": 762,
+    "result_payloads_byteexact": 126,
+    "result_manifests_byteexact": 3,
+    "independent_signal_source": "Own rational Fraction oracle and UTC dates, not imported strategy flags",
+    "account_verification": "Pinned independent verifier has no engine or strategy-runner calls; exact serialized NAV/fills/pending/roundtrip/monthly; independent stdlib metrics tolerance1e-12",
+    "nav_rows": 8772,
+    "decision_rows": 8772,
+    "fill_rows": 882,
+    "roundtrip_rows": 441,
+    "monthly_rows": 288,
+    "pending_event_rows": 2042,
+    "feature_prefix_future_pairs": 21,
+    "light_curve_points": 75,
+    "full_original_fields_equal": 33,
+    "contract_rules_and_C0_exact": true,
+    "scope_privacy": "95 addedfiles only,36 family+59 shared; no rawprices/fullledgers/LibraryIDs/machinepaths/credentialpattern hits; aliases all none; original Graph fields/flags unchanged",
+    "C0_scope": "Operational pins exact;15v1/7v2 nonmaterialized C0 dependencies listed privately, not claimed full C0 prehistory reconstruction"
+  },
+  "results": [
+    {
+      "id": "M1346",
+      "configurations": 4,
+      "new_controls": 0,
+      "cases": [
+        {
+          "case": "base",
+          "total_return": 2.104918253425913,
+          "cagr": 0.7607128168794586,
+          "max_drawdown": -0.3570004355255392,
+          "sharpe_zero_cash": 1.6271053613567328,
+          "fills": 60,
+          "closed_roundtrips": 30,
+          "observations": 731,
+          "exposure_fraction": 0.627906976744186
+        },
+        {
+          "case": "fee0",
+          "total_return": 2.257589152033502,
+          "cagr": 0.8034218896909553,
+          "max_drawdown": -0.34558346613309265,
+          "sharpe_zero_cash": 1.687756617698009,
+          "fills": 60,
+          "closed_roundtrips": 30,
+          "observations": 731,
+          "exposure_fraction": 0.627906976744186
+        },
+        {
+          "case": "fee20",
+          "total_return": 1.8892219310899727,
+          "cagr": 0.6985380482803751,
+          "max_drawdown": -0.3737535448201501,
+          "sharpe_zero_cash": 1.5358838140520892,
+          "fills": 60,
+          "closed_roundtrips": 30,
+          "observations": 731,
+          "exposure_fraction": 0.627906976744186
+        },
+        {
+          "case": "delay2",
+          "total_return": 2.1462772865525137,
+          "cagr": 0.7723847602008154,
+          "max_drawdown": -0.3805772900277521,
+          "sharpe_zero_cash": 1.618045153701344,
+          "fills": 32,
+          "closed_roundtrips": 16,
+          "observations": 731,
+          "exposure_fraction": 0.6306429548563611
+        }
+      ]
+    },
+    {
+      "id": "M1349",
+      "configurations": 4,
+      "new_controls": 0,
+      "cases": [
+        {
+          "case": "base",
+          "total_return": 0.05390119927719206,
+          "cagr": 0.026560038809571473,
+          "max_drawdown": -0.16984022238369167,
+          "sharpe_zero_cash": 0.23145237616825495,
+          "fills": 10,
+          "closed_roundtrips": 5,
+          "observations": 731,
+          "exposure_fraction": 0.17099863201094392
+        },
+        {
+          "case": "fee0",
+          "total_return": 0.06236622563594851,
+          "cagr": 0.030668863494025533,
+          "max_drawdown": -0.1671794555713102,
+          "sharpe_zero_cash": 0.252314614812467,
+          "fills": 10,
+          "closed_roundtrips": 5,
+          "observations": 731,
+          "exposure_fraction": 0.17099863201094392
+        },
+        {
+          "case": "fee20",
+          "total_return": 0.04132993716539635,
+          "cagr": 0.020427482606576453,
+          "max_drawdown": -0.1738154494074201,
+          "sharpe_zero_cash": 0.20021339631792093,
+          "fills": 10,
+          "closed_roundtrips": 5,
+          "observations": 731,
+          "exposure_fraction": 0.17099863201094392
+        },
+        {
+          "case": "delay2",
+          "total_return": 0.2873109898104351,
+          "cagr": 0.1344012999912363,
+          "max_drawdown": -0.15971706633447524,
+          "sharpe_zero_cash": 0.7358286670800364,
+          "fills": 10,
+          "closed_roundtrips": 5,
+          "observations": 731,
+          "exposure_fraction": 0.17783857729138167
+        }
+      ]
+    },
+    {
+      "id": "M1270",
+      "configurations": 4,
+      "new_controls": 0,
+      "cases": [
+        {
+          "case": "base",
+          "total_return": 0.33636553361189736,
+          "cagr": 0.15578352851370347,
+          "max_drawdown": -0.23072733392655786,
+          "sharpe_zero_cash": 0.7206243729052446,
+          "fills": 210,
+          "closed_roundtrips": 105,
+          "observations": 731,
+          "exposure_fraction": 0.1436388508891929
+        },
+        {
+          "case": "fee0",
+          "total_return": 0.5808357715745858,
+          "cagr": 0.2569191408599021,
+          "max_drawdown": -0.19225548893898559,
+          "sharpe_zero_cash": 1.0676813358389179,
+          "fills": 210,
+          "closed_roundtrips": 105,
+          "observations": 731,
+          "exposure_fraction": 0.1436388508891929
+        },
+        {
+          "case": "fee20",
+          "total_return": 0.03868253469918481,
+          "cagr": 0.019131300802403217,
+          "max_drawdown": -0.2850278101187246,
+          "sharpe_zero_cash": 0.19643230296366027,
+          "fills": 210,
+          "closed_roundtrips": 105,
+          "observations": 731,
+          "exposure_fraction": 0.1436388508891929
+        },
+        {
+          "case": "delay2",
+          "total_return": 0.0,
+          "cagr": 0.0,
+          "max_drawdown": 0.0,
+          "sharpe_zero_cash": null,
+          "fills": 0,
+          "closed_roundtrips": 0,
+          "observations": 731,
+          "exposure_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "quality": {
+    "M1346": "Base+210.49%, MDD-35.70%,30closedroundtrips; underperforms reusedbuyhold+465.13% with deeperdrawdown. Delay2 changes fills60to32, material execution sensitivity.",
+    "M1349": "Base+5.39%, MDD-16.98%,only5closedroundtrips; delay2+28.73% indicates strong timing sensitivity, not robust optimization. Source example warning retained.",
+    "M1270": "Base+33.64%, fee20+3.87%; fee0+58.08%. Delay2 allcash by105opposite cancellations, not data/runner failure.",
+    "all": "Exposed2023-2024 availability-selected window; HYPOTHESIS/ADAPTED, trustedfalse, notOOS, strict0. No economicquality promotion."
+  },
+  "issues": [
+    {
+      "severity": "DISPLAY_BLOCKER",
+      "id": "DEFAULT_PERIOD_MISSING",
+      "applies_to": [
+        "M1346",
+        "M1349",
+        "M1270"
+      ],
+      "finding": "metrics.periods and benchmark/lag only have 2023-2024; no presentation_periods/full. Existing ResearchDetail initializes period=full, so initial metric rows receive undefined. Retained numerical results are correct.",
+      "consumer_commit": "da3f6c2c4b3b47575542a901023fd9bdbf301fb6",
+      "consumer": "web/src/CorpusResearch.tsx",
+      "lines": [
+        354,
+        373,
+        482,
+        487
+      ],
+      "remedy": "Append independently hashed derived display profile/adapter mapping full to frozen 2023-2024 series; do not modify C0/result/public frozen bytes."
+    },
+    {
+      "severity": "DISPLAY_BLOCKER",
+      "id": "NONNUMERIC_COST_KEYS",
+      "finding": "cost_sensitivity keys fee0/fee20 consumed as numeric bps, producing NaN sort comparator and labels fee0/fee20 bps. Values correspond to0/20 fee bps plus unchanged2bps slippage.",
+      "consumer_commit": "da3f6c2c4b3b47575542a901023fd9bdbf301fb6",
+      "consumer": "web/src/CorpusResearch.tsx",
+      "lines": [
+        536,
+        537,
+        538,
+        539
+      ],
+      "remedy": "Derived display adapter must use numeric0/20 keys and preserve slippage disclosure."
+    },
+    {
+      "severity": "RECOVERY_SCOPE_LIMIT",
+      "id": "PRIVATE_LIBRARY_NOT_RESTORED_HERE",
+      "finding": "This review fetched remote core and used authorized raw50 to reconstruct48e4 and12 configurations. No Library ZIP was materialized here. Parent Library restore proof readback hash verified; that is proof receipt comparison, not my ZIP restoration."
+    },
+    {
+      "severity": "INTEGRATION_EXTERNAL",
+      "id": "REPORTED_CI_GOVERNANCE_FAILURE",
+      "finding": "Parent reports CI37144751086 documentation/artifact allowlist/index classification failures. This read-only reviewer did not repair or independently rerun full repository CI; research/account PASS does not close CI."
+    }
+  ],
+  "library_receipt_readback_sha256": "30647af0bc3b17327bea5917046f3958444e4455c87cc6621d60a41f2043a9e7",
+  "library_zip_recovery_by_this_reviewer": false,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "supporting_hashes": {
+    "audit.private.json": "c233a4805c9aafcb19f6ab0edf66f32480ad04d1707e20133e84c22525f23b84",
+    "supplementary.private.json": "ea8d77ba5ac4bb4493deb834581871dd2c9d5bf8c08f5cb2821b74c9ed51c31b",
+    "fresh-input-qa.json": "108312712e60c36fe836f5c300933933fcaf76085c4a0f9494ea30b44e363038",
+    "fresh-replay-receipt.json": "b71ab7183acea6b603daccf81c78be23de5d7e076bf85da4007b136c7a1628b1",
+    "independent_audit.py": "25efe3673bcaa504c1b48fa3f8a6c3cf75cc32b6dfb156b8643795802d97916e",
+    "supplementary_checks.py": "7e6a84c652191c060a34240bf407775c66accfbffac360410659b3892401cbed",
+    "CorpusResearch.remote.tsx": "81b85e9c0d367cf2517a460a8084ef3c8bff22dbc5e840d8178f406fdf9a264c"
+  }
+}
