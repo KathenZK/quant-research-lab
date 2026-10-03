@@ -1,0 +1,69 @@
+{
+  "adapter_five_original_files_unchanged": true,
+  "adapter_frozen_source_commit": "ba5edc400c1881a62c7485898f69fbbeb5046c46",
+  "adapter_receipt_sha256": "9039c85ddbd122eadc8f931d46f9f812ec621fce621367612928e5119a91ce0d",
+  "blockers": [],
+  "compatibility_details": {
+    "internal_symlink": "A symlink resolving to an existing file within the same version directory is accepted only with exact length/hash. Path escape is rejected. No new blanket no-symlink policy was asserted.",
+    "legacy_empty_map_or_missing_files": "Preserved old helper empty-pin behavior, but complete checker still rejects an unregistered engine.",
+    "old_hash_chain": "Root manifest hash or direct engine hash remains required by unchanged outer registration logic; compatibility helper does not synthesize any pin.",
+    "repo_index_changes": "Two additive links inspected in research/README.md and research/_shared-kernels/README.md; no frozen adapter file changes."
+  },
+  "covered_cases": [
+    "Legacy dict and typed list accepted with correct exact contents under both README.md and README-versions.md pins.",
+    "Source modification with unchanged manifest rejected; modifying manifest to match tampered source but retaining old README manifest hash rejected.",
+    "Typed-list empty/invalid records, duplicate paths, missing or extra keys, invalid files container rejected.",
+    "Missing/absolute/parent/dot/backslash/noncanonical/directory paths and symlink escaping the version directory rejected.",
+    "Bool/float/negative/string/None/wrong byte counts and malformed/uppercase/wrong digest rejected.",
+    "An actual zero-length file accepts bytes0; changing its bytes rejects. Nonempty files cannot claim bytes0.",
+    "Every nested listed source/document remains hash checked; an unlisted version-level engine is rejected.",
+    "Legacy direct engine hash registrations remain valid; a correctly pinned but invalid manifest cannot be masked by also listing the engine hash."
+  ],
+  "created_at_utc": "2026-10-03T21:45:26.490033+00:00",
+  "independent_test_groups_failed": 0,
+  "independent_test_groups_passed": 8,
+  "limitations": [
+    "This receipt covers the recorded exact checker bytes and additive index changes; later source edits require re-evaluation.",
+    "Repository CI/full-suite completion and batch020 consumer C0 gates remain separately owned by root."
+  ],
+  "review_basis": "Actual local staged/worktree code copied byte-for-byte; the two changed checker definitions compiled from its original AST into isolated synthetic-file test namespace.",
+  "reviewed_file": {
+    "bytes": 23852,
+    "path": "tests/test_research_docs_consistency.py",
+    "sha256": "f6ce9b6dd1f8787f43cad6bf6584771f4318d7f4d85bccae3b8276dd9b28e495"
+  },
+  "root_validation_logs_read": {
+    "adapter_tests": "7 passed; not re-run after prior independent4-process adapter QA",
+    "manifest_tests": "20 passed,13 deselected; observed root log, not attributed as this reviewers own20 executions"
+  },
+  "schema": "daily-input-view-governance-compatibility-independent-review/v1",
+  "scope": {
+    "actual_market_data_read": false,
+    "controls": 0,
+    "global_progress_written": false,
+    "historical_features_computed": false,
+    "history_release": false,
+    "network_calls": 0,
+    "pure_synthetic_files_only": true,
+    "repositories_modified": false,
+    "strategy_runs": 0
+  },
+  "status": "PASS_STAGED_GOVERNANCE_COMPATIBILITY_AND_PIN_CHAIN",
+  "supporting_evidence": [
+    {
+      "bytes": 4743,
+      "path": "own-governance-normal.log",
+      "sha256": "70dfe94072eedba9c34c0f2c5d5d28b0ca9cc6fe4a99f7c9e8d2e9d850f2296a"
+    },
+    {
+      "bytes": 6264,
+      "path": "own_governance_tests.py",
+      "sha256": "cde2caf0a94667570150a45b356e7726cef61d65c6f42b5463cba9b84e2e19bc"
+    },
+    {
+      "bytes": 23852,
+      "path": "governance-source.py",
+      "sha256": "f6ce9b6dd1f8787f43cad6bf6584771f4318d7f4d85bccae3b8276dd9b28e495"
+    }
+  ]
+}
