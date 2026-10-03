@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "payloads": 37,
+  "payloads_exact": 37,
+  "manifest_exact": true,
+  "frozen_code_files": 19,
+  "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "restore_strategy_configurations": 4,
+  "restore_control_configurations": 1,
+  "new_trials": 0,
+  "new_controls": 0,
+  "requires_preinstalled_frozen_environment": true,
+  "network_requests": 0
+}

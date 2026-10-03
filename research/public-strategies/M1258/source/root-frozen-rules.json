@@ -1,0 +1,146 @@
+{
+  "status": "ROOT_FROZEN_CATALOG_HYPOTHESIS_PRE_CODE_C0",
+  "source_layer": "Existing source-ready FAIL/access-blocked evidence preserved; original framework/page access is not required for this separately authorized catalog hypothesis.",
+  "classification": "HYPOTHESIS / ADAPTED; no author-confirmed mathematics or strict reproduction claim",
+  "authorization_boundary": "Assignment permits implementation/prehistory synthetic work; historical run requires exact code/C0 and independent gates below.",
+  "instrument": "Bitcoin catalog asset retained; Binance spot BTCUSDT is explicit quote/venue hypothesis. Original11fields do NOT say BTC-USD; do not add USD claim.",
+  "input_period": "2022-12-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; do not change input",
+  "evaluation": "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+  "monthly_reporting": "Month return=end equity/previous month end equity-1; first denominator100000. Continuous account and indicators, no monthly resetting or selective omission of cash/zero-trade months.",
+  "capital": {
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "fraction": "1",
+    "entry_fee_inclusive": true,
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "buy_order_of_operations": [
+      "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+      "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+      "fee=cash_before-notional",
+      "quantity=notional/fill",
+      "cash_after=Decimal(0)"
+    ],
+    "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+    "sell_order_of_operations": [
+      "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+      "notional=quantity_before*fill",
+      "fee=notional*Decimal(fee_bps)/10000",
+      "cash_after=cash_before+notional-fee",
+      "quantity_after=Decimal(0)"
+    ],
+    "funding_interest_borrow": 0,
+    "leverage": 1,
+    "max_positions": 1,
+    "fractional_fills": true,
+    "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+  },
+  "cost_cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "execution": {
+    "at_open": "Execute the single earliest-due pending intent when due_index<=current_index and actual position permits; stale intent is logged and discarded, no same-open exit then reentry. Actual timestamp override only as declared for M1180.",
+    "at_close_sequence": [
+      "Update completed-bar indicators and holding counter, compute raw entry/raw exit independent of current position",
+      "If M1180 long and completed_count>=20, latch time_exit until the position is closed; it cannot be cancelled by entry filters",
+      "A raw opposite signal cancels a pending opposite intent before considering a new one, irrespective of current holdings; for M1180 a latched timeexit is exempt",
+      "Schedule new buy only when flat and raw_entry; schedule new sell only when long and raw_exit or time_exit. If both raw directions occur, sell/cancel-buy priority; do not buy",
+      "Same-side repeated intent retains its original earliest due index, never postpone due to repeated signals",
+      "No signal at equality unless explicitly inclusive; no warmup-generated intent; no fill at or beyond evaluation end"
+    ],
+    "raw_M1180": "entry=all-ready&C>upper&ADX>=22&C>EMA200&ATR>0&(C-upper)/ATR>=0.5; channel_exit=all-ready&C<lower; timeexit latched separately",
+    "raw_M1258": "entry=previous-ready RSI<=50 and current>50; exit=previous-ready RSI>=50 and current<50; computed independently of holdings so a raw opposite cross cancels a pending order even when no new order is eligible",
+    "lag2_example": "A pending buy at t+2 is cancelled by opposite raw signal at close t+1. An uncancelled same-side signal does not move due from t+2. A 20-bar exit scheduled at e+19 closes at e+21 for lag2; no perpetual defer."
+  },
+  "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+  "benchmark": {
+    "new_control_configurations": 1,
+    "allocation": {
+      "initial_cash": "100000",
+      "currency": "USDT",
+      "fraction": "1",
+      "entry_fee_inclusive": true,
+      "Decimal_precision": 50,
+      "rounding": "ROUND_HALF_EVEN",
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "funding_interest_borrow": 0,
+      "leverage": 1,
+      "max_positions": 1,
+      "fractional_fills": true,
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "fee_bps": 8,
+    "slippage_bps": 2,
+    "entry": "first evaluation open,100% fee-inclusive budget",
+    "exit": "none; mark each source timeframe close to same evaluation end",
+    "reason_new_control": "Existing previously run controls use95%allocation or different fees/window and are not silently reused as matching controls",
+    "sample_basis": "4h forM1180;daily forM1258, including same-window daily-sampled return metrics; repeated QA/recovery adds0controls"
+  },
+  "precision": "Proposed Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+  "QA_gate": "Recheck exact inputhash/grid/uniqueness/close_time/finite positiveOHLC/nonnegativevolume/trades/OHLC bounds; reject any failure, no imputation/drop/forwardfill. Existing QA accepted input may have low-activity bars; do not silently add volume filter. Halt metadata retained;4h OHLC does not prove continuous executable liquidity.",
+  "PIT": "UNKNOWN/DIAGNOSTIC_ONLY; no as-of/finality/trusted/live-readiness claim",
+  "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+  "id": "M1258",
+  "timeframe": "1d hypothesis supported by catalog title naming5day RSI; rule body says5period. Original webpage/runtime remains unverified, quote/venue chosen explicitly as Binance spot BTCUSDT.",
+  "expected_evaluation_bars": 731,
+  "RSI5": "Close deltas at indices1..5; seed mean gain/loss at index5. Wilder alpha1/5 thereafter, prev+(x-prev)/5. Both means0 -> RSI50; loss0 gain>0 ->100; gain0 loss>0 ->0; otherwise100-100/(1+gain/loss). Five-period Wilder and flat50 are research conventions, not verified author settings.",
+  "entry": "Flat and previous ready RSI<=50 and current RSI>50; equality is neutral, crossing requires strict current>50.",
+  "exit": "Long and previous ready RSI>=50 and current RSI<50. At exactly50 retain current holdings. Opposite crossover cancels pending opposite intent; no persistent above50 repeated entries.",
+  "capital_provenance": "Catalog explicitly assumes every trade full capital;100% fee-inclusive cash required, not95%. Fees/slippage reduce purchased quantity without creating reserve.",
+  "cold_start": "31dailybars before eval;RSIready byindex5. Start evalcash, no warmup intent fills firstopen;firstevaluationclose may signal using priorreadyRSI and fill secondopen. No arbitrary200daywarmup.",
+  "known_halt": "No daily midnight-open override: the known intraday2023-03-24 pause does not coincide with daily execution opens. No general all-history tradability claim.",
+  "input": {
+    "input_name": "input.csv",
+    "bytes": 128196,
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "evaluation_rows": 731,
+    "warmup_rows": 31,
+    "manifest_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+    "manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "rebuild_script": "research/public-strategies/M0216/scripts/rebuild_inputs.py",
+    "rebuild_script_sha256": "52b48a659791d6d8a9c817fce761f423831f45b46deb4978107941cfc4c950a1",
+    "fetch_dependency": "research/public-strategies/M0216/scripts/fetch_inputs.py",
+    "fetch_dependency_sha256": "1fd31bec1d011594e033cc32f4daf93556c653487b2859dc75f12b1bc7eff5f3",
+    "reacquire_command_template": "In an isolated repository checkout without retained M0216 input.csv: python research/public-strategies/M0216/scripts/rebuild_inputs.py --raw-dir NEW_PRIVATE_RAW_DIRECTORY --staging-dir NEW_PRIVATE_STAGING_DIRECTORY",
+    "raw_validation": "50 fixed ZIP/CHECKSUM objects,25 provider checksum andZIPCRC; canonical byte rebuild; no current finality or PIT guarantee."
+  },
+  "source_original_fields": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1258-catalog-original-fields.json"
+}

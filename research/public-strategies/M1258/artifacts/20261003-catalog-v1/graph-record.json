@@ -1,0 +1,28 @@
+{
+  "id": "M1258",
+  "name": "比特币 RSI5 跨50满仓（日线目录假设）",
+  "status": "tested_proxy_only",
+  "reason": "CATALOG_HYPOTHESIS / ADAPTED_EXECUTION_PROXY；1规则实现、4策略配置、1新买持，strict0",
+  "tested_variants": 1,
+  "families": [
+    "daily-rsi5-cross50-fullcash"
+  ],
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "implementations": [
+    {
+      "variant_id": "M1258-catalog-rsi5-v1-base",
+      "family": "daily-rsi5-cross50-fullcash",
+      "origin_run_id": "m1258-catalog-rsi5-20261003-v1",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "configuration_runs": 4,
+  "new_control_runs": 1
+}

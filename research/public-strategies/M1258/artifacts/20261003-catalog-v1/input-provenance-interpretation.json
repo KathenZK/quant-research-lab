@@ -1,0 +1,11 @@
+{
+  "original_manifest_preserved": true,
+  "original_manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+  "legacy_manifest_qa_trusted": true,
+  "meaning": "Legacy raw row-validation flag preserved as historical evidence; not a current authorization or PIT/finality/tradability finding.",
+  "current_quality_status": "DIAGNOSTIC_ONLY",
+  "current_trusted": false,
+  "PIT": "NOT_PROVEN",
+  "current_authorization": "Explicit root batch015 reuses existing personal nonproduction research data; frozen source manifest labels do not themselves establish legal review.",
+  "current_coverage_and_checks": "762daily input;31warmup;731evaluation;50raw/CRC/providerhash/canonicalexact checks in current input-QA."
+}

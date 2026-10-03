@@ -1,0 +1,50 @@
+{
+  "ended_utc": "2026-10-03T16:53:17.963041+00:00",
+  "stages": [
+    {
+      "stage": "historical_4plus1",
+      "start_utc": "2026-10-03T16:53:16.608163+00:00",
+      "end_utc": "2026-10-03T16:53:16.824568+00:00",
+      "wall_seconds": 0.21641299100156175,
+      "child_cpu_seconds": 0.215779,
+      "max_child_rss_kib": 31716,
+      "rss_scope": "cumulative maximum of completed children, includes restore descendants on platform",
+      "returncode": 0
+    },
+    {
+      "stage": "independent_worker_oracle",
+      "start_utc": "2026-10-03T16:53:16.824677+00:00",
+      "end_utc": "2026-10-03T16:53:17.036313+00:00",
+      "wall_seconds": 0.2116483209974831,
+      "child_cpu_seconds": 0.21093800000000001,
+      "max_child_rss_kib": 31716,
+      "rss_scope": "cumulative maximum of completed children, includes restore descendants on platform",
+      "returncode": 0
+    },
+    {
+      "stage": "causal_prefix_future",
+      "start_utc": "2026-10-03T16:53:17.036412+00:00",
+      "end_utc": "2026-10-03T16:53:17.429292+00:00",
+      "wall_seconds": 0.39292102399485884,
+      "child_cpu_seconds": 0.39180699999999996,
+      "max_child_rss_kib": 32120,
+      "rss_scope": "cumulative maximum of completed children, includes restore descendants on platform",
+      "returncode": 0
+    },
+    {
+      "stage": "fresh_restore_once",
+      "start_utc": "2026-10-03T16:53:17.429421+00:00",
+      "end_utc": "2026-10-03T16:53:17.962942+00:00",
+      "wall_seconds": 0.5335320810045232,
+      "child_cpu_seconds": 0.5304249999999999,
+      "max_child_rss_kib": 32120,
+      "rss_scope": "cumulative maximum of completed children, includes restore descendants on platform",
+      "returncode": 0
+    }
+  ],
+  "new_strategy_configurations": 4,
+  "new_controls": 1,
+  "restore_additional_trials": 0,
+  "network_requests": 0,
+  "disk_free_bytes": 15272226816
+}

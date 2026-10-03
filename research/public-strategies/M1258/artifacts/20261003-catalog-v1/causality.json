@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "feature_prefixes": [
+    31,
+    32,
+    36,
+    100,
+    365,
+    700,
+    761
+  ],
+  "account_prefixes": [
+    36,
+    100,
+    365,
+    700,
+    761
+  ],
+  "existing_configurations": 4,
+  "new_trials": 0,
+  "new_controls": 0,
+  "future_mutation": true
+}
