@@ -22,7 +22,7 @@
 
 初资100000USDT；每次用现金95%且买费包含于预算，允许任意分数数量；双边不利滑点2bps。四个预定配置base单边费8bps/delay1、fee0、fee20、delay2（单边8bps、额外延迟一根5m）。0手续费仍有滑点。买持以同窗首开盘、95%含费预算、费8/slip2运行过一次，现按固定hash引用M0311，不计新增控制。
 
-原订单{"order_types": {"entry": "limit", "exit": "limit", "stoploss": "limit", "stoploss_on_exchange": false, "stoploss_on_exchange_interval": 60}, "order_time_in_force": {"entry": "GTC", "exit": "GTC"}}。本次原limit进出改成闭合信号后一根开盘必成交；止损为OHLC市价式代理；不模拟挂单排队、超时、取消、部分成交与最低订单额。不能称原限价回测已复现。到期信号退出先于入场/止损/ROI；入出冲突均不触发信号动作；同柱退出后不重新入场。本批四ID的exit_profit_only均为False，盈利门未启用，退出信号不会被盈利门拦截；ROI/止损独立生效。ROI以含费用目标的open/high严格大于；止损low≤门槛，开盘跳空按open，柱内歧义止损优先。末端按原收盘估值、不强平、不扣尚未发生的退出成本。
+原订单{"order_types": {"entry": "limit", "exit": "limit", "stoploss": "limit", "stoploss_on_exchange": false, "stoploss_on_exchange_interval": 60}, "order_time_in_force": {"entry": "GTC", "exit": "GTC"}}。本次原limit进出改成闭合信号后一根开盘必成交；止损为OHLC市价式代理；不模拟挂单排队、超时、取消、部分成交与最低订单额。不能称原限价回测已复现。到期信号退出先于入场/止损/ROI；入出冲突均不触发信号动作；同柱退出后不重新入场。盈利门只限制信号退出，以原开盘扣双边费的利润严格>0判断、再收退出滑点，故边缘退出可微亏；ROI/止损不受该门限制。ROI以含费用目标的open/high严格大于；止损low≤门槛，开盘跳空按open，柱内歧义止损优先。末端按原收盘估值、不强平、不扣尚未发生的退出成本。
 
 ## 实测结果
 
@@ -34,7 +34,7 @@
 | delay2 | -24.1943% | 34.2364% | -1.7163 | 169 | 339 | 24413.6857 |
 | 买持（复用） | 115.0304% | 32.0211% | 1.7447 | 0 | 1 | 75.9392 |
 
-base期末权益75870.97049305USDT，柱末持仓占比10.2431%，期末剩余0.770157951221BTC。信号统计涵盖全部114336根（含暖机）：{"entry_rows": 347, "exit_rows": 37978, "collisions": 0}；实际base成交原因{"entry_signal": 170, "exit_signal": 169}。本配置期末仍持有BTC，按末端原收盘价估值；未实现持仓收益保留，胜率仅统计完整往返。
+base期末权益75870.97049305USDT，柱末持仓占比10.2431%，期末剩余0.770157951221BTC。信号统计涵盖全部114336根（含暖机）：{"entry_rows": 347, "exit_rows": 37978, "collisions": 0}；实际base成交原因{"entry_signal": 170, "exit_signal": 169}。末端持仓仍保留未实现收益，胜率仅完整往返。
 
 净值真实生成：私有完整5m曲线与账户/信号，公开[base每日派生净值](artifacts/20261003-batch011/base-nav-light.csv)及其余三配置每日曲线。成交完整账本私有，公开每配置≤40条或首20+末20条，见[抽样清单](artifacts/20261003-batch011/trade-sample-manifest.json)；抽样不是完整日志或统计抽样。指标[JSON](artifacts/20261003-batch011/results/summary.json)。最大回撤基于105408柱末状态加初资；日Sharpe用366日、ddof1、sqrt365，无风险利率0；图中回撤负号、汇总回撤正数。
 
@@ -69,5 +69,3 @@ Graph[结构化记录](artifacts/20261003-batch011/graph-record.json)已准备�
 | 标题 | BinHV27 |
 | 规则 | RSI(5) 及其 EMA5、ADX、±DI 的 EMA(25/5)、EMA60/120、SMA120/240；价格低于高低 EMA，且 ADX>25/30/35 的四条分支配合 emarsi<=20 或 25 做多；止损写入 ROI/stoploss 属性。 |
 | 页码或文件 | BinHV27.py |
-
-文档修订：本批未启用盈利门，末端持仓描述按实际余额区分；见[统一文档校正说明](../M0260/diagnostics/batch011-documentation-corrections-v3.md)。C0、代码、指标和全部输出未改。

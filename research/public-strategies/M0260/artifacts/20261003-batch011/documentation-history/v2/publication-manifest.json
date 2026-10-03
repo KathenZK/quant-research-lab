@@ -1,7 +1,7 @@
 {
   "id": "M0260",
-  "revision": 3,
-  "created_at_utc": "2026-10-03T14:35:47.571142+00:00",
+  "revision": 2,
+  "created_at_utc": "2026-10-03T14:32:46.410808+00:00",
   "files": [
     {
       "path": "research/public-strategies/M0260/ATTRIBUTION.md",
@@ -20,8 +20,8 @@
     },
     {
       "path": "research/public-strategies/M0260/M0260.md",
-      "bytes": 9804,
-      "sha256": "48401349ad2cb4d50db3346fde61c90daafcb6a7acfd4fe7f6c4b6f125939635"
+      "bytes": 9555,
+      "sha256": "7e3e1d1283b13d92a78b60d1e28162f68b4a502fa1c31f6f6442cff933376397"
     },
     {
       "path": "research/public-strategies/M0260/README.md",
@@ -42,21 +42,6 @@
       "path": "research/public-strategies/M0260/artifacts/20261003-batch011/delay2-nav-light.csv",
       "bytes": 25254,
       "sha256": "58986759983c6b9c22470a75f8a66d83f24127e464fe1fdf7ff4fac4546a899f"
-    },
-    {
-      "path": "research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/revision-v3.json",
-      "bytes": 678,
-      "sha256": "5db0b85bbcbe25886e029c8825a56fdf692d41f5ba96eef695e5fd75005bd1f8"
-    },
-    {
-      "path": "research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/M0260.md.snapshot",
-      "bytes": 9555,
-      "sha256": "7e3e1d1283b13d92a78b60d1e28162f68b4a502fa1c31f6f6442cff933376397"
-    },
-    {
-      "path": "research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json",
-      "bytes": 9728,
-      "sha256": "809a60a8c14685d56f3e3311be2798b3e7cf5254fc83d7b0a6c7f98f73ac717c"
     },
     {
       "path": "research/public-strategies/M0260/artifacts/20261003-batch011/event-qa.json",
@@ -169,11 +154,6 @@
       "sha256": "c6f1d451076ab2d3ebc1a062b61fa3ad49628a4e78e01c068d031c507257203e"
     },
     {
-      "path": "research/public-strategies/M0260/diagnostics/batch011-documentation-corrections-v3.md",
-      "bytes": 1050,
-      "sha256": "87014d6f35304abce012118de94469222b5cd8b0138831e9ba4d9df56b0a5820"
-    },
-    {
       "path": "research/public-strategies/M0260/scripts/README.md",
       "bytes": 1661,
       "sha256": "d638e2326d54727e2e431a7f4a478f3f303937d2ccedbfc67579c5af1d64e5f6"
@@ -250,6 +230,6 @@
     }
   ],
   "self_excluded": true,
-  "history": "Projectionv1 and documentationv2 original bytes preserved inside ID tree and earlier commits",
-  "public_boundary": "Reviewed code/protocol/source fields, derived daily NAV/summary/samples only; no raw market/full ledger/Library IDs/private read fingerprints"
+  "history": "Original v1 manifest/receipt bytes preserved under artifacts/20261003-batch011/projection-history/v1; prior commit retains all v1 targets",
+  "public_boundary": "Reviewed source/code/spec/aggregate/daily derived NAV/trade samples only. No raw market, full5m logs, Library IDs or private context fingerprints."
 }
