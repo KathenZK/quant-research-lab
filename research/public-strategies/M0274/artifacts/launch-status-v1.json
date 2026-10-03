@@ -1,0 +1,23 @@
+{
+  "alternate_hosts_or_proxy_changes": false,
+  "capture_command": "python scripts/rebuild_native12h.py --timeframe 12h --target <new-immutable-local-snapshot> --terms-reviewed",
+  "failure_evidence": "artifacts/capture-failure-v1.json",
+  "first_background_launch_at_utc": "2026-10-03T10:17:24Z",
+  "first_background_launch_status": "NO_DURABLE_CAPTURE_PROCESS_CONFIRMED_EMPTY_STAGING_RETAINED",
+  "foreground_launch_at_utc": "2026-10-03T10:18:10Z",
+  "foreground_session_id": 8551,
+  "id": "M0274",
+  "network_failure_recorded_at_utc": "2026-10-03T10:21:48.078981Z",
+  "process_status": "SCRIPT_FAILURE_RECORDED_PROCESS_EXIT_UNCONFIRMED",
+  "readback_error": "Unified exec process failed: automatic approval review was cancelled",
+  "readback_rejected_tool": "tools.write_stdin",
+  "recorded_at_utc": "2026-10-03T10:31:59.393539+00:00",
+  "resource_policy": {
+    "blas_threads": 1,
+    "memory_virtual_limit_kib": 1572864,
+    "min_disk_free_bytes": 5368709120
+  },
+  "retries_after_access_rejection": 0,
+  "source_started_at_utc": "2026-10-03T10:17:15.374622+00:00",
+  "start_was_backtest_start": false
+}

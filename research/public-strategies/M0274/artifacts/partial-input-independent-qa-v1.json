@@ -1,0 +1,386 @@
+{
+  "archive_checksums_crc_native12_utc_grid_ohlcv_for_retained_months": "PASS",
+  "canonical_full_input": "NOT_CREATED",
+  "checksum_only_months": [
+    "2024-02"
+  ],
+  "complete_month_range": [
+    "2022-12",
+    "2024-01"
+  ],
+  "complete_months": 14,
+  "complete_window_qa": "INCOMPLETE_BLOCKED",
+  "completed_at_utc": "2026-10-03T10:27:55.327834+00:00",
+  "duplicates_missing_or_out_of_order_within_retained_coverage": 0,
+  "expected_months": 25,
+  "expected_rows": 1524,
+  "failure_receipt_sha256": "9c8c016ed1464f82e306ff6d7e60fc94387df558cc1de8818612790694d506d5",
+  "id": "M0274",
+  "independent_offline_partial_verification": "PASS",
+  "no_sort_dedup_fill_resample": true,
+  "observed_timestamp_unit": "milliseconds",
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "records": [
+    {
+      "checksum_present": true,
+      "month": "2022-12",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2022-12/BTCUSDT-12h-2022-12.zip.CHECKSUM",
+          "sha256": "1f08042503d5b2bbcb976dd405a970fb47013444d162211903f611c073057262"
+        },
+        "csv": {
+          "bytes": 10382,
+          "path": "archives/2022-12/BTCUSDT-12h-2022-12.csv",
+          "sha256": "072d07564146e169ea304ed59b27288006ee7b0937067bc8b56f8c55831f7fa0"
+        },
+        "zip": {
+          "bytes": 4202,
+          "path": "archives/2022-12/BTCUSDT-12h-2022-12.zip",
+          "sha256": "ba8dbe1b5302b8bfa79f3f4ffbb6ab4d38c02532af11cb6913346c326017333c"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-01",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-01/BTCUSDT-12h-2023-01.zip.CHECKSUM",
+          "sha256": "711e86587f73847cc19153cb7c14c6d7d9b8d958c9abdbdd20c183257060eb70"
+        },
+        "csv": {
+          "bytes": 10438,
+          "path": "archives/2023-01/BTCUSDT-12h-2023-01.csv",
+          "sha256": "e623afe452ca8dd6eb148a032d0fc5c7bf21b95753200363e2709d99627afe58"
+        },
+        "zip": {
+          "bytes": 4260,
+          "path": "archives/2023-01/BTCUSDT-12h-2023-01.zip",
+          "sha256": "06495e214f376df4655ff067553bbf1301c6eac75792e3d06dc84a93b66a7827"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-02",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-02/BTCUSDT-12h-2023-02.zip.CHECKSUM",
+          "sha256": "41f12d5438948b39219e25145410346a171a705a218453f19a68ccdf59b51574"
+        },
+        "csv": {
+          "bytes": 9458,
+          "path": "archives/2023-02/BTCUSDT-12h-2023-02.csv",
+          "sha256": "7742e56911b83c077db4f1ba83647a1b2d9ac138f49c7e75193095d8e9d66ee6"
+        },
+        "zip": {
+          "bytes": 3904,
+          "path": "archives/2023-02/BTCUSDT-12h-2023-02.zip",
+          "sha256": "f282f4a5bbb29f8c19f237d2fe6e3a008f6b4ff3bc4d5f78bfbaa37fd61dcbb0"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 56,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-03",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-03/BTCUSDT-12h-2023-03.zip.CHECKSUM",
+          "sha256": "e85a87a68ad3bc03c6662d8ff932499e95ee46e5949952f55218888aef987cdd"
+        },
+        "csv": {
+          "bytes": 10426,
+          "path": "archives/2023-03/BTCUSDT-12h-2023-03.csv",
+          "sha256": "930f091ddd9dff602f27c24edbed1b0bd9c70191ab02d3c5370552a953a12493"
+        },
+        "zip": {
+          "bytes": 4284,
+          "path": "archives/2023-03/BTCUSDT-12h-2023-03.zip",
+          "sha256": "03380af183f76dd13301963a17a83b31be84d49caa4fc2cbe428b7bd5f4b296a"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-04",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-04/BTCUSDT-12h-2023-04.zip.CHECKSUM",
+          "sha256": "200b0a86741c2e0cd46fdf878dcbbf8952389c2496a37638a310ebdbeaeb5f89"
+        },
+        "csv": {
+          "bytes": 9891,
+          "path": "archives/2023-04/BTCUSDT-12h-2023-04.csv",
+          "sha256": "f01f5ea75449b24ad6a24c2de11d81dde1f87449f938fdfc6fd2e6272e5d9619"
+        },
+        "zip": {
+          "bytes": 3995,
+          "path": "archives/2023-04/BTCUSDT-12h-2023-04.zip",
+          "sha256": "f0df81d43e11f1deabc5cb0102b775fc33e62d5af62a50a8920910a227864ac2"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 60,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-05",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-05/BTCUSDT-12h-2023-05.zip.CHECKSUM",
+          "sha256": "eb399c46b44153205a73c1da9f7a9d332bfc9c5fabc2a5cc02a9e911432e520d"
+        },
+        "csv": {
+          "bytes": 10193,
+          "path": "archives/2023-05/BTCUSDT-12h-2023-05.csv",
+          "sha256": "f2e582e99ba021c77bb8a58f611376ae36b9fd7343fd8aac19d3226234ad003d"
+        },
+        "zip": {
+          "bytes": 4113,
+          "path": "archives/2023-05/BTCUSDT-12h-2023-05.zip",
+          "sha256": "3d2907af243e872b4185ee5304cfbc87320cc4e14cef6f937f7861ec3f817cd2"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-06",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-06/BTCUSDT-12h-2023-06.zip.CHECKSUM",
+          "sha256": "a175e19d12cbab809daa592eeedda23a4aefbbed6809fcdee2fbe3b897713661"
+        },
+        "csv": {
+          "bytes": 9868,
+          "path": "archives/2023-06/BTCUSDT-12h-2023-06.csv",
+          "sha256": "9bf4d0ccc432441832d12e15109d01cd33fa9500dd5dfd505737bd29cb4ade94"
+        },
+        "zip": {
+          "bytes": 3954,
+          "path": "archives/2023-06/BTCUSDT-12h-2023-06.zip",
+          "sha256": "6356133421bb41f7c566b70df8f6c6eea436f7220b90b9f627d3cbbd4f7fdcb8"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 60,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-07",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-07/BTCUSDT-12h-2023-07.zip.CHECKSUM",
+          "sha256": "1be244809442ad1db22d348b50e1b78e600d31a211522ebd57865daa640a99ca"
+        },
+        "csv": {
+          "bytes": 10155,
+          "path": "archives/2023-07/BTCUSDT-12h-2023-07.csv",
+          "sha256": "3bfc1dfae1da84b6eabfbb64211f2bdcd9ad0e6da84d0093a9b53fb7738336a5"
+        },
+        "zip": {
+          "bytes": 4021,
+          "path": "archives/2023-07/BTCUSDT-12h-2023-07.zip",
+          "sha256": "a1253e9673f636f89360c626d4545afd9b899bba6b6aaf404dc7dd6829fb2a69"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-08",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-08/BTCUSDT-12h-2023-08.zip.CHECKSUM",
+          "sha256": "ccacb29a2c8c0dbd3bd7d545458b0d5afa393d30c139a8fb8510ad6d46f5fa8d"
+        },
+        "csv": {
+          "bytes": 10158,
+          "path": "archives/2023-08/BTCUSDT-12h-2023-08.csv",
+          "sha256": "83b254e4aae84f433a88b5140f1c550167a5bb9232236de26fa06b11d06e9c37"
+        },
+        "zip": {
+          "bytes": 4046,
+          "path": "archives/2023-08/BTCUSDT-12h-2023-08.zip",
+          "sha256": "2e513160e8059e1c1659e7681a7b2582df88587343b1d4c3f94125f4082d84d9"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-09",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-09/BTCUSDT-12h-2023-09.zip.CHECKSUM",
+          "sha256": "cd03f6886d6e1fff8fe7e7f884838e9a07f1deddb6c3da6c02635d0a5aee396c"
+        },
+        "csv": {
+          "bytes": 9811,
+          "path": "archives/2023-09/BTCUSDT-12h-2023-09.csv",
+          "sha256": "32cf36bb5ab412c0acdf9631b15bfba6e986f66f3a2f76c232c81b3c7a7919a1"
+        },
+        "zip": {
+          "bytes": 3930,
+          "path": "archives/2023-09/BTCUSDT-12h-2023-09.zip",
+          "sha256": "23d6abe47d74c706aa3cb1019d0e22c85c60a7e7aafc957d9a10c313f11c7bc1"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 60,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-10",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-10/BTCUSDT-12h-2023-10.zip.CHECKSUM",
+          "sha256": "87d30a59ff0fa6255ed61f25398a027bdfd032c2bd1dd0be522accc45a345805"
+        },
+        "csv": {
+          "bytes": 10178,
+          "path": "archives/2023-10/BTCUSDT-12h-2023-10.csv",
+          "sha256": "ca704b9d670e102770098d3a324f658babde9bbae57bf482f0334953a5da6142"
+        },
+        "zip": {
+          "bytes": 4106,
+          "path": "archives/2023-10/BTCUSDT-12h-2023-10.zip",
+          "sha256": "8b57b63458877e6713751f961bb125530c8008fdf9de083938a4af9ceef209b3"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-11",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-11/BTCUSDT-12h-2023-11.zip.CHECKSUM",
+          "sha256": "f04c882ba2bfb2cdd13e3e4a9d7c263e5d690c13742460f48ce799da302fb03e"
+        },
+        "csv": {
+          "bytes": 9860,
+          "path": "archives/2023-11/BTCUSDT-12h-2023-11.csv",
+          "sha256": "f2bbca84df75dd01830087e68c95368dc7fd257e22a2c92d3de79827c2d64227"
+        },
+        "zip": {
+          "bytes": 3977,
+          "path": "archives/2023-11/BTCUSDT-12h-2023-11.zip",
+          "sha256": "f14ec81b7e639ff6571b5ed2add4c1f0bcbfee387e0246caf04ef67e07be29f2"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 60,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2023-12",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2023-12/BTCUSDT-12h-2023-12.zip.CHECKSUM",
+          "sha256": "3e71ac2b0ba93f9119e3d058d3d2b15455805bfde861c47eb666a623f47cb6bd"
+        },
+        "csv": {
+          "bytes": 10207,
+          "path": "archives/2023-12/BTCUSDT-12h-2023-12.csv",
+          "sha256": "ba9163ca38866678d91702fbd6caa95e8090e594fca70deb581e738519f5cce6"
+        },
+        "zip": {
+          "bytes": 4124,
+          "path": "archives/2023-12/BTCUSDT-12h-2023-12.zip",
+          "sha256": "f5c90aba89ee779ae141e62640c464253747c948c7cb06954fac946a0cd69ec2"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2024-01",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2024-01/BTCUSDT-12h-2024-01.zip.CHECKSUM",
+          "sha256": "ef1f5210fb3a60ecac612354516f05cadb691669b660009b0e560393c229a7a0"
+        },
+        "csv": {
+          "bytes": 10230,
+          "path": "archives/2024-01/BTCUSDT-12h-2024-01.csv",
+          "sha256": "359d22d917e3f7543ec6ad5022c7dd157e3df3d6a0ead62f66acfc4cbea06d32"
+        },
+        "zip": {
+          "bytes": 4153,
+          "path": "archives/2024-01/BTCUSDT-12h-2024-01.zip",
+          "sha256": "5d70756d8fa69a30790a49b6427b1032337d2cf582ac5aadb2228956ef42f8d8"
+        }
+      },
+      "row_quality": "PASS_FOR_RETAINED_MONTH_ONLY",
+      "rows": 62,
+      "zip_present": true
+    },
+    {
+      "checksum_present": true,
+      "month": "2024-02",
+      "objects": {
+        "checksum": {
+          "bytes": 89,
+          "path": "archives/2024-02/BTCUSDT-12h-2024-02.zip.CHECKSUM",
+          "sha256": "373c4f67783fbdf5ba2d3b91bdcd2a6e2ec2b3943d6bd19bfaa5ac2ab6eaba8a"
+        }
+      },
+      "zip_present": false
+    }
+  ],
+  "registered_status": "UNACCEPTED",
+  "remaining_unverified_rows": 670,
+  "requested_window": [
+    "2022-12-01T00:00:00Z",
+    "2025-01-01T00:00:00Z"
+  ],
+  "retained_coverage_end_exclusive": "2024-02-01T00:00:00Z",
+  "schema": "native12h-partial-independent-audit/v1",
+  "script_sha256": "413755b893fe9ea182904652e3e72dc18b47d1d7dd6774ace67b2d8a8453c97e",
+  "second_network_capture": "NOT_RUN",
+  "strategy_backtest_executed": false,
+  "unit_change_in_requested_window": "NOT_FULLY_TESTED_DUE_INCOMPLETE_INPUT",
+  "verified_rows": 854
+}

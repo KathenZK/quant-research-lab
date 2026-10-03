@@ -1,0 +1,19 @@
+{
+  "status": "PASS_SYNTHETIC_EXECUTION_CONTRACT_TESTS",
+  "checks": [
+    "same_bar_dual_touch_stop_first",
+    "gap_stop_worse_observed_open",
+    "gap_roi_observed_open",
+    "644_minute_boundary_deferred_until_next_open",
+    "zero_roi_tier_adverse_slippage_net_loss",
+    "delay2_and_no_warmup_order",
+    "halt_entry_timestamp_is_resume14",
+    "halt_delayed_roi_observation14",
+    "prehault_intrabar_latest_before_suspension"
+  ],
+  "target_engine_sha256": "cdd86eb05d2dbdcb2ca8cc94d74617f681ed3943d979f6f09614f8020b654e78",
+  "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+  "auditor_sha256": "6595d9f802aff522140a5cccc15d7bd62c2ebd8411950d3e8169cd3e4f9c7ebd",
+  "synthetic_only": true,
+  "scope": "Driving tested engine with synthetic examples is distinct from independent stdlib/Decimal real-result oracle; not empirical fills or framework parity."
+}

@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "ta": "0.11.0"
+  },
+  "ta_file_hashes": {
+    "__init__.py": "afd6bac383e982dbb6a9035dfeaa5d6d512234f8c18300092e4935f3c4125391",
+    "utils.py": "f1f26e33f1ef2ce6e2b4c8d5f32d8529c0197648025f94949d09a9222a524590",
+    "volatility.py": "9d08f627b2f9069e9f3e72d1edbceab8d7512006246aef3e6001e6ea3295afc8"
+  },
+  "cpu_threads": 1,
+  "process_memory_limit_bytes": 1610612736
+}

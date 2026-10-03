@@ -1,0 +1,23 @@
+{
+  "status": "PASS_INDEPENDENT_DECIMAL_INDICATORS_AND_SIGNAL",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "rows": 4572,
+  "dcp_max_abs_difference": 1.5765166949677223e-14,
+  "kcw_max_abs_difference": 4.4853010194856324e-14,
+  "signal_mismatches": 0,
+  "prefix_lengths_exactly_equal": [
+    29,
+    80,
+    186,
+    678,
+    2192,
+    4571
+  ],
+  "first_possible_signal_index": 28,
+  "source_rows_dropped": 0,
+  "extra_zero_column_dropna_rows": 0,
+  "formula": "DCP=(close-min(low,10))/(max(high,10)-min(low,10)); original KCW=100*(rolling20((4h-2l+c)/3)-rolling20((-2h+4l+c)/3))/rolling20((h+l+c)/3); signals inclusive ratio boundaries, lags15/9",
+  "strategy_returns_computed": false,
+  "reviewer_script_sha256": "c85b01f165e78a54359603478458e3550d6b4f9f423ed0b8cecebc2307131c88",
+  "at_utc": "2026-10-03T10:20:53.048041+00:00"
+}

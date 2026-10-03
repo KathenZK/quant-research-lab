@@ -1,0 +1,78 @@
+{
+  "at_utc": "2026-10-03T10:27:55.566777+00:00",
+  "decision": "BLOCK_ORIGINAL_IMPLEMENTATION_NO_RETURNS",
+  "findings": [
+    {
+      "code": "GLOBAL_MEAN_KST_INITIALIZATION",
+      "evaluation_impact": "Not inferred from static inspection; distinguish warmup from evaluation in numerical prefix tests.",
+      "location": {
+        "first_line": 491,
+        "last_line": 541,
+        "module": "trend.py",
+        "module_sha256": "fa5c348404266086cbcf54305ab342e2841b24e5a9f42091a4a7df5b32c12c7a"
+      },
+      "mechanism": "Each initial shifted close is filled using mean of the entire supplied close vector. The historical KST and KST signal can therefore depend on values later than the row. This is not repaired.",
+      "severity": "ORIGINAL_PIPELINE_CAUSALITY_BLOCKER",
+      "used_feature": "trend_kst_diff"
+    },
+    {
+      "code": "VISUAL_ICHIMOKU_GLOBAL_MEAN_INITIALIZATION",
+      "location": {
+        "first_line": 406,
+        "last_line": 419,
+        "module": "trend.py",
+        "module_sha256": "fa5c348404266086cbcf54305ab342e2841b24e5a9f42091a4a7df5b32c12c7a"
+      },
+      "mechanism": "visual=True features are included by add_all_ta_features; shifted prefix uses span mean of full supplied vector. Entry itself selects the nonvisual base line.",
+      "severity": "ORIGINAL_FULL_PIPELINE_CAUSALITY_BLOCKER"
+    },
+    {
+      "code": "DROPNA_INPUT_SHAPE",
+      "location": {
+        "first_line": 49,
+        "last_line": 56,
+        "module": "utils.py",
+        "module_sha256": "f1f26e33f1ef2ce6e2b4c8d5f32d8529c0197648025f94949d09a9222a524590"
+      },
+      "mechanism": "Native archive ignore field is zero. Passing all native columns would remove every row. Strategy input must be Freqtrade OHLCV shape. No zero native volume rows may silently disappear.",
+      "severity": "REPRODUCTION_CONSTRAINT"
+    },
+    {
+      "code": "AGEFILTER30_UNPROVEN",
+      "mechanism": "Source comment requests AgeFilter min_days_listed=30. Fixed BTCUSDT and 62 warmup bars do not reproduce dynamic daily candle counting; original configuration/pairlist history not supplied.",
+      "severity": "STRICT_REPRODUCTION_BLOCKER"
+    },
+    {
+      "code": "ENVIRONMENT_VERSION_UNPINNED",
+      "mechanism": "Author did not pin ta/numpy/pandas/Freqtrade versions. This audit pins installed ta0.11.0 numpy2.3.5 pandas2.2.3. numpy.lib.math compatibility is probed independently below; no import-failure claim is inferred from a version number. Freqtrade is not installed, so no original engine run is claimed.",
+      "numpy_lib_math_probe": "AVAILABLE",
+      "severity": "STRICT_REPRODUCTION_BLOCKER"
+    }
+  ],
+  "id": "M0274",
+  "library_version": "0.11.0",
+  "performance_engine_executed": false,
+  "schema": "godstra-source-static-audit/v1",
+  "script_sha256": "23ed4005a2fb11696bbef00074a7779e168ca7a7d1287b2401c2418ae6ed9844",
+  "source_method_locations": {
+    "dna_size": {
+      "first_line": 80,
+      "last_line": 86
+    },
+    "populate_entry_trend": {
+      "first_line": 97,
+      "last_line": 138
+    },
+    "populate_exit_trend": {
+      "first_line": 140,
+      "last_line": 178
+    },
+    "populate_indicators": {
+      "first_line": 88,
+      "last_line": 95
+    }
+  },
+  "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+  "source_thresholds_modified": false,
+  "strict_reproductions": 0
+}
