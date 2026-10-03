@@ -1,0 +1,25 @@
+{
+  "canonical_input_sha256": null,
+  "checkpoint": "C1_BLOCKED_DIAGNOSTIC_PROTOCOL_FROZEN_NOT_FULL_INPUT_BOUND",
+  "dependency_manifest_sha256": "d88eebe63ada2c2c8f94b76d09324a6c95c04ce260d35ada5cabe11eaffceead",
+  "frozen_at_utc": "2026-10-03T10:29:12.127241+00:00",
+  "full_input_complete": false,
+  "gate": "BLOCK_ORIGINAL_FULL_PIPELINE_ON_FUTURE_DEPENDENCE",
+  "id": "M0274",
+  "no_shrink_window": true,
+  "partial_manifest_sha256": "92cf58d1abc55ef76259b1d115582fa91309868ce2173197b1ebe77e6b5d18c9",
+  "performance_results_seen": false,
+  "planned_benchmark_returns": false,
+  "planned_real_returns": false,
+  "planned_strategy_runs": 0,
+  "pre_performance_plan_sha256": "4b296cdb7bbbcaa8abaf0e77fd76e0f8bcd5d707f95cf992786ce6e3832c36c2",
+  "source_rules_sha256": "e0c5b74fc8f560c23952922ba6069e56d083ab7b48dbf897e50ed55f4dbb8f9f",
+  "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+  "synthetic_counterexample_script_sha256": "ddc70fb0f150e7a7e983527c79cdf7b007b459808abe254a31095c809078eb91",
+  "synthetic_plan": "240 deterministic OHLCV rows; prefixes62,80,124,239; compare ta full transform at rtol1e-12 atol1e-10; reproduces independently reported synthetic finding without observing returns",
+  "unresolved": [
+    "C0 full25-month input incomplete due access rejection",
+    "Original full ta pipeline static future dependence",
+    "Author dynamic AgeFilter30 and original engine/environment not reconstructed"
+  ]
+}

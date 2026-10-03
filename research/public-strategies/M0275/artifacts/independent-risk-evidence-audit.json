@@ -1,0 +1,45 @@
+{
+  "status": "PASS_SIGNALS_RISK_COUNTS_AND_EXECUTION_INTERVALS",
+  "signal_rows_checked": 4572,
+  "cases": [
+    {
+      "case": "base",
+      "both_stop_roi_touched": 0,
+      "unresolved_stop_roi_samebar": 0,
+      "roi_boundary_candidates": 178,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "both_stop_roi_touched": 0,
+      "unresolved_stop_roi_samebar": 0,
+      "roi_boundary_candidates": 188,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "both_stop_roi_touched": 0,
+      "unresolved_stop_roi_samebar": 0,
+      "roi_boundary_candidates": 182,
+      "status": "PASS"
+    },
+    {
+      "case": "delay2",
+      "both_stop_roi_touched": 0,
+      "unresolved_stop_roi_samebar": 0,
+      "roi_boundary_candidates": 183,
+      "status": "PASS"
+    },
+    {
+      "case": "buyhold",
+      "both_stop_roi_touched": 0,
+      "unresolved_stop_roi_samebar": 0,
+      "roi_boundary_candidates": 0,
+      "status": "PASS"
+    }
+  ],
+  "source_engine_imported": false,
+  "no_1m_data_read": true,
+  "auditor_sha256": "c9b3e6d0eca50c24d8f3ef9714c29044a11f692b272139c80e4d7746d1934e31",
+  "at_utc": "2026-10-03T10:32:31.351315+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "tests": 17,
+  "command": [
+    "/workspace/shared/dot-public-strategies-20261003/.venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/workspace/shared/dot-public-strategies-20261003-b002/research/public-strategies/M0275/scripts",
+    "-p",
+    "test_rebuild_official_bars.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_changed_zip_hash (test_rebuild_official_bars.QA.test_changed_zip_hash) ... ok\ntest_disk_guard (test_rebuild_official_bars.QA.test_disk_guard) ... ok\ntest_duplicate (test_rebuild_official_bars.QA.test_duplicate) ... ok\ntest_existing_target_guard_sends_nothing (test_rebuild_official_bars.QA.test_existing_target_guard_sends_nothing) ... ok\ntest_extra_native_column_rejected (test_rebuild_official_bars.QA.test_extra_native_column_rejected) ... ok\ntest_invalid_rows (test_rebuild_official_bars.QA.test_invalid_rows) ... ok\ntest_native_zero_volume_retained_and_counted (test_rebuild_official_bars.QA.test_native_zero_volume_retained_and_counted) ... ok\ntest_no_alternate_host (test_rebuild_official_bars.QA.test_no_alternate_host) ... ok\ntest_out_of_order_no_sort (test_rebuild_official_bars.QA.test_out_of_order_no_sort) ... ok\ntest_rebuild_hash_mismatch (test_rebuild_official_bars.QA.test_rebuild_hash_mismatch) ... ok\ntest_terms_guard_sends_nothing (test_rebuild_official_bars.QA.test_terms_guard_sends_nothing) ... ok\ntest_valid_and_lossless (test_rebuild_official_bars.QA.test_valid_and_lossless) ... ok\ntest_verified_zip (test_rebuild_official_bars.QA.test_verified_zip) ... ok\ntest_wrong_checksum_filename (test_rebuild_official_bars.QA.test_wrong_checksum_filename) ... ok\ntest_wrong_row_count (test_rebuild_official_bars.QA.test_wrong_row_count) ... ok\ntest_zero_volume_nonzero_trades (test_rebuild_official_bars.QA.test_zero_volume_nonzero_trades) ... ok\ntest_zip_path_traversal_rejected (test_rebuild_official_bars.QA.test_zip_path_traversal_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.024s\n\nOK\n",
+  "at_utc": "2026-10-03T10:44:21.325471+00:00",
+  "no_network_in_tests": true
+}

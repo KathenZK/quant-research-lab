@@ -1,0 +1,124 @@
+{
+  "origin_run_id": "M0275-20261003-first-replay",
+  "variant_id": "M0275-BTCUSDT-4H-HERACLES-15-9-20261003",
+  "fidelity_class": "HYPOTHESIS",
+  "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+  "light_files": {
+    "artifacts/results/base-trades.csv": {
+      "bytes": 38612,
+      "sha256": "dabc590afb74772c217ce62fa0f04b3ef4036754fae79be6a0907a1750af70b9"
+    },
+    "artifacts/results/calendar-year-attribution.csv": {
+      "bytes": 329,
+      "sha256": "de5af57faaefdf1ff40697ae365e62cc9e75363900cddeb374762f2ea01b3327"
+    },
+    "artifacts/results/metrics.csv": {
+      "bytes": 1504,
+      "sha256": "d2fe1772259918dceda21ef5e814c2e0c6f797cb54cf3b017147d67cfc3b3147"
+    },
+    "artifacts/results/month-end-nav-light.csv": {
+      "bytes": 2849,
+      "sha256": "f7a29bd9272f4defeaf039a7e09b6a3dce1d058a8f62d6fa9b59e696e71c7b5b"
+    },
+    "artifacts/results/summary.json": {
+      "bytes": 5160,
+      "sha256": "a6d8d283fcd2c495991de9ed062e436c37360c3c470e125086ef239e1b2981fc"
+    },
+    "artifacts/results/trade-diagnostics.json": {
+      "bytes": 1265,
+      "sha256": "623a341c791fbdedf8a988f448aa8c11d57040c021324aa75d9460b69cd22c2d"
+    }
+  },
+  "private_full_outputs": {
+    "base-daily-nav.csv": {
+      "bytes": 108996,
+      "sha256": "c9ee4bf9f2e18522ef3c1ac28240a0c83de5dabe2d50791e09cfca9f1e1d9a31"
+    },
+    "base-nav.csv": {
+      "bytes": 604341,
+      "sha256": "9c0cba82cb5be498852ee54049483948c14baca9c76376579a829bca9c07f1e9"
+    },
+    "base-roi-boundaries.json": {
+      "bytes": 52225,
+      "sha256": "2e78d52ac4e331c59d93931a2b693cdb69bbdda63af5c2b1f95bc0a401eda376"
+    },
+    "base-trades.csv": {
+      "bytes": 38612,
+      "sha256": "dabc590afb74772c217ce62fa0f04b3ef4036754fae79be6a0907a1750af70b9"
+    },
+    "buyhold-daily-nav.csv": {
+      "bytes": 109748,
+      "sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908"
+    },
+    "buyhold-nav.csv": {
+      "bytes": 608938,
+      "sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c"
+    },
+    "buyhold-roi-boundaries.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "buyhold-trades.csv": {
+      "bytes": 568,
+      "sha256": "3f8d6cc6387e76aeba2d949b7a43fbc24c015f165f836a9ec05ce674942fe5f8"
+    },
+    "delay2-daily-nav.csv": {
+      "bytes": 109213,
+      "sha256": "aad2a8e3dcdac06aec6be90edb0e74dc711b58fa3ac357afc0cc5bc3008ad4db"
+    },
+    "delay2-nav.csv": {
+      "bytes": 606022,
+      "sha256": "8192dbbd0f522077d45ae090b5cca6d93f42323ec1d12e61f2e3a7d61a0ebd74"
+    },
+    "delay2-roi-boundaries.json": {
+      "bytes": 53695,
+      "sha256": "b8f4a01077624fd1dab265748ae8ba0fc6f5fb62fde779c2fb11582d0a59ed8d"
+    },
+    "delay2-trades.csv": {
+      "bytes": 39279,
+      "sha256": "1fcc354b78892f2a1cacf580ba9a36350a5b3efa50bfcfa152c871725e65fe31"
+    },
+    "fee0-daily-nav.csv": {
+      "bytes": 108909,
+      "sha256": "38a566f48f68c3dbfc6f28e99bdc399b17bab1dcc54b8f37391c1370b88b8c46"
+    },
+    "fee0-nav.csv": {
+      "bytes": 603857,
+      "sha256": "efc911c7cba7cf82d803f85c497c1c5341ac4e5c70592de909389ecefd6f740c"
+    },
+    "fee0-roi-boundaries.json": {
+      "bytes": 55161,
+      "sha256": "c17d4497a7285ba5ea101252888841362f6c5ced055eda9ed376716ada1d4a0a"
+    },
+    "fee0-trades.csv": {
+      "bytes": 38835,
+      "sha256": "89173ba80c8fe37900cee12183f3ee0227b791b4c338b339ef0e240159488473"
+    },
+    "fee20-daily-nav.csv": {
+      "bytes": 109130,
+      "sha256": "5057a35be5716c5b411f98fe330e2bb2982c713b653bb78a9230f5251d030445"
+    },
+    "fee20-nav.csv": {
+      "bytes": 604883,
+      "sha256": "df36c43a4b2dac9436ce810450e333bf765acdb0670a9c8024c28608a3b02319"
+    },
+    "fee20-roi-boundaries.json": {
+      "bytes": 53400,
+      "sha256": "30df275855e6dd8ec52441c3b883dfa8d017a319d4a50133f195bac3a96b1576"
+    },
+    "fee20-trades.csv": {
+      "bytes": 39193,
+      "sha256": "ec68f7591e995b879d6e3aa81707eae4453a15b522675076e17252db55cbfdc8"
+    },
+    "signals.csv": {
+      "bytes": 357062,
+      "sha256": "4b37d909c384c10809dcccef1e288b28365deefeec74087aca21d6e49965d1dc"
+    },
+    "summary.json": {
+      "bytes": 5160,
+      "sha256": "a6d8d283fcd2c495991de9ed062e436c37360c3c470e125086ef239e1b2981fc"
+    }
+  },
+  "projection": "month-end normalized NAV plus initial point; max drawdown/Sharpe computed before sampling over all 4h/day observations; base fill ledger only",
+  "raw_or_full_candles_included": false
+}

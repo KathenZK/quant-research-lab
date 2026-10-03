@@ -1,0 +1,31 @@
+{
+  "actual_benchmark_backtests": 0,
+  "actual_cost_sensitivity_backtests": 0,
+  "actual_delay_sensitivity_backtests": 0,
+  "actual_strategy_backtests": 0,
+  "blockers": [
+    "NATIVE12H_CAPTURE_ACCESS_REJECTION_2024_02_ZIP",
+    "FULL_ADD_ALL_TA_FEATURES_PREFIX_CAUSALITY_FAIL",
+    "AUTHOR_ENGINE_ENVIRONMENT_PAIRLIST_NOT_REPRODUCED"
+  ],
+  "buy_hold_return": null,
+  "classification": "HYPOTHESIS_DIAGNOSTIC_ONLY",
+  "equity_curve": null,
+  "id": "M0274",
+  "live_ready": false,
+  "max_drawdown": null,
+  "name": "GodStra",
+  "null_reason": "NOT_RUN: complete25-month input incomplete plus original full-feature causality FAIL; no invented zero results",
+  "oos_claim": false,
+  "parameter_search_trials": 0,
+  "promotion": "NOT_ELIGIBLE",
+  "sharpe": null,
+  "signals_from_real_incomplete_window_computed": false,
+  "source_rule_preserved": true,
+  "status": "BLOCKED",
+  "strategy_return": null,
+  "strict_reproductions": 0,
+  "trade_ledger": null,
+  "trades": null,
+  "zero_trade_result_claimed": false
+}
