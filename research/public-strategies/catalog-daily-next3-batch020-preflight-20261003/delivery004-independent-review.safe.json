@@ -1,0 +1,170 @@
+{
+  "schema": "independent-delivery-addendum-review/v1",
+  "status": "PASS_EXACT_DELIVERY004_PUBLIC_SCOPE_AND_EVIDENCE_CONSISTENCY",
+  "reviewer": "root/m1266_packet",
+  "created_at_utc": "2026-10-03T22:47:31.968759+00:00",
+  "base_commit": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+  "reviewed_files": [
+    {
+      "path": "research/README.md",
+      "bytes": 67231,
+      "sha256": "b744ebd0eeeaab0c4f8fbb46aa7f0575d38831399a884bc2d8b314fbf400da95"
+    },
+    {
+      "path": "research/public-strategies/README.md",
+      "bytes": 10937,
+      "sha256": "fd670902f7537260a9ff08b7c9bdab7198b14c3358b8f92d88fbfb018881797d"
+    },
+    {
+      "path": "research/public-strategies/progress-20261003-batch020-delivery004.json",
+      "bytes": 14085,
+      "sha256": "b195603bd8ca62146a17a664c73b1e1a7dd4f98e94b71c9484aee8ad42f686e1"
+    }
+  ],
+  "checks_passed": [
+    "Exactly new004 JSON and two index links; no execution source change",
+    "Exact delivery00414085-byte pin",
+    "Exact declared base and branch",
+    "Previous published003 exact pin",
+    "All cumulative accepted counts/ID sets unchanged from003",
+    "43/175/22 strict0 blocked7, unique IDs",
+    "M1266 not counted a second time; all addendum increments zero",
+    "Lab_delivery exact coordinator receipt bytes",
+    "Lab_delivery head/merge/time/status consistent",
+    "Lab_delivery head_runs exact stored receipt projection",
+    "Lab_delivery head_runs successes belong to precise head/main",
+    "Lab_delivery main_CI exact stored receipt projection",
+    "Lab_delivery main_CI successes belong to precise head/main",
+    "Lab_delivery delivered byte/file counts match receipt",
+    "Lab original independent57-check pin preserved",
+    "Graph_delivery exact coordinator receipt bytes",
+    "Graph_delivery head/merge/time/status consistent",
+    "Graph_delivery head_runs exact stored receipt projection",
+    "Graph_delivery head_runs successes belong to precise head/main",
+    "Graph_delivery main_runs exact stored receipt projection",
+    "Graph_delivery main_runs successes belong to precise head/main",
+    "Graph_delivery delivered byte/file counts match receipt",
+    "Graph26 delivery, old25 preservation, review pins and tests match receipt",
+    "M2903_prehistory actual local archive size/hash exact",
+    "M2903_prehistory actual local manifest size/hash exact",
+    "M2903_prehistory local-only restore scope preserved",
+    "M2903_final_review_addendum actual local archive size/hash exact",
+    "M2903_final_review_addendum actual local manifest size/hash exact",
+    "M2903_final_review_addendum local-only restore scope preserved",
+    "M3710_prehistory actual local archive size/hash exact",
+    "M3710_prehistory actual local manifest size/hash exact",
+    "M3710_prehistory local-only restore scope preserved",
+    "Graph26_display actual local archive size/hash exact",
+    "Graph26_display actual local manifest size/hash exact",
+    "Graph26_display local-only restore scope preserved",
+    "M2903 original197-member local restore and33 synthetic outputs; no history",
+    "M2903 separate174-file final review addendum/176 members, not replay",
+    "M3710 local653-member verification scope with no remote/history claim",
+    "Graph actual fresh-restore verification receipt exact pin",
+    "Graph complete approved display package dimensions consistent",
+    "Graph26/29 byte-exact restored display output receipt consistency",
+    "Graph display recovery does not claim full research/Site/private-note backup",
+    "All new batch020 root releases booleanfalse; no historical execution",
+    "M0974 parent partial/20-line read explicitly not root archive materialization or proxy upload",
+    "Root upload blockage tools/list401 and0 saved confirmed; read-only access not upload success",
+    "No Site activation or M1266 implementation delivery claimed",
+    "Only one appended index link: research/README.md",
+    "Only one appended index link: research/public-strategies/README.md",
+    "Public boundary scan clean: research/README.md",
+    "Public boundary scan clean: research/public-strategies/README.md",
+    "Public boundary scan clean: research/public-strategies/progress-20261003-batch020-delivery004.json",
+    "Staged diff check PASS",
+    "Staged paths/bytes stable throughout read-only review"
+  ],
+  "evidence_receipts": [
+    {
+      "file": "batch020-checkpoint003-main-merge-and-ci.json",
+      "bytes": 2645,
+      "sha256": "3067c6a2ba8ad6aee033bb3f7124df152621b54385cd5fde04d9d17e5f493dbd"
+    },
+    {
+      "file": "graph-m1347-main-merge-and-ci.json",
+      "bytes": 2888,
+      "sha256": "52fd631be7eda5f2abd78ab01421a3137fb04729947d1ba269df71c6ab1e3c7c"
+    },
+    {
+      "file": "PACKAGE-RECEIPT.json",
+      "bytes": 607,
+      "sha256": "b1971599a12585e7276e13322e5263fb43c8380890bde161ad156673db147ec9"
+    },
+    {
+      "file": "RESTORE-RECEIPT.json",
+      "bytes": 1624,
+      "sha256": "ee28eff264d7cf4dea49b3e4e053815f2fcd31ecbc92c91903428fcddab9b6ba"
+    },
+    {
+      "file": "PACKAGE-RECEIPT.json",
+      "bytes": 1938,
+      "sha256": "14828ca9c0a73620b34cc484c97caa5e197cae648f0f3a2e8e3ef198ed7457b6"
+    },
+    {
+      "file": "PACKAGE-RECEIPT.safe.json",
+      "bytes": 2917,
+      "sha256": "5bfcf677a71474a05f01b33a43fbf276cecb1a54ab4de9fd8eca8f29c5817be3"
+    },
+    {
+      "file": "RESTORE-EXECUTION-RECEIPT.json",
+      "bytes": 299,
+      "sha256": "ae175918f6eb7bffbb9d72dcc91f20d167bb6b780f6414c8f5dc94ab5c176271"
+    },
+    {
+      "file": "fresh-package-verification.json",
+      "bytes": 360,
+      "sha256": "8a1734e2acaeb17002fa6704550a9dd8b13b84604ca186bc30aa6bf922206215"
+    },
+    {
+      "file": "RECOVERY-VERIFICATION.safe.json",
+      "bytes": 1412,
+      "sha256": "77f05fd67193ed729238d0b9cb3462c613ffce21285a0fbf463ff19c4faeec41"
+    },
+    {
+      "file": "BLOCKER.private.json",
+      "bytes": 1756,
+      "sha256": "ea61482d4f9276e1017f32e54a20e3878d46c4906d9df2b07b8f53f9808a4c49"
+    }
+  ],
+  "conclusion": {
+    "cumulative_ids": 43,
+    "strategy_configurations": 175,
+    "original_controls": 22,
+    "strict_reproductions": 0,
+    "blocked_ids": 7,
+    "all_acceptance_run_control_increments": 0,
+    "Lab_PR": 42,
+    "Lab_exact_main_CI": 37158399139,
+    "Graph_PR": 29,
+    "Graph_exact_main_CI": [
+      37158990321,
+      37158990324
+    ],
+    "offline_records": 26,
+    "Site_activation": false,
+    "batch020_history_release": false,
+    "root_Library_saved_files": 0
+  },
+  "blocking_findings_for_publication": [],
+  "remaining_execution_blockers": [
+    "Root Library upload tools/list HTTP401; local packages are not remote backups. Batch020 has no root historical release.",
+    "Graph active entity revision and330 unavailable frozen raw inputs remain unresolved; no Site activation.",
+    "M0974 original HTML unavailable at parent and C0 unsealed. Parent partial restore is reported evidence, not root materialization."
+  ],
+  "limitations": [
+    "Static review only; fresh local restoration facts verified against existing exact PACKAGE/RESTORE receipts, not re-executed.",
+    "All four archive/manifest pairs were rehashed locally; raw member bodies were not parsed and no strategy was imported.",
+    "Main CI/merge facts verified against already stored coordinator receipts; no new network check.",
+    "Parent M0974 archive fingerprints/20-line read are explicitly attributed, not independently rematerialized."
+  ],
+  "actions": {
+    "historical_runs": 0,
+    "synthetic_runs": 0,
+    "network_requests": 0,
+    "repository_writes": 0,
+    "global_progress_writes": 0,
+    "private_receipt_only": true
+  }
+}

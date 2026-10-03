@@ -371,3 +371,5 @@
 - [M2903 EMA20事件交叉](public-strategies/M2903/README-prehistory-status-v1.md)：精确C0与合成独审通过；4配置计划、0新增控制，持久化门禁前不运行历史。
 - [M3710 SMA20状态规则](public-strategies/M3710/README-prehistory-status-v1.md)：精确C0与合成独审通过；4配置计划、0新增控制，历史未放行。
 - [批020协调检查点003](public-strategies/progress-20261003-batch020-checkpoint003.json)：43 ID／175策略配置／22原始控制；两条新C0与父端M0974准备单列，不计作历史完成。
+
+- [批020交付增补004](public-strategies/progress-20261003-batch020-delivery004.json)：43 ID／175配置／22原始对照不变；Lab PR42与Graph PR29精确main CI通过，26条离线展示，Library上传401仍未解决。

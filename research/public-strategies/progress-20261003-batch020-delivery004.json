@@ -1,0 +1,374 @@
+{
+  "schema": "public-strategy-coordinator-delivery-addendum/v1",
+  "coordinator": "root sole global writer",
+  "recorded_at_utc": "2026-10-03T22:44:09.134164+00:00",
+  "batch": 20,
+  "delivery_addendum": 4,
+  "previous_checkpoint": {
+    "file": "progress-20261003-batch020-checkpoint003.json",
+    "bytes": 46864,
+    "sha256": "42d93ede44551551faaf8a20f58237b8085637f74a046c957f86f5449b070f4a"
+  },
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0253",
+    "M0256",
+    "M0260",
+    "M0264",
+    "M0265",
+    "M0266",
+    "M0272",
+    "M0275",
+    "M0282",
+    "M0283",
+    "M0286",
+    "M0287",
+    "M0288",
+    "M0289",
+    "M0293",
+    "M0298",
+    "M0300",
+    "M0302",
+    "M0304",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0311",
+    "M0315",
+    "M0316",
+    "M0317",
+    "M1258",
+    "M1266",
+    "M1270",
+    "M1346",
+    "M1347",
+    "M1349",
+    "M1358",
+    "M1396",
+    "M1463"
+  ],
+  "cumulative_strategy_configurations": 175,
+  "cumulative_controls": 22,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "acceptance_meaning": "Independently validated executed research. Remote persistence is tracked separately; local-only packages are not declared complete remote backups.",
+  "new_accepted_ids": [],
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "new_historical_runs": 0,
+  "counting_note": "M1266 original4+1 was already accepted once in checkpoint003. This delivery/recovery/display addendum adds no trials or research acceptance.",
+  "last_original_execution_utc": "2026-10-03T20:44:26Z",
+  "Lab_delivery": {
+    "PR": 42,
+    "head": "f89bb34a5b375b962937bd1802e4ac6a02520409",
+    "main": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+    "merged_at": "2026-10-03T22:25:30Z",
+    "head_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37158145856,
+        "headSha": "f89bb34a5b375b962937bd1802e4ac6a02520409",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:24:41Z",
+        "url": "https://github.com/KathenZK/quant-research-lab/actions/runs/37158145856"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37158167319,
+        "headSha": "f89bb34a5b375b962937bd1802e4ac6a02520409",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:24:10Z",
+        "url": "https://github.com/KathenZK/quant-research-lab/actions/runs/37158167319"
+      }
+    ],
+    "main_CI": {
+      "conclusion": "success",
+      "databaseId": 37158399139,
+      "headSha": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+      "status": "completed",
+      "updatedAt": "2026-10-03T22:29:33Z",
+      "url": "https://github.com/KathenZK/quant-research-lab/actions/runs/37158399139"
+    },
+    "delivered_files": 88,
+    "delivered_bytes": 697904,
+    "actual_branch_and_main_readback": "ALL_DELIVERED_BLOBS_BYTE_IDENTICAL",
+    "independent_checks": 57,
+    "independent_review_sha256": "ae835f1d056549d9566d6ed0cce8c071a8217e93d946f547195fa325de5a4a26",
+    "local_non_data_tests": {
+      "passed": 2335,
+      "skipped": 3,
+      "deselected": 264
+    },
+    "source_receipt": {
+      "file": "batch020-checkpoint003-main-merge-and-ci.json",
+      "bytes": 2645,
+      "sha256": "3067c6a2ba8ad6aee033bb3f7124df152621b54385cd5fde04d9d17e5f493dbd"
+    }
+  },
+  "Graph_delivery": {
+    "PR": 29,
+    "head": "e134ac0e89dfc0e1304711a23bfde3aa508f2085",
+    "main": "71ca76fc74dbe615d747416da201d1446cd3b3c8",
+    "merged_at": "2026-10-03T22:35:53Z",
+    "head_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37158732389,
+        "headSha": "e134ac0e89dfc0e1304711a23bfde3aa508f2085",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:33:03Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158732389"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37158732420,
+        "headSha": "e134ac0e89dfc0e1304711a23bfde3aa508f2085",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:33:37Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158732420"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37158762697,
+        "headSha": "e134ac0e89dfc0e1304711a23bfde3aa508f2085",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:33:31Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158762697"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37158762715,
+        "headSha": "e134ac0e89dfc0e1304711a23bfde3aa508f2085",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:34:46Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158762715"
+      }
+    ],
+    "main_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37158990321,
+        "headSha": "71ca76fc74dbe615d747416da201d1446cd3b3c8",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:38:17Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158990321"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37158990324,
+        "headSha": "71ca76fc74dbe615d747416da201d1446cd3b3c8",
+        "status": "completed",
+        "updatedAt": "2026-10-03T22:38:38Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37158990324"
+      }
+    ],
+    "delivered_files": 5,
+    "delivered_bytes": 222256,
+    "actual_branch_and_main_readback": "ALL_DELIVERED_BLOBS_BYTE_IDENTICAL",
+    "new_display_id": "M1347",
+    "offline_records": 26,
+    "offline_details": 26,
+    "offline_curve_points": 6422,
+    "old25_registry_records_and_gzip_preserved": true,
+    "independent_review_sha256": "1ca3762166698689692df3dc13afa3b63a06968fc9eb46ad934f572f6dcdf87f",
+    "publication_review_sha256": "42b6c0be1a5fa223c92c98638508b16450563b856de8c9837ebf7eb12a029708",
+    "tests": {
+      "author_targeted": 526,
+      "author_public": 5,
+      "independent_total_including_author134": 159,
+      "new_independent": 25
+    },
+    "source_lab_pin": "475ee92d451b581b8565dc1ef487437cdc39b743",
+    "source_roles": 18,
+    "source_bytes": 112409,
+    "fixed_numeric_type_issue": "Independent draft accepted consistently re-signed cagr string; final explicit finite-number guards reject it. Failed evidence retained.",
+    "M1347_quality": "All four original configurations negative; catalog hypothesis/source unverified, adapted execution, strict0, non-OOS. No winner selection or superiority claim.",
+    "M1347_sampled_points": 25,
+    "M1347_metric_observations": 731,
+    "M1347_original_configurations": 4,
+    "M1347_new_controls": 0,
+    "reused_control": "M1258 existing base only; no matched sensitivity controls",
+    "new_historical_runs": 0,
+    "new_controls": 0,
+    "Site_deployed": false,
+    "active_merge_status": "BLOCKED_CURRENT_ACTIVE_ROOT_ENTITY_REVISION_REQUIRED",
+    "full_private_validate_release": "ATTEMPTED_AND_BLOCKED_330_FROZEN_RAW_INPUTS_MISSING",
+    "source_receipt": {
+      "file": "graph-m1347-main-merge-and-ci.json",
+      "bytes": 2888,
+      "sha256": "52fd631be7eda5f2abd78ab01421a3137fb04729947d1ba269df71c6ab1e3c7c"
+    }
+  },
+  "local_private_packages": {
+    "M2903_prehistory": {
+      "archive": {
+        "file": "M2903-prehistory-20261003-v1.zip",
+        "bytes": 1221463,
+        "sha256": "df7d24d73434b8ec81b6a82c2b6a64b62c489547e94dc4c481e8ff8b3b745b11"
+      },
+      "manifest": {
+        "file": "MEMBERS.json",
+        "bytes": 54767,
+        "sha256": "7e5a713677bfec800926fe1028946bfe9954ca79b9ce949206ab65c022884646"
+      },
+      "archive_members": 197,
+      "local_fresh_unpack": "PASS",
+      "remote_Library_saved": false,
+      "remote_restore_verified": false,
+      "recovery_scope": "Original input and manifest rebuilt byte-exact from official objects;33 synthetic outputs match. No history."
+    },
+    "M2903_final_review_addendum": {
+      "archive": {
+        "file": "M2903-prehistory-review-addendum-20261003-v1.zip",
+        "bytes": 1190654,
+        "sha256": "31f3cb6e558d9b6acdaf1daf4130caccef580f18df2ccf5edb9b04d68bec3797"
+      },
+      "manifest": {
+        "file": "MEMBERS.json",
+        "bytes": 34679,
+        "sha256": "350fd3a808b4fbf55fad3dd983cdbf66e3ed966c15428dfb303e85f8f9e6e14a"
+      },
+      "archive_members": 176,
+      "local_fresh_unpack": "PASS",
+      "remote_Library_saved": false,
+      "remote_restore_verified": false,
+      "recovery_scope": "Complete174-file final independent review directory plus binding/manifest; all176 archive members byte-verified. No replay."
+    },
+    "M3710_prehistory": {
+      "archive": {
+        "file": "M3710-prehistory-private-recovery-v1.zip",
+        "bytes": 2007827,
+        "sha256": "a4af2db8aaa8d47f9051930e5767f63c0d8aa2bd6392ca9ba4cc4a8067dc65b3"
+      },
+      "manifest": {
+        "file": "PRIVATE-CONTENTS.json",
+        "bytes": 139774,
+        "sha256": "650d04dbf67227b6a91479c1af916539391f4421b1283b0a21b0d00d2a4e013a"
+      },
+      "archive_members": 653,
+      "local_fresh_unpack": "PASS",
+      "remote_Library_saved": false,
+      "remote_restore_verified": false,
+      "recovery_scope": "653-member fresh unpack CRC/path/all bytes/hash verification;652 listed payloads plus manifest. No history."
+    },
+    "Graph26_display": {
+      "archive": {
+        "file": "graph26-private-recovery.zip",
+        "bytes": 1499078,
+        "sha256": "e4d36e01194b27c0a5db877d4b67102472cd20765de689fcb34e8fc3479345a9"
+      },
+      "manifest": {
+        "file": "MEMBERS.json",
+        "bytes": 69523,
+        "sha256": "6e9049ae5b2044dea06def767478617e78aac758929abcf28259311a6267132e"
+      },
+      "archive_members": 336,
+      "local_fresh_unpack": "PASS",
+      "remote_Library_saved": false,
+      "remote_restore_verified": false,
+      "recovery_scope": "Complete approved offline display recovery only; excludes full backtest/raw-market/Site/user-notes backup.",
+      "roles": 270,
+      "unique_source_files": 262,
+      "source_bytes": 3101142,
+      "rebuilt_records": 26,
+      "byte_equal_output_files": 29,
+      "fresh_restore_manifest_sha256": "33057063c2d6ad43dcb30294a44149e214c2ba668b024baefde7f0df3afb105a",
+      "runtime": "Python>=3.11 and jsonschema required; interpreter and wheels not bundled",
+      "receipt": {
+        "file": "PACKAGE-RECEIPT.safe.json",
+        "bytes": 2917,
+        "sha256": "5bfcf677a71474a05f01b33a43fbf276cecb1a54ab4de9fd8eca8f29c5817be3"
+      }
+    }
+  },
+  "batch020_history_gate": {
+    "strategy_ids": [
+      "M2903",
+      "M3710",
+      "M0974"
+    ],
+    "planned_strategy_configurations": 12,
+    "planned_new_controls": 0,
+    "historical_runs": 0,
+    "actual_new_controls": 0,
+    "root_release": false,
+    "M2903": {
+      "C0_sha256": "eab148e33d268a7de91ed8386064c6aeec2243c6b270847e6aa9d6d06bd9b699",
+      "stage": "FROZEN_EXACT_C0_AND_INDEPENDENT_QA_SAVED_IN_LAB_MAIN_REMOTE_PRIVATE_BACKUP_BLOCKED"
+    },
+    "M3710": {
+      "C0_sha256": "1d30c90f0d1ba1b18b1800d3c100bdb9fbafcbc568f0d14a02961be75f0e3da9",
+      "stage": "FROZEN_EXACT_C0_AND_INDEPENDENT_QA_SAVED_IN_LAB_MAIN_REMOTE_PRIVATE_BACKUP_BLOCKED"
+    },
+    "M0974": {
+      "owner": "parent prepare_m0974_daily_batch",
+      "branch": "dot/public-strategies-20261003-b011-m0974",
+      "stage": "PARENT_PARTIAL_PREPARATION_RECOVERY_REPORTED_C0_UNSEALED_ORIGINAL_HTML_MISSING_AT_PARENT",
+      "C0_frozen": false,
+      "root_release": false,
+      "historical_runs": 0,
+      "parent_partial_backup": {
+        "archive_bytes": 2623875,
+        "archive_sha256": "3002923e2049c00b71d18a507c57abbd8d4eb811fc50ed63c8515670f7550749",
+        "manifest_bytes": 116137,
+        "manifest_sha256": "6d3648b2687529fa1b7add00edfb14e408b8d9d823fd40fb5f74ffd1535ec0e1",
+        "parent_reports_actual_remote_restored_entries": 586,
+        "parent_reports_review_pins": 12,
+        "root_Library_read": "Metadata and first20 manifest lines verified; this is not downloaded original bytes or archive recovery",
+        "root_materialized_or_restored": false,
+        "exact_original_root_HTML_included": false,
+        "proxies_root_blocked_upload": false
+      }
+    }
+  },
+  "persistence_blocker": {
+    "status": "ROOT_STANDARD_LIBRARY_UPLOAD_TOOLS_LIST_HTTP401",
+    "attempted_files": 5,
+    "root_confirmed_saved_files": 0,
+    "saved_receipts_received": false,
+    "upload_route_or_identity_changed": false,
+    "root_upload_retried_after_failure": false,
+    "normal_read_only_Library_access_does_not_prove_upload_recovery": true,
+    "original_M0974_HTML": {
+      "bytes": 704480,
+      "sha256": "eb998fac67d55d55b549596b29c91915927327d32c36dd8a088c156a9cbaa74f",
+      "captured_at_utc": "2026-10-03T20:48:21.975372Z",
+      "exact_local_bytes_preserved": true,
+      "new_Library_ID_exists": false,
+      "recaptured_or_published_in_Git": false
+    },
+    "local_disk_is_not_persistent_backup": true,
+    "previous_older_backup_gaps": "Unchanged; see immutable checkpoint003.backup_gaps. No gap silently cleared."
+  },
+  "next_display_preflight": {
+    "id": "M1266",
+    "owner": "root/m0288",
+    "stage": "READ_ONLY_PUBLIC_SOURCE_PREFLIGHT_IN_PROGRESS",
+    "source_lab_main": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+    "implementation_started": false,
+    "rule_boundary": "90 percent signal-close fixed quantity and HYPOTHESIS_EXECUTION_PROXY; do not reinterpret as fullcash or strict reproduction.",
+    "pending_source_projection_preserved": true,
+    "additive_coordinator_acceptance_only": true,
+    "Site_activation": false
+  },
+  "remaining_prior_scope_blockers": "M1180 and its previously blocked publication scope remain paused; this exact Graph M1347 approval does not expand them.",
+  "no_private_Library_identifiers_published": true,
+  "no_credentials_read": true,
+  "quant_runner_touched": false,
+  "disk_reserve_minimum_bytes": 5368709120
+}
