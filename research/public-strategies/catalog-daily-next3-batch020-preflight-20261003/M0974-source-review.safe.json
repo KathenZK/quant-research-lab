@@ -1,0 +1,81 @@
+{
+  "status": "SOURCE_DESCRIPTION_VERIFIED_PINE_NOT_OBTAINED__ROOT_CHOICES_REQUIRED",
+  "id": "M0974",
+  "source_url": "https://www.tradingview.com/script/ZINSYeR8-RSI-SMA-Crossover-Strategy/",
+  "original_record_sha256": "d435196a1f5323bdbbdd22de48c4ab59ab26f4be16b02f4472bb640e9a83c4ae",
+  "original_record_bytes": 2621,
+  "source_access": {
+    "url": "https://www.tradingview.com/script/ZINSYeR8-RSI-SMA-Crossover-Strategy/",
+    "status": 200,
+    "bytes": 704480,
+    "sha256": "eb998fac67d55d55b549596b29c91915927327d32c36dd8a088c156a9cbaa74f",
+    "requests": 1,
+    "redirect_followed": false,
+    "captured_utc": "2026-10-03T20:48:21.975372+00:00",
+    "content_type": null
+  },
+  "public_description_confirmed": {
+    "author": "reees",
+    "published": "2022-08-30",
+    "entry_exit": "RSI crosses above itsSMA:long;crossesbelow:close long",
+    "periods": {
+      "RSI": 50,
+      "SMA_of_RSI": 25
+    },
+    "example": "Bitcoin all-timeindex1D",
+    "initial_capital_reported": "$1000",
+    "cost_disclosure": "Author says commission/slippage andotherdefaults are notdefined; do not inferauthorrealcosts fromabsence.",
+    "selection_warning": "Author advocates choosingparameters bybacktest; ownexaggeratedlongsamplewealthclaim isunverified andnotresearchresult."
+  },
+  "full_source": {
+    "found_in_one_returned_HTML": false,
+    "evidence": "Sourcecode tab andopen-sourcelabel visible;noPineversion/strategydeclaration/RSIcalls orcompletePinesource foundinreturnedHTML. Noextraendpoint,loginorprotectedfetch attempted.",
+    "missing": [
+      "ExactRSIinputseries,ta.rsi/RMAimplementationandinitialization",
+      "NaN/flatbothzero/zerolossbehavior",
+      "Crossprev/currentequalityandnahandling actualPine",
+      "Orderquantity/type,capitalallocation,pyramiding/leverage/shortpermissions",
+      "process_orders_on_close/calc_on_every_tick/nexttickfillandbarstatebehavior",
+      "Actualcommission/slippage/defaultstrategyproperties"
+    ],
+    "license": "Open-sourcelabeldoesnotestablishredistributionlicense;fullHTMLprivate,ownsummary/hash/URLonlysafe."
+  },
+  "prior_card_correction": {
+    "prior_source_requests": 0,
+    "old_status": "Conditionalready/cataloghypothesis;numericgapsnone",
+    "correction": "Todaypublicdescriptionconfirmed,butnumericgapsnone overstates completeness. FlatRSI=50,WilderseedandSMA/crossconventionsareunverifiedresearchchoices,notprintedPine. Preserveoldcardbytes; do notupgradeasstrict."
+  },
+  "contract_recommendations_not_frozen": {
+    "fidelity": "Atmostdescription-derivedcatalogHYPOTHESIS/ADAPTED; noauthorengine/Pineequivalence. Bitcoinindex→BinanceBTCUSDTspot needs explicitrootchoice,notautomaticidentitymatch.",
+    "indicator_input": "Ifhypothesisselected,explicitcompletedrawcloseinput;50positive/negativeclosechangesseedgain/lossSMAatindex50,not49. Missinginitialdeltanotzero.",
+    "arithmetic": "FreezeDecimal50HALFEVENandgain/lossRMAoperation(e.g.previous+(current-previous)/50),seedleft-to-rightsum,RSIalgebraorderandSMArollingvsrecomputedorder. AlgebraequivalenceisnotDecimalbyteequivalence.",
+    "zero_cases": "Positivegainwithzeroloss→100;zerogainwithpositiveloss→0 canbechosen. Bothzero unresolvedbysource: chooseexplicitneutral50orundefinedmask asnewhypothesis,neverclaimTVverified; testtransitionoutofflat.",
+    "readiness_and_NaN": "NoRSIuntil50realchanges;SMArequires25validRSI;currentincludedfirstSMA74;crossfirst75requirespreviousandcurrentRSI/SMAfinite. Neverzero-fillNaN orusefuturedatatoready.",
+    "cross": "Ifrootchoosesusualcrossover:priorRSI<=priorSMA,currentRSI>currentSMA;exitprior>=,current<. Equalitycurrentalone noevent; sourceimplementationunverified.",
+    "warmup": "100selectedcloses yieldsreadybutnotconvergedRSI; firstevaluation retains36.416968% seedstateweight. Acceptexplicit100closecoldstartresearchvariantorpredeclareotherseedhistory/tolerancebeforedatarequest. No newhistoryrequested here.",
+    "execution_and_sizing": "$1000initialonlyknown;quantity/allocationandexecutionclocknotprovided. Rootmustfreezeinitialcapital/currency,quantityfraction/fee treatment,pendingcancellationvsretention,lag,benchmarkcost/size. Do notsilentlyinheritfullcash100000orM1266fixed90%.",
+    "kernel": "Old762/31indexassumptionsnotcompatible831/100. Newimmutableexplicitwarmup/evalmapping:global100→eval0,global99warmuponly,firstsignalclose100→lag1open101/lag2open102,731evalrows,originaltimestamps preserved. RSI/SMAwarmuphistorymaycomputedbutorderswarmupdisabled. Nooldv1/v2editing.",
+    "benchmark": "Onlyreuseexistingcontrolifexactcashallocation/currency/fee/valuation/evalbars/sourcepricesmatch;1000vs100000,90%vs100%,orindexvsspotnotidenticalwithout explicitnewreference. No newcontrolauthorized."
+  },
+  "numerical_evidence_sha256": "d590b8105bbba7ae11fc8f4a12680291e2e6d48b4522ee7d102ddfb2527e3416",
+  "no_convergence_claim": "RMAseedweightattenuation isnotRSIerrorbound orcrossstabilityproof. Nearzeros/ties matter.",
+  "blockers": [
+    "CompletePinesourceunavailableinallowedonepublicfetch",
+    "Rootneedschoose/labelnumericalinitialization,undefinedflatcase,capital/orderlifecycleandindex→spotadaptation beforeimplementation",
+    "Newimmutablewrapperindexcontract andindependentsyntheticQA required if831/100selected"
+  ],
+  "scope": {
+    "source_HTTP_requests": 1,
+    "market_requests": 0,
+    "historical_features": 0,
+    "historical_returns": 0,
+    "historical_runs": 0,
+    "controls": 0,
+    "claims": 0,
+    "repository_or_global_writes": 0,
+    "source_flags_modified": false,
+    "gate_released": false
+  },
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

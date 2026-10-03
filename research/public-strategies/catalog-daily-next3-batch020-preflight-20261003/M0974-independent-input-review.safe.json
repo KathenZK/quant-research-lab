@@ -1,0 +1,180 @@
+{
+  "schema": "quant-input-independent-acceptance/v1",
+  "record_id": "M0974",
+  "created_utc": "2026-10-03T21:06:09.549415+00:00",
+  "status": "PASS_NATIVE_SPOT_DAILY_DATA_ONLY_NOT_STRATEGY_READY",
+  "independent_execution": {
+    "method": "Own stdlib CSV/Decimal parser, zipfile plus independent zlib CRC, calendar date grid, original-field CRLF serialization. Worker builder was read for contract interpretation but was neither imported nor executed.",
+    "script": {
+      "name": "independent_input_audit.py",
+      "bytes": 10125,
+      "sha256": "62fd39233631eac75a383d25b5c6bbe70eaaeccc80b8b82084ae75014f2c9ddb"
+    },
+    "private_evidence": {
+      "name": "independent-data-checks.private.json",
+      "bytes": 36456,
+      "sha256": "4fe6c0d613ed96c5f1a836cd7c5fb8f52106e0766f3286f4065ecdfce26068ed"
+    },
+    "network_disabled_by_python_audit_hook": true,
+    "network_attempts": 0,
+    "worker_checks_claimed_as_independent": false
+  },
+  "input": {
+    "dataset_id": "binance.spot.BTCUSDT.native1d.20201227-20241231.M0974-input-v1",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "native UTC 1d",
+    "provider": "BinanceVision monthly trade-price klines",
+    "source_url_template": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-YYYY-MM.zip",
+    "bytes": 247171,
+    "sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+    "manifest_bytes": 49479,
+    "manifest_sha256": "9740c7618456526f48f4fff608e3723c84b45b32e2a3529db34ddd08f3793cbc",
+    "schema_columns": [
+      "open_time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "close_time",
+      "quote_volume",
+      "trade_count",
+      "taker_base",
+      "taker_quote",
+      "ignore"
+    ]
+  },
+  "independent_checks": {
+    "raw_inventory": {
+      "status": "PASS",
+      "objects": 98,
+      "zip_objects": 49,
+      "checksum_objects": 49,
+      "months": "2020-12 through 2024-12 inclusive",
+      "exact_expected_set": true,
+      "all_object_bytes_and_sha256_recomputed": true,
+      "old56_against_actual_prior_cache": "BYTE_EQUAL",
+      "old_manifest_sha256": "c51b38f62c06820923a51d2df7b00564e109b77c4d752471f6106fa0b4f50283",
+      "new42_against_saved_http_200_url_size_hash_metadata": "PASS",
+      "new_network_requests_by_reviewer": 0
+    },
+    "archives": {
+      "status": "PASS",
+      "provider_checksums": 49,
+      "single_expected_member_per_zip": 49,
+      "zip_testzip": 49,
+      "independent_crc32": 49,
+      "uncompressed_csv_bytes_sha_against_manifest": 49
+    },
+    "rows": {
+      "status": "PASS",
+      "native_rows_checked": 1492,
+      "exact_12_nonempty_fields": true,
+      "finite_decimal_values": true,
+      "positive_ohlc_and_legal_range": true,
+      "nonnegative_volumes_and_integer_trades": true,
+      "taker_base_lte_volume_and_taker_quote_lte_quote": true,
+      "ignore_zero": true,
+      "utc_daily_open_and_end_minus_one_ms": true,
+      "monthly_leap_year_grid": true,
+      "duplicates": 0,
+      "head_tail_or_internal_missing_bars": 0,
+      "unexpected_intervals": 0,
+      "zero_counts": {
+        "volume": 0,
+        "quote_volume": 0,
+        "trade_count": 0,
+        "taker_base": 0,
+        "taker_quote": 0
+      }
+    },
+    "selection": {
+      "status": "PASS",
+      "excluded_early_raw_rows": 26,
+      "first_open_utc": "2020-12-27T00:00:00Z",
+      "last_open_utc": "2024-12-31T00:00:00Z",
+      "end_exclusive_utc": "2025-01-01T00:00:00Z",
+      "total_rows": 1466,
+      "warmup_rows": 735,
+      "warmup_last_open_utc": "2022-12-31T00:00:00Z",
+      "evaluation_start_zero_based_index": 735,
+      "evaluation_start_utc": "2023-01-01T00:00:00Z",
+      "evaluation_rows": 731,
+      "sorting_deduplication_or_filling_performed": false
+    },
+    "canonical_reconstruction": {
+      "status": "BYTE_EQUAL",
+      "source": "49 native CSV members; original decimal strings retained",
+      "serializer": "Independent manual comma join plus CRLF, after rejecting delimiter/quote/newline in every cell; no worker serializer reused",
+      "bytes": 247171,
+      "sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+      "against_actual_snapshot_bytes": true
+    },
+    "existing_accounting_view": {
+      "status": "BYTE_EQUAL",
+      "offset_zero_based": 704,
+      "rows": 762,
+      "first_open_utc": "2022-12-01T00:00:00Z",
+      "bytes": 128196,
+      "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+      "against_actual_existing_M0216_remote_restore_input": true,
+      "new_benchmark_run": false
+    },
+    "terms": {
+      "status": "CURRENT_SAVED_BYTES_EQUAL_PINNED_BYTES",
+      "bytes": 9798,
+      "sha256": "dcf358e9d18f598a7a635fac80f6e643fa24a0e111a4d39bda47f1e246b31eb1",
+      "saved_capture_status": 200,
+      "reviewer_network_fetch": false,
+      "new_legal_interpretation": false,
+      "current_authorization": "Existing personal non-production data QA; raw redistribution not authorized by this audit"
+    },
+    "frozen_builder_pin": "6eb1967288700fa0a581acece954250209800cdb8077232b748465d014c93834",
+    "producer_manifest_end_of_audit_unchanged": true
+  },
+  "quality_boundary": {
+    "quality": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "registered_status": "UNACCEPTED",
+    "layer": "cache",
+    "PIT": false,
+    "finality": false,
+    "tradability": false,
+    "is_closed_fabricated": false,
+    "prior_M1266_validator_trusted_true_does_not_upgrade_this_input": true,
+    "known_limitations": [
+      "Archive checksums, UTC grids and close timestamps do not establish historical PIT availability or permanent finality.",
+      "Native daily aggregates do not establish uninterrupted intraday tradability; the known 2023-03-24 exchange halt remains an execution-contract constraint.",
+      "The first 26 raw December 2020 rows are outside the selected input and must not silently enter later indicator state.",
+      "735 warmup closes are a predeclared input boundary, not a verified RSI convergence or source-equivalence result.",
+      "Only data integrity is accepted; source semantics, indicator seed/numerics, execution and strategy readiness require their later independent gates."
+    ]
+  },
+  "activity": {
+    "historical_runs": 0,
+    "new_controls": 0,
+    "strategy_features": 0,
+    "indicators": 0,
+    "signals": 0,
+    "account_runs": 0,
+    "market_downloads": 0,
+    "claims": 0,
+    "repository_writes": 0,
+    "global_writes": 0,
+    "remote_writes": 0
+  },
+  "resources": {
+    "wall_seconds": 0.05054246600047918,
+    "cpu_seconds": 0.050479210999999996,
+    "max_rss_kib": 16088
+  },
+  "free_disk_bytes": 10105458688,
+  "storage": {
+    "all_market_bytes_private": true,
+    "safe_receipt_contains_market_rows": false,
+    "remote_backup_verified_by_this_task": false,
+    "local_disk_is_not_durable_backup": true
+  },
+  "blocking_data_errors": []
+}

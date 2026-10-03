@@ -1,0 +1,40 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T21:10:49.026716+00:00",
+  "coordinator": "root only",
+  "batch": "020",
+  "claims": [
+    {
+      "id": "M2903",
+      "owner": "root/m0200",
+      "branch": "codex/catalog-ema20-m2903-20261003",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ActualcodeC0 independentQA androotrelease"
+    },
+    {
+      "id": "M3710",
+      "owner": "root/m0286",
+      "branch": "codex/catalog-sma20-m3710-20261003",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ActualcodeC0 independentQA androotrelease"
+    },
+    {
+      "id": "M0974",
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b011-m0974",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ActualcodeC0 independentQA androotrelease"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-daily-next3-batch020-output-contract-20261003.json",
+    "bytes": 7092,
+    "sha256": "5a15f69fca876a4ea3872a2b94ac5f379adfec6e5f11b88de9c4c8ffe64a3d2b"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0
+}

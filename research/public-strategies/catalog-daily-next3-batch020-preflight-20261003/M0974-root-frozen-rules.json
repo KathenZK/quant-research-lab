@@ -1,0 +1,301 @@
+{
+  "instrument": "Original public example Bitcoin all-time INDEX1D is replaced by explicitly chosen BinanceBTCUSDT spot native UTC1d; this is not source feed or exchange equivalence.",
+  "evaluation": "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+  "monthly_reporting": "Month return=end equity/previous month end equity-1; first denominator100000. Continuous account and indicators, no monthly resetting or selective omission of cash/zero-trade months.",
+  "capital": {
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "fraction": "1",
+    "entry_fee_inclusive": true,
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "buy_order_of_operations": [
+      "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+      "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+      "fee=cash_before-notional",
+      "quantity=notional/fill",
+      "cash_after=Decimal(0)"
+    ],
+    "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+    "sell_order_of_operations": [
+      "rate=Decimal(fee_bps)/Decimal(10000)",
+      "slip=Decimal(slip_bps)/Decimal(10000)",
+      "fill=Decimal(raw_open)*(Decimal(1)-slip)",
+      "notional=quantity_before*fill",
+      "fee=notional*rate",
+      "cash_after=cash_before+notional-fee",
+      "quantity_after=Decimal(0)"
+    ],
+    "funding_interest_borrow": 0,
+    "leverage": 1,
+    "max_positions": 1,
+    "fractional_fills": true,
+    "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent",
+    "independent_QA": "Independent money/quantity fields compare exact Decimal numerical equality with no tolerance/quantization; nonnumeric identity/time/counter fields exact. Different trailing-zero representations from equivalent normal-domain oracle algebra are retained as QA evidence, not accepted if values differ. Same implementation recovery remains byte-exact. No blanket all-Decimal-domain equivalence claim."
+  },
+  "cost_cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "execution": {
+    "at_open": "Execute earliest-due pending action if due_index<=currentindex and actual holdings permit. Stale is logged/discarded; no sameopen roundtrip or reentry. No out-of-window fill.",
+    "at_close_sequence": [
+      "Update the current completed-close indicator. Compute raw entry/exit from the frozen event/state definition, independent of holdings.",
+      "Raw opposite event cancels pending opposite intent before position gating; if both events arise exit/cancel-buy has priority.",
+      "Schedule buy only if flat and raw entry; sell only if long and raw exit.",
+      "Same-direction repeat retains original earliest due; absent event does not cancel an existing intent.",
+      "All calendar labels refer to UTC bar-open date; signal close knowledge becomes actionable at following bar open or declared lag2.",
+      "No warmup intents; no shorting, discretionary stop, ROI target, extra filter or calendar exclusions."
+    ],
+    "lag2": "Raw opposite event at t+1 cancels pending intent due t+2. Absence of event retains original intent/due, no repeated deferral."
+  },
+  "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+  "benchmark": {
+    "new_control_configurations": 0,
+    "status": "EXISTING_ACTUAL_CONTROL_REMOTE_CORE_ACCEPTANCE_PINNED_FROM_GIT",
+    "source_public_commit": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+    "original_remote_core_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "reference_path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/buyhold-reference-v1.json",
+    "reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+    "remote_recovery_receipt_path": "research/public-strategies/M1258/recovery/remote-core-v1/M1258-remote-core-recovery.safe.json",
+    "remote_recovery_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+    "control_output_manifest_sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7",
+    "control_summary_sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142",
+    "control_daily_nav_sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664",
+    "identity": {
+      "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+      "bars": 731,
+      "initial_cash": "100000",
+      "allocation": "100% fee-inclusive",
+      "precision": "Decimal50 ROUND_HALF_EVEN from raw decimal text",
+      "entry": "firstevaluationopen",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "exit": "none; no fictitious terminal fee or liquidation"
+    },
+    "comparison": "One existing base-cost control referenced for all four strategy cases; do not describe it as fee0/fee20 matched control. No new benchmark execution authorized.",
+    "verification_limit": "Frozen actual M1258control identity/source hashes reused, not newlyexecuted; compare basecost only, no fee0/20 or delay2 matchedcontrol claim."
+  },
+  "statistics": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "total_return": "E_last/100000-1",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+  },
+  "PIT": "UNKNOWN/DIAGNOSTIC_ONLY; no as-of/finality/trusted/live-readiness claim",
+  "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+  "shared_kernel": {
+    "remote_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "version": "v1",
+    "root": "research/_shared-kernels/catalog-daily-cash",
+    "files": {
+      "README.md": {
+        "bytes": 617,
+        "sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+      },
+      "v1/engine.py": {
+        "bytes": 9243,
+        "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+      },
+      "v1/verify_account.py": {
+        "bytes": 8744,
+        "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+      },
+      "v1/manifest.json": {
+        "bytes": 1038,
+        "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+      }
+    },
+    "execution_policy": "None; no timed-exit extension used"
+  },
+  "status": "ROOT_FROZEN_PRE_CODE_C0",
+  "classification": {
+    "execution": "ADAPTED_EXECUTION_PROXY",
+    "strict_reproductions": 0,
+    "trusted": false,
+    "OOS": false
+  },
+  "timeframe": "native1d UTC spot; not V3 perp/trusted lake",
+  "created_utc": "2026-10-03T20:55:09.231186+00:00",
+  "precision": {
+    "indicators": "Decimal50 ROUND_HALF_EVEN; rawclose decimaltext; no float comparisons or epsilon",
+    "account": "Exact unchanged sharedkernelv1 Decimal50 operations",
+    "statistics": "Unchanged sharedkernelv1 numpyfloat64 and independent stdlib statistics; defined serialization"
+  },
+  "cold_start": {
+    "initial": "100000USDT,flat,no pending at firstevaluationopen",
+    "first_decision": "2023-01-01 close; normal earliestfill2023-01-02open; delay2 earliest2023-01-03open",
+    "warmup": "Indicators only; no warmup trading/order carryover",
+    "event_families": "Do not enter solely because condition is already above at evaluationstart; require genuine frozen cross using warmup previous value",
+    "state_family": "M3710 mayqueue at firstevalclose when close>SMA20 without requiringcross"
+  },
+  "input_adapter": {
+    "status": "Implementationnotstarted;immutablekernelv1mustnotbeedited",
+    "definition": "Compute fullcanonical indicator features first; create an explicit762row accounting view ending2024-12-31 starting2022-12-01. Slice fullrows and fullfeatures by offset W-31; never reseed features on trimmed view. Originalkernel simulate(...start=31) and verifier consume thatview.",
+    "canonical_index": "accounting_input_index + offset; eval_index0 corresponds canonical W and accounting31",
+    "view_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "view_bytes": 128196,
+    "view_rows": 762,
+    "evaluation_rows": 731,
+    "accounting_warmup_rows": 31,
+    "evidence": "Retain fullcanonical featuretrace and explicit index mapping. Existingkernel CSV input_index stays accountingview namespace; fieldnames/maps must make this explicit.",
+    "hard_gates": [
+      "Exactfullbyteshash/grid/schema/OHLCV first;exact762viewbytes second",
+      "C0 pins versioned sharedinput-view adapter plusoldkernel4files; no arbitrary mutable helper",
+      "RejectPython-O before reading gates/input or importing engine",
+      "Independentdirectviewcomparison and syntheticprefix/future/offset perturbations; no account on fullrows with implicit31start"
+    ],
+    "canonical_warmup": 735,
+    "offset": 704,
+    "index_namespaces": {
+      "canonical_feature_index": "0-based full-input row; firstevaluation W",
+      "kernel_input_index": "0-based762row account view; firstevaluation31; preserve old CSV schema",
+      "signal_index_due_index_trip_entry_exit_index": "0-based evaluation index, matching unchanged kernel; not canonical or accountview",
+      "conversion": "canonical=eval+W;accountview=eval+31;canonical=accountview+offset",
+      "outside_window_due": "May reference a future ordinal beyondlastrow; retainpending only, do not invent price/bar or execute."
+    }
+  },
+  "required_private_logs": [
+    "all original11sourcefields/hashbindings",
+    "fullcanonicalinput/source/checksum/CRC/QA/scope",
+    "canonical indicatorandrawsignal rows includingwarmup/readiness",
+    "accountingview bytes and canonical-index mapping",
+    "allcases NAV,decisions,intents,cancellations,fills,monthly,roundtrips,terminal",
+    "C0/code/runtime/exposure,failedattempts,independentQA androotrelease",
+    "independentlyvalidated results;recoverableZIP andstandalonemanifest;remoteLibrary/restorationstatus"
+  ],
+  "prior_exposure": {
+    "2023_2024": "Previously exposed acrosscatalog research;notOOS;do notreset trials",
+    "M1258_control_return_known_before_run": true,
+    "new_family_historical_runs_at_draft": 0,
+    "no_tuning": true,
+    "indicator_initialization_chosen_before_new_signals": true
+  },
+  "QA_gate": [
+    "Originalsourceclassification and allmissingauthorconditions explicit",
+    "Exactfullinput independentQA;735M0974notpermitteduntilnewdataQA pins filled",
+    "Actualcode/runtime/C0/exposure lock before features or returns",
+    "IndependentDecimalor Fraction indicatororacle, readiness/equalities/crossover/state tests",
+    "Initialflat and genuinecrossvsstate tests, allpending/oppositecancel/no extra terminalfills",
+    "Exactaccountverification and metrics, prefix/future causality, separatefreshprocess+freshdirectorybyteexact",
+    "Root exactC0 release; only4casesperID and0newcontrols",
+    "Postrun independentacceptance and durableallowedcore/privatebackup evidence beforecounting"
+  ],
+  "scale_gate": {
+    "status": "BATCH016_ACTUAL_REMOTE_CORE_REBUILD_ACCEPTED",
+    "source_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "receipt_sha256": "03d1351041be15781f582ec44ba0d4eeb773e61e497c52778955cf88316b6881",
+    "receipt_path": "research/public-strategies/catalog-hypothesis-batch016-recovery-20261003/batch016-remote-core-recovery.safe.json",
+    "receipt_delivery_main": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+    "Library_full_archives": "Legacy batch016 fullprivatearchives remained unsaved on that recorded401 path; this is not a statement about all current Library operations. Later parent private backups tracked separately."
+  },
+  "id": "M0974",
+  "source_url": "https://www.tradingview.com/script/ZINSYeR8-RSI-SMA-Crossover-Strategy/",
+  "source_original_binding": {
+    "record_bytes": 2621,
+    "record_sha256": "d435196a1f5323bdbbdd22de48c4ab59ab26f4be16b02f4472bb640e9a83c4ae",
+    "row_sha256": "916220456a237ff3a073e90d817636062c3ce3955292d5ff28d26fd4d730f07a",
+    "rule_sha256": "07260e39dd5a5bfd32b5de70a8d52c92bdbcb74424870caacd01b97552ac3743",
+    "full11fields": "retainedprivately; no original internalcuration publiclycopied"
+  },
+  "source_date_catalog_reported": "Aug 30, 2022",
+  "source_layer": "SOURCE_DESCRIPTION_VERIFIED_PINE_NOT_OBTAINED; numeric/execution adaptedhypothesis",
+  "source_review_sha256": "d6e78f5391d4f712f8f9a48c01e36bb75338caebcae8ad6c19868a4381c2ee37",
+  "plain_rule": "RSI50上穿它自己的25期简单均线时买入，下穿时卖出。",
+  "capital_provenance": "Public descriptioninitial1000; diagnostic100000USDT/fractionalallcash chosenanddisclosed; no attribution to author, no lots/minnotional claim.",
+  "indicator": {
+    "RSI_period": 50,
+    "SMA_of_RSI_period": 25,
+    "delta": "close[t]-close[t-1]; t>=1",
+    "gain_loss": "gain=max(delta,0),loss=max(-delta,0)",
+    "seed": "Atglobal50: left-to-right sum of gains/losses indices1..50 then divideeachbyDecimal50; RSI None before50.",
+    "recurrence": "For t>50, avg=prev+(current-prev)/Decimal50, separatelygain/loss, Decimal50 HALF_EVEN. Fixedorderingis adaptation, not claimedPineequivalence.",
+    "RSI": "Bothavgszero->50; losszero/gainpositive->100; gainzero/losspositive->0; otherwise100-100/(1+avggain/avgloss). Noepsilon.",
+    "SMA": "Left-to-rightsum last25 readyRSI includingcurrent /Decimal25; firstglobal74.",
+    "first_cross_possible_global": 75,
+    "warmup": 735,
+    "seed_weight_last_warmup": "(49/50)^684 <= 1e-6",
+    "initialization_limitation": "Residualaverage-stateweightbound is notabsoluteRSI/cross error;fullPinecompatibilityunknown;chosenbeforepriceextension/newfeatures.",
+    "flat_state_identity": "Both averagegain and averageloss zero mapsRSI50 as an explicit research assumption; not verified Pine/ta.rsi behavior. None remains until actual readiness; noepsilon."
+  },
+  "entry": "RSI[t]>SMA_RSI[t] and RSI[t-1]<=SMA_RSI[t-1], all4ready; currentequality no event.",
+  "exit": "RSI[t]<SMA_RSI[t] and RSI[t-1]>=SMA_RSI[t-1], all4ready; currentequality no event.",
+  "economic_hypothesis": "RSI相对自身均线转强可能反映持续动量；区间震荡会产生反复交易，长周期也可能滞后。",
+  "input": {
+    "status": "1466ROW_INPUT_INDEPENDENT_DATA_QA_PASS_DIAGNOSTIC_ONLY",
+    "rows": 1466,
+    "warmup_rows": 735,
+    "evaluation_rows": 731,
+    "start": "2020-12-27T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+    "bytes": 247171,
+    "root_pre_data_choice_sha256": "4d70efc0fab9cefe35c400abce71b9ca26cff88f55eed4a27754cd7ea6809bec",
+    "manifest": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-input-manifest.json",
+      "bytes": 49479,
+      "sha256": "9740c7618456526f48f4fff608e3723c84b45b32e2a3529db34ddd08f3793cbc"
+    },
+    "builder": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/build_m0974_input.py",
+      "bytes": 6217,
+      "sha256": "6eb1967288700fa0a581acece954250209800cdb8077232b748465d014c93834"
+    },
+    "independent_QA": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-independent-input-review.safe.json",
+      "bytes": 6926,
+      "sha256": "1bdba0db3cbd2a65b3f2d2181bb802e6daade51f65167fd60597fc806fbea63d"
+    },
+    "raw_objects": 98,
+    "new_raw_objects": 42,
+    "new_raw_bytes": 48053,
+    "raw_months": 49,
+    "raw_source_rows": 1492,
+    "excluded_early_rows": 26,
+    "PIT": false,
+    "finality": false,
+    "tradability": false
+  },
+  "frozen_at_utc": "2026-10-03T21:10:49.026716+00:00",
+  "source_draft_sha256": "b22b0d8ae78fb1cde28adb70f346b1e4172374d9be2b2324fe960e23bba14910",
+  "independent_draft_review_sha256": "6737baef2c2464dd812226f853d055cea2f41a24014b6a81acf868db8498b9f8",
+  "authorization_boundary": "parent single dot executor owns only M0974 implementation and C0 on dot/public-strategies-20261003-b011-m0974; historical features/returns require actual-code independent QA and separate exact-C0 root release.",
+  "data_use_boundary": "Personal non-production noncommercial historical research. Raw market/source bodies stayprivate. BinanceVision-derived redistributed results require attribution and CC-BY-NC-SA4.0 terms; no commercial/live use authorization. FullprivateLibrary backup status is separate from allowed Git core recovery.",
+  "shared_input_adapter_requirement": {
+    "planned_owner": "root/m0217",
+    "location": "research/_shared-kernels/catalog-daily-input-view/v1",
+    "scope": "Thin immutable input/view/index validator; no cash engine, strategy indicators or benchmark generation. Reuse v1dailycash unchanged. Consumers must pin actual adapter code/manifest after independent QA, before C0 release."
+  }
+}
