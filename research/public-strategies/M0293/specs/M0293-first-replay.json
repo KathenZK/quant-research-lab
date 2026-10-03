@@ -1,0 +1,215 @@
+{
+  "record_id": "M0293",
+  "name": "ReinforcedAverageStrategy EMA8/21 with closed48h SMA50",
+  "family": "PUBLIC-M0293-REINFORCED-AVERAGE",
+  "run_id": "M0293-20261003-first-replay",
+  "variant_id": "M0293-BTCUSDT-4H-EMA8-21-48H-SMA50-20261003",
+  "fidelity_class": "HYPOTHESIS",
+  "evidence_class": "historical_replay",
+  "status": "explore / not promoted / not live-ready",
+  "frozen_at_utc": "2026-10-03T11:04:02.635916+00:00",
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/ReinforcedAverageStrategy.py",
+    "author": "Gert Wohlgemuth",
+    "asset_selection": "BTCUSDT spot is predeclared researcher instance; author file does not specify a universe"
+  },
+  "framework_reference": {
+    "name": "Freqtrade",
+    "version": "2025.9",
+    "commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+    "execution_engine_used": false,
+    "purpose": "Fixed class defaults and qtpylib/technical reference semantics only; original author environment/external config unknown; not full Freqtrade engine."
+  },
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA-Lib": "0.6.8",
+    "ta_library": "0.6.4",
+    "python": "3.12.14",
+    "talib_compatibility": 0,
+    "ema_unstable_period": 0,
+    "technical_reference": "1.5.3 / 8ce873e269bfbfe0d17d487a3e5163616ec0a872, exact util.py verified"
+  },
+  "parameters": {
+    "ema_short": 8,
+    "ema_long": 21,
+    "resample_multiple": 12,
+    "resample_minutes": 2880,
+    "high_frame_sma": 50,
+    "hyperopt": false,
+    "external_parameter_file": false,
+    "plot_only_bb": {
+      "window": 20,
+      "stds": 2,
+      "used_for_signals": false
+    }
+  },
+  "signals": {
+    "indicator_price": "raw close; TA-Lib compatibility0/EMA unstable0",
+    "entry": "EMA8[t]>EMA21[t] and EMA8[t-1]<=EMA21[t-1] and close[t]>closed48h_SMA50[t] and volume[t]>0",
+    "exit": "EMA21[t]>EMA8[t] and EMA21[t-1]<=EMA8[t-1] and volume[t]>0",
+    "resample": "technical1.5.3 pandas resample2880min labelleft originstart_day; openfirst/highmax/lowmin/closelast/volumesum, source dropna; fixed raw grid starts2022-12-01T00UTC",
+    "merge": "higher interval open plus48h minus4h -> last constituent4h open; higher closed value usable after that native bar closes; forward-fill previously available values only, no backfill",
+    "nan_policy": "EMA first8/21 SMA seeds; higherSMA50 first validnativeindex599; first413 evaluation bars have no SMA filter and cannot enter; keep fixed evaluation start, no future fill or prehistory extension",
+    "first_high_frame_sma_available_at_utc": "2023-03-11T00:00:00Z",
+    "warmup": "186 bars before evaluation; insufficient for50x48h SMA; partial beginning not fabricated; fixed input contains381 full48h groups",
+    "collision": "Generic engine suppresses entry+exit collision; these two opposite crossovers cannot both hold; ROI/stop remain active",
+    "availability": "closed native4h signals only; no warmup trading or pending warmup order"
+  },
+  "risk": {
+    "minimal_roi": {
+      "0": 0.5
+    },
+    "stoploss": -0.2,
+    "trailing": false,
+    "inactive_source_trailing_fields": {
+      "trailing_stop_positive": 0.01,
+      "trailing_stop_positive_offset": 0.02,
+      "trailing_only_offset_is_reached": false
+    },
+    "roi_threshold_formula": "entry_fill*(1+fee)*1.5/(1-fee)",
+    "roi_slippage": "fee-inclusive threshold before adverse2bps sell slip; exact threshold fill net49.97%",
+    "stop_threshold_formula": "entry_fill*0.8; fees and sell slip add to nominal20% price decline",
+    "minute_roi_transition": "None: constant0minute50% threshold, no intra-bar expiry approximation required"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "open_execution_overrides": {
+      "1679659200000": {
+        "effective_open_ms": 1679666400000,
+        "basis": "resume_1h_open_proxy",
+        "evidence": "specs/market-halt-evidence.json"
+      }
+    },
+    "intrabar_execution_latest_overrides": {
+      "1679644800000": 1679657219999
+    },
+    "known_halt_handling": "2023-03-24 11:27–14:00 UTC. Nominal 12:00 4h open is modeled at 14:00 using matching 1h resumption open; not tick proof. No orders assigned inside known halt. No all-history downtime/PIT claim.",
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "fee_bps": 8,
+    "slippage_bps": 2,
+    "signal_delay_bars": 1,
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable, spot without borrowing",
+    "fill": "full fractional quantity; raw actual open for scheduled trades, threshold or raw open for risk exits; adverse slip each side",
+    "sequence": [
+      "due closed-bar exit signal AND NOT entry signal at executable open",
+      "flat entry signal AND NOT exit signal at executable open; never reenter after exit same bar",
+      "Resolve constant ROI50% threshold; stop and ROI active independently of signal state",
+      "existing/new position opening gap: stop if open<=stop, else ROI if open>=ROI",
+      "otherwise within-bar low stop check before high ROI check",
+      "mark remaining quantity at raw raw close; generate no warmup orders"
+    ],
+    "ambiguity": "When open is between thresholds and both low/high touch risk levels, stop first; unknown 4h intrabar path, no subbar replay",
+    "gap": "scheduled exit still has open priority; risk gap fills at raw open plus adverse sell slip; gap crossing ROI is evaluated before subsequent intrabar low",
+    "terminal": "no forced liquidation; open position marked at final raw close, unpaid hypothetical exit costs not deducted",
+    "pending": "signal from evaluation-close only; arrives after configured number of bars; stale buy while long or exit while flat ignored; no execution beyond evaluation end",
+    "limits": "historical lot/min-notional limits, book liquidity, queueing, partial fills, funding and borrow not modeled"
+  },
+  "input": {
+    "filename": "BTCUSDT-4h-202212-202412-native12.csv",
+    "sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "bytes": 1298564,
+    "start": "2022-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 4572,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "4h",
+    "source": "official Binance Vision monthly archives",
+    "data_profile": "NATIVE12_CANONICAL_DIAGNOSTIC_V1, explicit spot handoff; not canonical perpetual research bundle",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "provider_clock_newer_current_bucket": "Not re-requested; predecessor HTTP451 respected; no bypass; strict finality still not established",
+    "raw_manifest_sha256": "19e169f12d08ec975af2da0936084122593581f84ab09290ecb67f02f9549573",
+    "data_qa_sha256": "dde93ce161ea1e54609a9fe6ded4c2d9721cd4b4f9c4ed1f2a258365e926f965",
+    "pit_status": "not proven: current retrospective archives, no contemporaneous snapshots or author universe",
+    "input_use": "Offline reuse and raw-to-canonical revalidation of existing authorized snapshot;0 new market requests"
+  },
+  "evaluation": {
+    "start": "2023-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 4386,
+    "initial_state": "all cash, no warmup signal carried to first evaluation open; first strategy entry possible at second evaluation open"
+  },
+  "metrics": {
+    "sharpe": "UTC end-of-day equity returns including initial equity, sample standard deviation ddof=1, sqrt(365), risk-free zero",
+    "sharpe_4h": "additional bar-close returns sqrt(365*6), ddof=1",
+    "max_drawdown": "maximum decline from running peak over initial capital plus all unsampled 4h bar-close equities; no intrabar equity drawdown claim",
+    "annualized_return": "(end/start equity)^(365/731)-1",
+    "daily_curve": "last 4h close of each UTC date; timestamp is close boundary, e.g. 2025-01-01T00Z represents 2024-12-31 end-of-day",
+    "position_bar_fraction": "fraction of evaluated bar-close states with quantity>0, not elapsed-time exact exposure"
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    },
+    {
+      "name": "buyhold",
+      "fee_bps": 8,
+      "delay_bars": 1,
+      "buy_hold": true
+    }
+  ],
+  "buyhold": "95% inclusive cash budget at first evaluation raw open, same fees/slip and terminal mark, no ROI/stop/exit signal",
+  "exposure": {
+    "window_previously_exposed": true,
+    "historical_total_search_count": "UNKNOWN",
+    "oos_claim": false,
+    "DSR_or_PBO_claim": false,
+    "strategy_ids": 1,
+    "strategy_configurations": 4,
+    "controls": 1,
+    "parameter_searches": 0,
+    "source_of_assignment": "root batch006 claim2026-10-03T10:58:01Z,exclusiveM0293,Lab basea996696"
+  },
+  "supporting_evidence_hashes": {
+    "specs/data-qa.json": "dde93ce161ea1e54609a9fe6ded4c2d9721cd4b4f9c4ed1f2a258365e926f965",
+    "specs/execution-reuse.json": "fc1ac7a48fc1fb79d9a57c02feaa111428843863adaefe53919f7cce7d3a2d88",
+    "specs/market-halt-evidence.json": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999",
+    "specs/requirements.lock.txt": "15337aeabb40f28b26c74f003a3b6433649949b69bf0684dd13d1273035a64e8",
+    "specs/source-manifest.json": "1a13cc4d2f25453121f29059d559d37d50d3344fc08c9306328abfaf389808d6"
+  },
+  "source_hashes": {
+    "M0293-ReinforcedAverageStrategy.py": "50c8e88441ffead38fd1e1b3d49b151a001068f5eff01a23c10178b1f2c87e38",
+    "technical-util-1.5.3.py": "8f16e768c44c3c2b3171a4c04cc834fa26caf1ac6a8cf209affbfb31fd1fac3d",
+    "qtpylib-indicators.py": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760"
+  },
+  "code_hashes": {
+    "scripts/audit_input.py": "32deb12e5148ea54ca434c6e837187a9ebcad304c850116054f4719560b9a29d",
+    "scripts/check_causality.py": "f1ba52dd863c75b2e6bac8ebb129aefe42997da7f1833f57b1a3994c25122bf7",
+    "scripts/compare_original.py": "879300dad44472b7c0f970a4ec45dcc5447f4bf34f2d90ecc2a3d73698d4ab57",
+    "scripts/fetch_sources.py": "f378a229753d9427ce603c9a0cf511094c6a8336ae80801b4e255b78adbc22d0",
+    "scripts/freeze_protocol.py": "c684f77e019f0d894c721e5e2cfbf903160784d801e374b7ece882f62fd91566",
+    "scripts/run_replay.py": "a73127852fc38e62d91460ff7b50007b4ad4bb3257f0e361e11aaf1fac886beb",
+    "scripts/test_units.py": "72060a5ec20daf34d4e7d0a06670169dbdc64802a35b1ef597239e440e33b3d4",
+    "scripts/validate_independent.py": "a4346f17eb72dac0566d876618dd6d72165578a60715296eaf5e4055deff1327"
+  }
+}

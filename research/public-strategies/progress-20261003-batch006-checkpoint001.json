@@ -1,0 +1,94 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T11:34:12.751277+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "006",
+  "checkpoint": 1,
+  "new_accepted_ids": [
+    "M0293"
+  ],
+  "new_strategy_configurations": 4,
+  "new_controls": 1,
+  "strict_reproductions": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293"
+  ],
+  "cumulative_strategy_configurations": 55,
+  "cumulative_controls": 14,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "M0293_validation": {
+    "executor_commit": "3848cf48754543d646facb6f133a2a7e35412528",
+    "frozen_protocol_sha256": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69",
+    "fidelity": "HYPOTHESIS",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "source_signal_rows": 4572,
+    "consumed_indicators_equal": 3,
+    "root_independent_decimal_cases": 5,
+    "root_replayed_outputs_byte_identical": 18,
+    "new_market_requests": 0,
+    "base_return": 0.5572756437616804,
+    "base_max_drawdown": 0.2885219665620524,
+    "buyhold_return": 4.418734870164824,
+    "promotion": false,
+    "conclusion": "No advantage over buy-and-hold; higher return with an extra bar delay exposes execution-time sensitivity. Initial 413 evaluation bars retain unavailable high-frame SMA; no warmup or evaluation-window repair."
+  },
+  "M0293_publication": {
+    "files": 48,
+    "bytes": 393203,
+    "manifest_sha256": "38e3d53f9de162b2a84a4a73783d61b529cfb2330f9de74bd552852c67b2da40",
+    "all_frozen_bytes_preserved": true
+  },
+  "M0293_backup": {
+    "private_library_state": "BLOCKED_BEFORE_UPLOAD",
+    "reason": "Supported prepared-upload helper returned HTTP401 at app tool discovery; no changed access state or successful retry.",
+    "local_thin_archive_sha256": "fc1c2f73a8372ddef42fa26fd8ae8a5604bb069cae6cd63ef6d42cc87d38a0ea",
+    "independent_manifest_sha256": "1a146a48d3b8cc0857e7a64a056cf20d588d0598d3cbaf2f98b30886c45e9641",
+    "is_full_input_backup": false,
+    "external_input_required": true,
+    "external_input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "thin_archive_payload_members_verified": 54,
+    "thin_archive_replay_outputs_identical": 18,
+    "local_archive_is_remote_backup": false
+  },
+  "external_claims_not_counted_complete": {
+    "M0316": "dot b003; frozen result delivery pending corrected recipe actual recovery",
+    "M0317": "dot b003; frozen result delivery pending corrected recipe actual recovery",
+    "M0257": "dot reserved",
+    "M0273": "dot reserved"
+  },
+  "legacy_6973": {
+    "full_field_tool_main": "4576f6a3da08c45822cfc5cfcd5422aea5bbc970",
+    "full_field_output_contract_head": "fd938b5ddea06444d477455079cd8b563bd77f00",
+    "writer": "dot exclusively",
+    "real_rows_accepted_at_this_checkpoint": 0,
+    "old_hash_only_route": "PAUSED_AUDIT_ONLY",
+    "new_collection_intake": "paused"
+  },
+  "site": {
+    "writer": "dot exclusively",
+    "M0293_import_or_deploy_claimed": false
+  },
+  "rechecks_and_restorations_are_not_new_trials": true,
+  "legacy_proxy_trials_counted": false,
+  "frozen_evidence_overwritten": false
+}

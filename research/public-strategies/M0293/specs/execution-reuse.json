@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "id": "M0293",
+  "reused_parent": "research/public-strategies/M0286/scripts/run_replay.py",
+  "parent_sha256": "93e9a4a91ede9a9a52a4d6d8cb230bcc7d903058dd583d7988585ea28efb1247",
+  "exact_function_ast_sha256": {
+    "load_input": "e5e80cbd5844f2f0c7eb6e220c35e849611c3593e5ecd727fb9ecf6795de068a",
+    "iso": "9016ca1f6861f00c7fad77edbb3e498ae02c52c4e4984eafa7279d407bbb0d61",
+    "roi_at_open": "e12ae172b461b52c1e8370ef6b2ff6db17f937ba3766c56d38f4818e36b022ef",
+    "replay": "33aeac0d20124ff718768aa484d3a5f90ff36913103d92572d4559b3ebba9420"
+  },
+  "feature_replaced": "EMA8/21 plus closed48h SMA50; independent raw-source parity required",
+  "risk_parameter_review": "Same generic stop/ROI/fill logic accepts original constantROI50%,SL-20%,trailing false; no dynamic ROI transition needed",
+  "storage": "ID-local derived immutable snapshot within exclusive assignment; no old/global files edited"
+}

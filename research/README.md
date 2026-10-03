@@ -275,3 +275,5 @@
 
 - [M0274 主账](public-strategies/M0274/M0274-core-ledger.md)：GodStra原生12h输入不完整及完整指标管线合成因果失败，真实回测0。
 - [M0275 主账](public-strategies/M0275/m0275-core-ledger.md)：Heracles原生4h、4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。
+
+- [M0293 ReinforcedAverageStrategy](public-strategies/M0293/README.md)：4h 假设回测4配置与1买持；48h SMA50可用时点、源类信号和独立账户已核验，严格复现0。
