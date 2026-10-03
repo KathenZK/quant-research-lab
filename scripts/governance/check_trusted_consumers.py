@@ -451,6 +451,32 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/public-strategies/M0288/scripts/run_replay.py",
+        "load_input", "frozen-artifact-consumer",
+        "Consumes explicitly hash-pinned BTC spot daily input in offline Freqtrade diagnostics; no PIT, trusted perpetual data, or strict-reproduction claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0288/scripts/validate_replay.py",
+        "main", "frozen-artifact-consumer",
+        "Independently reconciles retained spot diagnostic fills and daily cash; native risk probes do not authorize production or upgrade data trust.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0288/scripts/rebuild_inputs.py",
+        "main", "official-spot-archive-snapshot-builder",
+        "Reuses the pinned M0216 official archive builder, with exact expected input/source hashes; no fallback or gap repair.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0288/scripts/verify_recovery.py",
+        "main", "frozen-artifact-consumer",
+        "Checks all ten rebuilt files against immutable original hashes and sizes; no new research trial.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0288/scripts/export_graph.py",
+        "export", "frozen-artifact-consumer",
+        "Projects retained diagnostic results for review; no catalog mutation, deployment, or new execution.",
+    ),
+
+    AuxiliaryClassification(
         "research/public-strategies/M0220/scripts/run_replay.py",
         "load", "frozen-artifact-consumer",
         "Hash-pinned spot input and closed-week historical hypothesis evidence; no original-platform or perpetual equivalence claim.",

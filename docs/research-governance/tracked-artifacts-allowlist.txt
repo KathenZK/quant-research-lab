@@ -669,3 +669,16 @@ research/public-strategies/M0259/artifacts/20261003-data-blocked/provider-clock-
 research/public-strategies/M0259/artifacts/20261003-data-blocked/result-manifest.json
 research/public-strategies/M0259/artifacts/20261003-data-blocked/source-input-manifest.json
 research/public-strategies/M0259/artifacts/20261003-data-blocked/summary.json
+
+# Reviewed M0288 diagnostic; exact lightweight derived evidence only.
+research/public-strategies/M0288/artifacts/20261003-first-replay/base-daily-nav-light.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/base-trades.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/buyhold-daily-nav-light.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/delay2-trades.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/fee0-trades.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/fee20-trades.csv
+research/public-strategies/M0288/artifacts/20261003-first-replay/graph-record.json
+research/public-strategies/M0288/artifacts/20261003-first-replay/independent-validation.json
+research/public-strategies/M0288/artifacts/20261003-first-replay/recovery-validation.json
+research/public-strategies/M0288/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0288/artifacts/20261003-first-replay/summary.json
