@@ -1,0 +1,206 @@
+{
+  "scope": "source rule map and synthetic preflight only; NOT backtest completion",
+  "historical_runs": 0,
+  "strict_reproductions": 0,
+  "model_effort": "UNKNOWN",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "reviewed_engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "engine_runtime": "research pin only; author original runtime unknown",
+  "source_license": {
+    "label": "GPLv3 repository license text",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "parameter_precedence": {
+    "special_flags": "external runtime config > sidecar special values > class > engine/resolver defaults",
+    "parameter_objects": "sidecar params > buy_params/sell_params with load=True > constructor defaults"
+  },
+  "account_semantics": {
+    "collision": "entry suppressed when same-side exit also1; signal exit requires not entry",
+    "exit_order_priority": "signal exit, stop/liquidation, ROI, trailing stop; actual fills require pinned backtester/model",
+    "profit_only": "applies to signal exits only; requires current_profit>exit_profit_offset; does not block ROI/stop",
+    "ROI": "integer elapsed minutes, largest elapsed key, strict profit>threshold in interface; backtester may use favorable high for long",
+    "stop": "initialized from trade.open_rate and stoploss; long low<=recorded_stop triggers in interface, actual fill semantics not proven by signal test",
+    "order_caveat": "limit must not silently become guaranteed next-open market fill"
+  },
+  "execution_gate": [
+    "exclusive root claim/spec/exposure",
+    "pin config/sidecar presence and final effective attrs",
+    "fixed native5m input/hash/asset(s)",
+    "cost/cash/limit fill+timeout/ROI/stop same-bar path/warmup",
+    "fidelity HYPOTHESIS unless original runtime evidence exists"
+  ],
+  "id": "M0307",
+  "name": "Strategy005",
+  "timeframe": "5m",
+  "source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy005.py",
+    "sha256": "797b293f5acd809f8c77f26b38c004c87b75d8847be4cde4d0224040cc591030",
+    "bytes": 6667
+  },
+  "explicit_class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "1440": 0.01,
+      "80": 0.02,
+      "40": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.1,
+    "timeframe": "5m",
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "process_only_new_candles": true,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "ignore_roi_if_entry_signal": false,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "buy_params": {
+      "buy_fastd": 1,
+      "buy_fishRsiNorma": 5,
+      "buy_rsi": 26,
+      "buy_volumeAVG": 150
+    },
+    "sell_params": {
+      "sell_fishRsiNorma": 30,
+      "sell_minusDI": 4,
+      "sell_rsi": 74,
+      "sell_trigger": "rsi-macd-minusdi"
+    }
+  },
+  "parameter_constructors": {
+    "buy_volumeAVG": "IntParameter(low=50, high=300, default=70, space='buy', optimize=True)",
+    "buy_rsi": "IntParameter(low=1, high=100, default=30, space='buy', optimize=True)",
+    "buy_fastd": "IntParameter(low=1, high=100, default=30, space='buy', optimize=True)",
+    "buy_fishRsiNorma": "IntParameter(low=1, high=100, default=30, space='buy', optimize=True)",
+    "sell_rsi": "IntParameter(low=1, high=100, default=70, space='sell', optimize=True)",
+    "sell_minusDI": "IntParameter(low=1, high=100, default=50, space='sell', optimize=True)",
+    "sell_fishRsiNorma": "IntParameter(low=1, high=100, default=50, space='sell', optimize=True)",
+    "sell_trigger": "CategoricalParameter(['rsi-macd-minusdi', 'sar-fisherRsi'], default=30, space='sell', optimize=True)"
+  },
+  "effective_flags_without_external_overrides": {
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "trailing_only_offset_is_reached": false,
+    "can_short": false,
+    "use_custom_stoploss": false,
+    "use_custom_roi": false,
+    "process_only_new_candles": true,
+    "startup_candle_count": 0,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "position_adjustment_enable": false,
+    "max_entry_position_adjustment": -1,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "indicator_calls": [
+    {
+      "call": "ta.MACD(dataframe)",
+      "library_defaults": {
+        "fastperiod": 12,
+        "slowperiod": 26,
+        "signalperiod": 9
+      }
+    },
+    {
+      "call": "ta.MINUS_DI(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.RSI(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.STOCHF(dataframe)",
+      "library_defaults": {
+        "fastk_period": 5,
+        "fastd_period": 3,
+        "fastd_matype": 0
+      }
+    },
+    {
+      "call": "ta.SAR(dataframe)",
+      "library_defaults": {
+        "acceleration": 0.02,
+        "maximum": 0.2
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, timeperiod=40)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    }
+  ],
+  "entry_rule": "close>.000002 AND volume>rolling150volume*4 AND close<SMA40 AND fastd>fastk AND RSI14>26 AND fastd>1 AND FisherRSI_normalized<5",
+  "exit_signal_rule": "loadedtrigger rsi-macd-minusdi: RSI14 crosses above74 AND MACD12/26/9<0 AND MINUS_DI14>4",
+  "catalog_differences": [
+    "catalog matchesloadedbuy_params/sell_params, not constructor defaults",
+    "categorical constructor default30 outside stringoptions; actual class params load repairs trigger; skipping load produces no selected exitbranch",
+    "alternate sar-fisherRsi branch compares unnormalized Fisher[-1,1] toloaded30/constructor50; impossible on finite values; not selected",
+    "ROI ladder0/20/40/80/1440min=5/4/3/2/1% omitted",
+    "pricefloor/profit-only/orderflags omitted"
+  ],
+  "same_account_group": "different_roi5_4_3_2_1_stop10_profitonlytrue_marketstop_loadedparams",
+  "next_batch_priority": 4,
+  "same_name_repo_sidecar_present": false,
+  "validation": {
+    "status": "PASS_METHOD_CAUSALITY",
+    "rows": 3000,
+    "raw_entry_count": 3,
+    "raw_exit_count": 0,
+    "collisions": 0,
+    "signal_formula": "independent Boolean formulas on native indicator columns PASS",
+    "indicator_independence": "advanced TA-Lib indicators not independently reimplemented in this batch; native pinned library outputs tested for prefix/future stability",
+    "prefix_checks": 3,
+    "future_checks": 3,
+    "parameter_constructor_defaults": {
+      "buy_volumeAVG": 70,
+      "buy_rsi": 30,
+      "buy_fastd": 30,
+      "buy_fishRsiNorma": 30,
+      "sell_rsi": 70,
+      "sell_minusDI": 50,
+      "sell_fishRsiNorma": 50,
+      "sell_trigger": 30
+    },
+    "effective_class_params": {
+      "buy_volumeAVG": 150,
+      "buy_rsi": 26,
+      "buy_fastd": 1,
+      "buy_fishRsiNorma": 5,
+      "sell_rsi": 74,
+      "sell_minusDI": 4,
+      "sell_fishRsiNorma": 30,
+      "sell_trigger": "rsi-macd-minusdi"
+    },
+    "timing": {
+      "wall_s": 0.0359859750024043,
+      "cpu_s": 0.035987951999999934,
+      "max_rss_kib": 81156
+    }
+  }
+}

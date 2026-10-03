@@ -1,0 +1,15 @@
+{
+  "id": "M0311",
+  "state": "FROZEN_NOT_EXECUTED",
+  "frozen_at_utc": "2026-10-03T12:36:33.034030+00:00",
+  "protocol_sha256": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "controls": 1,
+  "strict_replication": false,
+  "market_requests": 0,
+  "remote_backup_verified": false
+}

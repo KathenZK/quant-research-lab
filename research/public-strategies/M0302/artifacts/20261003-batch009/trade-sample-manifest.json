@@ -1,0 +1,26 @@
+{
+  "base": {
+    "full_rows": 335,
+    "sample_rows": 40,
+    "selection": "all if <=40 else first20+last20; not representative",
+    "full_sha256": "889932b7797456573eabb5d09b787ef58beae42459a55a6c01596f4ceac21e66"
+  },
+  "fee0": {
+    "full_rows": 387,
+    "sample_rows": 40,
+    "selection": "all if <=40 else first20+last20; not representative",
+    "full_sha256": "f2f95ccc0a3f8c7fa784518aced5ec255eac918e082d61f96ea63ef796e17813"
+  },
+  "fee20": {
+    "full_rows": 291,
+    "sample_rows": 40,
+    "selection": "all if <=40 else first20+last20; not representative",
+    "full_sha256": "3f9d600b828120174f8426422328aab73be6946905484ba1294e542ea2951fcf"
+  },
+  "delay2": {
+    "full_rows": 351,
+    "sample_rows": 40,
+    "selection": "all if <=40 else first20+last20; not representative",
+    "full_sha256": "c3ec193fe3d63a98a4a03cd56ed06328df811663baa7943db185109f3603958b"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "verified_at": "2026-10-03T11:54:44.747617+00:00",
+  "archives": 13,
+  "raw_files_hash_checked": 39,
+  "rows_all_twelve_native_fields_equal": 114336,
+  "all_open_close_grid_checks_pass": true,
+  "all_ohlcv_volume_bounds_pass": true,
+  "evaluation_rows": 105408,
+  "canonical_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+  "new_strategy_runs": 0,
+  "trusted": false,
+  "remote_backup_verified": false
+}

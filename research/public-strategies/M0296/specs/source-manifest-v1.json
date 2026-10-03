@@ -1,0 +1,306 @@
+{
+  "schema": "fixed-source-reference-manifest/v1",
+  "id": "M0296",
+  "source": {
+    "repository": "jesse-ai/example-strategies",
+    "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+    "path": "SMACrossover/__init__.py",
+    "url": "https://github.com/jesse-ai/example-strategies/blob/7c91e0a37bf62165790120d730442e4f6eb00364/SMACrossover/__init__.py",
+    "sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+    "bytes": 1809,
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d",
+    "original_source_publicly_copied": false
+  },
+  "reference_only": {
+    "jesse_commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+    "jesse_version": "3.2.4",
+    "jesse_rust_commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+    "jesse_rust_source_version": "1.3.0",
+    "not_original_author_runtime": true,
+    "native_code_executed": false,
+    "wheel_binary_identity_verified": false
+  },
+  "reference_files": [
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/bollinger_bands.py",
+      "git_blob_sha": "330d8ed3552d2c78fa4c72e15ee3c1302c253c51",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/bollinger_bands.py",
+      "bytes": 3513,
+      "sha256": "63dbfd0c3c43045f032a56ce0b16055032453ed00d35148786110f84bbceff59"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/ichimoku_cloud.py",
+      "git_blob_sha": "838536fa8b4e6f56591f652d00832c7df0baef3f",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/ichimoku_cloud.py",
+      "bytes": 1151,
+      "sha256": "0a04c2c71150e3ac485d7bd44efba98997f783457dbc0a2b39932263c9e1e94c"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/donchian.py",
+      "git_blob_sha": "2ec6cca83e5f1f5d81066313437f3c4f62a99c95",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/donchian.py",
+      "bytes": 1820,
+      "sha256": "b7e96ebe3ba476c771a65b353c269a84d02e04587f0d76166c5f322bbbb3a401"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/rsi.py",
+      "git_blob_sha": "2eecc947fb7ffcb1f6149e58e6bb25f54a2b1128",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/rsi.py",
+      "bytes": 1447,
+      "sha256": "a82266677770c3c3905c87000f81e662973ae6363b542816ae6af67a691cd922"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/sma.py",
+      "git_blob_sha": "b42f8c87a3e262052a8cfcebe6cb19b983e04711",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/sma.py",
+      "bytes": 1419,
+      "sha256": "e0b556ab48db62be00999fc65de0d3c7069c19feb2fd31569ff63caf1e159381"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/indicators/atr.py",
+      "git_blob_sha": "96cf6f1287b3e21598130c8ecb0af84dd4ff6ed3",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/indicators/atr.py",
+      "bytes": 1144,
+      "sha256": "398a12258dbc59b350c8c9ed8a1199a57cd89e7503c7dcd3fa002030c77df06c"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/utils.py",
+      "git_blob_sha": "aebb893d32a5679b94f6161fc98ed5fe9049c5ab",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/utils.py",
+      "bytes": 12500,
+      "sha256": "5c066d17ee66adb6e3c41aa1f167b3231adb3c2b9c5d1def0bcdfb1e9dce064b"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/strategies/Strategy.py",
+      "git_blob_sha": "259d2c9fe649c934cd88bca4ffa9c1dfa1cd8eb9",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/strategies/Strategy.py",
+      "bytes": 72260,
+      "sha256": "d2a01f1e366d02f63fa39fd11fcad9adefa22da9ee6da5cf5aca1ec77ca76474"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "requirements.txt",
+      "git_blob_sha": "33af4c4c00ce91b44bf336ed42fced6d40973bda",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/requirements.txt",
+      "bytes": 682,
+      "sha256": "d66cec190bb666305db6896a192629d839518dcce3e23ff0668991dd90fbd058"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "setup.py",
+      "git_blob_sha": "3020e0d394af77722c22af85be363a86ac873c6c",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/setup.py",
+      "bytes": 1822,
+      "sha256": "dabb6b43a5e240d5048ca86c2c4f679b98bb3cf53eacb74a6c6e45cf8a1cedf1"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/modes/backtest_mode.py",
+      "git_blob_sha": "33531472a0fc55418c0f311e8ccea7f36f641572",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/modes/backtest_mode.py",
+      "bytes": 90101,
+      "sha256": "26935ca0d492514c3000e59e00a14b23e2a32c6274b777463abc206a6e73b865"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/helpers.py",
+      "git_blob_sha": "6e0ec2b3b8f57e43213a970f70437efd57a30712",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/helpers.py",
+      "bytes": 37831,
+      "sha256": "d54afd8da37965cd87b6341d2362af5f92c4bbbf18ae961ad1361a31dc89e86b"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/models/Order.py",
+      "git_blob_sha": "76c696b38f6eb06bab6a5ecc7d7a807657d6f4b8",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/models/Order.py",
+      "bytes": 4326,
+      "sha256": "87a36d19c2b40d4561120e22a04687a39a565346af38bdf5a5046eed507262d3"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/models/Position.py",
+      "git_blob_sha": "29525093beac44a5c5e390c15ba2ff75c9062ee3",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/models/Position.py",
+      "bytes": 7744,
+      "sha256": "74146190396c98ef0a22347ec4d0c006d4bc97b4324b8c47d3f12aa294cd88f7"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/modes/optimize_mode/Optimize.py",
+      "git_blob_sha": "94227e942f2237ac7c54c700f34448950a6d8e0b",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/modes/optimize_mode/Optimize.py",
+      "bytes": 27344,
+      "sha256": "90c62c083b71f7b14f33bc28969ba434e90e25d03799591ccca67b6d683b7101"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/version.py",
+      "git_blob_sha": "79e4386bd799192b2300e28234cab4d0a869b049",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/version.py",
+      "bytes": 22,
+      "sha256": "5adcd1547677dcf38fb14954bbccb45f28de2bc268366db56d439adedcfa1718"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "src/bands.rs",
+      "git_blob_sha": "42431c2527c6e70efc717e0ba62edc9e72ccf089",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/src/bands.rs",
+      "bytes": 27415,
+      "sha256": "7582225636ede6c4c2bb89939f862f2195411f385e577f8c3298a50afe703b72"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "src/trend.rs",
+      "git_blob_sha": "5a581d6f38d9c886fb743bdb3cb630c4803a3269",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/src/trend.rs",
+      "bytes": 31132,
+      "sha256": "5906bc7d967ef02953883bf8c9ac1e2f7618cf25495d2621abfb028bb9859c55"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "src/oscillators.rs",
+      "git_blob_sha": "eecc2b6171d65cc26194337c80fe85a4dddbdcc9",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/src/oscillators.rs",
+      "bytes": 47683,
+      "sha256": "25a07d9c665a30bd2c56606b07b9d83fd59b67c8b1771bf0ccae2c3f0ca6b208"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "src/moving_averages.rs",
+      "git_blob_sha": "92ccb3e46be171167abdf96ed274b2ca1eb4b6b1",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/src/moving_averages.rs",
+      "bytes": 43863,
+      "sha256": "a1aee005dcc5310b4f4b63086ddeea2c19b15fa666a6fef46426746b54674d21"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "src/statistical.rs",
+      "git_blob_sha": "e61dffebd604cdbf77eb47a6107008e7c51c7a1f",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/src/statistical.rs",
+      "bytes": 5314,
+      "sha256": "069c36da92a3ed32a8765bdf74b1ec1be80e9eeb71b797b6ac520869005747ea"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "Cargo.toml",
+      "git_blob_sha": "dfe12b6b17b9fb40bf2c5b7a1176f16acf20c6a3",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/Cargo.toml",
+      "bytes": 854,
+      "sha256": "ab23b5c207455f22eaeb64ea1c2f5e397ae5f4959de1d2269bffd1b4740c1e7e"
+    },
+    {
+      "repository": "jesse-ai/jesse-rust",
+      "commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+      "path": "LICENSE",
+      "git_blob_sha": "7dcb7df01b61917b90bf814c0f17ac650c5dd037",
+      "url": "https://github.com/jesse-ai/jesse-rust/blob/65e1007faf1804ca66651bc76cccd3feb80a0d6d/LICENSE",
+      "bytes": 1067,
+      "sha256": "17753bd10c1f6cfd62d9b3206f3a5149ac92c94139f25733cf20c6142c5bf1a7"
+    },
+    {
+      "repository": "KathenZK/quant-research-lab",
+      "commit": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "path": "research/public-strategies/M0232/README.md",
+      "git_blob_sha": "6159b8a04f115ff8688895658e7d8e39721e45b2",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/b891d5dbd734fe3bc71866d2e0a2e3d46956bc25/research/public-strategies/M0232/README.md",
+      "bytes": 2712,
+      "sha256": "99ed90cc2fe5b510a326bf8fd65fc16edd3b20c8fdef95e26cbd8a4327243b8b"
+    },
+    {
+      "repository": "KathenZK/quant-research-lab",
+      "commit": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "path": "research/public-strategies/M0293/specs/M0293-first-replay.json",
+      "git_blob_sha": "a2a68d80b3ea9f723cd54619db47a26d7f12db40",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/b891d5dbd734fe3bc71866d2e0a2e3d46956bc25/research/public-strategies/M0293/specs/M0293-first-replay.json",
+      "bytes": 10895,
+      "sha256": "474b8271999960479756b5e733a3f22f54240300c4ec26f477edf2708a65ed69"
+    },
+    {
+      "repository": "KathenZK/quant-research-lab",
+      "commit": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "path": "research/public-strategies/M0316/specs/protocol.json",
+      "git_blob_sha": "c3e81172a845892b17b667b25ebc45ebad3546fb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/b891d5dbd734fe3bc71866d2e0a2e3d46956bc25/research/public-strategies/M0316/specs/protocol.json",
+      "bytes": 9730,
+      "sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289"
+    },
+    {
+      "repository": "jesse-ai/jesse",
+      "commit": "417f8765225e3bfc12043d4b712f19fe15a3c078",
+      "path": "jesse/constants.py",
+      "git_blob_sha": "c53d2eac6a4aec27b4549a4d5b17a3c31c0790fe",
+      "url": "https://github.com/jesse-ai/jesse/blob/417f8765225e3bfc12043d4b712f19fe15a3c078/jesse/constants.py",
+      "bytes": 1481,
+      "sha256": "1851c5a8cada93e1791825d0010079afd35b083657f7075e4ea7034ea0774ebe"
+    }
+  ],
+  "lab_contract": {
+    "read_commit": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+    "declared_fixed_lab_main_base": "7e516e3e7fc9ab23809dba6736bbaaea9795bdef",
+    "path": "research/public-strategies/dot-batch005-output-contract-20261003.json",
+    "sha256": "f18dcac9b41ab1f8004263b628da86b5d61169b7ae164bae2d822dd0aadbc398",
+    "source_cards_sha256": "2ae4cc4b289fee8fb02645c1a85a052ef85ca5ef7d41c9d717879e7027b5a880"
+  },
+  "governance_readback": [
+    {
+      "path": "AGENTS.md",
+      "fixed_base": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "sha256": "23e09344e6f9acaa76c6792af0cf207b4a5afb7067765e6d1e0516f58f9d7b60",
+      "prior_handoff_sha256": "30a18bbc5af7561f300dc9fe8ec6e7cab228778a82daf162982ffd62a9a8d2da",
+      "matches_previously_read_handoff_bytes": false,
+      "matches_except_trailing_newlines": true,
+      "difference": "prior local AGENTS has one extra trailing newline"
+    },
+    {
+      "path": ".cursor/rules/research-report-storage.mdc",
+      "fixed_base": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "sha256": "53c22af0f52d3f268aa3f6f83a2b51310ec2dfeace3e02d15b8d2473956f2558",
+      "prior_handoff_sha256": "53c22af0f52d3f268aa3f6f83a2b51310ec2dfeace3e02d15b8d2473956f2558",
+      "matches_previously_read_handoff_bytes": true,
+      "matches_except_trailing_newlines": true,
+      "difference": "none"
+    },
+    {
+      "path": ".cursor/rules/data-quality-first.mdc",
+      "fixed_base": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+      "sha256": "0cd621d950135b14146ae31f57a585c4a2e5818c911c976c0f0f38f62b443fef",
+      "prior_handoff_sha256": "0cd621d950135b14146ae31f57a585c4a2e5818c911c976c0f0f38f62b443fef",
+      "matches_previously_read_handoff_bytes": true,
+      "matches_except_trailing_newlines": true,
+      "difference": "none"
+    }
+  ]
+}

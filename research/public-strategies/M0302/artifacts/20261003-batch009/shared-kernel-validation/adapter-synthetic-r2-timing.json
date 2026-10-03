@@ -1,0 +1,11 @@
+{
+  "stage": "five-adapter-native-synthetic-r2",
+  "start_utc": "2026-10-03T13:01:36.964131+00:00",
+  "end_utc": "2026-10-03T13:01:39.777227+00:00",
+  "wall_seconds": 2.8131056839993107,
+  "cpu_user_seconds": 2.646912,
+  "cpu_system_seconds": 0.19874,
+  "peak_child_rss_kib": 315152,
+  "exit_code": 0,
+  "threads": 1
+}

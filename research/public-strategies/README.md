@@ -29,8 +29,23 @@
 
 | M0315 | [UniversalMACD](M0315/README.md) | 原生5m字面参数假设回测4配置及1买持，严格0 |
 
+| M0311 | [TechnicalExampleStrategy CMF21](M0311/README.md) | 4配置执行改编失败诊断及1买持，严格0 |
+
+| M0296 | [SMACrossover](M0296/README.md) | 源码/规则/去重审计，历史运行0，严格0 |
+| M0299 | [SimpleBollinger](M0299/README.md) | 源码/规则/去重审计，历史运行0，严格0 |
+| M0312 | [TradingView_RSI](M0312/README.md) | 源码/规则/去重审计，历史运行0，严格0 |
+| M0314 | [TurtleRules](M0314/README.md) | 源码/规则/去重审计，历史运行0，严格0 |
+
+| M0300 | [SmoothOperator](M0300/README.md) | 4配置原生5m执行代理诊断；买持复用，严格0 |
+| M0302 | [Strategy001](M0302/README.md) | 4配置原生5m执行代理诊断；买持复用，严格0 |
+| M0305 | [Strategy003](M0305/README.md) | 4配置原生5m执行代理诊断；买持复用，严格0 |
+| M0306 | [Strategy004](M0306/README.md) | 4配置原生5m执行代理诊断；买持复用，严格0 |
+| M0307 | [Strategy005](M0307/README.md) | 4配置原生5m执行代理诊断；买持复用，严格0 |
+
 本次目录迁移发生在三个执行者完成之后，由单一协调者串行执行。各ID的 path-migration-20261003.json 记录旧根、新根及原始文件哈希；冻结JSON内历史路径与哈希链不改写，按映射解释。修改过的操作文档原字节保存在各ID的 artifacts/path-migration-20261003/original-documents/。这保留证据与历史commit身份，不表示再次回测或升级可信度。
 
-完整行情和大量曲线不进入公开Git；仅代码、独立说明、来源哈希和获准轻量证据。备份按批次记录：M0256/M0259 私有 Library 检查点 `libfile_9df3017ee3008191840664f5975b1879` v0 已由接收端取回，93 个清单成员核验通过，18 个确定性输出重建一致；这不代表此前其他批次的 Library 状态已解决。官方重建验证与异地快照备份分开统计。Graph保持现有详情/比较UI，未有导入或部署回执时不得称网站更新。
+完整行情和大量曲线不进入公开Git；仅代码、独立说明、来源哈希和获准轻量证据。备份按批次记录：M0256/M0259 私有 Library 检查点 （见私有恢复登记） v0 已由接收端取回，93 个清单成员核验通过，18 个确定性输出重建一致；这不代表此前其他批次的 Library 状态已解决。官方重建验证与异地快照备份分开统计。Graph保持现有详情/比较UI，未有导入或部署回执时不得称网站更新。
 
 [M0316/M0317收益前来源预检](dot-next-preflight-20261003/README.md)：诊断主题，独立于各ID运行计数。
+
+[dot batch006来源预检](dot-batch006-preflight-20261003/README.md)：M0253/M0272/M0264/M0266为唯一dot后续批次，当前仅源审，历史运行0。

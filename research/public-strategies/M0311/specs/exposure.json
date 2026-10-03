@@ -1,0 +1,17 @@
+{
+  "id": "M0311-20261003-first-replay-exposure",
+  "kind": "exposure",
+  "family": "PUBLIC-M0311-TECHNICAL-EXAMPLE-CMF",
+  "window_start": "2024-01-01T00:00:00Z",
+  "window_end": "2025-01-01T00:00:00Z",
+  "evidence_class": "historical_replay",
+  "trial_count": 4,
+  "control_configurations": 1,
+  "historical_total_search_count": "UNKNOWN",
+  "oos_claim": false,
+  "selection_reason": "Assigned for source completeness before thisIDperformance; calendar2024 already seen viaM0315 and availability-selected after2023dataQA rejection; not independentOOS",
+  "recorded_at_utc": "2026-10-03T12:36:33.034030+00:00",
+  "artifacts": {
+    "specs/M0311-first-replay.json": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc"
+  }
+}

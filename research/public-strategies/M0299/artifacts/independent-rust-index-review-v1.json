@@ -1,0 +1,64 @@
+{
+  "schema": "batch005-independent-reference-index-review/v1",
+  "checks": [
+    {
+      "input_bars": 80,
+      "wrapper_retained": 80,
+      "span_window_first": 3,
+      "span_window_last": 54,
+      "source_endpoint": 79,
+      "lag_bars": 25,
+      "pass": true
+    },
+    {
+      "input_bars": 81,
+      "wrapper_retained": 80,
+      "span_window_first": 4,
+      "span_window_last": 55,
+      "source_endpoint": 80,
+      "lag_bars": 25,
+      "pass": true
+    },
+    {
+      "input_bars": 150,
+      "wrapper_retained": 80,
+      "span_window_first": 73,
+      "span_window_last": 124,
+      "source_endpoint": 149,
+      "lag_bars": 25,
+      "pass": true
+    }
+  ],
+  "monotonic_counterexample": {
+    "t": 79,
+    "displacement_parameter": 26,
+    "observed_reference_last_index": 54,
+    "naive_shift26_index": 53,
+    "equal": false
+  },
+  "BB_population_variance_check": {
+    "period": 20,
+    "sequence": "1..20",
+    "mean": 10.5,
+    "variance": 33.25,
+    "sample_variance_would_differ": true
+  },
+  "source_hashes": {
+    "src/trend.rs": "5906bc7d967ef02953883bf8c9ac1e2f7618cf25495d2621abfb028bb9859c55",
+    "src/bands.rs": "7582225636ede6c4c2bb89939f862f2195411f385e577f8c3298a50afe703b72",
+    "Cargo.toml": "ab23b5c207455f22eaeb64ea1c2f5e397ae5f4959de1d2269bffd1b4740c1e7e"
+  },
+  "source_reference_commit": "65e1007faf1804ca66651bc76cccd3feb80a0d6d",
+  "external_Rust_executed": false,
+  "external_Python_executed": false,
+  "compiled_binary_or_wheel_equivalence_proven": false,
+  "original_author_runtime_known": false,
+  "market_requests": 0,
+  "historical_runs": 0,
+  "limits": [
+    "Manual source inspection plus Python index/arithmetic model; not compiled Rust execution.",
+    "Wrapper crops to last80; sub80 returns NaN. Supplied candle chronology still depends on route/runtime.",
+    "Reviewed Rust BB code does not clamp negative floating variance; do not silently add clamp.",
+    "Matching1.3.0 declarations do not prove release wheel provenance."
+  ]
+}

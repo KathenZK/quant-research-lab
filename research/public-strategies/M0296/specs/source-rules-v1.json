@@ -1,0 +1,45 @@
+{
+  "family": "PUBLIC-M0296-SMA50-200-STATE",
+  "timeframe": null,
+  "timeframe_evidence": "strategy module and fixed example repository tree contain no routing timeframe",
+  "native_4h_confirmed": false,
+  "directions": [
+    "long",
+    "short"
+  ],
+  "indicator": {
+    "fast_sma": 50,
+    "slow_sma": 200,
+    "reference_source": "close"
+  },
+  "entry": {
+    "long": "SMA50[t] > SMA200[t]",
+    "short": "SMA50[t] < SMA200[t]",
+    "kind": "state; no previous-bar comparison"
+  },
+  "exit": {
+    "long": "SMA50[t] < SMA200[t]",
+    "short": "SMA50[t] > SMA200[t]"
+  },
+  "sizing": "size_to_qty(balance,price,fee_rate=fee_rate)",
+  "entry_cancel": false,
+  "protective_orders": "no explicit source stop_loss/take_profit",
+  "unknowns": [
+    "原作者Jesse版本、其依赖/平台/配置/路由未提供",
+    "实际交易所、具体标的、市场类型、合约乘数、费用/滑点/资金费及借币成本未冻结",
+    "挂单/部分成交/精度/最小下单量、时钟与撮合版本未冻结",
+    "没有真实行情、历史收益或净值/交易记录；不得以合成PASS宣称策略有效或严格复现",
+    "catalog现货标签与源码做空冲突，禁止静默改仅多",
+    "TradingView别名未另核源码/周期，不能借别名15m替代该模块路由"
+  ],
+  "schema": "source-rule-specification/v1",
+  "id": "M0296",
+  "source_commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+  "source_sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "original_runtime": "UNKNOWN",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "semantic_spec_canonical_sha256": "5ecb0448bd5d20c821b6ff7008d2d630620e6a800cb50fb91c2f1c7c4489f13e"
+}

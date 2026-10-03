@@ -1,0 +1,326 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T13:37:43.244050+00:00",
+  "coordinator": "Codex root only",
+  "batch": "009",
+  "checkpoint": 2,
+  "source_implementation_commit": "f7c7d6b58355d7cda3bb3c50182c73692112d32f",
+  "new_accepted_since_checkpoint001": [
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307"
+  ],
+  "batch_including_M0311": {
+    "ids": [
+      "M0311",
+      "M0300",
+      "M0302",
+      "M0305",
+      "M0306",
+      "M0307"
+    ],
+    "strategy_configurations": 24,
+    "new_controls": 1
+  },
+  "new_strategy_configurations_since_checkpoint001": 20,
+  "new_controls_since_checkpoint001": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307"
+  ],
+  "cumulative_strategy_configurations": 91,
+  "cumulative_controls": 18,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "M0311_acceptance": "See immutable checkpoint001",
+  "five_id_independent_qa": {
+    "receipt_sha256": "04a2f62605219f81906686373384ae813e66220347a16b6936f8f19d26d734bf",
+    "status": "PASS_ADAPTED_DIAGNOSTIC",
+    "native_account_states": 2108160,
+    "trade_events": 5339,
+    "source_signal_rows": 571680,
+    "private_recovery_outputs_byte_identical": 70,
+    "public_files": 194,
+    "public_bytes": 1384541,
+    "public_manifest_sha256": "a48218908a16ec4a3beed89cf82353164fbabc21ff691658090c066c366f1d02",
+    "root_full_engine_replays": 0,
+    "absolute_tolerance": 0,
+    "relative_tolerance": 1e-09,
+    "expected_zero_exact": true,
+    "additional_independent_checks": "phase, signal/execution timestamps, 5m bounds, notional, strict profit-only gate, source/persisted signals and future-prefix causality",
+    "new_research_blockers": 0
+  },
+  "results": {
+    "M0300": {
+      "summary_sha256": "6511efaa229594a033c664f989d3fed326f7b206c96ae385e4e81f57f4cc37ea",
+      "configurations": {
+        "base": {
+          "total_return": 0.00017548713072779165,
+          "max_drawdown": 0.29903428335732773,
+          "round_trips": 271,
+          "final_equity": 100017.54871307277
+        },
+        "fee0": {
+          "total_return": 0.5099983413436731,
+          "max_drawdown": 0.2607523092763352,
+          "round_trips": 271,
+          "final_equity": 150999.8341343673
+        },
+        "fee20": {
+          "total_return": -0.46079718098822786,
+          "max_drawdown": 0.49472058829211496,
+          "round_trips": 271,
+          "final_equity": 53920.281901177215
+        },
+        "delay2": {
+          "total_return": -0.0791404655261706,
+          "max_drawdown": 0.3203276198108561,
+          "round_trips": 271,
+          "final_equity": 92085.95344738294
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0302": {
+      "summary_sha256": "fb4ad1a14af6635b7fa9523d98ed7086e6bd2d8b807d4753256abc7d03095182",
+      "configurations": {
+        "base": {
+          "total_return": -0.11974227330782306,
+          "max_drawdown": 0.4143680972834052,
+          "round_trips": 167,
+          "final_equity": 88025.7726692177
+        },
+        "fee0": {
+          "total_return": 0.2855498132542764,
+          "max_drawdown": 0.32002708673388325,
+          "round_trips": 193,
+          "final_equity": 128554.98132542765
+        },
+        "fee20": {
+          "total_return": -0.22325773561783135,
+          "max_drawdown": 0.45260440043303385,
+          "round_trips": 145,
+          "final_equity": 77674.22643821687
+        },
+        "delay2": {
+          "total_return": -0.03466977860246867,
+          "max_drawdown": 0.35962460942351715,
+          "round_trips": 175,
+          "final_equity": 96533.02213975313
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0305": {
+      "summary_sha256": "ebd996b6f73db95cba29abf07210647dec0e0ecfaf4ba9f69d38f0fefaa3367d",
+      "configurations": {
+        "base": {
+          "total_return": -0.04156032224682582,
+          "max_drawdown": 0.22120699946374212,
+          "round_trips": 51,
+          "final_equity": 95843.96777531742
+        },
+        "fee0": {
+          "total_return": -0.0020093216272194514,
+          "max_drawdown": 0.196064116939202,
+          "round_trips": 52,
+          "final_equity": 99799.06783727805
+        },
+        "fee20": {
+          "total_return": -0.17099419282018802,
+          "max_drawdown": 0.3147452623800012,
+          "round_trips": 49,
+          "final_equity": 82900.5807179812
+        },
+        "delay2": {
+          "total_return": -0.044220010913374574,
+          "max_drawdown": 0.20379402361903598,
+          "round_trips": 51,
+          "final_equity": 95577.99890866254
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0306": {
+      "summary_sha256": "aabb77cece4327bb7fed6e7ec9a084693d882f57586f8bc061b52a8c2165952f",
+      "configurations": {
+        "base": {
+          "total_return": 0.13412416442347364,
+          "max_drawdown": 0.24450600942375333,
+          "round_trips": 96,
+          "final_equity": 113412.41644234736
+        },
+        "fee0": {
+          "total_return": 0.19991970700787642,
+          "max_drawdown": 0.22614820086686005,
+          "round_trips": 96,
+          "final_equity": 119991.97070078764
+        },
+        "fee20": {
+          "total_return": -0.17590806531144332,
+          "max_drawdown": 0.2915815908528484,
+          "round_trips": 86,
+          "final_equity": 82409.19346885566
+        },
+        "delay2": {
+          "total_return": -0.021080562349000243,
+          "max_drawdown": 0.2418368901415059,
+          "round_trips": 93,
+          "final_equity": 97891.94376509998
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    },
+    "M0307": {
+      "summary_sha256": "fac8603cb6dbcab7c697614dcf47abe579d5324da5a386c03c43fc87e7e399b9",
+      "configurations": {
+        "base": {
+          "total_return": -0.11702670024586992,
+          "max_drawdown": 0.39082493044981104,
+          "round_trips": 80,
+          "final_equity": 88297.32997541301
+        },
+        "fee0": {
+          "total_return": 0.14426008099314713,
+          "max_drawdown": 0.3561787955016509,
+          "round_trips": 90,
+          "final_equity": 114426.00809931471
+        },
+        "fee20": {
+          "total_return": -0.20063679174928917,
+          "max_drawdown": 0.4033472264809389,
+          "round_trips": 75,
+          "final_equity": 79936.32082507109
+        },
+        "delay2": {
+          "total_return": -0.015610330448366905,
+          "max_drawdown": 0.381016905349881,
+          "round_trips": 83,
+          "final_equity": 98438.96695516331
+        }
+      },
+      "fidelity": "ADAPTED_EXECUTION_PROXY",
+      "promotion": false
+    }
+  },
+  "benchmark": {
+    "origin_id": "M0311",
+    "total_return": 1.1503041230956876,
+    "new_control_runs": 0,
+    "reuse_is_not_a_new_trial": true
+  },
+  "conclusions": "All five base results trail the same-window buyhold reference. M0306 base gain becomes negative at higher costs or delay2. M0300 experimental source warning retained and fee0/fee20 spread is large. No promotion; no OOS claim, no original GTC limit-order performance established.",
+  "private_recovery": {
+    "archive_bytes": 118108879,
+    "archive_sha256": "bfa126ff4c14f754cd8a6399ceb34e9020cb7563529331a97e6d7f45b7e14a8b",
+    "standalone_manifest_sha256": "688a1c8dc83e2a04cd0cd93aec4bffdafe691623d4ddddc460f941dd9a1d7bff",
+    "payload_files": 636,
+    "zip_members": 637,
+    "one_raw_set_objects": 39,
+    "one_canonical_snapshot": true,
+    "payload_crc_hash_and_logical_paths": "PASS",
+    "M0311_prior_restore_objects_reused": 18,
+    "transfer_parts": 5,
+    "transfer_manifest_sha256": "b833dedc4d71762fb071e44efe744e1db67ca8e3c689f58c1a967a5c0e12faea",
+    "local_restore_verified": true,
+    "remote_library_backup_verified": false,
+    "library_blocker": "Supported root upload HTTP401 unresolved; no new root Library backup claimed. Private evidence is local pending permitted remote persistence."
+  },
+  "dot_batch005_audit_only": {
+    "ids": [
+      "M0296",
+      "M0299",
+      "M0312",
+      "M0314"
+    ],
+    "source_commit": "282009b0509731d247dd005eda31402a14a140b6",
+    "files": 78,
+    "bytes": 293241,
+    "all_file_hashes_match": true,
+    "root_synthetic_rechecks": 65,
+    "root_static_cases_reexecuted": 0,
+    "stored_static_checks_reviewed": 30,
+    "static_limit": "Complete private Jesse/Rust reference tree not available for root rerun; prior successful receipts reviewed",
+    "new_historical_runs": 0,
+    "new_controls": 0,
+    "governance_registered_artifacts": 32,
+    "two_level_indexes_added": true,
+    "root_qa_readme_sha256": "aa7521f13aed2071921e72cb834ec2c41491016f35d4f6293e75be3c612710c6"
+  },
+  "graph_directory_delivery": {
+    "main_commit": "e3f676749dc24470aef536308d68d44ad59ba861",
+    "source_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "readable_ids": 100,
+    "strategies": 86,
+    "factors": 9,
+    "unclassified": 5,
+    "new_native_reviewed_definitions": 0,
+    "new_backtests": 0,
+    "remote_files_read_back": 109,
+    "remote_bytes": 424834,
+    "all_six_push_pr_main_workflows": "SUCCESS",
+    "independent_directory_qa_sha256": "e5df78c0384c5a9d28754164c9343dbbddb3e89c12eae9b6d5e11deeb51909d8",
+    "existing_native_ids_separately": 2,
+    "site_deployed_by_this_batch": false,
+    "full_private_release_validation": "BLOCKED:330 frozen raw originals unavailable locally; public gates pass"
+  },
+  "other_owners": {
+    "dot_batch004": [
+      "M0298",
+      "M0304"
+    ],
+    "dot_batch004_publication": "ON_HOLD_BY_PARENT pending separate scope confirmation; not merged/imported/count-added here",
+    "Graph_checkpoint_writer": "dot exclusively; source checkpoint branch untouched",
+    "next_dot_batch006": [
+      "M0253",
+      "M0272",
+      "M0264",
+      "M0266"
+    ],
+    "next_batch_status": "ASSIGNED_NOT_STARTED; exact branch and contract follow this delivery"
+  },
+  "local_checks": {
+    "governance": "PASS",
+    "ruff": "PASS",
+    "nonlocal_pytest_passed": 2318,
+    "skipped": 3,
+    "deselected": 264,
+    "duration_seconds": 113.27
+  },
+  "frozen_evidence_overwritten": false,
+  "integration_doc_only_change": "Kernel parent README adds exact frozen manifest registration; all v1 files and per-ID files retain source-commit bytes. Existing private Library locator removed from mutable public index."
+}

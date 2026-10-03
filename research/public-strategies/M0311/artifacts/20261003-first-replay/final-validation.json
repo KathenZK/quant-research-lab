@@ -1,0 +1,15 @@
+{
+  "id": "M0311",
+  "status": "PASS",
+  "verified_at_utc": "2026-10-03T12:45:35.463805+00:00",
+  "frozen_code_supporting_hashes_unchanged": true,
+  "ruff": "PASS",
+  "compileall": "PASS",
+  "relative_markdown_links": 28,
+  "private_identifiers_and_context_fingerprints_absent": true,
+  "independent_nav_states": 527040,
+  "independent_fill_events": 45671,
+  "local_recovery_result_files": 18,
+  "global_registry_not_modified": true,
+  "remote_backup_verified": false
+}

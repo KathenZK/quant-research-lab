@@ -1,0 +1,213 @@
+{
+  "id": "M0314",
+  "bytes": 8142,
+  "sha256": "35e4c3cd69010ca81402277693cb6f7deaf52a284153f20f25d4cf605701408a",
+  "python_ast_sha256": "c988eb8480c1e69fb2b3dc6c01feb4e82e2f002f5d72a280b67712488b3bc7c5",
+  "ast_schema": "CPython3.12 ast.dump(include_attributes=False); includes literal docstrings; excludes comments/location",
+  "methods": [
+    {
+      "class": "TurtleRules",
+      "method": "__init__",
+      "lines": [
+        28,
+        33
+      ],
+      "ast_sha256": "e3acf32359473c57034d680fd181dcd61e3dd344c850bab6a4848c895af13e6d"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "before",
+      "lines": [
+        35,
+        43
+      ],
+      "ast_sha256": "f6738dd3a5517a426d63ec92387d9824f7858161849e611cafc9be56737a3676"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "entry_donchian",
+      "lines": [
+        46,
+        47
+      ],
+      "ast_sha256": "ba2ebbbc36feae4769778ac64c086f8d7ef15e0c193fb390f588477494dcdb82"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "exit_donchian",
+      "lines": [
+        50,
+        51
+      ],
+      "ast_sha256": "f7967625ef578c2e83441733cf9fa1fb1836149577484e5dac29e6922a96127b"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "atr",
+      "lines": [
+        54,
+        55
+      ],
+      "ast_sha256": "2a6da50ad8951624f08822d2864ece05dae7d85721783894bbdf67eb096f1974"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "unit_qty",
+      "lines": [
+        57,
+        61
+      ],
+      "ast_sha256": "49067b6064cd05a7c942fa533372c71fb8a8179eae75f38807b601fc0b02a92e"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "entry_signal",
+      "lines": [
+        63,
+        77
+      ],
+      "ast_sha256": "aac174d74d1f4e2116c3387f74d50623f503e1c5f5c3bc36504dfb3455e06c64"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "exit_signal",
+      "lines": [
+        79,
+        93
+      ],
+      "ast_sha256": "a49ffd2caf6bd15d5dbd64afc4bee4e7df618722e8584c02778ae798570e1ddf"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "should_long",
+      "lines": [
+        95,
+        96
+      ],
+      "ast_sha256": "092526ee380e0c295e3fd3edcaa111ed3b0672f81854abd0fcd8f3d3abd0b2bd"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "should_short",
+      "lines": [
+        98,
+        99
+      ],
+      "ast_sha256": "fcf3e242b6de5a055851fc2c77f648c8e742442aacc8a5232d59995d2e75a0d7"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "should_cancel_entry",
+      "lines": [
+        101,
+        102
+      ],
+      "ast_sha256": "2a9a16b6b29349a2992a5c9915a0484c7b9599e9f31a85a1a1132b94137262ac"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "go_long",
+      "lines": [
+        104,
+        112
+      ],
+      "ast_sha256": "fada2071e5dac14c9bec74bf63c9d169be886bbdd470dc7bdc6c620c53c2c398"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "go_short",
+      "lines": [
+        114,
+        122
+      ],
+      "ast_sha256": "a2e0dcad01bb8969431f0079b1e2139503c6cff836455ee2b271f7402ceba7d6"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "update_position",
+      "lines": [
+        124,
+        144
+      ],
+      "ast_sha256": "b1ffb903a898ddcfa4fd17d6a02ab513db6dab6a7608f818d3444c95fc03de03"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "on_increased_position",
+      "lines": [
+        146,
+        157
+      ],
+      "ast_sha256": "bee1a2abbcc2eb86cc7b74ca100fbbee50e3cd0ece0d83738f0930864a4e1f56"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "on_stop_loss",
+      "lines": [
+        160,
+        162
+      ],
+      "ast_sha256": "c079fef5c977baed53f149701a001e605e2dc7ef21c122818a2dfee12283dbf6"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "on_take_profit",
+      "lines": [
+        164,
+        168
+      ],
+      "ast_sha256": "bb3f879118dc4b7b06b8775ca73f8f870ff70f4526970d0cc7427b0fac2814af"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "filters",
+      "lines": [
+        170,
+        173
+      ],
+      "ast_sha256": "9e84194b0733e890d5066ec7dcd707b934b4cb49ea8f8155d67899c9950e3fd6"
+    },
+    {
+      "class": "TurtleRules",
+      "method": "S1_filter",
+      "lines": [
+        175,
+        180
+      ],
+      "ast_sha256": "5f7ffa9e0251215c294af93fcde9e3653d7663c7f2b6a25531365f7a10c3ac0f"
+    }
+  ],
+  "called_function_names": [
+    "abs",
+    "atr",
+    "donchian",
+    "self.entry_signal",
+    "self.exit_signal",
+    "self.liquidate",
+    "self.unit_qty",
+    "super",
+    "super().__init__"
+  ],
+  "defined_methods": [
+    "__init__",
+    "before",
+    "entry_donchian",
+    "exit_donchian",
+    "atr",
+    "unit_qty",
+    "entry_signal",
+    "exit_signal",
+    "should_long",
+    "should_short",
+    "should_cancel_entry",
+    "go_long",
+    "go_short",
+    "update_position",
+    "on_increased_position",
+    "on_stop_loss",
+    "on_take_profit",
+    "filters",
+    "S1_filter"
+  ],
+  "meaning": "Text and AST identity only; different hashes do not prove semantic distinctness, equal abstract rule keywords do not prove duplicates."
+}

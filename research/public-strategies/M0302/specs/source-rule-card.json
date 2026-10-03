@@ -1,0 +1,150 @@
+{
+  "scope": "source rule map and synthetic preflight only; NOT backtest completion",
+  "historical_runs": 0,
+  "strict_reproductions": 0,
+  "model_effort": "UNKNOWN",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "reviewed_engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "engine_runtime": "research pin only; author original runtime unknown",
+  "source_license": {
+    "label": "GPLv3 repository license text",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "parameter_precedence": {
+    "special_flags": "external runtime config > sidecar special values > class > engine/resolver defaults",
+    "parameter_objects": "sidecar params > buy_params/sell_params with load=True > constructor defaults"
+  },
+  "account_semantics": {
+    "collision": "entry suppressed when same-side exit also1; signal exit requires not entry",
+    "exit_order_priority": "signal exit, stop/liquidation, ROI, trailing stop; actual fills require pinned backtester/model",
+    "profit_only": "applies to signal exits only; requires current_profit>exit_profit_offset; does not block ROI/stop",
+    "ROI": "integer elapsed minutes, largest elapsed key, strict profit>threshold in interface; backtester may use favorable high for long",
+    "stop": "initialized from trade.open_rate and stoploss; long low<=recorded_stop triggers in interface, actual fill semantics not proven by signal test",
+    "order_caveat": "limit must not silently become guaranteed next-open market fill"
+  },
+  "execution_gate": [
+    "exclusive root claim/spec/exposure",
+    "pin config/sidecar presence and final effective attrs",
+    "fixed native5m input/hash/asset(s)",
+    "cost/cash/limit fill+timeout/ROI/stop same-bar path/warmup",
+    "fidelity HYPOTHESIS unless original runtime evidence exists"
+  ],
+  "id": "M0302",
+  "name": "Strategy001",
+  "timeframe": "5m",
+  "source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy001.py",
+    "sha256": "2357996e6594458e8db45b5f757918462afa3c998de9d06e2af0c009ddc4b80d",
+    "bytes": 4103
+  },
+  "explicit_class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.1,
+    "timeframe": "5m",
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "process_only_new_candles": true,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "ignore_roi_if_entry_signal": false,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    }
+  },
+  "parameter_constructors": {},
+  "effective_flags_without_external_overrides": {
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "trailing_only_offset_is_reached": false,
+    "can_short": false,
+    "use_custom_stoploss": false,
+    "use_custom_roi": false,
+    "process_only_new_candles": true,
+    "startup_candle_count": 0,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "position_adjustment_enable": false,
+    "max_entry_position_adjustment": -1,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "indicator_calls": [
+    {
+      "call": "ta.EMA(dataframe, timeperiod=20)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=50)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=100)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "qtpylib.heikinashi(dataframe)"
+    }
+  ],
+  "entry_rule": "rawEMA20 crosses above rawEMA50 AND HAclose>EMA20 AND HAopen<HAclose",
+  "exit_signal_rule": "rawEMA50 crosses ABOVE rawEMA100 AND HAclose<EMA20 AND HAopen>HAclose",
+  "catalog_differences": [
+    "profit-only and limit/market execution flags omitted fromcatalog",
+    "HA requires0-based contiguous RangeIndex; use raw tradable prices, not HA fills"
+  ],
+  "same_account_group": "roi5_4_3_1_stop10_profitonlytrue_limitentryexit_marketstop",
+  "next_batch_priority": 1,
+  "same_name_repo_sidecar_present": false,
+  "validation": {
+    "status": "PASS_PRIOR_FROZEN_REFERENCE_NOT_RERUN",
+    "prior_result": {
+      "status": "PASS",
+      "rows": 3000,
+      "entry_signals": 27,
+      "exit_signals": 4,
+      "max_errors": {
+        "ema20": 0.0,
+        "ema50": 0.0,
+        "ema100": 0.0,
+        "ha_open": 0.0,
+        "ha_close": 0.0
+      },
+      "prefix_checks": 3,
+      "future_checks": 3
+    },
+    "prior_completion": "2026-10-03T12:21:04.832730+00:00",
+    "prior_public_source_sha256": "2357996e6594458e8db45b5f757918462afa3c998de9d06e2af0c009ddc4b80d",
+    "timing": {
+      "wall_s": 0,
+      "cpu_s": 0,
+      "classification": "reused; excluded from newly-tested throughput"
+    }
+  }
+}

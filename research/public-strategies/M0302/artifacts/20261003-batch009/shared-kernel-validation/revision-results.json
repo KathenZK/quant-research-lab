@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-03T13:09:36.581617+00:00",
+  "scope": "synthetic_only_no_history",
+  "results": {
+    "reject_nonzero_expected_1e-20": "PASS",
+    "reject_actual_nonzero_zero_expected_1e-20": "PASS",
+    "equal_1e-20": "PASS",
+    "reject_nonzero_expected_1e-100": "PASS",
+    "reject_actual_nonzero_zero_expected_1e-100": "PASS",
+    "equal_1e-100": "PASS",
+    "reject_nonzero_expected_1e-400": "PASS",
+    "reject_actual_nonzero_zero_expected_1e-400": "PASS",
+    "equal_1e-400": "PASS",
+    "reject_relative_error": "PASS",
+    "within_relative_tolerance": "PASS",
+    "reject_initial_cash": "PASS",
+    "reject_slippage_bps": "PASS",
+    "reject_cash_budget_fraction": "PASS"
+  },
+  "hashes": {
+    "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+    "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "M0300",
+  "created_at_utc": "2026-10-03T13:21:59.223132+00:00",
+  "files": [
+    {
+      "path": "research/public-strategies/M0300/ATTRIBUTION.md",
+      "bytes": 775,
+      "sha256": "26e8933c24c9069bc87162736ebdc08d62c3fc8fda1d484410d9f197e5bba39e"
+    },
+    {
+      "path": "research/public-strategies/M0300/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "research/public-strategies/M0300/M0300-core-ledger.md",
+      "bytes": 466,
+      "sha256": "a3c37ac61c9d1bb6b44d93ab03605da4f6af801ecb31db32576ff2ac1cc4354f"
+    },
+    {
+      "path": "research/public-strategies/M0300/M0300.md",
+      "bytes": 8067,
+      "sha256": "eff2c1d2fd432d246a159948dd61471d391cd65b2efb9922d4617a9772e47065"
+    },
+    {
+      "path": "research/public-strategies/M0300/README.md",
+      "bytes": 331,
+      "sha256": "ed32220771751a5ade643540360a4d010bd63fc1e6ca569920f52d5876757f59"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/C0-freeze.json",
+      "bytes": 823,
+      "sha256": "66cd89472781cf5edbf3ec6a51da348bbfa6f7112d4f3df391d95d12a887778e"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/base-nav-light.csv",
+      "bytes": 25441,
+      "sha256": "c93f3e384e564c70b63c7b4ded0bbabf2f61692b02791264bb656b7985506d39"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/delay2-nav-light.csv",
+      "bytes": 25365,
+      "sha256": "5720cae0024d028359b5040da9a4f1792711b5bda53e6bac97858e4b009c466d"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/fee0-nav-light.csv",
+      "bytes": 25561,
+      "sha256": "08dfb5b5190c312be44a697cf4aa822d66cf0f41c2175d3a5e88975158b294ee"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/fee20-nav-light.csv",
+      "bytes": 25174,
+      "sha256": "1f958c248698d78f81e6b4076f765b5f6686e847e037859e62541f3f9f05dc27"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/graph-projection-receipt.json",
+      "bytes": 235,
+      "sha256": "11ca9cc109b704a4f3756d5248dc084cc21be7b82e25906b5a105492267f08ce"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/graph-record.json",
+      "bytes": 4285,
+      "sha256": "7e8f02f0570c1cf055613dd1402fe3ab14098ef680f710c476b12c7ebe89cd40"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/local-recovery.json",
+      "bytes": 2533,
+      "sha256": "a31a15e5190f06f1ccab02fa42a0e46a3af17fe9475919e5aaa0f3f09e2bc53c"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/oracle-qa.json",
+      "bytes": 1590,
+      "sha256": "ad4f46b1927c43916a0340d9ffedd87cafe3afd64359556b496825f8677d2a73"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/prefix-qa.json",
+      "bytes": 650,
+      "sha256": "4ca03cbfc109f3cbc14ffc50e147e9e2ec3da0ac95a102a7d966652aa696a17b"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/result-manifest.json",
+      "bytes": 3855,
+      "sha256": "adac86042b3c06c8a4821aa36129d33623af3f4c74b542ee9572205475a2459d"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/results/base-trades-sample.csv",
+      "bytes": 11856,
+      "sha256": "2cdfee348479f12334fee6317c13150699be3e0398a964aaec4c0637f047989f"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/results/delay2-trades-sample.csv",
+      "bytes": 11858,
+      "sha256": "7925d687ba13caf02b5ecec2caf93b08a615e18091b09de0300b0fa89664f366"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/results/fee0-trades-sample.csv",
+      "bytes": 11154,
+      "sha256": "29268dde7bbf9389c525589762ecd6a715312c039498329fb38ce8ee31334997"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/results/fee20-trades-sample.csv",
+      "bytes": 11878,
+      "sha256": "a06137c54313ce8e74081e249b94809586555c9fc73372fb7119bd1993e411df"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/results/summary.json",
+      "bytes": 6914,
+      "sha256": "6511efaa229594a033c664f989d3fed326f7b206c96ae385e4e81f57f4cc37ea"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/source-qa.json",
+      "bytes": 709,
+      "sha256": "9b5e7041d1a673a5bb4ca42537ee6828f660d0664ae6e68be05b9277fa9327ee"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/stage-timing.json",
+      "bytes": 1675,
+      "sha256": "c9e7f9f8aa32138525858f9c78dd6f9ad522c6f21d436dc349c5abfd8727b2d6"
+    },
+    {
+      "path": "research/public-strategies/M0300/artifacts/20261003-batch009/trade-sample-manifest.json",
+      "bytes": 886,
+      "sha256": "2718c7f3b642dafc13abcc7ae2caf527937e46d81308a33620720f55689c945e"
+    },
+    {
+      "path": "research/public-strategies/M0300/decision-log.md",
+      "bytes": 629,
+      "sha256": "1a757d2d7ba0640cc0028ca7e958bd3c6641f2749ad5e33bd99f22b67ec03be6"
+    },
+    {
+      "path": "research/public-strategies/M0300/scripts/README.md",
+      "bytes": 1661,
+      "sha256": "b014f05c13b0cc2dcc27569f2233a913ed53839d6a3ef8f6a78ccc794b2e8850"
+    },
+    {
+      "path": "research/public-strategies/M0300/scripts/adapter.py",
+      "bytes": 1242,
+      "sha256": "6b430fceae1b903fc980e8d15b25e50b81c110c202b8698edbf7da1ee73fb56a"
+    },
+    {
+      "path": "research/public-strategies/M0300/scripts/run.py",
+      "bytes": 655,
+      "sha256": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/environment.json",
+      "bytes": 351,
+      "sha256": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/protocol-draft.json",
+      "bytes": 13232,
+      "sha256": "109cd623f9f3eb140173be96c26c87bea2540423a407857d893a9797e88af03f"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/protocol.json",
+      "bytes": 15187,
+      "sha256": "85b98742cd11aaac077218c7fe4ed0590c1d148395adb45bbd3dc1125c0a10dd"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/requirements.lock.txt",
+      "bytes": 1562,
+      "sha256": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/source-rule-card.json",
+      "bytes": 7232,
+      "sha256": "9f4909da85fe8a3e535bd7b670e6ec1d69f11ba1588fec2ea2a47f1d3e663fe4"
+    },
+    {
+      "path": "research/public-strategies/M0300/specs/synthetic-source-qa.json",
+      "bytes": 376,
+      "sha256": "2e650d2490e9836588286812a8ad5b3855164f857f34e16c8a4dd383b1deca2f"
+    }
+  ],
+  "self_excluded": true,
+  "public_boundary": "Only reviewed code, protocols, provenance URLs/hashes, aggregate results, daily derived NAV and explicit trade samples. No raw market input or full5m logs; no Library IDs/private context fingerprint."
+}

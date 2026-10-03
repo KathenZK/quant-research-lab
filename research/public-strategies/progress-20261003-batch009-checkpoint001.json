@@ -1,0 +1,128 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T12:56:26.107072+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "009",
+  "checkpoint": 1,
+  "new_accepted_ids": [
+    "M0311"
+  ],
+  "new_strategy_configurations": 4,
+  "new_controls": 1,
+  "strict_reproductions": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311"
+  ],
+  "cumulative_strategy_configurations": 71,
+  "cumulative_controls": 18,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "M0311_validation": {
+    "source_commit": "b1c75b7698df09aa8e3fa3e437e49f5ed1aff01a",
+    "coordinator_receipt_sha256": "c39013beb01f5201824536996664f382b29103a64da81884f73564b5b438fd53",
+    "completed_at_utc": "2026-10-03T12:53:40.239685+00:00",
+    "fidelity": "ADAPTED",
+    "execution_class": "ADAPTED_EXECUTION_PROXY",
+    "protocol_sha256": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+    "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "canonical_rows": 114336,
+    "worker_clean_recovery_outputs_byte_identical": 18,
+    "root_verification_engine_replays": 0,
+    "root_raw_snapshot_copies": 0,
+    "independent_account_states": 527040,
+    "trade_events_checked": 45671,
+    "scale_aware_numeric_comparisons": 2429727,
+    "decimal_precision": 50,
+    "absolute_tolerance": 0,
+    "relative_tolerance": 1e-09,
+    "max_observed_relative_error": 2.455907314956686e-13,
+    "source_signals_causality_timing": "PASS",
+    "finite_nonnegative_and_no_underflow": "PASS",
+    "base_return": -0.999957649565611,
+    "base_roundtrips": 5699,
+    "promotion": false,
+    "limitations": "Declared next-open and market-style proxy replaces source limit orders; no historical minnotional/lot constraint permits dust trading. Original limit-strategy performance is not established."
+  },
+  "M0311_publication": {
+    "files": 56,
+    "bytes": 283186,
+    "manifest_sha256": "1eeebf6a975a6b0beca9943fe5e133a927b1bf1745b3ef52bab80e0414e72cee",
+    "full_logs_private": true,
+    "public_trade_rows": 161,
+    "trade_sampling": "First20+last20 perstrategyconfiguration and1buyholdfill; explicitly nonstatistical samples",
+    "daily_nav_rows": 366,
+    "private_identifiers_in_public": false
+  },
+  "M0311_private_evidence": {
+    "manifest_files": 163,
+    "manifest_sha256": "a906a559492053b855f1f277f6cb7eed9e8e111896e5cce3030d684ebb447d22",
+    "archive_policy": "Include in one batch recovery package; no redundant per-ID full-data ZIP",
+    "library_state": "Supported upload HTTP401 unresolved; no new remote backup claimed"
+  },
+  "next_family_batch": {
+    "ids": [
+      "M0300",
+      "M0302",
+      "M0305",
+      "M0306",
+      "M0307"
+    ],
+    "single_replay_executor": "root m0288",
+    "source_mapping_manifest_sha256": "f53e01408e1170287a916a9cc01678cef8414540665c164486b9c59bb2042348",
+    "methods_and_prefix_checks": "PASS;M0302 reuses prior frozen validation",
+    "historical_trials_at_this_checkpoint": 0,
+    "data": "Same already-lawfully-held native5m input; no acquisition",
+    "publication": "One integration/CI cycle after ready-ID independent acceptance, frozen per-ID evidence retained"
+  },
+  "source_inventory_location_boundary": {
+    "parent_reported_private_source_recovery": {
+      "ids": 6973,
+      "fields": 76703
+    },
+    "parent_reported_checkpoint_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "parent_reported_checkpoint_ids": 600,
+    "checkpoint_ids_are_final_main_directory_entries": false,
+    "checkpoint_ids_are_backtested_strategies": false,
+    "main_directory_projection": "Separate fixed-parent Graph integration in progress, not counted complete here",
+    "new_collection_intake": "paused"
+  },
+  "external_owners": {
+    "dot_native5m": [
+      "M0298",
+      "M0304"
+    ],
+    "dot_source_audit_only": [
+      "M0296",
+      "M0299",
+      "M0312",
+      "M0314"
+    ],
+    "Graph_checkpoint_writer": "dot resume_graph_metadata_uploads",
+    "Site_writer": "dot through existing v9 path"
+  },
+  "frozen_evidence_overwritten": false,
+  "verification_replays_count_as_new_research": false
+}

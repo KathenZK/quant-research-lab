@@ -1,0 +1,331 @@
+{
+  "schema": "per-id-source-rule-synthetic-report/v1",
+  "id": "M0299",
+  "shared_batch_cli": "../M0296/scripts/audit_batch.py",
+  "synthetic_case_count": 16,
+  "cases": [
+    {
+      "id": "M0299",
+      "case": "bb20_population_variance",
+      "observed": 33.25,
+      "expected": 33.25,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "bb_default_two_std",
+      "observed": 22.0325625947,
+      "expected": 22.0325625947,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "hl2_uses_high_low_not_open_close",
+      "observed": 100.0,
+      "expected": 100,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "upper_and_both_cloud_filter",
+      "observed": true,
+      "expected": true,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_one_span_blocks",
+      "observed": false,
+      "expected": false,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "upper_equality_not_entry",
+      "observed": false,
+      "expected": false,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "middle_equality_not_exit",
+      "observed": false,
+      "expected": false,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "middle_strict_exit",
+      "observed": true,
+      "expected": true,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_80_ramp_exact_indices",
+      "observed": [
+        76.0,
+        67.5,
+        46.75,
+        29.5
+      ],
+      "expected": [
+        76.0,
+        67.5,
+        46.75,
+        29.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_79_is_nan",
+      "observed": true,
+      "expected": true,
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_index_decimal_oracle_n80",
+      "observed": [
+        40.0,
+        40.0,
+        41.0,
+        41.5
+      ],
+      "expected": [
+        40.0,
+        40.0,
+        41.0,
+        41.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_index_decimal_oracle_n81",
+      "observed": [
+        45.5,
+        40.0,
+        43.75,
+        41.5
+      ],
+      "expected": [
+        45.5,
+        40.0,
+        43.75,
+        41.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_index_decimal_oracle_n100",
+      "observed": [
+        42.0,
+        42.0,
+        37.5,
+        41.0
+      ],
+      "expected": [
+        42.0,
+        42.0,
+        37.5,
+        41.0
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "cloud_index_decimal_oracle_n200",
+      "observed": [
+        46.5,
+        41.0,
+        44.75,
+        41.0
+      ],
+      "expected": [
+        46.5,
+        41.0,
+        44.75,
+        41.0
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "last25_do_not_affect_shifted_spans",
+      "observed": [
+        46.75,
+        29.5
+      ],
+      "expected": [
+        46.75,
+        29.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    },
+    {
+      "id": "M0299",
+      "case": "decision_prefix_ignores_future_suffix",
+      "observed": [
+        76.0,
+        67.5,
+        46.75,
+        29.5
+      ],
+      "expected": [
+        76.0,
+        67.5,
+        46.75,
+        29.5
+      ],
+      "pass": true,
+      "basis": "self-authored scalar/array model; no native engine execution"
+    }
+  ],
+  "batch_static_checks": [
+    {
+      "check": "M0296_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "sma_signal_has_no_crossed_call",
+      "pass": true
+    },
+    {
+      "check": "sma_fast50_slow200",
+      "pass": true
+    },
+    {
+      "check": "M0299_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "bb_hl2_and_default_cloud",
+      "pass": true
+    },
+    {
+      "check": "bb_cancel_true",
+      "pass": true
+    },
+    {
+      "check": "M0312_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "rsi_default5_outside10_30",
+      "pass": true
+    },
+    {
+      "check": "rsi_third_positional_literal3",
+      "pass": true
+    },
+    {
+      "check": "rsi_strict_margin_gt",
+      "pass": true
+    },
+    {
+      "check": "M0314_exact_source_sha",
+      "pass": true
+    },
+    {
+      "check": "turtle_no_direct_take_profit_assignment",
+      "pass": true
+    },
+    {
+      "check": "turtle_legacy_callbacks_defined",
+      "pass": true
+    },
+    {
+      "check": "turtle_forced_s1_before",
+      "pass": true
+    },
+    {
+      "check": "turtle_entry_priority_high_first",
+      "pass": true
+    },
+    {
+      "check": "turtle_exit_priority_high_first",
+      "pass": true
+    },
+    {
+      "check": "reference_size_arg3_precision",
+      "pass": true
+    },
+    {
+      "check": "reference_fee_buffer_x3",
+      "pass": true
+    },
+    {
+      "check": "reference_init_injects_default_literal",
+      "pass": true
+    },
+    {
+      "check": "reference_liquidate_positive_sets_takeprofit",
+      "pass": true
+    },
+    {
+      "check": "reference_updated_dispatch_has_no_legacy_callbacks",
+      "pass": true
+    },
+    {
+      "check": "reference_close_calls_new_callback",
+      "pass": true
+    },
+    {
+      "check": "reference_spot_rejects_short",
+      "pass": true
+    },
+    {
+      "check": "reference_spot_rejects_brackets_in_go_long",
+      "pass": true
+    },
+    {
+      "check": "reference_filters_after_go_long",
+      "pass": true
+    },
+    {
+      "check": "reference_reset_not_turtle_custom_fields",
+      "pass": true
+    },
+    {
+      "check": "reference_cloud_python_80_guard",
+      "pass": true
+    },
+    {
+      "check": "reference_cloud_rust_displacement_minus1",
+      "pass": true
+    },
+    {
+      "check": "reference_rust_dependency_pin",
+      "pass": true
+    },
+    {
+      "check": "reference_rust_cargo_version",
+      "pass": true
+    }
+  ],
+  "batch_static_check_count": 30,
+  "pass": true,
+  "native_engine_runs": 0,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "third_party_code_executed": false,
+  "limitation": "Self-authored mathematical/branch fixtures. Not native indicator equality, an original-runtime reproduction, or full execution-engine validation."
+}

@@ -1,0 +1,57 @@
+{
+  "run": {
+    "stage": "M0307-run",
+    "start_utc": "2026-10-03T13:13:39.066843+00:00",
+    "end_utc": "2026-10-03T13:13:54.411003+00:00",
+    "wall_seconds": 15.344169660998887,
+    "cpu_user_seconds": 14.901415,
+    "cpu_system_seconds": 0.439747,
+    "peak_child_rss_kib": 625236,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0307-source",
+    "start_utc": "2026-10-03T13:13:54.440541+00:00",
+    "end_utc": "2026-10-03T13:13:57.018623+00:00",
+    "wall_seconds": 2.578095168002619,
+    "cpu_user_seconds": 2.384958,
+    "cpu_system_seconds": 0.19097,
+    "peak_child_rss_kib": 390692,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0307-oracle",
+    "start_utc": "2026-10-03T13:13:57.049009+00:00",
+    "end_utc": "2026-10-03T13:14:04.748872+00:00",
+    "wall_seconds": 7.699870325002848,
+    "cpu_user_seconds": 7.289553,
+    "cpu_system_seconds": 0.403597,
+    "peak_child_rss_kib": 747184,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0307-prefix",
+    "start_utc": "2026-10-03T13:14:04.784268+00:00",
+    "end_utc": "2026-10-03T13:14:17.098177+00:00",
+    "wall_seconds": 12.313918198000465,
+    "cpu_user_seconds": 11.509203,
+    "cpu_system_seconds": 0.800156,
+    "peak_child_rss_kib": 617140,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0307-restore",
+    "start_utc": "2026-10-03T13:19:52.600371+00:00",
+    "end_utc": "2026-10-03T13:20:06.908745+00:00",
+    "wall_seconds": 14.308385145999637,
+    "cpu_user_seconds": 13.864099,
+    "cpu_system_seconds": 0.43782099999999996,
+    "peak_child_rss_kib": 624644,
+    "exit_code": 0,
+    "threads": 1
+  }
+}

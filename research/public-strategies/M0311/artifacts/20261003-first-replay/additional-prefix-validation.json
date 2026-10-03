@@ -1,0 +1,14 @@
+{
+  "id": "M0311",
+  "status": "PASS",
+  "cuts": [
+    10000,
+    20000,
+    50000,
+    90000,
+    114335
+  ],
+  "method": "exact prefix and futureOHLCx3 feature/signal array equality",
+  "new_strategy_trials": 0,
+  "reason": "Frozen account-prefix probes only cover early2024; supplemental feature probes span remaining year"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "M0307",
+  "status": "PASS",
+  "rows": 114336,
+  "native_class_actual_parameter_load": true,
+  "independent_Boolean_formulas_equal": true,
+  "advanced_TA_indicator_independence": "Pinned TA-Lib/native indicator implementations; not independently reimplemented",
+  "source_sha256": "797b293f5acd809f8c77f26b38c004c87b75d8847be4cde4d0224040cc591030",
+  "loaded_parameters": {
+    "buy_volumeAVG": 150,
+    "buy_rsi": 26,
+    "buy_fastd": 1,
+    "buy_fishRsiNorma": 5,
+    "sell_rsi": 74,
+    "sell_minusDI": 4,
+    "sell_fishRsiNorma": 30,
+    "sell_trigger": "rsi-macd-minusdi"
+  },
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "engine_fills_reproduced": false
+}

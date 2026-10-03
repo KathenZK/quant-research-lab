@@ -1,0 +1,11 @@
+{
+  "stage": "accelerated-M0311-existing-history-regression",
+  "start_utc": "2026-10-03T12:48:13.308808+00:00",
+  "end_utc": "2026-10-03T12:48:28.124587+00:00",
+  "wall_seconds": 14.815791478002211,
+  "cpu_user_seconds": 14.575235,
+  "cpu_system_seconds": 0.23227899999999999,
+  "peak_child_rss_kib": 424560,
+  "exit_code": 0,
+  "threads": 1
+}

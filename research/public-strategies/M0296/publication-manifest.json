@@ -1,0 +1,120 @@
+{
+  "schema": "reviewed-public-file-allowlist/v1",
+  "id": "M0296",
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 984,
+      "sha256": "be5e372bef1891101cfa4aac4b99573231fa9b7cb9a4451920ad52d51cfcdb5d"
+    },
+    {
+      "path": "LICENSE.source.txt",
+      "bytes": 1065,
+      "sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1392,
+      "sha256": "b61dabb883bfa01af4f4e1063eb434c7a324af799879bf2bcd7156f8a77002e3"
+    },
+    {
+      "path": "RECOVERY.md",
+      "bytes": 1262,
+      "sha256": "197909f077ea6e1943c9d86e6c8876988ba001a6344ea4a2bba9aa786ca71b9d"
+    },
+    {
+      "path": "artifacts/catalog-original11.csv",
+      "bytes": 448,
+      "sha256": "4d8dcbf54c9848720ea384edce08f05001b8f2a6d89183c3205b544ad1ba2af7"
+    },
+    {
+      "path": "artifacts/catalog-original11.json",
+      "bytes": 1707,
+      "sha256": "13747d06135a74cad4a06b2c5571714a5c75045f6c976a9e7b5078780ef965dd"
+    },
+    {
+      "path": "artifacts/dedup-review-v1.json",
+      "bytes": 8896,
+      "sha256": "de72bc3a9f422f3261669938b35d7c88f4fc685ba67a8eb5e02551bbc4bce311"
+    },
+    {
+      "path": "artifacts/graph-record.json",
+      "bytes": 3340,
+      "sha256": "30a5480f520fe600c5d6afdfe11522691da8afee5b36f9737116156d073d8db0"
+    },
+    {
+      "path": "artifacts/independent-rust-index-review-v1.json",
+      "bytes": 1994,
+      "sha256": "1624f606acc20115bc0b4f566252fa581632d7152fd6e5363f2acec38c60ca48"
+    },
+    {
+      "path": "artifacts/independent-source-review-v1.json",
+      "bytes": 4923,
+      "sha256": "e94733b98472ea47e53ef0c2fcd67d626dfc0a4109651e61fb6091c46a81531d"
+    },
+    {
+      "path": "artifacts/source-ast-fingerprint-v1.json",
+      "bytes": 2462,
+      "sha256": "cfae9d4d3bd4403bf89bd6a853acf603870760825c33e247ac0ab2f3756d95ed"
+    },
+    {
+      "path": "artifacts/synthetic-audit-v1.json",
+      "bytes": 5015,
+      "sha256": "d74c776a0b58a77a392e71c7ce2f8e52a4dd131c64c922c51659e07ee63c9ca3"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1042,
+      "sha256": "c7cce9697ee66fb77d14e6caa718c12a7cae6f56d7488155b68ca3d68e502f71"
+    },
+    {
+      "path": "m0296-core-ledger.md",
+      "bytes": 1383,
+      "sha256": "fa40ace36d586c7c8b5750622443115a767961b88a1e31b15f6a467c7adfd91f"
+    },
+    {
+      "path": "notes/source-rule-audit-v1.md",
+      "bytes": 5494,
+      "sha256": "bf4412078d6f077bca215fe8c13e0bfe3f6c8fcc93c7917abac7b7f5dbbc3e2c"
+    },
+    {
+      "path": "scripts/audit_batch.py",
+      "bytes": 17373,
+      "sha256": "94ed9cd27ac6cf5ba4e3d8c9fe22bb88760e0b51d6ca574462b0a7c0fbcdbaf7"
+    },
+    {
+      "path": "scripts/recover_audit.py",
+      "bytes": 2560,
+      "sha256": "7478a0dc83c4999c903cd22e44c73d81adad4d13f90dade5267c91aa7df4e599"
+    },
+    {
+      "path": "specs/environment-audit-v1.json",
+      "bytes": 457,
+      "sha256": "96420698fd4975d5fd5097e5e843a1adecaf9f5cc3e9e0876d11e6ed40fa2850"
+    },
+    {
+      "path": "specs/source-manifest-v1.json",
+      "bytes": 14983,
+      "sha256": "06786cbb0f1fcaabd7c35488ec771e1bc1b2927707d032cc9f51667388fd9c5b"
+    },
+    {
+      "path": "specs/source-rules-v1.json",
+      "bytes": 1778,
+      "sha256": "d52fbbe3085ff0094b00309c4027ced0e54c770acdc89ed226b7527858cce64f"
+    }
+  ],
+  "file_count_excluding_manifest": 20,
+  "bytes_excluding_manifest": 78558,
+  "self_exclusion_reason": "Manifest cannot include its own SHA; parent delivery records exact manifest SHA",
+  "excluded": [
+    "full third-party source modules",
+    "market data",
+    "private Graph details",
+    "private Library locators",
+    "credentials/signed URLs",
+    "account records"
+  ],
+  "historical_runs": 0,
+  "market_requests": 0
+}

@@ -1,0 +1,17 @@
+{
+  "id": "M0311",
+  "name": "TechnicalExampleStrategy",
+  "catalog_difference": "Catalog prose omitted CMF period21; original source explicitly21",
+  "original_excerpt": [
+    "dataframe['cmf'] = cmf(dataframe, 21)",
+    "(dataframe['cmf'] < 0)",
+    "(dataframe['cmf'] > 0)",
+    "minimal_roi={\"0\":0.01}",
+    "stoploss=-0.05"
+  ],
+  "plain_language": "21根成交量加权收盘位置偏下时持有，转正时退出；另设1%ROI和5%止损。",
+  "research_hypothesis": "Negative close-location/volume pressure followed by reversal; heuristic contrarian interpretation, not a proven economic law",
+  "paper": "Source cites no academic paper",
+  "public_origin": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/TechnicalExampleStrategy.py",
+  "public_boundary": "Source content and publicGitHub hash only; private catalog receipt and its fingerprint excluded"
+}

@@ -1,0 +1,37 @@
+{
+  "base": {
+    "full_rows": 11399,
+    "sample_rows": 40,
+    "selection": "all if<=40 else first20+last20; not representative statistical sampling",
+    "full_sha256": "ede5ccea774d6f017e37cb7c8058fdfeb375a9429b2cc86be866c1e23cb5f727",
+    "sample_sha256": "5484a93d0ac534fc7ff091dd4a120607022ff3901e5e45f01af5b10e3babd278"
+  },
+  "fee0": {
+    "full_rows": 11441,
+    "sample_rows": 40,
+    "selection": "all if<=40 else first20+last20; not representative statistical sampling",
+    "full_sha256": "13b2ff35b32402a260f81bb45351afe3eee570781fb47e0215332aebf3cd3c53",
+    "sample_sha256": "23f1c9b4743c080e48b59091fcc7e16899749c9be6962d599ad2ca34534bb7be"
+  },
+  "fee20": {
+    "full_rows": 11361,
+    "sample_rows": 40,
+    "selection": "all if<=40 else first20+last20; not representative statistical sampling",
+    "full_sha256": "c502d629dde8424bb1d32c09ccd141ddb477c9818fba87e00dc73dc224dba2b7",
+    "sample_sha256": "5bc01f7f552e7d16272c428d15777b5e5dd76401c1a519c1b7d2e554961c8ad2"
+  },
+  "delay2": {
+    "full_rows": 11469,
+    "sample_rows": 40,
+    "selection": "all if<=40 else first20+last20; not representative statistical sampling",
+    "full_sha256": "28633e9ba4faba87bc2d2d62c5413f03821891f9b55a7474cd9715fa4e5ab7c0",
+    "sample_sha256": "004efa058c8233943bb6c638ae0d8c16a5a51897cb6903fbfab6fef1639e7161"
+  },
+  "buyhold": {
+    "full_rows": 1,
+    "sample_rows": 1,
+    "selection": "all if<=40 else first20+last20; not representative statistical sampling",
+    "full_sha256": "b841336ee461cc6fcf3655705bee68f09737a31ff9eb24f147d85498892369f1",
+    "sample_sha256": "b841336ee461cc6fcf3655705bee68f09737a31ff9eb24f147d85498892369f1"
+  }
+}

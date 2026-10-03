@@ -1,0 +1,48 @@
+{
+  "id": "M0311",
+  "status": "PASS",
+  "checks": {
+    "base": {
+      "fills": 11399,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "exit_signal": 5619,
+        "roi": 63,
+        "stoploss": 17
+      }
+    },
+    "fee0": {
+      "fills": 11441,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "exit_signal": 5603,
+        "roi": 100,
+        "stoploss": 17
+      }
+    },
+    "fee20": {
+      "fills": 11361,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "exit_signal": 5623,
+        "roi": 40,
+        "stoploss": 17
+      }
+    },
+    "delay2": {
+      "fills": 11469,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {
+        "exit_signal": 5605,
+        "roi": 112,
+        "stoploss": 17
+      }
+    },
+    "buyhold": {
+      "fills": 1,
+      "time_bounds_and_delay": "PASS",
+      "sell_reasons": {}
+    }
+  },
+  "intrabar_exact_time_claim": false
+}

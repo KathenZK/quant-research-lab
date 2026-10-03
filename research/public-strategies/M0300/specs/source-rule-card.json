@@ -1,0 +1,208 @@
+{
+  "scope": "source rule map and synthetic preflight only; NOT backtest completion",
+  "historical_runs": 0,
+  "strict_reproductions": 0,
+  "model_effort": "UNKNOWN",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "reviewed_engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "engine_runtime": "research pin only; author original runtime unknown",
+  "source_license": {
+    "label": "GPLv3 repository license text",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "parameter_precedence": {
+    "special_flags": "external runtime config > sidecar special values > class > engine/resolver defaults",
+    "parameter_objects": "sidecar params > buy_params/sell_params with load=True > constructor defaults"
+  },
+  "account_semantics": {
+    "collision": "entry suppressed when same-side exit also1; signal exit requires not entry",
+    "exit_order_priority": "signal exit, stop/liquidation, ROI, trailing stop; actual fills require pinned backtester/model",
+    "profit_only": "applies to signal exits only; requires current_profit>exit_profit_offset; does not block ROI/stop",
+    "ROI": "integer elapsed minutes, largest elapsed key, strict profit>threshold in interface; backtester may use favorable high for long",
+    "stop": "initialized from trade.open_rate and stoploss; long low<=recorded_stop triggers in interface, actual fill semantics not proven by signal test",
+    "order_caveat": "limit must not silently become guaranteed next-open market fill"
+  },
+  "execution_gate": [
+    "exclusive root claim/spec/exposure",
+    "pin config/sidecar presence and final effective attrs",
+    "fixed native5m input/hash/asset(s)",
+    "cost/cash/limit fill+timeout/ROI/stop same-bar path/warmup",
+    "fidelity HYPOTHESIS unless original runtime evidence exists"
+  ],
+  "id": "M0300",
+  "name": "SmoothOperator",
+  "timeframe": "5m",
+  "source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/SmoothOperator.py",
+    "sha256": "46f608cc51f9b18e9bb52983776a6d55d9b13814a93f7666cc8ecdb4f86c3915",
+    "bytes": 13297
+  },
+  "explicit_class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "0": 0.1
+    },
+    "stoploss": -0.05,
+    "timeframe": "5m"
+  },
+  "parameter_constructors": {},
+  "effective_flags_without_external_overrides": {
+    "trailing_stop": false,
+    "trailing_stop_positive": null,
+    "trailing_stop_positive_offset": 0.0,
+    "trailing_only_offset_is_reached": false,
+    "can_short": false,
+    "use_custom_stoploss": false,
+    "use_custom_roi": false,
+    "process_only_new_candles": true,
+    "startup_candle_count": 0,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "position_adjustment_enable": false,
+    "max_entry_position_adjustment": -1,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "indicator_calls": [
+    {
+      "call": "ta.CCI(dataframe, timeperiod=20)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.RSI(dataframe, timeperiod=14)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.ADX(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.MFI(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=11, price='mfi')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=11, price='cci')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=11, price='rsi')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "qtpylib.bollinger_bands(dataframe['close'], window=20, stds=2)"
+    },
+    {
+      "call": "ta.MACD(dataframe)",
+      "library_defaults": {
+        "fastperiod": 12,
+        "slowperiod": 26,
+        "signalperiod": 9
+      }
+    },
+    {
+      "call": "qtpylib.bollinger_bands(dataframe['close'], window=20, stds=1.6)"
+    },
+    {
+      "call": "ta.SMA(dataframe, price='bsharp', timeperiod=11)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, price='bsharp', timeperiod=8)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, price='bsharp', timeperiod=5)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.TEMA(dataframe, timeperiod=21, price='mfi_rsi_cci_smooth')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, timeperiod=200, price='close')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, timeperiod=100, price='close')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    },
+    {
+      "call": "ta.SMA(dataframe, timeperiod=50, price='close')",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    }
+  ],
+  "entry_rule": "((avg[t-5]>avg[t-4]>avg[t-3]>avg[t-2]>avg[t-1]<avg[t] AND low[t-1]<BBmid[t] AND CCI20[t-1]<-100 AND RSI14[t-1]<30) OR (low<BBmid AND CCI20<-200 AND RSI14<30 AND MFI14<30) OR (MFI14<10 AND CCI20<-150 AND RSI14<MFI14)) AND close>previous_close",
+  "exit_signal_rule": "(TEMA21((1.125*EMA11(RSI14)+1.125*EMA11(MFI14)+EMA11(CCI20))/3)>100 with prior peak and two prior rising steps) OR9consecutive raw green candles OR(CCI20>200 AND RSI14>70)",
+  "catalog_differences": [
+    "catalog conflates OR entry branches and omits Vshape/finalclose>prevclose",
+    "MFI<10/CCI<-150 is ENTRY branch with RSI<MFI, not exit",
+    "exit smooth>100 needs peak-shape conditions",
+    "eight_green_candles helper actually checks current+8prior=9",
+    "source DO NOT USE/playground comment retained; ROI code0.10=10%, despite100%comment"
+  ],
+  "same_account_group": "distinct_roi10_stop5_limitstop_profitonlyfalse",
+  "next_batch_priority": 5,
+  "same_name_repo_sidecar_present": false,
+  "validation": {
+    "status": "PASS_METHOD_CAUSALITY",
+    "rows": 3000,
+    "raw_entry_count": 19,
+    "raw_exit_count": 7,
+    "collisions": 0,
+    "signal_formula": "independent Boolean formulas on native indicator columns PASS",
+    "indicator_independence": "advanced TA-Lib indicators not independently reimplemented in this batch; native pinned library outputs tested for prefix/future stability",
+    "prefix_checks": 3,
+    "future_checks": 3,
+    "parameter_constructor_defaults": {},
+    "effective_class_params": {},
+    "timing": {
+      "wall_s": 0.11847556399879977,
+      "cpu_s": 0.11836061600000003,
+      "max_rss_kib": 80512
+    }
+  }
+}

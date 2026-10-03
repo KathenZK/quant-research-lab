@@ -1,0 +1,102 @@
+{
+  "id": "M0302",
+  "protocol_sha256": "3baf43b716741b3f93431bd1c2bfc92601a5650809854433f973df5651e856f0",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "source_sha256": "2357996e6594458e8db45b5f757918462afa3c998de9d06e2af0c009ddc4b80d",
+  "files": {
+    "base-daily-nav.csv": {
+      "bytes": 54515,
+      "sha256": "c0ad96e7d62c53c73c6d36ed5e743a99b84abf777d6b1fdefbc23833347a359e"
+    },
+    "base-nav.csv": {
+      "bytes": 14473638,
+      "sha256": "8049262b75c0c63600fafc3745cefaa6cab7fce52b7845fa3b8ad787c1f7a162"
+    },
+    "base-trades.csv": {
+      "bytes": 91619,
+      "sha256": "889932b7797456573eabb5d09b787ef58beae42459a55a6c01596f4ceac21e66"
+    },
+    "delay2-daily-nav.csv": {
+      "bytes": 54483,
+      "sha256": "1fd2e8a5d1170c476ad9baf1ff59bbbf74f2f10f4490e8b46f0d91e6caef90f6"
+    },
+    "delay2-nav.csv": {
+      "bytes": 14458997,
+      "sha256": "0c42d254721ee8bd25c7f4cc0b096d0a4cfc23b38554b4a515fc70c2d68beae8"
+    },
+    "delay2-trades.csv": {
+      "bytes": 96104,
+      "sha256": "c3ec193fe3d63a98a4a03cd56ed06328df811663baa7943db185109f3603958b"
+    },
+    "fee0-daily-nav.csv": {
+      "bytes": 54070,
+      "sha256": "8cfab24aeef7fc9af3106c3808f976cee83ec2d3b7628b5bf9f9b33547478cfb"
+    },
+    "fee0-nav.csv": {
+      "bytes": 14336723,
+      "sha256": "1f79978fa54b5dbf812ce71d472c61c0b1e798b1da1866642c280fade41d8df4"
+    },
+    "fee0-trades.csv": {
+      "bytes": 99054,
+      "sha256": "f2f95ccc0a3f8c7fa784518aced5ec255eac918e082d61f96ea63ef796e17813"
+    },
+    "fee20-daily-nav.csv": {
+      "bytes": 54794,
+      "sha256": "fe4d00f4f145aa29a39ea53fc596f64dc975310225bc9ab8897257a650041c5c"
+    },
+    "fee20-nav.csv": {
+      "bytes": 14526528,
+      "sha256": "933806a5b7e6d9dd0046cd0fadac5b700f7d44f983beeb8ebaf17ca926b7cafd"
+    },
+    "fee20-trades.csv": {
+      "bytes": 79622,
+      "sha256": "3f9d600b828120174f8426422328aab73be6946905484ba1294e542ea2951fcf"
+    },
+    "signals.csv": {
+      "bytes": 12768132,
+      "sha256": "e00872e9629ec7dc3c864b1b4162416b88ad208f51fd005275f556b36986bdfa"
+    },
+    "summary.json": {
+      "bytes": 6877,
+      "sha256": "fb4ad1a14af6635b7fa9523d98ed7086e6bd2d8b807d4753256abc7d03095182"
+    }
+  },
+  "checks": {
+    "source": "e25b3385a39fb61ed1f529e197964aa84d0f1e12d405f8c3b3e81a5bbc407ede",
+    "oracle": "51e3377ce5276c69bf10d787af01e356e1513ced25b179cb329c28030526945a",
+    "prefix": "dcec16de2d1dede22ec6476236c93a8205b43f08914602f63441cc7015caeb21"
+  },
+  "recovery_sha256": "d7267261d005583fc1ac9cf037c0bd8b9b78d770512cf4a00074c7de3b1ae267",
+  "strategy_configs": 4,
+  "new_controls": 0,
+  "reused_control": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "../../M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    }
+  },
+  "strict_replications": 0
+}

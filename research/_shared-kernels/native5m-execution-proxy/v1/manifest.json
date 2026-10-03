@@ -1,0 +1,21 @@
+{
+  "kernel": "native5m-execution-proxy/v1",
+  "frozen_at": "2026-10-03T13:10:50.495182+00:00",
+  "files": {
+    "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+    "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+    "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+    "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+    "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+    "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+    "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99"
+  },
+  "consumers": [
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307"
+  ],
+  "license": "GPL-3.0-or-later"
+}

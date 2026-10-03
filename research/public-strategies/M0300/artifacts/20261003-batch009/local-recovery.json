@@ -1,0 +1,82 @@
+{
+  "id": "M0300",
+  "status": "PASS",
+  "restored_at": "2026-10-03T13:20:22.828566+00:00",
+  "files": [
+    {
+      "path": "base-daily-nav.csv",
+      "bytes": 51542,
+      "sha256": "60b8295e358cd55bdfe7b1d3d53d77e0e1983efe4be446143df761e5fb6e8370"
+    },
+    {
+      "path": "base-nav.csv",
+      "bytes": 13626702,
+      "sha256": "4f0419eacae3ff95873801fdd1e3f403f1c20851c990ba2772b77819f26e58f8"
+    },
+    {
+      "path": "base-trades.csv",
+      "bytes": 157620,
+      "sha256": "c587c65ed146541aed99021ed34339cf204d5c59202270555b16e2a71c053064"
+    },
+    {
+      "path": "delay2-daily-nav.csv",
+      "bytes": 51665,
+      "sha256": "fa2d19e529c611a3d5a25999c572df42cb1965930a23a1bfc995634cf47b8968"
+    },
+    {
+      "path": "delay2-nav.csv",
+      "bytes": 13652274,
+      "sha256": "c229a0bdd02bf09db308c57565607252e695c4fd0d4255fd198b69a31d7785d7"
+    },
+    {
+      "path": "delay2-trades.csv",
+      "bytes": 157508,
+      "sha256": "a7c92521ab360beeaf05805be9115d90fc107244ef92fab8d8fcd8f2fdf62575"
+    },
+    {
+      "path": "fee0-daily-nav.csv",
+      "bytes": 51389,
+      "sha256": "5c66006e2f8a3feb01210fb7dc2381f58f4bdb8d0dd410ea4b123506fa2685bb"
+    },
+    {
+      "path": "fee0-nav.csv",
+      "bytes": 13584361,
+      "sha256": "923a60ae231d27d4c41437204af24535e5c58fc93b37dc26d8e6c60b7799e456"
+    },
+    {
+      "path": "fee0-trades.csv",
+      "bytes": 148400,
+      "sha256": "87d9782b28467a473f6f872f095307c07cb7d25ae23faf31d548109a959c7035"
+    },
+    {
+      "path": "fee20-daily-nav.csv",
+      "bytes": 51771,
+      "sha256": "7071706927499d457086e188e8ace5326668cf5a240471221775d7123507197b"
+    },
+    {
+      "path": "fee20-nav.csv",
+      "bytes": 13694730,
+      "sha256": "b15e73ff64df0dbbe9e0aadd73fe89da32e2d9f09b9fa86ff281a91691abbc4f"
+    },
+    {
+      "path": "fee20-trades.csv",
+      "bytes": 157782,
+      "sha256": "76f150412ede553e8449845dc0d007ece573a5e5ca6fe3807ffa0741622bb12c"
+    },
+    {
+      "path": "signals.csv",
+      "bytes": 14928929,
+      "sha256": "259f240ebd2c1a376f7ac088c17f6dda7674ad24e14a35bd27f524218847096e"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 6914,
+      "sha256": "6511efaa229594a033c664f989d3fed326f7b206c96ae385e4e81f57f4cc37ea"
+    }
+  ],
+  "restored_file_count": 14,
+  "source": "One shared input rebuilt from39 rawfiles in fresh directory; independent copied code/source/spec, sockets blocked",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "new_experiments": 0,
+  "new_controls": 0
+}

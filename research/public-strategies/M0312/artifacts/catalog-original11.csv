@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0312,TradingView_RSI,加密现货,RSI 上穿 35 做多；默认 RSI 周期 5，止损价×0.95，止盈价×1.10；RSI 下穿默认 75 或下穿 10 平仓。,jesse-ai/example-strategies,TradingView_RSI,https://github.com/jesse-ai/example-strategies/blob/master/TradingView_RSI/__init__.py,__init__.py,高,,未知

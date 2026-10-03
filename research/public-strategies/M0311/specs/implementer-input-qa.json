@@ -1,0 +1,86 @@
+{
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "verified_at": "2026-10-03T12:35:27.448344+00:00",
+  "input_rows": 114336,
+  "evaluation_rows": 105408,
+  "zero_volume_rows": 0,
+  "native_fields_byte_for_field_equal": true,
+  "canonical_bytes_equal": true,
+  "canonical_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "canonical_bytes": 31428289,
+  "13_official_SHA_and_ZIP_CRC": "PASS",
+  "independent_grid_OHLCV_native_quantity_checks": "PASS",
+  "archives": [
+    {
+      "month": "2023-12",
+      "zip_sha256": "8e3b780eddcff7f19f24f25d799b2affe03113b90457b8caa22a454f065fbf56",
+      "rows": 8928
+    },
+    {
+      "month": "2024-01",
+      "zip_sha256": "a375f811f672ad70de97af533f6e70181647a9e978838b451ac17d5c17313ad8",
+      "rows": 8928
+    },
+    {
+      "month": "2024-02",
+      "zip_sha256": "4bbed105653be96229f6678b3ce3df7366a6ced5aea32285da2bf62ac5f890ed",
+      "rows": 8352
+    },
+    {
+      "month": "2024-03",
+      "zip_sha256": "fd3670210b38640ee9562b7761879fae8cfed3beec7d7313b868cf618ca4c72a",
+      "rows": 8928
+    },
+    {
+      "month": "2024-04",
+      "zip_sha256": "b41c6d2703ee9e4c8167de082dcd363fac39ed176ebe9eacf7f0109e284a5948",
+      "rows": 8640
+    },
+    {
+      "month": "2024-05",
+      "zip_sha256": "3a9c810274f38b18abda912c3446df51cb160c4c0e376655fb7defb1cacf5de2",
+      "rows": 8928
+    },
+    {
+      "month": "2024-06",
+      "zip_sha256": "627dd48125d89759e498d2db2e523166787bda4dd9a64ca56abf9fba235ba71e",
+      "rows": 8640
+    },
+    {
+      "month": "2024-07",
+      "zip_sha256": "7fcfb7aa22c344f0c6bb0a7d2ae2dbfd1a1e597fc80806daa341068dfdab6586",
+      "rows": 8928
+    },
+    {
+      "month": "2024-08",
+      "zip_sha256": "4ead243e5f862df551e12815d8ddc4c67da711fda253325c36f83a1ff3ef36d7",
+      "rows": 8928
+    },
+    {
+      "month": "2024-09",
+      "zip_sha256": "a9989fa72ee8eba72cdd79b0e251652fcd456a31548a3014a8660b65405bc67a",
+      "rows": 8640
+    },
+    {
+      "month": "2024-10",
+      "zip_sha256": "5cd2d0dcc2dc193fc7b31be69166021fca41b9fce61ab6a0771ce00db864c327",
+      "rows": 8928
+    },
+    {
+      "month": "2024-11",
+      "zip_sha256": "72851d323b0d43f7c8cdf177ca85ded66ec511ed3b1a53e63cca0d2501c75bc0",
+      "rows": 8640
+    },
+    {
+      "month": "2024-12",
+      "zip_sha256": "0a2f70744f9244a066ab4ced934a725d85b247e917cfe22ada218435c1573301",
+      "rows": 8928
+    }
+  ],
+  "script_sha256": "53a8da9d6b50cf3eeaf55a8558d79223664cf3855dadb03d36e14f5eb9e5daa6",
+  "network_GETs": 0,
+  "strategy_runs": 0,
+  "PIT": false,
+  "finality": false,
+  "remote_recovery": false
+}

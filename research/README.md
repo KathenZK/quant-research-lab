@@ -283,3 +283,20 @@
 - [M0316/M0317来源预检](public-strategies/dot-next-preflight-20261003/README.md)：diagnostic_topic；预检不增加回测计数。
 
 - [M0315 UniversalMACD](public-strategies/M0315/README.md)：原生5m、2024固定窗口的4配置假设回测及1买持；卖出空区间保留，严格0。
+
+- [M0311 TechnicalExampleStrategy CMF21](public-strategies/M0311/README.md)：原生5m声明执行代理4配置与1买持；高换手失败诊断，ADAPTED，严格0。
+
+- [M0296 SMACrossover](public-strategies/M0296/README.md)：来源、规则与去重审计；完整执行契约未核，历史运行0、严格0。
+- [M0299 SimpleBollinger](public-strategies/M0299/README.md)：来源、规则与去重审计；完整执行契约未核，历史运行0、严格0。
+- [M0312 TradingView_RSI](public-strategies/M0312/README.md)：来源、规则与去重审计；完整执行契约未核，历史运行0、严格0。
+- [M0314 TurtleRules](public-strategies/M0314/README.md)：来源、规则与去重审计；完整执行契约未核，历史运行0、严格0。
+
+- [M0300 SmoothOperator](public-strategies/M0300/README.md)：原生5m四配置执行代理诊断；共享冻结v1内核，买持复用不新增计数，ADAPTED，严格0。
+- [M0302 Strategy001](public-strategies/M0302/README.md)：原生5m四配置执行代理诊断；共享冻结v1内核，买持复用不新增计数，ADAPTED，严格0。
+- [M0305 Strategy003](public-strategies/M0305/README.md)：原生5m四配置执行代理诊断；共享冻结v1内核，买持复用不新增计数，ADAPTED，严格0。
+- [M0306 Strategy004](public-strategies/M0306/README.md)：原生5m四配置执行代理诊断；共享冻结v1内核，买持复用不新增计数，ADAPTED，严格0。
+- [M0307 Strategy005](public-strategies/M0307/README.md)：原生5m四配置执行代理诊断；共享冻结v1内核，买持复用不新增计数，ADAPTED，严格0。
+
+- [native5m-execution-proxy v1共享内核](_shared-kernels/native5m-execution-proxy/README.md)：五ID复用固定OHLC成交与独立Decimal账户校验；ID规则、C0、结果分别冻结。
+
+- [dot batch006来源预检](public-strategies/dot-batch006-preflight-20261003/README.md)：diagnostic_topic；四个5m候选已分配、未启动历史回放。
