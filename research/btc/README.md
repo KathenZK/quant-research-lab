@@ -37,3 +37,5 @@
 - [BTC 1d QuantGraph ZSCORE_REVERSION](1d-quantgraph-source-zscore/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
 
 - [BTC 4h QuantGraph EMA_CROSSOVER](4h-quantgraph-source-ema/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
+
+| [1d-m0216-sma-cross/](1d-m0216-sma-cross/README.md) | explore / 首条真实行情假设回放，源停机不平仓，未晋级 |

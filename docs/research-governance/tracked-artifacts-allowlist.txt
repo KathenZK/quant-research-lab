@@ -568,3 +568,5 @@ research/platform/quantgraph-integration/artifacts/cross-repo-contract.json # pu
 research/platform/quantgraph-integration/artifacts/platform-v2/candidate-summary.json # public contract fixture
 research/platform/quantgraph-integration/artifacts/reference-v2/vectorbt-comparison.json # public contract fixture
 research/platform/quantgraph-integration/artifacts/synthetic-diagnostics.json # public contract fixture
+
+research/btc/1d-m0216-sma-cross/artifacts/20261003-first-replay/**  # research/btc/1d-m0216-sma-cross

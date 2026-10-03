@@ -451,6 +451,21 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/btc/1d-m0216-sma-cross/scripts/fetch_inputs.py",
+        "fetch", "official-spot-archive-snapshot-builder",
+        "Fixed BTCUSDT spot archive acquisition: verifies provider SHA256, exact daily grid and native OHLCV; independent of the perpetual V3 bundle, with no PIT or production-readiness claim.",
+    ),
+    AuxiliaryClassification(
+        "research/btc/1d-m0216-sma-cross/scripts/run_replay.py",
+        "main", "frozen-artifact-consumer",
+        "M0216 personal spot historical hypothesis consumes only its SHA256-pinned retained CSV, never a lake fallback or perpetual substitution.",
+    ),
+    AuxiliaryClassification(
+        "research/btc/1d-m0216-sma-cross/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Independent Decimal ledger and indicator reconstruction from the retained M0216 snapshot; validates exported results without importing the replay engine.",
+    ),
+    AuxiliaryClassification(
         "research/platform/research-program-review/scripts/three-line-review-20260909/b_recalculate.py",
         "<module>", "frozen-artifact-consumer",
         "Independent TPSA ledger reconstruction from retained 5f41 price snapshots, predictions and account exports; no source lake read.",

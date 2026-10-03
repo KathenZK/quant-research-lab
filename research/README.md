@@ -226,3 +226,7 @@
 - `MA7-ATR14-Long-Short-Reversal-Audit`：[对称多空与信号反手机制诊断](asset-portfolios/1d-ma7-atr14-long-short-audit/README.md)，原多头固定参数延伸，`explore / diagnostic-only / not promoted / not live-ready`。
 
 - [PUBLIC100 公开策略100条逐项复核](asset-portfolios/multi-public-strategies-100/README.md)：diagnostic_topic / explore / untrusted；19条数值诊断，81条数值回测未完成，not promoted / not live-ready。
+
+## M0216 首条来源回放
+
+[BTC日频SMA11/20主账](btc/1d-m0216-sma-cross/m0216-core-ledger.md)：explore / not promoted / not live-ready。真实数据回放完成，源码停机保留持仓，结果低于买入持有；不计严格复现。

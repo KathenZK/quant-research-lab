@@ -1,0 +1,37 @@
+{
+  "base": {
+    "status": "PASS",
+    "nav_rows": 731,
+    "fills": 3,
+    "max_equity_difference": 4.987232387065887e-07
+  },
+  "fee0": {
+    "status": "PASS",
+    "nav_rows": 731,
+    "fills": 3,
+    "max_equity_difference": 4.995963536202908e-07
+  },
+  "fee20": {
+    "status": "PASS",
+    "nav_rows": 731,
+    "fills": 3,
+    "max_equity_difference": 4.996545612812042e-07
+  },
+  "lag2": {
+    "status": "PASS",
+    "nav_rows": 731,
+    "fills": 3,
+    "max_equity_difference": 4.990433808416128e-07
+  },
+  "buyhold": {
+    "status": "PASS",
+    "nav_rows": 731,
+    "fills": 1,
+    "max_equity_difference": 4.994799382984638e-07
+  },
+  "causality": {
+    "status": "PASS",
+    "test": "Double 2024 OHLC, all 2023 portfolio outputs unchanged."
+  },
+  "verified_at": "2026-10-03T06:14:25.837483+00:00"
+}
