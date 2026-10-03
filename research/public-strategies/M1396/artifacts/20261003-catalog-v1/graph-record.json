@@ -1,0 +1,28 @@
+{
+  "id": "M1396",
+  "name": "BTC周二hl2过滤/周六退出：目录假设",
+  "status": "tested_proxy_only",
+  "reason": "CATALOG_HYPOTHESIS / ADAPTED_EXECUTION_PROXY;1规则实现4固定策略配置0新control;strict0",
+  "tested_variants": 1,
+  "families": [
+    "catalog-daily-weekday-hl2-fullcash"
+  ],
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "implementations": [
+    {
+      "variant_id": "M1396-catalog-daily-v1-base",
+      "family": "catalog-daily-weekday-hl2-fullcash",
+      "origin_run_id": "m1396-catalog-daily-20261003-v1",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "configuration_runs": 4,
+  "new_control_runs": 0
+}

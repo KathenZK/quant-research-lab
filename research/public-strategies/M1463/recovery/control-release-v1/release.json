@@ -1,0 +1,45 @@
+{
+  "schema": "catalog-daily-fullcash-control-release/v1",
+  "recorded_at_utc": "2026-10-03T17:14:42.129608+00:00",
+  "status": "RELEASED_FOR_EXACT_IDENTITY_REUSE",
+  "coordinator": "root only",
+  "source_id": "M1258",
+  "remote_public_core_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+  "control_reference": {
+    "path": "research/public-strategies/M1258/artifacts/20261003-catalog-v1/buyhold-reference-v1.json",
+    "bytes": 4190,
+    "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+  },
+  "actual_acceptance": {
+    "path": "research/public-strategies/M1258/recovery/coordinator-v1/acceptance.safe.json",
+    "bytes": 3065,
+    "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+  },
+  "control_output_manifest_sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7",
+  "control_summary_sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142",
+  "control_daily_NAV_sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "identity": {
+    "timeframe": "1d",
+    "evaluation_start": "2023-01-01T00:00:00Z",
+    "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+    "bars": 731,
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "allocation": "100% fee-inclusive",
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "fee_bps": 8,
+    "slippage_bps": 2,
+    "entry": "firstevaluationopen",
+    "terminal": "mark rawlastclose,noexit/fee",
+    "statistics": "Exact buyhold-reference-v1.json statistics; dailyreturns with initialcashanchor,365annualization,ddof1,nullzeroSD"
+  },
+  "consumers": [
+    "M1396",
+    "M1463"
+  ],
+  "new_controls_authorized": 0,
+  "control_original_new_count_in_M1258": 1,
+  "future_contracts": "May reference only after explicit root assignment and exact data/execution/statistics matching; this release is not strategy history approval without independent codeC0 QA."
+}
