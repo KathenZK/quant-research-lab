@@ -1,0 +1,65 @@
+{
+  "schema": "coordinator-M1258-local-and-remote-acceptance/v1",
+  "recorded_at_utc": "2026-10-03T17:14:42.129608+00:00",
+  "status": "INDEPENDENT_LOCAL_QA_AND_ACTUAL_REMOTE_CORE_RESTORE_PASS",
+  "id": "M1258",
+  "independent_reviewer": "root/m0286",
+  "accepted_strategy_configurations": 4,
+  "accepted_new_controls": 1,
+  "strict_reproductions": 0,
+  "source_C0_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+  "source_C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
+  "original_result_commit": "f58a0b177fa34a17d4845beed2d6fe6a880c2da3",
+  "remote_fetched_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+  "remote_verified_at_utc": "2026-10-03T17:05:09.709049+00:00",
+  "independent_evidence_hashes": {
+    "local_acceptance": "907f5f439a4f04fe2b9d0dfa7fc6d5d2767ee1fb5d59746031a114e6373026d1",
+    "remote_actual_comparison": "b96307130481dbaf1bba85f2308182a17506d6fcb513f0d474b20500c0b6be32"
+  },
+  "verification": {
+    "original_public_files": 37,
+    "remote_support_files": 6,
+    "fraction_RSI_feature_rows": 762,
+    "daily_NAV_rows": 3655,
+    "daily_decision_rows": 3655,
+    "fills": 493,
+    "monthly_rows": 120,
+    "restored_payloads": 37,
+    "manifest_byte_exact": true,
+    "C0_objects_including_manifest": 20,
+    "source_and_C0_unchanged": true,
+    "runtime_lock_asserted": true,
+    "socket_offline_guard_processes": 4,
+    "new_research_trials_from_QA_restore": 0,
+    "new_controls_from_QA_restore": 0,
+    "worker_source_or_old_results_fallback": false
+  },
+  "input_dependency": {
+    "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "bytes": 128196,
+    "rows": 762,
+    "evaluation_rows": 731,
+    "existing_authorized_private_raw_objects": 50,
+    "provider_checksum_and_ZIP_CRC_pairs": 25,
+    "canonical_rebuilt_from_raw": true,
+    "raw_bytes_in_Git": false,
+    "future_source_availability_guaranteed": false
+  },
+  "private_archive": {
+    "bytes": 701547,
+    "sha256": "fed9e15cfc1952c2792796d43f7745fa336435f9d910dbd40170606d4a01286c",
+    "standalone_manifest_sha256": "870a86f74ac926ed3067e4270c394544e61653654e12208ab0900b6eae8ef2f1",
+    "payloads": 155,
+    "manifest_members": 1,
+    "CRC_and_all_member_hashes_verified": true,
+    "remote_Library_saved": false,
+    "gap": "Existing Library uploadHTTP401; current privateZIP was not uploaded or blindly retried."
+  },
+  "reconstruction_recipe": "research/public-strategies/M1258/recovery/REMOTE-CORE-RESTORE.md at the exact remote_fetched_commit; independently fetch remote core and restore with its frozen environment, supplied authorized rawcache, and remote public expected-output manifest.",
+  "limits": [
+    "Catalog hypothesis and adapted execution; originalauthor page/runtime unverified.",
+    "Diagnosticinput/PITnotproved; prior-exposed2023–2024 isnotOOS.",
+    "Private rawcache and preinstalled matching environment remain external recovery dependencies.",
+    "Local privateZIP isnot remoteprivatebackup; verified Gitcore recovery is a separate scoped claim."
+  ]
+}

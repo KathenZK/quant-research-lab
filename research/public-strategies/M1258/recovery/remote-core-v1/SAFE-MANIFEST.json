@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "strategy_id": "M1258",
+  "remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+  "files": [
+    {
+      "file": "M1258-remote-core-recovery.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "file": "REMOTE-CORE-RESTORE.md",
+      "bytes": 8291,
+      "sha256": "1953a08256e5261949b5c4a9ca38120e1099a20f93cc51eeed850e0da553543e"
+    }
+  ],
+  "privacy_review": "No private Library refs, workspace paths, credentials, raw market rows or full private ledgers. Exact public Git paths and content hashes retained."
+}

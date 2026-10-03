@@ -1,10 +1,10 @@
 {
-  "schema": "M1258-publication-manifest/v2",
-  "created_utc": "2026-10-03T17:14:42.129608+00:00",
+  "schema": "M1258-publication-manifest/v1",
+  "created_utc": "2026-10-03T16:56:09.628106+00:00",
   "id": "M1258",
   "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
   "C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
-  "scope": "M1258 only; exact code/catalog/rules/environment/QA plus derived aggregate/monthly/25point normalizedcurve and hash-only privateoutput commitment; no raw market bytes/fullledgers. Manifest itself excluded from self-list. Added coordinator safe acceptance; original v1manifest preserved. No original payload/C0 modification.",
+  "scope": "M1258 only; exact code/catalog/rules/environment/QA plus derived aggregate/monthly/25point normalizedcurve and hash-only privateoutput commitment; no raw market bytes/fullledgers. Manifest itself excluded from self-list.",
   "files": [
     {
       "path": "M1258-core-ledger.md",
@@ -112,34 +112,9 @@
       "sha256": "80c047a07e36959e5ff5e85a924d08ccdb5d28f475ee6e3e2b7694f914a8a96e"
     },
     {
-      "path": "publication-history/v1/publication-manifest.json",
-      "bytes": 6826,
-      "sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81"
-    },
-    {
       "path": "recovery/REMOTE-CORE-RESTORE.md",
       "bytes": 1425,
       "sha256": "4ead4e4d59a31997a47a97a7e721d5ead7d84f7df6f0084ae16b6a1d4744b5ed"
-    },
-    {
-      "path": "recovery/coordinator-v1/acceptance.safe.json",
-      "bytes": 3065,
-      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
-    },
-    {
-      "path": "recovery/remote-core-v1/M1258-remote-core-recovery.safe.json",
-      "bytes": 17869,
-      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
-    },
-    {
-      "path": "recovery/remote-core-v1/REMOTE-CORE-RESTORE.md",
-      "bytes": 8291,
-      "sha256": "1953a08256e5261949b5c4a9ca38120e1099a20f93cc51eeed850e0da553543e"
-    },
-    {
-      "path": "recovery/remote-core-v1/SAFE-MANIFEST.json",
-      "bytes": 629,
-      "sha256": "f6b5d70e5e4cac2582bc1892a34c29a832df3e5e6d3475f0854f2ae3cb472569"
     },
     {
       "path": "scripts/README.md",
@@ -212,16 +187,10 @@
       "sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a"
     }
   ],
-  "payload_count": 41,
-  "payload_bytes": 187717,
+  "payload_count": 36,
+  "payload_bytes": 151037,
   "C0_original_objects_unchanged": 19,
   "full_author_webpage_or_code_included": false,
   "Library_remote_private_backup_verified": false,
-  "root_remote_core_recovery_pending": false,
-  "publication_revision": 2,
-  "previous_publication_sha256": "a6a38fc7270c56741c756dcd1219d534e51bf1fe89ac5f59067da0c44a360d81",
-  "previous_publication_path": "publication-history/v1/publication-manifest.json",
-  "root_remote_core_verified_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
-  "original_36_payload_files_unchanged": true,
-  "independent_remote_core_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+  "root_remote_core_recovery_pending": true
 }
