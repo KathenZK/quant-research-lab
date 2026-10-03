@@ -1,0 +1,10 @@
+{
+  "id": "M0265",
+  "status": "PASS",
+  "reviewer": "root/m0215",
+  "scope": "Exact pre-C0 original source, actual loaded params, adapter, draft execution/risk semantics; no historical performance",
+  "draft_sha256": "ed34fb35dbfe1c08692399e012a8b4be9fee7736acc8ef419b8cbe1a4bc82417",
+  "adapter_sha256": "d13e2f7d9bbe545524d26794137ad5a527d8002169ada7c1c9152b0b678487a0",
+  "historical_runs": 0,
+  "excludes": "Supplemental event auditor added after source review; tested independently on synthetic account, root/m0286 will independently check after run"
+}

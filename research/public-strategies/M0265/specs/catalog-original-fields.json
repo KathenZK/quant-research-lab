@@ -1,0 +1,18 @@
+{
+  "record_id": "M0265",
+  "fields": {
+    "id": "M0265",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "CofiBitStrategy",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "CofiBitStrategy",
+    "规则": "5 周期 high/close/low EMA；开盘<EMA5(low)，Stoch(5,3,3) 的 fastk 上穿 fastd 且两者<25、ADX>25 做多；开盘>=EMA5(high) 或 fastk/fastd 上穿 75 平多。",
+    "页码或文件": "CofiBitStrategy.py"
+  },
+  "status": "CATALOG_REPORTED_NOT_AUTHORITATIVE; source byte QA controls this research",
+  "field_review": "Public strategy descriptions and URLs only; private provenance fingerprints removed"
+}
