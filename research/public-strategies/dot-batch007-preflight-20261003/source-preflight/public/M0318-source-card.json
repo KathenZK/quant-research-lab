@@ -1,0 +1,63 @@
+{
+  "id": "M0318",
+  "name": "multi_tf",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0318",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/multi_tf.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "multi_tf",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "multi_tf",
+    "规则": "5m；RSI(14)<30 且多周期过滤（BTC 1h RSI<35、ETH/BTC 1h RSI<50、BTC 快 RSI 1h<40、超快 RSI 1h<30、30m/1h RSI<40）做多；RSI>70 平多；止损 -10%；ROI 立即 20%。",
+    "页码或文件": "multi_tf.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0004-v2/metadata/source-records/M0318.json",
+    "blob_sha256": "57566d436d7df8e69f200a70a915459907e1748af3b55f009a845b37282c1176"
+  },
+  "source": {
+    "id": "M0318",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/multi_tf.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/multi_tf.py",
+    "bytes": 5345,
+    "sha256": "eb182eaecb785864496023f26be7932857b1e495805c37bddd562d6b1100683b",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "multi_tf",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "minimal_roi": {
+      "0": 0.2
+    },
+    "stoploss": -0.1,
+    "trailing_stop": false,
+    "startup_candle_count": 100
+  },
+  "source_methods": [
+    "version",
+    "populate_indicators_1h",
+    "populate_indicators_btc_1h",
+    "populate_indicators_eth_btc_1h",
+    "populate_indicators_btc_1h_2",
+    "populate_indicators_btc_1h_3",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "EXTERNAL_INFORMATIVE_DATA_REQUIRED"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

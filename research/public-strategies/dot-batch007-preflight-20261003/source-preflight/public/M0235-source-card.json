@@ -1,0 +1,61 @@
+{
+  "id": "M0235",
+  "name": "FAdxSmaStrategy",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0235",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/futures/FAdxSmaStrategy.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "FAdxSmaStrategy",
+    "市场": "加密永续",
+    "提出日期": "未知",
+    "标题": "FAdxSmaStrategy",
+    "规则": "1h 合约可做空；ADX(14)>30 且 SMA12 上穿 SMA48 做多，下穿做空；ADX<30 平仓；止损 -5%；ROI 0/30/60 分钟 5%/10%/7.5%。",
+    "页码或文件": "FAdxSmaStrategy.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0235.json",
+    "blob_sha256": "494f598d5264c208871e22b363e2dd50de5f1a58405ab2abb4ebbc9505fef621"
+  },
+  "source": {
+    "id": "M0235",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/FAdxSmaStrategy.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/FAdxSmaStrategy.py",
+    "bytes": 4091,
+    "sha256": "43ae02ecca4553b8a609d4533cb4d5b6517292d35b41fc4c77f54f8e959ced89",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "FAdxSmaStrategy",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1h",
+    "can_short": true,
+    "minimal_roi": {
+      "60": 0.075,
+      "30": 0.1,
+      "0": 0.05
+    },
+    "stoploss": -0.05,
+    "trailing_stop": false,
+    "startup_candle_count": 14
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1h_NOT_5M",
+    "SOURCE_CAN_SHORT"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

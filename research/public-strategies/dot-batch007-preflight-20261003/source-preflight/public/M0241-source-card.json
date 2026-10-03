@@ -1,0 +1,61 @@
+{
+  "id": "M0241",
+  "name": "VolatilitySystem",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0241",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/futures/VolatilitySystem.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "VolatilitySystem",
+    "市场": "加密永续",
+    "提出日期": "未知",
+    "标题": "VolatilitySystem",
+    "规则": "1h 可做空；ATR(14)×2；收盘变化上穿 ATR 做多、反向变化上穿 ATR 做空；止损 -100%（实质上靠信号出场）。",
+    "页码或文件": "VolatilitySystem.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0241.json",
+    "blob_sha256": "3937c3361d279baa0f144ee81f66dc2306de99756210a09a857297a020c07e91"
+  },
+  "source": {
+    "id": "M0241",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/VolatilitySystem.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/VolatilitySystem.py",
+    "bytes": 6432,
+    "sha256": "10a32ea131fb8f4684741b48cd3eae70aa4d4990319b49a7acb7a2f9c7c8a672",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "VolatilitySystem",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1h",
+    "can_short": true,
+    "minimal_roi": {
+      "0": 100
+    },
+    "stoploss": -1
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend",
+    "custom_stake_amount",
+    "adjust_trade_position",
+    "leverage"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1h_NOT_5M",
+    "SOURCE_CAN_SHORT",
+    "CUSTOM_EXECUTION_CALLBACKS:custom_stake_amount,adjust_trade_position,leverage"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

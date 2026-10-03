@@ -1,0 +1,58 @@
+{
+  "id": "M0263",
+  "name": "CMCWinner",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0263",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/CMCWinner.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "CMCWinner",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "CMCWinner",
+    "规则": "上一根 CCI<-100、MFI<20、CMO<-50 做多；上一根 CCI>100、MFI>80、CMO>50 平多。",
+    "页码或文件": "CMCWinner.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0263.json",
+    "blob_sha256": "8556f6a7c016ed59dc23be9cf8aa27aea110d31eae190527d4832a7488525780"
+  },
+  "source": {
+    "id": "M0263",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CMCWinner.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CMCWinner.py",
+    "bytes": 3163,
+    "sha256": "0529996f7e895c3c15ee143f1f0c5ff75d78fd6522856ba0daa55b94437bfc3f",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "CMCWinner",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "15m",
+    "minimal_roi": {
+      "40": 0.0,
+      "30": 0.02,
+      "20": 0.03,
+      "0": 0.05
+    },
+    "stoploss": -0.05
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_15m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

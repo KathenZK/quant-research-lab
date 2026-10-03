@@ -1,0 +1,55 @@
+{
+  "id": "M0297",
+  "name": "Scalp",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0297",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/Scalp.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "Scalp",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "Scalp",
+    "规则": "1m；开盘<EMA5(low)、ADX>30、Stoch fastk 与 fastd 均<30 且金叉做多；开盘>=EMA5(high) 或 fastk/fastd 上穿 70 平多；止损 -4%。",
+    "页码或文件": "Scalp.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0297.json",
+    "blob_sha256": "c01e2d0e477cb93b8976ad7c961c74063bfa07d6ba06dc0ea9816e21f5a20371"
+  },
+  "source": {
+    "id": "M0297",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Scalp.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Scalp.py",
+    "bytes": 2847,
+    "sha256": "3163f460f08db33b4aded14c00f880f6b5e5f2413489137e522c1f93a8954a65",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "Scalp",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1m",
+    "minimal_roi": {
+      "0": 0.01
+    },
+    "stoploss": -0.04
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

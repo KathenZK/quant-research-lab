@@ -1,0 +1,58 @@
+{
+  "id": "M0276",
+  "name": "HourBasedStrategy",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0276",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/HourBasedStrategy.py",
+    "作者或机构": "Mablue / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "中",
+    "名称": "HourBasedStrategy",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "HourBasedStrategy",
+    "规则": "1h；buy_params 在 7–18 点做多，sell_params 在 21–9 点平多；止损 -10%；ROI 0/171/315/1035 分钟 18%/15.5%/7.5%/0。",
+    "页码或文件": "HourBasedStrategy.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0276.json",
+    "blob_sha256": "531b9f7dd27de4fae094e4a901b435f48884f2db05e53e2a8f0634933b6993e2"
+  },
+  "source": {
+    "id": "M0276",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/HourBasedStrategy.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/HourBasedStrategy.py",
+    "bytes": 4270,
+    "sha256": "61755d49c46b3037c102f60de30841910472b6da06e9b578882b3dfc125b9ccc",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "HourBasedStrategy",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1h",
+    "minimal_roi": {
+      "0": 0.528,
+      "169": 0.113,
+      "528": 0.089,
+      "1837": 0
+    },
+    "stoploss": -0.1
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1h_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

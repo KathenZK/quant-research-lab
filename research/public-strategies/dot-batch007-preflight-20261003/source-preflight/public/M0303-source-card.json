@@ -1,0 +1,61 @@
+{
+  "id": "M0303",
+  "name": "Strategy001_custom_exit",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0303",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/Strategy001_custom_exit.py",
+    "作者或机构": "Gerald Lonlas, froggleston / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "Strategy001_custom_exit",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "Strategy001_custom_exit",
+    "规则": "入场同 Strategy001（5m，EMA20 上穿 EMA50 + HA 收阳站上 EMA20）；额外在 RSI(14)>70 且浮盈>0 时自定义出场；止损 -10%；ROI 5%/4%/3%/1%。",
+    "页码或文件": "Strategy001_custom_exit.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0004-v2/metadata/source-records/M0303.json",
+    "blob_sha256": "97c0114c98cd2e38d0e5648cfa4054a5b44e6873ab8afafb17d5290dc4baeceb"
+  },
+  "source": {
+    "id": "M0303",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy001_custom_exit.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy001_custom_exit.py",
+    "bytes": 4931,
+    "sha256": "d53ac16d0e81b755a19ea83c535f50a6dd0629c76087b822ae399fabeaa5e841",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "Strategy001_custom_exit",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.1,
+    "trailing_stop": false
+  },
+  "source_methods": [
+    "informative_pairs",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend",
+    "custom_exit"
+  ],
+  "blockers": [
+    "CUSTOM_EXECUTION_CALLBACKS:custom_exit"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

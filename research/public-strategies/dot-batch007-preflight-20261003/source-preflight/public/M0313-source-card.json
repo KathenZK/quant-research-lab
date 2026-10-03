@@ -1,0 +1,71 @@
+{
+  "id": "M0313",
+  "name": "TrendRiderStrategy",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0313",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/TrendRiderStrategy.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "TrendRiderStrategy",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "TrendRiderStrategy",
+    "规则": "buy_params：EMA9/16、RSI(16) 回调 30–65、ADX>18、量能因子>0.7、+DI>-DI、BTC 1h RSI>35、恐惧贪婪 25–85、RSI<70 做多；RSI>78 或快慢 EMA 死叉且 MACD 柱<0 且 RSI>50，或收盘跌破 EMA200×0.99 出场；2h/4h/8h/16h/24h 分级时间止损。",
+    "页码或文件": "TrendRiderStrategy.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0004-v2/metadata/source-records/M0313.json",
+    "blob_sha256": "26801f6556c1e321bd49133768d0bf3b052e9677d450f737dded0b4ea00f5c09"
+  },
+  "source": {
+    "id": "M0313",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/TrendRiderStrategy.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/TrendRiderStrategy.py",
+    "bytes": 24748,
+    "sha256": "84ec4f1f00bbac46cf9a7ad6f38e1de6fe5ca83cfd9aa810c334b1a7e3c803ba",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "TrendRiderStrategy",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1h",
+    "can_short": false,
+    "minimal_roi": {
+      "0": 0.229,
+      "124": 0.136,
+      "290": 0.044,
+      "764": 0
+    },
+    "stoploss": -0.06,
+    "trailing_stop": true,
+    "use_custom_stoploss": false,
+    "startup_candle_count": 210
+  },
+  "source_methods": [
+    "leverage",
+    "informative_pairs",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend",
+    "_calc_confidence",
+    "_market_context",
+    "_get_market_regime",
+    "custom_exit",
+    "confirm_trade_entry"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1h_NOT_5M",
+    "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION",
+    "CUSTOM_EXECUTION_CALLBACKS:leverage,custom_exit,confirm_trade_entry"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

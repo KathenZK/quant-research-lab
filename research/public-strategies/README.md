@@ -61,3 +61,5 @@
 - [M0265 CofiBitStrategy](M0265/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
 - [M0282 MACDStrategy](M0282/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
 - [M0283 MACDStrategy_crossed](M0283/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+
+[dot007两ID来源预检](dot-batch007-preflight-20261003/README.md)：M0287/M0289独占分配dot，8配置/0新对照待C0；其余26条仅不兼容本批，不计全局失败。

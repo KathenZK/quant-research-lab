@@ -1,0 +1,36 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA-Lib": "0.6.8",
+    "freqtrade": "2026.9",
+    "technical": "1.7.0",
+    "ft-pandas-ta": "0.3.16"
+  },
+  "ta_native": "0.6.4 (Oct 20 2025 20:23:51)",
+  "talib_compatibility": 0,
+  "ema_unstable": 0,
+  "reference_framework_files": {
+    "engine-freqtrade__strategy__interface.py": {
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602"
+    },
+    "engine-freqtrade__strategy__hyper.py": {
+      "sha256": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/hyper.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602"
+    },
+    "engine-freqtrade__resolvers__strategy_resolver.py": {
+      "sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/resolvers/strategy_resolver.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602"
+    }
+  },
+  "reference_not_proven_author_runtime": true,
+  "source_declaration": "Existing installed dependency files matched previously pinned official reference source hashes",
+  "network_requests": 0,
+  "engine_runs": 0,
+  "new_installations": 0
+}

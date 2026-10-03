@@ -1,0 +1,56 @@
+{
+  "id": "M0287",
+  "name": "MultiRSI",
+  "status": "PENDING_INDEPENDENT_REVIEW",
+  "original_11_fields": {
+    "id": "M0287",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/MultiRSI.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "MultiRSI",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "MultiRSI",
+    "规则": "SMA5>=SMA200 且本周期 RSI(14) < 8 倍周期 RSI-20 做多；本周期 RSI 同时高于 2 倍与 8 倍周期 RSI 平多。",
+    "页码或文件": "MultiRSI.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0287.json",
+    "blob_sha256": "9f8b48830a18cc6d721581148b6fbd6555746eade48aeb6b23f2ced6af2491a2"
+  },
+  "source": {
+    "id": "M0287",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py",
+    "bytes": 2326,
+    "sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "MultiRSI",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "minimal_roi": {
+      "0": 0.01
+    },
+    "stoploss": -0.05
+  },
+  "source_methods": [
+    "get_ticker_indicator",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "PENDING_INDEPENDENT_LOCAL_10M_40M_CLOSED_BAR_RESAMPLE_AUDIT"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

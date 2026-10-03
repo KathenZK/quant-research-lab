@@ -1,0 +1,27 @@
+{
+  "status": "SOURCE_PREFLIGHT_COMPLETE_PENDING_ROOT_ASSIGNMENT",
+  "ready_ids": [
+    "M0287",
+    "M0289"
+  ],
+  "ready_count": 2,
+  "requested_maximum": "8-12 if qualified; insufficient under frozen constraints",
+  "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+  "freqtrade_rows_screened": 59,
+  "existing_or_reserved_excluded": 31,
+  "fixed_source_rows_examined": 28,
+  "blocked_rows": 26,
+  "initial_screening_retained": "public/screening-summary.json",
+  "final_addendum": "public/M0287-ready-addendum.json",
+  "M0289_card": "public/M0289-source-card.json",
+  "M0289_independent_reviewer_final": "pending separate reviewer delivery at time of this summary",
+  "new_market_requests": 0,
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_GETs": 28,
+  "source_repairs": 0,
+  "global_or_claim_writes": 0,
+  "original_source_public_redistribution": false,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

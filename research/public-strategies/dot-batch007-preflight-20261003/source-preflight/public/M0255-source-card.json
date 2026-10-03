@@ -1,0 +1,67 @@
+{
+  "id": "M0255",
+  "name": "AlmgrenChrissStrategy",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0255",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/AlmgrenChrissStrategy.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "AlmgrenChrissStrategy",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "AlmgrenChrissStrategy",
+    "规则": "15m；RSI<45 且量>0 做多，RSI>55 且量>0 做空；止损 -10%；ROI 立即 2%。同文件 RSI 阈值亦用于切片执行过滤。",
+    "页码或文件": "AlmgrenChrissStrategy.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0255.json",
+    "blob_sha256": "a4a9a76eeef99c5ac942c6f256b4714229dbf3990808bd1fcd771b19a5cf1c1d"
+  },
+  "source": {
+    "id": "M0255",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/AlmgrenChrissStrategy.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/AlmgrenChrissStrategy.py",
+    "bytes": 9013,
+    "sha256": "b336a714198174b8e652a4115423b37915ee8eacbd89cc412c090b61f4043522",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "AlmgrenChrissStrategy",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "15m",
+    "can_short": true,
+    "minimal_roi": {
+      "0": 0.02
+    },
+    "stoploss": -0.1,
+    "startup_candle_count": 30
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend",
+    "should_exit_partially",
+    "_ac_kappa_series",
+    "_get_kappa",
+    "_ac_next_slice_fraction",
+    "custom_stake_amount",
+    "adjust_trade_position",
+    "_next_entry_slice",
+    "_next_exit_slice"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_15m_NOT_5M",
+    "SOURCE_CAN_SHORT",
+    "CUSTOM_EXECUTION_CALLBACKS:custom_stake_amount,adjust_trade_position"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

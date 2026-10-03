@@ -1,0 +1,117 @@
+{
+  "id": "M0289",
+  "status": "PASS_SOURCE_SYNTHETIC_READY_NOT_C0",
+  "source_sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+  "loaded_parameters": {
+    "buy_pow": 3.849,
+    "sell_pow": 3.798
+  },
+  "flags": {
+    "timeframe": "5m",
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 30
+  },
+  "minimal_roi": {
+    "0": 0.213,
+    "39": 0.048,
+    "56": 0.029,
+    "159": 0
+  },
+  "stoploss": -0.288,
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "order_time_in_force": {
+    "entry": "GTC",
+    "exit": "GTC"
+  },
+  "source_module_loads": 1,
+  "fixtures": [
+    {
+      "fixture": "below_one",
+      "rows": 512,
+      "entry_rows": 508,
+      "exit_rows": 0,
+      "native_vs_boolean_and_decimal": "PASS",
+      "prefix_and_future_mutation_cuts": [
+        100,
+        255
+      ]
+    },
+    {
+      "fixture": "equal_one",
+      "rows": 512,
+      "entry_rows": 0,
+      "exit_rows": 0,
+      "native_vs_boolean_and_decimal": "PASS",
+      "prefix_and_future_mutation_cuts": [
+        100,
+        255
+      ]
+    },
+    {
+      "fixture": "above_one",
+      "rows": 512,
+      "entry_rows": 0,
+      "exit_rows": 510,
+      "native_vs_boolean_and_decimal": "PASS",
+      "prefix_and_future_mutation_cuts": [
+        100,
+        255
+      ]
+    },
+    {
+      "fixture": "oscillating",
+      "rows": 512,
+      "entry_rows": 221,
+      "exit_rows": 288,
+      "native_vs_boolean_and_decimal": "PASS",
+      "prefix_and_future_mutation_cuts": [
+        100,
+        255
+      ]
+    },
+    {
+      "fixture": "increasing",
+      "rows": 512,
+      "entry_rows": 145,
+      "exit_rows": 363,
+      "native_vs_boolean_and_decimal": "PASS",
+      "prefix_and_future_mutation_cuts": [
+        100,
+        255
+      ]
+    }
+  ],
+  "synthetic_rows": 2560,
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "market_requests": 0,
+  "kernel_modified": false,
+  "kernel_files": {
+    "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+    "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+    "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+    "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+    "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+    "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99"
+  },
+  "limitations": [
+    "No historical data or profitability viewed/executed",
+    "Fixed-framework attributes are reference defaults, not proven author runtime",
+    "Synthetic shared feature bridge uses one cached original instance; no accounting replay",
+    "BTCspot/95%cash/costs/nextopen execution remain hypothetical proxy assumptions",
+    "No source fixes performed; power-of-price rules are not scale invariant"
+  ]
+}
