@@ -1,0 +1,16 @@
+{
+  "status": "PASS_FREEZE_PREPARATION_WITH_ROOT_EXPLICIT_CORRECTIONS",
+  "review_sha256": "770d86680c1198a7052f9d6136c2eb580ed61f91233f1d3a20cadeef3e9d2b12",
+  "original_fields_checked": 22,
+  "inputs_hash_checked": 2,
+  "root_resolutions": [
+    "position-independent raw signals cancel opposite intent;latchedtimeexit nevercancelled;earliestdue preserved",
+    "100%feeinclusiveDecimal allocation explicitorder zeroexactcash",
+    "M1180known12Zhalt explicitly14Zresume1hproxy withpreviousverifiedevidence",
+    "two newfixed100%buyholdcontrols, not silently reuse95%controls",
+    "M1258title5day/body5periodexactdistinction",
+    "remote core recovery addon from userclarification; privateZIPgap remains"
+  ],
+  "historical_execution": 0,
+  "code_C0_QA": "required afterimplementation,not yetpassed"
+}

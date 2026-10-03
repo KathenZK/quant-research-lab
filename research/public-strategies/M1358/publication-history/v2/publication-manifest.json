@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 720,
-      "sha256": "00c086e862f309dda36a6d8b1f11b94ff549630aebfce39c3c747b75f7a13284"
+      "bytes": 331,
+      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913"
     },
     {
       "path": "artifacts/20261003-coldstart-v1/input-qa-v1.json",
@@ -102,18 +102,13 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1511,
-      "sha256": "2da4b1577e2c4026d07091ab6944d0c976e9a700d2faf5bb0694ba791eb174f1"
+      "bytes": 1068,
+      "sha256": "03d5ac83d056ea9012d5e51e694e2c5c0db00c477db11e66aa9e2f71205bd00b"
     },
     {
       "path": "publication-history/revision-v2.json",
       "bytes": 589,
       "sha256": "10564f949c35668543ff6657fc0d312ed7be98f8e053761a1498ae4c1a56ca12"
-    },
-    {
-      "path": "publication-history/revision-v3.json",
-      "bytes": 630,
-      "sha256": "0fadebe31f6ec0d2f70dfc2576c50df32fdf2d5f9c6abc83095c047d24473c27"
     },
     {
       "path": "publication-history/v1/README.md.snapshot",
@@ -129,51 +124,6 @@
       "path": "publication-history/v1/publication-manifest.json",
       "bytes": 8582,
       "sha256": "7a9e1fc38abf7d52d72001e9ce6da9897975548e75af2827eaa488bfe3b26d9c"
-    },
-    {
-      "path": "publication-history/v2/README.md.snapshot",
-      "bytes": 331,
-      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913"
-    },
-    {
-      "path": "publication-history/v2/decision-log.md.snapshot",
-      "bytes": 1068,
-      "sha256": "03d5ac83d056ea9012d5e51e694e2c5c0db00c477db11e66aa9e2f71205bd00b"
-    },
-    {
-      "path": "publication-history/v2/publication-manifest.json",
-      "bytes": 9545,
-      "sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc"
-    },
-    {
-      "path": "recovery/remote-core-v1/M1358-remote-core-recovery.safe.json",
-      "bytes": 5628,
-      "sha256": "ff46b170a4d7ba4305768e4ba43ff1cb3c63aaf9302bd7541aec3c69795cffa4"
-    },
-    {
-      "path": "recovery/remote-core-v1/REMOTE-CORE-RESTORE.md",
-      "bytes": 6037,
-      "sha256": "188b02b253a18f04a57fcc7b7e794e1afd08d0a7d63f007933afe91a9c4fc6a6"
-    },
-    {
-      "path": "recovery/remote-core-v1/SAFE-MANIFEST.json",
-      "bytes": 964,
-      "sha256": "0264c3334dc752365fd0a58622f95b3a773f680b3230e9116a77cbe50779159b"
-    },
-    {
-      "path": "recovery/remote-core-v1/locked_exec.py",
-      "bytes": 640,
-      "sha256": "026689431883333692dd7b5208f6c5ac5d3bc7a835379b867db39e8bbabe9362"
-    },
-    {
-      "path": "recovery/remote-core-v1/offline-guard/sitecustomize.py",
-      "bytes": 630,
-      "sha256": "75f72285633c844c27b92faf6babda6a10f4cb5d58cbf160f97950751e257047"
-    },
-    {
-      "path": "recovery/remote-core-v1/rebuild_daily_input.py",
-      "bytes": 2300,
-      "sha256": "3c6348ba188cfe763612427fccc499cb38be71dcb1e0fd8ffe70db4521a79313"
     },
     {
       "path": "scripts/README.md",
@@ -319,7 +269,7 @@
     "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
     "Graph_enum": "HYPOTHESIS"
   },
-  "revision": 3,
-  "previous_publication_manifest_sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
-  "revision_scope": "additive actual remote-core recovery receipt and executable recipes; old documentation retained; original C0/results unchanged"
+  "revision": 2,
+  "previous_publication_manifest_sha256": "7a9e1fc38abf7d52d72001e9ce6da9897975548e75af2827eaa488bfe3b26d9c",
+  "revision_scope": "directory governance and retained documentation history only; frozen source/runtime evidence unchanged"
 }

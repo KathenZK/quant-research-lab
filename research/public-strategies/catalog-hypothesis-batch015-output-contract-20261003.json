@@ -1,0 +1,61 @@
+{
+  "schema": "catalog-hypothesis-execution-output-contract/v1",
+  "frozen_at_utc": "2026-10-03T16:19:04.784638+00:00",
+  "coordinator": "root only",
+  "batch": "015",
+  "implementation_base_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+  "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+  "strategy_ids": [
+    "M1180",
+    "M1258"
+  ],
+  "assignments": {
+    "M1180": "parent single dot executor for next batch; not started at freeze",
+    "M1258": "root/m0288 single executor; not started at freeze"
+  },
+  "fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "strategy_configurations_per_id": 4,
+  "new_control_configurations_per_id": 1,
+  "total_planned_strategy_configurations": 8,
+  "total_planned_new_controls": 2,
+  "historical_runs_at_freeze": 0,
+  "rules": {
+    "M1180": {
+      "path": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1180-root-frozen-rules.json",
+      "bytes": 11662,
+      "sha256": "78209acc56bc5356c7a299ca5bde7523eaaa98fc19680d6ada8c533dd39c00d6"
+    },
+    "M1258": {
+      "path": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1258-root-frozen-rules.json",
+      "bytes": 10303,
+      "sha256": "eccfd386fe9fb17206bff6ea344e99cabb938c5bda06330767c08f58279bdbce"
+    }
+  },
+  "remote_recovery_scope_addendum": {
+    "path": "research/public-strategies/remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+  },
+  "gates_before_history": [
+    "Confirm no other owner/process holds these IDs and maintain isolatedbranches/outputs",
+    "Verify exact fixed data objects/coverage/hash/QA; no interpolation, substitution or rule/parameter tuning",
+    "Implement existing-repository-compatible family runner without creating a new generic platform; never reuse native5m risk kernel for4h/daily or call previousstrategy run function",
+    "Freeze source/code/runtime/input/parameters/C0 before observing any new strategy returns",
+    "Independent numerical,causality,pending/holding/fee/fullallocation and knownhalt synthetic tests pass; constant/equality/shortready/lag2/nooutofwindow boundaries required",
+    "Preceding batch remote core recovery actually verified under explicit addendum; privateZIP gap remains separately recorded"
+  ],
+  "output_contract": [
+    "One independentChineseMarkdown perID including exact original11fields/provenance,plain-language rule,assumptions/dataquality/benchmark/costcases/metrics/NAV/trades or reason/failuremodes/nextresearch",
+    "Private fullfeature/decision/pending/fill/nativeNAV/dailyNAV/monthlyreport artifacts with deterministic resultmanifest; zero-trade states/cash periods never omitted",
+    "Four fixed strategy configurations and one separately counted buyhold control perID only; no parameter search or extra assets/window variants",
+    "Full independent account and metric validation,causalprefix/future checks,immutablefailedruns and postreturndecisionlog",
+    "Safe Graph-compatible record/detail/normalized lightcurve labelledhypothesis; no invented entity revision and noSiteactivation",
+    "Remote allowed corecode/docs/lightresults/fingerprints/rebuildrecipe and actualremote recoveryverification; local privateZIP+standalonemanifest; Library saveif available honestly reported"
+  ],
+  "data_authorization": "Reuse existing approved Binance spot personal-research dataset scope. Root executor alreadyhas fixedcaches. Parent may use its own verifiedcache; necessary bounded official-archive recapture only under the already-reviewed applicable source/terms,never blindlyassert reviewed flag. Stop on changedterms,account/payment/auth orrestrictedresponse; no proxy/alternatevenue/USDT substitution forUSD strategies.",
+  "disk_reserve_bytes": 5368709120,
+  "global_progress_writer": "root only; executors report facts, do not edit globalindexes/claims/progress",
+  "new_strategy_returns_exposure_at_freeze": false
+}
