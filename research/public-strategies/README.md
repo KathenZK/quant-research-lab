@@ -56,3 +56,8 @@
 - [M0304 Strategy002](M0304/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
 
 [batch009六ID离线恢复入口](batch009-offline-recovery-20261003/README.md)：固定既有代码、输入及88个结果指纹，复用原执行入口；完整私有包远端备份状态单列。
+
+- [M0260 BinHV27](M0260/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0265 CofiBitStrategy](M0265/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0282 MACDStrategy](M0282/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0283 MACDStrategy_crossed](M0283/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
