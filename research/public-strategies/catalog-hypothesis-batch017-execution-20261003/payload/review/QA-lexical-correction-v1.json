@@ -1,0 +1,14 @@
+{
+  "schema": "batch017-prehistory-QA-correction/v1",
+  "recorded_utc": "2026-10-03T18:03:15.194698+00:00",
+  "issue": "Independent oracle initially required identical Decimal trailing-zero representation from two algebraically equivalent formulas",
+  "classification": "OVERSTRICT_ORACLE_LEXICAL_TEST_BUG_NOT_ENGINE_OR_RULE_DEFECT",
+  "resolution": "Compare independent monetary fields as exact Decimal numerical equality, absolute error zero. Keep immutable engine serialization Decimal str with no quantization and same-engine byte-exact replay. No tolerance or trading change.",
+  "unchanged_kernel_engine_sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+  "failed_receipt": "review/independent/synthetic-independent-v1.json",
+  "successor_tests": "review/independent/synthetic-independent-v2.json",
+  "numeric_equivalence": "review/independent/decimal-fee-equivalence-v1.json",
+  "wrapper_byte_replay": "review/independent/wrapper-independent-v1.json",
+  "historical_strategy_returns_seen": false,
+  "source": "Parent clarification at 2026-10-03T18:02:26Z; no new global protocol gate required"
+}

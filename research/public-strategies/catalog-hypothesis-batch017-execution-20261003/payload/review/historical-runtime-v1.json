@@ -1,0 +1,22 @@
+{
+  "start_utc": "2026-10-03T18:06:07.569190+00:00",
+  "end_utc": "2026-10-03T18:06:07.918865+00:00",
+  "wall_seconds": 0.34965836300398223,
+  "child_cpu_user_seconds": 0.31998499999999996,
+  "child_cpu_system_seconds": 0.029342999999999998,
+  "child_cpu_seconds": 0.34932799999999997,
+  "max_child_rss_kib": 31344,
+  "exit_code": 0,
+  "command": [
+    "python",
+    "dot-batch009-delivery/package-v1/source/run_v1.py",
+    "--bundle",
+    "dot-batch009-delivery/package-v1",
+    "--input",
+    "dot-batch009-delivery/package-v1/input/input.csv",
+    "--output",
+    "dot-batch009-delivery/package-v1/results-v1",
+    "--c0",
+    "dot-batch009-delivery/package-v1/frozen/C0-v1.json"
+  ]
+}

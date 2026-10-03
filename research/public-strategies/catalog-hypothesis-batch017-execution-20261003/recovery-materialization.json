@@ -1,0 +1,400 @@
+{
+  "schema": "batch017-public-core-materialization/v1",
+  "files": [
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/C0-v1.json",
+      "bundle_path": "frozen/C0-v1.json",
+      "bytes": 10579,
+      "sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/C0-v2.json",
+      "bundle_path": "frozen/C0-v2.json",
+      "bytes": 8372,
+      "sha256": "1b7389015fb57787ef67aa661e13a825d15db6d1c61683d538fef79cbfb68e17"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1258-coordinator-acceptance.safe.json",
+      "bundle_path": "frozen/M1258-coordinator-acceptance.safe.json",
+      "bytes": 3065,
+      "sha256": "f0b3d6edea3d71da5c298e041bc4a0e9e6c34dcce5152ad9a5665438fddf086b"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1258-private-output-manifest.json",
+      "bundle_path": "frozen/M1258-private-output-manifest.json",
+      "bytes": 5279,
+      "sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1258-protocol-v1.json",
+      "bundle_path": "frozen/M1258-protocol-v1.json",
+      "bytes": 14276,
+      "sha256": "67a6ed575916a180678d16699aedbf082fa92c48af78e7776f4836a25d17b12a"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1258-remote-core-recovery.safe.json",
+      "bundle_path": "frozen/M1258-remote-core-recovery.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1270-catalog-original-fields.json",
+      "bundle_path": "frozen/M1270-catalog-original-fields.json",
+      "bytes": 1943,
+      "sha256": "c1b72c34eee7b0fc70bb63b9593b506acc2527372ebbac9020e5b661eda87f79"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1270-root-frozen-rules.json",
+      "bundle_path": "frozen/M1270-root-frozen-rules.json",
+      "bytes": 12725,
+      "sha256": "389eedaf79f4776420ccbfdf71afe1614b15bfdad2b16a7b9549d8afc81a5aaa"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1346-catalog-original-fields.json",
+      "bundle_path": "frozen/M1346-catalog-original-fields.json",
+      "bytes": 1913,
+      "sha256": "41056e93ba2f52554b0ec7e9176591c8deb5fa1e186eed719991a51d3b045dcb"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1346-root-frozen-rules.json",
+      "bundle_path": "frozen/M1346-root-frozen-rules.json",
+      "bytes": 12079,
+      "sha256": "2cd91a2e8cf9492dba4078c55acf9956201bbc94a66559da40f08a51dc4db668"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1349-catalog-original-fields.json",
+      "bundle_path": "frozen/M1349-catalog-original-fields.json",
+      "bytes": 2173,
+      "sha256": "076dbf301fc6690357c42b3c9a35d7f01e7be5de7bf3b8ecba0b1146715f2be7"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/M1349-root-frozen-rules.json",
+      "bundle_path": "frozen/M1349-root-frozen-rules.json",
+      "bytes": 12837,
+      "sha256": "fde35a953c04aff2982e4ba57693d6f28d0576a92f1fa492660dc0712331b249"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/binance-public-data-TERMS_AND_CONDITIONS.md",
+      "bundle_path": "frozen/binance-public-data-TERMS_AND_CONDITIONS.md",
+      "bytes": 9798,
+      "sha256": "dcf358e9d18f598a7a635fac80f6e643fa24a0e111a4d39bda47f1e246b31eb1"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/buyhold-reference-v1.json",
+      "bundle_path": "frozen/buyhold-reference-v1.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/cases-v1.json",
+      "bundle_path": "frozen/cases-v1.json",
+      "bytes": 447,
+      "sha256": "0ad62d335d9032e0e291a9f54f96446b2c455cc5447c44b5cfbba43c6ccbc7ac"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/catalog-hypothesis-batch017-output-contract-20261003.json",
+      "bundle_path": "frozen/catalog-hypothesis-batch017-output-contract-20261003.json",
+      "bytes": 5120,
+      "sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/input-manifest.json",
+      "bundle_path": "frozen/input-manifest.json",
+      "bytes": 8303,
+      "sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/remote-recovery-scope-addendum-20261003.json",
+      "bundle_path": "frozen/remote-recovery-scope-addendum-20261003.json",
+      "bytes": 2033,
+      "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/reused-buyhold-projection-v1.json",
+      "bundle_path": "frozen/reused-buyhold-projection-v1.json",
+      "bytes": 6820,
+      "sha256": "b108f7dfa0458cbff6c0a751d319da7dd0f66871d809bc7debd32506861af37f"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/runtime-v1.json",
+      "bundle_path": "frozen/runtime-v1.json",
+      "bytes": 363,
+      "sha256": "65d47ee6e423681adbc5795f5d44192084bbb6c50b0c7b791470591563cbcce1"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/frozen/statistics-v1.json",
+      "bundle_path": "frozen/statistics-v1.json",
+      "bytes": 1436,
+      "sha256": "5554f6f67d0956388aefb2b75dfe348e652b923b4cc1b91cf15b8fe23a2e560e"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/QA-lexical-correction-v1.json",
+      "bundle_path": "review/QA-lexical-correction-v1.json",
+      "bytes": 1130,
+      "sha256": "4ae1e344114940834dcc1ab6112b85817aa90629ee1f607f040bfb5b1e4e6aa1"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/historical-runtime-v1.json",
+      "bundle_path": "review/historical-runtime-v1.json",
+      "bytes": 689,
+      "sha256": "c9659fcf3ec04f1a575f8cadd1e94dad172d74fe3b18319c39d8407b04a65b9c"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/historical-runtime-v2.json",
+      "bundle_path": "review/historical-runtime-v2.json",
+      "bytes": 661,
+      "sha256": "e3b3b1219dfdc229abd3c6ff9ddc83421e7cd50b6c28fc5294a01477700d4634"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/C0-binding-m1349-v2.json",
+      "bundle_path": "review/independent/C0-binding-m1349-v2.json",
+      "bytes": 803,
+      "sha256": "10c3d53e32ebfeabb8a7866aca870aeab71bf1b61fcf9ce2c27e8b67b873a52a"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/C0-binding-v1.json",
+      "bundle_path": "review/independent/C0-binding-v1.json",
+      "bytes": 975,
+      "sha256": "fd49336ce6b9590f8cc5e8b93ed69189be967a5c928863cd510822b3a62f3e81"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/M1349-synthetic-kernel-v2-v1.json",
+      "bundle_path": "review/independent/M1349-synthetic-kernel-v2-v1.json",
+      "bytes": 1221,
+      "sha256": "6305d888d06253e04eb2075ec85a28a01f8842b7a2927d43393a78f85d549627"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/compare_literal_fee_order_v1.py",
+      "bundle_path": "review/independent/compare_literal_fee_order_v1.py",
+      "bytes": 3532,
+      "sha256": "6ff0b12071f06acc19cc071e12a031276b82ad7c9e0aee6191cc54c7a26a775e"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/decimal-fee-equivalence-v1.json",
+      "bundle_path": "review/independent/decimal-fee-equivalence-v1.json",
+      "bytes": 2451,
+      "sha256": "994af65bb77e8765fe8d8ead0466173b4a2f418d857e58c0455f7be2fb60c5b0"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/historical-QA-m1349-v2.json",
+      "bundle_path": "review/independent/historical-QA-m1349-v2.json",
+      "bytes": 8596,
+      "sha256": "89761d63fd39ceb95bf4d25d690862f312592968bd50d16df19b5c95e1c697dd"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/historical-QA-v1.json",
+      "bundle_path": "review/independent/historical-QA-v1.json",
+      "bytes": 12027,
+      "sha256": "02aa2e1fcfa47898033a46b3684f7148320e64558f81c8b2c5a5716e5667b56a"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/input-QA-independent-v1.json",
+      "bundle_path": "review/independent/input-QA-independent-v1.json",
+      "bytes": 9785,
+      "sha256": "b963439473029d07f662128dec2c4f57aeb960c322b154abcd2812cc8fed2717"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/prehistory-executable-v1.json",
+      "bundle_path": "review/independent/prehistory-executable-v1.json",
+      "bytes": 8133,
+      "sha256": "0b5f9b753e9f60c9d40511600523a6cf58f745fc6335323d11f0ddba875cb0a7"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/prehistory-m1349-v2.json",
+      "bundle_path": "review/independent/prehistory-m1349-v2.json",
+      "bytes": 7439,
+      "sha256": "89cb0715f19776f86bd39c97fb7805e37fe4d6bcb65754725140e9ecd9888c73"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/prove_decimal_fee_equivalence_v1.py",
+      "bundle_path": "review/independent/prove_decimal_fee_equivalence_v1.py",
+      "bytes": 3047,
+      "sha256": "3af8b77ccdf41c2cc0901bd18bc904329800664730b684177271c16f6d5be8a5"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/test_kernel_v1.py",
+      "bundle_path": "review/independent/test_kernel_v1.py",
+      "bytes": 17353,
+      "sha256": "2d0a8385db5aa98e52dcdaf70032b459cf8bf68305213a50c241ba26b8ec0963"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/test_kernel_v2.py",
+      "bundle_path": "review/independent/test_kernel_v2.py",
+      "bytes": 17387,
+      "sha256": "17b156a2343a5d5baefede216e1a1f54f8a37c22bcb2b3389a5a0586dce02f35"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/test_m1349_kernel_v2.py",
+      "bundle_path": "review/independent/test_m1349_kernel_v2.py",
+      "bytes": 9618,
+      "sha256": "a8545f68ac8df8b9fdd39e7f18a16e7af02cd207060dbd5cb232f0afabd9f18d"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/verify_history_m1349_v2.py",
+      "bundle_path": "review/independent/verify_history_m1349_v2.py",
+      "bytes": 6099,
+      "sha256": "4ea0d21eeb8ba24117673ca7c7a93f37c801bd28ccd16c1d1d0cbde159684177"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/verify_history_v1.py",
+      "bundle_path": "review/independent/verify_history_v1.py",
+      "bytes": 9987,
+      "sha256": "bc674a440797176ceecf528460e0ef5f3af6c3a4dce3cf7dd7e9a3de1b987b11"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/verify_input_v1.py",
+      "bundle_path": "review/independent/verify_input_v1.py",
+      "bytes": 5944,
+      "sha256": "e0d42f34441d6137444fe99300f3d38a4c220d8db03d53522a5905a4cf7ab971"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/verify_m1349_wrapper_v2.py",
+      "bundle_path": "review/independent/verify_m1349_wrapper_v2.py",
+      "bytes": 6664,
+      "sha256": "5c7b82d49b06edd69f700c81205637b1164613d04730774fe369890d38ffdf59"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/independent/verify_wrapper_v1.py",
+      "bundle_path": "review/independent/verify_wrapper_v1.py",
+      "bytes": 5542,
+      "sha256": "83d71ccfe7f25e022bf7b91c68057b35c44a1418609bade83b3ae5ef6d307087"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/input-QA-v1.json",
+      "bundle_path": "review/input-QA-v1.json",
+      "bytes": 697,
+      "sha256": "108312712e60c36fe836f5c300933933fcaf76085c4a0f9494ea30b44e363038"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/local-restore-v1.json",
+      "bundle_path": "review/local-restore-v1.json",
+      "bytes": 860,
+      "sha256": "69429abd03d2cba961e4e2ceee6e3837bfd3a69a6d1619258ff412477001356d"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/local-restore-v2.json",
+      "bundle_path": "review/local-restore-v2.json",
+      "bytes": 1207,
+      "sha256": "b71ab7183acea6b603daccf81c78be23de5d7e076bf85da4007b136c7a1628b1"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/review/restore_core.py",
+      "bundle_path": "review/restore_core.py",
+      "bytes": 3373,
+      "sha256": "d2d5eec3757c2a3c44f055d3d975334322d23bfabbf8001c5a0a56d81c4c1240"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/daily_three_signals.py",
+      "bundle_path": "source/daily_three_signals.py",
+      "bytes": 3880,
+      "sha256": "2b892666b161cedcda35abd99be13aba8a9f891aa280eb3f2d986a9d98daea1c"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/offline-guard/sitecustomize.py",
+      "bundle_path": "source/offline-guard/sitecustomize.py",
+      "bytes": 437,
+      "sha256": "0e3e1233db1ef0d6fe7d3d250005434dd861590d0cc9bec3a4b4ae878ad01594"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/rebuild_daily_input.py",
+      "bundle_path": "source/rebuild_daily_input.py",
+      "bytes": 3749,
+      "sha256": "deb3450d9647802bf06f255cb0075c9f15acdf53e0c2652823b936e3cedfb7a1"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/run_m1349_v2.py",
+      "bundle_path": "source/run_m1349_v2.py",
+      "bytes": 6593,
+      "sha256": "605abae4b0396656de08c4ff9a7eb059d7d3cce37ef523a57ebb276b05774e03"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/run_v1.py",
+      "bundle_path": "source/run_v1.py",
+      "bytes": 7157,
+      "sha256": "ded93a161eb532dace3fb4ca5f4c103ebf2a7ddc074ec8bc0028c657b73ea3a9"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/source/timed_run.py",
+      "bundle_path": "source/timed_run.py",
+      "bytes": 1523,
+      "sha256": "85f06488c1fa910c73cec6506af4aef1dd4ac8e746a067239b6381cf6b825b5c"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v1/engine.py",
+      "bundle_path": "kernel/v1/engine.py",
+      "bytes": 9243,
+      "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v1/manifest.json",
+      "bundle_path": "kernel/v1/manifest.json",
+      "bytes": 1038,
+      "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v1/verify_account.py",
+      "bundle_path": "kernel/v1/verify_account.py",
+      "bytes": 8744,
+      "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/README.md",
+      "bundle_path": "kernel/v2/README.md",
+      "bytes": 3699,
+      "sha256": "60979d769e0e09ee0f0cae8c3ff879129014d18931c21eaf1eb1a26eedee361f"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/engine.py",
+      "bundle_path": "kernel/v2/engine.py",
+      "bytes": 11513,
+      "sha256": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/manifest.json",
+      "bundle_path": "kernel/v2/manifest.json",
+      "bytes": 1536,
+      "sha256": "0f5d96e56c1dfe396320d5d80932d09218291379495045a31b0564c1ef16bb5a"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/tests/synthetic-receipt.json",
+      "bundle_path": "kernel/v2/tests/synthetic-receipt.json",
+      "bytes": 2491,
+      "sha256": "d8933bd0175b83c10afc0c7cdab0ca7077757607cdbd6ef1062d49c1ad409369"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/tests/test_lifecycle.py",
+      "bundle_path": "kernel/v2/tests/test_lifecycle.py",
+      "bytes": 9843,
+      "sha256": "ceea3ed5bd9faaa4aca8e2ec57130225f3784b04cb72a4f10987f5be5c7a21a8"
+    },
+    {
+      "repository_path": "research/_shared-kernels/catalog-daily-cash/v2/verify_account.py",
+      "bundle_path": "kernel/v2/verify_account.py",
+      "bytes": 10965,
+      "sha256": "191961bece1b80c02d074894a8f48fde8c3f6360b5ab564cc69484fae3b14712"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/expected/M1346/manifest.json",
+      "bundle_path": "expected/M1346/manifest.json",
+      "bytes": 6031,
+      "sha256": "09aaa8c6e4dfee9d134d32a4f94849543ca8cd7f4fef3213b25565ba356b7895"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/expected/M1270/manifest.json",
+      "bundle_path": "expected/M1270/manifest.json",
+      "bytes": 6031,
+      "sha256": "68b2f888436bd5110c5a0fd5541a320721ebf4aea7cc33dedb7ed026cdaa8a2f"
+    },
+    {
+      "repository_path": "research/public-strategies/catalog-hypothesis-batch017-execution-20261003/payload/expected/M1349/manifest.json",
+      "bundle_path": "expected/M1349/manifest.json",
+      "bytes": 6025,
+      "sha256": "7e6ce412271fbaa6cb71d384888bca9a976df07baf2de9d51aae5929bda367b5"
+    }
+  ],
+  "raw_data_included": false,
+  "full_ledger_included": false,
+  "library_identifiers_included": false,
+  "original_C0_unchanged": true,
+  "original_nonexecuting_private_logs": "Retained in private package with unchanged C0 hash commitments; only operational subset needed for QA replay"
+}

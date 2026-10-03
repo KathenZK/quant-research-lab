@@ -1,0 +1,262 @@
+{
+  "id": "M1346",
+  "run_id": "M1346-catalog-batch017-20261003-v1",
+  "origin_run_id": "M1346-catalog-batch017-20261003-v1",
+  "variant_id": "M1346-catalog-batch017-20261003-v1-base",
+  "name": "比特币：收盘高于25日前收盘做多、低于则卖出",
+  "family": "PUBLIC-M1346-DAILY-MOMENTUM25",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "冻结目录规则假设；原作者网页/完整运行框架未独立核验；Binance现货日线与下一开盘为执行代理。",
+  "metrics": {
+    "periods": {
+      "2023-2024": {
+        "total_return": 2.104918253425913,
+        "cagr": 0.7607128168794586,
+        "max_drawdown": -0.3570004355255392,
+        "sharpe_zero_cash": 1.6271053613567328,
+        "observations": 731,
+        "final_equity": 310491.8253425913,
+        "sharpe": 1.6271053613567328,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "total_return": 4.651299863331392,
+        "cagr": 1.3744318581300612,
+        "max_drawdown": -0.261513750538678,
+        "sharpe_zero_cash": 2.016493590663557,
+        "observations": 731,
+        "final_equity": 565129.9863331392,
+        "sharpe": 2.016493590663557,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "total_return": 2.1462772865525137,
+        "cagr": 0.7723847602008154,
+        "max_drawdown": -0.3805772900277521,
+        "sharpe_zero_cash": 1.618045153701344,
+        "observations": 731,
+        "final_equity": 314627.7286552514,
+        "sharpe": 1.618045153701344,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "cost_sensitivity": {
+      "fee0": {
+        "2023-2024": {
+          "total_return": 2.257589152033502,
+          "cagr": 0.8034218896909553,
+          "max_drawdown": -0.34558346613309265,
+          "sharpe_zero_cash": 1.687756617698009,
+          "observations": 731,
+          "final_equity": 325758.9152033502,
+          "sharpe": 1.687756617698009,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      },
+      "fee20": {
+        "2023-2024": {
+          "total_return": 1.8892219310899727,
+          "cagr": 0.6985380482803751,
+          "max_drawdown": -0.3737535448201501,
+          "sharpe_zero_cash": 1.5358838140520892,
+          "observations": 731,
+          "final_equity": 288922.19310899725,
+          "sharpe": 1.5358838140520892,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY"
+  },
+  "spec": {
+    "source_url": "https://www.quantifiedstrategies.com/trend-following-and-momentum-strategies-on-bitcoin/",
+    "rule_excerpt": "本条只写源文件已印出的规则。本条只写同站同文免费正文动量段已印句：若比特币收盘高于25日前收盘则做多，收盘低于25日前收盘则卖出。不是100/250 SMA交叉，也不是会员墙规则段。页面写回测区间含约2015起样本；未印仓位%、手续费。 不是同文SMA100/250交叉（M1345），也不是会员墙规则段：本条是比特币收盘高于/低于25日前收盘做多/卖出。 计入加密。 提出日期按源文件原样保留2026-04-23。",
+    "frozen_rules_path": "../../source/root-frozen-rules.json",
+    "assumptions": [
+      "收盘高于25日前收盘为入场事件，低于为退出事件；是水平条件，不要求先发生交叉。恰好相等不产生事件，既有仓位或待单保留。无SMA、RSI或额外过滤。",
+      "100000 USDT、100%含入场费仓位、Decimal50 ROUND_HALF_EVEN、两边2bps滑点、8bps基线费用。",
+      "所有731个评估日与24个月连续保留；31日仅预热，不继承预热待单。",
+      "已有M1258满仓买持结果按原哈希复用；新增控制0。",
+      "现金不计息、不借贷、无资金费或杠杆；期末按原始收盘估值，不虚构卖出。"
+    ]
+  },
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT": "NOT_PROVEN",
+    "window_OOS": false,
+    "original_runtime_equivalence": false
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 1.3246087459747302,
+      "drawdown": -0.025994532964371608
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 1.2082388317564736,
+      "drawdown": -0.11156314557657554
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 1.259526806203291,
+      "drawdown": -0.07385029817451208
+    },
+    {
+      "date": "2023-04-30",
+      "equity": 1.20847782055619,
+      "drawdown": -0.11138741338532193
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 1.2185186650428954,
+      "drawdown": -0.10400422385601742
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 1.3594746051098783,
+      "drawdown": -0.007182224678129207
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 1.2880882702433891,
+      "drawdown": -0.08209776452294754
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 1.2880882702433891,
+      "drawdown": -0.08209776452294754
+    },
+    {
+      "date": "2023-09-30",
+      "equity": 1.3341120954766694,
+      "drawdown": -0.04930081027473386
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 1.6915543515276719,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 1.8421637526708703,
+      "drawdown": -0.0035458632475923314
+    },
+    {
+      "date": "2023-12-31",
+      "equity": 2.055767683746989,
+      "drawdown": -0.04692748674081337
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 1.8769355490579498,
+      "drawdown": -0.1298356837161312
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 2.6595599268280226,
+      "drawdown": -0.020840561185672114
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 3.1011028807308625,
+      "drawdown": -0.02452909381256209
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 2.6651561066333675,
+      "drawdown": -0.1616588218911579
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 2.7748888205448217,
+      "drawdown": -0.12714172458918593
+    },
+    {
+      "date": "2024-06-30",
+      "equity": 2.7107116819795487,
+      "drawdown": -0.1473290366263891
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 2.6895072810904685,
+      "drawdown": -0.15399901080846384
+    },
+    {
+      "date": "2024-08-31",
+      "equity": 2.1939266642103425,
+      "drawdown": -0.30988692940697665
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 2.1458440469536577,
+      "drawdown": -0.3250116111834767
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 2.3818321715212436,
+      "drawdown": -0.25078010111272286
+    },
+    {
+      "date": "2024-11-30",
+      "equity": 3.266767477181238,
+      "drawdown": -0.02511841200501557
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 3.1049182534259137,
+      "drawdown": -0.13664082779353554
+    }
+  ],
+  "curve_meta": {
+    "resolution": "first evaluation close plus 24 month-end closes",
+    "source_observations": 731,
+    "point_count": 25,
+    "normalized_to_initial": 100000,
+    "benchmark_curve": "Only accepted M1258 monthly projection reused; no invented daily control curve"
+  },
+  "lineage": {
+    "source_record_sha256": "e74b2f8f2759cd82f7751b238b6b7d8e97b460ad34f11c71db4eb53cf91fc04b",
+    "source_row_sha256": "30bdf9d8c3ec51ad2762322e92133969e3fe5b00d14ccebea01301235b65db53",
+    "source_rule_sha256": "167a1e70e1a566e016d89898542be5a55d28b5d17705f507caf6764376671f9d",
+    "C0_sha256": "d59a22ae616b04b8cc41953f7d61bcb1d6063719b4858f712622a38eb8f453bb",
+    "private_output_manifest_sha256": "09aaa8c6e4dfee9d134d32a4f94849543ca8cd7f4fef3213b25565ba356b7895",
+    "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "entity_revision_status": "NOT_ISSUED_NOT_INVENTED"
+  },
+  "limitations": [
+    "HYPOTHESIS / ADAPTED_EXECUTION_PROXY；strict=0。",
+    "原生历史月档hash/CRC/网格一致不证明PIT、finality或逐时可交易性。",
+    "2023–2024是既有曝光且按数据可得性选定的窗口，不是OOS；旧搜索次数未知，未计算可信DSR/PBO。",
+    "手续费、滑点、满仓和延迟模型不是成交保证；未建立交易所最小手数、部分成交或流动性冲击模型。",
+    "没有Site激活、实盘或推广授权。"
+  ]
+}
