@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "scope": "INDEPENDENT_PREHISTORY_CODE_C0_REVIEW_ONLY",
+  "id": "M1347",
+  "reviewed_commit": "5ccadf192dfc6381721058d28887cd9bc435a20c",
+  "C0_sha256": "95c1aaee84657d0d3639c94d282e6e4bfa9934ba9f3b4c6fa5aaed13355dfed3",
+  "checked_utc": "2026-10-03T18:37:57.644014+00:00",
+  "contract": {
+    "commit": "65d18701b642e0aa1747154a7ef536984652e9d8",
+    "rules_sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4",
+    "contract_sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553",
+    "independent_contract_review_sha256": "059b56f52cec8ab2f29810203668b82e29280284b5548bfae524b9a66d47e78d",
+    "all_root_rule_values_preserved": true
+  },
+  "frozen": {
+    "family_objects": 28,
+    "shared_kernel_objects": 4,
+    "all_fixed_commit_worktree_snapshot_hashes_equal": true,
+    "original_kernel_v1_unchanged": true,
+    "protocol_sha256": "b176b3412aca14a1f9c860937654f97b4d42c9448abb712583005f14996ab674",
+    "source_signals_sha256": "239d90c306353900fcd2028ae43df070efdc699c24429f95c34446176f6ea1eb",
+    "source_oracle_sha256": "f19079a4f7a710aa77c7045d698d26d6c264aecc03fc1493d1a74a9f454739a3",
+    "runner_sha256": "a6666f74ea2da6be69d6acbe2aae54a2903a588dd29dd92cc7ba36dba4b28f57",
+    "restore_sha256": "625e3c8a99d3418366c1c3ed3565c3fd31d756811bee2b75ab7d3d4e08eb0cc0"
+  },
+  "calendar": {
+    "original_synthetic_checks_reexecuted": 95,
+    "Gregorian_cycle_dates": 146097,
+    "months": 4800,
+    "independent_methods": [
+      "source UTC datetime + calendar.monthrange",
+      "family oracle ordinal + next-month subtraction",
+      "reviewer independent date ordinal next-month arithmetic"
+    ],
+    "prefix_future_cases_in_actual_synthetic_suite": 60,
+    "no_price_indicator": true,
+    "lag1": "Third-last close -> second-last open; day3close -> day4open",
+    "lag2": "Third-last close -> final-date open; day3close -> day5open",
+    "warmup_intents_excluded": true,
+    "initial_flat_day3_exit_ignored": true,
+    "all_731_evaluation_days_retained": true,
+    "each_case_artificial_fills": 47,
+    "each_case_artificial_closed_trades": 23,
+    "terminal_long_no_forced_exit": true,
+    "partial_window_unfilled_intent_tested": true
+  },
+  "independent_account": {
+    "fixture": "New deterministic decimal artificial OHLC, distinct from worker fixture; no actual market rows",
+    "counts": {
+      "independent_features": 762,
+      "nav_rows": 2924,
+      "decision_rows": 2924,
+      "fills": 188,
+      "months": 96,
+      "pending_events": 376,
+      "closed_trips": 92,
+      "numeric_mutations_rejected": 5,
+      "independent_buy_sell_pairs": 27,
+      "pending_truth_grid": 24,
+      "gate_mutations_rejected_before_input": 11
+    },
+    "money_quantity_comparison": "Decimal numerical equality exactly; finite required; no epsilon, quantization, relative or absolute money tolerance",
+    "statistics": "Independent stdlib; relative1e-12,abs0,expectedzeroexact; initialcashanchor/ddof1/365",
+    "original_shared_string_verifier_also_passed": true,
+    "source_case_parameters_unchanged": true
+  },
+  "input_QA": {
+    "status": "PASS",
+    "raw_objects": 50,
+    "ZIP_CRCs": 25,
+    "provider_checksums": 25,
+    "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "canonical_bytes": 128196,
+    "rows": 762,
+    "warmup_rows": 31,
+    "evaluation_rows": 731,
+    "offline_rebuild_exact": true,
+    "features_or_returns_computed": false,
+    "network_requests": 0,
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT": "NOT_PROVEN"
+  },
+  "gate": {
+    "invalid_bindings_rejected_before_input": 11,
+    "valid_root_release_created": false,
+    "historical_input_read_by_strategy": false,
+    "trust_boundary": "A local coordinator metadata prerequisite, not a cryptographic security boundary. The code verifies declared review bytes/hash/status and source-commit length; coordinator remains responsible for selecting the correct authenticated approval evidence.",
+    "actual_code_review_does_not_grant_history": true
+  },
+  "restore": {
+    "static_original_code_review": "Fresh destination required; copies exactC0 and four pinned kernel objects, copies review evidence, calls original runner+verifier and compares full independent reference bytes; no self-reference adapter",
+    "artificial_serialization_repeat": {
+      "status": "PASS",
+      "objects_per_directory": 31,
+      "same_artificial_fixture_only": true,
+      "worker_initial_worker_repeat_reviewer_recheck_exact": true,
+      "manifest_sha256": "c4a5e1b33d7aeecd8d186cdc13cc6b321bcc796213baeb4c025f08596869f0c4",
+      "no_extra_replay_for_this_comparison": true
+    },
+    "real_result_fresh_restore_not_yet_due": true,
+    "remote_manifest_only_limit": "Original CLI expects full reference results; future remote hash-only recovery must explicitly use an independent hash comparison driver, not self-comparison."
+  },
+  "public_boundary": {
+    "frozen_public_28_objects_scan_pass": true,
+    "private_original_11_fields_not_copied": true,
+    "reviewed10_fields_and_operational_excerpt_hash_unchanged": true,
+    "private_full_output_schemas_present": [
+      "features",
+      "decisions",
+      "pending",
+      "fills",
+      "dailyNAV",
+      "roundtrips",
+      "monthly",
+      "summary",
+      "manifest"
+    ],
+    "posthistory_graph_projection": "Not generated or validated before first returns. Final review must check 25 first/month-end points, normalization and no full private account/rawdata exposure.",
+    "C0_README_ledger_decision_immutable": true
+  },
+  "counts": {
+    "historical_strategy_runs": 0,
+    "new_controls": 0,
+    "new_market_requests": 0,
+    "strict_reproductions": 0
+  },
+  "warnings": [
+    "Original NumPy ddof1 warns for single-bar synthetic prefixes; Sharpe is null and full evaluation has731bars. Frozen kernel unchanged.",
+    "This is a catalog hypothesis and ADAPTED execution; author webpage/runtime unverified and evaluation window previously exposed, not OOS.",
+    "Library complete-private backup401 remains a separate gap; prior accepted Git core recovery is preserved."
+  ],
+  "blockers": [],
+  "pending": [
+    "Root must issue its own exact C0/control/independent-code-review release before first historical run.",
+    "After authorized history, verify actual full ledgers, metrics, causality, full fresh restore, allowed public projection and persistence separately."
+  ],
+  "evidence": {
+    "snapshot_sha256": "e7a991e9292affb9a38788782f78f7ed31df78848d60a9b9d2015028fcc7b121",
+    "original_synthetic_recheck_sha256": "679a93d93404de705673b2d8cd2b208863239e4bcfd322f70909a4a5859e2c4d",
+    "independent_artificial_qa_sha256": "21a5024cb9e647cd3ca0f9bcec5d57320b9f76bb8b6983a031a587107b21549f",
+    "independent_harness_sha256": "252b32daecf9176ef6266f2635d76b35c10cd3684843c50aab19749293c7a217",
+    "input_QA_sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909",
+    "artificial_repeat_comparison_sha256": "b9af78cb98a3338e653b9802ac9a76bde48400e6157001887309a78c4dfbef7a"
+  },
+  "own_QA_resources": {
+    "wall_seconds": 0.27434364799410105,
+    "cpu_seconds": 0.27433934400000004,
+    "max_rss_kib": 34036
+  }
+}

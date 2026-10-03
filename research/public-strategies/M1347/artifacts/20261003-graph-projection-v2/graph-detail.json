@@ -1,0 +1,377 @@
+{
+  "id": "M1347",
+  "run_id": "m1347-catalog-daily-20261003-v1",
+  "origin_run_id": "m1347-catalog-daily-20261003-v1",
+  "variant_id": "M1347-catalog-daily-v1-base",
+  "name": "BTC月末倒数第三日到次月第三日：目录假设",
+  "family": "catalog-daily-monthturn-fullcash",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "目录假设与UTC月历/满仓/下一开盘执行改编，非作者严格复现",
+  "research_classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "metrics": {
+    "periods": {
+      "full": {
+        "total_return": -0.2770307401887361,
+        "cagr": -0.149535329446155,
+        "max_drawdown": -0.30107527020456715,
+        "sharpe_zero_cash": -0.8564160483665583,
+        "observations": 731,
+        "final_equity": 72296.92598112639,
+        "sharpe": -0.8564160483665583,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      },
+      "2023-2024": {
+        "total_return": -0.2770307401887361,
+        "cagr": -0.149535329446155,
+        "max_drawdown": -0.30107527020456715,
+        "sharpe_zero_cash": -0.8564160483665583,
+        "observations": 731,
+        "final_equity": 72296.92598112639,
+        "sharpe": -0.8564160483665583,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "total_return": 4.651299863331392,
+        "cagr": 1.3744318581300612,
+        "max_drawdown": -0.261513750538678,
+        "sharpe_zero_cash": 2.016493590663557,
+        "observations": 731,
+        "final_equity": 565129.9863331392,
+        "sharpe": 2.016493590663557,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      },
+      "full": {
+        "total_return": 4.651299863331392,
+        "cagr": 1.3744318581300612,
+        "max_drawdown": -0.261513750538678,
+        "sharpe_zero_cash": 2.016493590663557,
+        "observations": 731,
+        "final_equity": 565129.9863331392,
+        "sharpe": 2.016493590663557,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "total_return": -0.16064815751310413,
+        "cagr": -0.08372877941473567,
+        "max_drawdown": -0.32468898802084045,
+        "sharpe_zero_cash": -0.38667076993875427,
+        "observations": 731,
+        "final_equity": 83935.18424868959,
+        "sharpe": -0.38667076993875427,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      },
+      "full": {
+        "total_return": -0.16064815751310413,
+        "cagr": -0.08372877941473567,
+        "max_drawdown": -0.32468898802084045,
+        "sharpe_zero_cash": -0.38667076993875427,
+        "observations": 731,
+        "final_equity": 83935.18424868959,
+        "sharpe": -0.38667076993875427,
+        "start": "2023-01-01",
+        "end": "2024-12-31",
+        "annualization": 365,
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+      }
+    },
+    "cost_sensitivity": {
+      "0": {
+        "2023-2024": {
+          "total_return": -0.24932981184676672,
+          "cagr": -0.13341777544944067,
+          "max_drawdown": -0.2909379383158097,
+          "sharpe_zero_cash": -0.7467886645823643,
+          "observations": 731,
+          "final_equity": 75067.01881532333,
+          "sharpe": -0.7467886645823643,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        },
+        "full": {
+          "total_return": -0.24932981184676672,
+          "cagr": -0.13341777544944067,
+          "max_drawdown": -0.2909379383158097,
+          "sharpe_zero_cash": -0.7467886645823643,
+          "observations": 731,
+          "final_equity": 75067.01881532333,
+          "sharpe": -0.7467886645823643,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      },
+      "20": {
+        "2023-2024": {
+          "total_return": -0.31667658659112585,
+          "cagr": -0.17315088569975057,
+          "max_drawdown": -0.3224012530648144,
+          "sharpe_zero_cash": -1.0199834169248179,
+          "observations": 731,
+          "final_equity": 68332.34134088742,
+          "sharpe": -1.0199834169248179,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        },
+        "full": {
+          "total_return": -0.31667658659112585,
+          "cagr": -0.17315088569975057,
+          "max_drawdown": -0.3224012530648144,
+          "sharpe_zero_cash": -1.0199834169248179,
+          "observations": 731,
+          "final_equity": 68332.34134088742,
+          "sharpe": -1.0199834169248179,
+          "start": "2023-01-01",
+          "end": "2024-12-31",
+          "annualization": 365,
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC"
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+    "capital_state": {
+      "initial_cash_usdt": 100000,
+      "final_equity_usdt": 72296.92598112639,
+      "final_position_open": true,
+      "terminal_pending": null
+    }
+  },
+  "spec": {
+    "source_url": "https://www.quantifiedstrategies.com/bitcoin-cash-trading-strategy-backtest/",
+    "assumptions": [
+      "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY; strict0",
+      "Position sizing unspecified in operational catalog rule; root selects100%fee-inclusive spot cash. Source literal close trades are replaced by next-open/lag2 execution proxy.",
+      "Root-selected24/7UTC interpretation of catalog trading day. Every calendar date is a trading day; no weekday/holiday calendar and no observed-last-three-row selection. Reject missing/duplicate/offgrid daily input.",
+      "At close of UTC date day == calendar month length minus 2, rawentry=true independently of holdings; if flat schedule buy.",
+      "At close of UTC date day == 3, rawexit=true independently of holdings; cancel opposite pending first, if long schedule sell.",
+      "Third-last date close -> second-last date open buy. Day3close -> day4open sell.",
+      "Third-last date close -> final date open buy. Day3close -> day5open sell.",
+      "No indicator readiness requirement. 31 warmup dates cannot schedule; all731evaluationdates and24months retained.",
+      "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+      "Decimal50 ROUND_HALF_EVEN from input decimal strings for cash/holdings. No price indicator or indicator seed exists. Conversion to float only defined metrics; no price/tick rounding.",
+      "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+      "初始100000USDT，100%买入含费；base双边8bps费+2bps滑点；fee0/20保留双边2bps滑点；delay2为8bps且延迟两根。",
+      "已验M1258同窗100%含费base成本买持只作引用，0新控制；各费用变体没有新增成本匹配对照。",
+      "来源是优化表选窗，作者网页未验证；市场PIT和可成交性未证明；非未触碰OOS。"
+    ],
+    "rule_excerpt": "月末倒数第3个交易日收盘做多，新月第3个交易日收盘卖出",
+    "params": {
+      "timeframe": "1d",
+      "calendar": "UTC_24_7",
+      "entry": "day=month_length-2 at close",
+      "exit": "day=3 at close",
+      "fraction": "1",
+      "entry_fee_inclusive": true,
+      "fee_bps": 8,
+      "slippage_bps": 2,
+      "lag_bars": 1
+    }
+  },
+  "audit": {
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false,
+    "economic_conclusion": "All four predetermined configurations lost money; no support for this hypothesis in this exposed window"
+  },
+  "deep_validation": {
+    "account": "PASS pinned independent Decimal serialized full ledgers; external review tracked separately",
+    "causality": "PASS 16 actual feature prefixes+16 future mutations; prehistory60 account prefix/future pairs",
+    "recovery": "PASS 31files byte-exact fresh local; remote core for thisID pending coordinator"
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 0.9729884291655615,
+      "drawdown": -0.027011570834438475
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 0.9666625319321475,
+      "drawdown": -0.03333746806785256
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 0.9357512018377646,
+      "drawdown": -0.06424879816223543
+    },
+    {
+      "date": "2023-04-30",
+      "equity": 0.9096107140887191,
+      "drawdown": -0.09038928591128088
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 0.8842686928836435,
+      "drawdown": -0.1157313071163565
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 0.8894426323226508,
+      "drawdown": -0.11055736767734928
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 0.9038661149876763,
+      "drawdown": -0.09613388501232371
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 0.8431577173258866,
+      "drawdown": -0.15684228267411343
+    },
+    {
+      "date": "2023-09-30",
+      "equity": 0.8406260081890954,
+      "drawdown": -0.1593739918109046
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 0.8561955164971794,
+      "drawdown": -0.14380448350282063
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 0.8542350960006573,
+      "drawdown": -0.14576490399934278
+    },
+    {
+      "date": "2023-12-31",
+      "equity": 0.9079900249279451,
+      "drawdown": -0.09200997507205488
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 0.9028878255602313,
+      "drawdown": -0.09711217443976877
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 0.9755333455743366,
+      "drawdown": -0.024466654425663446
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 1.0257362809887545,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 0.910609903130195,
+      "drawdown": -0.112237794443211
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 0.9403287884076288,
+      "drawdown": -0.08326457215571777
+    },
+    {
+      "date": "2024-06-30",
+      "equity": 0.9931843117382466,
+      "drawdown": -0.03173522264331879
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 0.9200202912311611,
+      "drawdown": -0.1030635180961805
+    },
+    {
+      "date": "2024-08-31",
+      "equity": 0.8567544051658514,
+      "drawdown": -0.1647420286820835
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 0.8014693228719717,
+      "drawdown": -0.21863997820239098
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 0.7415580962626064,
+      "drawdown": -0.277047999562047
+    },
+    {
+      "date": "2024-11-30",
+      "equity": 0.7298990916840056,
+      "drawdown": -0.28841447337670245
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 0.7229692598112639,
+      "drawdown": -0.2951704319999674
+    }
+  ],
+  "curve_meta": {
+    "observations": 731,
+    "total_observations": 731,
+    "returned_points": 25,
+    "sampling": "first barclose+24UTCmonthend closes; UTC bar-open date labels",
+    "equity_unit": "initial_capital_multiple",
+    "drawdown_unit": "fraction",
+    "drawdown_source": "full731dailyseries+initial100000anchor; not sampled curve recomputation",
+    "benchmark_curve_available": false
+  },
+  "lineage": {
+    "source_commit": "5ccadf192dfc6381721058d28887cd9bc435a20c",
+    "C0_sha256": "95c1aaee84657d0d3639c94d282e6e4bfa9934ba9f3b4c6fa5aaed13355dfed3",
+    "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "result_manifest_sha256": "efae9bdac67125d12fde252f1e8fd1a506e455c6fbe215ea397e989cd3133d95",
+    "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+    "control_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "new_control_runs": 0
+  },
+  "limitations": [
+    "Strict0;notpromoted",
+    "Prior-exposed2023–2024nonOOS;optimization-selectedcatalogwindow",
+    "No partial fills, tick/lot limits, market impact, orderbook or actual available_at model",
+    "All 4 tested configurations negative; zero-fee case still negative",
+    "Private fullNAV/raw and internalcuration excluded from public projection"
+  ],
+  "display_projection": {
+    "version": 2,
+    "period_aliases": {
+      "full": "2023-2024"
+    },
+    "fee_labels_bps": [
+      "0",
+      "20"
+    ],
+    "retained_slippage_bps_each_side": 2,
+    "v1_detail_sha256": "5e8003a430a9e2f0e802cfba743b62b4ba1b8c46a962d273cc47903790efa5d4",
+    "summary_sha256": "4c19980d35f4a699ef68dc9dffe0c1155b2bc6140847a0da864fb4dbf3594894",
+    "new_strategy_configurations": 0,
+    "new_controls": 0,
+    "explanation": "Default full-period consumer and numeric bps labels; all values, nulls and25sourcepoints unchanged"
+  }
+}

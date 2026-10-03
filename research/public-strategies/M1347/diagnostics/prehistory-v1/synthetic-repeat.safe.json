@@ -1,0 +1,14 @@
+{
+  "stage": "SYNTHETIC_ONLY_REPEAT",
+  "started_utc": "2026-10-03T18:27:33.516874+00:00",
+  "finished_utc": "2026-10-03T18:27:35.886265+00:00",
+  "wall_seconds": 2.369367275998229,
+  "cpu_seconds": 2.366993,
+  "max_rss_kib": 207096,
+  "returncode": 0,
+  "real_strategy_runs": 0,
+  "status": "PASS",
+  "compared_files": 31,
+  "comparison": "all31serializedsyntheticresultfiles+95checkreceipt byteexact",
+  "warning": "One-bar truncated synthetic prefix produces pinned numpy ddof1 warnings; Sharpe null. No market execution."
+}

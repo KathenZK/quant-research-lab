@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "prefix_cases": 16,
+  "future_mutations": 16,
+  "price_independent_calendar": true,
+  "account_engine_reruns": 0,
+  "new_controls": 0,
+  "limit": "Feature causality only; synthetic suite and independent result audit cover account chronology"
+}

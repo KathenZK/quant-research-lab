@@ -1,0 +1,18 @@
+{
+  "status": "PLAN_NOT_EXECUTOR_QA",
+  "synthetic_required": [
+    "Leap/nonleap February and30/31month boundaries",
+    "Calendar prefix/futureprice perturbation identical existing signals",
+    "Missing/duplicate/offset grid rejection without imputation",
+    "Open-before-close and exact lag1/lag2 placement",
+    "Warmup no imported intent; initialday3exitflat",
+    "Raw opposite cancel before position gating; same side earliest due; absence retains",
+    "Terminal beyond window remains unfilled; residual noforcedsale",
+    "Decimal50 fullfee budget/zero cash and independentaccountoracle",
+    "Future implementation sharedv1 hash pin and exactimmutable code review",
+    "All731NAV/24months/fees/costcase logs and deterministic empty-directory restore"
+  ],
+  "history_runs": 0,
+  "new_market_requests": 0,
+  "new_claims": 0
+}

@@ -1,0 +1,270 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "coordinator": "Codex root only",
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304",
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266",
+    "M0287",
+    "M0289",
+    "M1358",
+    "M1258",
+    "M1396",
+    "M1463"
+  ],
+  "cumulative_strategy_configurations": 155,
+  "cumulative_controls": 21,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "acceptance_meaning": "Independently validated executed research. Remote persistence is tracked separately; local-only packages are not declared complete remote backups.",
+  "recorded_at": "2026-10-03T18:19:07.896575+00:00",
+  "batch": "018",
+  "checkpoint": 1,
+  "previous_checkpoint_sha256": "58638f1029a2bb98ae47f3b0d7d1a54e71e587e28853f22c0d2fcd28b78be7ef",
+  "new_accepted_ids": [],
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "remote_core_recovery": {
+    "ids": [
+      "M1396",
+      "M1463"
+    ],
+    "status": "REMOTE_HASH_REFERENCE_REBUILD_PASS",
+    "source_remote_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "public_core_objects": 96,
+    "support_objects": 4,
+    "matching_payload_size_sha256": 60,
+    "matching_manifests_bytes": 2,
+    "original_full_results_used_for_reference": false,
+    "original_CLI_limitation": "requires prior full results; outer driver uses original run_replay and verify once perID and compares remote frozen hash commitments",
+    "new_research_configs": 0,
+    "new_controls": 0,
+    "source_C0_unchanged": true,
+    "safe_receipt": "research/public-strategies/catalog-hypothesis-batch016-recovery-20261003/batch016-remote-core-recovery.safe.json",
+    "safe_receipt_sha256": "03d1351041be15781f582ec44ba0d4eeb773e61e497c52778955cf88316b6881",
+    "safe_manifest_sha256": "ca74f43f213d6c5263a902fd6e47473394ea4a91d8e5c898828d888366460bfe",
+    "private_Library_saved": false,
+    "finished_utc": "2026-10-03T17:54:19.820581+00:00"
+  },
+  "delivery_scope_addendum": {
+    "path": "remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c",
+    "old_C0_contracts_results_preserved": true,
+    "hashes_without_executable_code_and_actual_rebuild_sufficient": false
+  },
+  "current_owned_work": {
+    "M1180": {
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b008-m1180",
+      "status": "PARENT_REPORTS_LOCAL_QA_AND_PRIVATE_RESTORE_PASS_PUBLICATION_APPROVAL_BLOCKED_NOT_ROOT_ACCEPTED",
+      "reported_runs_excluded_from_root_accepted_totals": true
+    },
+    "M1258": {
+      "owner": "root/m0288 executor;root/m0286 independentreview",
+      "status": "INDEPENDENTLY_ACCEPTED_AND_REMOTE_CORE_RESTORED",
+      "strategy_configurations": 4,
+      "new_controls": 1
+    },
+    "M1396": {
+      "owner": "root/m0217",
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "status": "INDEPENDENT_POSTHISTORY_QA_AND_ACTUAL_REMOTE_CORE_REBUILD_PASS",
+      "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+      "actual_historical_runs": 4,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0,
+      "result_commit": "2da261781a543fc86a0803228f0f058e98e54d19"
+    },
+    "M1463": {
+      "owner": "root/m0217",
+      "branch": "codex/catalog-daily-batch016-20261003",
+      "status": "INDEPENDENT_POSTHISTORY_QA_AND_ACTUAL_REMOTE_CORE_REBUILD_PASS",
+      "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c",
+      "actual_historical_runs": 4,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0,
+      "result_commit": "2da261781a543fc86a0803228f0f058e98e54d19"
+    },
+    "M1346": {
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b009-daily3",
+      "status": "PARENT_REPORTS4CONFIGS_EXECUTED_INDEPENDENT_HISTORY_LEDGER_QA_ONGOING",
+      "reported_strategy_configurations": 4,
+      "root_independent_acceptance": false,
+      "excluded_from_accepted_totals": true
+    },
+    "M1270": {
+      "owner": "parent single dot executor",
+      "branch": "dot/public-strategies-20261003-b009-daily3",
+      "status": "PARENT_REPORTS4CONFIGS_EXECUTED_INDEPENDENT_HISTORY_LEDGER_QA_ONGOING",
+      "reported_strategy_configurations": 4,
+      "root_independent_acceptance": false,
+      "excluded_from_accepted_totals": true
+    },
+    "M1349": {
+      "owner": "parent single dot executor",
+      "status": "V2_DELIVERED_OWN_CODE_C0_INDEPENDENT_QA_REQUIRED",
+      "reported_historical_runs": 0,
+      "kernel_source_commit": "d306d09907562dc7c6c3482bbeb202458cd7b03c"
+    },
+    "M1347": {
+      "owner": "root/m0288",
+      "branch": "codex/catalog-monthturn-m1347-20261003",
+      "status": "ACTUALLY_STARTED_IMPLEMENTATION_AND_SYNTHETIC_PREFLIGHT",
+      "code_base_commit": "65d18701b642e0aa1747154a7ef536984652e9d8",
+      "actual_historical_runs": 0,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0,
+      "contract_independent_review": "root/m0286 inprogress; actualcodeC0 review androotrelease stillrequired"
+    }
+  },
+  "contract": {
+    "path": "catalog-hypothesis-batch016-output-contract-20261003.json",
+    "sha256": "286e1c8cd712f79afe4a6864a78731d7d449085a820370727c477da9e514fca7",
+    "pre_code_independent_review": "PASS; codeC0/synthetic and independentposthistory PASS"
+  },
+  "Graph": {
+    "main_commit": "da3f6c2c4b3b47575542a901023fd9bdbf301fb6",
+    "PR": 26,
+    "merged_at": "2026-10-03T18:10:39Z",
+    "main_CI": [
+      "37143222766 SUCCESS",
+      "37143222736 SUCCESS"
+    ],
+    "remote_files_byte_exact": 5,
+    "remote_bytes": 137327,
+    "offline_records": 20,
+    "offline_details": 20,
+    "offline_curve_points": 6272,
+    "M1258_public_points": 25,
+    "M1258_metric_observations": 731,
+    "old19_payloads_preserved": true,
+    "M1258_source_lab_commit": "54172714e24faed51b4e1aba122fbeec43c5a7d1",
+    "independent_review_sha256": "adce645a98474dcbd1aa3896c7374999bcd68ada80ed1430704a7d16952d6268",
+    "Site_deployed": false,
+    "active_assets": "previousHTTP403 remains; no new restricted asset request or access change",
+    "transient_agent401": "Root later same authorized gh read/merge succeeded, no credential inspection or access change; priorfailure retained privately"
+  },
+  "data_routes": {
+    "SPY_and_new_USD": "Parent read-only route investigation completed; DATA_SOURCE_PERMISSION_OR_COVERAGE_PENDING; no active waiting worker and no permanent impossibility assertion",
+    "repeat_search_policy": "Only revisit on new authorized data or user choice of lawful service; no signup/token/purchase/terms acceptance",
+    "full6973_readiness_map": "Parent delivered newprivate map; current helper download genericfailed/noHTTPstatusknown, zerooriginalZIPbytesverified here; manifest renderedmetadata only. Fixed2400 localpublicsubset independently screened, not all6973 or100queue readiness."
+  },
+  "backup_gaps": {
+    "M1358_private_full_archive": "local only; knownLibrary upload401, no blind repeat",
+    "prior_root009_011_full_archives": "previously reported local-only full packages; no newLibrarysuccessclaim",
+    "rawdata_remote_backup": "not claimed or required under clarified core delivery scope; future authorized data availability remains externaldependency",
+    "M1258_private_full_archive": {
+      "status": "LOCAL_CRC_MEMBER_HASH_VERIFIED_REMOTE_LIBRARY_NOT_SAVED",
+      "bytes": 701547,
+      "sha256": "fed9e15cfc1952c2792796d43f7745fa336435f9d910dbd40170606d4a01286c",
+      "manifest_sha256": "870a86f74ac926ed3067e4270c394544e61653654e12208ab0900b6eae8ef2f1",
+      "upload": "existingLibrary401,no newblindattempt"
+    },
+    "M1396_private_full_archive": {
+      "archive_bytes": 825236,
+      "archive_sha256": "4dc690c70e53b58f977ec087928543e96e9f05a9231abc8413039d1dec0dbdea",
+      "standalone_manifest_sha256": "ee023228fba040870c92e5cefe6c67ad1db078a95ec5079d0ac575b438bb0732",
+      "remote_Library_saved": false,
+      "remote_private_backup_gap": "Existing Library uploadHTTP401; no current upload or blind retry; localZIP is not durable backup"
+    },
+    "M1463_private_full_archive": {
+      "archive_bytes": 702112,
+      "archive_sha256": "3eceec19f4099a44205922366476bf88a0fb716c21c18719ec8048608d8af804",
+      "standalone_manifest_sha256": "4da16f72ebf446c5cf8daf1953370d6ed136b8e50dc6adc887ef77607bef0ac5",
+      "remote_Library_saved": false,
+      "remote_private_backup_gap": "Existing Library uploadHTTP401; no current upload or blind retry; localZIP is not durable backup"
+    }
+  },
+  "private_Library_identifiers_in_public_files": false,
+  "main_delivery_at_freeze": {
+    "main": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+    "PR": 31,
+    "merged_at": "2026-10-03T18:10:58Z",
+    "main_accepted_ids": 38,
+    "main_strategy_configurations": 155,
+    "main_controls": 21,
+    "main_CI": "37143242659 SUCCESS",
+    "remote_files_byte_exact": 135,
+    "remote_bytes": 843371
+  },
+  "last_original_execution_utc": "2026-10-03T17:20:16.359351Z",
+  "last_remote_restore_comparison_utc": "2026-10-03T17:54:19.820581+00:00",
+  "next_batch017": {
+    "ids": [
+      "M1346",
+      "M1349",
+      "M1270"
+    ],
+    "owner": "parent single dot executor",
+    "branch": "dot/public-strategies-20261003-b009-daily3",
+    "base_commit": "6ad580b39857ceef14094a2133e69831517d5c78",
+    "contract_sha256": "4ff3630419515d73e2cfc00e57cfdaf952ea8352dba31329aa6c40dac30c8ade",
+    "status": "PARENT_REPORTS_M1346_M1270_8CONFIGS_EXECUTED_QA_ONGOING_NOT_ROOT_ACCEPTED",
+    "historical_runs": 8,
+    "planned_strategy_configurations": 12,
+    "planned_new_controls": 0,
+    "M1349": "v2independentsyntheticPASS source96a2e401e78e9e0567e343d8a55f43342bd0ed0c; remotepind306d09907562dc7c6c3482bbeb202458cd7b03c; ownC0notyetreported",
+    "historical_runs_reported": 8,
+    "counting_note": "Parent reported original execution count; acceptedcumulative totals remain38/155/21 until root acceptance."
+  },
+  "last_independent_local_acceptance_utc": "2026-10-03T17:33:45.937619+00:00",
+  "batch018": {
+    "id": "M1347",
+    "contract_path": "catalog-hypothesis-batch018-output-contract-20261003.json",
+    "contract_sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553",
+    "rules_sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4",
+    "historical_runs": 0,
+    "planned_strategy_configurations": 4,
+    "planned_new_controls": 0,
+    "scope": "fixed2400subset; sourcefull11retainedprivately/publicliteraloperationalexcerpt only"
+  },
+  "shared_kernel_v2": {
+    "delivered_pin": "d306d09907562dc7c6c3482bbeb202458cd7b03c",
+    "engine_sha256": "2b3354dc5c210c66749c5b1e595831abb2adc3f6fff6b9b5f06d22e9fcb39219",
+    "independent_synthetic_review": "PASS",
+    "new_historical_runs": 0,
+    "PR": 32,
+    "current_head": "45803a479db509782d68c070743af31f42534659",
+    "main_merged": false,
+    "old_v1_bytes_unchanged": true
+  },
+  "last_original_execution_scope": "Only independently root-accepted original execution timestamp; newer parent-reported executions are not yet accepted and their timestamp is not supplied."
+}

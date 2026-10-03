@@ -1,0 +1,247 @@
+{
+  "schema": "batch016-remote-hash-reference-recovery/v1",
+  "status": "REMOTE_HASH_REFERENCE_REBUILD_PASS",
+  "checked_utc": "2026-10-03T17:54:19.820581+00:00",
+  "source": {
+    "repository": "quant-research-lab",
+    "remote": "origin",
+    "branch": "codex/catalog-hypothesis-batch017-20261003",
+    "commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "reviewer_actual_fetch": true,
+    "fetch_utc": "2026-10-03T17:49:06.455550+00:00",
+    "publication_union": 96,
+    "publication_union_bytes": 305705,
+    "publication_manifests": {
+      "M1396": {
+        "path": "research/public-strategies/M1396/publication-manifest.v1.json",
+        "bytes": 10403,
+        "sha256": "ee8d68770a697e372021989c192674b6db6cf96b8ea0eeee450ecb4370454c6f",
+        "git_blob": "50197c839595930a7f6c137ac7bdd2f6697001c3"
+      },
+      "M1463": {
+        "path": "research/public-strategies/M1463/publication-manifest.v1.json",
+        "bytes": 10404,
+        "sha256": "ae06e451a8dcc6f8c09ca4a49205860cefb09efab4cccc06f754032a0dfd94ae",
+        "git_blob": "5e4377b2d14470c5be587da5999e839ecd3ea736"
+      }
+    },
+    "supports": [
+      {
+        "path": "research/public-strategies/M1358/recovery/remote-core-v1/locked_exec.py",
+        "bytes": 640,
+        "sha256": "026689431883333692dd7b5208f6c5ac5d3bc7a835379b867db39e8bbabe9362",
+        "git_blob": "42c765b177577886756d7909bf6aed2fe8d9f617"
+      },
+      {
+        "path": "research/public-strategies/M1358/recovery/remote-core-v1/offline-guard/sitecustomize.py",
+        "bytes": 630,
+        "sha256": "75f72285633c844c27b92faf6babda6a10f4cb5d58cbf160f97950751e257047",
+        "git_blob": "71c0402b4d61c30b3440d2140d101dd909747fb2"
+      },
+      {
+        "path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+        "bytes": 8303,
+        "sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+        "git_blob": "5f2db073a2af88c1f96c1de98679beaee907905e"
+      },
+      {
+        "path": "research/public-strategies/catalog-hypothesis-batch016-output-contract-20261003.json",
+        "bytes": 3799,
+        "sha256": "286e1c8cd712f79afe4a6864a78731d7d449085a820370727c477da9e514fca7",
+        "git_blob": "c165517651748feab641f7cd80ed09ff4799d334"
+      }
+    ],
+    "all_source_C0_and_kernel_unchanged": true,
+    "worker_source_or_prior_results_used": false
+  },
+  "IDs": {
+    "M1396": {
+      "status": "REMOTE_HASH_REFERENCE_REBUILD_PASS",
+      "payloads_size_sha256_exact": 30,
+      "manifest_byte_exact": true,
+      "total_output_files": 31,
+      "expected_only_remote": true,
+      "C0_sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+      "copied_frozen_files": 24,
+      "oracle": {
+        "status": "PASS",
+        "features": 762,
+        "nav_rows": 2924,
+        "decision_rows": 2924,
+        "monthly_rows": 96,
+        "fill_rows": 488,
+        "strategy_configurations": 4,
+        "new_control_configurations": 0,
+        "source_signal": "family independent Fraction features supplied and verified separately",
+        "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+        "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+        "engine_runs": 0
+      },
+      "engine_executions": 1,
+      "restore_cli_invoked": false,
+      "original_run_and_verify_invoked": true,
+      "full_original_results_available": false,
+      "new_trials": 0,
+      "new_controls": 0,
+      "strict_reproductions": 0,
+      "expected_manifest_sha256": "77b980470ba4c78a0af62f5855539589ff57b4aaedafbf194c46e4d24ce1c1f5",
+      "oracle_sha256": "87c48a8867a97e1ea7bab61207fd9327c7c12a3beb9bad7451d4037b40bde213"
+    },
+    "M1463": {
+      "status": "REMOTE_HASH_REFERENCE_REBUILD_PASS",
+      "payloads_size_sha256_exact": 30,
+      "manifest_byte_exact": true,
+      "total_output_files": 31,
+      "expected_only_remote": true,
+      "C0_sha256": "93914fbd795d4e80363d3ad4ffbe96fb429ac25df71f31598d28f3c9a38b0b80",
+      "copied_frozen_files": 24,
+      "oracle": {
+        "status": "PASS",
+        "features": 762,
+        "nav_rows": 2924,
+        "decision_rows": 2924,
+        "monthly_rows": 96,
+        "fill_rows": 156,
+        "strategy_configurations": 4,
+        "new_control_configurations": 0,
+        "source_signal": "family independent Fraction features supplied and verified separately",
+        "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+        "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+        "engine_runs": 0
+      },
+      "engine_executions": 1,
+      "restore_cli_invoked": false,
+      "original_run_and_verify_invoked": true,
+      "full_original_results_available": false,
+      "new_trials": 0,
+      "new_controls": 0,
+      "strict_reproductions": 0,
+      "expected_manifest_sha256": "fbd8aa6085f08b4546b03c1c703b7b885198ea87b9b345cfca454ecc11c9f881",
+      "oracle_sha256": "cb4dc100ed0fa255040ec28fccd1f434daa227744c6d8dbb9c76a0eb207d2f64"
+    }
+  },
+  "input": {
+    "raw_objects": 50,
+    "provider_checksums": 25,
+    "ZIP_CRC": 25,
+    "canonical_bytes": 128196,
+    "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "prewarm": 31,
+    "evaluation": 731,
+    "raw_external_cache_required": true,
+    "raw_in_Git": false,
+    "new_market_requests": 0,
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT_finality": "NOT_PROVEN"
+  },
+  "control": {
+    "id": "M1258",
+    "case": "buyhold",
+    "files_read_only_reused": 7,
+    "control_replayed": false,
+    "source_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+    "reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+    "actual_remote_recovery_receipt_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+    "identity": "Same BTCUSDT daily input48e4,731bars,100000USDT,100% fee-inclusive,fee8bps/slip2bps,Decimal50,no final liquidation; seven hashes checked against both public references."
+  },
+  "counts": {
+    "recovery_engine_executions": 2,
+    "existing_strategy_configurations_recovered": 8,
+    "controls_reexecuted": 0,
+    "new_strategy_trials": 0,
+    "new_controls": 0,
+    "strict_reproductions": 0
+  },
+  "comparison": {
+    "payload_files_with_remote_size_and_SHA256_match": 60,
+    "manifests_byte_equal": 2,
+    "total_output_files": 62,
+    "full_prior_payloads_available": false,
+    "original_restore_CLI_invoked": false,
+    "original_restore_limitation": "Requires full prior financial payloads. Not called; source/input copy and original run_replay+verify commands reproduced by external driver; references are exclusively fixed remote size/SHA, not old result bytes.",
+    "driver_method": "Copy original C0 and shared kernel as original restore describes; run original frozen run_replay.py once per ID then original verify_replay.py; independently compare each new result to the fixed remote length/SHA and remote manifest bytes.",
+    "self_reference_adapter_used": false,
+    "abandoned_attempt_note": "A hash-reference Path adapter was drafted and tested only on artificial files, then rejected before any engine execution because its byte comparator would self-compare. It is not used or shipped in this recovery.",
+    "actual_private_driver_sha256": "0cbc991943b392787c4ff8fe36dd2fe9e492e32641c18c6d5a5db40f5db14193",
+    "portable_driver": {
+      "file": "restore_remote_core.py",
+      "bytes": 7826,
+      "sha256": "7b0a8ce8f37d69dc811764530433dc8dc9a5c5265d6c7fdfc820597d8b7402e5"
+    },
+    "portable_changes": "Only five filesystem/runtime bindings parameterized into environment variables; no calculation, comparison, command or restore logic changed; parsed statically, not rerun as additional history."
+  },
+  "environment": {
+    "exact_lock_asserted": true,
+    "offline_guard": "Reused remote Python socket audit guard; not OS network namespace",
+    "guarded_python_processes": 5,
+    "network_attempts_during_rebuild_replay": 0,
+    "Git_fetch_operations": 1,
+    "flock_nonblocking": true,
+    "minimum_free_disk_bytes": 13755498496
+  },
+  "resources": [
+    {
+      "stage": "input-rebuild",
+      "start_utc": "2026-10-03T17:54:18.932430+00:00",
+      "end_utc": "2026-10-03T17:54:19.069696+00:00",
+      "wall_seconds": 0.13727384000230813,
+      "child_cpu_seconds": 0.136785,
+      "max_child_rss_kib": 27820,
+      "returncode": 0
+    },
+    {
+      "stage": "M1396-run",
+      "start_utc": "2026-10-03T17:54:19.072975+00:00",
+      "end_utc": "2026-10-03T17:54:19.262588+00:00",
+      "wall_seconds": 0.18962899899634067,
+      "child_cpu_seconds": 0.18917500000000004,
+      "max_child_rss_kib": 30216,
+      "returncode": 0
+    },
+    {
+      "stage": "M1396-verify",
+      "start_utc": "2026-10-03T17:54:19.262935+00:00",
+      "end_utc": "2026-10-03T17:54:19.435246+00:00",
+      "wall_seconds": 0.17232545799924992,
+      "child_cpu_seconds": 0.17193000000000003,
+      "max_child_rss_kib": 30216,
+      "returncode": 0
+    },
+    {
+      "stage": "M1463-run",
+      "start_utc": "2026-10-03T17:54:19.440035+00:00",
+      "end_utc": "2026-10-03T17:54:19.621271+00:00",
+      "wall_seconds": 0.18124926200107438,
+      "child_cpu_seconds": 0.18084700000000004,
+      "max_child_rss_kib": 30468,
+      "returncode": 0
+    },
+    {
+      "stage": "M1463-verify",
+      "start_utc": "2026-10-03T17:54:19.621580+00:00",
+      "end_utc": "2026-10-03T17:54:19.816323+00:00",
+      "wall_seconds": 0.1947584830049891,
+      "child_cpu_seconds": 0.1943639999999999,
+      "max_child_rss_kib": 30468,
+      "returncode": 0
+    }
+  ],
+  "evidence": {
+    "fetch_private_sha256": "b52dfd5a1af1b16ce3067075d37fa215b143a989771bb6b6fdfc3eae7fa33116",
+    "source_private_sha256": "4fa6d778404a371243648351f28892ef031e0726be2b45a3ead1ea00b6f2804e",
+    "comparison_private_sha256": "a1e2d0567b366b7ee17b5dd8a0f0fccb768415915343a62bfd28bc0c52727cf9",
+    "input_QA_sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909",
+    "control_reuse_sha256": "ce621c286859a7cc292b49e337a5469bcfbbcb26506fdf8ff9c036f42d2b6036",
+    "prior_independent_final_QA_sha256": "7c22c428c1d4e25faa0099c74f0f2c49578420fc7a2784e74617d075a4ba5c91"
+  },
+  "limits": [
+    "This verifies reconstruction against remote output fingerprints; only manifests, not full old result payloads, were byte-compared.",
+    "Frozen original restore_run CLI requires prior full result files and is unsuitable for hash-only remote references; it is preserved unchanged and was not invoked.",
+    "Exact Python/package environment, matching lawful raw cache and seven already accepted M1258 control files are external dependencies, not all contained in Git.",
+    "Source catalog hypotheses remain unverified as author implementations; exposed 2023-2024 window is not OOS, strict count remains zero.",
+    "Library complete private backup remains unverified/unuploaded (reported helper HTTP 401). This remote Git core result does not resolve that separate gap.",
+    "Future public source availability and unchanged data bytes are not guaranteed; fail on any mismatch, no substitute data or relaxed pins."
+  ]
+}
