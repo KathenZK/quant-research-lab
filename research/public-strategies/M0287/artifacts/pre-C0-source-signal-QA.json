@@ -1,0 +1,116 @@
+{
+  "id": "M0287",
+  "status": "PASS_SOURCE_AND_SIGNAL_NO_RETURNS",
+  "rows": 114336,
+  "evaluation_rows": 105408,
+  "independent_receipt_sha256": "14e92c185fc03d216fcd553db557fef7314b348bf4f6e0b83ba6b05c8bea4e30",
+  "historical_returns_calculated": false,
+  "account_replay_calls": 0,
+  "market_requests": 0,
+  "evidence": {
+    "protocol_sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124",
+    "adapter_sha256": "8f1d81d7c94ec040aa0adb1b182be58d5089866dc721131b65f72592c55035fd",
+    "source_sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+    "original_catalog_sha256": "9f8b48830a18cc6d721581148b6fbd6555746eade48aeb6b23f2ced6af2491a2",
+    "rows": 114336,
+    "evaluation_rows": 105408,
+    "feature_readiness": {
+      "sma5": {
+        "first_valid_index": 4,
+        "evaluation_nan_rows": 0
+      },
+      "sma200": {
+        "first_valid_index": 199,
+        "evaluation_nan_rows": 0
+      },
+      "rsi": {
+        "first_valid_index": 14,
+        "evaluation_nan_rows": 0
+      },
+      "resample_10_rsi": {
+        "first_valid_index": 29,
+        "evaluation_nan_rows": 0
+      },
+      "resample_40_rsi": {
+        "first_valid_index": 119,
+        "evaluation_nan_rows": 0
+      }
+    },
+    "signal_counts": {
+      "all_entry": 5153,
+      "all_exit": 41999,
+      "evaluation_entry": 4692,
+      "evaluation_exit": 38836,
+      "evaluation_collision": 0
+    },
+    "complete_group_availability": {
+      "10": {
+        "rows": 114336,
+        "available_rows": 114335,
+        "min_lag_ms": 0.0,
+        "max_lag_ms": 300000.0,
+        "all_OHLCV_RSI_date_equal": true,
+        "first_valid_RSI": 29
+      },
+      "40": {
+        "rows": 114336,
+        "available_rows": 114329,
+        "min_lag_ms": 0.0,
+        "max_lag_ms": 2100000.0,
+        "all_OHLCV_RSI_date_equal": true,
+        "first_valid_RSI": 119
+      }
+    },
+    "allrow_original_shared_bridge": "PASS",
+    "allrow_independent_features_rules": "PASS",
+    "causality": {
+      "cuts": [
+        119,
+        120,
+        199,
+        200,
+        8927,
+        8928,
+        8929,
+        8930,
+        50000,
+        50001,
+        50002,
+        50003,
+        50004,
+        50005,
+        50006,
+        50007,
+        114335
+      ],
+      "columns": [
+        "date",
+        "sma5",
+        "sma200",
+        "resample_10_date",
+        "resample_10_open",
+        "resample_10_high",
+        "resample_10_low",
+        "resample_10_close",
+        "resample_10_volume",
+        "resample_10_rsi",
+        "resample_40_date",
+        "resample_40_open",
+        "resample_40_high",
+        "resample_40_low",
+        "resample_40_close",
+        "resample_40_volume",
+        "resample_40_rsi",
+        "rsi",
+        "enter_long",
+        "exit_long",
+        "entry_signal",
+        "exit_signal"
+      ],
+      "prefix_future": "PASS"
+    },
+    "Boolean_fuzz_rows": 2000,
+    "historical_returns_calculated": false,
+    "account_calls": 0
+  }
+}

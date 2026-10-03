@@ -1,0 +1,125 @@
+{
+  "record_id": "M0289",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1027,
+      "sha256": "8543ac1651baa580c288dc13eba22fd233ce1a612e8ea3dc01f5510750fdb12d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5461,
+      "sha256": "850a96ec38739a5e4df6ae0622c134c47f10cd2a877cc8ee110751fa7cd8a8ab"
+    },
+    {
+      "path": "artifacts/catalog-original11.csv",
+      "bytes": 451,
+      "sha256": "d4bd97225bd9aac38faafaa37e9d3f34781e0d7b5bfb74e87b93cb7fff41fb5a"
+    },
+    {
+      "path": "artifacts/catalog-original11.json",
+      "bytes": 540,
+      "sha256": "1d380f6e26d2a50e6eb46be8359cc077912775c39aea81b30d4c457ced755cdc"
+    },
+    {
+      "path": "artifacts/pre-C0-source-signal-QA.json",
+      "bytes": 1643,
+      "sha256": "62666a343a62f46df1cb56907bdc12c1eb1da927e378c17436870c1c464fe486"
+    },
+    {
+      "path": "artifacts/results/base-daily-equity.json",
+      "bytes": 49912,
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d"
+    },
+    {
+      "path": "artifacts/results/core-ledger.json",
+      "bytes": 6084,
+      "sha256": "c317f68cc7c1a3ad09a43cd46ac456ce6a66e97c77efd6a94c69f574e2a62db0"
+    },
+    {
+      "path": "artifacts/results/delay2-daily-equity.json",
+      "bytes": 49912,
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d"
+    },
+    {
+      "path": "artifacts/results/fee0-daily-equity.json",
+      "bytes": 49912,
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d"
+    },
+    {
+      "path": "artifacts/results/fee20-daily-equity.json",
+      "bytes": 49912,
+      "sha256": "bfa7406baa3c8bf52716009a3d1691c55be33ee152ee9fc6a37d667f8ea6405d"
+    },
+    {
+      "path": "artifacts/results/nonstatistical-fill-sample.json",
+      "bytes": 176,
+      "sha256": "47ddc94fed47f2ef51d32ac0027728a3c1675e792716dde4178127318dce43f8"
+    },
+    {
+      "path": "artifacts/results/runtime.json",
+      "bytes": 1072,
+      "sha256": "939e2811a724a9d46dcc48b3be875765457ee5e3c4f21f8e61e561090a4af2c3"
+    },
+    {
+      "path": "artifacts/results/summary.json",
+      "bytes": 5890,
+      "sha256": "a984a979408462d2ebdd4f0169a87eb2e485b618b95334c5804f02ef7f1b0070"
+    },
+    {
+      "path": "artifacts/results/validation-summary.json",
+      "bytes": 692,
+      "sha256": "5e278694aa4b00219002e23e755e25b715b615b9f23b4cd5a2c6c0d7a1785434"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 649,
+      "sha256": "a0627dac195a8e66c4b962c612086313f76138fac403181d7c43a5baf7104448"
+    },
+    {
+      "path": "m0289-core-ledger.md",
+      "bytes": 390,
+      "sha256": "8a2c4d8f481250d699792d19b58da177ec6fcfe63404e20aa0321e432125d494"
+    },
+    {
+      "path": "scripts/adapter.py",
+      "bytes": 414,
+      "sha256": "36a00222b5c2ae5f0ece9025d6d3ac8475678ae2d62eff9dbf86d3f3d50040b3"
+    },
+    {
+      "path": "specs/C0.json",
+      "bytes": 4721,
+      "sha256": "5f68e6b7f1d816dcaf1aebd459f915122f90179d07b196c3ea01c4a89519f5c7"
+    },
+    {
+      "path": "specs/catalog-source-manifest.json",
+      "bytes": 309,
+      "sha256": "fcec0efdd14da20de12ce937d4b723ce13791c0263e67c6911987892af7e3eb1"
+    },
+    {
+      "path": "specs/exposure.json",
+      "bytes": 524,
+      "sha256": "01eb42f16b0f16f5ddbf54db853dd12b4012bea2e75e8f98e259d2b15c113e1a"
+    },
+    {
+      "path": "specs/protocol.json",
+      "bytes": 22093,
+      "sha256": "d2b31e0809b76e80597a933cba7766de1536a5dedb1986fce45889c7e90747e7"
+    },
+    {
+      "path": "specs/source-rule-card.json",
+      "bytes": 4443,
+      "sha256": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af"
+    }
+  ],
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
+  "raw_market_data": false,
+  "full_ledgers": false,
+  "private_Library_IDs": false,
+  "shared_kernel_modified": false
+}

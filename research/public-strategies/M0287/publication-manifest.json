@@ -1,0 +1,135 @@
+{
+  "record_id": "M0287",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1037,
+      "sha256": "bd4ea80f732e0aa26c40df4064d603ad265668c7c0ec08aaac4bc7966f35d94e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5085,
+      "sha256": "89b97914071f777423b5a779c967f3002c1b556dce2af967a9602822c80f7322"
+    },
+    {
+      "path": "artifacts/catalog-original11.csv",
+      "bytes": 453,
+      "sha256": "1104e47e08c9e7dcf3c38465fff94c72f02eb4d0aa0c44070b78efed72c3d933"
+    },
+    {
+      "path": "artifacts/catalog-original11.json",
+      "bytes": 542,
+      "sha256": "b467c3e8f81702becf7fca8b65dd3f77a101d953c896d48125f656e2d9c54a6f"
+    },
+    {
+      "path": "artifacts/pre-C0-source-signal-QA.json",
+      "bytes": 3001,
+      "sha256": "98a5839692a6a430b72f150ff708557ad026aab6dfb1ebf60a0d5d4e95a8b0d0"
+    },
+    {
+      "path": "artifacts/results/base-daily-equity.json",
+      "bytes": 59364,
+      "sha256": "0a1708b98142c8ce7f1757cd0a82f6085278ffdb40c4593ee3b010c46ff4902f"
+    },
+    {
+      "path": "artifacts/results/core-ledger.json",
+      "bytes": 6651,
+      "sha256": "5f2154bffd9bd8dac7344317a671589125ce84a7a4422df82c68ed7b75d37cbd"
+    },
+    {
+      "path": "artifacts/results/delay2-daily-equity.json",
+      "bytes": 59267,
+      "sha256": "ac4710eeee9aef77bb9be83ef5c0e9ac12e8a257f723f1ecf5dd86a4f75c5c8e"
+    },
+    {
+      "path": "artifacts/results/fee0-daily-equity.json",
+      "bytes": 59791,
+      "sha256": "80424fba512351179afb35267a4db9c8864f608be1b071b62fa4478e15c7dce9"
+    },
+    {
+      "path": "artifacts/results/fee20-daily-equity.json",
+      "bytes": 59246,
+      "sha256": "c565181d392f137e55c8f61335aab102cbb60ae36eeb9fcd57ee7357a1ba0c0d"
+    },
+    {
+      "path": "artifacts/results/nonstatistical-fill-sample.json",
+      "bytes": 3167,
+      "sha256": "6697149b5f3e66aa006feb36a3aaabbf242ba5eb20bdd9dfa8ab39d0001ba92e"
+    },
+    {
+      "path": "artifacts/results/runtime.json",
+      "bytes": 1065,
+      "sha256": "e0999448923d61d3df6122766f3dd35c6f9269976633a883df463198826d370b"
+    },
+    {
+      "path": "artifacts/results/summary.json",
+      "bytes": 6900,
+      "sha256": "516ebf2b8b84ce5d20f779acbf30c7eef4c357a12d8d910a8913a4b164a49392"
+    },
+    {
+      "path": "artifacts/results/validation-summary.json",
+      "bytes": 692,
+      "sha256": "8b13b2fb44ba0cec684077c0f1bd2521dfcb8b3931a8d54871f8e203e6c609dc"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 649,
+      "sha256": "fc4b36806620a8d8c6bfc7e97ca72f0f0a3bde973752531ff3078bc44fb02999"
+    },
+    {
+      "path": "history/adapter-before-pandas-ta-column-fix.py",
+      "bytes": 339,
+      "sha256": "78eed840c3b204628c8b990fe7c44e52a050b1f6c2e4e8971a92a1e0d724598e"
+    },
+    {
+      "path": "history/protocol-before-pandas-ta-column-fix.json",
+      "bytes": 22332,
+      "sha256": "3f3360c0a0c8d5cef8c3368c70bd23f49ce9c80f64af462082f6d9992c5a2e83"
+    },
+    {
+      "path": "m0287-core-ledger.md",
+      "bytes": 390,
+      "sha256": "7a1d071dbe2264e91a977430042e4a137ddea72a509388c8cc8c64d4676a6515"
+    },
+    {
+      "path": "scripts/adapter.py",
+      "bytes": 363,
+      "sha256": "8f1d81d7c94ec040aa0adb1b182be58d5089866dc721131b65f72592c55035fd"
+    },
+    {
+      "path": "specs/C0.json",
+      "bytes": 4721,
+      "sha256": "6f4d664059798508748ff01c03c8f98c8a3648908bf53e4fc44052c4965956e6"
+    },
+    {
+      "path": "specs/catalog-source-manifest.json",
+      "bytes": 309,
+      "sha256": "e7905c00500a6e438462361400f3b42b659c2aa4fef74f6029c0789dfc2430a6"
+    },
+    {
+      "path": "specs/exposure.json",
+      "bytes": 524,
+      "sha256": "f73d7cd70fd72b7ca49715f17dea6aae3aa8624d76aef6db4cdbe6d8fb46c849"
+    },
+    {
+      "path": "specs/protocol.json",
+      "bytes": 22332,
+      "sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124"
+    },
+    {
+      "path": "specs/source-rule-card.json",
+      "bytes": 3518,
+      "sha256": "fa6ccc292ca604b0246264c81c8dd015f33b27d3e1c0edbfffd0cb8bee3e02e3"
+    }
+  ],
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
+  "raw_market_data": false,
+  "full_ledgers": false,
+  "private_Library_IDs": false,
+  "shared_kernel_modified": false
+}
