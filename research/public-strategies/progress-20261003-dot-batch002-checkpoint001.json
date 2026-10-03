@@ -1,0 +1,107 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T11:08:52.101023+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "dot-batch002",
+  "checkpoint": 1,
+  "source_commit": "60eaa51db1e6fee27ca4afc4ed752a1435b64a80",
+  "new_accepted_ids": [
+    "M0275"
+  ],
+  "new_blocked_ids": [
+    "M0274"
+  ],
+  "new_strategy_configurations": 4,
+  "new_controls": 1,
+  "strict_reproductions": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288"
+  ],
+  "cumulative_strategy_configurations": 51,
+  "cumulative_controls": 13,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "active_not_counted_complete": {
+    "M0293": "executor replay complete; coordinator acceptance pending",
+    "M0316": "dot exclusive execution; no accepted receipt",
+    "M0317": "dot exclusive execution; no accepted receipt"
+  },
+  "independent_coordinator_validation": {
+    "M0275": {
+      "fidelity": "HYPOTHESIS",
+      "use": "DIAGNOSTIC_ONLY",
+      "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+      "replayed_outputs": 22,
+      "byte_identical_outputs": 21,
+      "only_nondeterministic_difference": "summary.json peak_rss_kib",
+      "independent_decimal_full_replay": "PASS",
+      "ledger_checks": "PASS:5 cases",
+      "source_signal_equality": "PASS:4572 rows;107 prefixes",
+      "conclusion": "No promotion: base return below buy-and-hold with worse drawdown; 4h ROI timing and age gates remain proxies."
+    },
+    "M0274": {
+      "valid_market_replays": 0,
+      "source_sha256": "48e405f6d073944da9b993dfbce03aa980d0eea8a5da3c4a6b60f2f1b7264b86",
+      "synthetic_checks_identical": 4,
+      "causality_status": "FAIL_FULL_TRANSFORM_PREFIX_CAUSALITY",
+      "caveat": "Two currently selected columns unchanged after 62 synthetic warmup rows; full-pipeline failure alone does not prove actual trade lookahead.",
+      "raw_restore_at_coordinator": false,
+      "blocker": "Native 12h window incomplete: verified only 14 of 25 required months; 2024-02 access blocked."
+    }
+  },
+  "remote_backup_receipts": {
+    "M0275": {
+      "private_library_save_confirmed_by_receiving_coordinator": true,
+      "private_library_version": 1,
+      "archive_sha256": "0d72637769e634951d78f70a51ba9fdad0702c6604784a287d14c62abf08e9a8",
+      "restored_members": 73,
+      "replayed_outputs": 22,
+      "byte_identical_outputs": 21
+    },
+    "M0274": {
+      "private_library_save_confirmed_by_receiving_coordinator": true,
+      "private_library_version": 0,
+      "restored_members": 40,
+      "blocker_diagnostic_replayed": true
+    }
+  },
+  "public_delivery": {
+    "M0274": {
+      "files": 36,
+      "bytes": 157060,
+      "manifest_sha256": "14bb814038bb61ac3839ba0d11f0977ced983493ec8dc4eaabc168b1d9abca22"
+    },
+    "M0275": {
+      "files": 66,
+      "bytes": 311978,
+      "manifest_sha256": "3bd8ba398829160e54cc44ef46ef20a79fe16c07363590afc77eab8e724fbae8"
+    },
+    "all_102_frozen_delivery_files_preserved": true
+  },
+  "site": {
+    "writer": "dot exclusively",
+    "new_batch_import_or_deploy_claimed": false
+  },
+  "restorations_and_rechecks_are_not_new_trials": true,
+  "legacy_proxy_trials_counted": false,
+  "frozen_evidence_overwritten": false,
+  "legacy_6973_full_field_persistence": "PAUSED: repair required to retain all 11 source fields; hash-only inventory is not full knowledge preservation"
+}

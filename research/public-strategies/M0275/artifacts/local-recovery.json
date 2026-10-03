@@ -1,0 +1,136 @@
+{
+  "status": "PASS_LOCAL_RECOVERY",
+  "started_at_utc": "2026-10-03T10:30:51.514604+00:00",
+  "finished_at_utc": "2026-10-03T10:30:53.601104+00:00",
+  "command": [
+    "/workspace/shared/dot-public-strategies-20261003/.venv/bin/python",
+    "/workspace/shared/dot-public-strategies-20261003-b002/research/public-strategies/M0275/scripts/run_replay.py",
+    "--input",
+    "/workspace/shared/dot-public-strategies-20261003/data/raw/ohlcv/exchange=binance/market_type=spot/timeframe=4h/source=binance_vision/snapshot=dot-b001-rebuild-v1/BTCUSDT-4h-202212-202412-native12.csv",
+    "--output",
+    "/workspace/shared/dot-public-strategies-20261003-b002/work-M0275/recovery-run",
+    "--spec",
+    "/workspace/shared/dot-public-strategies-20261003-b002/research/public-strategies/M0275/specs/protocol.json"
+  ],
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+  "input_is_existing_independently_network_rebuilt_snapshot": true,
+  "new_network_recapture_for_M0275": false,
+  "no_reference_results_used_by_replay_process": true,
+  "summary_difference_allowed": [
+    "peak_rss_kib"
+  ],
+  "files": {
+    "base-daily-nav.csv": {
+      "reference_sha256": "c9ee4bf9f2e18522ef3c1ac28240a0c83de5dabe2d50791e09cfca9f1e1d9a31",
+      "recovered_sha256": "c9ee4bf9f2e18522ef3c1ac28240a0c83de5dabe2d50791e09cfca9f1e1d9a31",
+      "financial_content_equal": true
+    },
+    "base-nav.csv": {
+      "reference_sha256": "9c0cba82cb5be498852ee54049483948c14baca9c76376579a829bca9c07f1e9",
+      "recovered_sha256": "9c0cba82cb5be498852ee54049483948c14baca9c76376579a829bca9c07f1e9",
+      "financial_content_equal": true
+    },
+    "base-roi-boundaries.json": {
+      "reference_sha256": "2e78d52ac4e331c59d93931a2b693cdb69bbdda63af5c2b1f95bc0a401eda376",
+      "recovered_sha256": "2e78d52ac4e331c59d93931a2b693cdb69bbdda63af5c2b1f95bc0a401eda376",
+      "financial_content_equal": true
+    },
+    "base-trades.csv": {
+      "reference_sha256": "dabc590afb74772c217ce62fa0f04b3ef4036754fae79be6a0907a1750af70b9",
+      "recovered_sha256": "dabc590afb74772c217ce62fa0f04b3ef4036754fae79be6a0907a1750af70b9",
+      "financial_content_equal": true
+    },
+    "buyhold-daily-nav.csv": {
+      "reference_sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "recovered_sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "financial_content_equal": true
+    },
+    "buyhold-nav.csv": {
+      "reference_sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "recovered_sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "financial_content_equal": true
+    },
+    "buyhold-roi-boundaries.json": {
+      "reference_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "recovered_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "financial_content_equal": true
+    },
+    "buyhold-trades.csv": {
+      "reference_sha256": "3f8d6cc6387e76aeba2d949b7a43fbc24c015f165f836a9ec05ce674942fe5f8",
+      "recovered_sha256": "3f8d6cc6387e76aeba2d949b7a43fbc24c015f165f836a9ec05ce674942fe5f8",
+      "financial_content_equal": true
+    },
+    "delay2-daily-nav.csv": {
+      "reference_sha256": "aad2a8e3dcdac06aec6be90edb0e74dc711b58fa3ac357afc0cc5bc3008ad4db",
+      "recovered_sha256": "aad2a8e3dcdac06aec6be90edb0e74dc711b58fa3ac357afc0cc5bc3008ad4db",
+      "financial_content_equal": true
+    },
+    "delay2-nav.csv": {
+      "reference_sha256": "8192dbbd0f522077d45ae090b5cca6d93f42323ec1d12e61f2e3a7d61a0ebd74",
+      "recovered_sha256": "8192dbbd0f522077d45ae090b5cca6d93f42323ec1d12e61f2e3a7d61a0ebd74",
+      "financial_content_equal": true
+    },
+    "delay2-roi-boundaries.json": {
+      "reference_sha256": "b8f4a01077624fd1dab265748ae8ba0fc6f5fb62fde779c2fb11582d0a59ed8d",
+      "recovered_sha256": "b8f4a01077624fd1dab265748ae8ba0fc6f5fb62fde779c2fb11582d0a59ed8d",
+      "financial_content_equal": true
+    },
+    "delay2-trades.csv": {
+      "reference_sha256": "1fcc354b78892f2a1cacf580ba9a36350a5b3efa50bfcfa152c871725e65fe31",
+      "recovered_sha256": "1fcc354b78892f2a1cacf580ba9a36350a5b3efa50bfcfa152c871725e65fe31",
+      "financial_content_equal": true
+    },
+    "fee0-daily-nav.csv": {
+      "reference_sha256": "38a566f48f68c3dbfc6f28e99bdc399b17bab1dcc54b8f37391c1370b88b8c46",
+      "recovered_sha256": "38a566f48f68c3dbfc6f28e99bdc399b17bab1dcc54b8f37391c1370b88b8c46",
+      "financial_content_equal": true
+    },
+    "fee0-nav.csv": {
+      "reference_sha256": "efc911c7cba7cf82d803f85c497c1c5341ac4e5c70592de909389ecefd6f740c",
+      "recovered_sha256": "efc911c7cba7cf82d803f85c497c1c5341ac4e5c70592de909389ecefd6f740c",
+      "financial_content_equal": true
+    },
+    "fee0-roi-boundaries.json": {
+      "reference_sha256": "c17d4497a7285ba5ea101252888841362f6c5ced055eda9ed376716ada1d4a0a",
+      "recovered_sha256": "c17d4497a7285ba5ea101252888841362f6c5ced055eda9ed376716ada1d4a0a",
+      "financial_content_equal": true
+    },
+    "fee0-trades.csv": {
+      "reference_sha256": "89173ba80c8fe37900cee12183f3ee0227b791b4c338b339ef0e240159488473",
+      "recovered_sha256": "89173ba80c8fe37900cee12183f3ee0227b791b4c338b339ef0e240159488473",
+      "financial_content_equal": true
+    },
+    "fee20-daily-nav.csv": {
+      "reference_sha256": "5057a35be5716c5b411f98fe330e2bb2982c713b653bb78a9230f5251d030445",
+      "recovered_sha256": "5057a35be5716c5b411f98fe330e2bb2982c713b653bb78a9230f5251d030445",
+      "financial_content_equal": true
+    },
+    "fee20-nav.csv": {
+      "reference_sha256": "df36c43a4b2dac9436ce810450e333bf765acdb0670a9c8024c28608a3b02319",
+      "recovered_sha256": "df36c43a4b2dac9436ce810450e333bf765acdb0670a9c8024c28608a3b02319",
+      "financial_content_equal": true
+    },
+    "fee20-roi-boundaries.json": {
+      "reference_sha256": "30df275855e6dd8ec52441c3b883dfa8d017a319d4a50133f195bac3a96b1576",
+      "recovered_sha256": "30df275855e6dd8ec52441c3b883dfa8d017a319d4a50133f195bac3a96b1576",
+      "financial_content_equal": true
+    },
+    "fee20-trades.csv": {
+      "reference_sha256": "ec68f7591e995b879d6e3aa81707eae4453a15b522675076e17252db55cbfdc8",
+      "recovered_sha256": "ec68f7591e995b879d6e3aa81707eae4453a15b522675076e17252db55cbfdc8",
+      "financial_content_equal": true
+    },
+    "signals.csv": {
+      "reference_sha256": "4b37d909c384c10809dcccef1e288b28365deefeec74087aca21d6e49965d1dc",
+      "recovered_sha256": "4b37d909c384c10809dcccef1e288b28365deefeec74087aca21d6e49965d1dc",
+      "financial_content_equal": true
+    },
+    "summary.json": {
+      "reference_sha256": "a6d8d283fcd2c495991de9ed062e436c37360c3c470e125086ef239e1b2981fc",
+      "recovered_sha256": "c41faf879cf236d38e4358c5befd00525364fc5a2398cfb59ec45826e2233e2f",
+      "financial_content_equal": true
+    }
+  },
+  "offsite_backup": false
+}

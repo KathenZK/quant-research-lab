@@ -1,0 +1,25 @@
+{
+  "at_utc": "2026-10-03T10:38:12.240931+00:00",
+  "complete25_month_input_recovery": "NOT_RUN",
+  "complete25_month_network_recapture": "NOT_RUN",
+  "id": "M0274",
+  "independent_new_directory": true,
+  "network_requests_during_recovery": 0,
+  "offsite_backup": "NOT_PERFORMED_BY_WORKER",
+  "partial_qa_exact_match_except_timestamp": true,
+  "raw_or_full_source_in_public_package": false,
+  "recovered_outputs": {
+    "partial.json": "0cc05d9d64ad909da8519bf8fcec23de8ae1cdd93b5dec85b153a8c6de1c9133",
+    "static.json": "05d2fd9739a56ec40dcfc0a3005ed1661cacfb6db71a578e07626546fe072e61",
+    "synthetic.json": "94b9924abb0b098e9928bb0abc7a1dd0fb68864b030bc9bccf47299ad581f9ca"
+  },
+  "script_hashes": {
+    "audit_partial_capture.py": "413755b893fe9ea182904652e3e72dc18b47d1d7dd6774ace67b2d8a8453c97e",
+    "audit_source_static.py": "23ed4005a2fb11696bbef00074a7779e168ca7a7d1287b2401c2418ae6ed9844",
+    "audit_synthetic_causality.py": "ddc70fb0f150e7a7e983527c79cdf7b007b459808abe254a31095c809078eb91"
+  },
+  "static_checks_exact_match_except_timestamp": true,
+  "status": "PASS_LOCAL_OFFLINE_BLOCKER_RECOVERY",
+  "strategy_performance_recovery": "NOT_RUN_NO_STRATEGY_RUN",
+  "synthetic_checks_exact_match": true
+}

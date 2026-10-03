@@ -1,0 +1,19 @@
+{
+  "status": "PASS_C1_STATIC_CONTRACT_AND_HASH_REVIEW_NOT_RESULTS",
+  "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+  "frozen_file_count": 19,
+  "at_utc": "2026-10-03T10:27:58.390026+00:00",
+  "all_frozen_hashes_match": true,
+  "age_original_bytes_and_decoded_page_hash_match": true,
+  "age_proxy_only": true,
+  "samebar_roi_proxy_explicit": true,
+  "returns_seen_by_reviewer": false,
+  "still_pending": [
+    "synthetic execution cases",
+    "real independent ledger and metrics",
+    "execution prefixes",
+    "recovery",
+    "publication manifest"
+  ],
+  "strict_reproductions": 0
+}

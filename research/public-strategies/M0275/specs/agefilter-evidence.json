@@ -1,0 +1,21 @@
+{
+  "id": "M0275",
+  "status": "HISTORICAL_EXISTENCE_SUPPORTED_AGE_ELIGIBILITY_ASSUMED",
+  "source_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+  "publication_utc": "2022-07-06T14:00:00Z",
+  "historical_availability_not_later_than_utc": "2022-07-08T14:00:00Z",
+  "page_fetched_at_utc": "2026-10-03T10:26:36.480546Z",
+  "page_bytes": 100399,
+  "page_sha256": "7c2cca084bb8a03b16bbacb0859ab97c2d5a70ec509b8a7467549b4a052d18f9",
+  "response_content_encoding": "gzip",
+  "decoded_html_sha256": "2a8a64b9341b17cf300eb55064b1c5f3a5676eff288b2500078ef1ef67e9e746",
+  "bounded_quote": "zero-fee trading for BTC spot trading pairs at 2022-07-08 14:00 (UTC).",
+  "fact_paraphrase_zh": "公告名单明确包括BTC/USDT，足以支持该交易对在2022年7月已存在的历史事实；不是使用今天的上市名单。",
+  "earliest_possible_strategy_order_utc": "2023-01-01T04:00:00Z",
+  "age_lower_bound_days": 176.58333333333334,
+  "min_days_listed": 100,
+  "assumption": "BTC/USDT在历史存在证据与整个评价窗口之间未发生重上市重置；未逐日复刻AgeFilter所用的最近100根1d candle count。",
+  "framework_reference": "Freqtrade 2025.9 c66e221012cd4d68cfdacf4735b38af33a487961 AgeFilter supports_backtesting=NO",
+  "strict_agefilter_replication": false,
+  "pit_universe_proven": false
+}

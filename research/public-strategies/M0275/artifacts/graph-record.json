@@ -1,0 +1,50 @@
+{
+  "id": "M0275",
+  "name": "Heracles：BTC现货4h错位通道比值",
+  "status": "tested_hypothesis_only",
+  "reason": "固定buy_params 15/9与原ROI分钟阶梯；单BTC年龄代理、4h开盘观察执行。净回报、回撤和Sharpe均落后同仓位买持，未晋升。",
+  "tested_variants": 1,
+  "families": [
+    "PUBLIC-M0275-HERACLES"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_sha256_verified",
+    "source_rule_attribution_status": "original_AST_signals_and_fixed_risk_preserved_execution_age_proxy_declared",
+    "independent_validation": "PASS_INDEPENDENT_REPLAY",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS_LOCAL_RECOVERY",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "strict_replication": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0275-20261003-first-replay",
+      "variant_id": "M0275-BTCUSDT-4H-HERACLES-15-9-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+      "manifest_sha256": "87a51860555de9fa67681f720ca4c2eb33ef9a167cf24df33cbe141079ae00cb",
+      "family": "PUBLIC-M0275-HERACLES"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0275-20261003-first-replay",
+      "variant_id": "M0275-BTCUSDT-4H-HERACLES-15-9-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "95bea6e9c9f1dfe4f72e125506a95e43b723cef6491b7619f89a8db935621798",
+      "manifest_sha256": "87a51860555de9fa67681f720ca4c2eb33ef9a167cf24df33cbe141079ae00cb"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 with Binance additional terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "native archive canonicalization, channel indicators, assumed fills/costs/risk accounting, metrics and month-end normalization"
+  }
+}

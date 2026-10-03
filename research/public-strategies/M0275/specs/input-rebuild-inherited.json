@@ -1,0 +1,23 @@
+{
+  "status": "VERIFIED_SAME_INPUT_AND_CANONICAL_HASHES",
+  "primary_manifest_sha256": "f3dff3ccf7df26088643644b7859999063b79ddb354a0fb360208c583fa9760c",
+  "rebuild_manifest_sha256": "f130c0699fd184961d46b0badfc65576a1aa2524ac4eb08a803cfbbaff8224cb",
+  "primary_input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "rebuild_input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "exact_rebuilt_zip_objects": 25,
+  "exact_rebuilt_checksum_objects": 25,
+  "exact_rebuilt_csv_objects": 25,
+  "canonical_rows": 4572,
+  "canonical_bytes": 1298564,
+  "primary_completed_at_utc": "2026-10-03T08:10:58.239305Z",
+  "rebuild_completed_at_utc": "2026-10-03T08:18:15.757235Z",
+  "builder_sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+  "actual_public_source_requests_performed": true,
+  "future_availability_guaranteed": false,
+  "trusted": false,
+  "strict_core_finality": "NOT_ESTABLISHED_API_451",
+  "intrabar_or_tradability_proven": false,
+  "known_outage": "Binance spot trading suspended within 2023-03-24 08:00 and 12:00 UTC 4h buckets; 12:00 aggregate open is not evidence of a fill at 12:00.",
+  "license": "CC BY-NC-SA 4.0 plus Binance Vision Dataset Terms; personal nonproduction research only",
+  "free_disk_bytes": 30788509696
+}

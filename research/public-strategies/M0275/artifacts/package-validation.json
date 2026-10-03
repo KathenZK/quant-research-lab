@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "protocol_unchanged": true,
+  "frozen_files_checked": 19,
+  "python_syntax_files_checked": 17,
+  "relative_links_checked": 35,
+  "source_prefix_count": 107,
+  "no_raw_or_full_source_files_in_public_root": true,
+  "at_utc": "2026-10-03T10:44:21.328263+00:00"
+}
