@@ -1,0 +1,35 @@
+{
+  "status": "PASS_APPEND_ONLY_CORRECTION_REVIEW",
+  "commit": "c5e599b9881664187a7fe1a1767accda17eff943",
+  "base": "b9cc41083a2ca824e397fd24cadacb43f4d5ab67",
+  "prior_review_commit": "4b27f9ebc7741b55f70fab505e0f709909154750",
+  "prior_review_sha256": "8146123fdf7eb879c06522004f3790046b98b4858110582263a5e615e25cbc54",
+  "prior_failure_preserved": true,
+  "corrected_field": "remaining_prior_scope_blockers",
+  "005_bytes_retained": true,
+  "006_sha256": "204f9cc05e0dd1c29db6ceaeb561572c30bd46d61b617d12060334a323d6630c",
+  "006_supersedes_005_field_explicitly": true,
+  "006_other_facts_counts_unchanged": true,
+  "current_indexes_link006": true,
+  "diagnostic_yaml_and_decision_log_added": true,
+  "prior_sourcecards_C0_gate_files_unchanged": true,
+  "publication_scope": {
+    "file_count": 14,
+    "bytes": 145987,
+    "manifest": "FINAL-PUBLICATION.safe.json",
+    "manifest_sha256": "066fd7a3b9b53407771d523560708e0f26d6876cdd7a741b660b85710d8196f2"
+  },
+  "governance_v2_existing_log": {
+    "status": "PASS",
+    "sha256": "453507cfa62a668e3a786c7132bc09796340b5aec8c961153d3ea8018b1680d6",
+    "independently_rerun": false
+  },
+  "network_calls": 0,
+  "historical_runs": 0,
+  "repository_writes": 0,
+  "limits": [
+    "Only six-path correction diff independently rechecked; prior source/30-output checks carried by immutable review",
+    "No history release or Library persistence implied",
+    "Root owns remote push and CI"
+  ]
+}

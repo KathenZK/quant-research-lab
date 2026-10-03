@@ -113,3 +113,8 @@
 - [批020协调检查点003](progress-20261003-batch020-checkpoint003.json)：43 ID／175策略配置／22原始控制；新增准备与已执行研究分开记账。
 
 - [批020交付增补004](progress-20261003-batch020-delivery004.json)：43 ID／175配置／22原始对照不变；Lab PR42与Graph PR29精确main CI通过，26条离线展示，Library上传401仍未解决。
+
+- [批020交付增补005](progress-20261003-batch020-delivery005.json)：Graph PR30 精确 main CI 与远端字节回读通过，27条离线展示；351成员本地包恢复通过，Library保存仍为零。本次研究计数增量为零。
+- [批020历史运行剩余门禁](catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md)：M2903/M3710/M0974保持未放行；[独审回执](catalog-daily-next3-batch020-preflight-20261003/release-gates-independent-v1.safe.json)。
+- [批021 M1510既有来源准备](catalog-source-batch021-preflight-20261003/README.md)：父端独占来源准备；固定源码发现目录遗漏盈利退出门与限价执行，框架语义未锁，历史运行0。
+- [当前交付增补006](progress-20261003-batch020-delivery006.json)：纠正005的范围标签为本次Graph M1266／PR30；005原件和独审发现保留，43／175／22及所有历史门禁不变。

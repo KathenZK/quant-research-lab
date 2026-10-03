@@ -1,0 +1,201 @@
+{
+  "schema": "M1510-source-review-safe/v1",
+  "id": "M1510",
+  "status": "SOURCE_VERIFIED_EXECUTION_UNRESOLVED",
+  "created_at_utc": "2026-10-03T23:43:48.579992+00:00",
+  "role": "read-only source review support; parent single dot executor retains execution ownership",
+  "source": {
+    "repository": "davidzr/freqtrade-strategies",
+    "requested_commit_prefix": "9623c1f3",
+    "resolved_commit": "9623c1f3d8c7f60c8b411010fa26377e6ca99ab9",
+    "repository_commit_utc": "2023-11-05T15:22:08Z",
+    "strategy_first_publication_date": "UNKNOWN",
+    "path": "strategies/Babico_SMA5xBBmid/Babico_SMA5xBBmid.py",
+    "url": "https://github.com/davidzr/freqtrade-strategies/blob/9623c1f3d8c7f60c8b411010fa26377e6ca99ab9/strategies/Babico_SMA5xBBmid/Babico_SMA5xBBmid.py",
+    "raw_url": "https://raw.githubusercontent.com/davidzr/freqtrade-strategies/9623c1f3d8c7f60c8b411010fa26377e6ca99ab9/strategies/Babico_SMA5xBBmid/Babico_SMA5xBBmid.py",
+    "http_status": 200,
+    "capture_utc": "2026-10-03T23:36:23.149078+00:00",
+    "bytes": 1813,
+    "sha256": "64846c265b53f34dfdd117cc31b195466f09e1dc154a9f3c3835cf1eab4600fd",
+    "git_blob_sha1": "aace9bb4b79271b62a8b5350a85fe535cf1eeb81",
+    "git_blob_verified_against_fixed_directory_API": true,
+    "directory_files": [
+      "Babico_SMA5xBBmid.py"
+    ],
+    "no_strategy_local_params_or_dependency_lock_found": true
+  },
+  "license_evidence": {
+    "repo_license": "GNU General Public License, version3 text",
+    "path": "LICENSE",
+    "url": "https://github.com/davidzr/freqtrade-strategies/blob/9623c1f3d8c7f60c8b411010fa26377e6ca99ab9/LICENSE",
+    "bytes": 35141,
+    "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+    "same_commit_git_blob_verified": true,
+    "per_file_license_header": false,
+    "per_contributor_provenance_verified": false,
+    "full_source_published_by_this_task": false,
+    "license_does_not_cover_market_data": true
+  },
+  "literal_source_attributes": {
+    "minimal_roi": {
+      "0": 99999999
+    },
+    "stoploss": -0.99,
+    "trailing_stop": false,
+    "trailing_only_offset_is_reached": true,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.03,
+    "use_sell_signal": true,
+    "sell_profit_only": true,
+    "process_only_new_candles": true,
+    "order_types": {
+      "buy": "limit",
+      "sell": "limit",
+      "trailing_stop_loss": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false
+    },
+    "timeframe": "1d"
+  },
+  "self_authored_rule_summary": {
+    "fast_feature": "TA-Lib EMA on close, period5; class name SMA does not change call",
+    "slow_feature": "qtpylib Bollinger mid on typical OHLC price, window20/stds2; outer bands calculated but unused by signals",
+    "entry_event": "qtpylib crossed_above(fast EMA5, typical-price BBmid)",
+    "exit_event": "qtpylib crossed_above(typical-price BBmid, fast EMA5); framework sell-profit gate still applies",
+    "state_not_substituted_for_event": true,
+    "no_source_volume_filter": true,
+    "cross_equality_NaN_exact_semantics": "Requires pinned actual vendored qtpylib; not proven solely by call name"
+  },
+  "catalog_comparison": {
+    "principal_indicator_and_event_calls": "MATCH",
+    "timeframe_stoploss_ROI": "MATCH; ROI preserved as exact finite integer",
+    "material_omissions": [
+      "sell_profit_only=True",
+      "use_sell_signal=True",
+      "limit buy/sell/stoploss with off-exchange stop",
+      "trailing disabled despite configured trailing numbers",
+      "process_only_new_candles=True"
+    ],
+    "strategy_name_SMA_vs_actual_EMA": "Use actual EMA5 call; do not rewrite source",
+    "private_original_fields_or_annotations_copied_into_safe_output": false
+  },
+  "dependency_boundary": {
+    "imports": [
+      "freqtrade.strategy.interface.IStrategy",
+      "pandas.DataFrame",
+      "talib.abstract",
+      "freqtrade.vendor.qtpylib.indicators"
+    ],
+    "source_pins_versions": false,
+    "source_INTERFACE_VERSION_present": false,
+    "source_startup_candle_count_present": false,
+    "original_framework_loaded_by_this_review": false,
+    "no_framework_defaults_invented": true
+  },
+  "pre_C0_blockers": [
+    {
+      "id": "B1",
+      "requirement": "Pin actual Freqtrade/IStrategy compatibility and effective loaded config; legacy flags/order keys cannot be inferred from modern defaults."
+    },
+    {
+      "id": "B2",
+      "requirement": "Freeze EMA seed/numerics, typical-price arithmetic, rolling/min_periods/NaN/cross equality, warmup and first decision; prove source-class signal equivalence on synthetic only."
+    },
+    {
+      "id": "B3",
+      "requirement": "Freeze sell-profit gate price/fee/offset/strict threshold and its timing/scope; do not silently drop or latch a blocked exit."
+    },
+    {
+      "id": "B4",
+      "requirement": "Freeze actual limit or explicitly adapted proxy, order persistence/cancellation/timeout, stop/ROI/signal priority and gap/terminal rules; retain finite stop/ROI."
+    },
+    {
+      "id": "B5",
+      "requirement": "Freeze market/account/sizing/cost/window/exposure/control/statistics explicitly; source does not specify BTCUSDT or 2023-2024."
+    }
+  ],
+  "data_compatibility": {
+    "scope": "Prior independent data receipts read; actual canonical SHA rechecked as opaque bytes only, no price parsing or indicator computation",
+    "quality": "DIAGNOSTIC_ONLY",
+    "PIT": false,
+    "finality": false,
+    "tradability": false,
+    "market": "Binance BTCUSDT spot",
+    "timeframe": "native UTC1d",
+    "required_fields_available": [
+      "high",
+      "low",
+      "close"
+    ],
+    "inputs": [
+      {
+        "alias": "daily831",
+        "rows": 831,
+        "bytes": 139983,
+        "sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+        "start": "2022-09-23",
+        "end": "2024-12-31",
+        "warmup_if_eval2023_2024": 100,
+        "eval_rows": 731
+      },
+      {
+        "alias": "daily1466",
+        "rows": 1466,
+        "bytes": 247171,
+        "sha256": "db05acd35ad9f09d08a3a2126fc0aba62c40ba12a90eef2faa00af0d3cd7ae26",
+        "start": "2020-12-27",
+        "end": "2024-12-31",
+        "warmup_if_eval2023_2024": 735,
+        "eval_rows": 731
+      }
+    ],
+    "recommendation": "Existing daily831 provides HLC and100 preceding rows if parent prespecifies this adapted2023-2024 window; warmup is not source-specified or convergence-certified.1466 is available but not mandated; no outcome-based input selection. No market acquisition needed.",
+    "known_intraday_halt": "2023-03-24; daily grid does not certify continuous tradability",
+    "new_benchmark_reuse_approved": false
+  },
+  "minimum_synthetic_extensions": [
+    "Real dependency indicator versus independent implementation: constants, early lengths, H/L perturbation at same close, equality, NaN, prefix/future and no reseed on trim.",
+    "Profit gate below/equal/above with fee and no fee; blocked event must not silently become latched state; stop/ROI gate scope.",
+    "Finite99%stop and99999999ROI boundary, gap and stop/ROI/signal collision priority.",
+    "Limit no-touch/open improvement, insufficient cash, timeout/cancel/repeat/terminal; verify actual flags and unknown order keys."
+  ],
+  "economic_hypothesis": "Fast-close trend acceleration relative to slower typical-price mean may persist; a research hypothesis, not observed evidence.",
+  "failure_modes": [
+    "Sideways whipsaw and costs",
+    "Profit-only exit can retain losing positions through falling regimes",
+    "Very wide stop and limit gaps do not assure capital protection",
+    "Venue/asset/window and daily execution proxy may materially change behavior"
+  ],
+  "classification": {
+    "source_verified": true,
+    "strict_reproduction": false,
+    "strict_reproductions": 0,
+    "future_execution_must_distinguish_original_signals_and_adapted_defaults": true
+  },
+  "activity": {
+    "static_checks_including_AST_parse": 8,
+    "synthetic_indicator_or_account_executions": 0,
+    "historical_indicators": 0,
+    "historical_signals": 0,
+    "historical_runs": 0,
+    "controls": 0,
+    "market_requests": 0,
+    "ordinary_public_GitHub_GETs": 6,
+    "web_source_page_opens": 1,
+    "repository_writes": 0,
+    "claims_or_global_writes": 0,
+    "C0_created": false,
+    "Library_uploads": 0,
+    "push_or_Site_writes": 0
+  },
+  "storage": {
+    "raw_source_and_capture_receipts_private_only": true,
+    "remote_backup_verified": false,
+    "local_is_not_persistent_backup": true
+  },
+  "report": {
+    "path": "REPORT.safe.md",
+    "bytes": 7818,
+    "sha256": "4af83d256a82d146c9fa0e3153c46133f657744e1c7ed08356426f3670145133"
+  }
+}

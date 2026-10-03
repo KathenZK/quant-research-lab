@@ -1,0 +1,256 @@
+{
+  "schema": "public-strategy-coordinator-delivery-addendum/v1",
+  "coordinator": "root sole global writer",
+  "recorded_at_utc": "2026-10-03T23:48:04.448170+00:00",
+  "batch": 20,
+  "delivery_addendum": 5,
+  "previous_checkpoint": {
+    "file": "progress-20261003-batch020-delivery004.json",
+    "bytes": 14085,
+    "sha256": "b195603bd8ca62146a17a664c73b1e1a7dd4f98e94b71c9484aee8ad42f686e1"
+  },
+  "cumulative_tested_ids": 43,
+  "cumulative_strategy_configurations": 175,
+  "cumulative_controls": 22,
+  "cumulative_blocked_ids": 7,
+  "strict_reproductions": 0,
+  "new_accepted_ids": 0,
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "new_historical_runs": 0,
+  "last_original_execution_utc": "2026-10-03T20:44:26Z",
+  "counting_note": "M1266 was already accepted once in checkpoint003. Graph projection/recovery/source review add zero research runs. Batch020 pending three and M1510 source semantics do not increment seven registered prior blocked IDs.",
+  "previous_Lab_delivery": {
+    "PR": 43,
+    "head": "2e3a38c64d5fab4942abd48a82e0bb7b0c5c0f2a",
+    "main": "b9cc41083a2ca824e397fd24cadacb43f4d5ab67",
+    "main_CI_run": 37160031029,
+    "main_CI_status": "SUCCESS",
+    "actual_remote_git_byte_readback": "PASS"
+  },
+  "Graph_delivery": {
+    "PR": 30,
+    "head": "6e954415e013aa50d1554d13ae8a7b4ac9e99d58",
+    "main": "103b2dd15d57ddaf78a299a337e1c2ba03b8cb1a",
+    "merged_at_utc": "2026-10-03T23:42:33Z",
+    "head_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37162448742,
+        "headSha": "6e954415e013aa50d1554d13ae8a7b4ac9e99d58",
+        "name": "Platform bridge and browser integration",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:41:27Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162448742"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37162448767,
+        "headSha": "6e954415e013aa50d1554d13ae8a7b4ac9e99d58",
+        "name": "Curated release verification",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:41:30Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162448767"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37162417054,
+        "headSha": "6e954415e013aa50d1554d13ae8a7b4ac9e99d58",
+        "name": "Platform bridge and browser integration",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:40:10Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162417054"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37162417051,
+        "headSha": "6e954415e013aa50d1554d13ae8a7b4ac9e99d58",
+        "name": "Curated release verification",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:41:16Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162417051"
+      }
+    ],
+    "main_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37162629197,
+        "headSha": "103b2dd15d57ddaf78a299a337e1c2ba03b8cb1a",
+        "name": "Platform bridge and browser integration",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:45:01Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162629197"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37162629274,
+        "headSha": "103b2dd15d57ddaf78a299a337e1c2ba03b8cb1a",
+        "name": "Curated release verification",
+        "status": "completed",
+        "updatedAt": "2026-10-03T23:45:18Z",
+        "url": "https://github.com/KathenZK/quant-knowledge-graph/actions/runs/37162629274"
+      }
+    ],
+    "actual_branch_and_main_readback": "ALL_DELIVERED_BLOBS_BYTE_IDENTICAL",
+    "delivered_files": 6,
+    "delivered_bytes": 237095,
+    "new_display_id": "M1266",
+    "offline_records": 27,
+    "offline_files": 30,
+    "offline_base_curve_points": 6447,
+    "M1266_additional_benchmark_points": 25,
+    "old26_registry_records_gzip_preserved": true,
+    "independent_review_sha256": "44a07c70f0d39c5e533f452b5d39aea4dc87042a9aa1e39e9808f9d9dfdd941d",
+    "publication_review_sha256": "83e9685fb62a4ee7a71a35d4d90eda7d045609d16e5aef1cc30f82582d2e4118",
+    "tests": {
+      "author_python": 649,
+      "author_public": 5,
+      "author_UI": 12,
+      "independent_python_total": 147,
+      "independent_new_boundary_cases": 24,
+      "independent_UI": 2,
+      "independent_UI_actual_projection": 1,
+      "author_typecheck": "PASS"
+    },
+    "source_lab_pin": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+    "source_roles": 9,
+    "source_bytes": 73206,
+    "quality": "ADAPTED_SOURCE_CORRECTED_VARIANT / HYPOTHESIS_EXECUTION_PROXY; strict0/OOSfalse/trustedfalse/PITunknown",
+    "M1266_base_return": 0.6012894,
+    "M1266_own_declared_control_return": 4.1901971,
+    "return_rounding": "Rounded explanatory values; approved metrics retain original exact source values.",
+    "control": "Original M1266 signal-close90percent fixed quantity; never M1258/fullcash. No matched sensitivity controls.",
+    "original_pending_audit_preserved": true,
+    "coordinator_acceptance_separate_overlay": true,
+    "metric_observations": 731,
+    "sampled_base_points": 25,
+    "benchmark_curve_drawn_by_existing_UI": false,
+    "new_historical_runs": 0,
+    "new_controls": 0,
+    "Site_deployed": false,
+    "active_merge_status": "BLOCKED_CURRENT_ACTIVE_ROOT_ENTITY_REVISION_REQUIRED",
+    "full_private_validate_release": "ATTEMPTED_AND_BLOCKED_330_FROZEN_RAW_INPUTS_MISSING",
+    "source_receipt": {
+      "file": "graph-m1266-main-merge-and-ci.json",
+      "bytes": 3611,
+      "sha256": "22b7baf82d9a2f2d15c27aee880a961303b0063035a0c7c604e0af69858304e7"
+    }
+  },
+  "new_local_recovery_package": {
+    "scope": "Complete approved offline display inputs/code/outputs and audit evidence; not historical backtest/private data/Site/user notes/runtime backup",
+    "archive": {
+      "bytes": 1558348,
+      "path": "graph27-private-recovery.zip",
+      "sha256": "136243ac0b6f0e89ba46259af8ee4921daeb1f5d59099bd532cfafe7651687eb"
+    },
+    "independent_manifest": {
+      "bytes": 72425,
+      "path": "MEMBERS.json",
+      "sha256": "39542dc48c75cdae3fa55690dd33db9bd9a689fcfcf6dc0ed897d594d68259f3"
+    },
+    "member_count": 351,
+    "approved_roles": 279,
+    "unique_source_files": 271,
+    "source_bytes": 3174348,
+    "local_fresh_restore": {
+      "bytes": 1525,
+      "path": "fresh-unpacked/RECOVERY-VERIFICATION.safe.json",
+      "sha256": "4d7d37a0993de3196693c8bc414437e3b7fdf1a54acf713998bf776a4839f83f"
+    },
+    "all30_rebuilt_outputs_byte_equal": true,
+    "recovery_uses_only_unpacked_Graph_code_and_approved_sources": true,
+    "Python_wheels_Node_bundled": false,
+    "Library_saved": false,
+    "remote_restore_verified": false,
+    "receipt": {
+      "file": "PACKAGE-RECEIPT.safe.json",
+      "bytes": 3401,
+      "sha256": "53bab530c7e5559fe0cd50a9bd75385aecdcf0589977edb45f163e3cb5881c6a"
+    },
+    "prior26_archive_and_manifest_unchanged": true
+  },
+  "batch020_history_gate": {
+    "status": "CLOSED",
+    "M2903": false,
+    "M3710": false,
+    "M0974": false,
+    "new_executions": 0,
+    "required_remaining_gates": {
+      "file": "release-gates-v1.json",
+      "bytes": 7115,
+      "sha256": "a6caaab560ddd36b66487a478f839a11cbdfcc1bfe0be36884983971637de1ce"
+    },
+    "independent_review": {
+      "file": "release-gates-independent-v1.safe.json",
+      "bytes": 3154,
+      "sha256": "e0824b98635d21ecf399ec0579a3743180a1ef4dfbadb7ce39f9f4e1d0d39d16"
+    },
+    "original_M2903_and_M3710_owners_reconfirmed_no_history_started": true,
+    "process_isolation_not_used_to_infer_global_stop": true
+  },
+  "next_source_preparation": {
+    "id": "M1510",
+    "claim": {
+      "file": "claims-20261003-batch021-source-only.json",
+      "bytes": 5425,
+      "sha256": "f54ab2cf95757d873326fe182b20a7311873c3fe373ad9412ceb1aae5f6f0986"
+    },
+    "owner": "parent single dot executor",
+    "owner_preparation_started": false,
+    "read_only_support": "root/m0288 completed and stopped",
+    "source_gate": "BLOCKED_SOURCE_FRAMEWORK_SEMANTICS",
+    "source_commit": "9623c1f3d8c7f60c8b411010fa26377e6ca99ab9",
+    "source_bytes": 1813,
+    "source_sha256": "64846c265b53f34dfdd117cc31b195466f09e1dc154a9f3c3835cf1eab4600fd",
+    "new_findings": "Catalog omits sell_profit_only=True and limit buy/sell/stop; source framework/effective config and priority unresolved. Finite stop and ROI cannot be dropped.",
+    "safe_deliverables": [
+      {
+        "file": "source-card.safe.json",
+        "bytes": 8649,
+        "sha256": "24f601c89a0f3134ad4659285bf9b883ce45496a5e517093f8d43e0808dcb7b1"
+      },
+      {
+        "file": "REPORT.safe.md",
+        "bytes": 7818,
+        "sha256": "4af83d256a82d146c9fa0e3153c46133f657744e1c7ed08356426f3670145133"
+      },
+      {
+        "file": "framework-gate.safe.json",
+        "bytes": 1692,
+        "sha256": "79fa1f35ce2ec65f9bce6ed296144a29cdbb8fad2f38a63eecbfe5aa01237f95"
+      }
+    ],
+    "existing_input_compatibility": "Native daily831/1466 HLC metadata and opaque SHA checked only; no historical indicators or PnL. No new market requests.",
+    "C0_sealed": false,
+    "history_release": false,
+    "new_controls": 0,
+    "strict_reproductions": 0
+  },
+  "persistence_blocker": {
+    "status": "ROOT_STANDARD_LIBRARY_UPLOAD_TOOLS_LIST_HTTP401",
+    "attempted_files": 5,
+    "root_confirmed_saved_files": 0,
+    "saved_receipts_received": false,
+    "upload_route_or_identity_changed": false,
+    "root_upload_retried_after_failure": false,
+    "normal_read_only_Library_access_does_not_prove_upload_recovery": true,
+    "original_M0974_HTML": {
+      "bytes": 704480,
+      "sha256": "eb998fac67d55d55b549596b29c91915927327d32c36dd8a088c156a9cbaa74f",
+      "captured_at_utc": "2026-10-03T20:48:21.975372Z",
+      "exact_local_bytes_preserved": true,
+      "new_Library_ID_exists": false,
+      "recaptured_or_published_in_Git": false
+    },
+    "local_disk_is_not_persistent_backup": true,
+    "previous_older_backup_gaps": "Unchanged; see immutable checkpoint003.backup_gaps. No gap silently cleared."
+  },
+  "platform_step_required": "Restore authorized standard Library upload helper -> hosted apps tools/list in this current executor; no known cause. Normal read access is not upload recovery. Do not blind retry, change identity, proxy upload or inspect credentials.",
+  "parent_M0974_partial_receipt": "Read all70 lines through Library: parent reports586entries/12pins/26synthetic-gate groups. Not root archive materialization; original704480B HTML missing from that partial archive, C0unsealed/releasefalse.",
+  "remaining_prior_scope_blockers": "M1180 and its previously blocked publication scope remain paused; this exact Graph M1347 approval does not expand them.",
+  "no_private_Library_identifiers_published": true,
+  "no_credentials_read": true,
+  "quant_runner_touched": false,
+  "disk_reserve_minimum_bytes": 5368709120,
+  "free_bytes_observed": 8562384896
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "M1510-source-framework-gate/v1",
+  "id": "M1510",
+  "status": "BLOCKED_SOURCE_FRAMEWORK_SEMANTICS",
+  "source_verified": true,
+  "source_review_status": "SOURCE_VERIFIED_EXECUTION_UNRESOLVED",
+  "reason": "Original repository and strategy do not pin Freqtrade/vendored qtpylib/TA-Lib runtime or effective configuration. Profit-only sell gate, limit fills, indicator startup/numerics and stop/ROI/signal ordering remain unresolved. No further framework-version fishing is required for this bounded source review.",
+  "material_discovery": "sell_profit_only=True and limit buy/sell/stoploss were absent from the catalog rule summary.",
+  "release": {
+    "history": false,
+    "C0": false,
+    "strict_reproduction": false
+  },
+  "next_owner": "parent single dot executor; source-only preparation under root coordination",
+  "permitted_next_step": "Parent may pin a documented runtime and/or explicitly adapted choices, then independent synthetic gate; this receipt does not authorize any historical execution.",
+  "safe_source_card": {
+    "path": "source-card.safe.json",
+    "bytes": 8649,
+    "sha256": "24f601c89a0f3134ad4659285bf9b883ce45496a5e517093f8d43e0808dcb7b1"
+  },
+  "safe_report": {
+    "path": "REPORT.safe.md",
+    "bytes": 7818,
+    "sha256": "4af83d256a82d146c9fa0e3153c46133f657744e1c7ed08356426f3670145133"
+  },
+  "created_at_utc": "2026-10-03T23:44:38.820091+00:00",
+  "safe_outputs_reviewed_for_private_paths_storage_ids_catalog_fingerprints_fullsource_personal_annotations": true,
+  "raw_code_license_HTTP_and_catalog_provenance_private_only": true,
+  "historical_runs": 0,
+  "new_controls": 0,
+  "market_requests": 0,
+  "remote_backup_verified": false
+}

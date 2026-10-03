@@ -1,0 +1,79 @@
+{
+  "status": "PASS_COORDINATION_RECORDS_ONLY_NOT_HISTORY_RELEASE",
+  "base_commit": "b9cc41083a2ca824e397fd24cadacb43f4d5ab67",
+  "scope_files": [
+    {
+      "path": "research/public-strategies/claims-20261003-batch021-source-only.json",
+      "bytes": 5425,
+      "sha256": "f54ab2cf95757d873326fe182b20a7311873c3fe373ad9412ceb1aae5f6f0986"
+    },
+    {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/release-gates-v1.json",
+      "bytes": 7115,
+      "sha256": "a6caaab560ddd36b66487a478f839a11cbdfcc1bfe0be36884983971637de1ce"
+    },
+    {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md",
+      "bytes": 3224,
+      "sha256": "af71ff45e6bc3acea602236333f930950b32e3cd873295b9f149a9c222cc0a85"
+    }
+  ],
+  "actual_checks": {
+    "requested_files": 3,
+    "listed_prior_claim_pins": 19,
+    "all_other_claim_files_scanned": 13,
+    "conflicts": 0,
+    "catalog_original_byte_hash": 1,
+    "C0_and_public_review_pins": 4,
+    "private_archives_hashed": 3,
+    "standalone_manifests_hashed": 3,
+    "existing_local_restore_receipts": 3,
+    "original_HTML_opaque_hash": 1,
+    "parent_receipt_native_read_lines": 70
+  },
+  "research": [
+    {
+      "id": "M2903",
+      "C0_and_independent_review_hash_PASS": true,
+      "archive_and_separate_manifest_hash_PASS": true,
+      "local_restore_receipt_exists": true,
+      "remote_saved": false,
+      "history_release": false
+    },
+    {
+      "id": "M3710",
+      "C0_and_independent_review_hash_PASS": true,
+      "archive_and_separate_manifest_hash_PASS": true,
+      "local_restore_receipt_exists": true,
+      "remote_saved": false,
+      "history_release": false
+    }
+  ],
+  "M0974": "Original HTML retained locally and hash verified; parentpartialreceipt is nativeLibrary70line read only, not root full archive materialization. Parentpartial excludes originalHTML. C0unsealed/releasefalse.",
+  "M1510": "No observed priorclaim/family conflict. Parent reservation notstarted; independent read-only support assignment does not grant familywrites or history. Active support runtime not inferred from files.",
+  "ordered_gates_verified": [
+    "Sameauthorizedconnection restored",
+    "Completeprivatepackage+separatemanifest saved",
+    "Actualremotefreshrestore",
+    "Originalexecutor immediatelock/pin/env/input/disk5GiBplusreserve",
+    "RootnewimmutableexactC0 strictinteger4/0 release",
+    "Historicalexecution then independentaccount/metrics/causality/restore and resultbackup/rootacceptance before count"
+  ],
+  "global_counts": {
+    "IDs": 43,
+    "configurations": 175,
+    "controls": 22,
+    "blocked": 7,
+    "strict": 0,
+    "increment": 0
+  },
+  "network_calls": 0,
+  "history_runs": 0,
+  "repository_writes": 0,
+  "limits": [
+    "Read-only existing evidence review; no new CRC/extraction/synthetic/history/remote restore performed",
+    "Library failure evidence retained; no retry or credential inspection",
+    "Unrequested checkpoint file outside this threefile review scope",
+    "Safe receipt excludes Library identifiers/raw source/private annotations"
+  ]
+}

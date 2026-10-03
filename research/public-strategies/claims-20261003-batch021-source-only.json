@@ -1,0 +1,136 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T23:34:33.631960+00:00",
+  "coordinator": "root only",
+  "batch": "021-source-only",
+  "claims": [
+    {
+      "id": "M1510",
+      "owner": "parent single dot executor",
+      "stage": "RESERVED_SOURCE_RULE_DATA_REUSE_PREPARATION_NOT_STARTED",
+      "source_review_support_owner": "root/m0288 (read-only independent source review; no family writes)",
+      "actual_historical_runs": 0,
+      "history_release": false,
+      "scope": "Existing catalog only: verify pinned original source, economic rule and execution/stop/ROI semantics; reuse existing data only after compatibility review. No historical features, signals, PnL, market requests, C0 sealing or execution release yet.",
+      "parent_first_step": "Read root source review and exact original record from supplied corpus. Do not refetch an already captured source if root supplies a verified snapshot through the authorized flow. Freeze missing framework choices explicitly as adapted, never strict reproduction."
+    }
+  ],
+  "catalog_record": {
+    "source_checkpoint": "26712be68a662d15dcdb636a197a8062457246b5",
+    "source_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0016-v2/metadata/source-records/M1510.json",
+    "bytes": 3043,
+    "sha256": "7cb32846d0a5d134ec6c0e62b9a24763fb57de26a8306626ef903af5e4ffd76a",
+    "status": "ACTUAL_LOCAL_GIT_OBJECT_READ_AND_HASH_MATCH",
+    "original_private_fields_published": false
+  },
+  "collision_check": {
+    "checked_at_utc": "2026-10-03T23:34:33.631960+00:00",
+    "claim_files_checked": 19,
+    "M1510_found_in_prior_claims": false,
+    "family_directory_preexisted": false,
+    "inputs": [
+      {
+        "path": "claims-20261003-batch006.json",
+        "bytes": 2181,
+        "sha256": "4859829045eb16d9eb67b34c218244d4aee78a60d65871825a483a616e439316"
+      },
+      {
+        "path": "claims-20261003-batch010.json",
+        "bytes": 1352,
+        "sha256": "a6d6459b0f0abede95681a6c355667b4e4b4043a1d481fc5e8cc8690e14b188c"
+      },
+      {
+        "path": "claims-20261003-batch011.json",
+        "bytes": 1325,
+        "sha256": "4e1c4cbff79c6d8a1438e1a3cb0285778ce103641222c30045f364c0a8654aae"
+      },
+      {
+        "path": "claims-20261003-batch012.json",
+        "bytes": 1927,
+        "sha256": "26bafe588d30e2941d6b01ce53004b8fd27e23aea4ae5ed7afea6fdf7c72e4e2"
+      },
+      {
+        "path": "claims-20261003-batch013.json",
+        "bytes": 928,
+        "sha256": "506b0babcb0604036ef98bfb5a4cfb3dde65d2d19dacdeaec65e564df805c871"
+      },
+      {
+        "path": "claims-20261003-batch015.json",
+        "bytes": 1210,
+        "sha256": "cf5391cdb6a3d2438267d380879b5ff9d7e219bdb61abf82fd2a581ba1b7bdd9"
+      },
+      {
+        "path": "claims-20261003-batch016.json",
+        "bytes": 1035,
+        "sha256": "a9f916dd2a67599e78431c3720434b037b36e220865d443020cf2c42cc995ab3"
+      },
+      {
+        "path": "claims-20261003-batch017.json",
+        "bytes": 1457,
+        "sha256": "c39b08f4933aafae4f18e3d051cf9a8b16b41bc60b95bac4d30d8d7a2a277964"
+      },
+      {
+        "path": "claims-20261003-batch018.json",
+        "bytes": 745,
+        "sha256": "58723a46312f3e42fb1a4a28721a53656b46de6e38a634e3126c3e3a890e1146"
+      },
+      {
+        "path": "claims-20261003-batch019.json",
+        "bytes": 762,
+        "sha256": "b37090dd658da8fcb7ad3f0371e37d1fe65eb177e052dab1138e971893fb9331"
+      },
+      {
+        "path": "claims-20261003-batch020.json",
+        "bytes": 1301,
+        "sha256": "0daf26c0eb2c383caa8e5d7adc5b95d159a81b5a24653cb093d8495328cfd0ce"
+      },
+      {
+        "path": "claims-20261003-dot001.json",
+        "bytes": 2338,
+        "sha256": "845ae057c4e05f5b2bc3bc51fa65b79e208670f6ffd4827bf4e336dd11ac23db"
+      },
+      {
+        "path": "claims-20261003-parallel005.json",
+        "bytes": 4156,
+        "sha256": "39eb34e6362d1b49195690e9a0c6c7b025744d95c319ec7b226c2a9f547c0f2a"
+      },
+      {
+        "path": "private-coordinator-claim/batch002-claims-20261003.json",
+        "bytes": 357,
+        "sha256": "0c91e40cb416caa1789b99db36caccdedef7a67f7393b42014717c2eb846ed36"
+      },
+      {
+        "path": "private-coordinator-claim/batch003-claims-20261003.json",
+        "bytes": 519,
+        "sha256": "b40e991084be54ee3c561035366800776f043c523cc0fc4d01cdf60c209e0417"
+      },
+      {
+        "path": "private-coordinator-claim/batch004-claims-20261003.json",
+        "bytes": 715,
+        "sha256": "e6f4e2d295ef63c69569f3f2c176ba861c8c658999cca6979ed4133f00bf64f0"
+      },
+      {
+        "path": "private-coordinator-claim/claims-20261003-batch008-source-preflight.json",
+        "bytes": 577,
+        "sha256": "f5936c90532913cf2a2d76a32e4d7b1ffaf0261526099515ebd19a50b8c45b4f"
+      },
+      {
+        "path": "private-coordinator-claim/claims-20261003-batch009.json",
+        "bytes": 2860,
+        "sha256": "45d28f9049639eafff102bf66f4de35ef0f2590e3e1335205774309f75afe522"
+      },
+      {
+        "path": "private-coordinator-claim/next-preflight-claims-20261003-v1.json",
+        "bytes": 825,
+        "sha256": "e870de82d59096508652c39033355e7649585eb04ec3997eb6e57333af41388e"
+      }
+    ]
+  },
+  "new_accepted_ids": 0,
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "new_historical_runs": 0,
+  "strict_reproductions": 0,
+  "prior_batches_released": false,
+  "no_private_Library_identifiers_published": true
+}
