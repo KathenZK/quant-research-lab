@@ -1,0 +1,77 @@
+{
+  "status": "PASS_ROOTFREEZE_DIFFERENTIAL_REVIEW_NOT_C0_OR_HISTORY_GATE",
+  "strategy_id": "M1266",
+  "batch": "019",
+  "rules_sha256": "bc553ebdd3aa2a0bc8d55a3b878ce2354e52b200bd69728915cf6bdb8b1b9491",
+  "rules_bytes": 10061,
+  "output_contract_sha256": "f80970af5a90c335db55b507a8112ef2ec50c3c48d59a9d057f363120070260e",
+  "output_contract_bytes": 3644,
+  "previous_draft_v2_sha256": "db3c10f5c222244d08bb3d9c9cfc3e29186ed5f4df3b0e8b9d92ad7b3e75c9b6",
+  "changes_reviewed": [
+    "/adapted_identity/data_sha256",
+    "/adapted_identity/evaluation_rows",
+    "/adapted_identity/input_bytes",
+    "/adapted_identity/input_manifest_sha256",
+    "/adapted_identity/input_rows",
+    "/adapted_identity/source_record_sha256",
+    "/adapted_identity/warmup_rows",
+    "/batch",
+    "/benchmark/proposal",
+    "/benchmark/research_count",
+    "/capital/selected_affordability_policy",
+    "/capital/sell_cash",
+    "/coordinator",
+    "/draft_independent_review_sha256",
+    "/frozen_at_utc",
+    "/historical_runs_at_freeze",
+    "/indicators/operation_order",
+    "/input_independent_review_sha256",
+    "/new_controls_at_freeze",
+    "/permissions",
+    "/statistics_detail",
+    "/status"
+  ],
+  "unchanged_core": [
+    "selectedcorrectedsourceversionandoriginalidentity/sourcewarning",
+    "entry/exitstrictnessandpositionbranchpriority",
+    "signalclosefixedquantityandadditionalfees",
+    "pendingbuyretentionandnoresize",
+    "signalclosehighseedactivationonfill/positionclosepeak",
+    "pendingexitlatch/actualsalehighreset/nosameopenreentry",
+    "4fixedcost/lagcases",
+    "requiredonce/cashminusrequired exactaffordabilityreject"
+  ],
+  "additions_accepted": [
+    "ActualindependentlyQAed831input/100warmup/731eval hash+manifestpin; excluded22archiveprefixnotusedforEMAseed",
+    "ExplicitSMAleft-to-rightseed,Decimalalpha andrecursiveoperationorder;EMA100readyatlastwarmupclose,firststrategysignalJan1close",
+    "Sellcash= cash_before+(notional-fee) viafrozenintermediates,matchingpriorindependentrecommendation",
+    "Oneplanned90%fixedquantitycontrolfromDec31warmupclose→Jan1openlag1/8fee2slip;strategyearliestJan2openlag1,Jan3openlag2;no90%constant-exposureclaim",
+    "731return/statistics/24months/actualfill-onlycountingconsistentwithpriorreview",
+    "ParentdotimplementationassignmentandexplicitindependentC0/rootreleasegates; nooriginalhistoryatfreeze",
+    "Graphcontractexplicitfullperiodandnumericcostkeys; preservefrozenresearchanddisplaylineage"
+  ],
+  "source_public_boundary": "Onlyhash/URLandself-authoredrules; originalattachmentHTML/privatecatalognotes/rawprices/fullledgers/LibraryIDs prohibited. No sourceflags changed. Redistributionlicense notclaimed.",
+  "input_pin_crosscheck": {
+    "canonical_sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+    "manifest_sha256": "c51b38f62c06820923a51d2df7b00564e109b77c4d752471f6106fa0b4f50283",
+    "manifest_bytes_match_previously_reviewed": true,
+    "features_computed": 0
+  },
+  "counts": {
+    "historical_runs_at_freeze": 0,
+    "new_controls_at_freeze": 0,
+    "planned_strategy_cases": 4,
+    "planned_new_controls": 1,
+    "independent_review_history_runs": 0,
+    "independent_review_features": 0,
+    "claims_written": 0
+  },
+  "remaining_requirements": [
+    "Parentmustmaterializeandverifyactualsourcehash/input56rawcodeinownexecutor",
+    "Immutablecode/runtime/parameters/exposureC0beforehistoricalfeatures",
+    "Independentactualimplementation/synthetic/lifecycle/account/causalityQA",
+    "ExplicitrootexactC0releasebefore4strategy+1controlhistory"
+  ],
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

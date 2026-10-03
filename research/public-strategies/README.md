@@ -93,3 +93,5 @@
 - [批016实际远端恢复](catalog-hypothesis-batch016-recovery-20261003/REMOTE-CORE-RESTORE.md)：M1396/M1463从远端原代码重建，60载荷长度/hash及2份清单原字节通过；不新增研究/控制，完整Library私包仍未异地保存。
 
 - [批017共享恢复诊断](catalog-hypothesis-batch017-execution-20261003/README.md)：M1346/M1349/M1270 的公开恢复核心；不增加研究计数，不等同完整私有备份。
+
+- [批019 M1266预检](catalog-fixedqty-batch019-preflight-20261003/README.md)：修正源码的明确执行适配；4策略+1控制计划，尚无历史。

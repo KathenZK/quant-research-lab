@@ -351,3 +351,5 @@
 - [M1349 定时退出目录假设](public-strategies/M1349/README.md)：固定 v2 持仓计数规则；不修改原冻结证据。
 - [M1270 日线目录假设](public-strategies/M1270/README.md)：冻结公开研究核心；不自动晋升。
 - [批017共享恢复诊断](public-strategies/catalog-hypothesis-batch017-execution-20261003/README.md)：三 ID 的公开代码、指纹及离线重建配方；不代替完整私有备份。
+
+- [批019 M1266固定数量预检](public-strategies/catalog-fixedqty-batch019-preflight-20261003/README.md)：规则及831行输入已冻结，4策略+1控制计划，母端dot未启动；需实际C0独审后放行。
