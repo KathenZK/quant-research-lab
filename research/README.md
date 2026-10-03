@@ -337,3 +337,8 @@
 - [M1258 五期RSI跨50目录假设](public-strategies/M1258/README-results-v1.md)：[研究报告](public-strategies/M1258/M1258.md)，原C0文档保持收益前快照；4策略与1个100%含费控制的独立终验/远端恢复逐项记录。
 
 - [Catalog日线假设批次017冻结准备](public-strategies/catalog-hypothesis-batch017-preflight-20261003/README.md)：M1346/M1349/M1270，父端独占计划12配置、0新控制；当前历史0。
+
+- [M1396 星期日效应目录假设](public-strategies/M1396/README-results-v1.md)：4策略配置、0新控制；独立核算通过，原C0保留。
+- [M1463 布林带目录假设](public-strategies/M1463/README-results-v1.md)：4策略配置、0新控制；独立核算通过，原C0保留。
+
+- [catalog-daily-cash 共享日线全现金内核](_shared-kernels/catalog-daily-cash/README.md)：v1冻结、逐文件SHA256 pin，M1396/M1463消费；持仓计时退出需另建版本。

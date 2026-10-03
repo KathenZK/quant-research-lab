@@ -29,3 +29,5 @@
 | [trend-strength-pullback-restart/](trend-strength-pullback-restart/README.md) | `v1` | 锚点趋势强度、顺序回撤与MA7首次重穿、共同支持联合推断及20日捕获 | `BIN-1D-TSPR` |
 
 | [native5m-execution-proxy/](native5m-execution-proxy/README.md) | `v1` | BTCUSDT现货5m固定OHLC成交代理与独立Decimal校验；消费者逐文件SHA256 pin | M0300、M0302、M0305、M0306、M0307；原M0311不迁移 |
+
+| [catalog-daily-cash/](catalog-daily-cash/README.md) | `v1` | 日线全现金 Decimal50 账户、延迟意图、月收益和独立核算；不含持仓时长退出机制 | M1396、M1463 |
