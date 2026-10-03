@@ -52,3 +52,7 @@ research_classification: strategy_family
 
 固定来源：https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/EMASkipPump.py
 来源commit：f3340ce11f5bdf62f598522e64d1f5638eaa13f5；SHA256：74117c68b3407a775d80fc4d4f1b27852689baad2255f19a7026a2b0c45b2085。
+
+## Graph 展示适配
+
+已追加[结构化记录](artifacts/20261003-dot006-display/graph-record.json)、[基准配置日净值](artifacts/20261003-dot006-display/base-nav-light.csv)和[派生显示清单](artifacts/20261003-dot006-display/public-display-manifest.json)。净值按原权益除以100000保留首日损益，回撤字段保留原5分钟峰值口径。派生清单明确标记 PUBLIC_DERIVED_DISPLAY_MANIFEST，不代替原私有运行清单；四配置指标、原C0及运行证据未变。展示投影不新增研究试验，也不表示Site已部署或激活。

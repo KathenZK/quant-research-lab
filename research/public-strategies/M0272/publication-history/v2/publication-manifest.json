@@ -13,23 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5474,
-      "sha256": "0414b34d7d201541e69e234b5670503db6d538cd9d98fd096d6d1946e2279a85"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/base-nav-light.csv",
-      "bytes": 32911,
-      "sha256": "b48f51bc9fbedb11b0b56230dad9062b8c3e9b4978049218af5b613f7e6b0017"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/graph-record.json",
-      "bytes": 20258,
-      "sha256": "ce3ed82a72b3202c1fdb0a50404f151f31a2ed875c4c0b09cb9e40a68cc1f6aa"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/public-display-manifest.json",
-      "bytes": 7129,
-      "sha256": "255cd59318f849c5072ce48373379aab111966cd887d76afd27f7210a155cefc"
+      "bytes": 4894,
+      "sha256": "fe0ab69be7fe04f4efee769f4e0a234f3b5dc0ad8f98b3a52c2cd9e06100ca4f"
     },
     {
       "path": "artifacts/catalog-original11.csv",
@@ -93,8 +78,8 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1349,
-      "sha256": "645a4d115c4b788a2c26af2454ef94c7f1b8294b3191c02c0d166ae24c9aad5d"
+      "bytes": 1013,
+      "sha256": "43ad408fd4b5e10da2de05b1bcdd3835fde55b5d1a13d8ebdaa364923a9588ce"
     },
     {
       "path": "history/protocol-before-input-addendum.json",
@@ -112,11 +97,6 @@
       "sha256": "9ee7f7214e82e3d525b4e7e871e6bae82952c5992d919abff46a5d65f3e3b507"
     },
     {
-      "path": "publication-history/revision-v3.json",
-      "bytes": 982,
-      "sha256": "4fbf9301dd08e54fea18d0c497542aad9e9db2cf9770da3a1755a85d121da90d"
-    },
-    {
       "path": "publication-history/v1/README.md.snapshot",
       "bytes": 4895,
       "sha256": "fa1188b4d23f5fb2528897f229a4a398d9fab9afc2acd0a86afa43af4dec2363"
@@ -130,21 +110,6 @@
       "path": "publication-history/v1/publication-manifest.json",
       "bytes": 4181,
       "sha256": "507e045e5e2a29f688dd9b2dc47d014d58b48d5c850c8754e734daaa9a6cfff6"
-    },
-    {
-      "path": "publication-history/v2/README.md.snapshot",
-      "bytes": 4894,
-      "sha256": "fe0ab69be7fe04f4efee769f4e0a234f3b5dc0ad8f98b3a52c2cd9e06100ca4f"
-    },
-    {
-      "path": "publication-history/v2/decision-log.md.snapshot",
-      "bytes": 1013,
-      "sha256": "43ad408fd4b5e10da2de05b1bcdd3835fde55b5d1a13d8ebdaa364923a9588ce"
-    },
-    {
-      "path": "publication-history/v2/publication-manifest.json",
-      "bytes": 5157,
-      "sha256": "fcc1bd91048ca5452bddfbb4f4adb41babd4eedcf9b1254310b0fe710a1ad407"
     },
     {
       "path": "scripts/adapter.py",
@@ -177,12 +142,12 @@
       "sha256": "dce5f6a2d5bb48f6b95c6f7aa4fcf3cc814a2e711440974d122325081a913b39"
     }
   ],
-  "publication_status": "ROOT_ACCEPTED_PUBLIC_EVIDENCE_GRAPH_STAGED_SITE_NOT_DEPLOYED",
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
   "raw_market_data": false,
   "full_ledgers": false,
   "private_Library_IDs": false,
   "shared_kernel_modified": false,
-  "revision": 3,
-  "previous_publication_manifest_sha256": "fcc1bd91048ca5452bddfbb4f4adb41babd4eedcf9b1254310b0fe710a1ad407",
-  "revision_scope": "additive public display derivatives, offline exporter and preserved documentation history; original frozen runtime evidence unchanged"
+  "revision": 2,
+  "previous_publication_manifest_sha256": "507e045e5e2a29f688dd9b2dc47d014d58b48d5c850c8754e734daaa9a6cfff6",
+  "revision_scope": "governance classification and explicit preserved documentation history only; immutable runtime evidence unchanged"
 }

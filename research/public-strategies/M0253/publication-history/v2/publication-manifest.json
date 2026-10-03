@@ -13,23 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5298,
-      "sha256": "cecbd2cd9c1187649ee7b2ebd9be9123fe6396c0af048cf73200c4f864f391ba"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/base-nav-light.csv",
-      "bytes": 33119,
-      "sha256": "18cc830f0440be5a6b6c4cdb72efe7e035062aa3d9583acef309dd8c6c7ae7e6"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/graph-record.json",
-      "bytes": 19985,
-      "sha256": "48c8eeea9c37c4eafa252e47f3faf6df160b04ce28de4760678fb506cb953ac2"
-    },
-    {
-      "path": "artifacts/20261003-dot006-display/public-display-manifest.json",
-      "bytes": 7129,
-      "sha256": "a33979198eaae3e963ea80c221dc217a65bacbc3f85cf7c7034973cfc698a895"
+      "bytes": 4718,
+      "sha256": "5ea6ef80cf0684ed5c0c2b02fea2f83961d5aa4137a09545961316cc79c74fa3"
     },
     {
       "path": "artifacts/catalog-original11.csv",
@@ -93,8 +78,8 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1349,
-      "sha256": "b21cde4c801edb01c2755275f66a3887aa9d3447e2ce51de6457c80f7d55856f"
+      "bytes": 1013,
+      "sha256": "3d5cef7bd98b6eec72d8f184429388083a0d0195b057990af6a59b1149dc43e7"
     },
     {
       "path": "history/protocol-before-input-addendum.json",
@@ -117,11 +102,6 @@
       "sha256": "c1a53643b9a28109959b3c6fe45a4275790e774e26948451f3e0a389d2a929d9"
     },
     {
-      "path": "publication-history/revision-v3.json",
-      "bytes": 982,
-      "sha256": "d9d35cf0ff2a02a23fbb1afc79c3d6051322bcb35f11fe2a9539ea0dfd5a88ab"
-    },
-    {
       "path": "publication-history/v1/README.md.snapshot",
       "bytes": 4719,
       "sha256": "dd4c719519d58a49b520bb4001fd1c0bebdee916c31ad9214e67cebd45d3df12"
@@ -137,29 +117,9 @@
       "sha256": "239c3391025b553bc6badfdde8c24940d62a2db2fcd6826f90fe8b33252133a5"
     },
     {
-      "path": "publication-history/v2/README.md.snapshot",
-      "bytes": 4718,
-      "sha256": "5ea6ef80cf0684ed5c0c2b02fea2f83961d5aa4137a09545961316cc79c74fa3"
-    },
-    {
-      "path": "publication-history/v2/decision-log.md.snapshot",
-      "bytes": 1013,
-      "sha256": "3d5cef7bd98b6eec72d8f184429388083a0d0195b057990af6a59b1149dc43e7"
-    },
-    {
-      "path": "publication-history/v2/publication-manifest.json",
-      "bytes": 5340,
-      "sha256": "faaceec6675cd0b97d9b85c3d7c401f41049aa45a5e938b1593ca8c411663ca2"
-    },
-    {
       "path": "scripts/adapter.py",
       "bytes": 297,
       "sha256": "f19cbb62bfac884e8f59b412db590dc6cb71239431bf3554967aba3e5961373d"
-    },
-    {
-      "path": "scripts/export_dot006_display.py",
-      "bytes": 17351,
-      "sha256": "f5a8536676f1575f55adcf3b286ba92c198a01c070399250fbf933f8937c9c13"
     },
     {
       "path": "specs/C0.json",
@@ -187,12 +147,12 @@
       "sha256": "faceb52d68ade8140ff07f319ee1cf67d2ff7ea9e74eb1eb7f474dab35dd5b4b"
     }
   ],
-  "publication_status": "ROOT_ACCEPTED_PUBLIC_EVIDENCE_GRAPH_STAGED_SITE_NOT_DEPLOYED",
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
   "raw_market_data": false,
   "full_ledgers": false,
   "private_Library_IDs": false,
   "shared_kernel_modified": false,
-  "revision": 3,
-  "previous_publication_manifest_sha256": "faaceec6675cd0b97d9b85c3d7c401f41049aa45a5e938b1593ca8c411663ca2",
-  "revision_scope": "additive public display derivatives, offline exporter and preserved documentation history; original frozen runtime evidence unchanged"
+  "revision": 2,
+  "previous_publication_manifest_sha256": "239c3391025b553bc6badfdde8c24940d62a2db2fcd6826f90fe8b33252133a5",
+  "revision_scope": "governance classification and explicit preserved documentation history only; immutable runtime evidence unchanged"
 }

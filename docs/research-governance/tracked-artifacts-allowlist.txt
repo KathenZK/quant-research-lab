@@ -1238,3 +1238,17 @@ research/public-strategies/M0272/artifacts/results/nonstatistical-fill-sample.js
 research/public-strategies/M0272/artifacts/results/runtime.json  # dot006 approved public evidence
 research/public-strategies/M0272/artifacts/results/summary.json  # dot006 approved public evidence
 research/public-strategies/M0272/artifacts/results/validation-summary.json  # dot006 approved public evidence
+
+# dot006 independently verified public display derivatives; no raw market inputs
+research/public-strategies/M0253/artifacts/20261003-dot006-display/base-nav-light.csv  # dot006 additive display projection
+research/public-strategies/M0253/artifacts/20261003-dot006-display/graph-record.json  # dot006 additive display projection
+research/public-strategies/M0253/artifacts/20261003-dot006-display/public-display-manifest.json  # dot006 additive display projection
+research/public-strategies/M0264/artifacts/20261003-dot006-display/base-nav-light.csv  # dot006 additive display projection
+research/public-strategies/M0264/artifacts/20261003-dot006-display/graph-record.json  # dot006 additive display projection
+research/public-strategies/M0264/artifacts/20261003-dot006-display/public-display-manifest.json  # dot006 additive display projection
+research/public-strategies/M0266/artifacts/20261003-dot006-display/base-nav-light.csv  # dot006 additive display projection
+research/public-strategies/M0266/artifacts/20261003-dot006-display/graph-record.json  # dot006 additive display projection
+research/public-strategies/M0266/artifacts/20261003-dot006-display/public-display-manifest.json  # dot006 additive display projection
+research/public-strategies/M0272/artifacts/20261003-dot006-display/base-nav-light.csv  # dot006 additive display projection
+research/public-strategies/M0272/artifacts/20261003-dot006-display/graph-record.json  # dot006 additive display projection
+research/public-strategies/M0272/artifacts/20261003-dot006-display/public-display-manifest.json  # dot006 additive display projection
