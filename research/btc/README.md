@@ -38,4 +38,6 @@
 
 - [BTC 4h QuantGraph EMA_CROSSOVER](4h-quantgraph-source-ema/README.md)：独立来源改编；explore / untrusted / not promoted / not live-ready。
 
-| [1d-m0216-sma-cross/](1d-m0216-sma-cross/README.md) | explore / 首条真实行情假设回放，源停机不平仓，未晋级 |
+公开采集策略统一移入[公开策略专区](../public-strategies/README.md)，不列为个人BTC深入研究。
+
+历史链接入口：[btc/1d-m0216-sma-cross/](1d-m0216-sma-cross/README.md)。仅重定向，不是个人研究家族。

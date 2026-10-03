@@ -8,3 +8,5 @@
 - 结论依据冻结契约和实际证据；旧报告、失败诊断和提示词不自动成为其他研究的规则。
 - 可复用数据与特征工具放 `src/strategy_lab/`；研究脚本放 `research/.../scripts/`；跨家族引擎按[共享内核约定](research/_shared-kernels/README.md)冻结；`archive/` 用于历史追溯。
 - 状态、runner 交接和对外复现等按任务查[文档索引](docs/README.md)。生产执行在 `/Users/ZK/OpenCode/quant-runner`；研究文档不代替下单、启停或运行模式变更的用户授权。
+
+- 用户明确区分公开采集策略与个人深入研究：公开catalog条目统一放 `research/public-strategies/<稳定ID>/`，市场/周期作为字段或专区内子层；不新建到个人 `research/btc` 等市场家族。目录迁移须保留冻结证据原字节、旧路径映射与历史提交，其他私人家族不批量迁移。

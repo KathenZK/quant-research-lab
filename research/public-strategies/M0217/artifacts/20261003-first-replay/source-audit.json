@@ -1,0 +1,14 @@
+{
+  "source_url": "https://x.com/PKycek/status/1955899723069485549",
+  "access_method": "web open",
+  "readable_lines": 0,
+  "verified_tweet_content": false,
+  "catalog_confirmation": "Coordinator supplied legally read stable ID M0217 and rule; this worker did not materialize master CSV",
+  "interpretation_assumptions": [
+    "BTCUSDT is selected crypto instance, not verified author's explicit asset",
+    "Range means previous day's high-low",
+    "Holding one day means entry-day close, not next-day close",
+    "Stop orders fully filled when daily high reaches level; intraday crossing time and executability unproven",
+    "No leverage, shorting, stop loss, cash interest, funding, tax, lot filter or market impact"
+  ]
+}

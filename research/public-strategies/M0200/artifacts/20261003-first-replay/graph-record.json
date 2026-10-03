@@ -1,0 +1,75 @@
+{
+  "id": "M0200",
+  "name": "加密 Connors RSI2 + MA5",
+  "status": "tested_hypothesis_only",
+  "reason": "单BTC下一开盘假设；来源网页403未核实；延迟1日转负，不晋升。",
+  "tested_variants": 1,
+  "families": [
+    "BTC-1D-M0200-CONNORS-RSI2"
+  ],
+  "audit": {
+    "source_verification_status": "blocked_403",
+    "source_rule_attribution_status": "catalog_transcription_unverified_public_source"
+  },
+  "metrics": {
+    "start": "2023-08-01",
+    "end": "2024-12-31",
+    "observations": 519,
+    "total_return": 0.1908765495824327,
+    "cagr": 0.13072039092082566,
+    "max_drawdown": 0.2213835117017735,
+    "sharpe": 0.6584529982591258,
+    "trade_count": 34
+  },
+  "periods": {
+    "full": {
+      "start": "2023-08-01",
+      "end": "2024-12-31",
+      "observations": 519,
+      "total_return": 0.1908765495824327,
+      "cagr": 0.13072039092082566,
+      "max_drawdown": 0.2213835117017735,
+      "sharpe": 0.6584529982591258,
+      "trade_count": 34
+    }
+  },
+  "implementations": [
+    {
+      "variant_id": "M0200-BTCUSDT-RSI2-NEXTOPEN-20261003",
+      "family": "BTC-1D-M0200-CONNORS-RSI2",
+      "origin_run_id": "M0200-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0200-20261003-first-replay",
+      "variant_id": "M0200-BTCUSDT-RSI2-NEXTOPEN-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "metrics": {
+        "start": "2023-08-01",
+        "end": "2024-12-31",
+        "observations": 519,
+        "total_return": 0.1908765495824327,
+        "cagr": 0.13072039092082566,
+        "max_drawdown": 0.2213835117017735,
+        "sharpe": 0.6584529982591258,
+        "trade_count": 34
+      },
+      "periods": {
+        "full": {
+          "start": "2023-08-01",
+          "end": "2024-12-31",
+          "observations": 519,
+          "total_return": 0.1908765495824327,
+          "cagr": 0.13072039092082566,
+          "max_drawdown": 0.2213835117017735,
+          "sharpe": 0.6584529982591258,
+          "trade_count": 34
+        }
+      },
+      "protocol_sha256": "a3b35fa3f22774cf42c36304defa2866b7b15f60549162ed8517aa0f433a69c6",
+      "manifest_sha256": "a5547ce319255cb74604c7772919961862b8ffefeaeff95aae97583e45ae5e6c"
+    }
+  ]
+}

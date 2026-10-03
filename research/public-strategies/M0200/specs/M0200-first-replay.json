@@ -1,0 +1,14 @@
+{
+  "record_id":"M0200", "variant_id":"M0200-BTCUSDT-RSI2-NEXTOPEN-20261003", "family":"BTC-1D-M0200-CONNORS-RSI2", "fidelity":"HYPOTHESIS",
+  "source":"https://x.com/PKycek/status/1955899723069485549", "source_access":"2026-10-03 web open returned 403 Forbidden; no bypass; catalog rule supplied by coordinator",
+  "catalog_rule":"Crypto Connors RSI(2): close>MA200 and close<MA5 and RSI2<10 entry; close>MA5 exit; original says daily close execution",
+  "hypothesis":"BTCUSDT spot is a crypto instance, not verified author's asset; use signal at closed UTC daily bar then next open, never signal-bar close",
+  "input_sha256":"48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5", "input_start":"2022-12-01", "input_end":"2024-12-31",
+  "evaluation_start":"2023-08-01", "evaluation_end":"2024-12-31", "initial_cash":100000, "allocation":0.95,
+  "rsi":"Wilder 2: seed arithmetic mean gains/losses of first two close differences; recursive avg=(previous+current)/2; no losses ->100, both zero->50", "ma":"SMA full 5/200 bars; no fill",
+  "execution":"Decision after each evaluation close; no pre-evaluation pending order; one pending order; next open (lag2 means following second open). Pending order retains original signal; final pending dropped. Fractional full fills; no terminal liquidation.",
+  "fee_bps":8, "slippage_bps":2, "sensitivity":[{"name":"fee0","fee_bps":0,"lag":1},{"name":"fee20","fee_bps":20,"lag":1},{"name":"lag2","fee_bps":8,"lag":2}],
+  "sizing":"Buy notional 95% current cash plus fee from residual; fully exit on sell; long-only no leverage",
+  "benchmark":"Buy and hold 95% cash at first evaluation open, same 8bps fee and 2bps slippage; no terminal liquidation",
+  "evidence_class":"historical_replay", "oos_claim":false, "limitations":["Already exposed BTC window; no pristine out-of-sample", "Historical archive revision/publication time not PIT-proven", "USDT not USD; no interest/tax/lot/impact model", "Direct spot diagnostic, not accepted perpetual V3 normalized input; not promotion or live-ready"]
+}

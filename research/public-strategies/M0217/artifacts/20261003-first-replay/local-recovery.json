@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Fresh output directory deterministic re-execution from existing frozen local input; NOT remote backup restore",
+  "files": {
+    "base-nav.csv": true,
+    "base-trades.csv": true,
+    "buy_hold-nav.csv": true,
+    "buy_hold-trades.csv": true,
+    "fee0-nav.csv": true,
+    "fee0-trades.csv": true,
+    "fee20-nav.csv": true,
+    "fee20-trades.csv": true,
+    "summary.json": true
+  }
+}

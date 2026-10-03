@@ -1,0 +1,41 @@
+{
+  "independent_decimal": {
+    "base": {
+      "status": "PASS",
+      "daily_rows": 731,
+      "fills": 72,
+      "max_equity_error": 4.99290763400495e-07
+    },
+    "fee0": {
+      "status": "PASS",
+      "daily_rows": 731,
+      "fills": 72,
+      "max_equity_error": 4.971225280314684e-07
+    },
+    "fee20": {
+      "status": "PASS",
+      "daily_rows": 731,
+      "fills": 72,
+      "max_equity_error": 4.988687578588724e-07
+    },
+    "lag2": {
+      "status": "PASS",
+      "daily_rows": 731,
+      "fills": 68,
+      "max_equity_error": 4.961038939654827e-07
+    },
+    "buyhold": {
+      "status": "PASS",
+      "daily_rows": 731,
+      "fills": 1,
+      "max_equity_error": 4.994799382984638e-07
+    }
+  },
+  "causality": {
+    "rsi_hand_fixtures": "PASS four fixtures",
+    "future_perturbation": {
+      "2023-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged",
+      "2024-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged"
+    }
+  }
+}

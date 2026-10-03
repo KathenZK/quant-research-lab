@@ -1,0 +1,22 @@
+{
+  "record_id":"M0215", "variant_id":"M0215-BTCUSDT-RSI2-WILDER-20261003",
+  "family":"BTC-1D-M0215-RSI2-SNAPBACK", "fidelity":"HYPOTHESIS",
+  "source_url":"https://x.com/pedma7/status/1690694754672201728",
+  "source_status":"catalog rule verified by coordinator; direct public X read returned 403; no bypass",
+  "scope":"BTC leg only of original BTC/ETH/XRP/LTC/ADA list; not full basket",
+  "symbol":"BTCUSDT", "market_type":"spot", "timeframe":"1d UTC",
+  "entry":"At closed day t RSI(2)<10 while flat, buy next UTC day open",
+  "exit":"At closed day t close[t]>high[t-1] while long, sell next UTC day open; equivalent yesterday close>two-days-ago high at execution date",
+  "rsi":"Wilder smoothing alpha=1/2, seed arithmetic mean of first two close gains/losses; both zero ->50; losses zero gains positive ->100; RSI=100*avg_gain/(avg_gain+avg_loss)",
+  "position":"long only; 95% cash notional per entry, fee paid from remaining cash; no pyramiding, no stop or source-independent risk gate",
+  "initial_cash":100000, "fee_bps":8, "slippage_bps":2,
+  "execution":"full fractional fills next open at adverse 2bps; mark daily close; no terminal liquidation; duplicate delayed buys while long and sells while flat ignored",
+  "evaluation_start":"2023-01-01", "evaluation_end":"2024-12-31",
+  "input_start":"2022-12-01", "input_sha256":"48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "cash_interest":0,"funding":0,"leverage":1,
+  "predeclared_cases":["base fee8 lag1","fee0 lag1","fee20 lag1","fee8 lag2","buyhold fee8 lag1 95% cash first evaluation open"],
+  "oos_claim":false,"evidence_class":"historical_replay",
+  "exposure":"M0216 already exposed this market window; older corpus trial count unknown; no pristine OOS, no DSR/PBO",
+  "assumptions":"Wilder implementation, venue/quote, sizing, fees, UTC, execution, sample and single leg are research assumptions, not verified source details",
+  "data_status":"reused frozen spot diagnostic input from M0216; not canonical perpetual v3 bundle; no futures substitution; retrospective archive not proven PIT"
+}

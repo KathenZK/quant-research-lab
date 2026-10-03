@@ -229,4 +229,18 @@
 
 ## M0216 首条来源回放
 
-[BTC日频SMA11/20主账](btc/1d-m0216-sma-cross/m0216-core-ledger.md)：explore / not promoted / not live-ready。真实数据回放完成，源码停机保留持仓，结果低于买入持有；不计严格复现。
+[BTC日频SMA11/20主账](public-strategies/M0216/m0216-core-ledger.md)：explore / not promoted / not live-ready。真实数据回放完成，源码停机保留持仓，结果低于买入持有；不计严格复现。
+
+## Cloud batch 002 — fixed-source BTC diagnostics
+
+- [M0200 主账](public-strategies/M0200/m0200-core-ledger.md)：执行延迟敏感的RSI2均值回归；explore / not promoted / not live-ready，严格复现0。
+- [M0215 主账](public-strategies/M0215/m0215-core-ledger.md)：原列BTC单腿RSI2反弹；explore / not promoted / not live-ready，严格复现0。
+- [M0217 主账](public-strategies/M0217/m0217-core-ledger.md)：昨日振幅突破的日级成交假设；explore / not promoted / not live-ready，严格复现0。
+
+## 公开采集策略专区
+
+统一入口：[research/public-strategies](public-strategies/README.md)。与个人深入研究分开，按稳定catalog ID组织，保留来源/实现分类。
+
+历史链接入口：[btc/1d-m0216-sma-cross/](btc/1d-m0216-sma-cross/README.md)。仅重定向，不是个人研究家族。
+
+[M0004 阻塞报告](public-strategies/M0004/README.md)。

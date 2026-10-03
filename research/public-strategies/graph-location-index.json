@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "relative_to": "research/public-strategies",
+  "records": [
+    {
+      "id": "M0200",
+      "classification": "HYPOTHESIS",
+      "directory": "research/public-strategies/M0200",
+      "report": "M0200/diagnostics/M0200-20261003.md",
+      "graph_record": "M0200/artifacts/20261003-first-replay/graph-record.json",
+      "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
+      "historical_path_mapping": "M0200/path-migration-20261003.json",
+      "imported": false
+    },
+    {
+      "id": "M0215",
+      "classification": "HYPOTHESIS",
+      "directory": "research/public-strategies/M0215",
+      "report": "M0215/diagnostics/M0215-20261003.md",
+      "graph_record": "M0215/artifacts/20261003-first-replay/graph-record.json",
+      "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
+      "historical_path_mapping": "M0215/path-migration-20261003.json",
+      "imported": false
+    },
+    {
+      "id": "M0216",
+      "classification": "HYPOTHESIS",
+      "directory": "research/public-strategies/M0216",
+      "report": "M0216/diagnostics/M0216-20261003.md",
+      "graph_record": "M0216/artifacts/20261003-first-replay/graph-record.json",
+      "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
+      "historical_path_mapping": "M0216/path-migration-20261003.json",
+      "imported": false
+    },
+    {
+      "id": "M0217",
+      "classification": "HYPOTHESIS",
+      "directory": "research/public-strategies/M0217",
+      "report": "M0217/diagnostics/M0217-20261003.md",
+      "graph_record": "M0217/artifacts/20261003-first-replay/graph-record.json",
+      "input_manifest": "M0216/artifacts/20261003-first-replay/input-manifest.json",
+      "historical_path_mapping": "M0217/path-migration-20261003.json",
+      "imported": false
+    }
+  ],
+  "note": "Current path projection only; frozen input-reference and manifest path strings retain historical meaning through migration maps. Full detail curves remain private; no site import receipt."
+}

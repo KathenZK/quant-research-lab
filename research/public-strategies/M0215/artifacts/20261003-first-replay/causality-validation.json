@@ -1,0 +1,7 @@
+{
+  "rsi_hand_fixtures": "PASS four fixtures",
+  "future_perturbation": {
+    "2023-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged",
+    "2024-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged"
+  }
+}

@@ -451,17 +451,67 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
-        "research/btc/1d-m0216-sma-cross/scripts/fetch_inputs.py",
+        "research/public-strategies/M0200/scripts/run_replay.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0200/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0215/scripts/export_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/run_replay.py",
+        "load", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/verify_replay.py",
+        "verify", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0217/scripts/build_evidence.py",
+        "main", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/export_graph_projection.py",
+        "project", "frozen-artifact-consumer",
+        "Consumes only explicit hash-pinned spot diagnostic snapshots or retained evidence; no accepted perpetual bundle, live execution or lake fallback claim.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0216/scripts/fetch_inputs.py",
         "fetch", "official-spot-archive-snapshot-builder",
         "Fixed BTCUSDT spot archive acquisition: verifies provider SHA256, exact daily grid and native OHLCV; independent of the perpetual V3 bundle, with no PIT or production-readiness claim.",
     ),
     AuxiliaryClassification(
-        "research/btc/1d-m0216-sma-cross/scripts/run_replay.py",
+        "research/public-strategies/M0216/scripts/run_replay.py",
         "main", "frozen-artifact-consumer",
         "M0216 personal spot historical hypothesis consumes only its SHA256-pinned retained CSV, never a lake fallback or perpetual substitution.",
     ),
     AuxiliaryClassification(
-        "research/btc/1d-m0216-sma-cross/scripts/verify_replay.py",
+        "research/public-strategies/M0216/scripts/verify_replay.py",
         "verify", "frozen-artifact-consumer",
         "Independent Decimal ledger and indicator reconstruction from the retained M0216 snapshot; validates exported results without importing the replay engine.",
     ),

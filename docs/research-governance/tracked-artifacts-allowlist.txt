@@ -569,4 +569,10 @@ research/platform/quantgraph-integration/artifacts/platform-v2/candidate-summary
 research/platform/quantgraph-integration/artifacts/reference-v2/vectorbt-comparison.json # public contract fixture
 research/platform/quantgraph-integration/artifacts/synthetic-diagnostics.json # public contract fixture
 
-research/btc/1d-m0216-sma-cross/artifacts/20261003-first-replay/**  # research/btc/1d-m0216-sma-cross
+research/public-strategies/M0216/artifacts/20261003-first-replay/**  # research/public-strategies/M0216
+
+research/public-strategies/M0200/artifacts/20261003-first-replay/**  # research/public-strategies/M0200
+
+research/public-strategies/M0215/artifacts/20261003-first-replay/**  # research/public-strategies/M0215
+
+research/public-strategies/M0217/artifacts/20261003-first-replay/**  # research/public-strategies/M0217

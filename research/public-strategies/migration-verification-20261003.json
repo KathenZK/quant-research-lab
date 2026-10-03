@@ -1,0 +1,22 @@
+{
+  "M0200": {
+    "preserved_files_verified": 28,
+    "rerun_output_files_identical": 11
+  },
+  "M0215": {
+    "preserved_files_verified": 32,
+    "rerun_output_files_identical": 11
+  },
+  "M0216": {
+    "preserved_files_verified": 32,
+    "rerun_output_files_identical": 11
+  },
+  "M0217": {
+    "preserved_files_verified": 27,
+    "rerun_output_files_identical": 9
+  },
+  "checked_at": "2026-10-03T06:43:23.432601+00:00",
+  "model_id": "UNKNOWN",
+  "reasoning_effort": "UNKNOWN",
+  "scope": "Local relocation integrity and same frozen parameter rerun, not offsite backup or new strategy run count"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "M0217",
+  "name": "日线波动突破0.8倍振幅持有1日",
+  "status": "tested_hypothesis_only",
+  "reason": "完成假设回测与独立校验；交易成本敏感，未晋级。",
+  "tested_variants": 1,
+  "families": [
+    "BTC-1D-M0217-VOLATILITY-BREAKOUT"
+  ],
+  "audit": {
+    "source_verification_status": "unreadable",
+    "source_rule_attribution_status": "catalog_anchored_hypothesis"
+  },
+  "implementations": [
+    {
+      "variant_id": "M0217-BTCUSDT-PREVIOUS-RANGE-08-SAME-DAY-20261003",
+      "family": "BTC-1D-M0217-VOLATILITY-BREAKOUT",
+      "origin_run_id": "M0217-20261003-first-replay",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0217-20261003-first-replay",
+      "variant_id": "M0217-BTCUSDT-PREVIOUS-RANGE-08-SAME-DAY-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "105b7d3d1b628389eb926aa9408f24aa6cf993e84983b500c102a2aa94f400a9",
+      "manifest_sha256": "2d45eb73da7282491bd2d26e12e6e95b76468e9f47e7193bffe8707e44320f71"
+    }
+  ]
+}

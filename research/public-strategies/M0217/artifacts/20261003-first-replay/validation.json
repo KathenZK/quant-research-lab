@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "independent_method": "Decimal 40-digit multiplicative returns and separate cash ledger",
+  "configurations": 4,
+  "daily_rows": 2924,
+  "numeric_comparisons": 18001,
+  "max_absolute_difference": 1.2223608791828156e-09,
+  "future_perturbation": "PASS: prices from 2024-07-01 multiplied by 1.7; all earlier NAV/trades identical",
+  "execution_edge_cases": 3,
+  "original_rule_fidelity": "HYPOTHESIS",
+  "strict_reproduction": false
+}

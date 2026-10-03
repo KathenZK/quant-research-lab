@@ -1,0 +1,13 @@
+{
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "rows": 762,
+  "start": "2022-12-01",
+  "end": "2024-12-31",
+  "qa": "upstream official archive checksum + 0 missing/duplicates; local hash and contiguous millisecond times rechecked",
+  "manifest_relative": "../../../1d-m0216-sma-cross/artifacts/20261003-first-replay/input-manifest.json",
+  "attribution": "Binance Vision",
+  "license": "CC BY-NC-SA 4.0",
+  "pit_proven": false,
+  "tradability_proven": false,
+  "market": "spot BTCUSDT 1d UTC"
+}

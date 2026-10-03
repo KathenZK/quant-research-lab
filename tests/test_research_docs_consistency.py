@@ -23,7 +23,7 @@ RESEARCH = ROOT / "research"
 GOVERNANCE_DOCS = ROOT / "docs" / "research-governance"
 
 # 资产/主题目录：其下一级子目录被视为策略家族目录。
-ASSET_DIRS = ["hype", "btc", "eth", "sol", "trx", "bnb", "asset-portfolios"]
+ASSET_DIRS = ["hype", "btc", "eth", "sol", "trx", "bnb", "asset-portfolios", "public-strategies"]
 
 # 扁平结构的 grandfathered 目录，不按 <asset>/<timeframe>-<family> 检查。
 FLAT_GRANDFATHERED = {"mu"}

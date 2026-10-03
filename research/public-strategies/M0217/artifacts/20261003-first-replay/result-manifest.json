@@ -1,0 +1,25 @@
+{
+  "record_id": "M0217",
+  "files": {
+    "scripts/build_evidence.py": "b32ba4906784fc629a1e98b11a905274b35c3a77bdafcdb423bb8e741a8ef23c",
+    "scripts/run_replay.py": "a1967680b848d71906d6fd0e4fe7acdca12d3a6e926c65eb756b5bc28e56ae18",
+    "scripts/verify_replay.py": "34bd9d90ac9aeee6cb67c351825d25edd52856c08b6cd0530ca3df8b5e291172",
+    "artifacts/20261003-first-replay/results/base-nav.csv": "e193067f3885b699d154c5645b91c2a3123e3723f8461160c6c26417fb59d540",
+    "artifacts/20261003-first-replay/results/base-trades.csv": "d19a655be1225c3714f940aa38593e89b0645b4fc8d972ad600b2706ff08f61e",
+    "artifacts/20261003-first-replay/results/buy_hold-nav.csv": "5591e168444fa4b5c6f33c390b4b0fe6bfc59131f95cda93e5dc0333051d06cc",
+    "artifacts/20261003-first-replay/results/buy_hold-trades.csv": "d66b108d46603f40f4ce8e2e8a528d9216813ac5cddaa068e3501f71ce2b1ca1",
+    "artifacts/20261003-first-replay/results/fee0-nav.csv": "2513ba6416415916c160532bbe32b3cc92a1579c1f5723ff5e28c5ede08b5093",
+    "artifacts/20261003-first-replay/results/fee0-trades.csv": "78f9bc0311462c9ce8e6760eef7b5208bf2f396a28c29a9b6b9024164122e415",
+    "artifacts/20261003-first-replay/results/fee20-nav.csv": "7e0dce53c089930158798a5bc42b1fd7f6782098fae4d9bc250ad565c103c0bc",
+    "artifacts/20261003-first-replay/results/fee20-trades.csv": "6fb6cbef881399830be40afd21d88068724f6acf4e99069829d0f805cec259ef",
+    "artifacts/20261003-first-replay/results/summary.json": "ae21203c2eaf7a22e039591365244996d804607dbf020d804244c178005ec63e",
+    "specs/M0217-first-replay.json": "105b7d3d1b628389eb926aa9408f24aa6cf993e84983b500c102a2aa94f400a9",
+    "artifacts/20261003-first-replay/validation.json": "34730083aeeefb98ab615069c6b5fe6a96108db474065e21c4741241e668a5fb"
+  },
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "protocol_sha256": "105b7d3d1b628389eb926aa9408f24aa6cf993e84983b500c102a2aa94f400a9",
+  "overwrite_policy": "frozen: never overwrite",
+  "strategy_configurations": 3,
+  "benchmarks": 1,
+  "strict_reproductions": 0
+}
