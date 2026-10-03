@@ -1,0 +1,8 @@
+{
+  "url": "https://api.binance.com/api/v3/time",
+  "fetch_started_utc": "2026-10-03T08:05:44.630280+00:00",
+  "failed_at_utc": "2026-10-03T08:05:55.262845+00:00",
+  "status": "UNAVAILABLE",
+  "error": "HTTPError: HTTP Error 451: ",
+  "alternate_route_attempted": false
+}

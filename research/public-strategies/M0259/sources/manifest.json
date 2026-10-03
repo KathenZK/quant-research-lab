@@ -1,0 +1,89 @@
+{
+  "id": "M0259",
+  "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+  "catalog_scope": "privately read M0259 row only; whole table not redistributed",
+  "catalog_row": {
+    "id": "M0259",
+    "name": "BbandRsi",
+    "rule": "RSI(14)<30 and close<BB(20,2) lower band; RSI>70 exit",
+    "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BbandRsi.py"
+  },
+  "strategy_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "framework_tag": "2025.9",
+  "framework_commit": "c66e221012cd4d68cfdacf4735b38af33a487961",
+  "framework_role": "semantic reference and vendored qtpylib only; full Freqtrade backtester NOT run",
+  "retrieval_files": [
+    {
+      "filename": "BbandRsi.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BbandRsi.py",
+      "sha256": "65718e8d0c14094b67be82b66238ea60a4af4bbf6fd9a6e1879dad5c48125547",
+      "bytes": 1854,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    },
+    {
+      "filename": "qtpylib_indicators.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/vendor/qtpylib/indicators.py",
+      "sha256": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760",
+      "bytes": 19688,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    },
+    {
+      "filename": "freqtrade_interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/strategy/interface.py",
+      "sha256": "561656e2e97d3509798e40d486e918394aceab0987218513fb4f66ce5c05f478",
+      "bytes": 80064,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    },
+    {
+      "filename": "freqtrade_backtesting.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/optimize/backtesting.py",
+      "sha256": "68795912e0ba569f3aca2b3024a92be3fccd7d48b8d906d7a75931752094beb8",
+      "bytes": 78420,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    },
+    {
+      "filename": "freqtrade_trade_model.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c66e221012cd4d68cfdacf4735b38af33a487961/freqtrade/persistence/trade_model.py",
+      "sha256": "6eee44d5c8bd712a01b89fa877aa84b0ee5b41133078d6228d7eb625fc5e7016",
+      "bytes": 83935,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    },
+    {
+      "filename": "strategy_LICENSE",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "status": "VERIFIED_SOURCE_BYTES",
+      "first_retrieval_utc": "2026-10-03T07:39:00Z/2026-10-03T07:41:00Z",
+      "retrieval_time_precision": "tool interval, not provider clock"
+    }
+  ],
+  "authors": {
+    "strategy": "Gert Wohlgemuth (berlinguyinca), converted from sthewissen/Mynt BbandRsi.cs as credited in original file",
+    "qtpylib": "Ran Aroussi, copyright 2016-2018"
+  },
+  "licenses": {
+    "strategy_repository": "GPL-3.0",
+    "qtpylib_indicators_header": "Apache-2.0",
+    "market_data": "separate Binance data terms; software license is not market data authorization"
+  },
+  "dependency_semantics": {
+    "rsi": "TA-Lib Python0.6.8 / C0.6.4; Wilder14; default compatibility0 unstable0; first non-NaN at index14",
+    "bollinger": "locked qtpylib typical_price HLC3, window20, multiplier2, min_periods1, pandas rolling std ddof1"
+  },
+  "license_references": [
+    "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "https://www.apache.org/licenses/LICENSE-2.0",
+    "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+  ]
+}

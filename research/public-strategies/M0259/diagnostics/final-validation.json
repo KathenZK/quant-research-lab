@@ -1,0 +1,21 @@
+{
+  "status": "PASS_FOR_PREPARATION_AND_BLOCKER_ONLY",
+  "checked_at_utc": "2026-10-03T08:27:14Z",
+  "synthetic_test_paths": 4,
+  "synthetic_execution_tests": 10,
+  "independent_synthetic_ledger_cases": 5,
+  "source_class_synthetic_rows": 500,
+  "source_class_synthetic_signal_differences": 0,
+  "data_parser_unittests": 17,
+  "independent_market_archive_quality_audits": 2,
+  "blocked_freeze_refusal": "PASS",
+  "ruff_F_E9": "PASS",
+  "python_compileall": "PASS",
+  "market_replay_runs": 0,
+  "market_signal_or_return_validation": "NOT_RUN",
+  "full_window_rejected_csv_manifest_hash_check": "PASS",
+  "full_window_rows_independently_scanned": 18287,
+  "full_window_expected_rows": 18288,
+  "full_window_data_quality_status": "REJECTED",
+  "full_window_recapture": "NOT_RUN; only first4months12 objects independently re-fetched"
+}

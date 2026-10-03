@@ -1,0 +1,63 @@
+{
+  "id": "M0259",
+  "state": "DATA_BLOCKED",
+  "evidence_type": "input_quality_blocker_not_backtest_result",
+  "generated_at_utc": "2026-10-03T08:27:14Z",
+  "market_replay_runs": 0,
+  "formal_experiment_freeze": "NOT_WRITTEN",
+  "planned_spec_sha256": "1a4bd20f0e8a80faf079de510fd57f2b22bdb8956193825f41867ba559fa1751",
+  "files": {
+    "artifacts/20261003-data-blocked/blocker-rebuild-receipt.json": {
+      "sha256": "a401d485d1d1a2e83988fdfee61b4056083f6c4d58b44b9b4094c798a1ad9eff",
+      "bytes": 767
+    },
+    "artifacts/20261003-data-blocked/freeze-refusal-test.json": {
+      "sha256": "9f6f49c2fa44da3f82331cbd706bbff97f276b08c9c0f25b3427098ce885a322",
+      "bytes": 255
+    },
+    "artifacts/20261003-data-blocked/full-window-qa-summary.json": {
+      "sha256": "5f08b959d6000f25bb554b5bff841308caf704a4b69337828b00bf7d119bf128",
+      "bytes": 35081
+    },
+    "artifacts/20261003-data-blocked/graph-record.json": {
+      "sha256": "82c4b5df38e88b62fa82f684a1c5b8d28ecb0aedcf71abc727cf42f1d47bda5a",
+      "bytes": 1677
+    },
+    "artifacts/20261003-data-blocked/independent-daily-crosscheck.json": {
+      "sha256": "6e1583201c83c5e0f16873cef05decdb1b00310556d1cf5a3ec71787b46be91e",
+      "bytes": 1064
+    },
+    "artifacts/20261003-data-blocked/independent-monthly-audit.json": {
+      "sha256": "8d3a056827b8fb21e728c7162a1817abed455184e0cb27bc4b212946f546054e",
+      "bytes": 1416
+    },
+    "artifacts/20261003-data-blocked/provider-clock-unavailable.json": {
+      "sha256": "c687df12e768186e059233d2d7f0d2d508497b182aa75eb56944a81b2e6d4062",
+      "bytes": 272
+    },
+    "artifacts/20261003-data-blocked/source-input-manifest.json": {
+      "sha256": "8d07ba10550526c34865f19ea424a5684468442e6b7b68c9e6949535419cee2c",
+      "bytes": 4144
+    },
+    "artifacts/20261003-data-blocked/summary.json": {
+      "sha256": "1200778cba545f9fe64d7494af3e582b1d28934518974e38a749b71feec3b163",
+      "bytes": 2778
+    }
+  },
+  "script_sha256": {
+    "scripts/audit_blocked_archive.py": "a7124d25f785eb74aec9bc8a78071720e2c5df3fed8801a8b2305a44047e850b",
+    "scripts/check_causality.py": "df229ecda87676ea34d151ba586929eab114241aa6ccfaec073f141ed298719f",
+    "scripts/compare_daily_archive.py": "301747fffae142434594c2e6f3aa8647953ecf672d32447e66e4bd6e492ff739",
+    "scripts/compare_original_class.py": "57a8e5c47324cbabb43735832a18a9701cd01cd4507cfc4edb9d6f07764e55e1",
+    "scripts/export_graph_projection.py": "55d4b155374dc55dd463153bbaaf0e2ddf335f766fbdd9c0ddb6e629918e455a",
+    "scripts/fetch_sources.py": "f0e013efe30c2b10e056227992caaca6511db5f9d4696cbf0555860f3ce36b9b",
+    "scripts/freeze_run.py": "1be512041c2921c1c08964723f4cf46d8f2e5252e6d8fa5aa540e85777c8c017",
+    "scripts/rebuild.py": "1b9365909baca088f148749b1c4bbb518b9923b55ff340d497e9eb1f185e58f3",
+    "scripts/rebuild_official_bars.py": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+    "scripts/replay.py": "a4365a77a42dbf28d48650538632e32c8af76ed89f6a7891840a6c9eb08c425f",
+    "scripts/test_rebuild_official_bars.py": "0c1a486e4209b69eabc550efd71e15eded06fb97ed8507721926f40582916817",
+    "scripts/test_synthetic.py": "2c01b7bd5bd3664a2fbe0acc65c6a0032f75bcb4333489380b9aefa8c042b8d6",
+    "scripts/validate_independent.py": "be74dde444f996b03a58617f2ebb2bd2f6bc358d5e2a0ec0e5fa8f33a728f94c"
+  },
+  "self_excluded": true
+}

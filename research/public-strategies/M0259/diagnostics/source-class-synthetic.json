@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_sha256": "65718e8d0c14094b67be82b66238ea60a4af4bbf6fd9a6e1879dad5c48125547",
+  "rows": 500,
+  "exact_indicator_differences": {
+    "rsi": 0.0,
+    "bb_lower": 0.0,
+    "bb_mid": 0.0,
+    "bb_upper": 0.0
+  },
+  "entry_mismatches": 0,
+  "exit_mismatches": 0,
+  "risk_parameters": {
+    "minimal_roi": {
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "timeframe": "1h"
+  },
+  "method": "execute unchanged original populate methods using import-only IStrategy shim; exact NaN-aware array equality",
+  "limitation": "full configured Freqtrade strategy/backtester not executed",
+  "test_type": "SYNTHETIC_ONLY"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "M0256",
+  "origin_run_id": "M0256-20261003-first-replay",
+  "variant_id": "M0256-BTCUSDT-4H-EMA8-21-LONG-20261003",
+  "fidelity_class": "HYPOTHESIS",
+  "status": "explore / not promoted / not live-ready",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "trusted_input": false,
+  "protocol_sha256": "30940aa783ec8e3ec78d8e4ee8c635728560d7508a7c97bf2ad42d7cbe7c1858",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "engine_sha256": "8f4faaa2a713b6de30d17917b99167fca143b7eec905cb004344d6d40f2342df",
+  "dependency_runtime": {
+    "TA-Lib": "0.6.8",
+    "ta_library": "0.6.4 (Oct 20 2025 20:23:51)",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "actual_strategy_ids": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "oos_claim": false,
+  "results": {
+    "base": {
+      "configuration": {
+        "name": "base",
+        "fee_bps": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2023-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 4386,
+        "daily_observations": 731,
+        "total_return": 2.180570123144018,
+        "annualized_return": 0.7820044198822289,
+        "max_drawdown": 0.23980021376963656,
+        "sharpe": 1.798874036833783,
+        "sharpe_4h": 1.8883592713899842,
+        "final_equity": 318057.0123144018,
+        "trades": 174,
+        "round_trips": 87,
+        "winning_round_trip_fraction": 0.3563218390804598,
+        "fees_paid": 26618.771996548232,
+        "position_bar_fraction": 0.5501595987232102,
+        "final_cash": 318057.0123144018,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "name": "fee0",
+        "fee_bps": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2023-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 4386,
+        "daily_observations": 731,
+        "total_return": 2.630544931569022,
+        "annualized_return": 0.9037192013301698,
+        "max_drawdown": 0.20675672549631996,
+        "sharpe": 1.993084394810298,
+        "sharpe_4h": 2.0865619334132264,
+        "final_equity": 363054.4931569022,
+        "trades": 174,
+        "round_trips": 87,
+        "winning_round_trip_fraction": 0.3563218390804598,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.5501595987232102,
+        "final_cash": 363054.4931569022,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "name": "fee20",
+        "fee_bps": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2023-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 4386,
+        "daily_observations": 731,
+        "total_return": 1.6080329708241954,
+        "annualized_return": 0.6138820186910694,
+        "max_drawdown": 0.28679811107028375,
+        "sharpe": 1.5105174314765883,
+        "sharpe_4h": 1.5906810618878127,
+        "final_equity": 260803.29708241954,
+        "trades": 174,
+        "round_trips": 87,
+        "winning_round_trip_fraction": 0.3333333333333333,
+        "fees_paid": 59539.420766593896,
+        "position_bar_fraction": 0.5501595987232102,
+        "final_cash": 260803.29708241954,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "name": "delay2",
+        "fee_bps": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "start": "2023-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 4386,
+        "daily_observations": 731,
+        "total_return": 3.254546286874133,
+        "annualized_return": 1.0606132793641327,
+        "max_drawdown": 0.1924422696690279,
+        "sharpe": 2.238596378049066,
+        "sharpe_4h": 2.3227150938587418,
+        "final_equity": 425454.6286874133,
+        "trades": 174,
+        "round_trips": 87,
+        "winning_round_trip_fraction": 0.4482758620689655,
+        "fees_paid": 30778.83240575809,
+        "position_bar_fraction": 0.5501595987232102,
+        "final_cash": 425454.6286874133,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "buyhold": {
+      "configuration": {
+        "name": "buyhold",
+        "fee_bps": 8,
+        "delay_bars": 1,
+        "buy_hold": true
+      },
+      "metrics": {
+        "start": "2023-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 4386,
+        "daily_observations": 731,
+        "total_return": 4.418734870164824,
+        "annualized_return": 1.3251285506066521,
+        "max_drawdown": 0.29653763754503293,
+        "sharpe": 2.005619423482871,
+        "sharpe_4h": 2.056546179595957,
+        "final_equity": 541873.4870164824,
+        "trades": 1,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 75.93924860111912,
+        "position_bar_fraction": 1.0,
+        "final_cash": 4999.999999999985,
+        "final_quantity": 5.737298955036359,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    }
+  }
+}

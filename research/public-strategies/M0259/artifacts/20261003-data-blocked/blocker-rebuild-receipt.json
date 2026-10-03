@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED_BLOCKER_REPRODUCTION_ONLY",
+  "at_utc": "2026-10-03T08:18:00Z",
+  "fresh_destination": "separate private blocker-rebuild-v1 directory",
+  "matched_files_sha256": {
+    "independent-daily-crosscheck.json": "6e1583201c83c5e0f16873cef05decdb1b00310556d1cf5a3ec71787b46be91e",
+    "independent-monthly-audit.json": "8d3a056827b8fb21e728c7162a1817abed455184e0cb27bc4b212946f546054e"
+  },
+  "scope": "actual local independent archive re-audit in fresh output directory, byte-identical blocker metadata",
+  "strategy_backtest_runs": 0,
+  "strategy_result_reconstruction": "NOT_RUN",
+  "online_market_data_retrieval": "not repeated by this script; uses already authorized retained official bytes",
+  "receipt_written_at_utc": "2026-10-03T08:20:06Z"
+}

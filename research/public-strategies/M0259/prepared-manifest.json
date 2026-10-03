@@ -1,0 +1,8 @@
+{
+  "state": "SUPERSEDED_BY_DATA_BLOCKED",
+  "original_preparation_manifest_sha256": "8397b23890315e3acd5345b4824ba36ec2de2673f9b05178ea1f663091c61a6b",
+  "original_preparation_time_utc": "2026-10-03T08:00:43Z",
+  "market_replay_runs": 0,
+  "current_manifest": "publication-manifest.json",
+  "note": "This was a pre-input preparation checkpoint, not a frozen return experiment. Follow the current publication manifest for current file hashes."
+}

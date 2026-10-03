@@ -1,0 +1,58 @@
+[
+  {
+    "path": "lab-AGENTS.md",
+    "sha256": "23e09344e6f9acaa76c6792af0cf207b4a5afb7067765e6d1e0516f58f9d7b60",
+    "bytes": 1701,
+    "git_blob_sha": "e5ffb02317627878b39a7327d67f9b8b9a9c90cc",
+    "url": "https://github.com/KathenZK/quant-research-lab/blob/797a8e7d1dda2a1009ab03baac0bf770dab8a806/AGENTS.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535005+00:00"
+  },
+  {
+    "path": "lab-data-quality-first.mdc",
+    "sha256": "0cd621d950135b14146ae31f57a585c4a2e5818c911c976c0f0f38f62b443fef",
+    "bytes": 581,
+    "git_blob_sha": "1c911fee2db6be049231de7db589bc6ce01ba4ea",
+    "url": "https://github.com/KathenZK/quant-research-lab/blob/797a8e7d1dda2a1009ab03baac0bf770dab8a806/.cursor/rules/data-quality-first.mdc",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535087+00:00"
+  },
+  {
+    "path": "lab-data-lake-spec.md",
+    "sha256": "a8ab419bd42c41ce004f519e0a97aaf44c54a8b46de2995e8e7839461108b7c0",
+    "bytes": 46982,
+    "git_blob_sha": "61fee3a3d99751a70331bc9d9768e91d695db658",
+    "url": "https://github.com/KathenZK/quant-research-lab/blob/797a8e7d1dda2a1009ab03baac0bf770dab8a806/docs/data-lake-spec.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535301+00:00"
+  },
+  {
+    "path": "lab-dot-handoff.md",
+    "sha256": "684344b28b417544de89ce968e0b685670235e11589cbaef0a30787cd761378f",
+    "bytes": 6161,
+    "git_blob_sha": "00384f5c8687da28821dc70348ba8c53ff78ec58",
+    "url": "https://github.com/KathenZK/quant-research-lab/blob/a7b7ea4c09863306ed41427c19af072c0db20139/research/public-strategies/dot-batch001-handoff-20261003.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535370+00:00"
+  },
+  {
+    "path": "binance-public-data-README.md",
+    "sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+    "bytes": 5282,
+    "git_blob_sha": "e01e34a0b0cd91d62386a5a237190a3167138bae",
+    "url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/README.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535437+00:00"
+  },
+  {
+    "path": "binance-public-data-TERMS_AND_CONDITIONS.md",
+    "sha256": "dcf358e9d18f598a7a635fac80f6e643fa24a0e111a4d39bda47f1e246b31eb1",
+    "bytes": 9798,
+    "git_blob_sha": "87d04e216f62c86a2c797fbb7637404d6d602687",
+    "url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.535502+00:00"
+  },
+  {
+    "path": "binance-spot-rest-api.md",
+    "sha256": "49ea6809243fc7fb426e07f2fe662097736c7bb405bd2da5eef637d715427999",
+    "bytes": 181189,
+    "git_blob_sha": "7f2d467882bd9ab941c66f4031e590049ddabb6b",
+    "url": "https://github.com/binance/binance-spot-api-docs/blob/828ca74b809cfedbd5602df328b5f706368d483b/rest-api.md",
+    "snapshot_stored_at_utc": "2026-10-03T07:43:28.538623+00:00"
+  }
+]

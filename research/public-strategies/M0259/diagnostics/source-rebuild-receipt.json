@@ -1,0 +1,45 @@
+{
+  "status": "VERIFIED_SOURCE_RETRIEVAL_ONLY",
+  "checked_at_utc": "2026-10-03T08:00:43Z",
+  "scope": "actual redownload of six immutable public source files to a fresh local directory; each hash verified",
+  "market_data_retrieval": false,
+  "market_backtest": false,
+  "results": [
+    {
+      "filename": "BbandRsi.py",
+      "sha256": "65718e8d0c14094b67be82b66238ea60a4af4bbf6fd9a6e1879dad5c48125547",
+      "bytes": 1854,
+      "status": "VERIFIED"
+    },
+    {
+      "filename": "qtpylib_indicators.py",
+      "sha256": "39de0b1a666c05e0c11034c993eb96212eb505d20d630712c4bb503008609760",
+      "bytes": 19688,
+      "status": "VERIFIED"
+    },
+    {
+      "filename": "freqtrade_interface.py",
+      "sha256": "561656e2e97d3509798e40d486e918394aceab0987218513fb4f66ce5c05f478",
+      "bytes": 80064,
+      "status": "VERIFIED"
+    },
+    {
+      "filename": "freqtrade_backtesting.py",
+      "sha256": "68795912e0ba569f3aca2b3024a92be3fccd7d48b8d906d7a75931752094beb8",
+      "bytes": 78420,
+      "status": "VERIFIED"
+    },
+    {
+      "filename": "freqtrade_trade_model.py",
+      "sha256": "6eee44d5c8bd712a01b89fa877aa84b0ee5b41133078d6228d7eb625fc5e7016",
+      "bytes": 83935,
+      "status": "VERIFIED"
+    },
+    {
+      "filename": "strategy_LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "status": "VERIFIED"
+    }
+  ]
+}

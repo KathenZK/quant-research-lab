@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "independent_synthetic_ledger_cases": 5,
+  "independent_daily_export_check": "PASS",
+  "test_type": "synthetic_unit_tests_only",
+  "indicator_paths": 4,
+  "execution_checks": [
+    "warmup-first-open",
+    "fee-inclusive-budget",
+    "no-terminal-liquidation",
+    "same-bar-stop-before-roi",
+    "gap-stop",
+    "gap-roi",
+    "signal-before-intrabar-risk",
+    "fee-aware-roi-with-slippage",
+    "extra-bar-delay",
+    "nonnegative-cash"
+  ]
+}

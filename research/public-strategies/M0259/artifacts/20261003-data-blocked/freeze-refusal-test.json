@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "test": "blocked QA is refused before input access or freeze write",
+  "returncode": 1,
+  "message": "QA records a failing or blocked state; resolve before freeze",
+  "freeze_written": false,
+  "market_return_calculation": false
+}

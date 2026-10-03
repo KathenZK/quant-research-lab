@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "source_methods_match": "All EMA8/EMA21, entry and exit signals bit-identical to original pinned AverageStrategy method AST; default parameters only",
+  "future_perturbation": [
+    {
+      "perturb_from_inclusive": "2023-06-15T12:00:00Z",
+      "boundary_type": "intraday Thursday noon",
+      "action": "future OHLC times 7, volume times 3; independent feature truncation",
+      "cases": [
+        {
+          "case": "base",
+          "prefix_bars": 993,
+          "prefix_trades": 42,
+          "status": "PASS"
+        },
+        {
+          "case": "fee0",
+          "prefix_bars": 993,
+          "prefix_trades": 42,
+          "status": "PASS"
+        },
+        {
+          "case": "fee20",
+          "prefix_bars": 993,
+          "prefix_trades": 42,
+          "status": "PASS"
+        },
+        {
+          "case": "delay2",
+          "prefix_bars": 993,
+          "prefix_trades": 42,
+          "status": "PASS"
+        },
+        {
+          "case": "buyhold",
+          "prefix_bars": 993,
+          "prefix_trades": 1,
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "perturb_from_inclusive": "2023-07-03T00:00:00Z",
+      "boundary_type": "UTC Monday week boundary",
+      "action": "future OHLC times 7, volume times 3; independent feature truncation",
+      "cases": [
+        {
+          "case": "base",
+          "prefix_bars": 1098,
+          "prefix_trades": 45,
+          "status": "PASS"
+        },
+        {
+          "case": "fee0",
+          "prefix_bars": 1098,
+          "prefix_trades": 45,
+          "status": "PASS"
+        },
+        {
+          "case": "fee20",
+          "prefix_bars": 1098,
+          "prefix_trades": 45,
+          "status": "PASS"
+        },
+        {
+          "case": "delay2",
+          "prefix_bars": 1098,
+          "prefix_trades": 45,
+          "status": "PASS"
+        },
+        {
+          "case": "buyhold",
+          "prefix_bars": 1098,
+          "prefix_trades": 1,
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "perturb_from_inclusive": "2024-12-02T00:00:00Z",
+      "boundary_type": "UTC Monday late sample",
+      "action": "future OHLC times 7, volume times 3; independent feature truncation",
+      "cases": [
+        {
+          "case": "base",
+          "prefix_bars": 4206,
+          "prefix_trades": 165,
+          "status": "PASS"
+        },
+        {
+          "case": "fee0",
+          "prefix_bars": 4206,
+          "prefix_trades": 165,
+          "status": "PASS"
+        },
+        {
+          "case": "fee20",
+          "prefix_bars": 4206,
+          "prefix_trades": 165,
+          "status": "PASS"
+        },
+        {
+          "case": "delay2",
+          "prefix_bars": 4206,
+          "prefix_trades": 165,
+          "status": "PASS"
+        },
+        {
+          "case": "buyhold",
+          "prefix_bars": 4206,
+          "prefix_trades": 1,
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "limitation": "Tests enforce computational causality, not historical PIT/version availability or intrabar path truth"
+}
