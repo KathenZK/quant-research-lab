@@ -1,0 +1,158 @@
+{
+  "record_id": "M0253",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1175,
+      "sha256": "099fd82bed2f4e6c81b5b4664b8e29b185a096416640be8e94c47dee8f849714"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4718,
+      "sha256": "5ea6ef80cf0684ed5c0c2b02fea2f83961d5aa4137a09545961316cc79c74fa3"
+    },
+    {
+      "path": "artifacts/catalog-original11.csv",
+      "bytes": 452,
+      "sha256": "ce4290e50f0a3e8a1b9489b516e5c4a71c71e2657439b8360150bc5768a83f15"
+    },
+    {
+      "path": "artifacts/catalog-original11.json",
+      "bytes": 541,
+      "sha256": "7828cbac6a505b42ea5061da77b560a3b4414e5ff66105d4061cda56fff4494f"
+    },
+    {
+      "path": "artifacts/pre-C0-source-signal-QA.json",
+      "bytes": 2068,
+      "sha256": "e52dcb40249d74f7023722ad4470124fdc40d7ca5d8eb41fd6afff4e14e2db8d"
+    },
+    {
+      "path": "artifacts/results/base-daily-equity.json",
+      "bytes": 59137,
+      "sha256": "57ce1201c4e6009cc12a2c9824994acdc7237bdfe40fbd22c078cbe839254b09"
+    },
+    {
+      "path": "artifacts/results/core-ledger.json",
+      "bytes": 6404,
+      "sha256": "9523feae9ee37ae9ca964b67e8e735d642bd460cdd84b12aa6d21e0692f7ac9b"
+    },
+    {
+      "path": "artifacts/results/delay2-daily-equity.json",
+      "bytes": 59134,
+      "sha256": "da38a65b4fc254e6c9058182c835756fd2f5259ba236af7d6447a1f7ce8c5f3c"
+    },
+    {
+      "path": "artifacts/results/fee0-daily-equity.json",
+      "bytes": 59182,
+      "sha256": "43fa17b9bd2a1a8dc5bfcc573b81d4e9188b1c10f20b9244a00da266c98d7753"
+    },
+    {
+      "path": "artifacts/results/fee20-daily-equity.json",
+      "bytes": 59206,
+      "sha256": "56ce349c28e57644a6110c843996f52223177d9b4e591332a4f6deb81c69970e"
+    },
+    {
+      "path": "artifacts/results/nonstatistical-fill-sample.json",
+      "bytes": 2430,
+      "sha256": "c5b8b8529bdc80ac192f0e4757ced16751fce67f4461bb6be0d7512bfa9547bb"
+    },
+    {
+      "path": "artifacts/results/runtime.json",
+      "bytes": 1058,
+      "sha256": "7679dfaa65c1d0370170cfe2dbb71ae366b9e7f2b574cf9e5eae38ea24e6cb62"
+    },
+    {
+      "path": "artifacts/results/summary.json",
+      "bytes": 6719,
+      "sha256": "bf5e6593fe8de37378c215347fc2a82291e17027474ca55bde1a08c0f1acf4ea"
+    },
+    {
+      "path": "artifacts/results/validation-summary.json",
+      "bytes": 632,
+      "sha256": "92fdd94dfe3a9d82a905321fcde828067a263a33529d73aca573f174a87a0a4c"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1013,
+      "sha256": "3d5cef7bd98b6eec72d8f184429388083a0d0195b057990af6a59b1149dc43e7"
+    },
+    {
+      "path": "history/protocol-before-input-addendum.json",
+      "bytes": 10759,
+      "sha256": "664691f9e75b849f0f7da1e17f38d47b1b50d15d32dd05426fdbcac845684d11"
+    },
+    {
+      "path": "history/protocol-incomplete-C0-preparation.json",
+      "bytes": 11499,
+      "sha256": "93008bc88247a7a5ca6aea86c100f585504dae85e3aca8bd9ee7b58a0814e4b1"
+    },
+    {
+      "path": "m0253-core-ledger.md",
+      "bytes": 364,
+      "sha256": "5b2cf9d54eb65831f871cbad0d712d93f03861fe51b549a5cf0ed5af97ec5346"
+    },
+    {
+      "path": "publication-history/revision-v2.json",
+      "bytes": 1013,
+      "sha256": "c1a53643b9a28109959b3c6fe45a4275790e774e26948451f3e0a389d2a929d9"
+    },
+    {
+      "path": "publication-history/v1/README.md.snapshot",
+      "bytes": 4719,
+      "sha256": "dd4c719519d58a49b520bb4001fd1c0bebdee916c31ad9214e67cebd45d3df12"
+    },
+    {
+      "path": "publication-history/v1/decision-log.md.snapshot",
+      "bytes": 604,
+      "sha256": "620469c3a1cbaa47be7e80d3cc14e1be7774c8ab80158a4a6b07e8d35214a694"
+    },
+    {
+      "path": "publication-history/v1/publication-manifest.json",
+      "bytes": 4364,
+      "sha256": "239c3391025b553bc6badfdde8c24940d62a2db2fcd6826f90fe8b33252133a5"
+    },
+    {
+      "path": "scripts/adapter.py",
+      "bytes": 297,
+      "sha256": "f19cbb62bfac884e8f59b412db590dc6cb71239431bf3554967aba3e5961373d"
+    },
+    {
+      "path": "specs/C0.json",
+      "bytes": 3832,
+      "sha256": "8da1511699ed5b440af46f049118af8aaf1cb58a684869db69368d3d957fdd30"
+    },
+    {
+      "path": "specs/catalog-source-manifest.json",
+      "bytes": 207,
+      "sha256": "249691699d5bcac868f2907923002f41ff5d2619b6e2894fd1538de15a7303d5"
+    },
+    {
+      "path": "specs/input-compatibility-addendum.json",
+      "bytes": 10677,
+      "sha256": "b4972009e511f88526cb05222a5cac0c839e59b33ffb980a90eb5619706e93c6"
+    },
+    {
+      "path": "specs/protocol.json",
+      "bytes": 11499,
+      "sha256": "93008bc88247a7a5ca6aea86c100f585504dae85e3aca8bd9ee7b58a0814e4b1"
+    },
+    {
+      "path": "specs/source-rule-card.json",
+      "bytes": 3304,
+      "sha256": "faceb52d68ade8140ff07f319ee1cf67d2ff7ea9e74eb1eb7f474dab35dd5b4b"
+    }
+  ],
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
+  "raw_market_data": false,
+  "full_ledgers": false,
+  "private_Library_IDs": false,
+  "shared_kernel_modified": false,
+  "revision": 2,
+  "previous_publication_manifest_sha256": "239c3391025b553bc6badfdde8c24940d62a2db2fcd6826f90fe8b33252133a5",
+  "revision_scope": "governance classification and explicit preserved documentation history only; immutable runtime evidence unchanged"
+}

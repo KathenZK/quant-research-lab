@@ -1,0 +1,61 @@
+{
+  "id": "M0258",
+  "name": "Bandtastic",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0258",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/Bandtastic.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "中",
+    "名称": "Bandtastic",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "Bandtastic",
+    "规则": "15m；默认关闭 RSI/MFI/EMA 过滤，buy_trigger=bb_lower1，即收盘<BB(20,1)下轨做多；止损 -34.5%；ROI 0/69/229/566 分钟 16.2%/9.7%/6.1%/0；追踪 +1% 偏移 5.8%。",
+    "页码或文件": "Bandtastic.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0258.json",
+    "blob_sha256": "6dfe1eb3d029d314ef7763e3c5c51d1ba4bd98187676154f1aaaaa0e0af86821"
+  },
+  "source": {
+    "id": "M0258",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Bandtastic.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Bandtastic.py",
+    "bytes": 7310,
+    "sha256": "15dcb60d49a3681241cd39645f0fe8e6dc247687bf878c2026f37bb1c5790b57",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "Bandtastic",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "15m",
+    "minimal_roi": {
+      "0": 0.162,
+      "69": 0.097,
+      "229": 0.061,
+      "566": 0
+    },
+    "stoploss": -0.345,
+    "trailing_stop": true,
+    "startup_candle_count": 999
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_15m_NOT_5M",
+    "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

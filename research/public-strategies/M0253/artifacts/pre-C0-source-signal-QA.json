@@ -1,0 +1,89 @@
+{
+  "id": "M0253",
+  "status": "PASS_SOURCE_AND_SIGNAL_NO_RETURNS",
+  "completed_at_utc": "2026-10-03T14:01:06.768649+00:00",
+  "rows": 114336,
+  "evaluation_rows": 105408,
+  "source_sha256": "58ee823e52dbf7def502c7cf069c4bca56d8198eb5037fc007856d27529e8968",
+  "protocol_draft_sha256": "664691f9e75b849f0f7da1e17f38d47b1b50d15d32dd05426fdbcac845684d11",
+  "actual_flags_all_verified": true,
+  "actual_loaded_parameters": {},
+  "native_source_vs_independent_Boolean_signals": "EXACT",
+  "advanced_TA_formula_independence": false,
+  "causality": [
+    {
+      "cut": 1,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 20,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 40,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 100,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 8928,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 9000,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 9500,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 20000,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 50000,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 90000,
+      "columns": 5,
+      "prefix_and_future_perturbation": "PASS"
+    }
+  ],
+  "feature_readiness": {
+    "macd": {
+      "first_valid_index": 33,
+      "evaluation_nan_rows": 0
+    },
+    "macdsignal": {
+      "first_valid_index": 33,
+      "evaluation_nan_rows": 0
+    },
+    "macdhist": {
+      "first_valid_index": 33,
+      "evaluation_nan_rows": 0
+    }
+  },
+  "signals": {
+    "all_entry": 35592,
+    "all_exit": 57576,
+    "evaluation_entry": 32736,
+    "evaluation_exit": 53160,
+    "collisions": 0
+  },
+  "historical_returns_calculated": false,
+  "account_replay_calls": 0,
+  "market_requests": 0
+}

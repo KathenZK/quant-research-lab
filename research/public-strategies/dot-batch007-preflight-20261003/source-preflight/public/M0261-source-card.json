@@ -1,0 +1,55 @@
+{
+  "id": "M0261",
+  "name": "BinHV45",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0261",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/BinHV45.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "BinHV45",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "BinHV45",
+    "规则": "BB(40,2)；buy_params：bbdelta=7、closedelta=17、tail=25（均除以 1000 后与收盘/影线比较）；收盘低于上一根下轨且收阴做多；无卖出信号，靠 ROI。",
+    "页码或文件": "BinHV45.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0261.json",
+    "blob_sha256": "bcf08b8ca077a57c94b86b042b68cd44281faaa3f5e9d456ce41c7f381ed651d"
+  },
+  "source": {
+    "id": "M0261",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BinHV45.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/BinHV45.py",
+    "bytes": 2641,
+    "sha256": "ae76994b6fc8dd1937d84fc6d5ef0b9d7b702f01f61f5ccf5a2870278a3422a2",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "BinHV45",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1m",
+    "minimal_roi": {
+      "0": 0.0125
+    },
+    "stoploss": -0.05
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

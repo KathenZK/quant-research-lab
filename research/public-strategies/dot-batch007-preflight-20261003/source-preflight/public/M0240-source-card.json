@@ -1,0 +1,58 @@
+{
+  "id": "M0240",
+  "name": "TrendFollowingStrategy",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0240",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/futures/TrendFollowingStrategy.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "TrendFollowingStrategy",
+    "市场": "加密永续",
+    "提出日期": "未知",
+    "标题": "TrendFollowingStrategy",
+    "规则": "5m；收盘上穿 EWM(span=20) 且 OBV 上升做多，下穿且 OBV 下降做空；止损 -26.5%；ROI 0/30/60 分钟 15%/10%/5%。",
+    "页码或文件": "TrendFollowingStrategy.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0240.json",
+    "blob_sha256": "af477a90742004b6b1441b8c309ab8e6bdccc3d21fefeb32e98c50e2c99176f3"
+  },
+  "source": {
+    "id": "M0240",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/TrendFollowingStrategy.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/TrendFollowingStrategy.py",
+    "bytes": 2441,
+    "sha256": "6b8f3e272acfd4923539120364b9ddceccc17a385117d12a249dc1460ea53c4f",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "TrendFollowingStrategy",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "minimal_roi": {
+      "0": 0.15,
+      "30": 0.1,
+      "60": 0.05
+    },
+    "stoploss": -0.265,
+    "trailing_stop": true
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

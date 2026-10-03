@@ -1,0 +1,55 @@
+{
+  "id": "M0301",
+  "name": "SmoothScalp",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0301",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/SmoothScalp.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "SmoothScalp",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "SmoothScalp",
+    "规则": "1m；EMA5(high/close/low)、Stoch(5,3,3)、CCI(20)、RSI(14)、BB(20,2)；ADX>30、MFI<30、CCI<-150 做多；CCI>150 平多；止损 -50%；ROI 立即 1%。",
+    "页码或文件": "SmoothScalp.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0004-v2/metadata/source-records/M0301.json",
+    "blob_sha256": "ec37a5fabdaac7251d145daee7cd3a92e715a417e8f844aae0a92b9d2415235b"
+  },
+  "source": {
+    "id": "M0301",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/SmoothScalp.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/SmoothScalp.py",
+    "bytes": 3861,
+    "sha256": "e32a8f758d8d57876210d479576e7e415ff924400b8d037bb0f30799cd801a5b",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "SmoothScalp",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1m",
+    "minimal_roi": {
+      "0": 0.01
+    },
+    "stoploss": -0.5
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

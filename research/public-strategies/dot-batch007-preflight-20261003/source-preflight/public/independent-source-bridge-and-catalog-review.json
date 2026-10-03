@@ -1,0 +1,139 @@
+{
+  "status": "PASS_TWO_SOURCE_CANDIDATES_NOT_C0",
+  "completed_utc": "2026-10-03T14:55:35.164091+00:00",
+  "checks": {
+    "M0287": {
+      "status": "PASS_SYNTHETIC_SOURCE_BRIDGE_ONLY",
+      "source_sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+      "catalog_blob_sha256": "9f8b48830a18cc6d721581148b6fbd6555746eade48aeb6b23f2ced6af2491a2",
+      "original_11_fields_byte_provenance": true,
+      "no_existing_claim_or_Lab_ID_at_snapshot": true,
+      "rows": 2417,
+      "entry_rows": 193,
+      "exit_rows": 1046,
+      "flags": {
+        "timeframe": "5m",
+        "can_short": false,
+        "trailing_stop": false,
+        "use_custom_stoploss": false,
+        "use_custom_roi": false,
+        "position_adjustment_enable": false,
+        "use_exit_signal": true,
+        "exit_profit_only": false,
+        "exit_profit_offset": 0.0,
+        "ignore_roi_if_entry_signal": false,
+        "startup_candle_count": 0
+      },
+      "loaded_parameters": {},
+      "original_orders": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "original_order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "risk": {
+        "stoploss": -0.05,
+        "minimal_roi": {
+          "0": 0.01
+        }
+      },
+      "boundaries": {
+        "first_10m_RSI": 29,
+        "first_40m_RSI": 119,
+        "first_SMA200": 199,
+        "higher_interval_availability_checked_at_every_merged_row": true
+      },
+      "source_card_sha256": null
+    },
+    "M0289": {
+      "status": "PASS_SYNTHETIC_SOURCE_BRIDGE_ONLY",
+      "source_sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+      "catalog_blob_sha256": "a11d209dbb8f988eac4a2f639ffc52f6221cb2190e2e355c4afe495e7ef38427",
+      "original_11_fields_byte_provenance": true,
+      "no_existing_claim_or_Lab_ID_at_snapshot": true,
+      "rows": 192,
+      "entry_rows": 62,
+      "exit_rows": 62,
+      "flags": {
+        "timeframe": "5m",
+        "can_short": false,
+        "trailing_stop": false,
+        "use_custom_stoploss": false,
+        "use_custom_roi": false,
+        "position_adjustment_enable": false,
+        "use_exit_signal": true,
+        "exit_profit_only": false,
+        "exit_profit_offset": 0.0,
+        "ignore_roi_if_entry_signal": false,
+        "startup_candle_count": 30
+      },
+      "loaded_parameters": {
+        "buy_pow": 3.849,
+        "sell_pow": 3.798
+      },
+      "original_orders": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "original_order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "risk": {
+        "stoploss": -0.288,
+        "minimal_roi": {
+          "0": 0.213,
+          "39": 0.048,
+          "56": 0.029,
+          "159": 0
+        }
+      },
+      "boundaries": {
+        "independent_Decimal_rows": 192,
+        "tested_absolute_price_levels": [
+          0.1,
+          1,
+          10
+        ],
+        "initial_NaN_shift_semantics": true,
+        "strict_inequalities_at_one": true,
+        "source_scale_dependence_preserved": true,
+        "no_volume_gate_invented": true,
+        "ROI_minutes": [
+          0,
+          39,
+          56,
+          159
+        ],
+        "5m_open_age_first_eligible": [
+          0,
+          40,
+          60,
+          160
+        ]
+      },
+      "source_card_sha256": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af"
+    }
+  },
+  "shared_source_adapter_sha256": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+  "technical_util_sha256": "8f16e768c44c3c2b3171a4c04cc834fa26caf1ac6a8cf209affbfb31fd1fac3d",
+  "qtpylib_sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+  "parent_claim_required": true,
+  "historical_runs": 0,
+  "account_engine_runs": 0,
+  "controls_run": 0,
+  "historical_input_read": false,
+  "market_requests": 0,
+  "source_or_kernel_changes": false,
+  "wall_seconds": 1.4270965249961591,
+  "cpu_seconds": 1.421958388,
+  "max_rss_kib": 312052
+}

@@ -1,0 +1,197 @@
+{
+  "scope": "final2source candidates; no assignment/C0/historical runs",
+  "files": [
+    {
+      "path": "public/M0235-source-card.json",
+      "bytes": 2307,
+      "sha256": "3faaef08ad80fda75983acabb3c4e482878ae504d8dffbca56245fb7e0c728c6"
+    },
+    {
+      "path": "public/M0236-source-card.json",
+      "bytes": 2318,
+      "sha256": "1502742eb0772ca7ca0e640d49f4a97c1cc8a752cfeba32e75b68bb17414923f"
+    },
+    {
+      "path": "public/M0237-source-card.json",
+      "bytes": 2285,
+      "sha256": "0ef0864e0578d8b563328d1f6e4224df2a814c2b494ffb11ffacf862f8cfeab7"
+    },
+    {
+      "path": "public/M0238-source-card.json",
+      "bytes": 2601,
+      "sha256": "19c30b9c6c8f83f124e56402fca7ae66bdb9e0170d6e1237828587696814d07e"
+    },
+    {
+      "path": "public/M0240-source-card.json",
+      "bytes": 2296,
+      "sha256": "4c32cfc509050daab000a14fe1788aa7bcb45d47286170141785a8fac29a6cdf"
+    },
+    {
+      "path": "public/M0241-source-card.json",
+      "bytes": 2368,
+      "sha256": "cb346920b82d767dae945f70230a724f794af81b88920481ff087625d8135dc0"
+    },
+    {
+      "path": "public/M0252-source-card.json",
+      "bytes": 2178,
+      "sha256": "2dcee7896c56c8ad3fff9647488a68c4411584d49e3d5448898c29cf123ce64e"
+    },
+    {
+      "path": "public/M0254-source-card.json",
+      "bytes": 2070,
+      "sha256": "71a8527955ea5f5dcf2a8f75e8d1a1907cef267fef1a2de7318b90c59216a435"
+    },
+    {
+      "path": "public/M0255-source-card.json",
+      "bytes": 2546,
+      "sha256": "97b07b26010f2357bec819d20530158a566a0c06275f66cbd0c1de7026c4b1ca"
+    },
+    {
+      "path": "public/M0258-source-card.json",
+      "bytes": 2317,
+      "sha256": "b9baede0f7498cb2a57db2f1ca30e5c07e9db13d4ce58c5f6955785cb945ff1d"
+    },
+    {
+      "path": "public/M0261-source-card.json",
+      "bytes": 2176,
+      "sha256": "1aa4a3226de2f6d82b71edc2b66fd6f5dde2248fe7806feb02d688dcc18dfd37"
+    },
+    {
+      "path": "public/M0262-source-card.json",
+      "bytes": 2169,
+      "sha256": "e56d66291eace4a5c406765c8ae9ebff74290761b254a5cf39939d703c53ceb4"
+    },
+    {
+      "path": "public/M0263-source-card.json",
+      "bytes": 2156,
+      "sha256": "2ed8163b0419a8d99e0258a45b9660b23f49a2b01ef5ffccccdb7d72faa361b2"
+    },
+    {
+      "path": "public/M0267-source-card.json",
+      "bytes": 2361,
+      "sha256": "ad707af2234098d86fb2e5d270fa6b7f51e32fee2d369121ece9e391698b9179"
+    },
+    {
+      "path": "public/M0269-source-card.json",
+      "bytes": 2212,
+      "sha256": "0fb9c3a18773e2bf2bc8b18b50ddb14410697a46b1c5b22c0f3783c219b2e830"
+    },
+    {
+      "path": "public/M0276-source-card.json",
+      "bytes": 2214,
+      "sha256": "e94f7424540156910f39a97dc48cd8a6b8acadec0f57b3be8a21efeb5edd2dde"
+    },
+    {
+      "path": "public/M0278-source-card.json",
+      "bytes": 2280,
+      "sha256": "6d01f8d7bc7049963a45204af949fbfc0d1308a6d4157b7cc6e15975f578762c"
+    },
+    {
+      "path": "public/M0280-source-card.json",
+      "bytes": 2074,
+      "sha256": "561396127fb70e77e609b59949464da6c10be85aeea8354a135ffccc81e91bdd"
+    },
+    {
+      "path": "public/M0287-independent-closed-resample.json",
+      "bytes": 6240,
+      "sha256": "1bac5ef73c4358576e825f5955b08180a546c7aca11ef9fd2ffc82871687688f"
+    },
+    {
+      "path": "public/M0287-ready-addendum.json",
+      "bytes": 3518,
+      "sha256": "fa6ccc292ca604b0246264c81c8dd015f33b27d3e1c0edbfffd0cb8bee3e02e3"
+    },
+    {
+      "path": "public/M0287-source-card.json",
+      "bytes": 2187,
+      "sha256": "a968243a3ba7f8bffb5c90b61f2492b0171a650861a397079a3a58266ad00482"
+    },
+    {
+      "path": "public/M0289-source-card.json",
+      "bytes": 4443,
+      "sha256": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af"
+    },
+    {
+      "path": "public/M0289-synthetic-ready.json",
+      "bytes": 3224,
+      "sha256": "aac8931e39384ef33b8b0a814d5f962724962203bb00b2b7ddee2e755ffa16e8"
+    },
+    {
+      "path": "public/M0297-source-card.json",
+      "bytes": 2124,
+      "sha256": "c904c008951a102446be9fc2b5da24b1152817baaca732de19c335c9fd40c282"
+    },
+    {
+      "path": "public/M0301-source-card.json",
+      "bytes": 2181,
+      "sha256": "dfd117cde58afb13e9d7cbbcf2665b2f56fba4b39ca18477ad62367a29abe54e"
+    },
+    {
+      "path": "public/M0303-source-card.json",
+      "bytes": 2392,
+      "sha256": "1080c2440e4e95f6df1f4df3e3395b47449800abc8f018ec8bec476d4f635224"
+    },
+    {
+      "path": "public/M0308-source-card.json",
+      "bytes": 2378,
+      "sha256": "35843099075e7b17471b85512d40818fe93567d91f1c51b1131d59d103d37353"
+    },
+    {
+      "path": "public/M0309-source-card.json",
+      "bytes": 2206,
+      "sha256": "938239e654903426550fb5697569a7fe2734ec51c2748912656970f629a1d691"
+    },
+    {
+      "path": "public/M0310-source-card.json",
+      "bytes": 2333,
+      "sha256": "c3b8faebce07ef4ad08b8e369de21cd34f6968b19a679e35c6532bb86f814805"
+    },
+    {
+      "path": "public/M0313-source-card.json",
+      "bytes": 2763,
+      "sha256": "e656a931586284563ade3aefa186c1f45670de1aa44659cb0383d64715970e0c"
+    },
+    {
+      "path": "public/M0318-source-card.json",
+      "bytes": 2383,
+      "sha256": "8ea5592c1a3e7072971b72b0de9155849807bef2b79aa9259b257af38514f42b"
+    },
+    {
+      "path": "public/independent-source-bridge-and-catalog-review.json",
+      "bytes": 4253,
+      "sha256": "4e58ae30082f6b2d439999beeb9e5f7f577dad4e9055c331fe2b2fdba0cadb67"
+    },
+    {
+      "path": "public/runtime-provenance.json",
+      "bytes": 1609,
+      "sha256": "16126dacc2cb87d3d06f53884ccaff8273d9272a49f5b5f30e746bbc73e260e1"
+    },
+    {
+      "path": "public/screening-summary.json",
+      "bytes": 10170,
+      "sha256": "f2ae47c7caf2be47c9112ff115e5a744e821eecd23e0d311cd14e7d97c553fd7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2531,
+      "sha256": "7e528983b496343388e46ea67af8894088daffea363eb5628cf642077857a14a"
+    },
+    {
+      "path": "FINAL-READY.json",
+      "bytes": 922,
+      "sha256": "e8dc5873f5c50dde9de0e80292fa24310cf2019a5fc7067b580ad11c9457b2f1"
+    },
+    {
+      "path": "FINAL-READY-v2.json",
+      "bytes": 1647,
+      "sha256": "6a1cedd021a9ee4960b6831030252d86e1c1cedc02ab47b92595085eb62dc878"
+    }
+  ],
+  "excluded": [
+    "private/",
+    "sources/",
+    "local scripts containing absolute paths"
+  ],
+  "raw_market_files": 0,
+  "third_party_source_modules": 0
+}

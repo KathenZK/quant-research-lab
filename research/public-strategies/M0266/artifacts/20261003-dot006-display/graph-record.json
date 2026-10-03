@@ -1,0 +1,443 @@
+{
+  "audit": {
+    "causality_validation": "PASS",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "definition_bound": false,
+    "deployed": false,
+    "independent_validation": "PASS",
+    "oos_claim": false,
+    "pit_proven": false,
+    "promotion": false,
+    "source_verification_status": "PASS",
+    "strict_replication": false,
+    "supplementary_event_time_notional_all_metrics": "PASS",
+    "trusted_input": false,
+    "validation_basis": "Reported by approved public validation-summary; exporter checks bindings and conversions only"
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "metrics": {
+      "annualized_return": 1.1458107566464215,
+      "daily_observations": 366,
+      "end": "2025-01-01T00:00:00Z",
+      "fees_paid": 75.9392486011191,
+      "final_cash": 5000.0,
+      "final_equity": 215030.41230956875,
+      "final_quantity": 2.2444901717274597,
+      "intrabar_stop_roi_ambiguities": 0,
+      "max_drawdown": 0.32021064669603316,
+      "observations": 105408,
+      "position_bar_fraction": 1.0,
+      "round_trips": 0,
+      "same_bar_stop_roi_hits": 0,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "start": "2024-01-01T00:00:00Z",
+      "total_return": 1.1503041230956876,
+      "trades": 1,
+      "winning_round_trip_fraction": null
+    },
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "new_control_runs": 0,
+    "origin_run_id": "M0311-20261003-first-replay",
+    "path_base": "repository_root",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57"
+  },
+  "control_configurations": 0,
+  "data_attribution": {
+    "changes": "Derived normalized daily NAV and display metadata; original source results unchanged",
+    "commercial_or_live_entitlement": false,
+    "evidence_role": "attribution",
+    "license": "CC BY-NC-SA-4.0 plus Binance Dataset Terms",
+    "provider": "Binance",
+    "strategy_license": {
+      "name": "GPL-3.0",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE"
+    },
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md"
+  },
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "evidence_roles": [
+      "readme",
+      "protocol",
+      "source_rule_card"
+    ],
+    "explanation": "Technical source rules are specified; no independently supported economic mechanism or paper is claimed.",
+    "hypothesis": {
+      "status": "NOT_ESTABLISHED_IN_APPROVED_SOURCE",
+      "value": null
+    },
+    "paper": {
+      "status": "NOT_ESTABLISHED_IN_APPROVED_SOURCE",
+      "value": null
+    }
+  },
+  "evaluation": {
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open",
+    "start": "2024-01-01T00:00:00Z"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "PUBLIC-M0266-COMBINEDBINHANDCLUC"
+  ],
+  "fidelity_class": "ADAPTED",
+  "id": "M0266",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "PUBLIC-M0266-COMBINEDBINHANDCLUC",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_path": "research/public-strategies/M0266/artifacts/20261003-dot006-display/public-display-manifest.json",
+      "manifest_sha256": "26fa66047a783240c84f37bc7d974dd8f6ebe26ce722b0322587b0d15b507411",
+      "origin_run_id": "M0266-20261003-dot-b006-v1",
+      "protocol_sha256": "d93def3aa579dee9374469b17a2ff1cf0c88976ef212e89b7f230e98aefa416d",
+      "variant_id": "M0266-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "No holdout or OOS inference; only fixed2024BTCUSDTspot diagnostic",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready",
+    "Config and parameter sidecars can override class values; author runtime/config/universe unknown. Frozen research runtime is a hypothesis. Raw open nextbar kernel is execution proxy, not native limit-fill equivalence.",
+    "BB40 is close rolling40 mean/std(ddof1), nan_to_num; BB20 typical uses qtpylib. Catalog omits profit-only exit gate and ROI5%.",
+    "Source-rule-card preflight status and C0 pre-return status are historical freeze-stage labels; later validation-summary supplies reported checks.",
+    "Advanced TA formula independence is not established; predecessor kernel parity was not run.",
+    "One strategy, four frozen configurations; benchmark reused from M0311, zero new control runs.",
+    "Summary maximum drawdown uses full5m peaks; source_native_drawdown is sampled from those peaks, not a daily-only drawdown.",
+    "Benchmark curve unavailable in this source bundle; summary metrics retained without inventing a curve.",
+    "Display derived manifest is not the private original result manifest or a native Graph collection manifest."
+  ],
+  "market": {
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m"
+  },
+  "metric_conventions": {
+    "MDD": "full5m path including initial100000",
+    "Sharpe": "daily UTC close returns sample std sqrt365; riskfree0",
+    "Sharpe_5m": "5m returns sample std sqrt(365*288)",
+    "annualized_return": "(final/initial)^(365/366)-1",
+    "terminal": "no liquidation and no hypothetical terminal exit costs"
+  },
+  "name": "CombinedBinHAndCluc：BTC现货5m执行代理",
+  "original_research_classification": "HYPOTHESIS_NOT_STRICT",
+  "plain_language_rule": {
+    "evidence_roles": [
+      "source_rule_card",
+      "protocol",
+      "readme"
+    ],
+    "status": "SOURCE_GROUNDED_PARAPHRASE",
+    "text": "合并两种布林带超卖入场分支，回到中轨上方并通过盈利门时信号退出，另保留ROI和固定止损。"
+  },
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "合并两种布林带超卖入场分支，回到中轨上方并通过盈利门时信号退出，另保留ROI和固定止损。 明示执行改编，仅诊断。base收益7.3318%、原生最大回撤7.4333%、完整往返10次；不代表严格复现、样本外或可实盘。",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_path": "research/public-strategies/M0266/artifacts/20261003-dot006-display/public-display-manifest.json",
+      "manifest_sha256": "26fa66047a783240c84f37bc7d974dd8f6ebe26ce722b0322587b0d15b507411",
+      "origin_run_id": "M0266-20261003-dot-b006-v1",
+      "protocol_sha256": "d93def3aa579dee9374469b17a2ff1cf0c88976ef212e89b7f230e98aefa416d",
+      "variant_id": "M0266-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "results": {
+    "base": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 8,
+        "name": "base"
+      },
+      "metrics": {
+        "annualized_return": 0.07311054903194991,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 1538.8949756721418,
+        "final_cash": 107331.80218946826,
+        "final_equity": 107331.80218946826,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.07433342551202382,
+        "observations": 105408,
+        "position_bar_fraction": 0.0016602155434122647,
+        "round_trips": 10,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": 1.0494531683329569,
+        "sharpe_5m": 0.8871812460210381,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.0733180218946825,
+        "trades": 20,
+        "winning_round_trip_fraction": 0.8
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "delay_bars": 2,
+        "fee_bps": 8,
+        "name": "delay2"
+      },
+      "metrics": {
+        "annualized_return": 0.05779176380193962,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 1528.4402364002108,
+        "final_cash": 105795.4599448146,
+        "final_equity": 105795.4599448146,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.07156103614132092,
+        "observations": 105408,
+        "position_bar_fraction": 0.001318685488767456,
+        "round_trips": 10,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": 0.9037136388873745,
+        "sharpe_5m": 0.8468381171221424,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.05795459944814607,
+        "trades": 20,
+        "winning_round_trip_fraction": 0.9
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 0,
+        "name": "fee0"
+      },
+      "metrics": {
+        "annualized_return": 0.08785328510313617,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 108810.42841656909,
+        "final_equity": 108810.42841656909,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.0665662121492514,
+        "observations": 105408,
+        "position_bar_fraction": 0.0016602155434122647,
+        "round_trips": 10,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": 1.2297471510847713,
+        "sharpe_5m": 1.050048853698965,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.08810428416569094,
+        "trades": 20,
+        "winning_round_trip_fraction": 0.8
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 20,
+        "name": "fee20"
+      },
+      "metrics": {
+        "annualized_return": 0.051372321166915924,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 3806.3330920561293,
+        "final_cash": 105151.6632017213,
+        "final_equity": 105151.6632017213,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.08586308636940743,
+        "observations": 105408,
+        "position_bar_fraction": 0.0016697024893746206,
+        "round_trips": 10,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": 0.7630651446334732,
+        "sharpe_5m": 0.6414909417891357,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.051516632017212904,
+        "trades": 20,
+        "winning_round_trip_fraction": 0.8
+      }
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "catalog_difference_or_omission": "BB40 is close rolling40 mean/std(ddof1), nan_to_num; BB20 typical uses qtpylib. Catalog omits profit-only exit gate and ROI5%.",
+    "entry": "Bin branch: lower40.shift(1)>0 AND bbdelta>close*0.008 AND abs(close-close.shift(1))>close*0.0175 AND abs(close-low)<bbdelta*0.25 AND close<lower40.shift(1) AND close<=close.shift(1); OR Cluc branch: close<EMA50 AND close<0.985*BB20typical.lower AND volume<mean(volume,30).shift(1)*20",
+    "execution": {
+      "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+      "budget_includes_buy_fee": true,
+      "cash_budget_fraction": 0.95,
+      "cash_currency": "USDT",
+      "cash_interest": 0,
+      "direction": "long_only",
+      "exit_profit_offset": 0.0,
+      "exit_profit_only": true,
+      "fractional_fills": true,
+      "funding": "not applicable spot without borrowing",
+      "initial_cash": 100000,
+      "intrabar_execution_latest_overrides": {},
+      "leverage": 1,
+      "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+      "max_positions": 1,
+      "open_execution_overrides": {},
+      "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+      "proxy_changes": {
+        "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+        "pending": "No restinglimit states/timeouts/cancellations or partialfills",
+        "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+        "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+        "stop": "Original limit stop replaced by market-style gap/threshold full fill"
+      },
+      "proxy_label": "ADAPTED_EXECUTION_PROXY",
+      "pyramiding": false,
+      "sequence": [
+        "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+        "flat entry due from previous closedbar; never same-bar reentry after sale",
+        "open<=stop triggers stop gap; else open>ROI strict gap",
+        "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+        "mark remaining position at rawclose; no terminal forced sale"
+      ],
+      "slippage_bps": 2,
+      "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded"
+    },
+    "exit": "close>BB20typical.mid; exit signal gated by profit>0; ROI and fixed stop remain ungated",
+    "parameters": {
+      "external_config_overrides": {},
+      "full_effective_attributes": {
+        "INTERFACE_VERSION": 3,
+        "can_short": false,
+        "exit_profit_offset": 0.0,
+        "exit_profit_only": true,
+        "ignore_roi_if_entry_signal": false,
+        "minimal_roi": {
+          "0": 0.05
+        },
+        "order_time_in_force": {
+          "entry": "GTC",
+          "exit": "GTC"
+        },
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60
+        },
+        "position_adjustment_enable": false,
+        "process_only_new_candles": true,
+        "startup_candle_count": 0,
+        "stoploss": -0.05,
+        "timeframe": "5m",
+        "trailing_stop": false,
+        "use_custom_stoploss": false,
+        "use_exit_signal": true
+      },
+      "loaded_parameter_values": {},
+      "parameter_sidecars": false
+    },
+    "risk": {
+      "minimal_roi": {
+        "0": 0.05
+      },
+      "stoploss": -0.05
+    }
+  },
+  "source": {
+    "bytes": 3265,
+    "class_name": "CombinedBinHAndCluc",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "id": "M0266",
+    "path": "user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py",
+    "repository": "freqtrade/freqtrade-strategies",
+    "sha256": "546256271db535f1e326130c6b2d9849dd9a5efb602eb92ed45dad282967f45d",
+    "status": "READ_OK",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py"
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 3832,
+      "path": "research/public-strategies/M0266/specs/C0.json",
+      "sha256": "9b087559fba145c4c9243b167a2e23d0adb301cc97fb8b65bb8be4987cbc8c93",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/specs/C0.json"
+    },
+    "attribution": {
+      "bytes": 1174,
+      "path": "research/public-strategies/M0266/ATTRIBUTION.md",
+      "sha256": "17b25b590fe20eaf96c992a47c860681419ad9d884718f1ed6155a3ac7bb723d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/ATTRIBUTION.md"
+    },
+    "base_daily": {
+      "bytes": 59898,
+      "path": "research/public-strategies/M0266/artifacts/results/base-daily-equity.json",
+      "sha256": "8ec14c3ec7d14cdea81307380d98c2f7094f51085c5697625433cc64468cdfcb",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/base-daily-equity.json"
+    },
+    "delay2_daily": {
+      "bytes": 59648,
+      "path": "research/public-strategies/M0266/artifacts/results/delay2-daily-equity.json",
+      "sha256": "16ae52b7288deaa9ec24d86e9bdb02baf80b3a876fa895f3cee4f5243d7aa4a5",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/delay2-daily-equity.json"
+    },
+    "fee0_daily": {
+      "bytes": 59954,
+      "path": "research/public-strategies/M0266/artifacts/results/fee0-daily-equity.json",
+      "sha256": "ddeb9ff609afb37ee49b638cb28711abcfcc43800c5ecb454bf813f0fbace051",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/fee0-daily-equity.json"
+    },
+    "fee20_daily": {
+      "bytes": 59965,
+      "path": "research/public-strategies/M0266/artifacts/results/fee20-daily-equity.json",
+      "sha256": "12f62a190f751c086876b2a663b884da59f010aaab67e32c6a6e4ce873c7b570",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/fee20-daily-equity.json"
+    },
+    "protocol": {
+      "bytes": 11382,
+      "path": "research/public-strategies/M0266/specs/protocol.json",
+      "sha256": "d93def3aa579dee9374469b17a2ff1cf0c88976ef212e89b7f230e98aefa416d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/specs/protocol.json"
+    },
+    "publication_manifest": {
+      "bytes": 4181,
+      "path": "research/public-strategies/M0266/publication-manifest.json",
+      "sha256": "1248e3abf5f98ddada05b1b4c5c87acafbc496f95b9c605846ab697ac7db7ada",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 5016,
+      "path": "research/public-strategies/M0266/README.md",
+      "sha256": "f7afc7e4d23bb6f61b3ede52208cf86b8534012c10d6b66678f1e981ad1dfec8",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/README.md"
+    },
+    "source_rule_card": {
+      "bytes": 3662,
+      "path": "research/public-strategies/M0266/specs/source-rule-card.json",
+      "sha256": "98ce846ebaef33dc400479c954b05be10e81cb72a0e4a1aca53374b0d15fb8ee",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/specs/source-rule-card.json"
+    },
+    "summary": {
+      "bytes": 7092,
+      "path": "research/public-strategies/M0266/artifacts/results/summary.json",
+      "sha256": "88dc1890d07dd86353c6acc5a5c823bb5d11dd2c6ca894ce7c7531a01bde1637",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/summary.json"
+    },
+    "validation_summary": {
+      "bytes": 632,
+      "path": "research/public-strategies/M0266/artifacts/results/validation-summary.json",
+      "sha256": "20a0b7f36b94ee9791d3ad6e7546bb694d8c9e5ed36896717b6720e2b5f8c89e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0266/artifacts/results/validation-summary.json"
+    }
+  },
+  "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py",
+  "status": "tested_adapted_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}

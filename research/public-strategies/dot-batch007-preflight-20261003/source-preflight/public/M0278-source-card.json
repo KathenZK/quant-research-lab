@@ -1,0 +1,60 @@
+{
+  "id": "M0278",
+  "name": "InformativeSample",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0278",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/InformativeSample.py",
+    "作者或机构": "xmatthias / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "InformativeSample",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "InformativeSample",
+    "规则": "5m；EMA20>EMA50 且 15m 收盘>SMA20 做多；EMA20<EMA50 且 15m 收盘<SMA20 平多；止损 -10%；ROI 0/20/30/60 分钟 5%/4%/3%/1%。",
+    "页码或文件": "InformativeSample.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0278.json",
+    "blob_sha256": "66c2184fb6560724cd5d2ae6334f368b85d1758c526c16fa4cb95b9467f9b858"
+  },
+  "source": {
+    "id": "M0278",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/InformativeSample.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/InformativeSample.py",
+    "bytes": 4773,
+    "sha256": "1a96c6ecf7f6dd2afe086a31a80fd894811a81d88a7a2d814e69c8f3bebee564",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "InformativeSample",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "5m",
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.1,
+    "trailing_stop": false
+  },
+  "source_methods": [
+    "informative_pairs",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "EXTERNAL_INFORMATIVE_DATA_REQUIRED"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

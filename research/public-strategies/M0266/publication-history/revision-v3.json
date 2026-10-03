@@ -1,0 +1,23 @@
+{
+  "schema": "public-display-additive-revision/v1",
+  "id": "M0266",
+  "revision": 3,
+  "created_at_utc": "2026-10-03T15:41:52.417568+00:00",
+  "original_public_commit": "8abc1556d2bf249ce12de7f08a0311331b6a0d39",
+  "previous_publication_manifest_sha256": "dfd12310d086c930e38b5b048b14c0f8897f8d7176d8ef3bb110b97d7e4c027d",
+  "source_frozen_evidence_unchanged": true,
+  "display_manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "independent_review_sha256": "ec9a1761bf3104b1305d302278f8efae010a7d1be2aeb76741d2b2a0196819ca",
+  "additive_paths": [
+    "artifacts/20261003-dot006-display/graph-record.json",
+    "artifacts/20261003-dot006-display/base-nav-light.csv",
+    "artifacts/20261003-dot006-display/public-display-manifest.json"
+  ],
+  "exporter": "research/public-strategies/M0253/scripts/export_dot006_display.py",
+  "fidelity": "ADAPTED",
+  "trusted": false,
+  "new_research_runs": 0,
+  "new_control_runs": 0,
+  "strict_reproductions": 0,
+  "site_deployment": false
+}

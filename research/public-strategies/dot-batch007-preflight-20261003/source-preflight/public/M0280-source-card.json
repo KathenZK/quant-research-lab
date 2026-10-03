@@ -1,0 +1,58 @@
+{
+  "id": "M0280",
+  "name": "Low_BB",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0280",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/Low_BB.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "Low_BB",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "Low_BB",
+    "规则": "收盘<=0.98×BB(20,2)下轨做多。",
+    "页码或文件": "Low_BB.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0280.json",
+    "blob_sha256": "6fde711fcd23f26cc6b2e3aec20e5d5c454fb2f30d5ef6ffc7171272eba183fc"
+  },
+  "source": {
+    "id": "M0280",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Low_BB.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Low_BB.py",
+    "bytes": 3642,
+    "sha256": "36e058d11b438beeab017d293558d06976e950542b6568b2207b7f42940ff63b",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "Low_BB",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1m",
+    "minimal_roi": {
+      "0": 0.9,
+      "1": 0.05,
+      "10": 0.04,
+      "15": 0.5
+    },
+    "stoploss": -0.015
+  },
+  "source_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

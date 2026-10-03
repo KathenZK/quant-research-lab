@@ -1,0 +1,153 @@
+{
+  "record_id": "M0264",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1167,
+      "sha256": "f91abf6a5cc1d458704522e54fa450e2c05b54822196eb1a307c35729236d640"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4745,
+      "sha256": "2aa69cdadd19256383b3f2586b9929e1d344565d13a10c1fc23bc10ae1666ba6"
+    },
+    {
+      "path": "artifacts/catalog-original11.csv",
+      "bytes": 483,
+      "sha256": "4efe100329b9a502816bb901b391573134d998e3ef2940374c0131ed168206a5"
+    },
+    {
+      "path": "artifacts/catalog-original11.json",
+      "bytes": 570,
+      "sha256": "ca74b6f07d3afea728f73e37c5e2ea31d3111c116921f711f79a58f7828a478c"
+    },
+    {
+      "path": "artifacts/pre-C0-source-signal-QA.json",
+      "bytes": 2497,
+      "sha256": "bef2fa2201c13d7d46e889236dcf61311680f442e5113fccb5628e8c8c07b06e"
+    },
+    {
+      "path": "artifacts/results/base-daily-equity.json",
+      "bytes": 57141,
+      "sha256": "3d0167b7a77ade32614f19a08456a210e4ba33060797caa8bcefddf3353fd0a1"
+    },
+    {
+      "path": "artifacts/results/core-ledger.json",
+      "bytes": 6413,
+      "sha256": "b5a617c27e7db62b2e712c57259ec1bd3cd14159bc1104b6aa9808d6607ba1a4"
+    },
+    {
+      "path": "artifacts/results/delay2-daily-equity.json",
+      "bytes": 57915,
+      "sha256": "8ddc1e2d413ca1e72f4be443fa37f01d69e7f0bb186fd7b5e6e9bde378416bb9"
+    },
+    {
+      "path": "artifacts/results/fee0-daily-equity.json",
+      "bytes": 57841,
+      "sha256": "a02d4627135e4321c15a88f628175e3a527471632fe46a23f5a4b3c8d2726f67"
+    },
+    {
+      "path": "artifacts/results/fee20-daily-equity.json",
+      "bytes": 57881,
+      "sha256": "a70d1e8d9839ca1bcef65cd8e9438bfc31ce9e20a80cec76877189cb0f8cfe7d"
+    },
+    {
+      "path": "artifacts/results/nonstatistical-fill-sample.json",
+      "bytes": 2397,
+      "sha256": "ff8633f1fe45c7468206bdf720b82adb987ed61a4ffd25e321db6b8ab9ed023a"
+    },
+    {
+      "path": "artifacts/results/runtime.json",
+      "bytes": 1074,
+      "sha256": "1f894a254b004df5aebb16e02c753526fd32b18067b7d0c981a858b286ecc44b"
+    },
+    {
+      "path": "artifacts/results/summary.json",
+      "bytes": 7151,
+      "sha256": "856c97fd47dd1dfa79e0d392deca753f79e1e8ae123a748b952359c43022aaa2"
+    },
+    {
+      "path": "artifacts/results/validation-summary.json",
+      "bytes": 632,
+      "sha256": "97257c03d790c9a56705a1d51696c8bc1206c1bd9bfd3ce2c553a5589f67ef06"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1013,
+      "sha256": "89ea0dda1207eb2ada7d9229835bcb403828983b63ccfbb7d81a430fa5f71d9c"
+    },
+    {
+      "path": "history/protocol-before-input-addendum.json",
+      "bytes": 10623,
+      "sha256": "62cab8645a7e8b0a620367ba836f9f822ea89832b9f413c3224312617b14bb20"
+    },
+    {
+      "path": "m0264-core-ledger.md",
+      "bytes": 364,
+      "sha256": "bfca1746e7c0755a2f0cb3b860a08d9bebd29d15dc6c066a65104d9629b0c49f"
+    },
+    {
+      "path": "publication-history/revision-v2.json",
+      "bytes": 1013,
+      "sha256": "fa79c9a5f5ae9412bd3fba15c425cd64a02292366513843d29bc8d932b8bafd9"
+    },
+    {
+      "path": "publication-history/v1/README.md.snapshot",
+      "bytes": 4746,
+      "sha256": "43ca4a216589598eaf9b6409b8771930c941ca3eb574133b5b20af0ba4f0cae4"
+    },
+    {
+      "path": "publication-history/v1/decision-log.md.snapshot",
+      "bytes": 604,
+      "sha256": "05e2ec38f160f0dc245eb0e182fee062b8e3fa6a2cad9b96c5895138013918f6"
+    },
+    {
+      "path": "publication-history/v1/publication-manifest.json",
+      "bytes": 4181,
+      "sha256": "c1251b3131c375f774b28da6e65abea7aeae842338bcebd967ff61b5eeb47876"
+    },
+    {
+      "path": "scripts/adapter.py",
+      "bytes": 461,
+      "sha256": "6d95df08207c663083df8b01cbea9e1c170a0c81eb1a4a008e2335155ec96095"
+    },
+    {
+      "path": "specs/C0.json",
+      "bytes": 3832,
+      "sha256": "9c2e40488df0f44d9cfcce0f902e4bbad406a6f272615bc5f37fd4106ab4af43"
+    },
+    {
+      "path": "specs/catalog-source-manifest.json",
+      "bytes": 207,
+      "sha256": "a2c3a51bef9b679d3152282fcc53acc1fd3e0acb33c187f2d7d3e0dc9f896f18"
+    },
+    {
+      "path": "specs/input-compatibility-addendum.json",
+      "bytes": 10677,
+      "sha256": "b4972009e511f88526cb05222a5cac0c839e59b33ffb980a90eb5619706e93c6"
+    },
+    {
+      "path": "specs/protocol.json",
+      "bytes": 11363,
+      "sha256": "19d6e9e09ab27ad409ef01fb2234593481637928bd67c365f01786503e1c72e0"
+    },
+    {
+      "path": "specs/source-rule-card.json",
+      "bytes": 3296,
+      "sha256": "f01d1f7cb3e02baa4c3748d216de0eb033c7547ecab285178effc0cfb558c191"
+    }
+  ],
+  "publication_status": "NOT_PUBLISHED_PENDING_PARENT_INTEGRATION",
+  "raw_market_data": false,
+  "full_ledgers": false,
+  "private_Library_IDs": false,
+  "shared_kernel_modified": false,
+  "revision": 2,
+  "previous_publication_manifest_sha256": "c1251b3131c375f774b28da6e65abea7aeae842338bcebd967ff61b5eeb47876",
+  "revision_scope": "governance classification and explicit preserved documentation history only; immutable runtime evidence unchanged"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "M0267",
+  "name": "CustomStoplossWithPSAR",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0267",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/CustomStoplossWithPSAR.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "中",
+    "名称": "CustomStoplossWithPSAR",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "CustomStoplossWithPSAR",
+    "规则": "1h；SAR 小于上一根 SAR 做多（无数值阈值的交叉/下降）；止损用当前价相对 SAR 的距离；硬止损 -20%；startup 199。",
+    "页码或文件": "CustomStoplossWithPSAR.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0003-v2/metadata/source-records/M0267.json",
+    "blob_sha256": "09072fcc263f638ab9c1cdf32260620c84dab4661fe80118868ff4f0b9119b23"
+  },
+  "source": {
+    "id": "M0267",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/CustomStoplossWithPSAR.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/CustomStoplossWithPSAR.py",
+    "bytes": 3800,
+    "sha256": "9d20f081adf0c95886afc4b5135ecac00e37c2c6fec7e9ddc64671076d71cd60",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "CustomStoplossWithPSAR",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "1h",
+    "stoploss": -0.2,
+    "use_custom_stoploss": true,
+    "startup_candle_count": 199
+  },
+  "source_methods": [
+    "custom_stoploss",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_1h_NOT_5M",
+    "SOURCE_CUSTOM_STOPLOSS",
+    "CUSTOM_EXECUTION_CALLBACKS:custom_stoploss",
+    "NO_EXPLICIT_ZERO_MINUTE_ROI"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

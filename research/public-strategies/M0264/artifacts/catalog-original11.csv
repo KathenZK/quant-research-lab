@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0264,ClucMay72018,加密现货,"收盘<EMA(50)（代码列名 ema100）、收盘<0.985×BB(20,2)下轨，且成交量<30 期均量×20 做多；收盘>BB 中轨平多。",berlinguyinca / freqtrade/freqtrade-strategies,ClucMay72018,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/ClucMay72018.py,ClucMay72018.py,高,,未知

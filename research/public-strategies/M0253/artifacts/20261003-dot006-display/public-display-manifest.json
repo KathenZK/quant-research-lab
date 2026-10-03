@@ -1,0 +1,122 @@
+{
+  "excluded_from_self_hash": [
+    "public-display-manifest.json",
+    "graph-record.json"
+  ],
+  "exclusion_reason": "Manifest hashes source inputs and derived curve; record references this manifest hash; outer delivery manifest binds all new files",
+  "files": {
+    "C0.json": {
+      "bytes": 3832,
+      "path": "research/public-strategies/M0253/specs/C0.json",
+      "sha256": "8da1511699ed5b440af46f049118af8aaf1cb58a684869db69368d3d957fdd30",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/specs/C0.json"
+    },
+    "base-nav-light.csv": {
+      "bytes": 33119,
+      "path": "research/public-strategies/M0253/artifacts/20261003-dot006-display/base-nav-light.csv",
+      "sha256": "18cc830f0440be5a6b6c4cdb72efe7e035062aa3d9583acef309dd8c6c7ae7e6"
+    },
+    "protocol.json": {
+      "bytes": 11499,
+      "path": "research/public-strategies/M0253/specs/protocol.json",
+      "sha256": "93008bc88247a7a5ca6aea86c100f585504dae85e3aca8bd9ee7b58a0814e4b1",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/specs/protocol.json"
+    },
+    "summary.json": {
+      "bytes": 6719,
+      "path": "research/public-strategies/M0253/artifacts/results/summary.json",
+      "sha256": "bf5e6593fe8de37378c215347fc2a82291e17027474ca55bde1a08c0f1acf4ea",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/summary.json"
+    }
+  },
+  "id": "M0253",
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "origin_lab_commit": "8abc1556d2bf249ce12de7f08a0311331b6a0d39",
+  "origin_run_id": "M0253-20261003-dot-b006-v1",
+  "original_private_result_manifest": false,
+  "original_results_modified": false,
+  "schema_version": "quantgraph-public-derived-display-manifest/v1",
+  "source_artifacts": {
+    "C0": {
+      "bytes": 3832,
+      "path": "research/public-strategies/M0253/specs/C0.json",
+      "sha256": "8da1511699ed5b440af46f049118af8aaf1cb58a684869db69368d3d957fdd30",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/specs/C0.json"
+    },
+    "attribution": {
+      "bytes": 1175,
+      "path": "research/public-strategies/M0253/ATTRIBUTION.md",
+      "sha256": "099fd82bed2f4e6c81b5b4664b8e29b185a096416640be8e94c47dee8f849714",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/ATTRIBUTION.md"
+    },
+    "base_daily": {
+      "bytes": 59137,
+      "path": "research/public-strategies/M0253/artifacts/results/base-daily-equity.json",
+      "sha256": "57ce1201c4e6009cc12a2c9824994acdc7237bdfe40fbd22c078cbe839254b09",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/base-daily-equity.json"
+    },
+    "delay2_daily": {
+      "bytes": 59134,
+      "path": "research/public-strategies/M0253/artifacts/results/delay2-daily-equity.json",
+      "sha256": "da38a65b4fc254e6c9058182c835756fd2f5259ba236af7d6447a1f7ce8c5f3c",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/delay2-daily-equity.json"
+    },
+    "fee0_daily": {
+      "bytes": 59182,
+      "path": "research/public-strategies/M0253/artifacts/results/fee0-daily-equity.json",
+      "sha256": "43fa17b9bd2a1a8dc5bfcc573b81d4e9188b1c10f20b9244a00da266c98d7753",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/fee0-daily-equity.json"
+    },
+    "fee20_daily": {
+      "bytes": 59206,
+      "path": "research/public-strategies/M0253/artifacts/results/fee20-daily-equity.json",
+      "sha256": "56ce349c28e57644a6110c843996f52223177d9b4e591332a4f6deb81c69970e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/fee20-daily-equity.json"
+    },
+    "protocol": {
+      "bytes": 11499,
+      "path": "research/public-strategies/M0253/specs/protocol.json",
+      "sha256": "93008bc88247a7a5ca6aea86c100f585504dae85e3aca8bd9ee7b58a0814e4b1",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/specs/protocol.json"
+    },
+    "publication_manifest": {
+      "bytes": 4364,
+      "path": "research/public-strategies/M0253/publication-manifest.json",
+      "sha256": "239c3391025b553bc6badfdde8c24940d62a2db2fcd6826f90fe8b33252133a5",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 4719,
+      "path": "research/public-strategies/M0253/README.md",
+      "sha256": "dd4c719519d58a49b520bb4001fd1c0bebdee916c31ad9214e67cebd45d3df12",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/README.md"
+    },
+    "source_rule_card": {
+      "bytes": 3304,
+      "path": "research/public-strategies/M0253/specs/source-rule-card.json",
+      "sha256": "faceb52d68ade8140ff07f319ee1cf67d2ff7ea9e74eb1eb7f474dab35dd5b4b",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/specs/source-rule-card.json"
+    },
+    "summary": {
+      "bytes": 6719,
+      "path": "research/public-strategies/M0253/artifacts/results/summary.json",
+      "sha256": "bf5e6593fe8de37378c215347fc2a82291e17027474ca55bde1a08c0f1acf4ea",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/summary.json"
+    },
+    "validation_summary": {
+      "bytes": 632,
+      "path": "research/public-strategies/M0253/artifacts/results/validation-summary.json",
+      "sha256": "92fdd94dfe3a9d82a905321fcde828067a263a33529d73aca573f174a87a0a4c",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/8abc1556d2bf249ce12de7f08a0311331b6a0d39/research/public-strategies/M0253/artifacts/results/validation-summary.json"
+    }
+  },
+  "status": "STAGED_NOT_PUBLISHED",
+  "transformation": {
+    "benchmark_curve": "Unavailable in this source bundle; no curve generated",
+    "date": "Original date unchanged; valuation_time_utc retains exclusive midnight timestamp",
+    "equity": "Original absolute USDT value, unchanged",
+    "nav": "Original equity / frozen initial_cash 100000; never rebase at first sample",
+    "source_native_drawdown": "Original full5m-peak drawdown unchanged; not daily-peak drawdown"
+  },
+  "variant_id": "M0253-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+}

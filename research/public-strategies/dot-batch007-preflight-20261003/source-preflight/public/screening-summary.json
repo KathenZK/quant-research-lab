@@ -1,0 +1,382 @@
+{
+  "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+  "freqtrade_records_screened": 59,
+  "dedup_excluded": 31,
+  "dedup_exclusions": [
+    {
+      "id": "M0253",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0256",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0257",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0259",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0260",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0264",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0265",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0266",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0272",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0273",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0274",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0275",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0282",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0283",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0286",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0288",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0290",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0293",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0294",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0295",
+      "reason": "claims_or_explicit_reserved"
+    },
+    {
+      "id": "M0298",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0300",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0302",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0304",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0305",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0306",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0307",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0311",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0315",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0316",
+      "reason": "existing_lab_root"
+    },
+    {
+      "id": "M0317",
+      "reason": "existing_lab_root"
+    }
+  ],
+  "remaining_source_cards": [
+    {
+      "id": "M0235",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_CAN_SHORT"
+      ],
+      "source_sha256": "43ae02ecca4553b8a609d4533cb4d5b6517292d35b41fc4c77f54f8e959ced89"
+    },
+    {
+      "id": "M0236",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "6e7dd4802915f6952c9f7be6b5fe9840d1c894a89476e1b274fb163b096d930e"
+    },
+    {
+      "id": "M0237",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_CAN_SHORT"
+      ],
+      "source_sha256": "3fcbe2ed16dd097fd6e4548172acbde871bdfe64c5a7341f337f19caf3daa225"
+    },
+    {
+      "id": "M0238",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "93f31258c4b6c05cf2380fc81f235f37355d97a3e4d2ebdf075e948e07978e19"
+    },
+    {
+      "id": "M0240",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "6b8f3e272acfd4923539120364b9ddceccc17a385117d12a249dc1460ea53c4f"
+    },
+    {
+      "id": "M0241",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_CAN_SHORT",
+        "CUSTOM_EXECUTION_CALLBACKS:custom_stake_amount,adjust_trade_position,leverage"
+      ],
+      "source_sha256": "10a32ea131fb8f4684741b48cd3eae70aa4d4990319b49a7acb7a2f9c7c8a672"
+    },
+    {
+      "id": "M0252",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M"
+      ],
+      "source_sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+    },
+    {
+      "id": "M0254",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M"
+      ],
+      "source_sha256": "01356e36b3164b66aa4338a70f67f4bb887d4c79ae81b1bc2d1be5c5ba76fca5"
+    },
+    {
+      "id": "M0255",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_15m_NOT_5M",
+        "SOURCE_CAN_SHORT",
+        "CUSTOM_EXECUTION_CALLBACKS:custom_stake_amount,adjust_trade_position"
+      ],
+      "source_sha256": "b336a714198174b8e652a4115423b37915ee8eacbd89cc412c090b61f4043522"
+    },
+    {
+      "id": "M0258",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_15m_NOT_5M",
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "15dcb60d49a3681241cd39645f0fe8e6dc247687bf878c2026f37bb1c5790b57"
+    },
+    {
+      "id": "M0261",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1m_NOT_5M"
+      ],
+      "source_sha256": "ae76994b6fc8dd1937d84fc6d5ef0b9d7b702f01f61f5ccf5a2870278a3422a2"
+    },
+    {
+      "id": "M0262",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1m_NOT_5M"
+      ],
+      "source_sha256": "c3b1f8b57850d12a1e1b4e1ec42e92b842b2384f439e177f9e711bd20d698aad"
+    },
+    {
+      "id": "M0263",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_15m_NOT_5M"
+      ],
+      "source_sha256": "0529996f7e895c3c15ee143f1f0c5ff75d78fd6522856ba0daa55b94437bfc3f"
+    },
+    {
+      "id": "M0267",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_CUSTOM_STOPLOSS",
+        "CUSTOM_EXECUTION_CALLBACKS:custom_stoploss",
+        "NO_EXPLICIT_ZERO_MINUTE_ROI"
+      ],
+      "source_sha256": "9d20f081adf0c95886afc4b5135ecac00e37c2c6fec7e9ddc64671076d71cd60"
+    },
+    {
+      "id": "M0269",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "98f108f9df8f22b4b9be921b912ada3eff7669b25fc9ec455992ec902a385902"
+    },
+    {
+      "id": "M0276",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M"
+      ],
+      "source_sha256": "61755d49c46b3037c102f60de30841910472b6da06e9b578882b3dfc125b9ccc"
+    },
+    {
+      "id": "M0278",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "EXTERNAL_INFORMATIVE_DATA_REQUIRED"
+      ],
+      "source_sha256": "1a96c6ecf7f6dd2afe086a31a80fd894811a81d88a7a2d814e69c8f3bebee564"
+    },
+    {
+      "id": "M0280",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1m_NOT_5M"
+      ],
+      "source_sha256": "36e058d11b438beeab017d293558d06976e950542b6568b2207b7f42940ff63b"
+    },
+    {
+      "id": "M0287",
+      "status": "PENDING_INDEPENDENT_REVIEW",
+      "blockers": [
+        "PENDING_INDEPENDENT_LOCAL_10M_40M_CLOSED_BAR_RESAMPLE_AUDIT"
+      ],
+      "source_sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06"
+    },
+    {
+      "id": "M0289",
+      "status": "PASS_SOURCE_SYNTHETIC_READY_NOT_C0",
+      "blockers": [],
+      "source_sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41"
+    },
+    {
+      "id": "M0297",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1m_NOT_5M"
+      ],
+      "source_sha256": "3163f460f08db33b4aded14c00f880f6b5e5f2413489137e522c1f93a8954a65"
+    },
+    {
+      "id": "M0301",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1m_NOT_5M"
+      ],
+      "source_sha256": "e32a8f758d8d57876210d479576e7e415ff924400b8d037bb0f30799cd801a5b"
+    },
+    {
+      "id": "M0303",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "CUSTOM_EXECUTION_CALLBACKS:custom_exit"
+      ],
+      "source_sha256": "d53ac16d0e81b755a19ea83c535f50a6dd0629c76087b822ae399fabeaa5e841"
+    },
+    {
+      "id": "M0308",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION"
+      ],
+      "source_sha256": "c73d2dc221e2a52274b20846bed0879212eaca72916948e8c6103f4d4dd8aeea"
+    },
+    {
+      "id": "M0309",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_15m_NOT_5M"
+      ],
+      "source_sha256": "3778a09f02b88c1ca257e5346d6cc97ae8b7dd80a7559d003ab3a760ab1e5518"
+    },
+    {
+      "id": "M0310",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M"
+      ],
+      "source_sha256": "c146c1fa3d5d8ad5f87dd32f921d036a0a5ca95acc3109afdbf4689faf44e5b5"
+    },
+    {
+      "id": "M0313",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "NATIVE_TIMEFRAME_1h_NOT_5M",
+        "SOURCE_TRAILING_STOP_REQUIRES_DIFFERENT_EXECUTION",
+        "CUSTOM_EXECUTION_CALLBACKS:leverage,custom_exit,confirm_trade_entry"
+      ],
+      "source_sha256": "84ec4f1f00bbac46cf9a7ad6f38e1de6fe5ca83cfd9aa810c334b1a7e3c803ba"
+    },
+    {
+      "id": "M0318",
+      "status": "BLOCKED_FROZEN_V1_CONTRACT",
+      "blockers": [
+        "EXTERNAL_INFORMATIVE_DATA_REQUIRED"
+      ],
+      "source_sha256": "eb182eaecb785864496023f26be7932857b1e495805c37bddd562d6b1100683b"
+    }
+  ],
+  "confirmed_ready_ids": [
+    "M0289"
+  ],
+  "pending_ids": [
+    "M0287"
+  ],
+  "requested_batch_size": "8-12 only if qualified",
+  "historical_runs": 0,
+  "market_requests": 0,
+  "source_GETs": 28,
+  "source_repairs": 0,
+  "claim_write": false
+}

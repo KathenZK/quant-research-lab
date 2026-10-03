@@ -1,0 +1,23 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T15:25:42.080836+00:00",
+  "coordinator": "Codex root only",
+  "batch": "013",
+  "branch": "codex/m1358-coldstart-daily-20261003",
+  "claims": [
+    {
+      "id": "M1358",
+      "owner": "root/m0288 exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "immutable C0 + independent code/syntheticQA"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/root-batch013-m1358-output-contract-20261003.json",
+    "sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "ownership_check": "M1358 absent from all explicit claims and currentLab IDroots before assignment; F1/SPY tasks remain source/data preflight only. dot007M0287/M0289 belongs exclusively to parentdot and is preserved."
+}

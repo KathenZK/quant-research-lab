@@ -1,0 +1,165 @@
+{
+  "id": "M0272",
+  "origin_run_id": "M0272-20261003-dot-b006-v1",
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "stage": "EXECUTED_DIAGNOSTIC",
+  "strategy_configurations": 4,
+  "new_control_configurations": 0,
+  "reused_unique_control": "M0311-20261003-first-replay",
+  "strict_reproductions": 0,
+  "trusted": false,
+  "PIT_proven": false,
+  "core_finality_proven": false,
+  "OOS": false,
+  "run_hashes": {
+    "protocol_sha256": "58b0ea62a7875a56b6af04ed2f22ed55ce42d278d4a58e299087ff03b71c9842",
+    "C0_sha256": "901a7ac304cc55acda551048a0c6f5f864dc027e5d30aaedc3b619b002ff2547",
+    "summary_sha256": "a4933ee882bec90bf0f9fdc8ced6fc1f14bbbed80aeaeb7dac57472402bf516e",
+    "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "source_sha256": "74117c68b3407a775d80fc4d4f1b27852689baad2255f19a7026a2b0c45b2085",
+    "kernel_files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "all_cases": {
+    "base": {
+      "configuration": {
+        "name": "base",
+        "fee_bps": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.8719931720926458,
+        "annualized_return": -0.8712721874744271,
+        "max_drawdown": 0.8740727602481468,
+        "sharpe": -5.725927833905277,
+        "sharpe_5m": -5.1921974776574,
+        "final_equity": 12800.682790735418,
+        "trades": 2681,
+        "round_trips": 1340,
+        "winning_round_trip_fraction": 0.5164179104477612,
+        "fees_paid": 89691.82887410783,
+        "position_bar_fraction": 0.48786619611414694,
+        "final_cash": 649.8765585136935,
+        "final_quantity": 0.12984960066920712,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "name": "fee0",
+        "fee_bps": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.018034931500465867,
+        "annualized_return": -0.01798610155544278,
+        "max_drawdown": 0.3925847050818623,
+        "sharpe": 0.1281596868601811,
+        "sharpe_5m": 0.1406820153605518,
+        "final_equity": 98196.50684995341,
+        "trades": 2681,
+        "round_trips": 1340,
+        "winning_round_trip_fraction": 0.6634328358208955,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.48786619611414694,
+        "final_cash": 4981.5455266434,
+        "final_quantity": 0.9961417598883261,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "name": "fee20",
+        "fee_bps": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.9939734364821193,
+        "annualized_return": -0.9938886786394404,
+        "max_drawdown": 0.9939856049187363,
+        "sharpe": -14.748249107995736,
+        "sharpe_5m": -12.753290586810376,
+        "final_equity": 602.6563517880683,
+        "trades": 2681,
+        "round_trips": 1340,
+        "winning_round_trip_fraction": 0.28582089552238804,
+        "fees_paid": 103871.91376310638,
+        "position_bar_fraction": 0.48786619611414694,
+        "final_cash": 30.631020290891456,
+        "final_quantity": 0.006112949169628717,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "name": "delay2",
+        "fee_bps": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.8545813830970281,
+        "annualized_return": -0.8538132762156887,
+        "max_drawdown": 0.8559878876160703,
+        "sharpe": -5.482444156755221,
+        "sharpe_5m": -4.836445474112715,
+        "final_equity": 14541.86169029718,
+        "trades": 2685,
+        "round_trips": 1342,
+        "winning_round_trip_fraction": 0.4970193740685544,
+        "fees_paid": 88898.72356756085,
+        "position_bar_fraction": 0.48849233454766244,
+        "final_cash": 741.4305592551354,
+        "final_quantity": 0.14747831849023302,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    }
+  },
+  "qa": {
+    "source_signal": "PASS",
+    "independent_native_boundary_checks": "PASS",
+    "prefix_future_perturbation": "PASS",
+    "frozen_decimal_oracle": "PASS",
+    "supplementary_event_time_notional_all_metrics": "PASS",
+    "source_audit_sha256": "ce4eba5c9242ffb78226c3972a8e37d938d2a692048819500a442be450ab9f28",
+    "oracle_sha256": "a81eac1817714fa51a70a6edacf3c8db9d7fc01745c483ac98cd9311a177f8b5",
+    "supplement_sha256": "03e6bf47a518c8e2dd116560da3124a1671def00ac48e28c6cdc233a6b37f912",
+    "advanced_TA_formula_independence": false,
+    "kernel_predecessor_parity": "NOT_RUN_missing_predecessor",
+    "public_samples_not_statistical": true
+  },
+  "known_limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "No holdout or OOS inference; only fixed2024BTCUSDTspot diagnostic",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready"
+  ]
+}

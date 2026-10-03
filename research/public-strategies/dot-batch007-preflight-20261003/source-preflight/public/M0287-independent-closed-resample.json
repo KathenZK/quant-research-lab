@@ -1,0 +1,186 @@
+{
+  "record_id": "M0287",
+  "status": "PASS_SOURCE_SYNTHETIC_CLOSED_RESAMPLE_READY_NOT_C0",
+  "completed_utc": "2026-10-03T14:46:36.026451+00:00",
+  "source_sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+  "source_bytes": 2326,
+  "source_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py",
+  "technical_util": {
+    "sha256": "8f16e768c44c3c2b3171a4c04cc834fa26caf1ac6a8cf209affbfb31fd1fac3d",
+    "bytes": 4293,
+    "fixed_commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "source_url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/technical/util.py",
+    "observed_distribution_version": "1.7.0",
+    "note": "Byte-identical to previously acquired commit-pinned util.py; old local filename includes1.5.3 but is not used as package-version authority."
+  },
+  "flags": {
+    "timeframe": "5m",
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "use_custom_roi": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 0
+  },
+  "minimal_roi": {
+    "0": 0.01
+  },
+  "stoploss": -0.05,
+  "loaded_parameters": {},
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "order_time_in_force": {
+    "entry": "GTC",
+    "exit": "GTC"
+  },
+  "derived_periods_minutes": [
+    10,
+    40
+  ],
+  "formula": "Entry SMA5>=SMA200 and nativeRSI14<40mRSI14-20; exit nativeRSI14>10mRSI14 and>40mRSI14. Source comment bearish does not reverse SMA comparison. ffill only, no backfill.",
+  "rows": 2417,
+  "entry_rows": 193,
+  "exit_rows": 1046,
+  "collision_rows": 0,
+  "first_sma200_index": 199,
+  "derived_RSI_scalar_comparison": {
+    "resample_10_rsi": {
+      "first_valid_index": 29,
+      "na_rows": 29,
+      "max_scalar_RSI_error": 1.4210854715202004e-14
+    },
+    "resample_40_rsi": {
+      "first_valid_index": 119,
+      "na_rows": 119,
+      "max_scalar_RSI_error": 1.4210854715202004e-14
+    }
+  },
+  "closed_candle_proofs": {
+    "10": {
+      "merge_at_native_open_offset_minutes": 5,
+      "first_merged_source_candle_close_equals_native_close": true,
+      "earliest_availability_margin_ms": 0,
+      "latest_availability_margin_ms": 300000,
+      "incomplete_last_group_rows": 1,
+      "incomplete_last_group_never_merged": true,
+      "all_derived_OHLCV_and_RSI_match_independent_complete_groups": true
+    },
+    "40": {
+      "merge_at_native_open_offset_minutes": 35,
+      "first_merged_source_candle_close_equals_native_close": true,
+      "earliest_availability_margin_ms": 0,
+      "latest_availability_margin_ms": 2100000,
+      "incomplete_last_group_rows": 1,
+      "incomplete_last_group_never_merged": true,
+      "all_derived_OHLCV_and_RSI_match_independent_complete_groups": true
+    }
+  },
+  "prefix_future_checks": [
+    {
+      "cut": 31,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 119,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 120,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": false
+    },
+    {
+      "cut": 199,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 200,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": false
+    },
+    {
+      "cut": 201,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 503,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 511,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 512,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": false
+    },
+    {
+      "cut": 513,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 999,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    },
+    {
+      "cut": 1000,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": false
+    },
+    {
+      "cut": 2401,
+      "original_prefix_exact": true,
+      "future_perturbation_exact": true,
+      "ends_inside_40m_candle": true
+    }
+  ],
+  "new_market_requests": 0,
+  "historical_input_read": false,
+  "historical_runs": 0,
+  "account_engine_runs": 0,
+  "source_modified": false,
+  "kernel_modified": false,
+  "C0_requirements": [
+    "Pin this exact technical.util content and actual installed module hash before execution; preserve original functions/ffill and no future repair.",
+    "Existing5m aligned complete input only; reject gaps via inputQA before derivation.10m/40m are internal derived candles, no external feed required.",
+    "Freeze next-open timing after full5m close and no source parameter/window changes. Source original order limits still require declared execution proxy; strict0.",
+    "Independent ID adapter must compare all source predicates and derived feature columns; account v1 is unchanged."
+  ],
+  "limitations": [
+    "Finite synthetic/prefix evidence plus inspected availability formula, not original author runtime proof.",
+    "No historical profitability examined. Shared-kernel feature bridge compatibility separately checked by reference method; no historical/account engine invoked."
+  ],
+  "wall_seconds": 0.6938451300011366,
+  "cpu_seconds": 0.6932777830000001,
+  "max_rss_kib": 323576
+}

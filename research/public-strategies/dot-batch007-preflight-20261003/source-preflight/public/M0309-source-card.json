@@ -1,0 +1,59 @@
+{
+  "id": "M0309",
+  "name": "SwingHighToSky",
+  "status": "BLOCKED_FROZEN_V1_CONTRACT",
+  "original_11_fields": {
+    "id": "M0309",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/SwingHighToSky.py",
+    "作者或机构": "freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "中",
+    "名称": "SwingHighToSky",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "SwingHighToSky",
+    "规则": "15m；buy_params：CCI(72)<-175 且 RSI(36)<90 做多；sell_params：CCI(66)>-106 且 RSI(45)>88 平多；止损 -34.338%。",
+    "页码或文件": "SwingHighToSky.py"
+  },
+  "original_record": {
+    "graph_commit": "961e59d036652b252bf49b54eb56527f308632af",
+    "git_blob_path": "metadata/corpus-checkpoints/grokbot-6973-20261003/batches/batch-0004-v2/metadata/source-records/M0309.json",
+    "blob_sha256": "eec1bc190d4d2f91b6f53775d252a9613a0b44be7c6fecf246ec607033d8b81b"
+  },
+  "source": {
+    "id": "M0309",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/SwingHighToSky.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/SwingHighToSky.py",
+    "bytes": 3267,
+    "sha256": "3778a09f02b88c1ca257e5346d6cc97ae8b7dd80a7559d003ab3a760ab1e5518",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "SwingHighToSky",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true
+  },
+  "static_explicit_attributes": {
+    "timeframe": "15m",
+    "minimal_roi": {
+      "0": 0.27058,
+      "33": 0.0853,
+      "64": 0.04093,
+      "244": 0
+    },
+    "stoploss": -0.34338
+  },
+  "source_methods": [
+    "informative_pairs",
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "blockers": [
+    "NATIVE_TIMEFRAME_15m_NOT_5M"
+  ],
+  "historical_runs": 0,
+  "engine_runs": 0,
+  "source_repairs_performed": false,
+  "assignment_frozen": false
+}

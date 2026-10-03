@@ -1,0 +1,23 @@
+{
+  "schema": "public-catalog-documentation-revision/v1",
+  "id": "M0264",
+  "revision": 2,
+  "created_at_utc": "2026-10-03T15:20:35.720824+00:00",
+  "original_public_commit": "8abc1556d2bf249ce12de7f08a0311331b6a0d39",
+  "old_publication_manifest_sha256": "c1251b3131c375f774b28da6e65abea7aeae842338bcebd967ff61b5eeb47876",
+  "changed_fields": [
+    "README.frontmatter.research_classification",
+    "decision-log append"
+  ],
+  "README_before_sha256": "43ca4a216589598eaf9b6409b8771930c941ca3eb574133b5b20af0ba4f0cae4",
+  "README_after_sha256": "2aa69cdadd19256383b3f2586b9929e1d344565d13a10c1fc23bc10ae1666ba6",
+  "reason": "strategy-family directory contains actual per-strategy core ledger; classification is directory governance only",
+  "fidelity": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "diagnostic_only": true,
+  "trusted": false,
+  "strict_reproductions": 0,
+  "frozen_source_C0_protocol_adapter_and_results_unchanged": true,
+  "new_research_runs": 0,
+  "site_deployment": false
+}
