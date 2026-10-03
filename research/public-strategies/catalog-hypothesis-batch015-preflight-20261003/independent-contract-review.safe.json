@@ -1,0 +1,53 @@
+{
+  "status": "PASS_PRE_CODE_CONTRACT_REVIEW_NOT_HISTORY_RELEASE",
+  "checked_utc": "2026-10-03T16:23:46.222284+00:00",
+  "reviewed_files": [
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch015-output-contract-20261003.json",
+      "bytes": 4076,
+      "sha256": "4670e9110f18a1ea63444991fa00f9884f484903ff28afe915742e503bbe9744"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1180-root-frozen-rules.json",
+      "bytes": 11662,
+      "sha256": "78209acc56bc5356c7a299ca5bde7523eaaa98fc19680d6ada8c533dd39c00d6"
+    },
+    {
+      "path": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1258-root-frozen-rules.json",
+      "bytes": 10303,
+      "sha256": "eccfd386fe9fb17206bff6ea344e99cabb938c5bda06330767c08f58279bdbce"
+    },
+    {
+      "path": "research/public-strategies/claims-20261003-batch015.json",
+      "bytes": 1210,
+      "sha256": "cf5391cdb6a3d2438267d380879b5ff9d7e219bdb61abf82fd2a581ba1b7bdd9"
+    },
+    {
+      "path": "research/public-strategies/remote-recovery-scope-addendum-20261003.json",
+      "bytes": 2033,
+      "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c"
+    }
+  ],
+  "findings": {
+    "pinned_hashes": "PASS contract/rules/addendum and input-manifest/rebuilder/fetch-dependency/halt-evidence byte hashes",
+    "M1180": "Original BTCUSDT4h and30/ATR14/ADX14>=22/EMA200/0.5ATR/20bars preserved; prior30 excludescurrent, first200 readiness and14eval cashbars explicit; holdcounter20 plus lag2/latching unambiguous.",
+    "M1180_halt": "12Z nominalbar uses explicit14Z existing1h resume proxy with same raw4hopen; previousclosedbar information only, no intrabar stop/ROI, partialbar counts one label rather than80clockhour claim.",
+    "M1258": "Catalog title explicitly5day while body5period;1d hypothesis says this distinction. Bitcoin market does not sayUSD. RSI5cross50, flat50 andWilder seed disclosed as research choices, fullcapital preserved.",
+    "full_cash": "Decimal50 notional then residualfee thenquantity thenexactcash0 consistent strategy/control; roundoff quantity*fill discrepancy disclosed, no95%reserve or tolerance-clipping.",
+    "execution": "Raw opposite signals independent ofposition, cancelpending before reschedule, same-direction retains earliestdue, timeexitlatched; equality/lag2/terminalpending defined.",
+    "counts_ownership": "2IDs x4configs +2new100%controls; exact owners; bothassignednotstarted;0accepted/0run atfreeze.",
+    "recovery_addendum": "Explicit newscope preserves oldC0 and failedruns; mandatoryactualremote core rebuild separate from localprivateZIP/HTTP401gap, no fictitious Librarysaved status."
+  },
+  "correction_to_prior_preflight": "Earlier wording that M1258 catalog did not state daily was too broad: its title/name say5day; body says5period. Current root contract correctly preserves both. Old report retained, this correction supersedes that wording only.",
+  "material_contradictions_found": [],
+  "remaining_C0_requirements": [
+    "Sourcecode/runtime and full numerical/account/causality/halt synthetic tests still required;this is not executablecodeapproval or historyrelease.",
+    "Freeze exact Sharpe/annualization/MDD anddaily/monthlysampling conventions withcodeC0 before returns; outputformat is not fully numericdefined in thisprecodecontract.",
+    "PriorM1358remote-core recoveryPASS is coordinator-reported context, not independently rerun in thisreview;privateZIPgap remains."
+  ],
+  "historical_runs": 0,
+  "market_requests": 0,
+  "repo_writes": 0,
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

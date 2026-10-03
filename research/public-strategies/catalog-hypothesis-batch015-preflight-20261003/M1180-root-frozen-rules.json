@@ -1,0 +1,160 @@
+{
+  "status": "ROOT_FROZEN_CATALOG_HYPOTHESIS_PRE_CODE_C0",
+  "source_layer": "Existing source-ready FAIL/access-blocked evidence preserved; original framework/page access is not required for this separately authorized catalog hypothesis.",
+  "classification": "HYPOTHESIS / ADAPTED; no author-confirmed mathematics or strict reproduction claim",
+  "authorization_boundary": "Assignment permits implementation/prehistory synthetic work; historical run requires exact code/C0 and independent gates below.",
+  "instrument": "Binance spot BTCUSDT, long-only, no leverage/borrowing/shorting/pyramiding; venue/spot interpretation is explicit research choice.",
+  "input_period": "2022-12-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; do not change input",
+  "evaluation": "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+  "monthly_reporting": "Month return=end equity/previous month end equity-1; first denominator100000. Continuous account and indicators, no monthly resetting or selective omission of cash/zero-trade months.",
+  "capital": {
+    "initial_cash": "100000",
+    "currency": "USDT",
+    "fraction": "1",
+    "entry_fee_inclusive": true,
+    "Decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "buy_order_of_operations": [
+      "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+      "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+      "fee=cash_before-notional",
+      "quantity=notional/fill",
+      "cash_after=Decimal(0)"
+    ],
+    "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+    "sell_order_of_operations": [
+      "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+      "notional=quantity_before*fill",
+      "fee=notional*Decimal(fee_bps)/10000",
+      "cash_after=cash_before+notional-fee",
+      "quantity_after=Decimal(0)"
+    ],
+    "funding_interest_borrow": 0,
+    "leverage": 1,
+    "max_positions": 1,
+    "fractional_fills": true,
+    "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+  },
+  "cost_cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "execution": {
+    "at_open": "Execute the single earliest-due pending intent when due_index<=current_index and actual position permits; stale intent is logged and discarded, no same-open exit then reentry. Actual timestamp override only as declared for M1180.",
+    "at_close_sequence": [
+      "Update completed-bar indicators and holding counter, compute raw entry/raw exit independent of current position",
+      "If M1180 long and completed_count>=20, latch time_exit until the position is closed; it cannot be cancelled by entry filters",
+      "A raw opposite signal cancels a pending opposite intent before considering a new one, irrespective of current holdings; for M1180 a latched timeexit is exempt",
+      "Schedule new buy only when flat and raw_entry; schedule new sell only when long and raw_exit or time_exit. If both raw directions occur, sell/cancel-buy priority; do not buy",
+      "Same-side repeated intent retains its original earliest due index, never postpone due to repeated signals",
+      "No signal at equality unless explicitly inclusive; no warmup-generated intent; no fill at or beyond evaluation end"
+    ],
+    "raw_M1180": "entry=all-ready&C>upper&ADX>=22&C>EMA200&ATR>0&(C-upper)/ATR>=0.5; channel_exit=all-ready&C<lower; timeexit latched separately",
+    "raw_M1258": "entry=previous-ready RSI<=50 and current>50; exit=previous-ready RSI>=50 and current<50; computed independently of holdings so a raw opposite cross cancels a pending order even when no new order is eligible",
+    "lag2_example": "A pending buy at t+2 is cancelled by opposite raw signal at close t+1. An uncancelled same-side signal does not move due from t+2. A 20-bar exit scheduled at e+19 closes at e+21 for lag2; no perpetual defer."
+  },
+  "valuation": "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+  "benchmark": {
+    "new_control_configurations": 1,
+    "allocation": {
+      "initial_cash": "100000",
+      "currency": "USDT",
+      "fraction": "1",
+      "entry_fee_inclusive": true,
+      "Decimal_precision": 50,
+      "rounding": "ROUND_HALF_EVEN",
+      "buy_order_of_operations": [
+        "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+        "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+        "fee=cash_before-notional",
+        "quantity=notional/fill",
+        "cash_after=Decimal(0)"
+      ],
+      "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+      "sell_order_of_operations": [
+        "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+        "notional=quantity_before*fill",
+        "fee=notional*Decimal(fee_bps)/10000",
+        "cash_after=cash_before+notional-fee",
+        "quantity_after=Decimal(0)"
+      ],
+      "funding_interest_borrow": 0,
+      "leverage": 1,
+      "max_positions": 1,
+      "fractional_fills": true,
+      "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+    },
+    "fee_bps": 8,
+    "slippage_bps": 2,
+    "entry": "first evaluation open,100% fee-inclusive budget",
+    "exit": "none; mark each source timeframe close to same evaluation end",
+    "reason_new_control": "Existing previously run controls use95%allocation or different fees/window and are not silently reused as matching controls",
+    "sample_basis": "4h forM1180;daily forM1258, including same-window daily-sampled return metrics; repeated QA/recovery adds0controls"
+  },
+  "precision": "Proposed Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+  "QA_gate": "Recheck exact inputhash/grid/uniqueness/close_time/finite positiveOHLC/nonnegativevolume/trades/OHLC bounds; reject any failure, no imputation/drop/forwardfill. Existing QA accepted input may have low-activity bars; do not silently add volume filter. Halt metadata retained;4h OHLC does not prove continuous executable liquidity.",
+  "PIT": "UNKNOWN/DIAGNOSTIC_ONLY; no as-of/finality/trusted/live-readiness claim",
+  "stop_or_roi": "No intrabar stop/ROI added when absent from catalog; gap risk borne by nextopen proxy.",
+  "id": "M1180",
+  "timeframe": "4h, explicitly catalog-native",
+  "expected_evaluation_bars": 4386,
+  "indicators": {
+    "EMA200": "First seed arithmetic average closes indices0..199 at index199; earlier NaN. Thereafter alpha2/201, recursive prev+alpha*(C-prev).",
+    "ATR14": "TR0=H0-L0; TRt=max(H-L,abs(H-prevC),abs(L-prevC)). Seed averageTR0..13 at13; thereafter Wilder alpha1/14.",
+    "ADX14": "Directional moves only t>=1: up=H[t]-H[t-1],down=L[t-1]-L[t]; +DM=up iff up>down and up>0 else0; -DM=down iff down>up and down>0 else0. Ties both0. Seed smoothedTR/+DM/-DM as averages t1..14 at14. Wilder update1/14; DI=100*DM/TR, both0 whenTR=0. DX=100*abs(+DI--DI)/(+DI+-DI),0 if denominator0. ADX first meanDX14..27 at27 then Wilder1/14. Deliberately separate ATR seed above; exact research convention, not claimed Pine default.",
+    "Donchian30": "At decisionclose t upper=max(H[t-30:t]),lower=min(L[t-30:t]); exactly30 completed priorbars, excludes current for BOTH entry and exit."
+  },
+  "entry": "Flat, all ready, C>upper AND ADX>=22 AND C>EMA200 AND ATR>0 AND (C-upper)/ATR>=0.5; strict close inequalities, inclusive22/.5. ATR0 blocks entry.",
+  "exit": "Long at decisionclose: C<priorlower OR held_completed_bars>=20. Both -> one exit reason time_and_channel. No close==lower exit.",
+  "holding_counter": "Fill at open e resets completed_count0; close e increments1, close e+19 increments20 and triggers timeexit; normal nextopen e+20 yields20heldbars. delay2 intentionally yields21heldbars. Exit is close-triggered schedule, not intrabar hard expiry.",
+  "cold_start": "Keep eval2023-01-01 unchanged:186pre-evalbars. EMA ready only close globalindex199 (14th evalbar), first possible nextopen index200. Cash before readiness is a result, not missing data or shortened evaluation. All features ready does not imply convergence.",
+  "capital_provenance": "Catalog size unspecified;100% fee-inclusive cash is explicit hypothesis, not imported95%.",
+  "known_halt": {
+    "policy": "Explicitly reuse the previously reviewed bounded 1h-to4h resume-open proxy; do not claim nominal12Z execution or tick-level reproduction. No intrabar risk orders are added.",
+    "nominal_open_utc": "2023-03-24T12:00:00Z",
+    "modeled_fill_utc": "2023-03-24T14:00:00Z",
+    "reference_price": "the same4h rawopen already mapped to14Z1hopen; no price replacement",
+    "signal_information": "only prior completed4hbar; current12Zbarclose/indicator unavailable until16Z",
+    "holding_counter": "counts observed completed4h labels, including this partial-session bar; not a promise of80clockhours",
+    "evidence_path": "research/public-strategies/M0286/specs/market-halt-evidence.json",
+    "evidence_sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999",
+    "evidence_scope": "existing bounded mapping and official announcement, not newly reconstructed tick tape; historical-quality/PIT limits retained"
+  },
+  "input": {
+    "input_name": "BTCUSDT-4h-202212-202412-native12.csv",
+    "bytes": 1298564,
+    "sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "rows": 4572,
+    "evaluation_rows": 4386,
+    "warmup_rows": 186,
+    "manifest_path": "research/public-strategies/M0256/artifacts/20261003-first-replay/4h-input-manifest-light.json",
+    "manifest_sha256": "0c9365c551d98730d3decdd04dbb72208e4d8daaa4546007b781b0ccb3eee594",
+    "rebuild_script": "research/public-strategies/M0256/scripts/rebuild_official_bars.py",
+    "rebuild_script_sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b",
+    "reacquire_command_template": "python research/public-strategies/M0256/scripts/rebuild_official_bars.py --timeframe 4h --target NEW_PRIVATE_DIRECTORY --terms-reviewed",
+    "raw_validation": "75 fixed ZIP/CHECKSUM/extracted-CSV objects; source-set identities from the pinned manifest; ZIPCRC/checksums/raw rows/canonical byte rebuild required. Acquisition timestamps may differ and must remain separately identified."
+  },
+  "source_original_fields": "research/public-strategies/catalog-hypothesis-batch015-preflight-20261003/M1180-catalog-original-fields.json"
+}

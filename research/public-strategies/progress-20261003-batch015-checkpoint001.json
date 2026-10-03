@@ -1,0 +1,125 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "coordinator": "Codex root only",
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304",
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266",
+    "M0287",
+    "M0289",
+    "M1358"
+  ],
+  "cumulative_strategy_configurations": 143,
+  "cumulative_controls": 20,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "acceptance_meaning": "Independently validated executed research. Remote persistence is tracked separately; local-only packages are not declared complete remote backups.",
+  "recorded_at": "2026-10-03T16:26:44.193500+00:00",
+  "batch": "015",
+  "checkpoint": 1,
+  "previous_checkpoint_sha256": "68dd1cf550772a5a4014edd42bfbd98df19090fc7531121378a7b97ec7c94860",
+  "new_accepted_ids": [],
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "remote_core_recovery": {
+    "id": "M1358",
+    "source_remote_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+    "status": "ACTUAL_FETCHED_CODE_REBUILD_PASS",
+    "fetched_public_objects": 51,
+    "fetched_bytes": 169238,
+    "expected_source": "remote public full-result hash commitment; no local reference outputs",
+    "matching_payload_files": 22,
+    "matching_manifest": true,
+    "input": "existing authorized50raw objects rebuilt to same48e4 canonical; future public-download availability not verified",
+    "independent_receipt_sha256": "ff46b170a4d7ba4305768e4ba43ff1cb3c63aaf9302bd7541aec3c69795cffa4",
+    "public_recipe": "M1358/recovery/remote-core-v1/REMOTE-CORE-RESTORE.md",
+    "new_research_or_controls": 0,
+    "full_private_Library_archive_saved": false
+  },
+  "delivery_scope_addendum": {
+    "path": "remote-recovery-scope-addendum-20261003.json",
+    "sha256": "f069f43ec45b77e0b6168ca19e9cc553f17c26fe11499e4ee722e7b878a0d37c",
+    "old_C0_contracts_results_preserved": true,
+    "hashes_without_executable_code_and_actual_rebuild_sufficient": false
+  },
+  "current_owned_work": {
+    "M1180": {
+      "owner": "parent single dot executor",
+      "status": "ASSIGNED_NOT_STARTED",
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 1
+    },
+    "M1258": {
+      "owner": "root/m0288",
+      "status": "ASSIGNED_NOT_STARTED",
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 1
+    }
+  },
+  "contract": {
+    "path": "catalog-hypothesis-batch015-output-contract-20261003.json",
+    "sha256": "4670e9110f18a1ea63444991fa00f9884f484903ff28afe915742e503bbe9744",
+    "pre_code_independent_review": "PASS; actual code C0+syntheticQA still required"
+  },
+  "Graph": {
+    "main_commit": "58e9ad0a4820fa454172b2c28a382ced13160abf",
+    "main_CI": [
+      "37135795863 SUCCESS",
+      "37135795867 SUCCESS"
+    ],
+    "remote_files_byte_exact": 4,
+    "offline_records": 16,
+    "offline_curve_points": 5490,
+    "dot007_and_M1358_three_record_export": "private preparation only;not default imported",
+    "Site_deployed": false,
+    "active_assets": "existingHTTP403, no new restricted requests or access change"
+  },
+  "data_routes": {
+    "SPY_and_new_USD": "Parent read-only route investigation completed; DATA_SOURCE_PERMISSION_OR_COVERAGE_PENDING; no active waiting worker and no permanent impossibility assertion",
+    "repeat_search_policy": "Only revisit on new authorized data or user choice of lawful service; no signup/token/purchase/terms acceptance",
+    "full6973_readiness_map": "Parent reports private133file map/76703originalfields/592machinepartitions/100preflightqueue; rootbytes not yet materialized, not6973reviewed/ready; no automaticclaims; restricted records remain private."
+  },
+  "backup_gaps": {
+    "M1358_private_full_archive": "local only; knownLibrary upload401, no blind repeat",
+    "prior_root009_011_full_archives": "previously reported local-only full packages; no newLibrarysuccessclaim",
+    "rawdata_remote_backup": "not claimed or required under clarified core delivery scope; future authorized data availability remains externaldependency"
+  },
+  "private_Library_identifiers_in_public_files": false
+}

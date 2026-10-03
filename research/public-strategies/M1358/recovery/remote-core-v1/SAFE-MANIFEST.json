@@ -1,0 +1,31 @@
+{
+  "schema": "M1358-remote-core-safe-delivery-manifest/v1",
+  "scope": "self-authored reproducibility helpers, instructions and safe receipt only",
+  "files": [
+    {
+      "file": "M1358-remote-core-recovery.safe.json",
+      "bytes": 5628,
+      "sha256": "ff46b170a4d7ba4305768e4ba43ff1cb3c63aaf9302bd7541aec3c69795cffa4"
+    },
+    {
+      "file": "REMOTE-CORE-RESTORE.md",
+      "bytes": 6037,
+      "sha256": "188b02b253a18f04a57fcc7b7e794e1afd08d0a7d63f007933afe91a9c4fc6a6"
+    },
+    {
+      "file": "locked_exec.py",
+      "bytes": 640,
+      "sha256": "026689431883333692dd7b5208f6c5ac5d3bc7a835379b867db39e8bbabe9362"
+    },
+    {
+      "file": "offline-guard/sitecustomize.py",
+      "bytes": 630,
+      "sha256": "75f72285633c844c27b92faf6babda6a10f4cb5d58cbf160f97950751e257047"
+    },
+    {
+      "file": "rebuild_daily_input.py",
+      "bytes": 2300,
+      "sha256": "3c6348ba188cfe763612427fccc499cb38be71dcb1e0fd8ffe70db4521a79313"
+    }
+  ]
+}

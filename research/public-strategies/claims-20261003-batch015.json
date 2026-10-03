@@ -1,0 +1,30 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T16:19:04.784638+00:00",
+  "coordinator": "Codex root only",
+  "batch": "015",
+  "claims": [
+    {
+      "id": "M1180",
+      "owner": "parent single dot executor for next batch; not started at freeze",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "code+C0+independentQA+remote-core recovery gate"
+    },
+    {
+      "id": "M1258",
+      "owner": "root/m0288 single executor; not started at freeze",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "code+C0+independentQA+remote-core recovery gate"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch015-output-contract-20261003.json",
+    "sha256": "4670e9110f18a1ea63444991fa00f9884f484903ff28afe915742e503bbe9744"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0,
+  "ownership_check": "IDs absent from existingLab IDroots/prior exact claims. Earlier work was source/data preflight only; parent dot007 M0287/M0289 complete, rootM1358 complete; no new executor counted as running."
+}

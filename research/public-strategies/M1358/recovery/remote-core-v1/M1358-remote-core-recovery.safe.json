@@ -1,0 +1,121 @@
+{
+  "schema": "M1358-remote-core-recovery-safe/v1",
+  "status": "PASS_REMOTE_GIT_CORE_WITH_EXPLICIT_LOCAL_DATA_CACHE",
+  "completed_utc": "2026-10-03T16:22:16.011682+00:00",
+  "authorization_scope": "Supplemental user authorization accepts Git code/rules/light results/data fingerprints+tested rebuild as durable core; complete private Library package remains separate. Old contracts/evidence unchanged.",
+  "repository": "KathenZK/quant-research-lab",
+  "remote": "origin",
+  "remote_branch": "codex/public-strategies-batch014-20261003",
+  "remote_commit": "dba8d1d64318f9909cdcfd3bc9c382842a1a742b",
+  "retrieval_provenance": "Root fetched remote and verified105 files/1062862bytes; independent reviewer materialized exact fetched remote Git blobs into a new directory. This reviewer did not fetch again.",
+  "coordinator_remote_readback_sha256": "41190b2334ed2746f74c8f0a344a09db3f21d591e5284adcf0ac12e22b2ccafc",
+  "ID": "M1358",
+  "remote_ID_files": 51,
+  "remote_ID_bytes": 169238,
+  "publication_manifest_sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
+  "C0_v2_sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+  "all_C0_v1_v2_payloads_unchanged": true,
+  "input": {
+    "source": "Previously lawfully held local official archive cache; no new market requests",
+    "data_in_Git": false,
+    "raw_objects": 50,
+    "raw_ZIP_CRCs_and_providerchecksums": 25,
+    "canonical_rebuilt_from_raw": true,
+    "canonical_bytes": 128196,
+    "canonical_rows": 762,
+    "canonical_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "existing_canonical_byte_exact": true,
+    "input_provenance_manifest_at_same_remote_commit": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+    "input_provenance_manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "PIT": "NOT_PROVEN"
+  },
+  "recovery": {
+    "expected_origin": "remote M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json files array only",
+    "expected_manifest_serialization": "json.dumps(files, indent=2) plus newline; order retained",
+    "expected_manifest_sha256": "35fc722891e9f51aed24e5b2b8b2222d1f4396ccb2de6367e085fe4125228d8d",
+    "remote_restore_run_v2_invocations": 1,
+    "payloads_checked": 22,
+    "payloads_exact": 22,
+    "manifest_exact": true,
+    "independent_Fraction_Decimal_oracle": "PASS",
+    "features_checked": 731,
+    "nav_rows_checked": 2924,
+    "fill_rows_checked": 68,
+    "no_local_worker_source_or_old_outputs_used": true,
+    "all_51_remote_objects_unchanged_after_execution": true
+  },
+  "environment": {
+    "exact_frozen_lock_asserted": true,
+    "dependency_installs": 0,
+    "offline_mode": "Inherited Python audit hook denies all socket events, including restore subprocess; not OS network namespace",
+    "guard_active_processes": 5,
+    "network_events": 0,
+    "new_market_requests": 0
+  },
+  "counts": {
+    "strategy_IDs_revalidated": 1,
+    "existing_configurations_replayed_for_QA": 4,
+    "new_research_trials": 0,
+    "new_controls": 0,
+    "strict_reproductions": 0
+  },
+  "helpers": [
+    {
+      "file": "rebuild_daily_input.py",
+      "bytes": 2300,
+      "sha256": "3c6348ba188cfe763612427fccc499cb38be71dcb1e0fd8ffe70db4521a79313"
+    },
+    {
+      "file": "locked_exec.py",
+      "bytes": 640,
+      "sha256": "026689431883333692dd7b5208f6c5ac5d3bc7a835379b867db39e8bbabe9362"
+    },
+    {
+      "file": "offline-guard/sitecustomize.py",
+      "bytes": 630,
+      "sha256": "75f72285633c844c27b92faf6babda6a10f4cb5d58cbf160f97950751e257047"
+    },
+    {
+      "file": "REMOTE-CORE-RESTORE.md",
+      "bytes": 6037,
+      "sha256": "188b02b253a18f04a57fcc7b7e794e1afd08d0a7d63f007933afe91a9c4fc6a6"
+    }
+  ],
+  "limitations": [
+    "Git does not contain raw market data or complete private account logs. Recovery requires matching lawful raw cache or later legal reacquisition with every pinned hash verified.",
+    "Source download availability was not tested in this offline validation. Future deletion, changed bytes, access restrictions, or license changes may prevent reacquisition; permanent availability is not guaranteed.",
+    "Original QuantConnect forum project/runtime is not reconstructed. No unlicensed forum fulltext/class or Lean source required or redistributed. Fidelity remains ADAPTED, not C# bitwise equivalence; pre-exposed window is not OOS.",
+    "Library complete private ZIP remote upload/readback remains unverified (coordinator reports401). This core test is not complete private-package backup success."
+  ],
+  "execution_resources": [
+    {
+      "stage": "remote_input_QA",
+      "start_utc": "2026-10-03T16:18:32.946357+00:00",
+      "end_utc": "2026-10-03T16:18:33.277142+00:00",
+      "wall_seconds": 0.33079803099826677,
+      "child_cpu_seconds": 0.33045499999999994,
+      "max_child_rss_kib": 58596,
+      "returncode": 0
+    },
+    {
+      "stage": "remote_restore_once",
+      "start_utc": "2026-10-03T16:18:33.277517+00:00",
+      "end_utc": "2026-10-03T16:18:33.675927+00:00",
+      "wall_seconds": 0.3984256309995544,
+      "child_cpu_seconds": 0.39776,
+      "max_child_rss_kib": 59800,
+      "returncode": 0
+    },
+    {
+      "stage": "remote_independent_oracle",
+      "start_utc": "2026-10-03T16:18:33.676240+00:00",
+      "end_utc": "2026-10-03T16:18:33.914715+00:00",
+      "wall_seconds": 0.23849253700609552,
+      "child_cpu_seconds": 0.23814899999999994,
+      "max_child_rss_kib": 59800,
+      "returncode": 0
+    }
+  ]
+}
