@@ -1,0 +1,96 @@
+{
+  "id": "M1258",
+  "control_name": "buyhold",
+  "status": "ACTUALLY_EXECUTED_FROZEN_CONTROL_WORKER_QA_PASS",
+  "new_control_count_in_M1258": 1,
+  "future_consumers": "reference only; no newcontrol count unless independently newexperiment",
+  "source_commit": "783cf6ed8962aa782667f0b193d93b187716dcbc",
+  "C0_sha256": "472a448a5e948e1ac7bbf82e4a386dd628e01851ef80dc83493142b10c78eb06",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "input_bytes": 128196,
+  "native_timeframe": "1d",
+  "evaluation_start": "2023-01-01T00:00:00Z",
+  "evaluation_end_exclusive": "2025-01-01T00:00:00Z",
+  "bars": 731,
+  "initial_cash": "100000",
+  "allocation": "100% fee-inclusive",
+  "precision": "Decimal50 ROUND_HALF_EVEN from raw decimal text",
+  "buy_order": [
+    "fill=raw_open*(1+2/10000)",
+    "notional=cash/(1+8/10000)",
+    "fee=cash-notional",
+    "quantity=notional/fill",
+    "cash_after=Decimal(0)"
+  ],
+  "entry": "firstevaluationopen",
+  "fee_bps_each_side": 8,
+  "slippage_bps_each_side": 2,
+  "exit": "none; no fictitious terminal fee or liquidation",
+  "daily_valuation": "quantity*each rawclose; nativeNAV=dailyNAV",
+  "metrics": {
+    "total_return": 4.651299863331392,
+    "cagr": 1.3744318581300612,
+    "max_drawdown": -0.261513750538678,
+    "sharpe_zero_cash": 2.016493590663557,
+    "observations": 731,
+    "final_equity": 565129.9863331392
+  },
+  "statistics": {
+    "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+    "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+    "total_return": "E_last/100000-1",
+    "cagr": "(E_last/100000)**(365/n)-1, n=731",
+    "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+    "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+    "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+    "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+    "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+    "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade",
+    "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+    "fee_total": "sum exact Decimal fees; represented decimaltext",
+    "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+    "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results"
+  },
+  "files": [
+    {
+      "path": "buyhold-decisions.csv",
+      "bytes": 104465,
+      "sha256": "19504c9f22b4beb590b2557fba407f386a349fd6233b683ea6dac0ab5a7bf27b"
+    },
+    {
+      "path": "buyhold-fills.csv",
+      "bytes": 409,
+      "sha256": "d1d455ce41ae73763a76212d0a6fc8226506d4bd329905f1d1e3e5999a6eb74f"
+    },
+    {
+      "path": "buyhold-monthly.csv",
+      "bytes": 3027,
+      "sha256": "acf6f1d7769b498bcf7ec657f39ffe045798a0413617274286e159467a40b17d"
+    },
+    {
+      "path": "buyhold-nav.csv",
+      "bytes": 127882,
+      "sha256": "74225ae5ac7f2edbe2e612364c5c7565870001ecd14207a9c55a85f219fc9664"
+    },
+    {
+      "path": "buyhold-pending.csv",
+      "bytes": 130,
+      "sha256": "dd7074fbd9d99e5f3f560d891bfe30f78c6aed5d051215b1fb14296259687a5e"
+    },
+    {
+      "path": "buyhold-roundtrips.csv",
+      "bytes": 112,
+      "sha256": "36a3c6e8fc36325190f5a98f1446d35515fc81d4196da29d8d316e6fbad1463c"
+    },
+    {
+      "path": "buyhold-summary.json",
+      "bytes": 766,
+      "sha256": "52e00b1850f1f8c6a39315a0ea8cb46a7c8800ddd7b3822cda43d299f94ba142"
+    }
+  ],
+  "complete_result_manifest_sha256": "1b6d18dfc74cfb560559f207ebadfff1887e95cdd9e94cf64d848b06c2930eb7",
+  "quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false,
+  "PIT": "NOT_PROVEN",
+  "window_OOS": false
+}

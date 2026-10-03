@@ -1,0 +1,322 @@
+{
+  "status": "PASS_SCOPED_PRE_C0_IMPLEMENTATION_REVIEW_FINAL_GATE_PENDING",
+  "id": "M2903",
+  "reviewed_commit": "fc8cc8ae2ea16cb21bd679284bc883b4b8a13821",
+  "original_draft_commit": "fc93d03a0c69c1aae67f3491abeff30f1d5c7fdc",
+  "prior_gate_revision": "9d2836c0385aa35353016629b66ecc2a1595ad94",
+  "root_rules_sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2",
+  "output_contract_sha256": "5a15f69fca876a4ea3872a2b94ac5f379adfec6e5f11b88de9c4c8ffe64a3d2b",
+  "protocol_sha256": "f751de5e09d8526f454f4c8515d6c9e0416c150db8eac7d9640658eb999f7d51",
+  "source_classification": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "strict_reproductions": 0,
+  "OOS": false,
+  "source_article_not_obtained": true,
+  "source_crawl_retried": false,
+  "signal_sha256": "e488a59a4686a9ff445c6db856581548a3b874c35fdaa7d8dba6f6a4799ff5d8",
+  "indicator_truth": "Independent Fraction arithmetic; decimal50 half-even rounding using integer quotient/remainder after each frozen operation; not author oracle",
+  "independent_feature_rows": 10846,
+  "signal_prefix_checks": 156,
+  "signal_future_checks": 156,
+  "integer_rounding_reference_checks": 56,
+  "indicator_boundary_checks": 12,
+  "constant_sequences_without_events": 7,
+  "full_to_view": {
+    "full_rows": 831,
+    "canonical_warmup": 100,
+    "offset": 69,
+    "view_rows": 762,
+    "kernel_start": 31,
+    "indicators_computed_before_trim": true,
+    "wrong_reseed_diff_on_synthetic_steps": 762,
+    "actual_shared_adapter_integration_tested": false
+  },
+  "independent_account": {
+    "independent_feature_rows": 831,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "fills": 1461,
+    "months": 96,
+    "pending_events": 3229,
+    "closed_trips": 729,
+    "numeric_mutations_rejected": 5,
+    "independent_buy_sell_pairs": 27,
+    "pending_truth_grid": 24
+  },
+  "synthetic_strategy_cases": 4,
+  "synthetic_only": true,
+  "independent_account_prefix_future_pairs": 32,
+  "own_numeric_tolerance": "Exact Decimal equality, including every money/quantity field; no absolute or relative tolerance",
+  "metrics_tolerance": "Independent standard-library statistics; relative1e-12 absolute0 with exactzero/null",
+  "runtime_lock_match": true,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "gate_tests": {
+    "independent_negative_and_boundary_checks": 58,
+    "actual_runner_invalid_release_variants": 34,
+    "positive_artificial_schema_control": true,
+    "actual_optimized_subprocess_before_gate_engine_price": true,
+    "invalid_price_reads": 0
+  },
+  "resolved_findings": [
+    {
+      "issue": "source_commit accepted list40 or nonhex40 in revision9d2836",
+      "proof_receipt": "gate-type-gap-v2.json",
+      "fix_commit": "fc8cc8ae2ea16cb21bd679284bc883b4b8a13821",
+      "resolution": "Strict str/lowerhex40; related SHA64 strict types and review path checks added; own originalcounterexamples rejected by actual run; old failurebytes preserved in family tests"
+    }
+  ],
+  "shared_kernel_unchanged": true,
+  "shared_engine_sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782",
+  "benchmark_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+  "benchmark_remote_acceptance_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+  "benchmark_new_controls": 0,
+  "matched_cost_control_claim": false,
+  "history_runs": 0,
+  "real_market_files_read": 0,
+  "real_features": 0,
+  "network_requests": 0,
+  "claims_written": 0,
+  "repository_mutations": 0,
+  "global_mutations": 0,
+  "pushes": 0,
+  "root_release_issued": false,
+  "exact_C0_approved": false,
+  "pending_requirements": [
+    "Versioned shared input adapter exact code/manifest independent QA and remote pin",
+    "Consumer adapter integration on artificial full831 with actual failclosed input schema/hash/profile/view mapping and no reseed",
+    "Exact family C0 payload hash validation and final independent gate receipt",
+    "Separate root exact-C0 history release"
+  ],
+  "scope_limits": [
+    "This is a pre-C0 code/synthetic review, not exactC0 acceptance or historical permission",
+    "Expected account input view was sliced independently at69; final shared-adapter runtime is not yet pinned",
+    "Trusted-local release metadata is not cryptographic authentication of coordinator identity",
+    "Singlebar prefix probes emit expected numpy samplevariance warnings; 731bar statistics comparison passed"
+  ],
+  "receipts": {
+    "features-review.safe.json": {
+      "bytes": 745,
+      "sha256": "5a302ca95beae2f51eda9f05c684e781d44c9b885569ff70755b2370b568c05d"
+    },
+    "account-review.safe.json": {
+      "bytes": 1702,
+      "sha256": "83c1a70182716c9981251401c1b5b7c46fa051c6654753941dd31075fa5e9a5f"
+    },
+    "causality-review.safe.json": {
+      "bytes": 407,
+      "sha256": "5bea5985afb330390101c00fafc2bc1cf497017833fc8cc8928e05b8e99245d2"
+    },
+    "gates-review-v3.safe.json": {
+      "bytes": 2678,
+      "sha256": "ae2cfa52b33e68625f4df8ab77ca55cb6b5247c560891aced5b417fdd4659c5b"
+    },
+    "positive-metadata-v3.safe.json": {
+      "bytes": 311,
+      "sha256": "93bde6938a19d2da5d4c1ed7f12657042eace2d7d6e98e074be1808fbf195dc3"
+    },
+    "gate-type-gap-v2.json": {
+      "bytes": 523,
+      "sha256": "a7265cdfd406b3beebb59a3f0c537e1e8d949b32fb0e2044a4fd6484df206e6e"
+    }
+  },
+  "code_files": [
+    {
+      "path": "research/public-strategies/M2903/M2903-core-ledger.md",
+      "bytes": 797,
+      "sha256": "0d40ae404de665b34a74931a5033fe493781a2f9f52c2fb7ac6bf6a0d9ae7343"
+    },
+    {
+      "path": "research/public-strategies/M2903/M2903.md",
+      "bytes": 2342,
+      "sha256": "77b4ddabb02bfc6c57e0e8e29a97b5feb82cc3dcee9cef8ddb3b4f65af992298"
+    },
+    {
+      "path": "research/public-strategies/M2903/README.md",
+      "bytes": 661,
+      "sha256": "b15180e4ed4f1f299cdb465758f31e5aad0161446d31dd00b8ab324c9b5120c3"
+    },
+    {
+      "path": "research/public-strategies/M2903/decision-log.md",
+      "bytes": 1187,
+      "sha256": "ac2a746f177dc18be316de85c5cf24bf49202087a121702429419b9ede9c56b0"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/README.md",
+      "bytes": 786,
+      "sha256": "843d2159a0d2d92267ecf9cda76e05ec08a7e27bd1d55db4d86449a9f1c3d996"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/check_causality.py",
+      "bytes": 1757,
+      "sha256": "d5545f1c964b507891deb31466878582ff08c69c901a37e6cdd9b130144cebdb"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/check_gates.py",
+      "bytes": 4696,
+      "sha256": "a661e6528a5c30d41ba652989b2e35d4a491b62c89263209bc0fadc9b4def59f"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/check_release_metadata.py",
+      "bytes": 3834,
+      "sha256": "862d6477277dac3b26155306fee73944e1a5fc78c1c1669054f7fb3babdb1187"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/check_synthetic.py",
+      "bytes": 7669,
+      "sha256": "e060f2889aebdcd1f6f53e3c7012f5f00e892ab9acd0ff2ee4e5c34f0e42df6e"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/gates.py",
+      "bytes": 4270,
+      "sha256": "4aa5a87be29eb9bd8d531335af011a03e8fc07c4490a5acc927352b41e6496a1"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/kernel_loader.py",
+      "bytes": 998,
+      "sha256": "acbd8e46b9ff4ce1b6c5355cdfde887da1fafa97cba4848551c1f1294e57d464"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/oracle.py",
+      "bytes": 1968,
+      "sha256": "061eb339b6fc6fcda94da9fda764c5cdfe10f0ed5252f8b40421c24fdeacbdf8"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/run_replay.py",
+      "bytes": 4973,
+      "sha256": "ff065226c82004a0eae30fd044be99ec5eb19e3a19df6c509923ce98ec1817dd"
+    },
+    {
+      "path": "research/public-strategies/M2903/scripts/signals.py",
+      "bytes": 1480,
+      "sha256": "e488a59a4686a9ff445c6db856581548a3b874c35fdaa7d8dba6f6a4799ff5d8"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/control-remote-acceptance.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/exposure-v1.json",
+      "bytes": 314,
+      "sha256": "cd5b2396d1f0a2170b7d728338ab8ca423a59103be5d2cca7441dcf1baff4bc3"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/kernel-pin.json",
+      "bytes": 759,
+      "sha256": "cec2e11f67d006acc3a3a3766feb5a92bcdf6d4f7d0dff09e669169dd3cb3728"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/pre-C0-draft-v1.json",
+      "bytes": 3773,
+      "sha256": "e6f7d0d873986f81be299361a55e62f0a1a119877d6e7c7e33826b1b45f93d55"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/pre-C0-draft-v2.json",
+      "bytes": 4264,
+      "sha256": "c6371bf1604266bbf240f8932949b4a8462d473142361190289b895c88594c98"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/pre-C0-draft-v3.json",
+      "bytes": 4763,
+      "sha256": "859caafbf6df3f4674fc528e5247b05038d23789bb3d1cb46ae8eddca5431c37"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/protocol-v1.json",
+      "bytes": 17734,
+      "sha256": "f751de5e09d8526f454f4c8515d6c9e0416c150db8eac7d9640658eb999f7d51"
+    },
+    {
+      "path": "research/public-strategies/M2903/specs/root-frozen-rules.json",
+      "bytes": 17147,
+      "sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/causality-receipt.json",
+      "bytes": 159,
+      "sha256": "6c139fafc658a19f5715cc74a03a4071baade9305eaadcd1cf4c9d2496fba0e9"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/fresh-restore.safe.json",
+      "bytes": 145,
+      "sha256": "95a8c8539abf77eefaba7fda54be6970fb4b93eb433b717b4dcefcceddcbc69d"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/gate-metadata-v3.json",
+      "bytes": 4101,
+      "sha256": "5d23b84373bfac5829a1902beaab956a811d0bd5c6e86362ebe2c87d0b14216f"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/gate-negative-v2.json",
+      "bytes": 1151,
+      "sha256": "93653105c4b75ea918ecbdc859cedbca48f998fe023715c63dc46be9b42046f3"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/independent-gate-gap-v2.json",
+      "bytes": 523,
+      "sha256": "a7265cdfd406b3beebb59a3f0c537e1e8d949b32fb0e2044a4fd6484df206e6e"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/input-byte-only.json",
+      "bytes": 176,
+      "sha256": "b7e054feffcae4bcb8c29456213f0b434210ea15ef99323ce2caba1792c543da"
+    },
+    {
+      "path": "research/public-strategies/M2903/tests/synthetic-receipt.json",
+      "bytes": 3261,
+      "sha256": "855a2ef4b79819212cfb8d0c0860a44a63accd69d1efd2398af128fcd4cab1e6"
+    }
+  ],
+  "review_scripts": [
+    {
+      "path": "account_causality.py",
+      "bytes": 1622,
+      "sha256": "bacb5be24f0a509b8f7f73091a2a536ca36e3aae143e08fb7ff522f126866ac9"
+    },
+    {
+      "path": "check_positive_metadata_v3.py",
+      "bytes": 1333,
+      "sha256": "a75f29256187820c38e58dec5acc15110e3876e6dfc3e82734e9ce93befce065"
+    },
+    {
+      "path": "independent_account.py",
+      "bytes": 11831,
+      "sha256": "b3e19a96caf31b8a8d3c4fc301a316822a091b03b9db76b5157dbb1efa5b0387"
+    },
+    {
+      "path": "independent_features.py",
+      "bytes": 6380,
+      "sha256": "73dcb356f0328e6f2478940fa2f2e1da84d5afcd6008fa85593bdc835df482a9"
+    },
+    {
+      "path": "independent_gates.py",
+      "bytes": 8510,
+      "sha256": "f1cf2c1ee7b4fcb9f22fba3de6a9c9555e2a2dd866c7628fdd30173680a36dd1"
+    },
+    {
+      "path": "independent_gates_v3.py",
+      "bytes": 9375,
+      "sha256": "272ac2dc8b3fe72ef58dd1d91ece7a7db5d318b344c1fbe850cf1e1d0e96352a"
+    },
+    {
+      "path": "probe_gate_types_v2.py",
+      "bytes": 2247,
+      "sha256": "f5be896c630c7313f2b064bdc58b7a070b7b3884bc1395bc3d5eb1e1a6591eb7"
+    }
+  ],
+  "free_disk_bytes": 8712679424,
+  "completed_utc": "2026-10-03T21:42:22.472439+00:00",
+  "reviewer": "root/m0288"
+}

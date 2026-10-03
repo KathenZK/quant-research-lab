@@ -1,0 +1,107 @@
+{
+  "id": "M2903",
+  "status": "FROZEN_PREHISTORY_C0",
+  "source_commit": "531a0d1e2a30536f80dc19b75ea3010c5b854390",
+  "frozen_utc": "2026-10-03T21:47:59.804403+00:00",
+  "adapter_remote_commit": "43becf3c521eeb884dfc239883ee5cb5106d3646",
+  "file_count": 18,
+  "files": [
+    {
+      "path": "scripts/check_causality.py",
+      "bytes": 1757,
+      "sha256": "d5545f1c964b507891deb31466878582ff08c69c901a37e6cdd9b130144cebdb"
+    },
+    {
+      "path": "scripts/check_gates.py",
+      "bytes": 4696,
+      "sha256": "a661e6528a5c30d41ba652989b2e35d4a491b62c89263209bc0fadc9b4def59f"
+    },
+    {
+      "path": "scripts/check_integration.py",
+      "bytes": 4344,
+      "sha256": "af603ae2cc8460fbdc5ce07029c2115514bc3c232699b85eb1eb611278ee25f4"
+    },
+    {
+      "path": "scripts/check_release_metadata.py",
+      "bytes": 3834,
+      "sha256": "862d6477277dac3b26155306fee73944e1a5fc78c1c1669054f7fb3babdb1187"
+    },
+    {
+      "path": "scripts/check_synthetic.py",
+      "bytes": 7669,
+      "sha256": "e060f2889aebdcd1f6f53e3c7012f5f00e892ab9acd0ff2ee4e5c34f0e42df6e"
+    },
+    {
+      "path": "scripts/gates.py",
+      "bytes": 4302,
+      "sha256": "69a4fa6c9c9e8b45f9d8acb521a4b4c10d6cc4ea2a77548c8c5bbeb276c3aed1"
+    },
+    {
+      "path": "scripts/kernel_loader.py",
+      "bytes": 998,
+      "sha256": "acbd8e46b9ff4ce1b6c5355cdfde887da1fafa97cba4848551c1f1294e57d464"
+    },
+    {
+      "path": "scripts/oracle.py",
+      "bytes": 1968,
+      "sha256": "061eb339b6fc6fcda94da9fda764c5cdfe10f0ed5252f8b40421c24fdeacbdf8"
+    },
+    {
+      "path": "scripts/run_replay.py",
+      "bytes": 5298,
+      "sha256": "b94f23c666364697efb838962d081039bff85f40db2c8f860a29630c14a94e40"
+    },
+    {
+      "path": "scripts/signals.py",
+      "bytes": 1480,
+      "sha256": "e488a59a4686a9ff445c6db856581548a3b874c35fdaa7d8dba6f6a4799ff5d8"
+    },
+    {
+      "path": "specs/adapter-pin.json",
+      "bytes": 704,
+      "sha256": "105b8bf51ffeb6095000fbdf26263a8eb4dba642afb908beffbf215b1c76a587"
+    },
+    {
+      "path": "specs/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "specs/control-remote-acceptance.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "path": "specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "path": "specs/exposure-v1.json",
+      "bytes": 314,
+      "sha256": "cd5b2396d1f0a2170b7d728338ab8ca423a59103be5d2cca7441dcf1baff4bc3"
+    },
+    {
+      "path": "specs/kernel-pin.json",
+      "bytes": 759,
+      "sha256": "cec2e11f67d006acc3a3a3766feb5a92bcdf6d4f7d0dff09e669169dd3cb3728"
+    },
+    {
+      "path": "specs/protocol-v1.json",
+      "bytes": 17734,
+      "sha256": "f751de5e09d8526f454f4c8515d6c9e0416c150db8eac7d9640658eb999f7d51"
+    },
+    {
+      "path": "specs/root-frozen-rules.json",
+      "bytes": 17147,
+      "sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2"
+    }
+  ],
+  "historical_features": 0,
+  "historical_runs": 0,
+  "new_controls": 0,
+  "independent_exact_C0_review": "PENDING",
+  "root_history_release": "NOT_GRANTED",
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

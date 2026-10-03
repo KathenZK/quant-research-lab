@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "synthetic_wrapper": {
+    "status": "COMPLETE",
+    "strategy_configurations": 4,
+    "new_controls": 0
+  },
+  "independent_account": {
+    "status": "PASS",
+    "features": 762,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "monthly_rows": 96,
+    "fill_rows": 1762,
+    "strategy_configurations": 4,
+    "new_control_configurations": 0,
+    "source_signal": "family independent Fraction features supplied and verified separately",
+    "account": "independent Decimal50; exact serialized every fill/nav/event/monthly/roundtrip field",
+    "metrics": "stdlib statistics independent from numpy,relative1e-12,zeroexact",
+    "engine_runs": 0
+  },
+  "rejected": 14,
+  "mapping_rows": 831,
+  "full_features": 831,
+  "real_input_schema_only": {
+    "status": "PASS",
+    "bytes": 139983,
+    "sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+    "view_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "real_features": 0
+  },
+  "historical_features": 0,
+  "historical_runs": 0,
+  "new_controls": 0
+}

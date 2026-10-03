@@ -1,0 +1,193 @@
+{
+  "C0_sha256": "adcf2862aaa7af28b19ced8432c62c23e314fd4ba6e3ec1e687cfd679c08a0f7",
+  "actions": {
+    "global_progress_written": false,
+    "historical_data_read": false,
+    "historical_runs": 0,
+    "network_calls": 0,
+    "repositories_modified": false,
+    "research_acceptance_issued": false,
+    "reviewed_code_executed": false,
+    "site_activation": false,
+    "synthetic_runs": 0
+  },
+  "blockers_to_this_twelve_file_static_public_boundary_review": [],
+  "checks_passed": [
+    "Exactly twelve newly added M1266 files",
+    "Exact twelve-path allowlist matches",
+    "Worktree twelve files remain identical to reviewed commit",
+    "Actual previously received exact C0 independently pinned",
+    "Actual C0 contains 132 unique pins",
+    "Published scripts/m1266_engine_v1.py byte-identical to exact C0",
+    "Published scripts/run_m1266_v1.py byte-identical to exact C0",
+    "Recovery recipe pins actual C0 and root release",
+    "Recovery recipe pins original code; no bypass replacement",
+    "Actual root release scope is 4 strategy configurations and 1 control",
+    "Referenced local exact-C0 synthetic review receipt pinned",
+    "All displayed metrics identical between metrics and detail",
+    "Four cases match frozen cases exactly",
+    "Public counts remain 4 plus 1",
+    "metrics preserves all diagnostic and pending-acceptance labels",
+    "detail preserves all diagnostic and pending-acceptance labels",
+    "record preserves all diagnostic and pending-acceptance labels",
+    "rules preserves all diagnostic and pending-acceptance labels",
+    "No Graph entity/Site/revision promotion",
+    "Published warmup and evaluation identity match frozen input",
+    "EMA periods and sole benchmark count match rules",
+    "Operational-rule and graph lineage match",
+    "Graph full-period alias and numeric cost keys available",
+    "base return agrees with parent reported result",
+    "base cardinalities and initial capital valid",
+    "base displayed final equity, return, CAGR internally agree",
+    "fee0 return agrees with parent reported result",
+    "fee0 cardinalities and initial capital valid",
+    "fee0 displayed final equity, return, CAGR internally agree",
+    "fee20 return agrees with parent reported result",
+    "fee20 cardinalities and initial capital valid",
+    "fee20 displayed final equity, return, CAGR internally agree",
+    "delay2 return agrees with parent reported result",
+    "delay2 cardinalities and initial capital valid",
+    "delay2 displayed final equity, return, CAGR internally agree",
+    "control return agrees with parent reported result",
+    "control cardinalities and initial capital valid",
+    "control displayed final equity, return, CAGR internally agree",
+    "Base drawdown/Sharpe and control drawdown agree with parent reported values",
+    "curve initial anchor plus twenty-four month-end dates",
+    "curve contains only finite normalized display projections",
+    "curve terminal normalized equity agrees with full metric",
+    "curve sampled drawdown does not exceed full-daily drawdown magnitude",
+    "benchmark_curve initial anchor plus twenty-four month-end dates",
+    "benchmark_curve contains only finite normalized display projections",
+    "benchmark_curve terminal normalized equity agrees with full metric",
+    "benchmark_curve sampled drawdown does not exceed full-daily drawdown magnitude",
+    "Curve metadata explicitly distinguishes initial capital and first close",
+    "Seven result hash anchors total 4660509 bytes as parent reported",
+    "No private storage IDs, credentials, local absolute paths, or full C0 inventory",
+    "Withheld catalog and private-input-manifest fingerprints absent",
+    "Structured public artifacts contain no daily raw data or full ledgers",
+    "Report preserves poor relative result, unmatched controls and incomplete public-recovery limitation",
+    "README/report preserve adapted identity and exclusions"
+  ],
+  "created_at_utc": "2026-10-03T21:29:42.359464+00:00",
+  "file_bytes": 77633,
+  "file_count": 12,
+  "files": [
+    {
+      "bytes": 1581,
+      "path": "research/public-strategies/M1266/M1266-core-ledger.md",
+      "sha256": "9719abcb4281548a8ec4aefbe408301db3d72662921033566f9f7ef495ed9ba0"
+    },
+    {
+      "bytes": 16996,
+      "path": "research/public-strategies/M1266/M1266.md",
+      "sha256": "65de7aca1c33151e51de311868266c177c4484d9700e0b735cf03cc3e6b971a1"
+    },
+    {
+      "bytes": 1586,
+      "path": "research/public-strategies/M1266/README.md",
+      "sha256": "8279f15cd54e85f6437026829df1ddb5fec2a7e232cff45c556d556bbb9a9bd0"
+    },
+    {
+      "bytes": 14927,
+      "path": "research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-detail.json",
+      "sha256": "699f2e228532ab738aa0967214e1f7c147d4ed14632bafe841808df1783ef0ac"
+    },
+    {
+      "bytes": 1801,
+      "path": "research/public-strategies/M1266/artifacts/20261003-batch019-v1/graph-record.json",
+      "sha256": "017d2f2b8fbb2b7062812674af9d3f555eb2a249b322a6f15c6f9e79a040f6e7"
+    },
+    {
+      "bytes": 6983,
+      "path": "research/public-strategies/M1266/artifacts/20261003-batch019-v1/metrics.json",
+      "sha256": "aad07b6283b87b537fefccaa6f63b866f17b64c0bc0ddfefc3d132bcdef398b2"
+    },
+    {
+      "bytes": 1804,
+      "path": "research/public-strategies/M1266/decision-log.md",
+      "sha256": "8210d25b744f8d5ac5898aa3cbdb57778cd56cc39e2241eb9b899de949dcc9ef"
+    },
+    {
+      "bytes": 968,
+      "path": "research/public-strategies/M1266/scripts/expected-result-hashes-v1.json",
+      "sha256": "87d480d9be7f9edcb9ea85653c6606638d822569fdaaaada0125a44d8f38dc47"
+    },
+    {
+      "bytes": 12539,
+      "path": "research/public-strategies/M1266/scripts/m1266_engine_v1.py",
+      "sha256": "8fc21d238aa4c49fbd6c0a79ecfbd97fedc7d60b37e6df160aaf91eec40d05f5"
+    },
+    {
+      "bytes": 3860,
+      "path": "research/public-strategies/M1266/scripts/replay_verified_bundle.py",
+      "sha256": "87f5a204c6398b031779a64be7ec5c4a7e1833e2e9c11ce7d1630c613a073001"
+    },
+    {
+      "bytes": 5841,
+      "path": "research/public-strategies/M1266/scripts/run_m1266_v1.py",
+      "sha256": "8d1f52b13e11e40f9fbb73715ca67242753192484be9d0c9549e2640f54cc2f7"
+    },
+    {
+      "bytes": 8747,
+      "path": "research/public-strategies/M1266/specs/operational-rules-v1.json",
+      "sha256": "b5def845de7f4ca03f2cacc86b19ef879a3e8ffbb771960dc3caec2a000931ec"
+    }
+  ],
+  "historical_evidence_boundary": {
+    "historical_result_files_actual_bytes_available_here": false,
+    "historical_safe_receipt_actual_bytes_available_here": false,
+    "parent_execution_report_read_locally": true,
+    "parent_execution_report_sha256": "cd218f048cdbbdd52e798cabd28a38af6c093b5b04e365dc02abe5f8420cc1c7",
+    "parent_reported_history_qa": {
+      "C0_pins": 132,
+      "byte_exact_result_files": 7,
+      "future_checks": 5,
+      "numeric_leaf_comparisons": 323587,
+      "prefix_checks": 23
+    },
+    "private_Library_archive_materialized_by_this_reviewer": false,
+    "quoted_historical_review_sha256": "616592f4697faf978bd86c89bcee11d4a843426155b410c0e55146382687c778",
+    "root_instruction": "Parent-reported remote code/private-input original-runner recovery remains separate from local static public-file acceptance. Coordinator will request actual historical safe receipt."
+  },
+  "nonblocking_recovery_recipe_observations": [
+    "Recipe statically requires exact C0/release/code/all132 pins and exclusive new workspace before calling original guarded runner; it cannot run from public files alone.",
+    "No runtime execution or end-to-end recovery of this recipe was attempted in this static review."
+  ],
+  "public_boundary": {
+    "absent": [
+      "Library IDs",
+      "Credentials",
+      "Third-party attachment/HTML",
+      "Full C0 inventory",
+      "Raw market rows",
+      "Private catalog record or personal annotations",
+      "Full daily feature/account/order/trade ledgers",
+      "Private input-manifest body or fingerprint"
+    ],
+    "intentional_code_metadata": "Canonical input hash, dates, row count, public contract/rules hashes and local relative input/runtime filenames are frozen executable checks; these are not an input manifest or supplied private data.",
+    "permitted": [
+      "Self-authored report/ledger/decision/rules",
+      "Original self-authored engine and guarded runner",
+      "Private-input-dependent recovery recipe and result hash anchors",
+      "Compact metrics and 25-point normalized display curves"
+    ]
+  },
+  "release_sha256": "debb6431803fc180c5fa31e7572b4c248d37c62be01b1886c30145885efd5225",
+  "remaining_for_root_historical_result_acceptance": [
+    "Actual historical safe receipt bytes for the quoted hash have not been provided in this executor.",
+    "This reviewer has not read the seven historical result files or performed independent historical/Library recovery; parent-reported evidence is not recast as local verification."
+  ],
+  "result_comparison": {
+    "curve_to_underlying_private_daily_ledger_verified_here": false,
+    "curves": "25 base +25 benchmark display points; original 731-observation metrics",
+    "full_period_and_cost_keys": "full; numeric 0 and 20",
+    "new_controls": 1,
+    "rounded_parent_values_match": true,
+    "strategy_configurations": 4
+  },
+  "review_scope": "The exact twelve files introduced by this commit; subsequent global governance/index changes are outside this receipt.",
+  "reviewed_commit": "18abce049b3b260bee9e594354f5c8ddb10155b8",
+  "schema": "M1266-public-twelve-file-static-independent-review/v1",
+  "source_classification": "ADAPTED_SOURCE_CORRECTED_VARIANT / HYPOTHESIS_EXECUTION_PROXY; strict0/trustedfalse/OOSfalse/PIT_UNKNOWN",
+  "status": "PASS_PUBLIC_BOUNDARY_CODE_PINS_AND_DISPLAY_CONSISTENCY"
+}

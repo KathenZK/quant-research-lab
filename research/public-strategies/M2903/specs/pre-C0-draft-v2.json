@@ -1,0 +1,137 @@
+{
+  "status": "PRE_C0_DRAFT_NOT_AUTHORIZED",
+  "id": "M2903",
+  "created_utc": "2026-10-03T21:35:06.320999+00:00",
+  "previous_draft_commit": "fc93d03a0c69c1aae67f3491abeff30f1d5c7fdc",
+  "adapter_pin": "PENDING_INDEPENDENT_QA_AND_REMOTE",
+  "historical_features": 0,
+  "historical_runs": 0,
+  "new_controls": 0,
+  "files": [
+    {
+      "path": "M2903-core-ledger.md",
+      "bytes": 797,
+      "sha256": "0d40ae404de665b34a74931a5033fe493781a2f9f52c2fb7ac6bf6a0d9ae7343"
+    },
+    {
+      "path": "M2903.md",
+      "bytes": 2342,
+      "sha256": "77b4ddabb02bfc6c57e0e8e29a97b5feb82cc3dcee9cef8ddb3b4f65af992298"
+    },
+    {
+      "path": "README.md",
+      "bytes": 661,
+      "sha256": "b15180e4ed4f1f299cdb465758f31e5aad0161446d31dd00b8ab324c9b5120c3"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 912,
+      "sha256": "1f79cd016ecc63933b4752c5ee5878961a7440108b336dcbf2d99d3d7a2bf81c"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 786,
+      "sha256": "843d2159a0d2d92267ecf9cda76e05ec08a7e27bd1d55db4d86449a9f1c3d996"
+    },
+    {
+      "path": "scripts/check_causality.py",
+      "bytes": 1757,
+      "sha256": "d5545f1c964b507891deb31466878582ff08c69c901a37e6cdd9b130144cebdb"
+    },
+    {
+      "path": "scripts/check_gates.py",
+      "bytes": 4696,
+      "sha256": "a661e6528a5c30d41ba652989b2e35d4a491b62c89263209bc0fadc9b4def59f"
+    },
+    {
+      "path": "scripts/check_synthetic.py",
+      "bytes": 7669,
+      "sha256": "e060f2889aebdcd1f6f53e3c7012f5f00e892ab9acd0ff2ee4e5c34f0e42df6e"
+    },
+    {
+      "path": "scripts/gates.py",
+      "bytes": 3382,
+      "sha256": "497b43fcbd7317f355c70b5dc45775cb2645972ec5c28a38ca094d50b8b9f02f"
+    },
+    {
+      "path": "scripts/kernel_loader.py",
+      "bytes": 998,
+      "sha256": "acbd8e46b9ff4ce1b6c5355cdfde887da1fafa97cba4848551c1f1294e57d464"
+    },
+    {
+      "path": "scripts/oracle.py",
+      "bytes": 1968,
+      "sha256": "061eb339b6fc6fcda94da9fda764c5cdfe10f0ed5252f8b40421c24fdeacbdf8"
+    },
+    {
+      "path": "scripts/run_replay.py",
+      "bytes": 4849,
+      "sha256": "0b7710d7af880f9b2d77852cdcb4d89ba39839ee49ff78fbabcbd2f57367f1d4"
+    },
+    {
+      "path": "scripts/signals.py",
+      "bytes": 1480,
+      "sha256": "e488a59a4686a9ff445c6db856581548a3b874c35fdaa7d8dba6f6a4799ff5d8"
+    },
+    {
+      "path": "specs/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "specs/control-remote-acceptance.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "path": "specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "path": "specs/exposure-v1.json",
+      "bytes": 314,
+      "sha256": "cd5b2396d1f0a2170b7d728338ab8ca423a59103be5d2cca7441dcf1baff4bc3"
+    },
+    {
+      "path": "specs/kernel-pin.json",
+      "bytes": 759,
+      "sha256": "cec2e11f67d006acc3a3a3766feb5a92bcdf6d4f7d0dff09e669169dd3cb3728"
+    },
+    {
+      "path": "specs/protocol-v1.json",
+      "bytes": 17734,
+      "sha256": "f751de5e09d8526f454f4c8515d6c9e0416c150db8eac7d9640658eb999f7d51"
+    },
+    {
+      "path": "specs/root-frozen-rules.json",
+      "bytes": 17147,
+      "sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2"
+    },
+    {
+      "path": "tests/causality-receipt.json",
+      "bytes": 159,
+      "sha256": "6c139fafc658a19f5715cc74a03a4071baade9305eaadcd1cf4c9d2496fba0e9"
+    },
+    {
+      "path": "tests/fresh-restore.safe.json",
+      "bytes": 145,
+      "sha256": "95a8c8539abf77eefaba7fda54be6970fb4b93eb433b717b4dcefcceddcbc69d"
+    },
+    {
+      "path": "tests/gate-negative-v2.json",
+      "bytes": 1151,
+      "sha256": "93653105c4b75ea918ecbdc859cedbca48f998fe023715c63dc46be9b42046f3"
+    },
+    {
+      "path": "tests/input-byte-only.json",
+      "bytes": 176,
+      "sha256": "b7e054feffcae4bcb8c29456213f0b434210ea15ef99323ce2caba1792c543da"
+    },
+    {
+      "path": "tests/synthetic-receipt.json",
+      "bytes": 3261,
+      "sha256": "855a2ef4b79819212cfb8d0c0860a44a63accd69d1efd2398af128fcd4cab1e6"
+    }
+  ]
+}

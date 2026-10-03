@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "fresh_process_directory": true,
+  "files": 31,
+  "byte_equal": true,
+  "historical_runs": 0
+}
