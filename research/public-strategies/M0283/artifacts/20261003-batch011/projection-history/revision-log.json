@@ -1,0 +1,7 @@
+{
+  "id": "M0283",
+  "created_at": "2026-10-03T14:32:46.406434+00:00",
+  "v1_commit": "81823be8f4de657cdf8047fbbda992b06fc93b73",
+  "v1_publication_sha256": "3d17fa3c7b6c4b79580b48472a891a207385a168a9247a4972a329938801aeaf",
+  "v2_changes": "Display-only assumptions:string[] and explicit curve currency/nav units; no C0,code,returns,metrics or curve values changed"
+}
