@@ -1,0 +1,19 @@
+{
+  "id": "M0265",
+  "phase": "C0_BEFORE_PERFORMANCE",
+  "recorded_at": "2026-10-03T14:20:36.177432+00:00",
+  "protocol_sha256": "b5fcc1c0c1058c567d49d833fd7e05ce0e0441ba14163a8e4afc2f1682353631",
+  "source_sha256": "c565296f014ade283b684cae3ff375bd1b80c8696d7b8498b2b5915d2a6553ff",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "code_hashes": {
+    "scripts/adapter.py": "d13e2f7d9bbe545524d26794137ad5a527d8002169ada7c1c9152b0b678487a0",
+    "scripts/audit_execution.py": "a7588f2873d4c68f7fb0acbb72f7375740c515b13c7fb8f12c8a419d574e4a52",
+    "scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60"
+  },
+  "kernel_manifest_sha256": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d",
+  "new_strategy_configurations": 4,
+  "new_control_runs": 0,
+  "strict_replications": 0,
+  "market_requests": 0,
+  "historical_runs_before_C0": 0
+}

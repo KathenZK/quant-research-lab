@@ -1,0 +1,29 @@
+{
+  "id": "M0265",
+  "status": "PREPARED_NOT_IMPORTED",
+  "projection_revision": 2,
+  "private_detail_relative_path": "M0265/graph-detail-v2.private.json",
+  "private_detail_sha256": "bafad94b8881d44e55833ba7cb0e67d3a1d56cb0cc5815c59d7b821da0eeff49",
+  "private_detail_bytes": 78182,
+  "supersedes_detail_sha256": "45349840f3ed15de8be59fc24cf08600dc51fde8ddf6ed7478c4b0ebbb799a63",
+  "history_v1_receipt_sha256": "88460fa2b59a9691ce9ae5cf1ac60b90ba4812182cc43ce7eaf188378aece8aa",
+  "frozen_protocol_sha256": "b5fcc1c0c1058c567d49d833fd7e05ce0e0441ba14163a8e4afc2f1682353631",
+  "definition_bound": false,
+  "deployed": false,
+  "units": {
+    "rows": 366,
+    "source_observations": 105408,
+    "initial_equity": 100000,
+    "sampling": "UTCdaily last native5mclose",
+    "max_drawdown_sign": "negative",
+    "max_drawdown_source": "all105408 barclose states plus initialcapital",
+    "sharpe_frequency": "UTCdaily sqrt365 ddof1",
+    "sampled_curve_sha256": "be4d4a856cabb057cea032a1b5e03a57ffb12413b9ef93c2e04ee1a36a2c47d4",
+    "full_curve_sha256": "238237ddcc4a4416390c2194edcf198cf62d248990e2b6240104597233e1168a",
+    "equity_unit": "USDT",
+    "nav_unit": "initial_capital_multiple",
+    "drawdown_unit": "fraction_negative",
+    "projection_adapter_required": true
+  },
+  "change": "Display-only assumptions:string[] and explicit curve currency/nav units; no C0,code,returns,metrics or curve values changed"
+}

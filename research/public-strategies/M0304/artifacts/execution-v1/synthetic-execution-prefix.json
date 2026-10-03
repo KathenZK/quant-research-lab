@@ -1,0 +1,15 @@
+{
+  "status": "PASS_SYNTHETIC_STATEFUL_EXECUTION_PREFIX",
+  "rows": 2400,
+  "seed_price": 2026100304,
+  "seed_signals": 304,
+  "synthetic_fills": 286,
+  "exact_prefixes_and_future_perturbations": [
+    81,
+    750,
+    1800
+  ],
+  "compared": "all cash/quantity/equity/nav bar marks and complete trade rows; terminal order reason excluded because horizon changes",
+  "historical_runs": 0,
+  "peak_rss_kib": 79744
+}

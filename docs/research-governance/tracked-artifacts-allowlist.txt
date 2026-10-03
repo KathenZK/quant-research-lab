@@ -1017,3 +1017,174 @@ research/public-strategies/M0307/artifacts/20261003-batch009/results/summary.jso
 research/public-strategies/M0307/artifacts/20261003-batch009/source-qa.json
 research/public-strategies/M0307/artifacts/20261003-batch009/stage-timing.json
 research/public-strategies/M0307/artifacts/20261003-batch009/trade-sample-manifest.json
+
+# dot004 approved frozen evidence; precise paths only
+research/public-strategies/M0298/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/M0298-C0-release-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/M0298-historical-ledger-audit-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/base-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/buyhold-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/curve-meta.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/data-recovery-safe-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/delay2-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/fee0-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/fee20-daily-equity-light.csv  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/full-local-result-hashes.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/history-input-feature-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/independent-canonical-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/independent-historical-fill-pricing-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/portable-historical-ledger-replay-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/real-input-feature-causality-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/recovery-receipt.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/shared-Decimal-ledger-audit-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/summary.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/synthetic-capacity-test-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/execution-v1/synthetic-engine-test-v3.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/graph-record.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-scalar-oracle-replay.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/offline-code-recovery-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/artifacts/source-synthetic-preflight-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/graph-record.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-scalar-oracle-replay.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/offline-code-recovery-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0298/history/preparation-v0/artifacts/source-synthetic-preflight-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/catalog-record.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/data-recovery-blocker-safe.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/C0-input-and-causality.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/catalog-record.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/clean-recovery.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/data-recovery-safe-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/documentation-revision-2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-canonical-qa-v1.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-historical-ledger-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/independent-synthetic-Decimal.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/result-manifest.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/run-observation.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/summary.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/synthetic-execution-prefix.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/execution-v1/synthetic-execution-tests.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-formula-audit.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-reference-chain.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-scalar-recovery.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/independent-worker-probes-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/preparation-revision-v2.json  # dot004 M0298/M0304
+research/public-strategies/M0304/artifacts/synthetic-formula-validation.json  # dot004 M0298/M0304
+
+# batch011 approved derived diagnostic artifacts
+research/public-strategies/M0260/artifacts/20261003-batch011/C0-freeze.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/base-nav-light.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/delay2-nav-light.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/event-qa.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/fee0-nav-light.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/fee20-nav-light.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/graph-projection-receipt.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/graph-record.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/local-recovery.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/oracle-qa.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/prefix-qa.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/result-manifest.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/results/base-trades-sample.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/results/delay2-trades-sample.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/results/fee0-trades-sample.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/results/fee20-trades-sample.csv  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/results/summary.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/source-qa.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/stage-timing.json  # root batch011
+research/public-strategies/M0260/artifacts/20261003-batch011/trade-sample-manifest.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/C0-freeze.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/base-nav-light.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/delay2-nav-light.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/event-qa.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/fee0-nav-light.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/fee20-nav-light.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/graph-projection-receipt.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/graph-record.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/local-recovery.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/oracle-qa.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/prefix-qa.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/result-manifest.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/results/base-trades-sample.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/results/delay2-trades-sample.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/results/fee0-trades-sample.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/results/fee20-trades-sample.csv  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/results/summary.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/source-qa.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/stage-timing.json  # root batch011
+research/public-strategies/M0265/artifacts/20261003-batch011/trade-sample-manifest.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/C0-freeze.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/base-nav-light.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/delay2-nav-light.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/event-qa.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/fee0-nav-light.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/fee20-nav-light.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/graph-projection-receipt.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/graph-record.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/local-recovery.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/oracle-qa.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/prefix-qa.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/result-manifest.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/results/base-trades-sample.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/results/delay2-trades-sample.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/results/fee0-trades-sample.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/results/fee20-trades-sample.csv  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/results/summary.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/source-qa.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/stage-timing.json  # root batch011
+research/public-strategies/M0282/artifacts/20261003-batch011/trade-sample-manifest.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/C0-freeze.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/base-nav-light.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/delay2-nav-light.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/event-qa.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/fee0-nav-light.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/fee20-nav-light.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/graph-projection-receipt.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/graph-record.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/local-recovery.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/oracle-qa.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/prefix-qa.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/result-manifest.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/results/base-trades-sample.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/results/delay2-trades-sample.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/results/fee0-trades-sample.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/results/fee20-trades-sample.csv  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/results/summary.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/source-qa.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/stage-timing.json  # root batch011
+research/public-strategies/M0283/artifacts/20261003-batch011/trade-sample-manifest.json  # root batch011
+
+# batch011 immutable projection and documentation history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/M0260.md.snapshot  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0260/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/M0265.md.snapshot  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/M0282.md.snapshot  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0282/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/revision-v3.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/v2/M0283.md.snapshot  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/graph-projection-receipt-v2.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/revision-log.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json  # batch011 preserved history
+research/public-strategies/M0283/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json  # batch011 preserved history

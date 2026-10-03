@@ -300,3 +300,15 @@
 - [native5m-execution-proxy v1共享内核](_shared-kernels/native5m-execution-proxy/README.md)：五ID复用固定OHLC成交与独立Decimal账户校验；ID规则、C0、结果分别冻结。
 
 - [dot batch006来源预检](public-strategies/dot-batch006-preflight-20261003/README.md)：diagnostic_topic；四个5m候选已分配、未启动历史回放。
+
+- [root batch011来源预检](public-strategies/root-batch011-preflight-20261003/README.md)：diagnostic_topic；M0260/M0265/M0282/M0283已分配，逐ID C0与独立验收后才计完成。
+
+- [M0298 Simple](public-strategies/M0298/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
+- [M0304 Strategy002](public-strategies/M0304/README.md)：四配置原生5m成交代理诊断；严格0，独立验收另记。
+
+- [batch009六ID离线恢复入口](public-strategies/batch009-offline-recovery-20261003/README.md)：diagnostic_topic；复用原冻结执行入口与88个结果指纹，需要用户合法持有的离线输入；不代表Library远端备份。
+
+- [M0260 BinHV27](public-strategies/M0260/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0265 CofiBitStrategy](public-strategies/M0265/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0282 MACDStrategy](public-strategies/M0282/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。
+- [M0283 MACDStrategy_crossed](public-strategies/M0283/README.md)：原生5m四配置执行代理诊断；冻结共享v1，复用既有买持对照，严格0。

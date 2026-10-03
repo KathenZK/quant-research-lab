@@ -1,0 +1,168 @@
+{
+  "schema": "public-strategy-diagnostic-pre-review-plan/v1",
+  "record_id": "M0298",
+  "status": "DRAFT_NOT_C0_BLOCKED_SOURCE_INPUT",
+  "recorded_at_utc": "2026-10-03T12:29:01Z",
+  "clock_source": "clock.curr_time at final preparation; not a historical-run freeze",
+  "lab_handoff_commit": "48851ef54b5fba6fef1da6825983864e1665fe1e",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "research_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0,
+  "source": {
+    "repository": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "path": "user_data/strategies/berlinguyinca/Simple.py",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/Simple.py",
+    "bytes": 2695,
+    "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+    "retrieval_method": "GitHub connector; exact UTF-8 bytes; AST only, not executed",
+    "license": "GPL-3.0",
+    "author": "Gert Wohlgemuth"
+  },
+  "rules": {
+    "class_attributes": {
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "timeframe": "5m"
+    },
+    "MACD": {
+      "fastperiod": 12,
+      "slowperiod": 26,
+      "signalperiod": 9,
+      "library": "TA-Lib 0.6.8 wrapper/0.6.4 C"
+    },
+    "RSI": {
+      "timeperiod": 7
+    },
+    "BB": {
+      "input": "close",
+      "window": 12,
+      "stds": 2,
+      "min_periods": 1,
+      "ddof": 1
+    },
+    "entry": "macd>0 and macd>macdsignal and bb_upperband>bb_upperband.shift(1) and rsi>70",
+    "exit": "rsi>80",
+    "raw_collision_preserved": true,
+    "collision_effective_entry": false,
+    "collision_effective_signal_exit": false,
+    "ROI_ignored_by_entry": false
+  },
+  "expected_input_only": {
+    "provider": "Binance Vision",
+    "market": "BTCUSDT spot",
+    "native_timeframe": "5m",
+    "start_inclusive": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "rows": 114336,
+    "bytes": 31428289,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "expected_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+    "expected_source_objects": 39,
+    "local_recovery_passed": false
+  },
+  "evaluation_plan": {
+    "start_inclusive": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_bars": 105408,
+    "warmup_bars": 8928,
+    "selection": "availability-selected before candidate returns after prior 2023 QA failure",
+    "oos": false,
+    "directly_comparable_to_previous_two_year_total_returns": false,
+    "prior_search_count": "UNKNOWN",
+    "actual_history_exposure_from_this_plan": false
+  },
+  "execution_draft_not_frozen": {
+    "initial_cash_USDT": 100000,
+    "stake_cash_fraction": 0.95,
+    "max_open_positions": 1,
+    "position": "spot long only; no leverage, shorting, funding or pyramiding",
+    "entry_signal_time": "only fully closed bar; lag1 executes at next native5m open; lag2 at second following open",
+    "entry_and_signal_exit_price": "signal bar close limit; improved fill at eligible open when marketable, else touch within eligible bar; fractional full fills assumed",
+    "time_in_force": "GTC with explicit strategy timeout cancellation at the end of one eligible 5m bar; no carryover",
+    "buyhold": "95% of initial cash at first evaluation open, base fees and execution friction; no signals, ROI or stop",
+    "exit_profit_only": false,
+    "ROI_target": "net1% including both fees and cash friction: entry_price*(1+fee+friction)*1.01/(1-fee-friction)",
+    "stop_trigger": "entry_fill*0.75; gap below stop takes opening price",
+    "stop_order": "market risk-exit substitution; this differs from reference default limit and precludes strict reproduction",
+    "open_event_priority": [
+      "stop_gap",
+      "marketable_signal_exit",
+      "ROI_gap"
+    ],
+    "intrabar_priority": [
+      "stop",
+      "signal_exit_limit",
+      "ROI_limit"
+    ],
+    "intrabar_entry_policy": "do not recognize same-bar ROI after intrabar limit entry; stop may still fire; open-filled entries permit stop then ROI",
+    "same_bar_reentry": false,
+    "terminal": "mark existing position at last close; no forced liquidation; estimated liquidation net value separate",
+    "fees_bps_per_side": 8,
+    "execution_friction_bps_per_side": 2,
+    "friction_treatment": "separate adverse cash cost, not a price fill outside the limit",
+    "queue_partial_fills_latency_tick_lot_min_notional": "unmodelled unknown; diagnostic assumption",
+    "MDD": "all105408 native5m close equities plus initial cash; daily display sampling is not MDD input",
+    "Sharpe": "UTC daily close returns, sqrt365, sample ddof1, rf0",
+    "not_original_framework_engine": true
+  },
+  "planned_configurations": [
+    {
+      "id": "base",
+      "fee_bps": 8,
+      "lag_bars": 1
+    },
+    {
+      "id": "fee0",
+      "fee_bps": 0,
+      "lag_bars": 1
+    },
+    {
+      "id": "fee20",
+      "fee_bps": 20,
+      "lag_bars": 1
+    },
+    {
+      "id": "delay2",
+      "fee_bps": 8,
+      "lag_bars": 2
+    }
+  ],
+  "planned_controls": [
+    {
+      "id": "buyhold",
+      "fee_bps": 8,
+      "execution_friction_bps": 2,
+      "same_window": true
+    }
+  ],
+  "counts": {
+    "planned_strategy_configurations": 4,
+    "planned_controls": 1,
+    "actual_strategy_runs": 0,
+    "actual_controls": 0,
+    "actual_parameter_searches": 0,
+    "accepted_results": 0,
+    "strict_reproductions": 0
+  },
+  "future_mandatory_gates": [
+    "Current403 hard stop resolved without bypass and new explicit authorization to proceed",
+    "Full39objects exact source hashes and114336row QA plus independent byte-identical canonical rebuild",
+    "Implement and independently audit a historical engine after assumptions are finalized",
+    "Write a new C0 freezing source, defaults, costs, code, environment, input, exposure before any returns",
+    "Independent source/causality/execution/Decimal-ledger and clean recovery after execution"
+  ],
+  "gate_status": {
+    "data": "BLOCKED",
+    "independent_raw_QA": "NOT_RUN",
+    "historical_code": "NOT_IMPLEMENTED",
+    "C0": "NOT_CREATED",
+    "historical_returns": "NOT_RUN",
+    "historical_Decimal_ledger": "NOT_RUN"
+  },
+  "do_not_execute_historical_now": true,
+  "authorized_parent_retry_status": "Parent reports user authorized one delayed same-source retry; pending, this worker must not fetch or run history"
+}

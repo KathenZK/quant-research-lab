@@ -1,0 +1,26 @@
+{
+  "id": "SYNTHETIC_ONLY",
+  "status": "PASS",
+  "method": "Independent stdlib/Decimal event field audit, separate from shared account and oracle; exact phase/time plus nonzero-relative1e-9 notional",
+  "intrabar_exact_time_claim": false,
+  "cases": {
+    "base": {
+      "events": 30,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "fee0": {
+      "events": 32,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "fee20": {
+      "events": 19,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "delay2": {
+      "events": 34,
+      "notional_fees_phase_and_time": "PASS"
+    }
+  },
+  "audit_script_sha256": "a7588f2873d4c68f7fb0acbb72f7375740c515b13c7fb8f12c8a419d574e4a52",
+  "historical_runs": 0
+}

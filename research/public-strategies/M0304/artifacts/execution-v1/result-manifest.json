@@ -1,0 +1,119 @@
+{
+  "record_id": "M0304",
+  "origin_run_id": "M0304-20261003-calendar2024-v1",
+  "protocol_sha256": "49d74d0aa83d34c24c980264d66eedeb1f2a630645b1e43e0767684d186c2083",
+  "files": [
+    {
+      "name": "base-daily-nav.csv",
+      "bytes": 49022,
+      "sha256": "b413b8825f8d79cee800e9261c899b15faa53f674c768e4e26a0206d2d1b200b"
+    },
+    {
+      "name": "base-events.json",
+      "bytes": 200898,
+      "sha256": "7234daba1e02752a0d4ea7a4d9709c0a9e7b9c65fdbfb5c3c53c1ec105b877d3"
+    },
+    {
+      "name": "base-nav.csv",
+      "bytes": 12853330,
+      "sha256": "0646ef1870bf8de5ca175b821e91eedd5584ca93bd7216bc1bc0dabf352e4aa2"
+    },
+    {
+      "name": "base-trades.csv",
+      "bytes": 17305,
+      "sha256": "fcddd116c965903248ce2274e68f0cf86883bdf60524bf966e115303f03b7574"
+    },
+    {
+      "name": "buyhold-daily-nav.csv",
+      "bytes": 50584,
+      "sha256": "8e655075ef60a92899fd88733dd5ebe6cd8d63550c201ec3550714c0590d8038"
+    },
+    {
+      "name": "buyhold-events.json",
+      "bytes": 457,
+      "sha256": "9ad4363c08f77fa1c3bd93c082705ba0bb97b4b63fb95c4d3b3562788c77e843"
+    },
+    {
+      "name": "buyhold-nav.csv",
+      "bytes": 13304577,
+      "sha256": "a27511c4745a4907f8c57cb64eea35c4e12088bb7d629337c56e48fde6a82096"
+    },
+    {
+      "name": "buyhold-trades.csv",
+      "bytes": 642,
+      "sha256": "d180305e5a1a7b2d1330a61f9cc4dd0e6dd8e0f704e5cb85ec434bc5102f8403"
+    },
+    {
+      "name": "delay2-daily-nav.csv",
+      "bytes": 48464,
+      "sha256": "805f380d8479b97f218c64db7a0844f6369f4161abc8da171ebc8b62b270c482"
+    },
+    {
+      "name": "delay2-events.json",
+      "bytes": 166157,
+      "sha256": "e6f22293e4038a44886d02e5b124394b3cf5fd16bbb8d05d557ad7c398d8c0c3"
+    },
+    {
+      "name": "delay2-nav.csv",
+      "bytes": 12700199,
+      "sha256": "951f024dc2b094caca1a2f95ee5cf31123434bd0505b740ea006a39edd283cf0"
+    },
+    {
+      "name": "delay2-trades.csv",
+      "bytes": 11060,
+      "sha256": "d2c5bfad9912190ba1127baa312c90696d8f9408a98f0d95e05aef01672d4700"
+    },
+    {
+      "name": "fee0-daily-nav.csv",
+      "bytes": 48984,
+      "sha256": "fe18877bc9d2794d8ea1bab40dc0e9b36349a3ca70adb0534c9324d09fa52698"
+    },
+    {
+      "name": "fee0-events.json",
+      "bytes": 194503,
+      "sha256": "7435a37a41c8fb8517a1b01192a61ae7f681cfbe5cd3321bce6494aa20b3c500"
+    },
+    {
+      "name": "fee0-nav.csv",
+      "bytes": 12847574,
+      "sha256": "15a9eb8bb734cfbe1bebb0356605a8ed4d6691e190e7ab5464cf971012d9c936"
+    },
+    {
+      "name": "fee0-trades.csv",
+      "bytes": 16477,
+      "sha256": "5889cc97a4228fad657396a376a6d9e821cae5efc203e05a962407357aaf0ba2"
+    },
+    {
+      "name": "fee20-daily-nav.csv",
+      "bytes": 49326,
+      "sha256": "16b83bae8228e20ca7a4e9611969ff0e4e458e1c0caa25f3f2871438853ee594"
+    },
+    {
+      "name": "fee20-events.json",
+      "bytes": 357696,
+      "sha256": "c142d7677dc90a0c4e3089a9f2c71f883b27874e772c4a4e5b0ec952ee6d9e50"
+    },
+    {
+      "name": "fee20-nav.csv",
+      "bytes": 12941232,
+      "sha256": "d919ad89e5da0079f028fb6078eddb4b1fdb6f20ec55daf50e7699edf8be232a"
+    },
+    {
+      "name": "fee20-trades.csv",
+      "bytes": 15833,
+      "sha256": "0a60f2f02e76ddac2cd6c9e53283e0784883669e9dfadfc023bceace024d261b"
+    },
+    {
+      "name": "signals.csv",
+      "bytes": 14089108,
+      "sha256": "5fd7e86545df69c67e78fc4e2a8b51362a51c3fe27e3b874fde1096266cdf342"
+    },
+    {
+      "name": "summary.json",
+      "bytes": 5800,
+      "sha256": "69119210ced60717c9bb0ecfd0871a640b169928419cfd2578331325ec4c6f47"
+    }
+  ],
+  "publication": "fingerprints only; full signals/orders/trades/curves remain in private evidence",
+  "source_input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2"
+}

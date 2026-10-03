@@ -1,0 +1,18 @@
+{
+  "record_id": "M0260",
+  "fields": {
+    "id": "M0260",
+    "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/BinHV27.py",
+    "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+    "别名来源": "",
+    "可回测": "高",
+    "名称": "BinHV27",
+    "市场": "加密现货",
+    "提出日期": "未知",
+    "标题": "BinHV27",
+    "规则": "RSI(5) 及其 EMA5、ADX、±DI 的 EMA(25/5)、EMA60/120、SMA120/240；价格低于高低 EMA，且 ADX>25/30/35 的四条分支配合 emarsi<=20 或 25 做多；止损写入 ROI/stoploss 属性。",
+    "页码或文件": "BinHV27.py"
+  },
+  "status": "CATALOG_REPORTED_NOT_AUTHORITATIVE; source byte QA controls this research",
+  "field_review": "Public strategy descriptions and URLs only; private provenance fingerprints removed"
+}

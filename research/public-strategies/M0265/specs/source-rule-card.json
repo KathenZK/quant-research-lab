@@ -1,0 +1,142 @@
+{
+  "record_id": "M0265",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source": {
+    "id": "M0265",
+    "name": "CofiBitStrategy",
+    "path": "user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CofiBitStrategy.py",
+    "sha256": "c565296f014ade283b684cae3ff375bd1b80c8696d7b8498b2b5915d2a6553ff",
+    "bytes": 3058,
+    "cached": true
+  },
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "selected_for_v1": true,
+  "status": "PASS_SOURCE_AND_SIGNAL_QA_FOR_V1_HYPOTHESIS",
+  "license": {
+    "spdx": "GPL-3.0",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "buy_params": {
+      "buy_fastx": 25,
+      "buy_adx": 25
+    },
+    "sell_params": {
+      "sell_fastx": 75
+    },
+    "minimal_roi": {
+      "40": 0.05,
+      "30": 0.06,
+      "20": 0.07,
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "timeframe": "5m"
+  },
+  "parameter_constructors": {
+    "buy_fastx": "IntParameter(20, 30, default=25)",
+    "buy_adx": "IntParameter(20, 30, default=25)",
+    "sell_fastx": "IntParameter(70, 80, default=75)"
+  },
+  "effective_without_external_override": {
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 0,
+    "process_only_new_candles": true,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    },
+    "INTERFACE_VERSION": 3,
+    "buy_params": {
+      "buy_fastx": 25,
+      "buy_adx": 25
+    },
+    "sell_params": {
+      "sell_fastx": 75
+    },
+    "minimal_roi": {
+      "40": 0.05,
+      "30": 0.06,
+      "20": 0.07,
+      "0": 0.1
+    },
+    "stoploss": -0.25,
+    "timeframe": "5m"
+  },
+  "effective_hyperparameters": {
+    "buy_fastx": 25,
+    "buy_adx": 25,
+    "sell_fastx": 75
+  },
+  "signal_predicate_slices": {
+    "populate_entry_trend": [
+      "((dataframe['open'] < dataframe['ema_low']) & qtpylib.crossed_above(dataframe['fastk'], dataframe['fastd']) & (dataframe['fastk'] < self.buy_fastx.value) & (dataframe['fastd'] < self.buy_fastx.value) & (dataframe['adx'] > self.buy_adx.value), 'enter_long')"
+    ],
+    "populate_exit_trend": [
+      "((dataframe['open'] >= dataframe['ema_high']) | (qtpylib.crossed_above(dataframe['fastk'], self.sell_fastx.value) | qtpylib.crossed_above(dataframe['fastd'], self.sell_fastx.value)), 'exit_long')"
+    ]
+  },
+  "catalog_difference_and_boundaries": "Catalog Stoch(5,3,3) is imprecise; actual STOCHF extra args accepted by pinned binding, exactly fastK5/fastD3/SMA0. Params25/25/75, no search.",
+  "qa": {
+    "status": "PASS_NATIVE_METHODS_AND_CAUSALITY",
+    "synthetic_rows": 3000,
+    "entry_count": 6,
+    "exit_count": 779,
+    "collisions": 0,
+    "effective_params": {
+      "buy_fastx": 25,
+      "buy_adx": 25,
+      "sell_fastx": 75
+    },
+    "prefix_checks": 3,
+    "future_checks": 3,
+    "extra": {
+      "STOCHF_extra_positional_args": "accepted by pinned TA-Lib; equivalent to fastK5/fastD3/SMA0, independent rolling formula PASS"
+    },
+    "timing": {
+      "wall_s": 0.045692030998907285,
+      "cpu_s": 0.045694396000000026,
+      "max_rss_kib": 78476
+    }
+  },
+  "predicate_fixture_qa": null,
+  "shared_defaults_source": {
+    "engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+    "interface_sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "resolver_sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3"
+  },
+  "runtime": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4",
+    "technical_commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "qtpylib_sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+  },
+  "limitations": [
+    "Native class methods with import shim; not full Freqtrade engine.",
+    "Advanced TA numerics not independently reimplemented except Cofi STOCHF rolling formula.",
+    "External config/sidecar/runtime/universe unknown; absent external overrides is explicit research hypothesis.",
+    "C0 must freeze cost/position/input hash/lag and rawopen proxy before historical returns; no native limitfill equivalence.",
+    "Signal collision/profitgate/stopROI semantics belong to frozen v1 account; no account runs here."
+  ],
+  "historical_runs": 0,
+  "market_requests": 0
+}

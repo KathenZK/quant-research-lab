@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": {
+    "help": "PASS",
+    "wrong_manifest_hash_rejected": "PASS",
+    "missing_input_rejected": "PASS",
+    "real_pinned_inputs_sources_dependencies_preflight": "PASS",
+    "M0311_existing_fresh_restore_expected_hashes": "PASS",
+    "M0302_existing_fresh_restore_expected_hashes": "PASS",
+    "M0305_existing_fresh_restore_expected_hashes": "PASS",
+    "M0306_existing_fresh_restore_expected_hashes": "PASS",
+    "M0307_existing_fresh_restore_expected_hashes": "PASS",
+    "M0300_existing_fresh_restore_expected_hashes": "PASS"
+  },
+  "expected_result_files": 88,
+  "new_engine_runs": 0,
+  "new_input_QA_reconstructions": 0,
+  "new_market_requests": 0,
+  "new_dependency_installations": 0,
+  "remote_backup_verified": false,
+  "wrapper_end_to_end_replay_executed": false,
+  "limitation": "Wrapper preflight/rejection verified; replay legs reuse frozen entrypoints and prior fresh-restore bytes, not a new full wrapper run.",
+  "wrapper_sha256": "245fdeef8ace65b283e577dd138e1d255b28e6475582ad1962f1d50e6da5a49c",
+  "expectations_sha256": "b866eeb14398b8bad3de1e39decf6336bcd4244d9441373dcb573ae3c279938d"
+}

@@ -1,0 +1,199 @@
+{
+  "record_id": "M0304",
+  "name": "Strategy002",
+  "origin_run_id": "M0304-20261003-calendar2024-v1",
+  "variant_id": "M0304-BTCUSDT-5M-STRATEGY002-LIMIT-20261003",
+  "family": "PUBLIC-M0304-STRATEGY002",
+  "status": "DIAGNOSTIC_EXECUTED_AND_INDEPENDENTLY_AUDITED",
+  "fidelity_class": "HYPOTHESIS",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "trusted": false,
+  "strict_reproductions": 0,
+  "strategy_configurations": 4,
+  "same_window_controls": 1,
+  "parameter_searches": 0,
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy002.py",
+  "source_sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+  "protocol_sha256": "49d74d0aa83d34c24c980264d66eedeb1f2a630645b1e43e0767684d186c2083",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "engine_sha256": "525be5ffa69a6c4977286e48bf8acaf897ce059fd26d4737728c494b6ca57818",
+  "provenance": {
+    "catalog_master_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "catalog_csv_line_including_header": 305,
+    "fixed_lab_commit": "48851ef54b5fba6fef1da6825983864e1665fe1e"
+  },
+  "method": "Frozen native5m RSI/Stoch/BB/Hammer long-entry, SAR/Fisher fee-aware signal exits, fixed ROI/stop, assumed limit GTC300seconds O-L-H-C, 95%budget, 4cases+1buyhold",
+  "metrics": {
+    "base": {
+      "case": {
+        "name": "base",
+        "fee_bps_per_side": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.021551216376964444,
+        "annualized_return": -0.02149297064765232,
+        "max_drawdown": 0.12874646761748643,
+        "sharpe_daily": -0.1627461423677425,
+        "sharpe_5m": -0.09716725192228108,
+        "final_equity": 97844.87836230356,
+        "final_cash": 97844.87836230356,
+        "final_quantity": 0.0,
+        "fees_paid": 3625.981706819731,
+        "fill_events": 48,
+        "completed_roundtrips": 24,
+        "winning_roundtrip_fraction": 0.9583333333333334,
+        "orders": 43,
+        "timeout_orders": 1,
+        "terminal_cancelled_orders": 0,
+        "position_bar_fraction": 0.07839063448694596,
+        "observations": 105408,
+        "daily_observations": 366,
+        "signal_exit_gate_checks": 581,
+        "signal_exit_gate_denials": 563,
+        "range_stop_roi_ambiguous_bars": 0,
+        "trailing_activations": 0
+      }
+    },
+    "fee0": {
+      "case": {
+        "name": "fee0",
+        "fee_bps_per_side": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.014181467868092712,
+        "annualized_return": -0.014142995991455298,
+        "max_drawdown": 0.12722585021514776,
+        "sharpe_daily": -0.08996792137919356,
+        "sharpe_5m": -0.04382628117258712,
+        "final_equity": 98581.85321319073,
+        "final_cash": 98581.85321319073,
+        "final_quantity": 0.0,
+        "fees_paid": 0.0,
+        "fill_events": 48,
+        "completed_roundtrips": 24,
+        "winning_roundtrip_fraction": 0.9583333333333334,
+        "orders": 42,
+        "timeout_orders": 1,
+        "terminal_cancelled_orders": 0,
+        "position_bar_fraction": 0.07548762902246509,
+        "observations": 105408,
+        "daily_observations": 366,
+        "signal_exit_gate_checks": 562,
+        "signal_exit_gate_denials": 545,
+        "range_stop_roi_ambiguous_bars": 0,
+        "trailing_activations": 0
+      }
+    },
+    "fee20": {
+      "case": {
+        "name": "fee20",
+        "fee_bps_per_side": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "total_return": -0.11282709568666838,
+        "annualized_return": -0.11253686176104694,
+        "max_drawdown": 0.20631823291380136,
+        "sharpe_daily": -0.8033165426745276,
+        "sharpe_5m": -0.597841162376626,
+        "final_equity": 88717.29043133317,
+        "final_cash": 88717.29043133317,
+        "final_quantity": 0.0,
+        "fees_paid": 7763.223990083399,
+        "fill_events": 44,
+        "completed_roundtrips": 22,
+        "winning_roundtrip_fraction": 0.9090909090909091,
+        "orders": 36,
+        "timeout_orders": 1,
+        "terminal_cancelled_orders": 0,
+        "position_bar_fraction": 0.13761763812993322,
+        "observations": 105408,
+        "daily_observations": 366,
+        "signal_exit_gate_checks": 1088,
+        "signal_exit_gate_denials": 1075,
+        "range_stop_roi_ambiguous_bars": 0,
+        "trailing_activations": 0
+      }
+    },
+    "delay2": {
+      "case": {
+        "name": "delay2",
+        "fee_bps_per_side": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "total_return": -0.055270635059585294,
+        "annualized_return": -0.05512386336309949,
+        "max_drawdown": 0.13726824545489213,
+        "sharpe_daily": -0.5778240674199329,
+        "sharpe_5m": -0.4091898812319075,
+        "final_equity": 94472.93649404147,
+        "final_cash": 94472.93649404147,
+        "final_quantity": 0.0,
+        "fees_paid": 2223.4389691374718,
+        "fill_events": 30,
+        "completed_roundtrips": 15,
+        "winning_roundtrip_fraction": 0.9333333333333333,
+        "orders": 43,
+        "timeout_orders": 15,
+        "terminal_cancelled_orders": 0,
+        "position_bar_fraction": 0.06071645415907711,
+        "observations": 105408,
+        "daily_observations": 366,
+        "signal_exit_gate_checks": 463,
+        "signal_exit_gate_denials": 446,
+        "range_stop_roi_ambiguous_bars": 0,
+        "trailing_activations": 0
+      }
+    },
+    "buyhold": {
+      "case": {
+        "name": "buyhold",
+        "fee_bps_per_side": 8,
+        "delay_bars": 1,
+        "buy_hold": true
+      },
+      "metrics": {
+        "total_return": 1.1503041230956876,
+        "annualized_return": 1.1458107566464215,
+        "max_drawdown": 0.32021064669603316,
+        "sharpe_daily": 1.7447213326802145,
+        "sharpe_5m": 1.7319656438320898,
+        "final_equity": 215030.41230956875,
+        "final_cash": 5000.0,
+        "final_quantity": 2.2444901717274597,
+        "fees_paid": 75.9392486011191,
+        "fill_events": 1,
+        "completed_roundtrips": 0,
+        "winning_roundtrip_fraction": null,
+        "orders": 1,
+        "timeout_orders": 0,
+        "terminal_cancelled_orders": 0,
+        "position_bar_fraction": 1.0,
+        "observations": 105408,
+        "daily_observations": 366,
+        "signal_exit_gate_checks": 0,
+        "signal_exit_gate_denials": 0,
+        "range_stop_roi_ambiguous_bars": 0,
+        "trailing_activations": 0
+      }
+    }
+  },
+  "audit": {
+    "independent_actual_ledger": "PASS171fills/527040marks",
+    "clean_recovery": "PASS22files",
+    "source": "PASS_hash_bytes_AST_only",
+    "strict_runtime_reproduction": false
+  },
+  "limitations": [
+    "Calendar2024 availability-selected;notOOS",
+    "Original author universe/cost/runtime unknown",
+    "No historicalPIT/finality/tradability proof",
+    "No performance-driven new config or promotion"
+  ],
+  "graph_detail_public": false,
+  "graph_imported": false,
+  "runner_handoff": false
+}

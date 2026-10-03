@@ -1,0 +1,187 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T14:30:39.200930+00:00",
+  "coordinator": "Codex root only",
+  "batch": "011",
+  "checkpoint": 1,
+  "new_accepted_ids": [
+    "M0298",
+    "M0304"
+  ],
+  "source_implementation_commit": "1f0d1e1f0038d293a89d3ef4402a99c46811b9f4",
+  "newly_accepted_frozen_strategy_configurations": 8,
+  "newly_accepted_original_control_runs": 2,
+  "QA_replay_is_not_a_new_research_trial": true,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304"
+  ],
+  "cumulative_strategy_configurations": 99,
+  "cumulative_controls": 20,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "independent_qa": {
+    "receipt_sha256": "60ee2e48d949575e47315c22a31971a852b56c18d01beddfe218e86a8d96c0e8",
+    "status": "ACCEPTED_PUBLIC_AND_RECONSTRUCTED_FINANCIAL_EVIDENCE_WITH_PRIVATE_ARCHIVE_SCOPE_LIMIT",
+    "native_account_states": 1054080,
+    "trade_events": 1999,
+    "public_files": 135,
+    "public_bytes": 754237,
+    "source_rows_checked_per_id": 114336,
+    "root_recovery_replays": 2,
+    "deterministic_outputs": "M0298 31 files exact plus summary equal excluding RSS; M0304 21 files exact plus summary equal excluding RSS",
+    "absolute_tolerance": 0,
+    "relative_tolerance": 1e-09,
+    "expected_zero_exact": true,
+    "original_private_zip_root_materialized": false,
+    "original_private_zip_verification": "Parent-confirmed only; separate from actual root financial replay and ledger verification"
+  },
+  "results": {
+    "M0298": {
+      "fidelity": "HYPOTHESIS",
+      "quality": "DIAGNOSTIC_ONLY",
+      "promotion": false,
+      "cases": {
+        "base": {
+          "total_return": 0.31511527478411216,
+          "final_equity": 131511.5274784112,
+          "max_drawdown": -0.3967951299196397,
+          "sharpe_daily": 0.8251191958182915
+        },
+        "fee0": {
+          "total_return": 0.9618011394153363,
+          "final_equity": 196180.11394153364,
+          "max_drawdown": -0.32023123872196035,
+          "sharpe_daily": 1.6662658575776426
+        },
+        "fee20": {
+          "total_return": -0.13159329969599143,
+          "final_equity": 86840.67003040086,
+          "max_drawdown": -0.5171812679919066,
+          "sharpe_daily": -0.0943410604705404
+        },
+        "delay2": {
+          "total_return": 0.18371830548438162,
+          "final_equity": 118371.83054843817,
+          "max_drawdown": -0.4331886015119504,
+          "sharpe_daily": 0.5932787877659706
+        },
+        "buyhold": {
+          "total_return": 1.1503044588086349,
+          "final_equity": 215030.44588086347,
+          "max_drawdown": -0.3202106481991178,
+          "sharpe_daily": 1.7447216008740658
+        }
+      }
+    },
+    "M0304": {
+      "fidelity": "HYPOTHESIS",
+      "quality": "DIAGNOSTIC_ONLY",
+      "promotion": false,
+      "cases": {
+        "base": {
+          "total_return": -0.021551216376964444,
+          "final_equity": 97844.87836230356,
+          "max_drawdown": 0.12874646761748643,
+          "sharpe_daily": -0.1627461423677425
+        },
+        "fee0": {
+          "total_return": -0.014181467868092712,
+          "final_equity": 98581.85321319073,
+          "max_drawdown": 0.12722585021514776,
+          "sharpe_daily": -0.08996792137919356
+        },
+        "fee20": {
+          "total_return": -0.11282709568666838,
+          "final_equity": 88717.29043133317,
+          "max_drawdown": 0.20631823291380136,
+          "sharpe_daily": -0.8033165426745276
+        },
+        "delay2": {
+          "total_return": -0.055270635059585294,
+          "final_equity": 94472.93649404147,
+          "max_drawdown": 0.13726824545489213,
+          "sharpe_daily": -0.5778240674199329
+        },
+        "buyhold": {
+          "total_return": 1.1503041230956876,
+          "final_equity": 215030.41230956875,
+          "max_drawdown": 0.32021064669603316,
+          "sharpe_daily": 1.7447213326802145
+        }
+      }
+    }
+  },
+  "root_batch011": {
+    "ids": [
+      "M0260",
+      "M0265",
+      "M0282",
+      "M0283"
+    ],
+    "status": "16_CONFIGURATIONS_EXECUTED_PENDING_FINAL_INDEPENDENT_ACCEPTANCE",
+    "source_freeze_commit": "782bb93874bc529059d8cd28bbd0d803cef4a164",
+    "result_commit": "81823be8f4de657cdf8047fbbda992b06fc93b73",
+    "new_controls": 0,
+    "accepted_count_added_here": 0
+  },
+  "dot_batch006": {
+    "ids": [
+      "M0253",
+      "M0272",
+      "M0264",
+      "M0266"
+    ],
+    "status": "Parent reports 16 configurations executed after capture addendum and C0; independent QA and private recovery pending",
+    "accepted_count_added_here": 0
+  },
+  "graph_directory": {
+    "main_commit": "cabfc9dc07b83359b0ccfe1e79a11c7b91757133",
+    "records": 200,
+    "strategy_candidates": 171,
+    "factor_candidates": 12,
+    "unclassified": 17,
+    "new_backtests": 0,
+    "six_push_pr_main_CI_checks": "SUCCESS",
+    "delivered_files": 108,
+    "delivered_bytes": 556302,
+    "site_update": false
+  },
+  "backups": {
+    "batch009_six_id_private_archive": "Local CRC/hash/recovery validated; root Library HTTP401 unresolved",
+    "batch011_private_archive": "In preparation and independent QA; no remote save claimed",
+    "current_standard_Library_helpers": "Refreshed and byte-identical to prior failed route; no authorization-repair evidence and no repeated upload",
+    "public_code_remote": "Approved source/results are separately saved in Git; they do not replace a complete private Library backup"
+  },
+  "limitations": "Single availability-selected BTCUSDT spot 2024 diagnostic window, previously exposed; execution assumptions differ between dot004 and root native5m v1. No OOS, PIT, original-author runtime, strict reproduction, promotion or Site activation claim."
+}

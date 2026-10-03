@@ -1,0 +1,68 @@
+{
+  "run": {
+    "stage": "M0265-run",
+    "start_utc": "2026-10-03T14:21:43.754742+00:00",
+    "end_utc": "2026-10-03T14:21:58.415484+00:00",
+    "wall_seconds": 14.660752907999267,
+    "cpu_user_seconds": 14.24002,
+    "cpu_system_seconds": 0.416742,
+    "peak_child_rss_kib": 601056,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0265-source",
+    "start_utc": "2026-10-03T14:21:58.443991+00:00",
+    "end_utc": "2026-10-03T14:22:00.952029+00:00",
+    "wall_seconds": 2.5080497800008743,
+    "cpu_user_seconds": 2.302877,
+    "cpu_system_seconds": 0.201642,
+    "peak_child_rss_kib": 389120,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0265-oracle",
+    "start_utc": "2026-10-03T14:22:00.980375+00:00",
+    "end_utc": "2026-10-03T14:22:08.175746+00:00",
+    "wall_seconds": 7.195382427998993,
+    "cpu_user_seconds": 6.809404,
+    "cpu_system_seconds": 0.381861,
+    "peak_child_rss_kib": 737212,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "event": {
+    "stage": "M0265-event",
+    "start_utc": "2026-10-03T14:22:08.211351+00:00",
+    "end_utc": "2026-10-03T14:22:08.852544+00:00",
+    "wall_seconds": 0.6411997800023528,
+    "cpu_user_seconds": 0.5654819999999999,
+    "cpu_system_seconds": 0.07522,
+    "peak_child_rss_kib": 207744,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0265-prefix",
+    "start_utc": "2026-10-03T14:22:08.884015+00:00",
+    "end_utc": "2026-10-03T14:22:21.203700+00:00",
+    "wall_seconds": 12.319693097000709,
+    "cpu_user_seconds": 11.676431000000001,
+    "cpu_system_seconds": 0.6379929999999999,
+    "peak_child_rss_kib": 577000,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0265-restore",
+    "start_utc": "2026-10-03T14:25:01.587694+00:00",
+    "end_utc": "2026-10-03T14:25:15.455170+00:00",
+    "wall_seconds": 13.867484253001749,
+    "cpu_user_seconds": 13.522479,
+    "cpu_system_seconds": 0.337234,
+    "peak_child_rss_kib": 600740,
+    "exit_code": 0,
+    "threads": 1
+  }
+}

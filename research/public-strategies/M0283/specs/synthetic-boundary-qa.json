@@ -1,0 +1,17 @@
+{
+  "id": "M0283",
+  "status": "PASS",
+  "checks": {
+    "status": "PASS",
+    "rows": 6,
+    "entry_true": 1,
+    "exit_true": 1,
+    "actual_hyper_params": {}
+  },
+  "qtpylib_reexport_chain": {
+    "engine-qtpylib-indicators.py": "c040927436bb510e2091a7bb7f6e51f25135292bf2e0d995fa344871f0d505a9",
+    "technical-qtpylib.py": "8876ecab2d3b7314d2d83db9bd9b4839eb3b86c6b74cf53291a15a5b7f215e6c",
+    "technical-technical__vendor__qtpylib__indicators.py": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+  },
+  "historical_runs": 0
+}

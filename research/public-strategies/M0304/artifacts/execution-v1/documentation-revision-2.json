@@ -1,0 +1,11 @@
+{
+  "status": "DOCUMENTATION_TIME_CONTEXT_ONLY",
+  "at_utc": "2026-10-03T13:06:14.401420+00:00",
+  "reason": "Clearly scope old403 and zero-run statements to historical12:25 preparation; link completed execution/recovery.",
+  "old_document_sha256": "3f2e1a73fb07c50d89b3874ad4202e2191384a05b6786163a4a1bee4778837f0",
+  "new_document_sha256": "7272db44a43b4819332d8e275597bf1b58202fe1f569662430024cea4e62e018",
+  "old_public_manifest_sha256": "7ee040e1a30c6c2702465958fbb98b458e7e469b69b91240df438f7a98f4c5e1",
+  "original_document_bytes_preserved_at": "diagnostics/history/preparation-v2/recovery.md",
+  "frozen_C0_code_data_outputs_unchanged": true,
+  "new_experiments": 0
+}

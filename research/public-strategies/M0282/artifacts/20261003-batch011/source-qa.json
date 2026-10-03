@@ -1,0 +1,27 @@
+{
+  "id": "M0282",
+  "status": "PASS",
+  "rows": 114336,
+  "native_class_actual_parameter_load": true,
+  "independent_Boolean_formulas_equal": true,
+  "advanced_TA_indicator_independence": "Pinned TA-Lib/native indicator implementations; not independently reimplemented",
+  "source_sha256": "80ce71ddb59191921e6dcd08101418f11e0d76d7b61471479ee5617605d22d55",
+  "loaded_parameters": {
+    "buy_cci": -48,
+    "sell_cci": 687
+  },
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "engine_fills_reproduced": false
+}

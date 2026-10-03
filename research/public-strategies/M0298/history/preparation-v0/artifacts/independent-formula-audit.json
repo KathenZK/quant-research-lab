@@ -1,0 +1,127 @@
+{
+  "schema": "batch004-independent-synthetic-formula-audit/v1",
+  "status": "PASS_SYNTHETIC_FORMULAS_ONLY",
+  "created_at_utc": "2026-10-03T12:23:45.827049+00:00",
+  "sources": [
+    {
+      "record_id": "M0298",
+      "sha256": "812a8d63b0e0ddff6b9bae582c4d573ab9a4ffec6dd0d1c5b8f8180f11db6d0b",
+      "bytes": 2695,
+      "class_attributes": {
+        "INTERFACE_VERSION": 3,
+        "minimal_roi": {
+          "0": 0.01
+        },
+        "stoploss": -0.25,
+        "timeframe": "5m"
+      },
+      "methods": [
+        "populate_indicators",
+        "populate_entry_trend",
+        "populate_exit_trend"
+      ],
+      "original_code_executed": false
+    },
+    {
+      "record_id": "M0304",
+      "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90",
+      "bytes": 4363,
+      "class_attributes": {
+        "INTERFACE_VERSION": 3,
+        "minimal_roi": {
+          "60": 0.01,
+          "30": 0.03,
+          "20": 0.04,
+          "0": 0.05
+        },
+        "stoploss": -0.1,
+        "timeframe": "5m",
+        "trailing_stop": false,
+        "trailing_stop_positive": 0.01,
+        "trailing_stop_positive_offset": 0.02,
+        "process_only_new_candles": true,
+        "use_exit_signal": true,
+        "exit_profit_only": true,
+        "ignore_roi_if_entry_signal": false,
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "market",
+          "stoploss_on_exchange": false
+        }
+      },
+      "methods": [
+        "informative_pairs",
+        "populate_indicators",
+        "populate_entry_trend",
+        "populate_exit_trend"
+      ],
+      "original_code_executed": false
+    }
+  ],
+  "synthetic_bars": 6000,
+  "seed": 202610034,
+  "max_abs_error": {
+    "macd": 0.0,
+    "macdsignal": 0.0,
+    "macdhist": 0.0,
+    "rsi7": 1.4210854715202004e-14,
+    "rsi14": 1.4210854715202004e-14,
+    "bb12_mid": 5.684341886080802e-14,
+    "bb12_low": 9.723066796141211e-11,
+    "bb12_high": 9.723066796141211e-11,
+    "bb20_low": 6.104983185650781e-11,
+    "slowk": 3.126388037344441e-13,
+    "slowd": 3.268496584496461e-13,
+    "sar": 0.0,
+    "CDLHAMMER": 0,
+    "fisher_rsi": 1.4259426972529354e-15,
+    "M0298_entry": 0,
+    "M0298_exit": 0,
+    "M0304_entry": 0,
+    "M0304_exit": 0
+  },
+  "prefixes_and_future_perturbations": [
+    {
+      "prefix_bars": 81,
+      "both_implementations_pass": true
+    },
+    {
+      "prefix_bars": 750,
+      "both_implementations_pass": true
+    },
+    {
+      "prefix_bars": 3000,
+      "both_implementations_pass": true
+    },
+    {
+      "prefix_bars": 4999,
+      "both_implementations_pass": true
+    }
+  ],
+  "synthetic_signal_counts": {
+    "M0298_entry": 635,
+    "M0298_exit": 143,
+    "M0304_entry": 36,
+    "M0304_exit": 432,
+    "M0298_collisions": 136
+  },
+  "libraries": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "talib_python": "0.6.8",
+    "talib_core": "0.6.4 (Oct 20 2025 20:23:51)"
+  },
+  "observations": [
+    "Independent scalar RSI7/14, aligned-seed MACD, sample-std/min_periods1 BB12/20, STOCH5/3/3, SAR and CDLHAMMER recurrences compared against installed libraries.",
+    "Exact source bytes verified and AST read only; original external code was never executed.",
+    "Causality tests provide empirical finite-fixture evidence, not a universal proof.",
+    "No history was loaded, no C0 or input QA approval granted, no execution engine or ledger audit asserted."
+  ],
+  "historical_strategy_runs": 0,
+  "historical_control_runs": 0,
+  "strict_reproductions": 0,
+  "fidelity_ceiling": "HYPOTHESIS",
+  "data_scope": "DIAGNOSTIC_ONLY"
+}

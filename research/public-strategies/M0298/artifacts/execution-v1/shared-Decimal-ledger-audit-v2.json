@@ -1,0 +1,479 @@
+{
+  "schema": "batch004-shared-independent-Decimal-ledger-oracle/v1",
+  "status": "PASS_SYNTHETIC_ALL_FILL_ALL_BAR_ACCOUNTING",
+  "at_utc": "2026-10-03T12:48:33.970136+00:00",
+  "checks": [
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 0,
+      "fills": 1,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "8.99504535868172231808595444959081E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 1,
+      "fills": 1,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "2.170829170829170829170829170829171E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 2,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.2357642357642357642357642357642358E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 3,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.6433566433566433566433566433566434E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 4,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "4.905094905094905094905094905094905E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 5,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "4.905094905094905094905094905094905E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 6,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "2.170829170829170829170829170829171E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 7,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "2.170829170829170829170829170829171E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 8,
+      "fills": 0,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 9,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.6043956043956043956043956043956044E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 10,
+      "fills": 0,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 11,
+      "fills": 1,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "2.170829170829170829170829170829171E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 12,
+      "fills": 1,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "8.99504535868172231808595444959081E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 13,
+      "fills": 1,
+      "bars": 4,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "4.905094905094905094905094905094905E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 14,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3.10017996400719856028794241151770E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 15,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.6043956043956043956043956043956044E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 16,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "7.876671323089203751746158451406905E-12"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 17,
+      "fills": 2,
+      "bars": 4,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.2357642357642357642357642357642358E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 18,
+      "fills": 0,
+      "bars": 800,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 19,
+      "fills": 0,
+      "bars": 150,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 20,
+      "fills": 0,
+      "bars": 800,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 21,
+      "fills": 0,
+      "bars": 450,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 22,
+      "fills": 0,
+      "bars": 800,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 23,
+      "fills": 0,
+      "bars": 700,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0298",
+      "fixture_or_causality_replay_index": 24,
+      "fills": 0,
+      "bars": 800,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "intrabar_entry_remainder_path_age_origin",
+      "fills": 1,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "favorable_open_limit_slip_capped",
+      "fills": 1,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "entry_timeout_no_implicit_rehang",
+      "fills": 0,
+      "bars": 3,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "terminal_pending_cancel",
+      "fills": 0,
+      "bars": 2,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "source_collision_suppression",
+      "fills": 0,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "0"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "fee_profit_gate_denied",
+      "fills": 1,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "fee_profit_gate_pass_can_fill_net_loss",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "samebar_entry_stop_before_roi",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "gap_stop_price_and_adverse_slip",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "trailing_disabled_despite_positive_offset",
+      "fills": 1,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "roi_boundary_20",
+      "fills": 2,
+      "bars": 16,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3.6E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "roi_boundary_30",
+      "fills": 2,
+      "bars": 16,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "roi_boundary_60",
+      "fills": 2,
+      "bars": 16,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "6.4E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "intrabar_roi_clock_not_aged_from_open",
+      "fills": 2,
+      "bars": 9,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3.6E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "entry_signal_does_not_suppress_roi",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "2.3800959232613908872901678657074341E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "ascending_roi_signal_roi",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3.6E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "ascending_roi_signal_exit_signal",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3.6E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "open_signal_priority_over_roi",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "3E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "pending_exit_cancelled_by_stop",
+      "fills": 2,
+      "bars": 8,
+      "completed_roundtrips": 1,
+      "max_abs_decimal_error": "8.381683049628386478062814672740350E-17"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "delay_two_bars_not_one",
+      "fills": 1,
+      "bars": 8,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "buyhold_market_fullbar_mdd_terminal_mark",
+      "fills": 1,
+      "bars": 3,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.9104716227018385291766586730615508E-11"
+    },
+    {
+      "record_id": "M0298",
+      "fixture": "auditor_dense_base",
+      "fills": 239,
+      "bars": 713,
+      "completed_roundtrips": 119,
+      "max_abs_decimal_error": "9.28204323288942061243967159367494418E-9"
+    },
+    {
+      "record_id": "M0298",
+      "fixture": "auditor_dense_fee0",
+      "fills": 243,
+      "bars": 713,
+      "completed_roundtrips": 121,
+      "max_abs_decimal_error": "3.41940889235314746907411980334544307E-9"
+    },
+    {
+      "record_id": "M0298",
+      "fixture": "auditor_dense_fee20",
+      "fills": 239,
+      "bars": 713,
+      "completed_roundtrips": 119,
+      "max_abs_decimal_error": "1.59094411726991741743975745572168803E-9"
+    },
+    {
+      "record_id": "M0298",
+      "fixture": "auditor_dense_delay2",
+      "fills": 236,
+      "bars": 713,
+      "completed_roundtrips": 118,
+      "max_abs_decimal_error": "7.56362175850819633727053626780388891E-9"
+    },
+    {
+      "record_id": "M0298",
+      "fixture": "auditor_dense_buyhold",
+      "fills": 1,
+      "bars": 713,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "2.4675707898592907928524791322135741E-11"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "auditor_dense_base",
+      "fills": 242,
+      "bars": 713,
+      "completed_roundtrips": 121,
+      "max_abs_decimal_error": "3.1112430803657842993208693990213173E-9"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "auditor_dense_fee0",
+      "fills": 244,
+      "bars": 713,
+      "completed_roundtrips": 122,
+      "max_abs_decimal_error": "2.5545287700047639368528182693812012E-9"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "auditor_dense_fee20",
+      "fills": 240,
+      "bars": 713,
+      "completed_roundtrips": 120,
+      "max_abs_decimal_error": "1.8741763320670797496161443027070810E-9"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "auditor_dense_delay2",
+      "fills": 223,
+      "bars": 713,
+      "completed_roundtrips": 111,
+      "max_abs_decimal_error": "1.4262600377643697876077251779804893E-9"
+    },
+    {
+      "record_id": "M0304",
+      "fixture": "auditor_dense_buyhold",
+      "fills": 1,
+      "bars": 713,
+      "completed_roundtrips": 0,
+      "max_abs_decimal_error": "1.7831436063306113969966238019581812E-11"
+    }
+  ],
+  "engine_sha256": {
+    "M0298": "4e960ad57b1cb0df643637321ec99d2ebe89846da8f3f13c46012c13fc5e12b6",
+    "M0304": "525be5ffa69a6c4977286e48bf8acaf897ce059fd26d4737728c494b6ca57818"
+  },
+  "total_fills": 1965,
+  "total_bar_marks": 11879,
+  "Decimal_precision": 50,
+  "absolute_tolerance": "2E-7",
+  "independent_quantity_reconstructed_from_pre_event_cash": true,
+  "auditor_dense_seed": 2026100342,
+  "auditor_dense_rows": 720,
+  "strategy_and_control_cases_per_id": 5,
+  "exact_bar_and_complete_fill_prefix_and_future_perturbation_comparisons": 30,
+  "recomputed": [
+    "every fill quantity/notional/fee/friction/cash/budget",
+    "every bar inventory/cash/equity/drawdown where present",
+    "terminal equity/return/fees and fullbar MDD",
+    "signal availability and limit price constraints",
+    "M0304 order status/expiry and strict fee-aware gates"
+  ],
+  "historical_strategy_runs": 0,
+  "historical_control_runs": 0,
+  "market_data_read": false,
+  "scope": "Independent normalized accounting and event invariants for both diagnostic ports. Execution-priority completeness additionally relies on reviewed synthetic fixtures and separate adversarial tests; this does not assert native Freqtrade equivalence."
+}

@@ -1,0 +1,250 @@
+{
+  "id": "M0265",
+  "revision": 3,
+  "created_at_utc": "2026-10-03T14:35:47.576582+00:00",
+  "files": [
+    {
+      "path": "research/public-strategies/M0265/ATTRIBUTION.md",
+      "bytes": 719,
+      "sha256": "99f6f1d0045cd4fdddebe1d4828cacb02c8b3d4dcb81e8684558e4d44582452e"
+    },
+    {
+      "path": "research/public-strategies/M0265/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "research/public-strategies/M0265/M0265-core-ledger.md",
+      "bytes": 466,
+      "sha256": "d601ad72fa2fd72e937ddde42dbde7f302091626eceae29754bb4373f95f1f16"
+    },
+    {
+      "path": "research/public-strategies/M0265/M0265.md",
+      "bytes": 9143,
+      "sha256": "977f5bb613c07c675b4178cf34f9c3e45a04bd49b6cf3f5b718d3508370bb6cb"
+    },
+    {
+      "path": "research/public-strategies/M0265/README.md",
+      "bytes": 344,
+      "sha256": "8cbb3d8b532590076f8485b35186468b1c7312d68310b34071379cbe2f586cf3"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/C0-freeze.json",
+      "bytes": 923,
+      "sha256": "3a32655dfab115a27f6a7728cad89615f75541e7236b5f9d3207dbd96dd5916d"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/base-nav-light.csv",
+      "bytes": 25094,
+      "sha256": "be4d4a856cabb057cea032a1b5e03a57ffb12413b9ef93c2e04ee1a36a2c47d4"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/delay2-nav-light.csv",
+      "bytes": 25147,
+      "sha256": "83db022febf8662099c83d55c05adcb6462857bde62cdc03dd9b9cba1d06eabb"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/revision-v3.json",
+      "bytes": 663,
+      "sha256": "bfdd5c8e52c37673f32087f3b2899455583b6d957cb3051297610ac52ba10d0a"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/M0265.md.snapshot",
+      "bytes": 8908,
+      "sha256": "33e1ccf8d92b9a01bef21d245514ba9f434540e9c9f724d63fee847644bc8948"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/documentation-history/v2/publication-manifest.json",
+      "bytes": 9727,
+      "sha256": "ce78676244208c4c412c2be87a25997e79dd1efb508745cfc42112e2007e90dc"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/event-qa.json",
+      "bytes": 604,
+      "sha256": "479529257b1c04837af1092c9614599abc51559d92b9dee258a0071f64d2e6fb"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/fee0-nav-light.csv",
+      "bytes": 25106,
+      "sha256": "ac91ee595c46f52bbe81e22b303acdb7d5dea9487a346e903b81e3b5e822d2ee"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/fee20-nav-light.csv",
+      "bytes": 25251,
+      "sha256": "f600db25f8b1cbd56964f8d1a706fb48451d024195afee5715cebb5e4cc63ccb"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/graph-projection-receipt-v2.json",
+      "bytes": 1419,
+      "sha256": "505caf4c0a29558fcc870a24fc6884530426b46b610bfef107c7a591afbf3ee1"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/graph-projection-receipt.json",
+      "bytes": 1419,
+      "sha256": "505caf4c0a29558fcc870a24fc6884530426b46b610bfef107c7a591afbf3ee1"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/graph-record.json",
+      "bytes": 4302,
+      "sha256": "861261ef6bd03eb22169b39b02f36a094909615a73d335b9fef51df9eda24c77"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/local-recovery.json",
+      "bytes": 2533,
+      "sha256": "c8516671e281f79f008b67dd3a8ee25808105650e6ecc47e91f121133f35c663"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/oracle-qa.json",
+      "bytes": 1594,
+      "sha256": "6d4e8b995bca098703e09685166654a2c3b36f188006292e3e9f3816c5ea0f7c"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/prefix-qa.json",
+      "bytes": 650,
+      "sha256": "bbb3f1a612d1f4aeacc3ea2896525e8cec02a0716c67b835420ce6bebdda7ec3"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/revision-log.json",
+      "bytes": 369,
+      "sha256": "c5f70a668512af49a0acf18fe550991e5ba26bed43a1a5863dfe6a2629f8f983"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/graph-projection-receipt.json",
+      "bytes": 235,
+      "sha256": "88460fa2b59a9691ce9ae5cf1ac60b90ba4812182cc43ce7eaf188378aece8aa"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/projection-history/v1/publication-manifest.json",
+      "bytes": 8660,
+      "sha256": "28ad7f0ac75c8fc5914633346c0a92a847036edbae5e7755fedfd26eb279844b"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/result-manifest.json",
+      "bytes": 3993,
+      "sha256": "621b41de3d513aaf9259c08f669e871ae7399e13a0740140a8b15244b7284ee7"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/results/base-trades-sample.csv",
+      "bytes": 11966,
+      "sha256": "c8560b6f2914fc3e4569465215d025bbfe97a1c383fec5717ce0ff741b0935ca"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/results/delay2-trades-sample.csv",
+      "bytes": 12004,
+      "sha256": "4a68cc4d490743a6a70183633228bc01c2e6f375f3e2cf72e221f0fa69736276"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/results/fee0-trades-sample.csv",
+      "bytes": 11281,
+      "sha256": "7f6f43b3b7b4b48e1525f5222ac21f70ff26e5192c37054730ffbf4a213ac236"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/results/fee20-trades-sample.csv",
+      "bytes": 12002,
+      "sha256": "08dfc9064fe0dfd04b4c3f03099fc4ac39c0f07f85357a3918a88bdca6ab2262"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/results/summary.json",
+      "bytes": 6963,
+      "sha256": "262a6459a5da4d9e679caa3b16cb1b71e8f82db7e53f5f77952199f29e1ebd39"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/source-qa.json",
+      "bytes": 773,
+      "sha256": "7ca0415fc58524188e0f726c60a3e11f0cfc3b35af31b24f4e0f0022c0857ccb"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/stage-timing.json",
+      "bytes": 2024,
+      "sha256": "c0f412c4e87f17a36bc9e556014017eba190ca710eb8481f1472adb0f9752076"
+    },
+    {
+      "path": "research/public-strategies/M0265/artifacts/20261003-batch011/trade-sample-manifest.json",
+      "bytes": 890,
+      "sha256": "66868becf6fac1872a84d83cf9c942d89e4ce5730b3e801fecc7d9c968e5ebab"
+    },
+    {
+      "path": "research/public-strategies/M0265/decision-log.md",
+      "bytes": 574,
+      "sha256": "3d98ec183d846eedfc6f299395b024ddf2a6cb340f883b9211c217bf18b5f051"
+    },
+    {
+      "path": "research/public-strategies/M0265/scripts/README.md",
+      "bytes": 1661,
+      "sha256": "bf17ed395e5cf729fb3d61671dea589bcce65f6c4db93ecd919d8783be160e11"
+    },
+    {
+      "path": "research/public-strategies/M0265/scripts/adapter.py",
+      "bytes": 628,
+      "sha256": "d13e2f7d9bbe545524d26794137ad5a527d8002169ada7c1c9152b0b678487a0"
+    },
+    {
+      "path": "research/public-strategies/M0265/scripts/audit_execution.py",
+      "bytes": 4619,
+      "sha256": "a7588f2873d4c68f7fb0acbb72f7375740c515b13c7fb8f12c8a419d574e4a52"
+    },
+    {
+      "path": "research/public-strategies/M0265/scripts/run.py",
+      "bytes": 655,
+      "sha256": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/audit-execution-synthetic.json",
+      "bytes": 722,
+      "sha256": "6e57efe304393b264df08acdac79f9da165f80dcd631a087a71f295e56b6d322"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/catalog-original-fields.json",
+      "bytes": 873,
+      "sha256": "334aed816cb6ac73e6e4d6293cc712e43f76dba384f9cae5c05e4d24c43fcb18"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/environment.json",
+      "bytes": 351,
+      "sha256": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/independent-source-review.json",
+      "bytes": 559,
+      "sha256": "ad1442dbad762126749551e90be74953e6db530f9cd0a80c69c5e4f3f0ca00c2"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/protocol-draft.json",
+      "bytes": 11566,
+      "sha256": "ed34fb35dbfe1c08692399e012a8b4be9fee7736acc8ef419b8cbe1a4bc82417"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/protocol.json",
+      "bytes": 13912,
+      "sha256": "b5fcc1c0c1058c567d49d833fd7e05ce0e0441ba14163a8e4afc2f1682353631"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/requirements.lock.txt",
+      "bytes": 1562,
+      "sha256": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/shared-input-qa.json",
+      "bytes": 2582,
+      "sha256": "e29f4fa8de0be72a1b8341177acc3422142540f06d94b79c902294dc78d720ad"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/source-rule-card.json",
+      "bytes": 4962,
+      "sha256": "71ec4ce7910d9d7349a7f1c504ffac2c1bacf3ef54367f68feaaa67d8f64df7f"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/synthetic-boundary-qa.json",
+      "bytes": 665,
+      "sha256": "fc58ed7480098d6433d464acbe7d44b488598d7f94e71f5f30771dbe33af6f2d"
+    },
+    {
+      "path": "research/public-strategies/M0265/specs/synthetic-source-qa.json",
+      "bytes": 444,
+      "sha256": "0419d5f668b1974283ccbf855ae44cbb8f95fcbdf2288bbc681f9a4799ac1b6d"
+    }
+  ],
+  "self_excluded": true,
+  "history": "Projectionv1 and documentationv2 original bytes preserved inside ID tree and earlier commits",
+  "public_boundary": "Reviewed code/protocol/source fields, derived daily NAV/summary/samples only; no raw market/full ledger/Library IDs/private read fingerprints"
+}

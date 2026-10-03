@@ -1,0 +1,141 @@
+{
+  "status": "PASS_SYNTHETIC_ENGINE_ONLY",
+  "fixtures": [
+    {
+      "fixture": "open_entry_price_improvement",
+      "bars": 4,
+      "fills": 1,
+      "orders": 1,
+      "Decimal_max_error": 8.995045358681722e-12
+    },
+    {
+      "fixture": "intrabar_entry_suppresses_same_bar_ROI",
+      "bars": 4,
+      "fills": 1,
+      "orders": 1,
+      "Decimal_max_error": 2.1708291708291708e-11
+    },
+    {
+      "fixture": "entry_open_stop_before_ROI",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 1.2357642357642358e-11
+    },
+    {
+      "fixture": "held_stop_gap_before_all_intrabar_exits",
+      "bars": 4,
+      "fills": 2,
+      "orders": 2,
+      "Decimal_max_error": 1.2867132867132868e-11
+    },
+    {
+      "fixture": "open_signal_before_ROI_gap_and_future_stop",
+      "bars": 4,
+      "fills": 2,
+      "orders": 2,
+      "Decimal_max_error": 4.905094905094905e-12
+    },
+    {
+      "fixture": "known_ROI_gap_before_intrabar_stop",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 4.905094905094905e-12
+    },
+    {
+      "fixture": "intrabar_stop_before_signal_and_ROI",
+      "bars": 4,
+      "fills": 2,
+      "orders": 2,
+      "Decimal_max_error": 2.1708291708291708e-11
+    },
+    {
+      "fixture": "intrabar_signal_before_ROI",
+      "bars": 4,
+      "fills": 2,
+      "orders": 2,
+      "Decimal_max_error": 2.1708291708291708e-11
+    },
+    {
+      "fixture": "collision_suppresses_flat_entry",
+      "bars": 4,
+      "fills": 0,
+      "orders": 0,
+      "Decimal_max_error": 0.0
+    },
+    {
+      "fixture": "collision_suppresses_signal_exit_but_ROI_remains",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 1.2087912087912089e-11
+    },
+    {
+      "fixture": "entry_timeout_no_carryover",
+      "bars": 4,
+      "fills": 0,
+      "orders": 1,
+      "Decimal_max_error": 0.0
+    },
+    {
+      "fixture": "exit_timeout_no_carryover_position_marked",
+      "bars": 4,
+      "fills": 1,
+      "orders": 2,
+      "Decimal_max_error": 2.1708291708291708e-11
+    },
+    {
+      "fixture": "lag2_uses_original_signal_close",
+      "bars": 4,
+      "fills": 1,
+      "orders": 1,
+      "Decimal_max_error": 8.995045358681722e-12
+    },
+    {
+      "fixture": "buyhold_ignores_signals_ROI_and_stop",
+      "bars": 4,
+      "fills": 1,
+      "orders": 0,
+      "Decimal_max_error": 4.905094905094905e-12
+    },
+    {
+      "fixture": "ROI_net1pct_fee_0",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 3.1001799640071984e-12
+    },
+    {
+      "fixture": "ROI_net1pct_fee_8",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 1.2087912087912089e-11
+    },
+    {
+      "fixture": "ROI_net1pct_fee_20",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 5.753342646178407e-12
+    },
+    {
+      "fixture": "intrabar_entry_can_stop_same_bar",
+      "bars": 4,
+      "fills": 2,
+      "orders": 1,
+      "Decimal_max_error": 1.2357642357642358e-11
+    }
+  ],
+  "causal_equity_prefixes": [
+    200,
+    500,
+    750
+  ],
+  "future_perturbations_pass": true,
+  "historical_runs": 0,
+  "market_data_read": false,
+  "execution_model": "declared diagnostic port; no original framework engine equivalence",
+  "peak_rss_bytes": 77746176
+}

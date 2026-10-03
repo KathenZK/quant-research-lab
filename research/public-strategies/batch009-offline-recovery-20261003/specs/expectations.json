@@ -1,0 +1,777 @@
+{
+  "schema": "batch009-offline-recovery-expectations/v1",
+  "base_commit": "eca7ad8e41d4b8aa4d3fd18bced178f2e5f45530",
+  "ids": {
+    "M0311": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "sha256": "71b43eedc80090630a8ba068fa0f0bb64f18ed83eca0e8890ad609caa4078b8f",
+          "bytes": 53410
+        },
+        "base-nav-light.csv": {
+          "sha256": "71b43eedc80090630a8ba068fa0f0bb64f18ed83eca0e8890ad609caa4078b8f",
+          "bytes": 53410
+        },
+        "base-nav.csv": {
+          "sha256": "3e008d22ef1e58a501dce36c044a1ef2c89f8e9391bb060500fabd9918f7fdc5",
+          "bytes": 14165655
+        },
+        "base-trades.csv": {
+          "sha256": "ede5ccea774d6f017e37cb7c8058fdfeb375a9429b2cc86be866c1e23cb5f727",
+          "bytes": 3388955
+        },
+        "buyhold-daily-nav.csv": {
+          "sha256": "9468f43f3dac773b5ebc82899ca8d9dcfcfb49f82a4b1a9ca566d6ac72e44454",
+          "bytes": 50584
+        },
+        "buyhold-nav.csv": {
+          "sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+          "bytes": 13304577
+        },
+        "buyhold-trades.csv": {
+          "sha256": "b841336ee461cc6fcf3655705bee68f09737a31ff9eb24f147d85498892369f1",
+          "bytes": 493
+        },
+        "delay2-daily-nav.csv": {
+          "sha256": "aaf724587752b729c1738ae4334267eae336843e54a8dd8a0ac1403426c57ed9",
+          "bytes": 53344
+        },
+        "delay2-nav.csv": {
+          "sha256": "73f0ebf31a7ce4b9edbd4530d1c726008d393095e4243e374d7f132dd277bb4b",
+          "bytes": 14171152
+        },
+        "delay2-trades.csv": {
+          "sha256": "28633e9ba4faba87bc2d2d62c5413f03821891f9b55a7474cd9715fa4e5ab7c0",
+          "bytes": 3407037
+        },
+        "fee0-daily-nav.csv": {
+          "sha256": "c01b707b5a020b6b886c148f2f493f5dfa211236958dc11c1e9769d65491c7ca",
+          "bytes": 52570
+        },
+        "fee0-nav.csv": {
+          "sha256": "5189aad2cf7b13dc55a3249de236fa4cc5a178c556839fa0535bbee19f9d1938",
+          "bytes": 13901837
+        },
+        "fee0-trades.csv": {
+          "sha256": "13b2ff35b32402a260f81bb45351afe3eee570781fb47e0215332aebf3cd3c53",
+          "bytes": 3163757
+        },
+        "fee20-daily-nav.csv": {
+          "sha256": "9917372a12f5a665df4b4845ec94b8512d8c855ecdb16c0333a8907a572b23b2",
+          "bytes": 54946
+        },
+        "fee20-nav.csv": {
+          "sha256": "c482909b452c2cb6413e2db090267f7f108fbc7a3dcaab9956645fc60660e1e4",
+          "bytes": 14607256
+        },
+        "fee20-trades.csv": {
+          "sha256": "c502d629dde8424bb1d32c09ccd141ddb477c9818fba87e00dc73dc224dba2b7",
+          "bytes": 3443784
+        },
+        "signals.csv": {
+          "sha256": "f04af48b1149f0d05bc42273b8d43635787c449ceaeb482e09ecc20860fe7931",
+          "bytes": 4442364
+        },
+        "summary.json": {
+          "sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+          "bytes": 5708
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0311/artifacts/20261003-first-replay/local-recovery.json",
+      "prior_recovery_sha256": "cfeede45f0c9e19aa6e11d271a04f002db2e77c3c10af0e9cec5742b7d8963b6"
+    },
+    "M0302": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "bytes": 54515,
+          "sha256": "c0ad96e7d62c53c73c6d36ed5e743a99b84abf777d6b1fdefbc23833347a359e"
+        },
+        "base-nav.csv": {
+          "bytes": 14473638,
+          "sha256": "8049262b75c0c63600fafc3745cefaa6cab7fce52b7845fa3b8ad787c1f7a162"
+        },
+        "base-trades.csv": {
+          "bytes": 91619,
+          "sha256": "889932b7797456573eabb5d09b787ef58beae42459a55a6c01596f4ceac21e66"
+        },
+        "delay2-daily-nav.csv": {
+          "bytes": 54483,
+          "sha256": "1fd2e8a5d1170c476ad9baf1ff59bbbf74f2f10f4490e8b46f0d91e6caef90f6"
+        },
+        "delay2-nav.csv": {
+          "bytes": 14458997,
+          "sha256": "0c42d254721ee8bd25c7f4cc0b096d0a4cfc23b38554b4a515fc70c2d68beae8"
+        },
+        "delay2-trades.csv": {
+          "bytes": 96104,
+          "sha256": "c3ec193fe3d63a98a4a03cd56ed06328df811663baa7943db185109f3603958b"
+        },
+        "fee0-daily-nav.csv": {
+          "bytes": 54070,
+          "sha256": "8cfab24aeef7fc9af3106c3808f976cee83ec2d3b7628b5bf9f9b33547478cfb"
+        },
+        "fee0-nav.csv": {
+          "bytes": 14336723,
+          "sha256": "1f79978fa54b5dbf812ce71d472c61c0b1e798b1da1866642c280fade41d8df4"
+        },
+        "fee0-trades.csv": {
+          "bytes": 99054,
+          "sha256": "f2f95ccc0a3f8c7fa784518aced5ec255eac918e082d61f96ea63ef796e17813"
+        },
+        "fee20-daily-nav.csv": {
+          "bytes": 54794,
+          "sha256": "fe4d00f4f145aa29a39ea53fc596f64dc975310225bc9ab8897257a650041c5c"
+        },
+        "fee20-nav.csv": {
+          "bytes": 14526528,
+          "sha256": "933806a5b7e6d9dd0046cd0fadac5b700f7d44f983beeb8ebaf17ca926b7cafd"
+        },
+        "fee20-trades.csv": {
+          "bytes": 79622,
+          "sha256": "3f9d600b828120174f8426422328aab73be6946905484ba1294e542ea2951fcf"
+        },
+        "signals.csv": {
+          "bytes": 12768132,
+          "sha256": "e00872e9629ec7dc3c864b1b4162416b88ad208f51fd005275f556b36986bdfa"
+        },
+        "summary.json": {
+          "bytes": 6877,
+          "sha256": "fb4ad1a14af6635b7fa9523d98ed7086e6bd2d8b807d4753256abc7d03095182"
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0302/artifacts/20261003-batch009/local-recovery.json",
+      "prior_recovery_sha256": "d7267261d005583fc1ac9cf037c0bd8b9b78d770512cf4a00074c7de3b1ae267"
+    },
+    "M0305": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "bytes": 50225,
+          "sha256": "cbf0ef978973a8a1e14aa708ba02cd07b404232f81eaafb15556bc950f57b17d"
+        },
+        "base-nav.csv": {
+          "bytes": 13181699,
+          "sha256": "7ca16b74448d8e50b1bc5ed3ad00d66f45ac19f0325d055a1d74555863b24298"
+        },
+        "base-trades.csv": {
+          "bytes": 29040,
+          "sha256": "ca40f1dc46ec9433ceeecbae5f5e405e0faad147bee63a50fd33678ed3a183a9"
+        },
+        "delay2-daily-nav.csv": {
+          "bytes": 50485,
+          "sha256": "5de780eb205fb66edab4f60e31fdc90eb1c863c993b18bceb01a12d77e12ce75"
+        },
+        "delay2-nav.csv": {
+          "bytes": 13261564,
+          "sha256": "decf1482839c1b009ff527bcbf93862d46fe632a4256c532c746d786fd12d63b"
+        },
+        "delay2-trades.csv": {
+          "bytes": 29015,
+          "sha256": "8d47c198d1a8de7c08ddf8be072b6c067a6ca396d1992384e77e344debff5c70"
+        },
+        "fee0-daily-nav.csv": {
+          "bytes": 50174,
+          "sha256": "82d1e7e9fa969bc1b5c2d121b43f1d1cf0b4d9c35f3dbefcb37c832434657561"
+        },
+        "fee0-nav.csv": {
+          "bytes": 13170635,
+          "sha256": "085f64a63ab6c4f22e45fa04cf721b210f82044b32b80764e92d0fd62af6e61c"
+        },
+        "fee0-trades.csv": {
+          "bytes": 27803,
+          "sha256": "f9201ee47ee46248548b98eab83489931ebd01b61230305edf0eaef9b60cb6c3"
+        },
+        "fee20-daily-nav.csv": {
+          "bytes": 50851,
+          "sha256": "7b77917dd4c932cb1f8d91c005241578779522d9dea3c40cc06473c103933afa"
+        },
+        "fee20-nav.csv": {
+          "bytes": 13373212,
+          "sha256": "907a3bfb162859a18ffe68fc71186e647c91d674128ac559337a6e6e53e0307f"
+        },
+        "fee20-trades.csv": {
+          "bytes": 27930,
+          "sha256": "f4ec2f86b436f0ae79e9969d7ed0ca5d2a84c8858baf130bc2f4190f055a205f"
+        },
+        "signals.csv": {
+          "bytes": 25843313,
+          "sha256": "127b5753a3b6bf5678995e22bd424598916f93ea9be08a71051598c23bf5ad53"
+        },
+        "summary.json": {
+          "bytes": 7313,
+          "sha256": "ebd996b6f73db95cba29abf07210647dec0e0ecfaf4ba9f69d38f0fefaa3367d"
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0305/artifacts/20261003-batch009/local-recovery.json",
+      "prior_recovery_sha256": "40be89e8e8ae486da5c143ae7c5c9e52a1f04d890542afe7af1a1bd83b44b540"
+    },
+    "M0306": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "bytes": 50514,
+          "sha256": "0d2b28b5fc7719047cbbdd0da312c23735c004917d089458791a9ffbd7a84c55"
+        },
+        "base-nav.csv": {
+          "bytes": 13279296,
+          "sha256": "60f808765f69f33267a87fdfe68bcfb91fa860ba2f81e75f552c79d73875abc8"
+        },
+        "base-trades.csv": {
+          "bytes": 55064,
+          "sha256": "c9619984ff7863e4d849756f2d529ba1e9adaafacd07ae640f31d1f36c2aca0e"
+        },
+        "delay2-daily-nav.csv": {
+          "bytes": 50850,
+          "sha256": "3161f8828630f3a2976e1baecc973daae967a5dd3bbb9e16bfa3b163c7ffa4ca"
+        },
+        "delay2-nav.csv": {
+          "bytes": 13396170,
+          "sha256": "ea98165d80811b8d1117f2f8f287e8f66a23da0fa5b93aeb1edf219651be77ee"
+        },
+        "delay2-trades.csv": {
+          "bytes": 53553,
+          "sha256": "988cf9f277efec230e702ae8dee7f7eeb2439484366947fef9c6bb394b2608ad"
+        },
+        "fee0-daily-nav.csv": {
+          "bytes": 50444,
+          "sha256": "31dd464bdf347dab9b9eea413a86c6847200fc9bf07fb289e483ca541bdbaf58"
+        },
+        "fee0-nav.csv": {
+          "bytes": 13260827,
+          "sha256": "2b2702682752c8508a62f0d997fb8a39dbe47076a809e53fd34395036091ce9b"
+        },
+        "fee0-trades.csv": {
+          "bytes": 51709,
+          "sha256": "39b79d616e4ddd6407fdbfea9eb40b548495277b575bb444b4b8c2d64ef345ac"
+        },
+        "fee20-daily-nav.csv": {
+          "bytes": 51085,
+          "sha256": "b2054fcbe68ff9318ffe18c067c2835e4c477b5eb4a2a70f482a9ee39efa9717"
+        },
+        "fee20-nav.csv": {
+          "bytes": 13447976,
+          "sha256": "b62437775695a0331902542f2005619bdac4df53d06782f9ffe796a61a1c2082"
+        },
+        "fee20-trades.csv": {
+          "bytes": 49396,
+          "sha256": "b2c9dce2addbe0611a274e9c6d87f3a3c6fd2b4e7f8f39f31fd9a1e8921c8680"
+        },
+        "signals.csv": {
+          "bytes": 21462602,
+          "sha256": "1aaa7f455d768dfce1953e6e81056faca534a632540d5f0751932a48e5648d34"
+        },
+        "summary.json": {
+          "bytes": 7144,
+          "sha256": "aabb77cece4327bb7fed6e7ec9a084693d882f57586f8bc061b52a8c2165952f"
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0306/artifacts/20261003-batch009/local-recovery.json",
+      "prior_recovery_sha256": "01214dd63cd49aa9073b7e2eebf9ba8a0c0a7e20f1cd1b3e6cb73c85ee643e35"
+    },
+    "M0307": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "bytes": 52427,
+          "sha256": "2dcc0c765309931c610ba3397ee1dfc4568ad497ba4b3db1c297661a9ac49d79"
+        },
+        "base-nav.csv": {
+          "bytes": 13844938,
+          "sha256": "af84df1351f6f4564756987c2f6c2222291d3f1a15b9956903ef2b2ec67f1231"
+        },
+        "base-trades.csv": {
+          "bytes": 44207,
+          "sha256": "7398da9676ca27f5ce1e0f1c2a04800c39b490c09be92da7135810fe6697b72c"
+        },
+        "delay2-daily-nav.csv": {
+          "bytes": 52372,
+          "sha256": "7e024a0a4acfebc624578b8ac7d1fa27a3f81238d718e95c795281617d339a3a"
+        },
+        "delay2-nav.csv": {
+          "bytes": 13819881,
+          "sha256": "9f3cd18aa77399d037a7f76ccc4eebec1984961b18c4ec6af8956a88e5e76faf"
+        },
+        "delay2-trades.csv": {
+          "bytes": 45649,
+          "sha256": "585f2120c7c50120d76e2c9522055b6cba52c933320f4e4d91c9454168f3ac1d"
+        },
+        "fee0-daily-nav.csv": {
+          "bytes": 52101,
+          "sha256": "11f43abc5f9b54846fd4a97883058ca743ece6d875556b7ea2faaf370991f34b"
+        },
+        "fee0-nav.csv": {
+          "bytes": 13751349,
+          "sha256": "b83f8addd2c48fdd8200ed83e2653b97f4164f20b4c4ae1c7ec06441460fb3f5"
+        },
+        "fee0-trades.csv": {
+          "bytes": 46231,
+          "sha256": "6aec472c27e19dd6f46ec3f5bc10419bdfc3ef848826655b0a543d53db3ecc38"
+        },
+        "fee20-daily-nav.csv": {
+          "bytes": 52667,
+          "sha256": "7521974d2a34b145a50a28d3f35532b6400a97519f0fc734f948de679261b7a7"
+        },
+        "fee20-nav.csv": {
+          "bytes": 13915413,
+          "sha256": "4230d35c078dfe2d5a724db152379c9f725f7c8a8ec424dbd1172d9bb47c9e49"
+        },
+        "fee20-trades.csv": {
+          "bytes": 41412,
+          "sha256": "3435b5a9449de3ec6cf9b685ad7677c1889f76119c81d9ca2526a358ae726eb3"
+        },
+        "signals.csv": {
+          "bytes": 17173200,
+          "sha256": "d8f1817df161f2a92533b9917ca5203159ec7862987b3938c43af4a9cfa904b0"
+        },
+        "summary.json": {
+          "bytes": 7014,
+          "sha256": "fac8603cb6dbcab7c697614dcf47abe579d5324da5a386c03c43fc87e7e399b9"
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0307/artifacts/20261003-batch009/local-recovery.json",
+      "prior_recovery_sha256": "4d908477f9a0e6b4ea89bd9f958a995a605caf31a2eb6528963235f6f3d621c2"
+    },
+    "M0300": {
+      "result_files": {
+        "base-daily-nav.csv": {
+          "bytes": 51542,
+          "sha256": "60b8295e358cd55bdfe7b1d3d53d77e0e1983efe4be446143df761e5fb6e8370"
+        },
+        "base-nav.csv": {
+          "bytes": 13626702,
+          "sha256": "4f0419eacae3ff95873801fdd1e3f403f1c20851c990ba2772b77819f26e58f8"
+        },
+        "base-trades.csv": {
+          "bytes": 157620,
+          "sha256": "c587c65ed146541aed99021ed34339cf204d5c59202270555b16e2a71c053064"
+        },
+        "delay2-daily-nav.csv": {
+          "bytes": 51665,
+          "sha256": "fa2d19e529c611a3d5a25999c572df42cb1965930a23a1bfc995634cf47b8968"
+        },
+        "delay2-nav.csv": {
+          "bytes": 13652274,
+          "sha256": "c229a0bdd02bf09db308c57565607252e695c4fd0d4255fd198b69a31d7785d7"
+        },
+        "delay2-trades.csv": {
+          "bytes": 157508,
+          "sha256": "a7c92521ab360beeaf05805be9115d90fc107244ef92fab8d8fcd8f2fdf62575"
+        },
+        "fee0-daily-nav.csv": {
+          "bytes": 51389,
+          "sha256": "5c66006e2f8a3feb01210fb7dc2381f58f4bdb8d0dd410ea4b123506fa2685bb"
+        },
+        "fee0-nav.csv": {
+          "bytes": 13584361,
+          "sha256": "923a60ae231d27d4c41437204af24535e5c58fc93b37dc26d8e6c60b7799e456"
+        },
+        "fee0-trades.csv": {
+          "bytes": 148400,
+          "sha256": "87d9782b28467a473f6f872f095307c07cb7d25ae23faf31d548109a959c7035"
+        },
+        "fee20-daily-nav.csv": {
+          "bytes": 51771,
+          "sha256": "7071706927499d457086e188e8ace5326668cf5a240471221775d7123507197b"
+        },
+        "fee20-nav.csv": {
+          "bytes": 13694730,
+          "sha256": "b15e73ff64df0dbbe9e0aadd73fe89da32e2d9f09b9fa86ff281a91691abbc4f"
+        },
+        "fee20-trades.csv": {
+          "bytes": 157782,
+          "sha256": "76f150412ede553e8449845dc0d007ece573a5e5ca6fe3807ffa0741622bb12c"
+        },
+        "signals.csv": {
+          "bytes": 14928929,
+          "sha256": "259f240ebd2c1a376f7ac088c17f6dda7674ad24e14a35bd27f524218847096e"
+        },
+        "summary.json": {
+          "bytes": 6914,
+          "sha256": "6511efaa229594a033c664f989d3fed326f7b206c96ae385e4e81f57f4cc37ea"
+        }
+      },
+      "prior_recovery_receipt": "research/public-strategies/M0300/artifacts/20261003-batch009/local-recovery.json",
+      "prior_recovery_sha256": "a31a15e5190f06f1ccab02fa42a0e46a3af17fe9475919e5aaa0f3f09e2bc53c"
+    }
+  },
+  "sources": {
+    "M0311-TechnicalExampleStrategy.py": {
+      "bytes": 1069,
+      "sha256": "0a3d94c8ef857284c9bc37d592af329b1a831f9c504fb2d73b63db00d303db50",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/TechnicalExampleStrategy.py",
+      "license": "GPL-3.0"
+    },
+    "strategies-LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "license": "GPL-3.0"
+    },
+    "technical-LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/LICENSE",
+      "license": "GPL-3.0"
+    },
+    "engine-freqtrade__strategy__interface.py": {
+      "bytes": 81628,
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "license": "GPL-3.0"
+    },
+    "engine-freqtrade__strategy__hyper.py": {
+      "bytes": 7650,
+      "sha256": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/hyper.py",
+      "license": "GPL-3.0"
+    },
+    "engine-freqtrade__resolvers__strategy_resolver.py": {
+      "bytes": 13694,
+      "sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/resolvers/strategy_resolver.py",
+      "license": "GPL-3.0"
+    },
+    "engine-LICENSE": {
+      "bytes": 35141,
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/LICENSE",
+      "license": "GPL-3.0"
+    },
+    "technical-technical__indicators__volume_indicators.py": {
+      "bytes": 621,
+      "sha256": "8bfa4fd42727396c01b35f3ef4a651778612798acaf0788bb0915313afe909d5",
+      "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/technical/indicators/volume_indicators.py",
+      "license": "GPL-3.0"
+    },
+    "M0302.py": {
+      "bytes": 4103,
+      "sha256": "2357996e6594458e8db45b5f757918462afa3c998de9d06e2af0c009ddc4b80d",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy001.py",
+      "license": "See fixed strategy repository license and consumer ATTRIBUTION.md"
+    },
+    "qtpylib.py": {
+      "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+    },
+    "M0305.py": {
+      "bytes": 5110,
+      "sha256": "055984b4672779b36a2391f790ccbcd320e408eb0634e34718d7182acaeef9c9",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy003.py",
+      "license": "See fixed strategy repository license and consumer ATTRIBUTION.md"
+    },
+    "M0306.py": {
+      "bytes": 5472,
+      "sha256": "1b4c001e80b077aaf3ec227577c78d3283be549c7d25ce9279ea03f1db5de64a",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy004.py",
+      "license": "See fixed strategy repository license and consumer ATTRIBUTION.md"
+    },
+    "M0307.py": {
+      "bytes": 6667,
+      "sha256": "797b293f5acd809f8c77f26b38c004c87b75d8847be4cde4d0224040cc591030",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy005.py",
+      "license": "See fixed strategy repository license and consumer ATTRIBUTION.md"
+    },
+    "M0300.py": {
+      "bytes": 13297,
+      "sha256": "46f608cc51f9b18e9bb52983776a6d55d9b13814a93f7666cc8ecdb4f86c3915",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/SmoothOperator.py",
+      "license": "See fixed strategy repository license and consumer ATTRIBUTION.md"
+    }
+  },
+  "code_files": {
+    "research/public-strategies/M0311/scripts/audit_input.py": "53a8da9d6b50cf3eeaf55a8558d79223664cf3855dadb03d36e14f5eb9e5daa6",
+    "research/public-strategies/M0311/scripts/check_additional_prefixes.py": "8aeb6177bc977a2f0d1a4c1875e76a70bd0eb249edec1fa15b2c6d36b0464c5e",
+    "research/public-strategies/M0311/scripts/check_causality.py": "6766232e0c3bfb5c2bcfb81beafb6a7e72d672075012d079c653c255feaa6a88",
+    "research/public-strategies/M0311/scripts/compare_original.py": "399eac657d4919d07129fb177b669c87e438b3d03d649b7cbdd546bbed1f49c5",
+    "research/public-strategies/M0311/scripts/export_graph.py": "34bcd86a0e0e0c76f0b320d7952dfdf233c4127145f97bcf5e2a8c3f13565717",
+    "research/public-strategies/M0311/scripts/freeze_protocol.py": "81c9b48a9b76f5d750feb0a3ea2feb8e3f240532692fbbfae73a32a8c5722863",
+    "research/public-strategies/M0311/scripts/rebuild.py": "06703b77ddbb86550c5e5902928e8452ca6970b8e5da8e13e5456bd36fc39eb8",
+    "research/public-strategies/M0311/scripts/run_replay.py": "53e355d6aa040e913e3fc2f0538a2a7d7c4501f923adaa661fe451e23d6e4dde",
+    "research/public-strategies/M0311/scripts/test_units.py": "6571f5d753f6987522e15e52e677f71c5d0249be21bacf4611455bc5838ae806",
+    "research/public-strategies/M0311/scripts/validate_execution_times.py": "c3761d1fa43fb5252a7c7009730aa75b9e2976ca67f0bbdeb6abf074d173d0e8",
+    "research/public-strategies/M0311/scripts/validate_independent.py": "071ed0a3bdf3cb87f5ba7bb41b3e9a56195e1ba5f5004ab8339a7cbffe71b175",
+    "research/public-strategies/M0311/scripts/validate_small_balances.py": "1cc112cfbe9786d218e0ec0e789f1d74031cfe38469a8c224ce5c387e35b1723",
+    "research/public-strategies/M0311/specs/M0311-first-replay.json": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+    "research/public-strategies/M0311/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0311/specs/execution-reuse.json": "1a1e652da7ebef74e3867a74d860f9fcd094da9277e98c43a21f27728978e549",
+    "research/public-strategies/M0311/specs/exposure-query.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "research/public-strategies/M0311/specs/exposure.json": "b3e4c00d7dc11237e308543cf251d1ecdb9879b012268df754b4d16fe87796e2",
+    "research/public-strategies/M0311/specs/implementer-input-qa.json": "c8171b1bee63a2ce7760775a59aa101d4308fcf869d0b87245256007664015e0",
+    "research/public-strategies/M0311/specs/input-coordinator-independent-qa.json": "647e7fa3930926a00eb94846c5c13559aa096fdeb77f1b5013ae00e7d93dd64b",
+    "research/public-strategies/M0311/specs/protocol-template.json": "eab8d20aa9f09499011d3214aed868e8ed0823e0170d4b3e048361406a153c86",
+    "research/public-strategies/M0311/specs/public-boundary-qa.json": "e6531944a42cf2d915731be6cd93fda121c981fc1a1cd23c7076e81b2f5a8f2a",
+    "research/public-strategies/M0311/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0311/specs/source-description.json": "3496ab20f2376254522aef60a2373203025648b42245c73bbc9a86d533389585",
+    "research/public-strategies/M0311/specs/source-manifest.json": "10cd2cc1470ee8925f7fb4a1fe165e184dc4ee0bc618963c6e485b5ca56c9f45",
+    "research/public-strategies/M0311/specs/synthetic-source-qa.json": "49ce978de8417410ddcbfb5321931e6ac954d685c9fc7ef7dd8b111962a7b37d",
+    "research/public-strategies/M0311/specs/window-predeclaration.json": "811eb1c626b279f69b194298ea2259afc3b64d88648378126d2e8964db7f07cc",
+    "research/public-strategies/M0302/scripts/README.md": "12b1966fd324770d6c961a10cd726b9d258749d461b3c087c4a662192bace2cf",
+    "research/public-strategies/M0302/scripts/adapter.py": "38703f158a42878bbf7222032f41e682bdc6b635199986e77e2f2c29a161b4a8",
+    "research/public-strategies/M0302/scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60",
+    "research/public-strategies/M0302/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0302/specs/protocol-draft.json": "36c81e14d1b78b9193187bd99e19f69cbd9c44baebfbba3648264bc3d81cda14",
+    "research/public-strategies/M0302/specs/protocol.json": "3baf43b716741b3f93431bd1c2bfc92601a5650809854433f973df5651e856f0",
+    "research/public-strategies/M0302/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0302/specs/source-rule-card.json": "cd19b43c6df7d18ad33d9b6404a331351d48e5ed706f22d67179724ae0e9ad68",
+    "research/public-strategies/M0302/specs/synthetic-source-qa.json": "b1b611080b126adc4e9f87a6b07c4394e3461b986626e27a6aff94fd9f519edf",
+    "research/public-strategies/M0305/scripts/README.md": "efbe5b4202f56dae9a1d1dae2b0f1c29b27ec02ba96727216c091e25b1655c6c",
+    "research/public-strategies/M0305/scripts/adapter.py": "096c3baa4ebf879d01d2f9b1d7244f4e0106867015e05e622466fead86e00d6b",
+    "research/public-strategies/M0305/scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60",
+    "research/public-strategies/M0305/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0305/specs/protocol-draft.json": "731a592a3d312047bf9e527a7c6d6665d0dd53c8db614d30ad0a2db07484e31f",
+    "research/public-strategies/M0305/specs/protocol.json": "8f441f36f43c4675b7bfceb74122cb6b7befeaf8c2a42e3a37d1d0edb20c2096",
+    "research/public-strategies/M0305/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0305/specs/source-rule-card.json": "81c00e6435245c3b1e5f7cd6fd555a01f96c022e02cef9122c48ba4218844040",
+    "research/public-strategies/M0305/specs/synthetic-source-qa.json": "4bca317b69b76a4a90ed77682a876deeb5d790de82244bde2e851ddd5cee9141",
+    "research/public-strategies/M0306/scripts/README.md": "7b5a51236032a6a04753e14ffa8393b41130d5719fa220bd3ae8bf3d39af7801",
+    "research/public-strategies/M0306/scripts/adapter.py": "87f043b3de9cf5817e0a91c277c6b6fda91c2d71f4836b27eb30f14fadaf35ac",
+    "research/public-strategies/M0306/scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60",
+    "research/public-strategies/M0306/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0306/specs/protocol-draft.json": "37c80355bc68a86d44b21b1e906d4f147c8ebc9e6c2a1ec4783d4d4a85e8af4e",
+    "research/public-strategies/M0306/specs/protocol.json": "230676ada5e734acad8a709723b0944521076531bb4aceb61c5b6ffccb920d3e",
+    "research/public-strategies/M0306/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0306/specs/source-rule-card.json": "24c7c8a58f5fcbd93e55cff30b167338505b7c3e50cbae0bc740315035c9f661",
+    "research/public-strategies/M0306/specs/synthetic-source-qa.json": "8efeccda95f94cb47827a7c537a35727ce53409917c754bf33c893692af3a0e5",
+    "research/public-strategies/M0307/scripts/README.md": "12301e8ef8cb02504ca9e9f0a51afeb3386bd5810988004d2623239602e30074",
+    "research/public-strategies/M0307/scripts/adapter.py": "b8b7e6c100b98586bcc884ae8524104648eaa69fc0f76ac6a1d2d1c1229a87dd",
+    "research/public-strategies/M0307/scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60",
+    "research/public-strategies/M0307/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0307/specs/protocol-draft.json": "6bbc156b19cd56f2a5364e8b03ade29f2922323a80aae2db7a853444ca70621d",
+    "research/public-strategies/M0307/specs/protocol.json": "6c5c70e9421305a7bb3a330751c6d33b741cc431cb2f62bb3a56749bfdcffc92",
+    "research/public-strategies/M0307/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0307/specs/source-rule-card.json": "edbe102143f65a2fee72c4b0b3c48a8fbee1fbdb391f29d9f096889b40f25ae5",
+    "research/public-strategies/M0307/specs/synthetic-source-qa.json": "a2bf2f40a8cd3d4c71483a6e9a5fb3e45fee7ae9211de8729e3f44ae33c05313",
+    "research/public-strategies/M0300/scripts/README.md": "b014f05c13b0cc2dcc27569f2233a913ed53839d6a3ef8f6a78ccc794b2e8850",
+    "research/public-strategies/M0300/scripts/adapter.py": "6b430fceae1b903fc980e8d15b25e50b81c110c202b8698edbf7da1ee73fb56a",
+    "research/public-strategies/M0300/scripts/run.py": "7ec96cda7f02535d9c07a536dbc3c918d7d0437d300831eee95b73721362bb60",
+    "research/public-strategies/M0300/specs/environment.json": "eef447a3461c7ed76192b05e734a5ee5910cfd717b403fa6a0967a38a5e6acbc",
+    "research/public-strategies/M0300/specs/protocol-draft.json": "109cd623f9f3eb140173be96c26c87bea2540423a407857d893a9797e88af03f",
+    "research/public-strategies/M0300/specs/protocol.json": "85b98742cd11aaac077218c7fe4ed0590c1d148395adb45bbd3dc1125c0a10dd",
+    "research/public-strategies/M0300/specs/requirements.lock.txt": "734e7f892a4306403a4b053b3593e44bcddfb1da9c83f53f113b55e2f433ff9e",
+    "research/public-strategies/M0300/specs/source-rule-card.json": "9f4909da85fe8a3e535bd7b670e6ec1d69f11ba1588fec2ea2a47f1d3e663fe4",
+    "research/public-strategies/M0300/specs/synthetic-source-qa.json": "2e650d2490e9836588286812a8ad5b3855164f857f34e16c8a4dd383b1deca2f",
+    "research/_shared-kernels/native5m-execution-proxy/LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "research/_shared-kernels/native5m-execution-proxy/README.md": "d2eda040a0ef0ef11b909b15e94e82497a3c068fb9e085de73b354115f38f0e7",
+    "research/_shared-kernels/native5m-execution-proxy/v1/README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+    "research/_shared-kernels/native5m-execution-proxy/v1/account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+    "research/_shared-kernels/native5m-execution-proxy/v1/manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d",
+    "research/_shared-kernels/native5m-execution-proxy/v1/oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+    "research/_shared-kernels/native5m-execution-proxy/v1/protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+    "research/_shared-kernels/native5m-execution-proxy/v1/source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+    "research/_shared-kernels/native5m-execution-proxy/v1/test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+    "research/_shared-kernels/native5m-execution-proxy/v1/workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99"
+  },
+  "snapshot_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "TA-Lib": "0.6.8",
+    "freqtrade": "2026.9",
+    "technical": "1.7.0",
+    "ft-pandas-ta": "0.3.16",
+    "python": "3.12.14",
+    "ta_library": "0.6.4",
+    "talib_compatibility": 0,
+    "ema_unstable_period": 0
+  },
+  "source_objects": [
+    {
+      "name": "archives/2023-12/BTCUSDT-5m-2023-12.csv",
+      "bytes": 1371564,
+      "sha256": "7c422c98ef5bf612fd23d92567c598a830b9fc2bc4941d8a933108abf74f9e6e"
+    },
+    {
+      "name": "archives/2023-12/BTCUSDT-5m-2023-12.zip",
+      "bytes": 462569,
+      "sha256": "8e3b780eddcff7f19f24f25d799b2affe03113b90457b8caa22a454f065fbf56"
+    },
+    {
+      "name": "archives/2023-12/BTCUSDT-5m-2023-12.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "51bb1a5e99f2c3465f8e4baaa204993249e1250e658469e629b447a5c1a94a76"
+    },
+    {
+      "name": "archives/2024-01/BTCUSDT-5m-2024-01.csv",
+      "bytes": 1373281,
+      "sha256": "ffa7cfaa98f83e07f304c70d3c8d3e773f0a0d5f2c8d75112f6135ea395c19e6"
+    },
+    {
+      "name": "archives/2024-01/BTCUSDT-5m-2024-01.zip",
+      "bytes": 465498,
+      "sha256": "a375f811f672ad70de97af533f6e70181647a9e978838b451ac17d5c17313ad8"
+    },
+    {
+      "name": "archives/2024-01/BTCUSDT-5m-2024-01.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "bf7c65bfb1cfe7b6a55fc02b070334ffa1a7b8380304912bfaa872866544aa33"
+    },
+    {
+      "name": "archives/2024-02/BTCUSDT-5m-2024-02.csv",
+      "bytes": 1284503,
+      "sha256": "842c7c117423f6bd4ebe6e8e09c284bc16de00a1af3b90001d9bcaedac5e83c8"
+    },
+    {
+      "name": "archives/2024-02/BTCUSDT-5m-2024-02.zip",
+      "bytes": 434210,
+      "sha256": "4bbed105653be96229f6678b3ce3df7366a6ced5aea32285da2bf62ac5f890ed"
+    },
+    {
+      "name": "archives/2024-02/BTCUSDT-5m-2024-02.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "7dbe560755312f8e5d774e16b1aa45c3ba05b0be94d4eca6477fb002a1829dc1"
+    },
+    {
+      "name": "archives/2024-03/BTCUSDT-5m-2024-03.csv",
+      "bytes": 1381878,
+      "sha256": "eee27c484208516a9c4336435b9bbc1893d3f0a7d28424585d43ebc8f4717a18"
+    },
+    {
+      "name": "archives/2024-03/BTCUSDT-5m-2024-03.zip",
+      "bytes": 474003,
+      "sha256": "fd3670210b38640ee9562b7761879fae8cfed3beec7d7313b868cf618ca4c72a"
+    },
+    {
+      "name": "archives/2024-03/BTCUSDT-5m-2024-03.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "0e9043f07029e34c51cb3265c299c9eebb30e1b35717c11830462badbb362cee"
+    },
+    {
+      "name": "archives/2024-04/BTCUSDT-5m-2024-04.csv",
+      "bytes": 1330547,
+      "sha256": "053b8177c4453c2746fcba73205449ed506ccfa64b33ccb0e73cb65a087c9438"
+    },
+    {
+      "name": "archives/2024-04/BTCUSDT-5m-2024-04.zip",
+      "bytes": 454656,
+      "sha256": "b41c6d2703ee9e4c8167de082dcd363fac39ed176ebe9eacf7f0109e284a5948"
+    },
+    {
+      "name": "archives/2024-04/BTCUSDT-5m-2024-04.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "3aef5d181f163ece8be1acd12deec2a430c6bed68c84b1c96b1e6916a634ef86"
+    },
+    {
+      "name": "archives/2024-05/BTCUSDT-5m-2024-05.csv",
+      "bytes": 1369523,
+      "sha256": "d0a75dc099f6fe23f0687355d5494727b3975adfbf801c67bf7da9ad260b8787"
+    },
+    {
+      "name": "archives/2024-05/BTCUSDT-5m-2024-05.zip",
+      "bytes": 462542,
+      "sha256": "3a9c810274f38b18abda912c3446df51cb160c4c0e376655fb7defb1cacf5de2"
+    },
+    {
+      "name": "archives/2024-05/BTCUSDT-5m-2024-05.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "2c246b3730e530c310ddcf3aa77f717ffe5736fda7ab69f72583072e130ef652"
+    },
+    {
+      "name": "archives/2024-06/BTCUSDT-5m-2024-06.csv",
+      "bytes": 1320955,
+      "sha256": "ebf4d19b7b9a7b34df2c4f0468b7ddbbf83b9e20b1280cb4d94a2fc5ad79557a"
+    },
+    {
+      "name": "archives/2024-06/BTCUSDT-5m-2024-06.zip",
+      "bytes": 440069,
+      "sha256": "627dd48125d89759e498d2db2e523166787bda4dd9a64ca56abf9fba235ba71e"
+    },
+    {
+      "name": "archives/2024-06/BTCUSDT-5m-2024-06.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "780c1f0c9b5d4140f383afda32cedf56e6898e0dccb2e6cc7cec9d0fdeb0d616"
+    },
+    {
+      "name": "archives/2024-07/BTCUSDT-5m-2024-07.csv",
+      "bytes": 1369417,
+      "sha256": "834f6b76830c04fbde4a5c2b3701339638063520a9dceb049cb5480640f3fb82"
+    },
+    {
+      "name": "archives/2024-07/BTCUSDT-5m-2024-07.zip",
+      "bytes": 461448,
+      "sha256": "7fcfb7aa22c344f0c6bb0a7d2ae2dbfd1a1e597fc80806daa341068dfdab6586"
+    },
+    {
+      "name": "archives/2024-07/BTCUSDT-5m-2024-07.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "006892493632aafa8086a4e3f1804073596f6fd211d229631d7a9cdd30e5bfe5"
+    },
+    {
+      "name": "archives/2024-08/BTCUSDT-5m-2024-08.csv",
+      "bytes": 1369839,
+      "sha256": "386b67240aeb85e126975f761ec7963090b7ea0276de16c4a0cfc91280d6c36c"
+    },
+    {
+      "name": "archives/2024-08/BTCUSDT-5m-2024-08.zip",
+      "bytes": 464434,
+      "sha256": "4ead243e5f862df551e12815d8ddc4c67da711fda253325c36f83a1ff3ef36d7"
+    },
+    {
+      "name": "archives/2024-08/BTCUSDT-5m-2024-08.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "e0a30426c4ed90d67da11c90caa95bfa7fe37a8642a91f70ffc1872c182c2635"
+    },
+    {
+      "name": "archives/2024-09/BTCUSDT-5m-2024-09.csv",
+      "bytes": 1323537,
+      "sha256": "689fd7d5bb7de077fc4516d810fee0b9b7fe834c852e4ccb7c8644835d5753f9"
+    },
+    {
+      "name": "archives/2024-09/BTCUSDT-5m-2024-09.zip",
+      "bytes": 441999,
+      "sha256": "a9989fa72ee8eba72cdd79b0e251652fcd456a31548a3014a8660b65405bc67a"
+    },
+    {
+      "name": "archives/2024-09/BTCUSDT-5m-2024-09.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "231d61c469460ad027c7ccae4a45b161d0fdbeb9007f17ae95e25ff84761ef94"
+    },
+    {
+      "name": "archives/2024-10/BTCUSDT-5m-2024-10.csv",
+      "bytes": 1368846,
+      "sha256": "a3794161d5117a2d8d4ef2d857429ddbd9173706e2a1d65b8260c9ed7e46d904"
+    },
+    {
+      "name": "archives/2024-10/BTCUSDT-5m-2024-10.zip",
+      "bytes": 458990,
+      "sha256": "5cd2d0dcc2dc193fc7b31be69166021fca41b9fce61ab6a0771ce00db864c327"
+    },
+    {
+      "name": "archives/2024-10/BTCUSDT-5m-2024-10.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "c9ba639e0b652411a16315ec7434ee3c78f3d0e1f38a901291ef55fb79e064a5"
+    },
+    {
+      "name": "archives/2024-11/BTCUSDT-5m-2024-11.csv",
+      "bytes": 1339750,
+      "sha256": "931af12beb8b761ed6d60a686448c6863d2f5d46a5bce66d00fb043f0fbc29cb"
+    },
+    {
+      "name": "archives/2024-11/BTCUSDT-5m-2024-11.zip",
+      "bytes": 458714,
+      "sha256": "72851d323b0d43f7c8cdf177ca85ded66ec511ed3b1a53e63cca0d2501c75bc0"
+    },
+    {
+      "name": "archives/2024-11/BTCUSDT-5m-2024-11.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "39e8198b37c4acb3f48a93fe8886fbdd72e45cb755d2f891c94689e2a2fc7521"
+    },
+    {
+      "name": "archives/2024-12/BTCUSDT-5m-2024-12.csv",
+      "bytes": 1389778,
+      "sha256": "b249533031efe294e6a47d4194feda032d5eac492e246dc226b345a376245a97"
+    },
+    {
+      "name": "archives/2024-12/BTCUSDT-5m-2024-12.zip",
+      "bytes": 474874,
+      "sha256": "0a2f70744f9244a066ab4ced934a725d85b247e917cfe22ada218435c1573301"
+    },
+    {
+      "name": "archives/2024-12/BTCUSDT-5m-2024-12.zip.CHECKSUM",
+      "bytes": 88,
+      "sha256": "63e4896d31adb68ac29bdbe57bfded2f9a6efe6af53bf3e19f5a3e21fbd41372"
+    }
+  ],
+  "canonical_csv": {
+    "name": "BTCUSDT-5m-202312-202412-native12.csv",
+    "bytes": 31428289,
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "rows": 114336
+  },
+  "source_object_set_sha256": "2b606da6e10b4f067393cab3bfc3a33b102ffec7f27bba5d61d7154295133c04"
+}

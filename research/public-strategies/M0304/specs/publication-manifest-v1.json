@@ -1,0 +1,150 @@
+{
+  "schema": "exact-publication-manifest/v1",
+  "record_id": "M0304",
+  "state": "BLOCKED_SOURCE_INPUT_PREPARATION_ONLY",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 691,
+      "sha256": "8cc1a139075ead6f861cfc76fa3f1062127b03f5a0419e5e95f0499e073f24ba"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1559,
+      "sha256": "b812d1b27e4d4c4c06e91e9cd00ba9d3e1335fae862e49705c1e3996bcb90d53"
+    },
+    {
+      "path": "artifacts/catalog-record.json",
+      "bytes": 1596,
+      "sha256": "205b86668509d1312c2cfc501b3d361e747cc7962a07bbd26f97e4d3390dfa51"
+    },
+    {
+      "path": "artifacts/data-recovery-blocker-safe.json",
+      "bytes": 1620,
+      "sha256": "dbb0cea0adf59db406d195d0e5abb10db24157fc532fda582c766d780db23e7d"
+    },
+    {
+      "path": "artifacts/independent-formula-audit.json",
+      "bytes": 3669,
+      "sha256": "d0dc0739c822cd85894bda84324b5ea294f9ee1054ebaad697c8dfda92440c51"
+    },
+    {
+      "path": "artifacts/independent-reference-chain.json",
+      "bytes": 2146,
+      "sha256": "dc2bdb7e2f823e495fd4d41d697692da00ee15d897ca7264e17018c3a954ba52"
+    },
+    {
+      "path": "artifacts/independent-scalar-recovery.json",
+      "bytes": 3281,
+      "sha256": "f78cd7937bf8d67b364b2cd18190eb3c8760f2fe20d3dee6dc0c121bd624ec81"
+    },
+    {
+      "path": "artifacts/independent-worker-probes-v2.json",
+      "bytes": 7427,
+      "sha256": "398219af5894688aa6a94b955d01d81bd66e02edfc4ac5bf78bca9a10e9d0d5a"
+    },
+    {
+      "path": "artifacts/synthetic-formula-validation.json",
+      "bytes": 1300,
+      "sha256": "d26d54c2587fedd9e02a5d8e3d7252b2998f942c1796e7a9d2d48c23e24454bc"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1057,
+      "sha256": "ae1b478b56257eabdc938609895678b8b6cd01a9b7c1c35d99ada9b89c84d3e5"
+    },
+    {
+      "path": "diagnostics/recovery.md",
+      "bytes": 2655,
+      "sha256": "0b34a246866f923307ee7273cada993565c54e1f06f8444568def4c035409ce6"
+    },
+    {
+      "path": "diagnostics/source-and-blocker-report.md",
+      "bytes": 7241,
+      "sha256": "7288c508e18b66f19852b29214af43f232c58c1527973cab48a96ed073282d23"
+    },
+    {
+      "path": "m0304-core-ledger.md",
+      "bytes": 1313,
+      "sha256": "f5524a5f3d94e8d010ba1abc9852cbcc6d999838c0572bf7ea280bf7dadcaaa7"
+    },
+    {
+      "path": "scripts/builder_5m_calendar2024.py",
+      "bytes": 18985,
+      "sha256": "e217666105d2a454b61bb93d4306f2c91af9d6356182baaf57d145645556f182"
+    },
+    {
+      "path": "scripts/formula_probe.py",
+      "bytes": 5609,
+      "sha256": "c3a04df2889c25bc2d37e5cee354bd7609bf4bb05888e632020926aac5d48d28"
+    },
+    {
+      "path": "scripts/make_publication_manifest.py",
+      "bytes": 1373,
+      "sha256": "6c7826530ab6ccf623fbb6a3aedf765a40696f268075aa746cf29e36ba4a4faf"
+    },
+    {
+      "path": "scripts/scalar_formula_oracle.py",
+      "bytes": 11579,
+      "sha256": "38a62443daee5feae1cda9e97efa2b3274199c0c1b2a296a27b0f171d2be673b"
+    },
+    {
+      "path": "scripts/verify_preparation.py",
+      "bytes": 2053,
+      "sha256": "024da1d53ee33d284890eca4c6b61c23589a61f468202984423c091627212f06"
+    },
+    {
+      "path": "scripts/verify_raw_rebuild.py",
+      "bytes": 3880,
+      "sha256": "4972fedfbe54517423c94d834efda557a99a2667ddd067be31acc5ed5927f746"
+    },
+    {
+      "path": "scripts/verify_source.py",
+      "bytes": 1155,
+      "sha256": "336ca18f9a90d1dabfeef3237cd0a2e6c787dbc8e22d4b369fe7cfc917a54ac7"
+    },
+    {
+      "path": "specs/environment.json",
+      "bytes": 1145,
+      "sha256": "bbcb66b14650bd64a1b8f65ffc0cf1429a0580f4b6b100dd2747972d146e5fbf"
+    },
+    {
+      "path": "specs/input-expected-manifest.json",
+      "bytes": 16495,
+      "sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102"
+    },
+    {
+      "path": "specs/pre-run-plan.json",
+      "bytes": 9998,
+      "sha256": "4a0ef73546e93fff34e98be0552815c7515eb2176805f8a70087efb82e9764b9"
+    },
+    {
+      "path": "specs/preparation-pin.json",
+      "bytes": 2794,
+      "sha256": "0dac44a60cb3fff191b4354949e84f150144098e2c7b6380dc878d3798ff66f3"
+    },
+    {
+      "path": "specs/requirements.txt",
+      "bytes": 41,
+      "sha256": "df13474509d1791ce13f64043b087acab8ef027d7bbd62144b575e7e75c03f61"
+    },
+    {
+      "path": "specs/source-ast-attributes.json",
+      "bytes": 514,
+      "sha256": "9fa8f5187dd551116e02f54482871b4c1e1c13c14aabb9cbc79706de83b5b5c2"
+    },
+    {
+      "path": "specs/source-manifest.json",
+      "bytes": 4097,
+      "sha256": "b877936b44c61d54255a57e112fa31571a09be1e7f2a1673f30a5460dce2950f"
+    }
+  ],
+  "file_count_excluding_manifest": 27,
+  "bytes_excluding_manifest": 115273,
+  "self_excluded": true,
+  "raw_market_data_included": false,
+  "full_third_party_source_included": false,
+  "historical_runs": 0,
+  "strict_reproductions": 0,
+  "private_graph_included": false
+}

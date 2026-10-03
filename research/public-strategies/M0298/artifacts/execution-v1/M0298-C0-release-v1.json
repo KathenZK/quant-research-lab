@@ -1,0 +1,38 @@
+{
+  "approved_at_utc": "2026-10-03T12:50:14.681680+00:00",
+  "independent_C0_passed": true,
+  "source_recovery_qa_passed": true,
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "source_fidelity": "HYPOTHESIS",
+  "research_status": "DIAGNOSTIC_ONLY",
+  "strict_reproductions": 0,
+  "allowed_scope": "Exactly four frozen strategy configurations and one same-window buyhold, plus byte-for-byte frozen recovery only. No search, window/source substitution, production, promotion or original-runtime claim.",
+  "actual_historical_runs_at_approval": 0,
+  "independent_synthetic_fills_reconciled": 1965,
+  "independent_synthetic_bar_marks_reconciled": 11879,
+  "synthetic_exact_execution_prefix_and_future_checks": 30,
+  "complete_raw_qa": {
+    "path": "data-recovery-safe-v2.json",
+    "sha256": "ddb81501a8ea706ad6b60c21ed6c8da01bfba48f99911f479340632c5738d783"
+  },
+  "independent_raw_rebuild": {
+    "path": "independent-canonical-qa-v1.json",
+    "sha256": "96dbc05f4eac6ce02335e63d02ced1de9e21c200129af7f00d5908f372ee4c44"
+  },
+  "independent_execution_review": {
+    "path": "shared-Decimal-ledger-audit-v2.json",
+    "sha256": "c963fad79cad65d48683fbc915cb547a61a0162fe06fff42f0b11db1db1a9706"
+  },
+  "nonblocking_observation": "M0304 annualized-return scalar overflowed only for extreme short-duration synthetic prefix metrics; fixed calendar2024 exponent365/366 is unaffected. Historical outputs must still pass finite-number validation and independent fullbar metrics audit.",
+  "post_run_required": [
+    "Independent all-event Decimal ledger and fullbar metrics audit on actual outputs",
+    "Exact frozen replay on independently rebuilt input",
+    "New complete public manifest plus public/privacy checks and verified private backup"
+  ],
+  "schema": "independent-execution-C0-release/v1",
+  "record_id": "M0298",
+  "status": "APPROVED_DATA_AND_C0_FOR_HISTORICAL_RUN",
+  "freeze_sha256": "55b0a3221bd296aa1465cf476d9ced3f50b77cd43ee052570ff3c9e8f2e1cf4e",
+  "frozen_at_utc": "2026-10-03T12:48:26.079295+00:00",
+  "engine_sha256": "4e960ad57b1cb0df643637321ec99d2ebe89846da8f3f13c46012c13fc5e12b6"
+}

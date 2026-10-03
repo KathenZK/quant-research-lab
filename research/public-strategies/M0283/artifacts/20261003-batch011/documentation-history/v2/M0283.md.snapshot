@@ -1,0 +1,71 @@
+# M0283 · MACDStrategy_crossed 原规则与执行代理诊断
+
+只在MACD交叉当根且CCI达到固定门槛时交易。
+
+结论：**ADAPTED_EXECUTION_PROXY / ADAPTED，严格复现0，不晋升。** 交叉与CCI必须在同一根满足，信号机会受强联合约束；信号空缺由原ROI/stop管理，并受手续费及跳空路径代理影响。 base收益0.27%，最大回撤28.60%，67轮；与同窗买持差距-114.76个百分点。
+
+## 原文、出处与规则
+
+稳定ID为M0283，原类名MACDStrategy_crossed，原始5m。原文保留为私有恢复包中的 `sources/M0283.py`，固定源[原文链接](https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MACDStrategy_crossed.py)，提交 `f3340ce11f5bdf62f598522e64d1f5638eaa13f5`；2335字节，SHA256 `af5aed1cbb9a9d3ed519ea8649363a2cfaa95cbffe443f073d9f96b2aa91b0f6`。原仓库GPLv3；许可证与指标来源见[预审卡](specs/source-rule-card.json)，原始字节与许可证均在私有包。文库身份不重编号；存在文库简写与代码差异时以固定代码为这次信号定义，差异明确保留。
+
+MACD默认12/26/9，CCI默认14。入场当前MACD>signal且前一MACD≤前一signal，同时CCI≤−50；退出当前MACD<signal且前一MACD≥前一signal，同时CCI≥100。交叉严格不等、前值允许等号；原源没有volume>0过滤，不擅加。
+
+经济假设：动量转向当根配合超卖/超买过滤的假设；原文没有独立论文或样本外证据。 这不是经过验证的经济因果解释。
+
+固定参数与风险：ROI分钟→比例 `{"60": 0.01, "30": 0.03, "20": 0.04, "0": 0.05}`；止损-30%；trailing关闭；exit_profit_only=False、offset=0、ignore_roi_if_entry_signal=False。TA-Lib调用与默认细节、NaN规则、实际参数装载见[冻结规格](specs/protocol.json)。保留原TA-Lib的NaN，条件比较不触发；不额外填值。原类startup0，本次额外31日数据仅暖机，无暖机订单。
+
+## 标的、数据与执行
+
+只有BTCUSDT现货，多头单仓、无选池或杠杆。输入2023-12-01至2025-01-01排他，114336根原生5m；评估2024-01-01至2025-01-01排他，共105408根、366天，暖机8928根。输入SHA256 `91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2`；13月39个官方zip/csv/checksum按固定manifest验证，0缺口、重复或零成交，没有静默删行；raw manifest SHA `fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058`。
+
+本次市场请求0，沿用已获用户许可的本地官方输入。该数据仅DIAGNOSTIC_ONLY，PIT/历史可交易性和严格finality尚未证明，trusted=False。2024窗口已有22个ID研究曝光，且因较早两年数据不可用而选择，**非样本外、不可与旧两年结果直接比较**。历史累计搜索数未知，不计算可靠DSR/PBO。
+
+初资100000USDT；每次用现金95%且买费包含于预算，允许任意分数数量；双边不利滑点2bps。四个预定配置base单边费8bps/delay1、fee0、fee20、delay2（单边8bps、额外延迟一根5m）。0手续费仍有滑点。买持以同窗首开盘、95%含费预算、费8/slip2运行过一次，现按固定hash引用M0311，不计新增控制。
+
+原订单{"order_types": {"entry": "limit", "exit": "limit", "stoploss": "limit", "stoploss_on_exchange": false, "stoploss_on_exchange_interval": 60}, "order_time_in_force": {"entry": "GTC", "exit": "GTC"}}。本次原limit进出改成闭合信号后一根开盘必成交；止损为OHLC市价式代理；不模拟挂单排队、超时、取消、部分成交与最低订单额。不能称原限价回测已复现。到期信号退出先于入场/止损/ROI；入出冲突均不触发信号动作；同柱退出后不重新入场。盈利门只限制信号退出，以原开盘扣双边费的利润严格>0判断、再收退出滑点，故边缘退出可微亏；ROI/止损不受该门限制。ROI以含费用目标的open/high严格大于；止损low≤门槛，开盘跳空按open，柱内歧义止损优先。末端按原收盘估值、不强平、不扣尚未发生的退出成本。
+
+## 实测结果
+
+| 配置 | 总收益 | 最大回撤 | 日Sharpe | 完整往返 | 成交事件 | 手续费USDT |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| base | 0.2703% | 28.5984% | 0.1622 | 67 | 135 | 10049.3912 |
+| fee0 | 7.0953% | 27.8374% | 0.3787 | 72 | 145 | 0.0000 |
+| fee20 | -23.0262% | 41.6630% | -0.5798 | 60 | 121 | 19941.6482 |
+| delay2 | -0.0223% | 28.5603% | 0.1509 | 69 | 139 | 10324.7513 |
+| 买持（复用） | 115.0304% | 32.0211% | 1.7447 | 0 | 1 | 75.9392 |
+
+base期末权益100270.32207786USDT，柱末持仓占比49.4517%，期末剩余1.01783142755BTC。信号统计涵盖全部114336根（含暖机）：{"entry_rows": 177, "exit_rows": 39, "collisions": 0}；实际base成交原因{"entry_signal": 68, "roi": 57, "exit_signal": 10}。末端持仓仍保留未实现收益，胜率仅完整往返。
+
+净值真实生成：私有完整5m曲线与账户/信号，公开[base每日派生净值](artifacts/20261003-batch011/base-nav-light.csv)及其余三配置每日曲线。成交完整账本私有，公开每配置≤40条或首20+末20条，见[抽样清单](artifacts/20261003-batch011/trade-sample-manifest.json)；抽样不是完整日志或统计抽样。指标[JSON](artifacts/20261003-batch011/results/summary.json)。最大回撤基于105408柱末状态加初资；日Sharpe用366日、ddof1、sqrt365，无风险利率0；图中回撤负号、汇总回撤正数。
+
+## 冻结、验证与恢复
+
+C0时间2026-10-03T14:20:36.177432+00:00；协议SHA256 `52d8ba8c4b64938ac61540c4930e3936a0b2b8e6859a9188318cb6c9992dc71c`。源、代码、依赖、输入、参数、窗口与试验次数均在查看本ID收益前冻结。共享 `native5m-execution-proxy/v1` 与ID adapter逐文件pin；原M0311代码不改。预物化加速对M0311既有4+1的15个CSV及指标精确等价，不算新增实验。新增盈利门、strict ROI、同柱冲突及Decimal极小数/参数错配经独立合成边界验收。
+
+原类实际参数装载与独立Boolean全114336行相等；复杂TA指标固定TA-Lib，未独立重写算法。[来源检查](artifacts/20261003-batch011/source-qa.json)、[Decimal账户](artifacts/20261003-batch011/oracle-qa.json)、[前缀与未来扰动](artifacts/20261003-batch011/prefix-qa.json)均PASS。Decimal预期零严格相等、非零绝对容差0/相对1e-9，不经float转换；独立复算决策、现金、仓位、权益、费用和主要指标，该oracle不覆盖phase/时间/notional；新增ID-local[独立事件检查](artifacts/20261003-batch011/event-qa.json)按原始K线及Decimal复核这些字段，另行记录，不扩大v1 oracle范围。
+
+一次全批新目录恢复共用一个输入集，39原档在C0前于该新目录校验/重建canonical一次，冻结后复制代码/原源并离线重建每ID14输出，逐个字节/hash一致，[本ID恢复清单](artifacts/20261003-batch011/local-recovery.json)。这是恢复验证，不新增收益实验。每阶段wall/CPU/RSS见[计时](artifacts/20261003-batch011/stage-timing.json)。原始行情与完整日志只私有；本机副本不代表异地备份，本批远端保存由root统一处理，当前未验证成功。
+
+## 失败场景与后续
+
+交叉与CCI必须在同一根满足，信号机会受强联合约束；信号空缺由原ROI/stop管理，并受手续费及跳空路径代理影响。 base收益0.27%，最大回撤28.60%，67轮；与同窗买持差距-114.76个百分点。 继续研究应在新窗口核验交叉同柱过滤与尾部止损；不把持续MACD状态版本M0282与此交叉版本混为一条。 单币一年、费用驱动收益门、理想分数成交和OHLC路径不足均限制外推。本次没有选最优参数、修阈值或换窗口；四配置全部保留。结果不构成实盘部署或收益承诺。
+
+Graph[结构化记录](artifacts/20261003-batch011/graph-record.json)已准备，带相同run/variant/协议/结果hash；详情投影私有供root整合。未导入、未发布网站、未改批注或全局索引。
+
+## 原目录11字段逐字保留
+
+以下为原目录报告值，不自动视作作者实证。来源记录的私有读取指纹不公开。
+
+| 字段 | 原文 |
+| --- | --- |
+| id | M0283 |
+| source_url | https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/MACDStrategy_crossed.py |
+| 作者或机构 | berlinguyinca / freqtrade/freqtrade-strategies |
+| 别名来源 |  |
+| 可回测 | 高 |
+| 名称 | MACDStrategy_crossed |
+| 市场 | 加密现货 |
+| 提出日期 | 未知 |
+| 标题 | MACDStrategy_crossed |
+| 规则 | MACD 上穿信号线且 CCI<=-50 做多；MACD 下穿信号线且 CCI>=100 平多。 |
+| 页码或文件 | MACDStrategy_crossed.py |
