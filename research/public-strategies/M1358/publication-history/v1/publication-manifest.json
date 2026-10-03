@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 331,
-      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913"
+      "bytes": 324,
+      "sha256": "e62dc32df895bff7afb310eb97ad65bdffce2edf57656088ba4f6b03da714056"
     },
     {
       "path": "artifacts/20261003-coldstart-v1/input-qa-v1.json",
@@ -102,28 +102,8 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1068,
-      "sha256": "03d5ac83d056ea9012d5e51e694e2c5c0db00c477db11e66aa9e2f71205bd00b"
-    },
-    {
-      "path": "publication-history/revision-v2.json",
-      "bytes": 589,
-      "sha256": "10564f949c35668543ff6657fc0d312ed7be98f8e053761a1498ae4c1a56ca12"
-    },
-    {
-      "path": "publication-history/v1/README.md.snapshot",
-      "bytes": 324,
-      "sha256": "e62dc32df895bff7afb310eb97ad65bdffce2edf57656088ba4f6b03da714056"
-    },
-    {
-      "path": "publication-history/v1/decision-log.md.snapshot",
       "bytes": 698,
       "sha256": "0e740b70721205d768f016a59819b9682a83fac468fdf331f40dee9d2a2e196d"
-    },
-    {
-      "path": "publication-history/v1/publication-manifest.json",
-      "bytes": 8582,
-      "sha256": "7a9e1fc38abf7d52d72001e9ce6da9897975548e75af2827eaa488bfe3b26d9c"
     },
     {
       "path": "scripts/README.md",
@@ -268,8 +248,5 @@
     "sampling": "first and UTC month ends",
     "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
     "Graph_enum": "HYPOTHESIS"
-  },
-  "revision": 2,
-  "previous_publication_manifest_sha256": "7a9e1fc38abf7d52d72001e9ce6da9897975548e75af2827eaa488bfe3b26d9c",
-  "revision_scope": "directory governance and retained documentation history only; frozen source/runtime evidence unchanged"
+  }
 }

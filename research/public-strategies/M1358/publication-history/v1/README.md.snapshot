@@ -1,8 +1,6 @@
----
-research_classification: strategy_family
----
-
 # M1358
+
+research_classification: diagnostic_topic
 
 [中文研究报告](M1358.md) · [研究主账](M1358-core-ledger.md) · [决策历史](decision-log.md)
 

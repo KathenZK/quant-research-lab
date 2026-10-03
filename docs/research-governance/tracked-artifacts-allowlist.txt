@@ -1278,3 +1278,21 @@ research/public-strategies/M0289/artifacts/results/nonstatistical-fill-sample.js
 research/public-strategies/M0289/artifacts/results/runtime.json  # dot007 approved public evidence
 research/public-strategies/M0289/artifacts/results/summary.json  # dot007 approved public evidence
 research/public-strategies/M0289/artifacts/results/validation-summary.json  # dot007 approved public evidence
+
+# M1358 frozen cold-start study public evidence and derived Graph details
+research/public-strategies/M1358/artifacts/20261003-coldstart-v1/input-qa-v1.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v1/prehistory-rejection-v1.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v1/source-equivalence-v1.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v1/synthetic-v1.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/causality-v2.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/execution-complete-v2.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/fresh-restore-receipt-v2.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/full-synthetic-ledger-v2.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/independent-prehistory-acceptance.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/oracle-v2.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/resource-measurement-note.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json  # M1358 approved public evidence
+research/public-strategies/M1358/artifacts/20261003-coldstart-v2/synthetic-v2.json  # M1358 approved public evidence

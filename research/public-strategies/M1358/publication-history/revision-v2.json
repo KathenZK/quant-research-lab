@@ -1,0 +1,16 @@
+{
+  "schema": "public-catalog-documentation-revision/v1",
+  "record_id": "M1358",
+  "revision": 2,
+  "created_at_utc": "2026-10-03T16:07:03.725102+00:00",
+  "original_public_result_commit": "1c23b690faf6cabeaa9270d646ed7a36849b8e47",
+  "previous_publication_manifest_sha256": "7a9e1fc38abf7d52d72001e9ce6da9897975548e75af2827eaa488bfe3b26d9c",
+  "changed_fields": [
+    "README directory-classification frontmatter",
+    "decision-log append"
+  ],
+  "frozen_C0_source_protocol_and_results_unchanged": true,
+  "new_strategy_runs": 0,
+  "strict_reproductions": 0,
+  "site_deployed": false
+}
