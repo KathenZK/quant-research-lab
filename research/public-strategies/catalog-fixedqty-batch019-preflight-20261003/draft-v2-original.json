@@ -1,0 +1,125 @@
+{
+  "status": "DRAFT_FOR_ROOT_SELECTION_NOT_FROZEN",
+  "id": "M1266",
+  "classification": "ADAPTED_SOURCE_CORRECTED_VARIANT / HYPOTHESIS_EXECUTION_PROXY; STRICT0",
+  "source": {
+    "url": "https://www.quantconnect.com/forum/discussion/11340/btc-3-emas-strategy/",
+    "selected_attachment": "public files content attachment0",
+    "sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+    "excluded_bug_version_sha256": "2b4242dfc3e450764e0eb5c49697b5e8a3d58a7e561785a234608b4834383b01",
+    "original_identity": "BTCUSD, BitfinexCash, Daily,2020-01-01..2021-05-01,initial100000,100daywarmup",
+    "warning": "Author explicitly disclosed cherry-picked example and worse performance over longer period; retain prominently.",
+    "license": "No attachment redistribution license established; full attachment/HTML private only"
+  },
+  "adapted_identity": {
+    "symbol": "BTCUSDT",
+    "exchange": "Binance",
+    "market_type": "spot",
+    "timeframe": "UTC1d",
+    "eval_start": "2023-01-01T00:00:00Z",
+    "eval_end_exclusive": "2025-01-01T00:00:00Z",
+    "warmup": "100 complete preceding daily closes,exactlySep23-Dec31; indicators seed only thatselected warmup",
+    "data_sha256": "PENDING_NEW_INPUT_QA; do not reuse48e4 as newwindowhash",
+    "PIT": "UNKNOWN",
+    "OOS": false,
+    "source_faithful_data": false
+  },
+  "indicators": {
+    "periods": [
+      20,
+      50,
+      100
+    ],
+    "price": "completed raw dailyclose",
+    "arithmetic": "Decimal50 ROUND_HALF_EVEN; SMA seed firstnclose atn-1,then prev+2/(n+1)*(close-prev); nofill; allreadybylastwarmupbar",
+    "provenance": "Explicit reproducible EMA convention; not claimed current LEAN binary/version verified"
+  },
+  "signal_rules": {
+    "entry": "Flat only EMA20 > close > EMA50 > EMA100 (allstrict). No shorts/rebalance.",
+    "exit": "Held only: update high=max(currenthigh,completedclose); close<=EMA50 OR close<.95*high. Exactly.95high alone isnotexit.",
+    "priority": "Sourcecorrected investedexit branch beforeflatentry. Downtrendflatguard cannot suppressheldexit.",
+    "stop_type": "Close-detected holding-high drawdown, not restingintrabarstop; never use dailyhigh/low fortrigger."
+  },
+  "capital": {
+    "initial": "100000 USDT",
+    "target_nominal_fraction": "0.9",
+    "target_at_signal": "q_target=Decimal(.9)*equity_at_signal/Decimal(signal_close) - BTCunits_at_signal; flat-only =>units0/equitycash. Freezeq inpendingorder. Do not recompute atfill.",
+    "fill": "next eligible rawopen*(1+slip_bps/10000) forBUY; SELL rawopen*(1-slip_bps/10000). fee=fillednotional*(fee_bps/10000) additional inUSDT.",
+    "buy_cash": "principal=q_signal*executed_price; fee=principal*rate; required=principal+fee; accept iff required<=cash; cash_after=cash-required using exactlythe same roundedDecimal50required. Equality=>exactzero. No clip/epsilon/resize.",
+    "sell_cash": "sell all actualqty atfill; cash+=qty*fill - fee;qty=0;reset holdinghigh onactualsale",
+    "terminal": "Marklast rawclose; no forcedsale/exitfee; reportqty/high/pending inclbeyondwindow",
+    "unmodeled": "No partialfills/lotsteps/queue/impact; fractionalshares; nocashinterest",
+    "rounding_sequence": "Allsteps Decimal50 ROUND_HALF_EVEN; evaluateprincipal,fee,requiredonce thenreuse; no sequential cash-principal-fee subtraction."
+  },
+  "affordability_choices": [
+    {
+      "name": "REJECT_FIXED_QUANTITY_RECOMMENDED",
+      "behavior": "If plannedorder exceeds availablecash atdueopen includingfee, logREJECTED_INSUFFICIENT_CASH withfrozenqty/signal/due/required/available; nofill/fee, clearthatintent, preservecash. Samebarlaterclose may create a new order ifsignalstilltrue. Never silentlyretryoldorder.",
+      "reason": "Preserves source request quantity and avoids retrospectively changing target. Actual LEAN brokerage buyingpower/fee behavior not pinned; label explicitexecutionproxy."
+    },
+    {
+      "name": "RESIZE_AT_FILL_NOT_SELECTED",
+      "behavior": "Ifinsufficient, capqty=cash/(fill*(1+feerate)) or recompute90%atfill; theseare differentchoices and must not be combined.",
+      "reason": "Changes fixedsourcequantity, may investalmost100%when capped; weaker sourcefidelity. Do not implement withoutrootselection."
+    }
+  ],
+  "holding_high": {
+    "pending": "Store signal_close as high_seed onBUYintent; noactivehigh whileflat. Pendingdayscloses donotraise seed.",
+    "actual_buy": "Activate saved signalclose seed atactualfill, then atentrydayclose max(seed,thatclose). Do notseedactualopen orslippedfill.",
+    "exit_wait": "Continueposition-onlyclosehigh updates whilewaiting; pendingSELL remains latched earliestdue regardlesssubsequentsignal/recovery. This latch is explicitdelayedexecutionadaptation.",
+    "actual_sale": "clearhigh; no sameopenreentry; laterclosecancreate freshBUYseed"
+  },
+  "pending": {
+    "lag": "case-specific1or2calendar bars fromsignalcloseindex toexecutionopenindex",
+    "buy": "Rawentrydisappearingalone doesnotcancel a submittedmarketproxy. Repeatedentry whilewaiting retainsfirstqty/seed/signal/due. No heldstop evaluatedwhileflat; sourcestop is positiondependent.",
+    "sell": "Exitlatches untilsale; repeatedexitcannotpostpone; entrycannotcancel.",
+    "open_priority": "Atmostoneexistingintent executedor rejected peropen. Openfill first, thencloseindicators/heldexit-orflatentry. No sameopenbuy+sell.",
+    "end": "Do notconsumeoutsideevaluation; retainterminalintent withoutforcedaction"
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_each_side": 0,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_each_side": 20,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_each_side": 8,
+      "slippage_bps_each_side": 2,
+      "delay_bars": 2
+    }
+  ],
+  "benchmark": {
+    "proposal": "One new90%nominal signal-sized buyhold, base8fee+2slip, noadditionalcontrolvariants.",
+    "sizing": "Unconditionalbenchmarkorder atlastwarmupclose Dec31: q=.9*100000/Dec31rawclose; fixedlag1 executesJan1open withfee8/slip2 andidenticalrequired/rejectpolicy. Residualcash notguaranteed10%aftergap+fee; no rebalance.",
+    "rejection": "IfJan1gapunaffordable, logreject and remaincashentirewindow. Do notlookatactualgapbeforechoosingpolicy; no retrycontrolvariant.",
+    "comparability": "Samefixedsignalclosequantity and90%nominaltarget/cost/orderacceptance, not a promiseholdingisalways90%equity. StrategyfirstpossibleentryJan1close→Jan2openlag1/Jan3openlag2;benchmarkstartsJan1open bydeclaredpre-evalsignal.",
+    "research_count": "proposed4strategyconfigs+1newcontrol; no runs yet"
+  },
+  "statistics": "Carry frozen daily731returns withinitial100000anchor; CAGR365/731; sampleddof1Sharpe sqrt365/nullconstant; negativeMDD;24continuousmonthlyreturns; completefills/trips/eventlog; no OOS orpromotion.",
+  "kernel": "Neednewimmutablepartial-allocation+signal-fixedqty+holdingclosehigh implementation, independent verifier; cannot change frozen dailycashv1/v2.",
+  "QA": [
+    "EMAseed/readinessincludingexact100precloses",
+    "strictentry/equalEMA50exit/exact5%boundary",
+    "signalclose seed different fromfillopen; delayedflatcloseshigh ignored",
+    "frozenq undergap; Decimalrequired==cash allowed,epsilonabove rejects,zero/slip/costcases",
+    "buyretained afterrawsignalvanishes; repeats do notreset; heldexit latchandreset",
+    "sameopen singlefill; laterclose reentry; terminalintent retention",
+    "independentDecimal50 ledger +allfees/cash/high/pending +stats +prefixfuture +byteexact restore"
+  ],
+  "permissions": "No claims/history/newmarket/global/Git; root selects and freezesbeforeimplementation orrun.",
+  "supersedes_draft_sha256": "c0a111c63fcbec78f39f20dc7e543e7716916edac0610a2395310b657da8bb88"
+}

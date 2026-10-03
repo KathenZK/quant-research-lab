@@ -1,0 +1,38 @@
+{
+  "status": "PASS_DRAFT_V2_RULE_LIFECYCLE_REVIEW_NOT_EXECUTION_GATE",
+  "id": "M1266",
+  "reviewed_draft_sha256": "db3c10f5c222244d08bb3d9c9cfc3e29186ed5f4df3b0e8b9d92ad7b3e75c9b6",
+  "reviewed_draft_bytes": 7920,
+  "source_sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+  "prior_independent_review_sha256": "94c64d76841099195fbc8782783689e37dd3d43ed6f0a2c2e7ad5499a8c84678",
+  "finding": "v2 closes the identified Decimal affordability inconsistency: roundedrequired computedonce andused forbothacceptance andcashdebit. No furthermandatorytradingrulechange found in v2;rootmuststillfreezeinput/code/runtimeandindependentlyQAactualimplementation.",
+  "selected_policy_confirmed": [
+    "signalclosefixedquantity;90%nominalplusfee;noopenresize",
+    "exactcashrejectwithoutfeeorborrowing;clearrejectedintent;laterclosemayresubmitnewsignal",
+    "lag1/2pendingbuyretainsqty/seed/due evenifrawentrydisappears;noflatpositionstop",
+    "signalcloseseedactivatesonlyonactualbuy;entrydaycloseupdateshighbeforeexit",
+    "close-onlymaxandstrict5%drawdown;EMA50inclusiveexit;nointrabarstop",
+    "selllatcheduntilactualsale;noentrycancel/postpone;peakresetonsale",
+    "nosameopenreentry;sale-dayclosemaycreatenewflatentry",
+    "controlfixedlastwarmupcloseqty→firstevalopenlag1,fee8/slip2;cashreserveunrebalanced;notconstant90%exposure"
+  ],
+  "implementation_precision_requirements": [
+    "q_signal=(Decimal(.9)*cash)/signalclose, fee/slip ratesprecomputedasDecimalbps/10000; freezeeachintermediateandrounding",
+    "Sellcash notation cash+=qty*fill-fee should be implemented explicitly as cash_after=cash_before+(notional-fee) usingprecomputednotionalandfee, keepingthe statedRHSgrouping; verifiermustmatch. No(alreadyfrozen)oldkernelmutation.",
+    "Readinessglobal99fromexact100precloses;noextra22Sepmonthlybars seed;firststrategyevalsignalJan1close",
+    "Invalid prices/nonfinite/negativecash reject input;realgapreject iseventnotdatarepair;noresultdrivenfallback"
+  ],
+  "data_QA": "New831inputQA/reconstructionassignedtom0200; not independentlyacceptedbythissource/draftreview. Canonicalhashstillmustbeinsertedbeforefreeze;old48e4notnewhash.",
+  "benchmark_fairness": "Matched90%requestandbasecost; fee0/20remainstrategysensitivityagainstbasecontrolnotmatched-costalpha. SourceBTCUSD/Bitfinex/timewindow versusBinanceUSDT/windowadaptationremainsstrict0.",
+  "scope": {
+    "historical_feature_computations": 0,
+    "history_runs": 0,
+    "controls_run": 0,
+    "claims_created": 0,
+    "data_requests": 0,
+    "repo_writes": 0,
+    "execution_gate_released": false
+  },
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}
