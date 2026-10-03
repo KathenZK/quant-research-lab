@@ -1,0 +1,19 @@
+{
+ "record_id":"M0214","variant_id":"M0214-BTCUSDT-SMA10-20-HA-CROSS-LONG-20261003","family":"PUBLIC-M0214-SMA-HA","fidelity":"ADAPTATION",
+ "source_urls":["https://x.com/TrueCrypto28/status/1012082432407953414","https://www.tradingview.com/script/qSfUKFFx-Mr-Anderson-Simple-Moving-Average-Strategy-with-Bend10/"],
+ "source_status":"coordinator verified catalog rules; X normal web read returned empty content; TradingView web read restricted URL, no bypass",
+ "symbol":"BTCUSDT","market_type":"spot","timeframe":"1d UTC",
+ "source_scope":"catalog says crypto long and inverse short with optional Bend10; this run is BTCspot long-only ADAPTATION; not original exact reproduction",
+ "entry":"At close t SMA10>SMA20 AND close[t]>SMA10[t] AND close[t-1]<=SMA10[t-1] AND HAclose[t]>HAopen[t] AND HAclose[t-1]<=HAopen[t-1], while flat. All conditions same day, enter next raw open.",
+ "exit":"While long, any HAclose<HAopen OR raw close<=SMA10 OR SMA10<=SMA20 at close t; liquidate next raw open.",
+ "ambiguity":"Catalog already-broken-above can mean a state or fresh cross. This adaptation fixes a fresh upward cross and simultaneous HA green transition; no state/transition variant chosen after returns. Equality is neutral HA, nonbullish MA, lost price SMA. Bend10 disabled.",
+ "ha_formula":"HAclose=(raw O+H+L+C)/4; HAopen initial=(first raw O+C)/2; subsequent HAopen=(previous HAopen+previous HAclose)/2. HA used only for signal, never execution or marking.",
+ "initial_cash":100000,"buy_fraction_cash":0.95,"fee_bps":8,"slippage_bps":2,
+ "execution":"full fractional fills at raw next open plus adverse slip; raw close marking; no pyramiding, leverage, short, stop, terminal liquidation; stale buys while long and stale sells while flat ignored",
+ "input_start":"2022-12-01","evaluation_start":"2023-01-01","evaluation_end":"2024-12-31","input_sha256":"48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+ "predeclared_cases":["base fee8 lag1","fee0 lag1","fee20 lag1","fee8 lag2","buyhold fee8 lag1 95% first evaluation open"],
+ "cash_interest":0,"funding":0,"evidence_class":"historical_replay","oos_claim":false,
+ "exposure":"Window already exposed by M0216 and previous batch; old catalog trial count unknown, no DSR/PBO claim",
+ "data_status":"reuse hash-pinned spot diagnostic input; not canonical perpetual v3; retrospective archive PIT/tradability unproven",
+ "model_effort":"UNKNOWN"
+}

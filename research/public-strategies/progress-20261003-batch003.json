@@ -1,0 +1,35 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T07:06:07.315196+00:00",
+  "coordinator": "/root",
+  "batch": "003",
+  "tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0233"
+  ],
+  "strategy_config_runs": 31,
+  "benchmark_runs": 8,
+  "strict_reproductions": 0,
+  "blocked_ids": {
+    "M0004": "issuer data unavailable",
+    "M0211": "incomplete execution rules and missing source modules",
+    "M0232": "full code gated; futures and intraday input unavailable"
+  },
+  "prechecked_not_run": [
+    "M0220"
+  ],
+  "qa_and_restore_runs_excluded_from_trial_counts": true,
+  "previous_remote_commit": "65d9d21d0bf89a1c522d1e1d828215af57b7a511",
+  "previous_ci": "success:37104287741/111149687003",
+  "this_batch_remote_save": "pending; immutable receipt recorded in PR after upload",
+  "graph_imported": false,
+  "library_backup_id": null,
+  "full_6973_archive_byte_recovery": false,
+  "model_id": "UNKNOWN",
+  "reasoning_effort": "UNKNOWN"
+}

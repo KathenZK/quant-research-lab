@@ -1,0 +1,16 @@
+{
+ "record_id":"M0220","status":"PRECHECK_ONLY_NOT_FROZEN_FOR_EXECUTION","strategy_runs":0,"model_effort":"UNKNOWN",
+ "source_url":"https://courses.theartoftrading.com/pages/bitcoin-momentum-strategy",
+ "source_sha256":"8231266815c7ce26940f3254cd7574057612f0ad388b57a45874fa23e4cebc04",
+ "catalog_source_discrepancies":["catalog swing high vs source highest(low,7)","source caution[1] controls stop distance; current ATR5","source stop ratchets upward only and resets at entry signal","source explicit close<HTF EMA exit"],
+ "proposed_fidelity":"HYPOTHESIS","proposed_symbol":"BTCUSDT spot",
+ "proposed_calendar":"UTC Mon-Sun, discard partial boundary weeks; previous completed week EMA only",
+ "proposed_ema":"alpha2/21 first complete week close seed; require20 complete weekly observations; daily EMA20 first input close seed",
+ "proposed_atr":"Wilder ATR5, TR=max(H-L,abs(H-prevC),abs(L-prevC)); first TR=H-L; arithmetic mean first5 TR seed",
+ "source_capital":10000,"source_size_percent_equity":100,"source_fee_bps":10,
+ "sizing_pending":"Define fee-inclusive all-cash budget or disclose any95% cash adaptation before freezing; no implicit leverage to pay commission",
+ "proposed_first_signal_close_date":"2023-04-24","proposed_first_trade_open_date":"2023-04-25","proposed_evaluation_end":"2024-12-31","proposed_evaluation_days":617,
+ "input_sha256":"48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+ "pit_proven":false,"platform_bar_equivalence_proven":false,"oos_claim":false,
+ "execution_gate":"Coordinator confirms prior batch remote rebuild and CI, then freeze spec/exposure before any strategy run"
+}

@@ -576,3 +576,47 @@ research/public-strategies/M0200/artifacts/20261003-first-replay/**  # research/
 research/public-strategies/M0215/artifacts/20261003-first-replay/**  # research/public-strategies/M0215
 
 research/public-strategies/M0217/artifacts/20261003-first-replay/**  # research/public-strategies/M0217
+
+# Cloud public-catalog batch003: reviewed lightweight evidence only
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/environment.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/exposure.jsonl
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/graph-record.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/input-reference.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/local-restoration.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/result-manifest.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/results/base-nav.csv
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/results/base-trades.csv
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/results/summary.json
+research/public-strategies/M0212/artifacts/20261003-execution-anchor-v2/results/verification.json
+research/public-strategies/M0212/artifacts/20261003-first-replay/exposure.jsonl
+research/public-strategies/M0212/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0212/artifacts/20261003-first-replay/results/summary.json
+research/public-strategies/M0212/artifacts/20261003-first-replay/results/verification.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/base-nav-light.csv
+research/public-strategies/M0214/artifacts/20261003-first-replay/causality-validation.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/exposure.jsonl
+research/public-strategies/M0214/artifacts/20261003-first-replay/graph-record.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/independent-validation.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/input-reference.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/local-recovery.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/results/base-trades.csv
+research/public-strategies/M0214/artifacts/20261003-first-replay/results/summary.json
+research/public-strategies/M0214/artifacts/20261003-first-replay/validation.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/environment.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/exposure.jsonl
+research/public-strategies/M0233/artifacts/20261003-first-replay/graph-record.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/input-reference.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/local-recovery.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/publication-filelist.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/result-manifest.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/results/base-nav.csv
+research/public-strategies/M0233/artifacts/20261003-first-replay/results/base-trades.csv
+research/public-strategies/M0233/artifacts/20261003-first-replay/results/summary.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/source-manifest.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/source-validation.json
+research/public-strategies/M0233/artifacts/20261003-first-replay/validation.json
+research/public-strategies/M0211/artifacts/20261003-source-preflight/source-manifest.json
+research/public-strategies/M0211/artifacts/20261003-source-preflight/preflight-decision.json
+research/public-strategies/M0232/artifacts/20261003-source-preflight/source-review.json
+research/public-strategies/M0232/artifacts/20261003-source-preflight/publication-filelist.json

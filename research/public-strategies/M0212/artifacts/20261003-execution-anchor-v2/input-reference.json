@@ -1,0 +1,15 @@
+{
+  "input_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input.csv",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "source": "Binance Vision spot BTCUSDT daily",
+  "input_start": "2022-12-01",
+  "input_end": "2024-12-31",
+  "rows": 762,
+  "gaps": 0,
+  "filled_rows": 0,
+  "manifest_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/input-manifest.json",
+  "manifest_sha256": "17d1e72e3fc42f71ed94a771847ea4b4b3dd61c9ad290d0e73d05eca32ed23fc",
+  "rebuild_script": "research/public-strategies/M0216/scripts/rebuild_inputs.py",
+  "rebuild_script_sha256": "52b48a659791d6d8a9c817fce761f423831f45b46deb4978107941cfc4c950a1",
+  "pit_verified": false
+}

@@ -1,0 +1,89 @@
+{
+  "retrieved_at": "2026-10-03T07:02:06.037618+00:00",
+  "repository": "https://github.com/kas021/Crypto-bot",
+  "commit": "b88031b4d6cf1ad620769b1069a66b3857b7bf78",
+  "license_metadata": null,
+  "tree_files": [
+    "New Text Document.txt",
+    "README.md",
+    "app.js",
+    "app_1.js",
+    "bot_files_summary.csv",
+    "chart_script.py",
+    "chart_script_1.py",
+    "config.json",
+    "crypto-bot-dashboard.zip/README.md",
+    "crypto-bot-dashboard.zip/app.js",
+    "crypto-bot-dashboard.zip/bot_files_summary.csv",
+    "crypto-bot-dashboard.zip/config.json",
+    "crypto-bot-dashboard.zip/crypto_bot.py",
+    "crypto-bot-dashboard.zip/crypto_trading_bot_architecture.png",
+    "crypto-bot-dashboard.zip/crypto_trading_bot_architecture.svg",
+    "crypto-bot-dashboard.zip/index.html",
+    "crypto-bot-dashboard.zip/indicators.py",
+    "crypto-bot-dashboard.zip/install.sh",
+    "crypto-bot-dashboard.zip/requirements.txt",
+    "crypto-bot-dashboard.zip/risk_management.py",
+    "crypto-bot-dashboard.zip/strategies.py",
+    "crypto-bot-dashboard.zip/style.css",
+    "crypto-bot-dashboard.zip/trading_dashboard.png",
+    "crypto-bot-dashboard.zip/trading_dashboard.svg",
+    "crypto-bot-dashboard.zip/web_interface.py",
+    "crypto_bot.py",
+    "crypto_trading_bot_architecture.png",
+    "icon.png",
+    "index.html",
+    "indicators.py",
+    "install.sh",
+    "requirements.txt",
+    "risk_management.py",
+    "script.py",
+    "script_1.py",
+    "script_2.py",
+    "script_3.py",
+    "script_4.py",
+    "script_5.py",
+    "script_6.py",
+    "script_7.py",
+    "script_8.py",
+    "strategies.py",
+    "style.css",
+    "style_1.css",
+    "trading_dashboard.png",
+    "web_interface.py"
+  ],
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "files": [
+    {
+      "path": "strategies.py",
+      "url": "https://raw.githubusercontent.com/kas021/Crypto-bot/b88031b4d6cf1ad620769b1069a66b3857b7bf78/strategies.py",
+      "bytes": 15608,
+      "sha256": "13c0cdfc45552fe2ab3c07b9579fadd5f447337e527c37cc15571c79b7a88e6f"
+    },
+    {
+      "path": "indicators.py",
+      "url": "https://raw.githubusercontent.com/kas021/Crypto-bot/b88031b4d6cf1ad620769b1069a66b3857b7bf78/indicators.py",
+      "bytes": 13251,
+      "sha256": "9e4f2595cdba5d9c7b4a95d3f0dd275d9a4ddbe593cadf8f9d894160e96d9dc4"
+    },
+    {
+      "path": "risk_management.py",
+      "url": "https://raw.githubusercontent.com/kas021/Crypto-bot/b88031b4d6cf1ad620769b1069a66b3857b7bf78/risk_management.py",
+      "bytes": 10795,
+      "sha256": "e0d68bec2859ed6fd0cbe4969685afa24934c88fe86f13b78b07486856f74604"
+    },
+    {
+      "path": "crypto_bot.py",
+      "url": "https://raw.githubusercontent.com/kas021/Crypto-bot/b88031b4d6cf1ad620769b1069a66b3857b7bf78/crypto_bot.py",
+      "bytes": 4050,
+      "sha256": "ece358344ed158d0d05f35f44cb8768a4b142f272e0caa0f69095bef1420fddb"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/kas021/Crypto-bot/b88031b4d6cf1ad620769b1069a66b3857b7bf78/README.md",
+      "bytes": 8781,
+      "sha256": "b640ca78719aebb7292465afe1cca24d2bb5f713e138f53d9df4231f49295725"
+    }
+  ]
+}

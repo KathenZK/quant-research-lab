@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/Alqama-svg/quant_trading_engine",
+  "commit": "ef662462516eb7fa30d6dc26fa27333f59e43881",
+  "files": {
+    "strategies/mean_reversion.py": {
+      "url": "https://raw.githubusercontent.com/Alqama-svg/quant_trading_engine/ef662462516eb7fa30d6dc26fa27333f59e43881/strategies/mean_reversion.py",
+      "sha256": "52f359babecc66dc17f76b68a7e18006e62d4808cdeb4e08ce910cd52f544e3c"
+    },
+    "engine/backtest.py": {
+      "url": "https://raw.githubusercontent.com/Alqama-svg/quant_trading_engine/ef662462516eb7fa30d6dc26fa27333f59e43881/engine/backtest.py",
+      "sha256": "2a7c38990c3daaf2e2ff89b0e114bc2bc3270bcc8a632c031cdae95e4466c16b"
+    },
+    "engine/execution.py": {
+      "url": "https://raw.githubusercontent.com/Alqama-svg/quant_trading_engine/ef662462516eb7fa30d6dc26fa27333f59e43881/engine/execution.py",
+      "sha256": "9c0ad7c7aa7dfa7921e68d06084c08aa32e3233ae944e4cc987266a2c7619b4b"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/Alqama-svg/quant_trading_engine/ef662462516eb7fa30d6dc26fa27333f59e43881/LICENSE",
+      "sha256": "33f7f3c8cd465ff88276150a4c12a0e4c2528c25e8f4fbdf6dd5663eba297bd5"
+    }
+  }
+}

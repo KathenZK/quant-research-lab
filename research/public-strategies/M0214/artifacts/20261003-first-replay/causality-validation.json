@@ -1,0 +1,9 @@
+{
+  "ha_seed_and_recursion": "PASS manually calculated OHLC fixture",
+  "ma_equality_and_flat_ha": "PASS no entries; nonbullish exit",
+  "raw_open_fill_checks": 190,
+  "future_perturbation": {
+    "2023-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged",
+    "2024-06-30": "PASS all five configurations: pre-cutoff NAV/fills unchanged"
+  }
+}

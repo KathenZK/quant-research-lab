@@ -1,0 +1,16 @@
+{
+  "record_id": "M0212", "variant_id": "M0212-BTCUSDT-VOLUME-CONTRACTION-NEXTOPEN-20261003", "family": "M0212-VOLUME-CONTRACTION", "fidelity": "HYPOTHESIS",
+  "source": "https://x.com/pedma7/status/1691419485117599747", "source_access": "Normal web open returned zero content lines, source text not independently verified; no bypass",
+  "catalog_rule": "Crypto volume contraction: previous volume <= volume four bars ago AND previous close <= low two bars ago. Exit previous close above EMA(3) OR six bars held.",
+  "time_reference": "Decision after UTC bar t closes: enter if V[t-1]<=V[t-4] AND C[t-1]<=L[t-2]; exit if C[t-1]>EMA3[t-1] OR holding_bars>=6. Do not invent breakout confirmation from title.",
+  "ema": "alpha=2/(3+1)=0.5; seed first input close; recursive adjusted=False. December 2022 warmup, no backfill.",
+  "market": "Binance BTCUSDT spot, daily. Single crypto instance, not verified original author symbol or timeframe.",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5", "input_start": "2022-12-01", "input_end": "2024-12-31", "evaluation_start": "2023-01-01", "evaluation_end": "2024-12-31",
+  "initial_cash": 100000, "allocation": 0.95, "fee_bps": 8, "slippage_bps": 2,
+  "execution": "Closed t signal at t+1 open; sensitivity lag2 fills at t+2 open. One pending order, no replacement. Entry open bar counts as held bar1 at its close; at held bar6 close schedule exit. Fill exits can occur after 6 bars for lag2. No pre-evaluation pending orders, no terminal liquidation; discard orders beyond input.",
+  "position": "Long only, no stacking. Buy notional=95% available cash, fees from remainder; exit all fractional units. Mark at unadjusted spot close. Cash interest zero, no funding/borrow/tax/lot/impact.",
+  "sensitivity": [{"name":"fee0","fee_bps":0,"lag":1},{"name":"fee20","fee_bps":20,"lag":1},{"name":"lag2","fee_bps":8,"lag":2}],
+  "benchmark": "95% initial cash buy at first evaluation open, 8bps fee and 2bps slip; hold, no final liquidation",
+  "evidence_class": "historical_replay", "oos_claim": false, "model": "UNKNOWN", "effort": "UNKNOWN",
+  "limitations": ["Read catalog attribution, not restored full source; time-reference and EMA/size/execution are assumptions", "Window previously exposed in other strategies; original search count unknown", "Direct spot diagnostic does not claim perpetual V3 accepted normalized status", "Archive publication/revision timing not PIT-proven; USDT is not USD; no production readiness"]
+}

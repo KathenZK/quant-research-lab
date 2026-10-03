@@ -1,0 +1,33 @@
+{
+  "files": [
+    "README.md",
+    "m0212-core-ledger.md",
+    "decision-log.md",
+    "diagnostics/M0212-20261003.md",
+    "scripts/run_replay.py",
+    "scripts/run_replay_v2.py",
+    "scripts/test_contract.py",
+    "scripts/verify_replay.py",
+    "scripts/verify_replay_v2.py",
+    "specs/M0212-execution-anchor-v2.json",
+    "specs/M0212-first-replay.json",
+    "artifacts/20261003-execution-anchor-v2/LICENSE.md",
+    "artifacts/20261003-execution-anchor-v2/exposure.jsonl",
+    "artifacts/20261003-execution-anchor-v2/result-manifest.json",
+    "artifacts/20261003-execution-anchor-v2/results/summary.json",
+    "artifacts/20261003-execution-anchor-v2/results/verification.json",
+    "artifacts/20261003-first-replay/LICENSE.md",
+    "artifacts/20261003-first-replay/exposure.jsonl",
+    "artifacts/20261003-first-replay/result-manifest.json",
+    "artifacts/20261003-first-replay/results/summary.json",
+    "artifacts/20261003-first-replay/results/verification.json",
+    "artifacts/20261003-execution-anchor-v2/environment.json",
+    "artifacts/20261003-execution-anchor-v2/input-reference.json",
+    "artifacts/20261003-execution-anchor-v2/local-restoration.json",
+    "artifacts/20261003-execution-anchor-v2/graph-record.json",
+    "artifacts/20261003-execution-anchor-v2/results/base-nav.csv",
+    "artifacts/20261003-execution-anchor-v2/results/base-trades.csv"
+  ],
+  "excluded": "raw inputs, graph-detail.json and all non-baseline curves/trades",
+  "publication_by_coordinator_only": true
+}

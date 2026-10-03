@@ -1,0 +1,14 @@
+{
+  "files": [
+    "README.md",
+    "decision-log.md",
+    "diagnostics/M0211-source-preflight-20261003.md",
+    "artifacts/20261003-source-preflight/source-manifest.json",
+    "artifacts/20261003-source-preflight/preflight-decision.json"
+  ],
+  "excluded": [
+    "artifacts/20261003-source-preflight/private-source/",
+    "artifacts/20261003-source-preflight/config-reviewed-fields.json"
+  ],
+  "source_full_copy_publication": false
+}

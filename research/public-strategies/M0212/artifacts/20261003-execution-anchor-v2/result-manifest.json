@@ -1,0 +1,22 @@
+{
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "files": {
+    "specs/M0212-execution-anchor-v2.json": "feb7a449eec40ea4eb7e35e1b8c96eb8e6674398936c6396b086dc1551cbc9c0",
+    "scripts/run_replay_v2.py": "cbf331b57340b9e793316de6796c26e068c8b7952ec5007aa9eaeba7e01c2f29",
+    "scripts/verify_replay_v2.py": "559e798192df2e2be6ce18bae6740696284959054c728e233471668ca7de7a9b",
+    "scripts/test_contract.py": "ca7ffd7a5fd4bb25a4736afa3619bbef3cbb436be89ea3dc52e814c3300da5b3",
+    "artifacts/20261003-execution-anchor-v2/results/base-nav.csv": "e765f505a774b0b0880c45f2a97c4959be3f222f1b32b85cf22de47ef13ee97a",
+    "artifacts/20261003-execution-anchor-v2/results/base-trades.csv": "db08d15dd516342643ccf8e26baed51c9dd041005eca7cc9547d1e00c4b0252a",
+    "artifacts/20261003-execution-anchor-v2/results/buyhold-nav.csv": "ee23e20b7a7f69e4a6abaace9513542daf6a92c7055f51568b12175f9da802d1",
+    "artifacts/20261003-execution-anchor-v2/results/buyhold-trades.csv": "98d98a3c621c1ecebb65d26020735d24a2aa5279987c6fb53eb939021632d22b",
+    "artifacts/20261003-execution-anchor-v2/results/fee0-nav.csv": "b4fe02295f6fccc48e0e28a0587fe7b7ef7cdd4ccc40d3a70faf59d68b0cbc73",
+    "artifacts/20261003-execution-anchor-v2/results/fee0-trades.csv": "4cc30c66b8869be4d48558f167e9b0064341f2b13357ddd315993f9092b2df37",
+    "artifacts/20261003-execution-anchor-v2/results/fee20-nav.csv": "6ea565a4c144d5342249c283953e416a5e704e05cc3360be72caa994dc472346",
+    "artifacts/20261003-execution-anchor-v2/results/fee20-trades.csv": "f1fb213dbea8469d6c95ae1a239d3cf9eefb1731977815e9730fa80701bc4d2b",
+    "artifacts/20261003-execution-anchor-v2/results/lag2-nav.csv": "c9bb06e16ba341e96b089ae697ea8ec06476eb56f14ed815250db8b43540efb3",
+    "artifacts/20261003-execution-anchor-v2/results/lag2-trades.csv": "a1c8ec223ad8972e34de720d6da5365ea6ff41e6b50b3cc67993620169983b04",
+    "artifacts/20261003-execution-anchor-v2/results/summary.json": "e087986b27753500722755ed68313053946699688534c5e9776e9a64eb642ded",
+    "artifacts/20261003-execution-anchor-v2/results/verification.json": "d3505a903e8da2c88a71a27efd257afdec7b1e5d9c40e5cc70765d46db5afb00",
+    "artifacts/20261003-execution-anchor-v2/exposure.jsonl": "9287c3ae33e6cbaaadde6aef2edc948ae5dbdcdd0b1e06f86bdf628dcd245c92"
+  }
+}

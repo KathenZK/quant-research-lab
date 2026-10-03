@@ -244,3 +244,11 @@
 历史链接入口：[btc/1d-m0216-sma-cross/](btc/1d-m0216-sma-cross/README.md)。仅重定向，不是个人研究家族。
 
 [M0004 阻塞报告](public-strategies/M0004/README.md)。
+
+## 公开策略小批003
+
+- [M0212 主账](public-strategies/M0212/m0212-core-ledger.md)：时间锚假设，延迟敏感，explore。
+- [M0214 主账](public-strategies/M0214/m0214-core-ledger.md)：SMA与HA只多改编，explore。
+- [M0233 主账](public-strategies/M0233/m0233-core-ledger.md)：源码逐行重置的z分数只多改编，explore。
+
+公开策略后续预审（均尚未运行）：[M0211](public-strategies/M0211/README.md)、[M0220](public-strategies/M0220/README.md)、[M0232](public-strategies/M0232/README.md)。规则/访问阻塞与数据回测完成分别计数。
