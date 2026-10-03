@@ -32,3 +32,5 @@
 | [native5m-execution-proxy/](native5m-execution-proxy/README.md) | `v1` | BTCUSDT现货5m固定OHLC成交代理与独立Decimal校验；消费者逐文件SHA256 pin | M0300、M0302、M0305、M0306、M0307；原M0311不迁移 |
 
 | [catalog-daily-cash/](catalog-daily-cash/README-versions.md) | `v2` | 保留v1账户；v2可选实际成交后持仓收盘计时、强制退出锁存和独立核算 | M1396、M1463及M1346/M1270继续v1；M1349需自身C0后采用v2 |
+
+| [catalog-daily-input-view/](catalog-daily-input-view/README.md) | `v1` | 固定完整日线输入与同一账户视图的字节校验、特征切片和显式索引映射；[独立合成审查](catalog-daily-input-view/reviews/v1-independent-20261003.json)通过 | 批020 M2903、M3710、M0974；消费方仍须独立C0放行 |

@@ -273,6 +273,42 @@ def test_glossary_main_statuses_match_live_spec_schema() -> None:
   )
 
 
+def _verified_kernel_manifest_pins(manifest: Path) -> dict[str, str]:
+  """Accept legacy hash maps and byte-counted lists without weakening pin checks."""
+  payload = json.loads(manifest.read_text())
+  if type(payload) is not dict:
+    raise ValueError("manifest object required")
+  files = payload.get("files", {})
+  if type(files) is dict:
+    entries = [{"path": path, "sha256": digest} for path, digest in files.items()]
+  elif type(files) is list:
+    entries = files
+    if not entries or any(type(item) is not dict or set(item) != {"path", "bytes", "sha256"} for item in entries):
+      raise ValueError("manifest list requires path/bytes/sha256 records")
+  else:
+    raise ValueError("manifest files must be map or list")
+  pins = {}
+  for item in entries:
+    relative, digest = item["path"], item["sha256"]
+    if type(relative) is not str or not relative or "\\" in relative:
+      raise ValueError("manifest path must be a relative POSIX path")
+    path = Path(relative)
+    if path.is_absolute() or ".." in path.parts or path.as_posix() != relative or not path.parts or relative in pins:
+      raise ValueError("manifest unsafe, noncanonical or duplicate path")
+    if type(digest) is not str or re.fullmatch(r"[0-9a-f]{64}", digest) is None:
+      raise ValueError("manifest sha256 must be lowercase hex")
+    if "bytes" in item and (type(item["bytes"]) is not int or item["bytes"] < 0):
+      raise ValueError("manifest bytes must be a nonnegative integer")
+    frozen_file = manifest.parent / path
+    if not frozen_file.resolve().is_relative_to(manifest.parent.resolve()) or not frozen_file.is_file():
+      raise ValueError("manifest file missing or outside version directory")
+    body = frozen_file.read_bytes()
+    if hashlib.sha256(body).hexdigest() != digest or ("bytes" in item and len(body) != item["bytes"]):
+      raise ValueError("manifest frozen bytes mismatch")
+    pins[relative] = digest
+  return pins
+
+
 def test_shared_kernel_versions_are_frozen() -> None:
   """_shared-kernels 冻结版本目录的 SHA256 必须与 kernel README 登记值一致。"""
   import hashlib
@@ -299,11 +335,10 @@ def test_shared_kernel_versions_are_frozen() -> None:
       manifest_pins = {}
       manifest = version_dir / "manifest.json"
       if manifest.is_file() and hashlib.sha256(manifest.read_bytes()).hexdigest() in text:
-        manifest_pins = json.loads(manifest.read_text()).get("files", {})
-        for relative, expected in manifest_pins.items():
-          frozen_file = version_dir / relative
-          if not frozen_file.is_file() or hashlib.sha256(frozen_file.read_bytes()).hexdigest() != expected:
-            problems.append(f"{kernel_dir.name}/{version_dir.name}/{relative}: 冻结 manifest 不匹配")
+        try:
+          manifest_pins = _verified_kernel_manifest_pins(manifest)
+        except (ValueError, OSError) as exc:
+          problems.append(f"{kernel_dir.name}/{version_dir.name}: 冻结 manifest 不匹配: {exc}")
       for engine in sorted(version_dir.glob("*.py")):
         digest = hashlib.sha256(engine.read_bytes()).hexdigest()
         if digest not in text and manifest_pins.get(engine.name) != digest:
@@ -315,7 +350,8 @@ def test_shared_kernel_versions_are_frozen() -> None:
 
 
 @pytest.mark.parametrize("version_index", ["README.md", "README-versions.md"])
-def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, monkeypatch, version_index):
+@pytest.mark.parametrize("manifest_kind", ["map", "list"])
+def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, monkeypatch, version_index, manifest_kind):
   monkeypatch.setattr(sys.modules[__name__], "RESEARCH", tmp_path)
   kernels = tmp_path / "_shared-kernels"
   version = kernels / "example/v1"
@@ -324,16 +360,51 @@ def test_kernel_manifest_chain_rejects_tampered_sources_and_manifests(tmp_path, 
   engine = version / "engine.py"
   engine.write_text("VALUE = 1\n")
   manifest = version / "manifest.json"
-  manifest.write_text(json.dumps({"files": {"engine.py": hashlib.sha256(engine.read_bytes()).hexdigest()}}))
+  def write_manifest():
+    digest = hashlib.sha256(engine.read_bytes()).hexdigest()
+    files = {"engine.py": digest} if manifest_kind == "map" else [
+      {"path": "engine.py", "bytes": engine.stat().st_size, "sha256": digest}
+    ]
+    manifest.write_text(json.dumps({"files": files}))
+  write_manifest()
   (version.parent / "README.md").write_text("Frozen historical index\n")
   (version.parent / version_index).write_text("v1 " + hashlib.sha256(manifest.read_bytes()).hexdigest())
   test_shared_kernel_versions_are_frozen()
   engine.write_text("VALUE = 2\n")
   with pytest.raises(AssertionError, match="manifest"):
     test_shared_kernel_versions_are_frozen()
-  manifest.write_text(json.dumps({"files": {"engine.py": hashlib.sha256(engine.read_bytes()).hexdigest()}}))
+  write_manifest()
   with pytest.raises(AssertionError, match="SHA256"):
     test_shared_kernel_versions_are_frozen()
+
+
+@pytest.mark.parametrize("mutation", [
+  "duplicate", "absolute", "parent", "dot", "backslash", "bool_bytes", "float_bytes",
+  "negative_bytes", "wrong_bytes", "missing_bytes", "bad_sha", "nonstring_path", "extra_key", "bad_files",
+])
+def test_kernel_manifest_list_rejects_invalid_records(tmp_path, mutation):
+  engine = tmp_path / "engine.py"
+  engine.write_text("VALUE = 1\n")
+  item = {"path": "engine.py", "bytes": engine.stat().st_size, "sha256": hashlib.sha256(engine.read_bytes()).hexdigest()}
+  files = [item]
+  if mutation == "duplicate":
+    files.append(dict(item))
+  elif mutation in {"absolute", "parent", "dot", "backslash", "nonstring_path"}:
+    item["path"] = {"absolute": str(engine), "parent": "../engine.py", "dot": "./engine.py", "backslash": "dir\\engine.py", "nonstring_path": 7}[mutation]
+  elif mutation in {"bool_bytes", "float_bytes", "negative_bytes", "wrong_bytes"}:
+    item["bytes"] = {"bool_bytes": True, "float_bytes": float(engine.stat().st_size), "negative_bytes": -1, "wrong_bytes": 0}[mutation]
+  elif mutation == "missing_bytes":
+    del item["bytes"]
+  elif mutation == "bad_sha":
+    item["sha256"] = "z" * 64
+  elif mutation == "extra_key":
+    item["ignored"] = True
+  else:
+    files = "engine.py"
+  manifest = tmp_path / "manifest.json"
+  manifest.write_text(json.dumps({"files": files}))
+  with pytest.raises(ValueError, match="manifest"):
+    _verified_kernel_manifest_pins(manifest)
 
 
 def test_live_specs_directories_are_not_empty() -> None:
