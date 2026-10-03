@@ -53,3 +53,9 @@ research_classification: strategy_family
 
 来源：https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py
 源码SHA256：ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41；合同SHA256：2de86c76de5751fca58ce116e8275935f1a1985ede624e239f060831d4ade1fc。
+
+## 已审展示派生（2026-10-03）
+
+366个日收盘点按原USDT权益/100000转换，首样本不重定基；全5m源回撤与日频显示回撤分列。保留四配置零交易、固定原幂次和Sharpe null，不为制造交易调参。
+
+[结构化记录](artifacts/20261003-public-display-prep/graph-record.json)、[详情](artifacts/20261003-public-display-prep/graph-detail.json)、[派生manifest](artifacts/20261003-public-display-prep/public-display-manifest.json)、[轻量曲线](artifacts/20261003-public-display-prep/base-nav-light.csv)与[可重建工具及独审清单](../M0287/scripts/public-display-v2/README.md)作为附加公开证据保存。manifest类型为PUBLIC_DERIVED_DISPLAY_MANIFEST/v2，生成时STAGED_NOT_IMPORTED状态原样冻结；此处不声明Graph默认16条已适配或Site已部署。新增回测0、控制0、严格复现0；C0与原结果未改。

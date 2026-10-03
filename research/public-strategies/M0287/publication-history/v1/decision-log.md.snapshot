@@ -5,5 +5,3 @@
 3. 全部源/因果/输入核验后C0冻结并独立放行，4配置首次回放。
 4. 独立Decimal、事件时间与所有指标复核；原限价成交未复现，因此只给诊断标签。
 5. 私有恢复归档后须完成Library实际下载和逐字节重放；完成状态以独立收据为准；不写全局索引/认领/网站。
-
-2026-10-03T16:51:17.291119+00:00：追加独审通过的4个展示派生文件；输入固定dba8d1d64318f9909cdcfd3bc9c382842a1a742b，不重算、不改C0、原结果或source pins。研究标签 ADAPTED 保留，原publication revision 1及原README/decision字节存于publication-history/v1。仅准备Git公开保存，Graph v2兼容与Site绑定另行验收；本次0新增运行/控制。

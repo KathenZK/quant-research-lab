@@ -1,0 +1,399 @@
+{
+  "audit": {
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "definition_bound": false,
+    "deployed": false,
+    "oos_claim": false,
+    "promotion": false,
+    "strict_replication": false,
+    "trusted_input": false
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "metrics": {
+      "annualized_return": 1.1458107566464215,
+      "daily_observations": 366,
+      "end": "2025-01-01T00:00:00Z",
+      "fees_paid": 75.9392486011191,
+      "final_cash": 5000.0,
+      "final_equity": 215030.41230956875,
+      "final_quantity": 2.2444901717274597,
+      "intrabar_stop_roi_ambiguities": 0,
+      "max_drawdown": 0.32021064669603316,
+      "observations": 105408,
+      "position_bar_fraction": 1.0,
+      "round_trips": 0,
+      "same_bar_stop_roi_hits": 0,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "start": "2024-01-01T00:00:00Z",
+      "total_return": 1.1503041230956876,
+      "trades": 1,
+      "winning_round_trip_fraction": null
+    },
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "new_control_runs": 0,
+    "origin_run_id": "M0311-20261003-first-replay",
+    "path_base": "repository_root",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57"
+  },
+  "control_configurations": 0,
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "hypothesis": null,
+    "paper": null,
+    "status": "NOT_ESTABLISHED_IN_APPROVED_SOURCE"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "PUBLIC-M0287-MULTIRSI"
+  ],
+  "fidelity_class": "ADAPTED",
+  "id": "M0287",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "PUBLIC-M0287-MULTIRSI",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "172d2faf0551add33dab7eedf42648789c0b03fc1592f5fa3d5deb693b479d62",
+      "origin_run_id": "M0287-20261003-dot-b007-v1",
+      "protocol_sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124",
+      "variant_id": "M0287-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "2024 already exposed in previous research; no holdout or OOS inference; unknown historical search count remains unknown; DSR/PBO unavailable",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready",
+    "BTCspot single-instance,95%cash/costs/nextopen and OHLC risk exits remain adapted execution proxy",
+    "Original author runtime/universe/fill model not established",
+    "Zero-trade null Sharpe is undefined, never zero or an execution error; parameters are not changed to produce trades.",
+    "Display equity uses original absolute USDT / frozen100000, not first-sample rebasing; source native drawdown stays separate.",
+    "No benchmark curve reconstructed; reused M0311 summary only."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "name": "MultiRSI：BTC现货5m执行代理",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "保留SMA5>=SMA200与原生/完整10m、40m RSI比较；不按注释反转均线条件。 base收益-48.5621%，完整往返584次；仅执行改编诊断。",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "ADAPTED",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "172d2faf0551add33dab7eedf42648789c0b03fc1592f5fa3d5deb693b479d62",
+      "origin_run_id": "M0287-20261003-dot-b007-v1",
+      "protocol_sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124",
+      "variant_id": "M0287-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003"
+    }
+  ],
+  "results": {
+    "base": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 8,
+        "name": "base"
+      },
+      "metrics": {
+        "annualized_return": -0.4846855535522455,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 70093.07252545598,
+        "final_cash": 51437.929015308815,
+        "final_equity": 51437.929015308815,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.5150198345647721,
+        "observations": 105408,
+        "position_bar_fraction": 0.16754895264116576,
+        "round_trips": 584,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": -3.1332788924902775,
+        "sharpe_5m": -3.0594189692544926,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": -0.48562070984691186,
+        "trades": 1168,
+        "winning_round_trip_fraction": 0.4863013698630137
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "delay_bars": 2,
+        "fee_bps": 8,
+        "name": "delay2"
+      },
+      "metrics": {
+        "annualized_return": -0.5251833073259744,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 64255.708073323054,
+        "final_cash": 47384.875995454364,
+        "final_equity": 47384.875995454364,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.5424391396164355,
+        "observations": 105408,
+        "position_bar_fraction": 0.16746357012750454,
+        "round_trips": 577,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": -3.5966667805226242,
+        "sharpe_5m": -3.4154781618813788,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": -0.5261512400454564,
+        "trades": 1154,
+        "winning_round_trip_fraction": 0.464471403812825
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 0,
+        "name": "fee0"
+      },
+      "metrics": {
+        "annualized_return": 0.2676836192450336,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 0.0,
+        "final_cash": 126850.76774959186,
+        "final_equity": 126850.76774959186,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.2169198235220331,
+        "observations": 105408,
+        "position_bar_fraction": 0.16604052823315119,
+        "round_trips": 598,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": 1.2172769949740256,
+        "sharpe_5m": 1.2559896444172363,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": 0.26850767749591853,
+        "trades": 1196,
+        "winning_round_trip_fraction": 0.6120401337792643
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "delay_bars": 1,
+        "fee_bps": 20,
+        "name": "fee20"
+      },
+      "metrics": {
+        "annualized_return": -0.8555150798297406,
+        "daily_observations": 366,
+        "end": "2025-01-01T00:00:00Z",
+        "fees_paid": 104160.85011773923,
+        "final_cash": 14372.114424982032,
+        "final_equity": 14372.114424982032,
+        "final_quantity": 0.0,
+        "intrabar_stop_roi_ambiguities": 0,
+        "max_drawdown": 0.8600511858280965,
+        "observations": 105408,
+        "position_bar_fraction": 0.16874430783242259,
+        "round_trips": 569,
+        "same_bar_stop_roi_hits": 0,
+        "sharpe": -9.561591078042436,
+        "sharpe_5m": -8.73962667772751,
+        "start": "2024-01-01T00:00:00Z",
+        "total_return": -0.8562788557501797,
+        "trades": 1138,
+        "winning_round_trip_fraction": 0.28295254833040423
+      }
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "catalog_omissions": [
+      "Native source uses SMA5>=SMA200 despite comment bearish; do not reverse",
+      "10m/40m complete-candle merge timing fixed by pinned technical.util; never use unclosed groups early",
+      "ROI1%, stop5% and framework execution flags must be frozen from actual source/reference"
+    ],
+    "execution": {
+      "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+      "budget_includes_buy_fee": true,
+      "cash_budget_fraction": 0.95,
+      "cash_currency": "USDT",
+      "cash_interest": 0,
+      "direction": "long_only",
+      "exit_profit_offset": 0.0,
+      "exit_profit_only": false,
+      "fractional_fills": true,
+      "funding": "not applicable spot without borrowing",
+      "initial_cash": 100000,
+      "intrabar_execution_latest_overrides": {},
+      "leverage": 1,
+      "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+      "max_positions": 1,
+      "open_execution_overrides": {},
+      "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+      "proxy_changes": {
+        "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+        "pending": "No restinglimit states/timeouts/cancellations or partialfills",
+        "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+        "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+        "stop": "Original limit stop replaced by market-style gap/threshold full fill"
+      },
+      "proxy_label": "ADAPTED_EXECUTION_PROXY",
+      "pyramiding": false,
+      "sequence": [
+        "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+        "flat entry due from previous closedbar; never same-bar reentry after sale",
+        "open<=stop triggers stop gap; else open>ROI strict gap",
+        "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+        "mark remaining position at rawclose; no terminal forced sale"
+      ],
+      "slippage_bps": 2,
+      "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded"
+    },
+    "parameters": {
+      "external_config_overrides": {},
+      "full_effective_attributes": {
+        "can_short": false,
+        "exit_profit_offset": 0.0,
+        "exit_profit_only": false,
+        "ignore_roi_if_entry_signal": false,
+        "minimal_roi": {
+          "0": 0.01
+        },
+        "order_time_in_force": {
+          "entry": "GTC",
+          "exit": "GTC"
+        },
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60
+        },
+        "position_adjustment_enable": false,
+        "startup_candle_count": 0,
+        "stoploss": -0.05,
+        "timeframe": "5m",
+        "trailing_stop": false,
+        "use_custom_roi": false,
+        "use_custom_stoploss": false,
+        "use_exit_signal": true
+      },
+      "loaded_parameter_values": {},
+      "parameter_sidecars": false
+    },
+    "risk": {
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.05
+    },
+    "source_signal_rules": "Entry SMA5>=SMA200 and nativeRSI14<40mRSI14-20; exit nativeRSI14>10mRSI14 and>40mRSI14. Source comment bearish does not reverse SMA comparison. ffill only, no backfill.",
+    "source_specific_requirements": {
+      "higher_timeframes": "Derive only10m/40m from held native5m. Original resampled_merge availability is high-open+interval-5m native open, usable only after that5m closes. Preserve source ffill and NaN; no backfill or early incomplete bucket.",
+      "no_extra_market_data": true,
+      "observed_distribution_version": "1.7.0",
+      "rules": "Entry SMA5>=SMA200 AND native RSI14<40m RSI14-20; exit native RSI14>10m RSI14 AND >40m RSI14. Preserve source comparison despite its bearish comment.",
+      "technical_commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+      "technical_util_sha256": "8f16e768c44c3c2b3171a4c04cc834fa26caf1ac6a8cf209affbfb31fd1fac3d",
+      "validation": "Independent complete-group OHLCV/WilderRSI and all-row availability; original and shared feature bridge/prefix/future tests; first valid derived RSI indices29/119, SMA200 index199 on aligned fixture."
+    }
+  },
+  "signals": {
+    "collisions": 0,
+    "entry_rows": 5153,
+    "exit_rows": 41999
+  },
+  "source": {
+    "bytes": 2326,
+    "class_name": "MultiRSI",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py",
+    "id": "M0287",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "path": "user_data/strategies/berlinguyinca/MultiRSI.py",
+    "private_original_preserved": true,
+    "repository": "freqtrade/freqtrade-strategies",
+    "sha256": "0bd453350bdf32db4355277d79a3c7268d166d043bab59e30403a1e97687aa06",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/MultiRSI.py"
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 4721,
+      "path": "research/public-strategies/M0287/specs/C0.json",
+      "sha256": "6f4d664059798508748ff01c03c8f98c8a3648908bf53e4fc44052c4965956e6",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/specs/C0.json"
+    },
+    "attribution": {
+      "bytes": 1037,
+      "path": "research/public-strategies/M0287/ATTRIBUTION.md",
+      "sha256": "bd4ea80f732e0aa26c40df4064d603ad265668c7c0ec08aaac4bc7966f35d94e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/ATTRIBUTION.md"
+    },
+    "base_daily": {
+      "bytes": 59364,
+      "path": "research/public-strategies/M0287/artifacts/results/base-daily-equity.json",
+      "sha256": "0a1708b98142c8ce7f1757cd0a82f6085278ffdb40c4593ee3b010c46ff4902f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/base-daily-equity.json"
+    },
+    "delay2_daily": {
+      "bytes": 59267,
+      "path": "research/public-strategies/M0287/artifacts/results/delay2-daily-equity.json",
+      "sha256": "ac4710eeee9aef77bb9be83ef5c0e9ac12e8a257f723f1ecf5dd86a4f75c5c8e",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/delay2-daily-equity.json"
+    },
+    "fee0_daily": {
+      "bytes": 59791,
+      "path": "research/public-strategies/M0287/artifacts/results/fee0-daily-equity.json",
+      "sha256": "80424fba512351179afb35267a4db9c8864f608be1b071b62fa4478e15c7dce9",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/fee0-daily-equity.json"
+    },
+    "fee20_daily": {
+      "bytes": 59246,
+      "path": "research/public-strategies/M0287/artifacts/results/fee20-daily-equity.json",
+      "sha256": "c565181d392f137e55c8f61335aab102cbb60ae36eeb9fcd57ee7357a1ba0c0d",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/fee20-daily-equity.json"
+    },
+    "protocol": {
+      "bytes": 22332,
+      "path": "research/public-strategies/M0287/specs/protocol.json",
+      "sha256": "f916a7de0e5f70db54308fa458845db12ecd8336a5b4a9a55f0f2391f1605124",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/specs/protocol.json"
+    },
+    "publication_manifest": {
+      "bytes": 4345,
+      "path": "research/public-strategies/M0287/publication-manifest.json",
+      "sha256": "3e320bbf4c9d8ea97630852344a70ed9ec90c8f8571d25c2fd8a4f41541a4edf",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 5085,
+      "path": "research/public-strategies/M0287/README.md",
+      "sha256": "89b97914071f777423b5a779c967f3002c1b556dce2af967a9602822c80f7322",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/README.md"
+    },
+    "source_rule_card": {
+      "bytes": 3518,
+      "path": "research/public-strategies/M0287/specs/source-rule-card.json",
+      "sha256": "fa6ccc292ca604b0246264c81c8dd015f33b27d3e1c0edbfffd0cb8bee3e02e3",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/specs/source-rule-card.json"
+    },
+    "summary": {
+      "bytes": 6900,
+      "path": "research/public-strategies/M0287/artifacts/results/summary.json",
+      "sha256": "516ebf2b8b84ce5d20f779acbf30c7eef4c357a12d8d910a8913a4b164a49392",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/summary.json"
+    },
+    "validation_summary": {
+      "bytes": 692,
+      "path": "research/public-strategies/M0287/artifacts/results/validation-summary.json",
+      "sha256": "8b13b2fb44ba0cec684077c0f1bd2521dfcb8b3931a8d54871f8e203e6c609dc",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M0287/artifacts/results/validation-summary.json"
+    }
+  },
+  "status": "tested_adapted_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}

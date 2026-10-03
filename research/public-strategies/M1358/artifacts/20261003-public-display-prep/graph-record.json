@@ -1,0 +1,401 @@
+{
+  "audit": {
+    "PIT": "NOT_PROVEN",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "source_rule_attribution_status": "STATE_RULES_VERIFIED_EXECUTION_ADAPTED",
+    "source_verification_status": "VISIBLE_CLASS_AND_FIXED_CATALOG_REVIEWED",
+    "strict_reproductions": 0
+  },
+  "benchmark_curve": [],
+  "benchmark_reference": {
+    "new_control_runs": 0,
+    "origin_record_id": "M0216",
+    "result": {
+      "completed_round_trips": 0,
+      "events": [],
+      "fills": 1,
+      "metrics": {
+        "cagr": 1.3258858046070183,
+        "final_equity": 542226.9858060954,
+        "max_drawdown": -0.25848029746503176,
+        "observations": 731,
+        "sharpe_zero_cash": 2.00578922935108,
+        "total_return": 4.422269858060954
+      },
+      "periods": {
+        "2023": {
+          "cagr": 1.4771161418067562,
+          "final_equity": 247711.61418067562,
+          "max_drawdown": -0.19471872279443359,
+          "observations": 365,
+          "sharpe_zero_cash": 2.3374669139995365,
+          "total_return": 1.4771161418067562
+        },
+        "2024": {
+          "cagr": 1.1842641380269758,
+          "final_equity": 542226.9858060954,
+          "max_drawdown": -0.25848029746503176,
+          "observations": 366,
+          "sharpe_zero_cash": 1.752396567998615,
+          "total_return": 1.1889445418195308
+        }
+      }
+    },
+    "result_key": "buyhold",
+    "same_account_basis": "100000USDT;95%pre-fee notional plus quote fee8bps;2bps adverse; first eval open purchase, no terminal sale;731daily closes",
+    "summary_path": "research/public-strategies/M0216/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "a8941d6cdb767b12fbec960836042b6b83ddcf8fa0f4b27587a6669952f04c42"
+  },
+  "configuration_runs": 4,
+  "control_configurations": 0,
+  "definition_revision_bound": false,
+  "economic_basis": {
+    "evidence_role": "report",
+    "hypothesis": "趋势延续假设",
+    "paper": null,
+    "paper_status": "FORUM_NOT_PAPER",
+    "status": "RESEARCH_INTERPRETATION_NOT_SOURCE_RISK_PREMIUM_PROOF"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "families": [
+    "daily-ema13-48-state"
+  ],
+  "fidelity_class": "HYPOTHESIS",
+  "id": "M1358",
+  "implementations": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "family": "daily-ema13-48-state",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "2ff97f2bcfe26ffa4056985c1c5008eaaba87a4a6945d8e44c47167ded1e9d40",
+      "origin_run_id": "m1358-coldstart-daily-20261003-v2",
+      "protocol_sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45",
+      "variant_id": "M1358-coldstart-daily-v2-base"
+    }
+  ],
+  "limitations": [
+    "不是原作者严格复现。",
+    "因果/账本验证不证明未来获利或真实成交。",
+    "原论坛源码许可未证，未包含在外传恢复包。",
+    "Library远端保存未验证。",
+    "Only first close plus 24 UTC month ends are public; 25 samples do not constitute 731 daily points.",
+    "Graph HYPOTHESIS enum retained from original approved display; actual research fidelity ADAPTED_EXECUTION_PROXY remains explicit.",
+    "Original private-output manifest is provenance only, never a public derived-display manifest or permission to copy its outputs."
+  ],
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "name": "BTCUSDT 日线 EMA13/48 状态交易（冷启动适配）",
+  "new_control_runs": 0,
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "reason": "ADAPTED_EXECUTION_PROXY；1规则实现、4预定配置；strict0",
+  "related_results": [
+    {
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "fidelity_class": "HYPOTHESIS",
+      "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+      "manifest_sha256": "2ff97f2bcfe26ffa4056985c1c5008eaaba87a4a6945d8e44c47167ded1e9d40",
+      "origin_run_id": "m1358-coldstart-daily-20261003-v2",
+      "protocol_sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45",
+      "variant_id": "M1358-coldstart-daily-v2-base"
+    }
+  ],
+  "research_fidelity": "ADAPTED",
+  "results": {
+    "base": {
+      "completed_round_trips": 8,
+      "fee_bps": 8,
+      "fills": 17,
+      "lag_days": 1,
+      "metrics": {
+        "cagr": 0.47085634600691884,
+        "final_equity": 216570.65688213613,
+        "max_drawdown": -0.30034824099753377,
+        "observations": 731,
+        "sharpe_zero_cash": 1.2247757266540886,
+        "total_return": 1.1657065688213613
+      },
+      "periods": {
+        "2023": {
+          "cagr": 0.2922121388168273,
+          "final_equity": 129221.21388168274,
+          "max_drawdown": -0.19404624227312106,
+          "observations": 365,
+          "sharpe_zero_cash": 0.9857309942415282,
+          "total_return": 0.2922121388168273
+        },
+        "2024": {
+          "cagr": 0.6736053261514792,
+          "final_equity": 216570.65688213613,
+          "max_drawdown": -0.30034824099753377,
+          "observations": 366,
+          "sharpe_zero_cash": 1.4232304756035954,
+          "total_return": 0.6759682901635029
+        }
+      },
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "terminal_position_open": true
+    },
+    "fee0": {
+      "completed_round_trips": 8,
+      "fee_bps": 0,
+      "fills": 17,
+      "lag_days": 1,
+      "metrics": {
+        "cagr": 0.4800697655918469,
+        "final_equity": 219296.09622664924,
+        "max_drawdown": -0.29697703942571707,
+        "observations": 731,
+        "sharpe_zero_cash": 1.2421801013457785,
+        "total_return": 1.1929609622664925
+      },
+      "periods": {
+        "2023": {
+          "cagr": 0.30091710730639654,
+          "final_equity": 130091.71073063965,
+          "max_drawdown": -0.1902395048601525,
+          "observations": 365,
+          "sharpe_zero_cash": 1.0079670534175034,
+          "total_return": 0.30091710730639654
+        },
+        "2024": {
+          "cagr": 0.6833005097951479,
+          "final_equity": 219296.09622664924,
+          "max_drawdown": -0.29697703942571707,
+          "observations": 366,
+          "sharpe_zero_cash": 1.4375151021070822,
+          "total_return": 0.68570383919934
+        }
+      },
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "terminal_position_open": true
+    },
+    "fee20": {
+      "completed_round_trips": 8,
+      "fee_bps": 20,
+      "fills": 17,
+      "lag_days": 1,
+      "metrics": {
+        "cagr": 0.45711855076938934,
+        "final_equity": 212538.54628351986,
+        "max_drawdown": -0.3053840697508182,
+        "observations": 731,
+        "sharpe_zero_cash": 1.1986077854989587,
+        "total_return": 1.1253854628351987
+      },
+      "periods": {
+        "2023": {
+          "cagr": 0.2792399305676767,
+          "final_equity": 127923.99305676766,
+          "max_drawdown": -0.19973352205367678,
+          "observations": 365,
+          "sharpe_zero_cash": 0.952295321928078,
+          "total_return": 0.2792399305676767
+        },
+        "2024": {
+          "cagr": 0.659140935547986,
+          "final_equity": 212538.54628351986,
+          "max_drawdown": -0.3053840697508182,
+          "observations": 366,
+          "sharpe_zero_cash": 1.4017544281253709,
+          "total_return": 0.661443965317777
+        }
+      },
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "terminal_position_open": true
+    },
+    "lag2": {
+      "completed_round_trips": 8,
+      "fee_bps": 8,
+      "fills": 17,
+      "lag_days": 2,
+      "metrics": {
+        "cagr": 0.3717947457928077,
+        "final_equity": 188345.13416343433,
+        "max_drawdown": -0.35169382750554146,
+        "observations": 731,
+        "sharpe_zero_cash": 1.0262220326145512,
+        "total_return": 0.8834513416343432
+      },
+      "periods": {
+        "2023": {
+          "cagr": 0.19749831675991558,
+          "final_equity": 119749.83167599156,
+          "max_drawdown": -0.2452308205419339,
+          "observations": 365,
+          "sharpe_zero_cash": 0.7284988914677673,
+          "total_return": 0.19749831675991558
+        },
+        "2024": {
+          "cagr": 0.5708767703474449,
+          "final_equity": 188345.13416343433,
+          "max_drawdown": -0.35169382750554146,
+          "observations": 366,
+          "sharpe_zero_cash": 1.2638486569720582,
+          "total_return": 0.5728217027731766
+        }
+      },
+      "queued_intents": 34,
+      "skipped_stale_intents": 17,
+      "terminal_pending": 0,
+      "terminal_position_open": true
+    }
+  },
+  "reused_control_configurations": 1,
+  "rules": {
+    "execution": {
+      "borrowing": false,
+      "buy_fee_additional_in_USDT": true,
+      "buy_notional_fraction_of_pre_fee_cash": 0.95,
+      "cash_interest": 0,
+      "direction": "long_only",
+      "fills": "closed UTC daily signal -> next daily open (or second open in lag2), adverse slippage; guaranteed full fractional fill",
+      "funding": "not applicable spot without borrowing",
+      "initial_cash": 100000,
+      "leverage": 1,
+      "lot_min_notional_orderbook_partial_fills": "NOT_MODELED",
+      "max_positions": 1,
+      "no_pyramiding_or_rebalancing": true,
+      "no_stop_roi_trailing_drawdown_halt": true,
+      "pending": "Queue each actual source action for index+lag. At due open BUY only if flat, SELL only if long; preserve/log duplicate stale intents. No silent cancellation/re-timing due to later opposite condition. No fills beyond window.",
+      "phase_order": [
+        "execute due prior closed-day intent at open",
+        "mark held quantity at current raw close",
+        "update cold-start EMA with this completed close",
+        "evaluate original state gate against current actual holding and queue future intent"
+      ],
+      "sell_all_quantity": true,
+      "slippage_bps": 2,
+      "sole_cash_currency": "USDT",
+      "source_decision_gate": "At close, only when slow ready; flat quantity<=0 AND EMA13>EMA48 queues BUY; long quantity>0 AND EMA13<EMA48 queues SELL; equality no action.",
+      "terminal": "no forced liquidation; mark raw final close; no hypothetical terminal exit fees"
+    },
+    "source_signal_rules": {
+      "account_currency_explicitly_set": false,
+      "brokerage_account_type": "Margin",
+      "cash_call": {
+        "amount": 100000,
+        "currency": "USDT"
+      },
+      "entry": "slow ready AND quantity <= 0 AND fast > slow -> target allocation 1",
+      "equality": "no action",
+      "exit": "slow ready AND quantity > 0 AND fast < slow -> liquidate",
+      "explicit_fees_slippage_calendar_timezone": null,
+      "explicit_stop_roi_trailing": null,
+      "explicit_warmup": null,
+      "fast_period": 13,
+      "instrument": "BTCUSDT",
+      "market": "Binance",
+      "normal_generated_exposure": "long/flat; no short order in class",
+      "original_end": [
+        2022,
+        3,
+        31
+      ],
+      "original_start": [
+        2021,
+        4,
+        1
+      ],
+      "previous_time_field": "assigned but unused in decisions",
+      "resolution": "Daily",
+      "security_type": "Crypto",
+      "signal_type": "state comparison, no prior-value crossing gate",
+      "slow_period": 48
+    }
+  },
+  "source": {
+    "author": "Andy Lee",
+    "capture_utc": "2026-10-03T15:05:40.247923+00:00",
+    "complete_original_project_verified": false,
+    "complete_visible_class": true,
+    "date_timezone": null,
+    "fulltext_external_transfer_allowed": false,
+    "html_sha256": "cca062d41efd117848eb34a564ea83c02fc3c4cc5c8649b40f65365623c5afee",
+    "license_status": "FORUM_CODE_REDISTRIBUTION_NOT_ESTABLISHED",
+    "observed_thread_datePublished": "2022-05-13 01:26:56",
+    "original_runtime_pin": null,
+    "revision_semantics": "Captured current rendered bytes; original author revision/edit history not established.",
+    "title": "EMA crossover on crypto",
+    "url": "https://www.quantconnect.com/forum/discussion/13690/ema-crossover-on-crypto/",
+    "visible_class_sha256": "b568553dabbe304d814d4e15d5ebbab1a343b4688b16fea1573d433600833eba"
+  },
+  "source_artifacts": {
+    "C0": {
+      "bytes": 6198,
+      "path": "research/public-strategies/M1358/specs/C0-v2.json",
+      "sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/C0-v2.json"
+    },
+    "numerics": {
+      "bytes": 1383,
+      "path": "research/public-strategies/M1358/specs/numerics-and-exposure-v2.json",
+      "sha256": "74fa2f7ecfd2f76fb27db9932f17e3f7c9608be2c1e6508d06d9cdfddacd7c0f",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/numerics-and-exposure-v2.json"
+    },
+    "original_detail": {
+      "bytes": 13345,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json",
+      "sha256": "ffe426fbd6222e7b76c56b20b7292eee635df459ef95c17d8fa0dbc08f070d97",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-detail.json"
+    },
+    "original_record": {
+      "bytes": 873,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json",
+      "sha256": "a0e0e4a383192a8821cbc23afb9307b2a464d8f0b07048d498ba406065936650",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/graph-record.json"
+    },
+    "private_output_inventory_reference_only": {
+      "bytes": 3451,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json",
+      "sha256": "22ffb4f574ee34d1e140da66a487c51ffe4585d7a995309e1abe6ef40ed2ccf7",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/private-output-manifest.json"
+    },
+    "protocol": {
+      "bytes": 21523,
+      "path": "research/public-strategies/M1358/specs/protocol-v1.json",
+      "sha256": "59ecc46f862a2929b2a59ecc5a7dbd44436fa9bbe79f246a10b01c82bcce5b45",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/specs/protocol-v1.json"
+    },
+    "publication_manifest": {
+      "bytes": 9545,
+      "path": "research/public-strategies/M1358/publication-manifest.json",
+      "sha256": "d2e05c532ef25fe05c018893bb01ca661cfb9db319761c6b6e045a3a2db8aebc",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/publication-manifest.json"
+    },
+    "readme": {
+      "bytes": 331,
+      "path": "research/public-strategies/M1358/README.md",
+      "sha256": "87aaf886951199935e5f5487b12e46bbd4f8d5e9f12db0924777e28c99923913",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/README.md"
+    },
+    "report": {
+      "bytes": 5757,
+      "path": "research/public-strategies/M1358/M1358.md",
+      "sha256": "a8e0d1d25e7f6c4743662289efd5b42424724272d8c472ea56f5a99028a3b001",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/M1358.md"
+    },
+    "source_rule_card": {
+      "bytes": 8711,
+      "path": "research/public-strategies/M1358/source/M1358-sourcecard.safe.json",
+      "sha256": "22a93b2ef0b40903392fe75b8a6d46dd578f9839a3d971ab1a06a441409ffdef",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/source/M1358-sourcecard.safe.json"
+    },
+    "summary": {
+      "bytes": 6343,
+      "path": "research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json",
+      "sha256": "027c06dae2ecdd6bc4d8ac2c98d8adb9c0fd8cbdef0259496cb8e2d18b1859b1",
+      "url": "https://github.com/KathenZK/quant-research-lab/blob/dba8d1d64318f9909cdcfd3bc9c382842a1a742b/research/public-strategies/M1358/artifacts/20261003-coldstart-v2/summary.json"
+    }
+  },
+  "source_status": "tested_proxy_only",
+  "status": "tested_hypothesis_only",
+  "strategy_configurations": 4,
+  "tested_variants": 1
+}
