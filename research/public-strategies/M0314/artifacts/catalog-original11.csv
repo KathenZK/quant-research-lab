@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0314,TurtleRules,加密现货,海龟 S1：20 日 Donchian 突破入场、10 日通道出场；ATR(20)×2 止损；单位风险 1%；加仓间隔 0.5 ATR，最多 4 层；上一笔盈利则跳过下一次 S1 入场。,jesse-ai/example-strategies,TurtleRules,https://github.com/jesse-ai/example-strategies/blob/master/TurtleRules/__init__.py,__init__.py,高,,未知

@@ -1,0 +1,52 @@
+{
+  "family": "PUBLIC-M0299-SIMPLE-BOLLINGER-CLOUD",
+  "timeframe": "1h stated in docstring; actual route still unbound",
+  "native_4h_confirmed": false,
+  "directions": [
+    "long"
+  ],
+  "indicator": {
+    "bollinger": {
+      "source": "hl2=(high+low)/2",
+      "reference_period": 20,
+      "reference_devup": 2,
+      "reference_devdn": 2,
+      "reference_matype": 0,
+      "reference_devtype": 0,
+      "reference_std": "population",
+      "source_passes_only_source_type": true
+    },
+    "ichimoku_reference": {
+      "conversion": 9,
+      "base": 26,
+      "span_b": 52,
+      "displacement_argument": 26,
+      "actual_span_input_end_lag_bars": 25,
+      "wrapper_min_bars": 80,
+      "wrapper_max_window": 80
+    }
+  },
+  "entry": "close>BB.upper AND close>Ichimoku.span_a AND close>Ichimoku.span_b; strict states, not crosses",
+  "exit": "close<BB.middle",
+  "sizing": "size_to_qty(balance,price,fee_rate=fee_rate)",
+  "entry_cancel": true,
+  "unknowns": [
+    "原作者Jesse版本、其依赖/平台/配置/路由未提供",
+    "实际交易所、具体标的、市场类型、合约乘数、费用/滑点/资金费及借币成本未冻结",
+    "挂单/部分成交/精度/最小下单量、时钟与撮合版本未冻结",
+    "没有真实行情、历史收益或净值/交易记录；不得以合成PASS宣称策略有效或严格复现",
+    "同版本Rust源码参考不证明发布wheel二进制一致；未执行原指示器",
+    "不能将其他库shift26的span直接套用；若换库须逐值/边界验证",
+    "原文best results无冻结样本/成本/运行证据，未采信收益主张"
+  ],
+  "schema": "source-rule-specification/v1",
+  "id": "M0299",
+  "source_commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+  "source_sha256": "746cc0f8644a7fae12089f597448b573d4d482a3855c870d18b4a7bfeb0a5255",
+  "stage": "SOURCE_RULE_DEDUP_AUDIT_ONLY",
+  "original_runtime": "UNKNOWN",
+  "fidelity_ceiling": "HYPOTHESIS",
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "semantic_spec_canonical_sha256": "f8e29bcc282b75b797deb9fab14dadbe267b6d83176bcc4ba5b342300ed1bcca"
+}

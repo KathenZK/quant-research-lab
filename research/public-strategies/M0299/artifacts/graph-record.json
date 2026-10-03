@@ -1,0 +1,73 @@
+{
+  "schema": "public-catalog-graph-source-rule-audit/v1",
+  "id": "M0299",
+  "name": "SimpleBollinger",
+  "status": "source_rule_dedup_audit_only",
+  "reason": "来源与规则审计完成；无历史执行授权，原runtime与执行依赖未冻结",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0299-SIMPLE-BOLLINGER-CLOUD"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AND_MIT_VERIFIED",
+    "source_rule_attribution_status": "SOURCE_VERIFIED_WITH_EXPLICIT_REFERENCE_API_LIMITS",
+    "independent_validation": "25_STATIC_DECIMAL_CHECKS_PASS; not native engine validation",
+    "causality_validation": "LOCAL_FORMULA_AND_INDEX_FIXTURES_ONLY; original runtime not established",
+    "data_quality_status": "NOT_APPLICABLE_NO_MARKET_INPUT",
+    "trusted_input": false,
+    "strict_replication": false,
+    "strict_reproductions": 0,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "source": {
+    "repository": "jesse-ai/example-strategies",
+    "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+    "path": "SimpleBollinger/__init__.py",
+    "url": "https://github.com/jesse-ai/example-strategies/blob/7c91e0a37bf62165790120d730442e4f6eb00364/SimpleBollinger/__init__.py",
+    "sha256": "746cc0f8644a7fae12089f597448b573d4d482a3855c870d18b4a7bfeb0a5255",
+    "bytes": 1683,
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d",
+    "original_source_publicly_copied": false
+  },
+  "fingerprints": {
+    "source_sha256": "746cc0f8644a7fae12089f597448b573d4d482a3855c870d18b4a7bfeb0a5255",
+    "python_ast_sha256": "6b5287d29a51ea7ac3689f339324aa8878701f12f5574fe3df29931efad2852c",
+    "semantic_spec_canonical_sha256": "f8e29bcc282b75b797deb9fab14dadbe267b6d83176bcc4ba5b342300ed1bcca",
+    "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "catalog_original_row_sha256": "566432ee5c06fc9d303d7a4345fbe5908becfe94c9b398d03a7b0f581c856772"
+  },
+  "relationships": [
+    {
+      "target_id": "M2339",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "虽一目9/26/52及BB20/2相近，catalog写close源、下轨cross、TK/迟行条件与多空；此处hl2上轨state、仅多、中轨退"
+    },
+    {
+      "target_id": "M1394",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "另一catalog为一目18/52/104/52双向云突破，未见BB上轨门；非同一参数/退出核"
+    },
+    {
+      "target_id": "M0316",
+      "type": "DISTINCT_VERIFIED_DEFINITION",
+      "confidence": "high",
+      "basis": "已核Lab规格是RSI10+EMA5/10同步cross+ADX25；其命名hl2实际(open+close)/2，不是本源Jesse hl2"
+    }
+  ],
+  "implementations": [],
+  "related_results": [],
+  "synthetic_case_count": 16,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "private_detail_present_in_public": false,
+  "metrics": null,
+  "metrics_reason": "NOT_RUN; not zero return",
+  "graph_upload_status": "NOT_ATTEMPTED_BY_THIS_WORKER"
+}

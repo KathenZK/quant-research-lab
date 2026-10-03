@@ -1,0 +1,345 @@
+{
+  "schema": "catalog-readonly-dedup-review/v1",
+  "id": "M0314",
+  "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+  "rows_scanned": 6973,
+  "exact_source_url_matches": [
+    "M0314"
+  ],
+  "exact_name_matches": [
+    "M0314"
+  ],
+  "exact_rule_text_matches": [
+    "M0314"
+  ],
+  "candidate_regex": "Turtle|海龟",
+  "regex_match_ids": [
+    "M0179",
+    "M0209",
+    "M0223",
+    "M0232",
+    "M0314",
+    "M0354",
+    "M0691",
+    "M0865",
+    "M0903",
+    "M1045",
+    "M1257",
+    "M1348",
+    "M1363",
+    "M1391",
+    "M1736",
+    "M1938",
+    "M2133",
+    "M2159",
+    "M2485",
+    "M2599",
+    "M2704",
+    "M2711",
+    "M2770",
+    "M2801",
+    "M2802",
+    "M3434",
+    "M3510",
+    "M3526",
+    "M3527",
+    "M3538"
+  ],
+  "regex_match_count": 30,
+  "manually_compared": [
+    {
+      "target_id": "M0179",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog为1h入10/出30/ATR15且账户停机规则；不同参数及控制",
+      "target_catalog_row": {
+        "data_row_ordinal": 179,
+        "csv_record_including_header": 180,
+        "physical_line_start": 180,
+        "physical_line_end": 180
+      },
+      "target_original_11": {
+        "id": "M0179",
+        "名称": "1小时海龟10/30、ATR15",
+        "市场": "加密",
+        "规则": "唐奇安突破入场，ATR止损，最多加仓4次。1小时Entry=10、Exit=30、ATR=15。风控同仓库：峰值回撤15%停机，日亏5%停到次日。与20/10海龟周期不同，单独保留。",
+        "作者或机构": "Ashley / Ashley0324",
+        "标题": "海龟",
+        "source_url": "https://raw.githubusercontent.com/Ashley0324/crypto_quant/main/README.md",
+        "页码或文件": "README",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "31f76b11a5003165b0234b3d154d0677e9fb97815a191d2d4d9f5bc8d34f2ac5",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0232",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "fixed_lab_definition_and_catalog",
+      "reason_zh": "固定Lab来源审计明确N1/N2/ATR与完整代码未知，不能默认20/10或确认为同源",
+      "target_catalog_row": {
+        "data_row_ordinal": 232,
+        "csv_record_including_header": 233,
+        "physical_line_start": 233,
+        "physical_line_end": 233
+      },
+      "target_original_11": {
+        "id": "M0232",
+        "名称": "N周期海龟突破",
+        "市场": "加密或期货",
+        "规则": "价格上穿N1周期最高买入，下穿N2周期最低卖出。止损与加仓线跟ATR。每笔风险示例0.02。N1/N2以策略页输入为准。",
+        "作者或机构": "ChaoZhang / 发明者量化",
+        "标题": "海龟突破",
+        "source_url": "https://www.fmz.com/strategy/443132",
+        "页码或文件": "FMZ策略页 2024-02-29",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "2024-02"
+      },
+      "target_original_row_sha256": "f516a310de4d8594b96fa302ee92cdc71d5ebf2fa7efa7021f5b1eb98af7f66e",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0354",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog含S1/S2与2%单位风险；本源before固定S1且1%/ATR sizing",
+      "target_catalog_row": {
+        "data_row_ordinal": 354,
+        "csv_record_including_header": 355,
+        "physical_line_start": 355,
+        "physical_line_end": 355
+      },
+      "target_original_11": {
+        "id": "M0354",
+        "名称": "海龟系统1与系统2",
+        "市场": "期货或股票",
+        "规则": "系统1：20日新高买入，10日新低离场。系统2：55日新高买入，20日新低离场。止损为2倍20日ATR（2N）。单位风险为权益的2%。页面描述盈利加仓。空头为通道镜像。",
+        "作者或机构": "TrendSpider学习中心转述Richard Dennis",
+        "标题": "Turtle System 1 and System 2",
+        "source_url": "https://trendspider.com/learning-center/richard-dennis-turtle-trading-strategy/",
+        "页码或文件": "专文",
+        "可回测": "高",
+        "别名来源": "https://bigquant.com/wiki/doc/AiFEczY4p5；https://easyquant.ai/e/joinquant/turtle-trading-strategy",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "aa56d9f46fd4d4e807af527209f57358b03389d20a1e1cde6c787a54d128cd7f",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0691",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "medium",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog为OKX现货日线，通道长度未给；不能推定为20/10相同实现",
+      "target_catalog_row": {
+        "data_row_ordinal": 691,
+        "csv_record_including_header": 692,
+        "physical_line_start": 692,
+        "physical_line_end": 692
+      },
+      "target_original_11": {
+        "id": "M0691",
+        "名称": "海龟策略 BTC 现货",
+        "市场": "加密",
+        "规则": "OKX BTC_USDT现货；源码period=1d。突破唐奇安上轨开仓；价格超过上次开仓价0.5ATR加仓；跌破唐奇安下轨或跌破上次开仓价2ATR全部退出。同页未写唐奇安通道长度。",
+        "作者或机构": "groot；Guyamin（同规则后发副本）",
+        "标题": "海龟策略btc现货版",
+        "source_url": "https://www.fmz.com/strategy/186598",
+        "页码或文件": "FMZ策略页 2020-02-22",
+        "可回测": "中",
+        "别名来源": "https://www.fmz.com/strategy/289308",
+        "提出日期": "2020-02"
+      },
+      "target_original_row_sha256": "64cf04ee93a708bb859fc30e2bb7bf0d2f70dc5afbe2c2b6b8c95860d8dd26f0",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M1391",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog双通道20/20、offset20、close cross与10exit；不是当前high/low inclusive分支",
+      "target_catalog_row": {
+        "data_row_ordinal": 1391,
+        "csv_record_including_header": 1392,
+        "physical_line_start": 1392,
+        "physical_line_end": 1392
+      },
+      "target_original_11": {
+        "id": "M1391",
+        "名称": "3Commas海龟：通道1/2周期默认均20、偏移20；离场周期10；默认对USDT_BTC",
+        "市场": "加密（BTC）",
+        "规则": "本条只写该TradingView脚本页已印出的规则。Period Channel 1默认20、Channel 2默认20、Offset默认20、Period Exit默认10。买：收盘上穿快上轨且收盘>慢上轨[1]；对称可空。离场用exit周期通道。Webhook对默认USDT_BTC。Take Profit %开关默认false（测试用）。不是M0314海龟S1（20日Donchian入场、10日出场、ATR(20)×2止损、单位风险1%）：本条双通道Period1/2均默认20、Offset20、Exit10，买为收盘上穿快上轨且收盘>慢上轨[1]，默认对USDT_BTC。计入加密。提出日期按源文件原样保留Mar 3, 2025。",
+        "作者或机构": "3Commas",
+        "标题": "3Commas海龟：通道1/2周期默认均20、偏移20；离场周期10；默认对USDT_BTC",
+        "source_url": "https://www.tradingview.com/script/9qFCuXqF-3Commas-Turtle-Strategy/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "Mar 3, 2025"
+      },
+      "target_original_row_sha256": "e95a3df4a963935d4dc17c8471b72481c4663382983151e7e2d27c7bed6a5d06",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M1938",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "medium",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "20/10/ATR20×2/1%文字最接近，但挂突破stop入与本源信号后self.price下单、1%/ATR与真实止损风险、pyramid/skip/callback需完整另一源才能确认；本轮未取其完整实现",
+      "target_catalog_row": {
+        "data_row_ordinal": 1938,
+        "csv_record_including_header": 1939,
+        "physical_line_start": 1939,
+        "physical_line_end": 1939
+      },
+      "target_original_11": {
+        "id": "M1938",
+        "名称": "海龟快系统：入场突破20、出场10；ATR(20)×2.0止损；风险权益1%",
+        "市场": "加密/美股通用",
+        "规则": "本条只写该TradingView脚本页已印出的规则。Entry Period默认20、Exit Period10；ATR Length20、ATR Stop Multiplier2.0；Risk % of Equity默认1.0。突破N日高/低挂止损单开多/空；反向突破或ATR止损出场。不是海龟慢系统55/20：本条是海龟快系统入场突破20出场10，ATR(20)×2.0止损，风险权益1%。计入加密。提出日期按源文件原样保留Nov 6, 2025。",
+        "作者或机构": "nepo123",
+        "标题": "海龟快系统：入场突破20、出场10；ATR(20)×2.0止损；风险权益1%",
+        "source_url": "https://www.tradingview.com/script/EHnZGhY5-Turtles-Strategy/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "Nov 6, 2025"
+      },
+      "target_original_row_sha256": "5e45723a437828a1a23368100978076c5950e5f174309b9e17812f671246b7c4",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M2485",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog含快20/10+慢55/20、前棒通道与pyramiding5；本源S1 current-inclusive且层数4",
+      "target_catalog_row": {
+        "data_row_ordinal": 2485,
+        "csv_record_including_header": 2486,
+        "physical_line_start": 2486,
+        "physical_line_end": 2486
+      },
+      "target_original_11": {
+        "id": "M2485",
+        "名称": "海龟双系统：快20/10与慢55/20唐奇安；高破上轨开多、低破下轨开空；反向通道平仓；金字塔5",
+        "市场": "加密/美股通用",
+        "规则": "本条只写该TradingView脚本页已印出的规则。enter_fast20 exit_fast10 enter_slow55 exit_slow20。fastL=highest(20)等。enterL1=high>fastL[1]；exitL1=low<=fastLC[1]；空头对称。慢系统55/20同理。cash仓1000；pyramiding5。不是M0354期货海龟叙述：本条为TradingView海龟双系统快20/10与慢55/20唐奇安，金字塔5，市场加密/美股通用。计入加密。提出日期按源文件原样保留未知。",
+        "作者或机构": "tmr0",
+        "标题": "海龟双系统：快20/10与慢55/20唐奇安；高破上轨开多、低破下轨开空；反向通道平仓；金字塔5",
+        "source_url": "https://www.tradingview.com/script/Q1O23zJP/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "b30faaa67411f781ac4c6d9c64d61fbc92c51a56a1eb0bebd6f149e20fb90d4d",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M2599",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog五ETF仅多、风险仓位与等权上限取小；本源多空、无名义上限",
+      "target_catalog_row": {
+        "data_row_ordinal": 2599,
+        "csv_record_including_header": 2600,
+        "physical_line_start": 2600,
+        "physical_line_end": 2600
+      },
+      "target_original_11": {
+        "id": "M2599",
+        "名称": "美股ETF：SPY/QQQ/IWM/EFA/EEM 日线唐奇安(20)上破按ATR风险1%与等权上限取小开多，唐奇安(10)下破清仓（QC Documentation turtle）",
+        "市场": "美股/ETF（五ETF唐奇安20入场10出场ATR1%；QC Documentation turtle）",
+        "规则": "本条只写模板 `equity-donchian-breakout-turtle/main.py`。五只如上；各挂入场 `dch(20,20,DAILY)`、出场 `dch(10,10,DAILY)`、`ATR(20,SIMPLE,DAILY)`；`_risk_per_trade=0.01`。开盘后1分钟：空仓且价>入场上轨 → 股数=`min(组合价值×1%/ATR, 等权1/5对应股数)` 的整数，`market_order`；持多且价<出场下轨 → `liquidate`。不是 W211 单标的唐奇安中轨平仓多空核，也不是 XOM 仅20日通道核。提出日期未知。 不是W211单标的唐奇安中轨平仓多空核，也不是XOM仅20日通道核：本条为五ETF唐奇安(20)入场按ATR风险1%与等权上限取小，唐奇安(10)出场。 计入美股/ETF。 提出日期按源文件原样保留未知。",
+        "作者或机构": "QuantConnect Documentation 项目模板",
+        "标题": "美股ETF：SPY/QQQ/IWM/EFA/EEM 日线唐奇安(20)上破按ATR风险1%与等权上限取小开多，唐奇安(10)下破清仓（QC Documentation turtle）",
+        "source_url": "https://github.com/QuantConnect/Documentation/blob/master/project-templates/python/equity-donchian-breakout-turtle/main.py",
+        "页码或文件": "公开页/已印出规则",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "89da963e9e0aea7cd9b9112ee35f20845e2a5429b8045a0d3406049c95b60b54",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M2704",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "catalog默认仅多、close比前棒通道并ATR追踪；本源high/low当前通道与特殊callback",
+      "target_catalog_row": {
+        "data_row_ordinal": 2704,
+        "csv_record_including_header": 2705,
+        "physical_line_start": 2705,
+        "physical_line_end": 2705
+      },
+      "target_original_11": {
+        "id": "M2704",
+        "名称": "海龟唐奇安：入场通道20出场10；收破上轨开多、破下轨平多；ATR20×2跟踪止损",
+        "市场": "加密/美股通用",
+        "规则": "本条只写该TradingView脚本页已印出的规则。Enter Channel20 Exit Channel10；Direction默认Long；ATR Period20 multiplier2.0。break_up=close≥upper[1]→entry buy；break_down或close≤ATR跟踪线下→close。空头对称（Direction=Short）。不是M0179海龟10/30或普通唐奇安：本条为入场通道20出场10，收破上轨开多、破下轨平多，ATR20×2跟踪止损。计入加密。提出日期按源文件原样保留Jan 15, 2020。",
+        "作者或机构": "jeanobrega",
+        "标题": "海龟唐奇安：入场通道20出场10；收破上轨开多、破下轨平多；ATR20×2跟踪止损",
+        "source_url": "https://www.tradingview.com/script/gbxblhGl/",
+        "页码或文件": "TradingView脚本页",
+        "可回测": "高",
+        "别名来源": "无",
+        "提出日期": "Jan 15, 2020"
+      },
+      "target_original_row_sha256": "44cc873eca085c1ddf8ee4b01161b671721a17c72a4c23772afe95bac2a8c9ff",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    },
+    {
+      "target_id": "M0270",
+      "relation": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "evidence_level": "frozen_catalog_definition_only",
+      "reason_zh": "同Jesse库catalog写前一根Donchian收盘cross+SMA200仅多，非本源high/low优先分支+加仓",
+      "target_catalog_row": {
+        "data_row_ordinal": 270,
+        "csv_record_including_header": 271,
+        "physical_line_start": 271,
+        "physical_line_end": 271
+      },
+      "target_original_11": {
+        "id": "M0270",
+        "名称": "Donchian",
+        "市场": "加密现货",
+        "规则": "收盘上穿前一根计算的 Donchian 上轨做多，且收盘>SMA200；收盘跌破 Donchian 下轨平仓。注释写明上轨入、下轨出。",
+        "作者或机构": "jesse-ai/example-strategies",
+        "标题": "Donchian",
+        "source_url": "https://github.com/jesse-ai/example-strategies/blob/master/Donchian/__init__.py",
+        "页码或文件": "__init__.py",
+        "可回测": "高",
+        "别名来源": "",
+        "提出日期": "未知"
+      },
+      "target_original_row_sha256": "203587a8b29c90b7b81a4356f225c28e107c720c7ee1e3c4872d6b0499c58679",
+      "target_full_source_executed": false,
+      "target_full_source_verified": false
+    }
+  ],
+  "four_batch_pairwise": "Four source SHA/AST fingerprints all distinct; SMA state, BB+cloud, RSI cross and Turtle channel+callbacks have different indicator and decision cores",
+  "decision": "PRESERVE_ID_NO_AUTOMATIC_MERGE",
+  "exact_duplicates_confirmed": [],
+  "limit": "No exhaustive semantic/translated/copied-source equivalence proof across 6973. Relatedness is based on the stated evidence only, not correlated returns; omitted candidates not individually audited."
+}

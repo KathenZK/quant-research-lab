@@ -1,0 +1,52 @@
+{
+  "schema": "frozen-catalog-original11/v1",
+  "catalog_filename": "quant-master-draft.csv",
+  "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+  "catalog_records": 6973,
+  "columns": [
+    "id",
+    "名称",
+    "市场",
+    "规则",
+    "作者或机构",
+    "标题",
+    "source_url",
+    "页码或文件",
+    "可回测",
+    "别名来源",
+    "提出日期"
+  ],
+  "data_row_ordinal": 312,
+  "csv_record_including_header": 313,
+  "physical_line_start": 313,
+  "physical_line_end": 313,
+  "original_11_fields": [
+    "M0312",
+    "TradingView_RSI",
+    "加密现货",
+    "RSI 上穿 35 做多；默认 RSI 周期 5，止损价×0.95，止盈价×1.10；RSI 下穿默认 75 或下穿 10 平仓。",
+    "jesse-ai/example-strategies",
+    "TradingView_RSI",
+    "https://github.com/jesse-ai/example-strategies/blob/master/TradingView_RSI/__init__.py",
+    "__init__.py",
+    "高",
+    "",
+    "未知"
+  ],
+  "original_11": {
+    "id": "M0312",
+    "名称": "TradingView_RSI",
+    "市场": "加密现货",
+    "规则": "RSI 上穿 35 做多；默认 RSI 周期 5，止损价×0.95，止盈价×1.10；RSI 下穿默认 75 或下穿 10 平仓。",
+    "作者或机构": "jesse-ai/example-strategies",
+    "标题": "TradingView_RSI",
+    "source_url": "https://github.com/jesse-ai/example-strategies/blob/master/TradingView_RSI/__init__.py",
+    "页码或文件": "__init__.py",
+    "可回测": "高",
+    "别名来源": "",
+    "提出日期": "未知"
+  },
+  "raw_record_sha256": "5c70f146d82394cafd4c3f132731fb5ab1b50fa7103e78233185f2bea765bf77",
+  "raw_record_bytes": 315,
+  "catalog_changed": false
+}

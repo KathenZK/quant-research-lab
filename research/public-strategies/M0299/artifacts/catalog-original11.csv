@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0299,SimpleBollinger,加密现货,注释周期 1h；收盘>BB(hl2 默认参数)上轨且高于一目云做多；收盘<中轨平仓。,gabrielweich / jesse-ai/example-strategies,SimpleBollinger,https://github.com/jesse-ai/example-strategies/blob/master/SimpleBollinger/__init__.py,__init__.py,高,,未知

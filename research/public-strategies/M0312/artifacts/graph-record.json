@@ -1,0 +1,79 @@
+{
+  "schema": "public-catalog-graph-source-rule-audit/v1",
+  "id": "M0312",
+  "name": "TradingView_RSI",
+  "status": "source_rule_dedup_audit_only",
+  "reason": "来源与规则审计完成；无历史执行授权，原runtime与执行依赖未冻结",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0312-RSI-CROSS35-75-10"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AND_MIT_VERIFIED",
+    "source_rule_attribution_status": "SOURCE_VERIFIED_WITH_EXPLICIT_REFERENCE_API_LIMITS",
+    "independent_validation": "25_STATIC_DECIMAL_CHECKS_PASS; not native engine validation",
+    "causality_validation": "LOCAL_FORMULA_AND_INDEX_FIXTURES_ONLY; original runtime not established",
+    "data_quality_status": "NOT_APPLICABLE_NO_MARKET_INPUT",
+    "trusted_input": false,
+    "strict_replication": false,
+    "strict_reproductions": 0,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "source": {
+    "repository": "jesse-ai/example-strategies",
+    "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+    "path": "TradingView_RSI/__init__.py",
+    "url": "https://github.com/jesse-ai/example-strategies/blob/7c91e0a37bf62165790120d730442e4f6eb00364/TradingView_RSI/__init__.py",
+    "sha256": "86a0532e427cfe3b4f3ff9fa94c7d007ffb544c96db7fa20613b7ebf724d2769",
+    "bytes": 1764,
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d",
+    "original_source_publicly_copied": false
+  },
+  "fingerprints": {
+    "source_sha256": "86a0532e427cfe3b4f3ff9fa94c7d007ffb544c96db7fa20613b7ebf724d2769",
+    "python_ast_sha256": "1476d2b287d67f72ab460d7f70d1882cc632ee35b548524066dcc3ebdb1fc336",
+    "semantic_spec_canonical_sha256": "e50c787d3ff141f96287e9fb8c9261b2b3542df593df22ecff139efd86419016",
+    "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "catalog_original_row_sha256": "5c70f146d82394cafd4c3f132731fb5ab1b50fa7103e78233185f2bea765bf77"
+  },
+  "relationships": [
+    {
+      "target_id": "M0322",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "另一catalog RSI14上穿35叠加SuperTrend、65空、1.5%/1%风控；此处RSI5/75/10/5%/10%"
+    },
+    {
+      "target_id": "M0588",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "另一catalog XOM RSI14上穿35，50退出并做空65；此处仅多、RSI5、75/10退出"
+    },
+    {
+      "target_id": "M2739",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "另一catalog 15m RSI14+BB下轨或TEMA支路，ROI/追踪完全不同；共享35不足去重"
+    },
+    {
+      "target_id": "M0316",
+      "type": "DISTINCT_VERIFIED_DEFINITION",
+      "confidence": "high",
+      "basis": "已核Lab规格RSI10与EMA同根交叉、50门槛和ADX；不同核心合取与风险规则"
+    }
+  ],
+  "implementations": [],
+  "related_results": [],
+  "synthetic_case_count": 21,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "private_detail_present_in_public": false,
+  "metrics": null,
+  "metrics_reason": "NOT_RUN; not zero return",
+  "graph_upload_status": "NOT_ATTEMPTED_BY_THIS_WORKER"
+}

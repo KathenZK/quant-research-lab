@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "packages_required": "Python standard library only",
+  "external_code_executed": false,
+  "native_Jesse_or_Rust_installed_for_this_task": false,
+  "memory_limit_bytes": 1073741824,
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "strategy_source_execution": "AST only",
+  "historical_runs": 0,
+  "market_requests": 0
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "public-catalog-graph-source-rule-audit/v1",
+  "id": "M0296",
+  "name": "SMACrossover",
+  "status": "source_rule_dedup_audit_only",
+  "reason": "来源与规则审计完成；无历史执行授权，原runtime与执行依赖未冻结",
+  "tested_variants": 0,
+  "families": [
+    "PUBLIC-M0296-SMA50-200-STATE"
+  ],
+  "audit": {
+    "source_verification_status": "PINNED_SHA256_AND_MIT_VERIFIED",
+    "source_rule_attribution_status": "SOURCE_VERIFIED_WITH_EXPLICIT_REFERENCE_API_LIMITS",
+    "independent_validation": "25_STATIC_DECIMAL_CHECKS_PASS; not native engine validation",
+    "causality_validation": "LOCAL_FORMULA_AND_INDEX_FIXTURES_ONLY; original runtime not established",
+    "data_quality_status": "NOT_APPLICABLE_NO_MARKET_INPUT",
+    "trusted_input": false,
+    "strict_replication": false,
+    "strict_reproductions": 0,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "source": {
+    "repository": "jesse-ai/example-strategies",
+    "commit": "7c91e0a37bf62165790120d730442e4f6eb00364",
+    "path": "SMACrossover/__init__.py",
+    "url": "https://github.com/jesse-ai/example-strategies/blob/7c91e0a37bf62165790120d730442e4f6eb00364/SMACrossover/__init__.py",
+    "sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+    "bytes": 1809,
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_sha256": "80d873148413a3eb2f96bbe22657bf57ae42046e4d95e81852109c5f3a949d2d",
+    "original_source_publicly_copied": false
+  },
+  "fingerprints": {
+    "source_sha256": "453440d7b934c494934a1c56b3826d94638594f79ad4e4c7faaff36b96d33fae",
+    "python_ast_sha256": "aee95c04c3cf3630e2bc32ddd7704b22a10cb416c6a084c51239abc7b0beeae4",
+    "semantic_spec_canonical_sha256": "5ecb0448bd5d20c821b6ff7008d2d630620e6a800cb50fb91c2f1c7c4489f13e",
+    "catalog_sha256": "15cc0ecbcb23261e3cd7f2fb0851815daed59951090d9ce3e759ef224ea6f415",
+    "catalog_original_row_sha256": "873ac92bdf90826a4db6f4e8100fd8c780734110ba377d8f0b50c6a8a482037c"
+  },
+  "relationships": [
+    {
+      "target_id": "M0089",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "50/200 SMA相关；M0089日线标普仅多并用cross事件，此处多空state且路由未定"
+    },
+    {
+      "target_id": "M0920",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "medium",
+      "basis": "50/200多空接近，但M0920定义SPY日线cross即时反转；本源state/路由/余额精度不同，另一完整实现未核"
+    },
+    {
+      "target_id": "M0686",
+      "type": "RELATED_RULE_FAMILY_NOT_VERIFIED_DUPLICATE",
+      "confidence": "high",
+      "basis": "另有日线/基础1h、EMA过滤与前低1%卖出，本源无这些条件"
+    },
+    {
+      "target_id": "M0293",
+      "type": "DISTINCT_VERIFIED_DEFINITION",
+      "confidence": "high",
+      "basis": "已核固定Lab规格为EMA8/21事件+高周期SMA50、仅多；不是50/200 SMA多空state"
+    }
+  ],
+  "implementations": [],
+  "related_results": [],
+  "synthetic_case_count": 8,
+  "historical_runs": 0,
+  "market_data_requests": 0,
+  "private_detail_present_in_public": false,
+  "metrics": null,
+  "metrics_reason": "NOT_RUN; not zero return",
+  "graph_upload_status": "NOT_ATTEMPTED_BY_THIS_WORKER"
+}
