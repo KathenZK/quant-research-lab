@@ -1,0 +1,111 @@
+{
+  "status": "PASS_NUMERICAL_EXECUTION_DRAFT_REVIEW__M0974_INPUT_PIN_PENDING__NOT_IMPLEMENTATION_GATE",
+  "drafts": [
+    {
+      "id": "M2903",
+      "sha256": "772fe3a705010ae07fac2127e95649e18c50e19f752365bae3e48b876b1b995a",
+      "bytes": 15277,
+      "canonical_warmup": 100,
+      "offset": 69,
+      "canonical_rows": 831,
+      "view_rows": 762,
+      "account_warmup": 31,
+      "eval_rows": 731
+    },
+    {
+      "id": "M3710",
+      "sha256": "7b80929ddb5ae11d0f6103fd4f6ce6083537bd388def4caa6ecab11364af0050",
+      "bytes": 15125,
+      "canonical_warmup": 100,
+      "offset": 69,
+      "canonical_rows": 831,
+      "view_rows": 762,
+      "account_warmup": 31,
+      "eval_rows": 731
+    },
+    {
+      "id": "M0974",
+      "sha256": "b22b0d8ae78fb1cde28adb70f346b1e4172374d9be2b2324fe960e23bba14910",
+      "bytes": 15724,
+      "canonical_warmup": 735,
+      "offset": 704,
+      "canonical_rows": 1466,
+      "view_rows": 762,
+      "account_warmup": 31,
+      "eval_rows": 731
+    }
+  ],
+  "new_blocking_rule_contradictions": 0,
+  "conclusion": "Threehypothesesareimplementableunderdeclaredassumptionswithunchangedv1accountandexplicitviewadapter;M0974inputhash/bytes/QAremainrequiredpre-freeze. Nosourcefaithfulreplicationorhistoricalexecutionapproval.",
+  "verified": {
+    "kernel": "All4filesperdraft read fromexactfad9d65cGitobjects,bytes/SHAchecked;immutablev1engineandverifier unchanged",
+    "index_math": "ForW100/735,offsetW-31=69/704. CanonicalW mapsview31/eval0=2023-01-01. Canonicaloffset mapsview0=2022-12-01. Fullrows-offset=762,eval731. Datesverifiedwithoutpricedata.",
+    "indicators": "Fullcanonicalfeatures computedbeforeslicing;notreseededonold31warmupview. EMA20seed19/crossfirst20;SMA20statefirst19;RSIseed50/SMA_RSI74/cross75;evalatW withpreviouswarmupfeature available.",
+    "M2903": "CurrentcloseversuscurrentEMAandpreviouscloseversuspreviousEMA actualcross;already-aboveatfirstevaluationisnotentry. Currentequalityneutral,previousinclusive.",
+    "M3710": "Current-inclusive20closeSMA;stateclose>SMAentry/close<=SMAexit,notcross. Firstevalmayenterwithoutfreshcross;equalstatecancelsoppositependingbuy.",
+    "M0974": "Wilderavgseed50realchangesatglobal50,recursiveprev+(x-prev)/50;bothzero50/zeroloss100/zerogain0 defined;RSIcrossSMA25currentinclusive. Lastwarmup734 minusseed50=684updates,weight<=1e-6,notRSIerror/crosserrorbound.",
+    "execution": "Allcashfee-inclusiveactualfillbudgetasimmutablev1;cashnotM1266fixedsignal90%quantity. Rawoppositeevents/statecanceloppositependingbeforepositiongate;absencekeepspending;repeatretainsearliestdue. ThisintentionallydiffersfromM1266retainedpendingbuyandmandatorylatchedsell.",
+    "first_time": "EarlieststrategysignalJan1close;lag1Jan2open,lag2Jan3open. Warmupindicatoronly,nowarmupintent. UTCcloseavailabilityandnextbaropenmayshareboundarytimestamp;phaseorderingisexplicitproxy,notprooftickliquidity.",
+    "capital_stats": "Buyfee=cash-notional;cash0;v1sellcash=(cash+notional)-fee grouping preserved,notM1266cash+(notional-fee). 731returns/24months/initial100000anchor/terminalmark/noforcedsale consistent.",
+    "benchmark": "OldM1258same731evalprices/fullcash100000/8fee2slip/Decimalvaluation;0newcontrols. Onlybasecostcomparisonmatched,fee0/20/delay2unmatched clearlydeclared. Canonicalwarmupdoesnotchangepassivecontrolstate or731markpricesprovidedview48e4verified."
+  },
+  "required_before_freeze": [
+    {
+      "id": "DATA0974",
+      "requirement": "Populateactual1466inputbytes/SHA/manifest/independentQA afterm0288delivery;verify704offsetview48e4. Currentnullsarehonestpendingfields,notpermissiontostart."
+    },
+    {
+      "id": "C0_ADAPTER",
+      "requirement": "LateractualcodeC0mustpinversionedadapterandkernel;independentindicator/accountoraclesmustconsumealignedcanonical-derivedflags. Noimplementationhasbeenreviewedbythisreceipt."
+    }
+  ],
+  "recommended_contract_clarifications": [
+    {
+      "id": "INDEX_NAMESPACES",
+      "priority": "Explicitimplementationrequirementalreadyimplicitindraft;recommendspellout",
+      "detail": "Retaincanonicalfeature.index,markoldledgerinput_index asaccount_view_index;pending.signal_index/due_index andtripentry/exit areevalindices,notview/canonical. Mapcanon=eval+W,view=eval+31,canon=view+offset. SupplementalfieldsratherthanmutatingoldkernelCSVschema."
+    },
+    {
+      "id": "SOURCE0974_IDENTITY",
+      "priority": "Disclosure",
+      "detail": "Addexplicitoriginalexample Bitcoinall-timeINDEX1D→BinanceBTCUSDTspot and$1000→100000USDT changes. Existinggenericresearchinstance wordingcorrectbutlessspecificthanverifiedsource."
+    },
+    {
+      "id": "FLAT_RSI50",
+      "priority": "Disclosure",
+      "detail": "Bothzero50 isfullydefinedresearchhypothesis,notconfirmedta.rsi/Pinebehavior. Preserve noepsilon/NaNmask andtestflat-to-trendtransitions;fullPineunavailable."
+    },
+    {
+      "id": "LEGACY_STATUS",
+      "priority": "Historicalstatusscope",
+      "detail": "scale_gate.Library_full_archives notsaved/401 shouldbespecifictolegacybatch016 evidence ratherthanassertallcurrentLibraryoperationsfailed. Noeffectontradingrules."
+    },
+    {
+      "id": "SOURCE3710",
+      "priority": "Pre-freezesourceattribution",
+      "detail": "Draftcurrentlycatalog-onlywithprimarypaperpending;whenindependentpaperreviewarrives,useitsactualevidencestatus withoutsilentlychangingSMAcurrentinclusion,cashzero-yieldorstateequality. Catalogcash/T-bill to0interestcashremainsadaptation."
+    }
+  ],
+  "prehistory_qa_focus": [
+    "DifferentWsameaccountingdateswithobviousartificialindexmarkers",
+    "FirstevalcrossusingcanonicalW-1/Wandstatefamilyalreadyabove",
+    "RSIflat/zeroloss/zerogainandNaN-readiness;Decimaloperationorderexact",
+    "Lag2oppositecancelversusabsence-retain/equalityfamilydifferences",
+    "Nooutofwindowfillsorwarmupcarriedintent;terminalpositionmarked",
+    "Independentoracleflagsfullcanonicalthenalignedview;beforeC0nofeaturesfromactualprices"
+  ],
+  "scope": {
+    "market_data_read": false,
+    "historical_features": 0,
+    "historical_returns": 0,
+    "historical_runs": 0,
+    "controls": 0,
+    "source_network_requests": 0,
+    "claims_or_global_writes": 0,
+    "strategy_code_written": false,
+    "draft_bytes_changed": false,
+    "release_issued": false
+  },
+  "model": "UNKNOWN",
+  "effort": "UNKNOWN"
+}

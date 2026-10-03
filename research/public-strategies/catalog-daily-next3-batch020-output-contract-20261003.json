@@ -1,0 +1,134 @@
+{
+  "schema": "catalog-hypothesis-execution-output-contract/v1",
+  "batch": "020",
+  "coordinator": "root only",
+  "status": "ROOT_FROZEN_ASSIGNED_PRE_CODE_C0",
+  "frozen_at_utc": "2026-10-03T21:10:49.026716+00:00",
+  "source_checkpoint": "35e509aced1a4de9f93944f9ada3e1d707df2da4",
+  "strategy_ids": [
+    "M2903",
+    "M3710",
+    "M0974"
+  ],
+  "assignments": {
+    "M2903": "root/m0200",
+    "M3710": "root/m0286",
+    "M0974": "parent single dot executor"
+  },
+  "branches": {
+    "M2903": "codex/catalog-ema20-m2903-20261003",
+    "M3710": "codex/catalog-sma20-m3710-20261003",
+    "M0974": "dot/public-strategies-20261003-b011-m0974"
+  },
+  "rules": {
+    "M2903": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M2903-root-frozen-rules.json",
+      "bytes": 17147,
+      "sha256": "8e4772529009003efff9744b1ce0928ead6bba4f313f76480cda16c0e5450ab2"
+    },
+    "M3710": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M3710-root-frozen-rules.json",
+      "bytes": 17318,
+      "sha256": "e5200ca8aa62f787e32101702e2d638c0d37959b5ff6ff5f713058544156eb6d"
+    },
+    "M0974": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-root-frozen-rules.json",
+      "bytes": 18920,
+      "sha256": "b3c6077f6440c5f41bc3958278650fad9124b403d49ef91fb4a6d115e733bfbb"
+    }
+  },
+  "fidelity": "M2903/M3710 cataloghypotheses; M0974 descriptionverified numeric/executionadaptation; strict0 for all",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "trusted": false,
+  "OOS": false,
+  "strict_reproductions": 0,
+  "strategy_configurations_per_id": 4,
+  "total_planned_strategy_configurations": 12,
+  "total_planned_new_controls": 0,
+  "benchmark": "Reuse exact alreadyacceptedM1258fullcash100000USDT base8fee2slip passivecontrol; 0 new controls; no matchedfee0/20/delay2control claim.",
+  "shared_input_adapter": {
+    "owner": "root/m0217",
+    "stage": "ASSIGNED_NOT_STARTED",
+    "scope": "Thin versionedinput/view/index validation only; no duplicateaccount platform; exact actual codepins and independentQA beforeconsumerC0."
+  },
+  "data_scope": "M2903/M3710 existing831/100; M0974 new independentlychecked1466/735; both reduce byteexact tosame762accountview with offsets69/704; fullcanonical featurehistory mustnotbere-seeded.",
+  "data_authorization": "Read only pinned private nativeBTCUSDTspot inputs or bounded officialVision exact reconstruction under existing unchangedterms. No other assets/venues/paid/newauth routes. Stop on accessrestriction/changedterms; preserve sourceobjects.",
+  "gates_before_history": [
+    "Isolatedfamily claim and immutable source/numeric/execution contract",
+    "Input fullhash/viewhash/dataQA/permission gate",
+    "Shared adapter code/manifest independentlyverified and remote pinned; oldcashkernel4files unchanged",
+    "Actualfamily code/runtime/exposure/C0 frozen before any historicalfeatures or returns",
+    "Independent synthetic indicator/account/causality/order/precision/prefix/future/recovery QA",
+    "Root exact-C0 release for one initial4case execution; no tuning/additionalvariants or controls"
+  ],
+  "output_contract": [
+    "PerID Chinese <ID>.md withstableID,sourceandplainrule,all executionchoices,economic hypothesis andstrict/adapted distinction",
+    "Private full original11fields andsourcebody+hashes; publicly reviewed operationalmetadata only, nointernalcuration orprivateLibrary identifiers",
+    "Full canonical indicator/readiness trace andexplicitaccount/eval/canonicalindex mapping; all privateNAV/fills/cancellations/months/terminalstates retained",
+    "Exactly4 frozen strategycasesperID, existingM1258basecontrolread-only; independent posthistoryaccountandmetrics review before acceptance",
+    "Graphcompatible approved record/detail/lightcurve for existing detail/comparisonpages; no inventedentity/revision orSiteactivation",
+    "Reproducible privateZIP+independentmanifest andremoteLibrary restore; allowedGitcore/code/Markdown/fingerprints/recipe andactualremote recovery evidence; report gaps separately"
+  ],
+  "disk_reserve_bytes": 5368709120,
+  "global_progress_writer": "root only",
+  "historical_runs": 0,
+  "controls_run": 0,
+  "new_strategy_returns_seen": false,
+  "ownership_check": {
+    "prior_claim_files_checked": 12,
+    "IDs_absent_from_existing_claims_and_family_roots": true,
+    "private_check_sha256": "4a2898960dbf88c34a5d038cdf73fae9bbdcad7c05d55e169fdde88bec6875c2",
+    "nonoverlap": [
+      "M1266",
+      "M1180"
+    ],
+    "assigned_is_not_started": true
+  },
+  "preparation_evidence": {
+    "M2903-source-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M2903-source-review.safe.json",
+      "bytes": 4735,
+      "sha256": "5ec34bf7cea7524820168dc8127da31841557d3d3c9d040462b670a5e5142dc9"
+    },
+    "M3710-source-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M3710-source-review.safe.json",
+      "bytes": 9785,
+      "sha256": "387340040ae9bd5f165da3b8cc5611cb8132405791d346bccc98bd384c630e8e"
+    },
+    "M0974-source-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-source-review.safe.json",
+      "bytes": 5590,
+      "sha256": "d6e78f5391d4f712f8f9a48c01e36bb75338caebcae8ad6c19868a4381c2ee37"
+    },
+    "independent-draft-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/independent-draft-review.safe.json",
+      "bytes": 6310,
+      "sha256": "6737baef2c2464dd812226f853d055cea2f41a24014b6a81acf868db8498b9f8"
+    },
+    "M0974-independent-input-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-independent-input-review.safe.json",
+      "bytes": 6926,
+      "sha256": "1bdba0db3cbd2a65b3f2d2181bb802e6daade51f65167fd60597fc806fbea63d"
+    },
+    "input-view-831-review.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/input-view-831-review.safe.json",
+      "bytes": 619,
+      "sha256": "cee8c483d3d5682f8113895fc90301dba4841e07fb6cbc2996fc64b99febb566"
+    },
+    "M0974-warmup-choice.safe.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-warmup-choice.safe.json",
+      "bytes": 1547,
+      "sha256": "4d70efc0fab9cefe35c400abce71b9ca26cff88f55eed4a27754cd7ea6809bec"
+    },
+    "M0974-input-manifest.json": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/M0974-input-manifest.json",
+      "bytes": 49479,
+      "sha256": "9740c7618456526f48f4fff608e3723c84b45b32e2a3529db34ddd08f3793cbc"
+    },
+    "build_m0974_input.py": {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/build_m0974_input.py",
+      "bytes": 6217,
+      "sha256": "6eb1967288700fa0a581acece954250209800cdb8077232b748465d014c93834"
+    }
+  }
+}

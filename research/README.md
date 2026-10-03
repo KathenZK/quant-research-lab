@@ -360,3 +360,5 @@
 - [批018 M1347实际远端恢复](public-strategies/catalog-hypothesis-batch018-recovery-20261003/README.md)：30结果长度/hash及清单原字节通过；零新增试验/对照，完整私包备份缺口单列。
 
 - [批019协调检查点002](public-strategies/progress-20261003-batch019-checkpoint002.json)：42 ID / 171策略配置 / 21对照；展示交付与M1266首次运行门禁单列，不新增研究计数。
+
+- [批020三策略日线准备](public-strategies/catalog-daily-next3-batch020-preflight-20261003/README.md)：M2903／M3710／M0974，12配置计划、0新增对照；规则及输入独审通过，实际代码C0门禁前不运行。
