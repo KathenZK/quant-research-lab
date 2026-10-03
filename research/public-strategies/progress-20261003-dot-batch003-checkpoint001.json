@@ -1,0 +1,182 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T12:10:20.659260+00:00",
+  "coordinator": "Codex /root only",
+  "batch": "dot003",
+  "checkpoint": 1,
+  "new_accepted_ids": [
+    "M0316",
+    "M0317"
+  ],
+  "new_strategy_configurations": 8,
+  "new_controls": 2,
+  "strict_reproductions": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317"
+  ],
+  "cumulative_strategy_configurations": 63,
+  "cumulative_controls": 16,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "validation": {
+    "source_executor_commit": "f5c1ea011b1a076ad760e5259976cd24a52e9591",
+    "completed_at_utc": "2026-10-03T11:56:08.467658+00:00",
+    "coordinator_receipt_sha256": "9218c49306fdf5f23893baa215541dda99b22d85fecd4bde957d8552f4caa5d2",
+    "status": "PASS_WITH_DECLARED_DIAGNOSTIC_LIMITS",
+    "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "frozen_public_files_unchanged": 119,
+    "frozen_public_bytes": 691096,
+    "replay_summary_only_difference": "peak RSS measurement; no model/account/metric difference",
+    "per_id": {
+      "M0316": {
+        "public_count_including_manifest": 63,
+        "public_bytes_including_manifest": 323764,
+        "publication_manifest_sha256": "d5a1667fbbb1bacabb0e896d208aae7b69c4533b197b2ce82343806e347e96d8",
+        "frozen_objects_checked": 26,
+        "protocol_sha256": "fc960036072e98f4105ed955abd1abcedc9b0ad37e47ca7b881bf85967cb2289",
+        "result_manifest_sha256": "1c890a7d17358e5811af1fedd7666c5b9752779af5d047b1dcec6c94763c937c",
+        "full_outputs": 22,
+        "byte_exact_outputs": 21,
+        "ledger_cases_passed": 5,
+        "source_rows_checked": 4572,
+        "source_feature_prefix_cuts": 12,
+        "execution_prefix_case_replays": 45,
+        "frozen_synthetic_checks": 17,
+        "base_metrics": {
+          "total_return": -0.10611717655261022,
+          "annualized_return": -0.05447368579782974,
+          "max_drawdown": 0.36732732899795395,
+          "sharpe_daily": -0.14528039054835987,
+          "sharpe_4h": -0.14882005759494701,
+          "final_equity": 89388.28234473898,
+          "final_cash": 89388.28234473898,
+          "final_quantity": 0.0,
+          "fill_events": 46,
+          "completed_roundtrips": 23,
+          "winning_roundtrip_fraction": 0.4782608695652174,
+          "fees_paid": 3230.3571796279793,
+          "position_bar_fraction": 0.2389420884632923,
+          "orders": 30,
+          "timeout_orders": 0,
+          "trailing_activations": 11,
+          "roi_suppressed_position_bars": 29,
+          "observations": 4386,
+          "daily_observations": 731
+        },
+        "source_runtime_limits": "Minimal IStrategy and reconstructed qtpylib cross semantics; not full original framework runtime",
+        "independent_decimal_cases": 5,
+        "fidelity": "HYPOTHESIS",
+        "promotion": false
+      },
+      "M0317": {
+        "public_count_including_manifest": 56,
+        "public_bytes_including_manifest": 367332,
+        "publication_manifest_sha256": "fb4f6bb97be5513a749f620b5629310c594f723304ff86673c57405ce366fd48",
+        "frozen_objects_checked": 18,
+        "protocol_sha256": "eb78a360cd1de6c68a3ef465e92d3af541615f03e3b59b7e2df21eb2cee246ae",
+        "result_manifest_sha256": "1fbb2afbb6576938bae66fd6eed9002dcfe0aeb94aa6a3520764f4e64a032111",
+        "full_outputs": 22,
+        "byte_exact_outputs": 21,
+        "ledger_cases_passed": 5,
+        "source_rows_checked": 4572,
+        "source_feature_prefix_cuts": 103,
+        "execution_prefix_case_replays": 55,
+        "frozen_synthetic_checks": 12,
+        "base_metrics": {
+          "total_return": 3.049944213471364,
+          "annualized_return": 1.010522921156758,
+          "max_drawdown": 0.3270706630427057,
+          "sharpe_daily": 1.7870537147910641,
+          "sharpe_4h": 1.8230052630457079,
+          "final_equity": 404994.4213471364,
+          "final_cash": 21469.662176270736,
+          "final_quantity": 4.098537650368317,
+          "fill_events": 201,
+          "completed_roundtrips": 100,
+          "winning_roundtrip_fraction": 0.54,
+          "fees_paid": 39169.01950553227,
+          "exit_signal_count": 0,
+          "entry_signal_count": 4386,
+          "position_bar_fraction": 0.9769721842225262,
+          "both_stop_roi_touched": 0,
+          "unresolved_stop_roi_samebar": 0,
+          "roi_boundary_candidate_bars": 287,
+          "observations": 4386,
+          "daily_observations": 731
+        },
+        "source_runtime_limits": "original author runtime unknown; parameter initialization is tested, full Freqtrade resolver/config/backtest is not run; no performance recovery claim",
+        "independent_decimal_cases": 5,
+        "fidelity": "HYPOTHESIS",
+        "promotion": false
+      }
+    },
+    "M0316_additional_independent_collision_minute_risk_checks": 6,
+    "fixed_light_recipe": {
+      "source_objects": 75,
+      "native_rows": 4572,
+      "offline_compare": "PASS",
+      "new_market_requests": 0
+    },
+    "full_repository_nonlocal_tests": {
+      "passed": 2318,
+      "skipped": 3,
+      "deselected": 264
+    },
+    "governance_documents_passed": 76,
+    "ruff": "PASS"
+  },
+  "private_backup": {
+    "state": "PARENT_REPORTED_PRIVATE_LIBRARY_V1_RESTORE_VERIFIED",
+    "archive_bytes": 371228,
+    "archive_sha256": "10ff0612487a19756488b9c6ebf2cb06a8469d784518b8cf688fd248facf95fb",
+    "members": 126,
+    "payload_hashes": 125,
+    "is_full_input_backup": false,
+    "external_input_snapshot_or_fixed_recipe_required": true,
+    "root_direct_library_remote_readback": false,
+    "old_v0_not_used": true
+  },
+  "conclusions": {
+    "M0316": "Base return -10.61%, drawdown36.73%; risk and execution assumptions limit fidelity, no promotion.",
+    "M0317": "Base return304.99%, drawdown32.71%, below same-window buyhold441.87%; original inverted sell bounds retained and zero source exits preserved, no promotion."
+  },
+  "external_claims_not_counted_complete": {
+    "M0315": "Root exclusive, four configs and one control first replay completed; independent recovery QA pending acceptance.",
+    "M0298": "dot b004 exclusive, native5m input restoration and C0 required; root started no historical worker.",
+    "M0304": "dot b004 exclusive, native5m input restoration and C0 required; root started no historical worker."
+  },
+  "legacy_6973": {
+    "writer": "dot exclusively",
+    "new_strategy_trials": 0,
+    "old_hash_only_route": "PAUSED_AUDIT_ONLY",
+    "new_collection_intake": "paused"
+  },
+  "site": {
+    "writer": "dot exclusively",
+    "this_batch_import_or_deploy_claimed": false
+  },
+  "rechecks_and_restorations_are_not_new_trials": true,
+  "legacy_proxy_trials_counted": false,
+  "frozen_evidence_overwritten": false
+}

@@ -1,0 +1,151 @@
+{
+  "id": "M0317",
+  "name": "mabStra",
+  "priority": 2,
+  "source": {
+    "id": "M0317",
+    "filename": "M0317-mabStra.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/mabStra.py",
+    "bytes": 4044,
+    "sha256": "1c483a549398a0244ca6d87f9736a76ed462056aca8a5ee9affd9aa65efd9393",
+    "fetched_at_utc": "2026-10-03T10:28:37.465479+00:00"
+  },
+  "readiness": "CONDITIONAL_SOURCE_DEFAULT_DIAGNOSTIC_WITH_KNOWN_EMPTY_EXIT_INTERVAL",
+  "plain_rule": "SMA7/14/28的两个相邻比值落在很宽的默认区间时买入；默认指标卖出区间自相矛盾，实际只能依ROI/止损等退出。",
+  "exact_rules": {
+    "sma_periods": {
+      "buy": [
+        7,
+        14,
+        28
+      ],
+      "sell": [
+        7,
+        14,
+        28
+      ]
+    },
+    "effective_buy_interval_open": [
+      0.295,
+      2.2545
+    ],
+    "entry": "SMA7/SMA14 and SMA14/SMA28 both strictly between effectivebuy_min andbuy_max",
+    "effective_sell_interval_open": [
+      2.8144,
+      1.5459
+    ],
+    "exit_signal": "SMA14/SMA7 and SMA28/SMA14 each greater2.8144 AND less1.5459: mathematically impossible",
+    "minimal_roi": {
+      "0": 0.598,
+      "644": 0.166,
+      "3269": 0.115,
+      "7289": 0
+    },
+    "stoploss": -0.128,
+    "source_trailing_defined": false,
+    "source_buy_params_dict": null,
+    "source_sell_params_dict": null,
+    "effective_parameter_values": {
+      "buy_div_max": 2.2545,
+      "buy_div_min": 0.295,
+      "buy_fast_ma_timeframe": 14,
+      "buy_mojo_ma_timeframe": 7,
+      "buy_slow_ma_timeframe": 28,
+      "sell_div_max": 1.5459,
+      "sell_div_min": 2.8144,
+      "sell_fast_ma_timeframe": 14,
+      "sell_mojo_ma_timeframe": 7,
+      "sell_slow_ma_timeframe": 28
+    }
+  },
+  "risks_and_missing": [
+    "Author explicitly warns strategy needshyperopt; no savedbuy_params/sell_params dictionaries are provided. Do not create optimized parameters or claim recovered author performance.",
+    "DecimalParameter decimals4 rounds0.29497→0.2950,2.25446→2.2545,1.54593→1.5459,2.81436→2.8144. Original range0..2 does not cause actual native loading rejection.",
+    "sell_min exceeds sell_max, so indicator exit is impossible for anyfinite ratio. Do not swap/reorder thresholds or invent an exit.",
+    "Defaultbuy_max andsell_min also exceed declared optimization bounds; preserve actual loaded defaults in a source-quality diagnostic, or return blocked for an intended optimized-author-rule claim.",
+    "No trailing override in source; verify framework defaultFalse rather than copy M0288trailing logic.",
+    "No original universe/position/fee/entry order configuration or author runtime. Any BTC4h run must be separately frozen asHYPOTHESIS."
+  ],
+  "data_reference": {
+    "asset": "BTCUSDT",
+    "market": "spot",
+    "native_timeframe": "4h",
+    "canonical_filename": "BTCUSDT-4h-202212-202412-native12.csv",
+    "sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "bytes": 1298564,
+    "rows": 4572,
+    "start": "2022-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "existing_producer_id": "M0256",
+    "lab_commit_with_evidence": "8661e31456a44887903327c82cf0f97604fd3b03",
+    "quality": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "pit_proven": false,
+    "canonical_input_local_read_by_this_preflight": false,
+    "locator": "Dot must locate its already verified M0256 cache and check exact hash/bytes; this executor did not materialize the raw4h CSV",
+    "evidence_files": [
+      {
+        "lab_relative_path": "research/public-strategies/M0256/artifacts/20261003-first-replay/4h-data-rebuild-receipt.json",
+        "sha256": "e6bc91227956b11aa4162fe48e5e43d32ee843d763d9417d50b27f8fffb0fc0a"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/specs/data-qa.json",
+        "sha256": "4c6a0faecb83927b7127f3d9180d7895dc40aaa352565f9def32d7157a091c63"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/specs/market-halt-evidence.json",
+        "sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/scripts/rebuild_official_bars.py",
+        "sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b"
+      }
+    ],
+    "halt_policy": {
+      "known_halt_start": "2023-03-24T11:27:00Z",
+      "resume": "2023-03-24T14:00:00Z",
+      "nominal_4h_12_open_is_not_executable_at_12": true,
+      "allowed_diagnostic_proxy": "Keep12:00 label but eligible open fill modeled at14:00 with verified1h resumption open;08:00 bucket intrabar bounds end11:26:59.999;12:00 bucket bounds14:00..15:59:59.999",
+      "required": "Validate all actual fill times and risk paths against retained halt evidence; if engine cannot represent timing, block that execution claim or freeze explicit bounded diagnostic treatment. Do not silently fill at12:00."
+    },
+    "licensing": "Binance Vision CC BY-NC-SA4.0 plus pinned additional terms; user-authorized personal nonproduction; raw data not for Git",
+    "new_market_data_requests_performed": 0
+  },
+  "future_execution_contract_to_freeze": [
+    "Read fresh global claims before assignment; only root writes claim/global progress.",
+    "Retain original source and immutable input hashes. No native timeframe change.",
+    "Specify BTC-only universe, long-only cash allocation/max_positions/fees/slippage/terminal policy separately from source.",
+    "Freeze cost and delay sensitivity before observing results; no hyperopt in this small source-rule batch.",
+    "Verify native parameter loading, indicator identities, causality, signal conflicts and ROI/stop/trailing ordering as applicable.",
+    "Inherit known March24 spot halt evidence and reject invented12:00 fills.",
+    "Persist per-ID ChineseMD/code/spec/sourcehash/lightcurves/trades plus reconstruction receipt; root saves remote and verifies readback.",
+    "Keep raw market data, copied full source and unbound Graph detail private; never touch Site/Graph active DB/runner."
+  ],
+  "proposed_future_cases_not_run": [
+    {
+      "name": "base",
+      "fee_bps_per_side": 8,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_per_side": 0,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_per_side": 20,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_per_side": 8,
+      "signal_delay_bars": 2
+    }
+  ],
+  "claim_status": "READY_NOT_ASSIGNED",
+  "backtest_started": false,
+  "new_executions": 0,
+  "identity_verification": "Original ID and source matched by authorized Library read; original private CSV row omitted",
+  "preflight_scope": "Native class load and 96 synthetic bars only; not a market replay"
+}

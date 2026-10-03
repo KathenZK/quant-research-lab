@@ -1,0 +1,140 @@
+{
+  "id": "M0316",
+  "name": "hlhb",
+  "priority": 1,
+  "source": {
+    "id": "M0316",
+    "filename": "M0316-hlhb.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/hlhb.py",
+    "bytes": 3821,
+    "sha256": "bd4523d134b686b012947896ffd7a5a299add87ac12aa0d18fac36c9e7ca3822",
+    "fetched_at_utc": "2026-10-03T10:28:37.253521+00:00"
+  },
+  "readiness": "SOURCE_PREFLIGHT_READY_FOR_COORDINATOR_ASSIGNMENT_WITH_EXECUTION_CONTRACT",
+  "plain_rule": "RSI10与EMA5/10同根向上交叉且ADX>25时买入，同根向下交叉卖出，保留ROI与移动止损。",
+  "exact_rules": {
+    "price_named_hl2": "(open+close)/2, verified against actual TA-Lib RSI input; not conventional(high+low)/2",
+    "rsi": "TA-Lib RSI10 on actualhl2",
+    "ema": "EMA5/EMA10 on close",
+    "adx": "TA-Lib default ADX14",
+    "entry": "RSI crosses above50 AND EMA5 crosses aboveEMA10 AND ADX>25 AND volume>0",
+    "exit_signal": "RSI crosses below50 AND EMA5 crosses belowEMA10 AND ADX>25 AND volume>0",
+    "minimal_roi": {
+      "0": 0.6225,
+      "703": 0.2187,
+      "2849": 0.0363,
+      "5520": 0
+    },
+    "stoploss": -0.3211,
+    "trailing": {
+      "enabled": true,
+      "positive": 0.0117,
+      "offset": 0.0186,
+      "only_offset": true
+    },
+    "ignore_roi_if_entry_signal": true,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "startup_candles": 30,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "time_in_force": {
+      "entry": "gtc",
+      "exit": "gtc"
+    }
+  },
+  "risks_and_missing": [
+    "Master sayshl2 but source uses(open+close)/2; do not silently use(high+low)/2.",
+    "position_stacking=\"True\" is a string strategy attribute. Reference Backtesting reads config[\"position_stacking\"] defaultFalse, not this attribute; freeze actual config rather than pretending add-on logic is specified.",
+    "Source limit entry/exit orders must not be silently replaced with market orders. Freeze assumed limit placement/fill/timeouts and label execution hypothesis.",
+    "Concurrent entry can suppressROI because ignore_roi_if_entry_signal=True; ordinary ROI-only helper may be wrong.",
+    "ROI/trailing coexist; preserve fee-aware activation and same-entry-bar native behavior.",
+    "No original universe, position budget, costs, actual limit queue, author runtime or independent holdout available."
+  ],
+  "data_reference": {
+    "asset": "BTCUSDT",
+    "market": "spot",
+    "native_timeframe": "4h",
+    "canonical_filename": "BTCUSDT-4h-202212-202412-native12.csv",
+    "sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+    "bytes": 1298564,
+    "rows": 4572,
+    "start": "2022-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "existing_producer_id": "M0256",
+    "lab_commit_with_evidence": "8661e31456a44887903327c82cf0f97604fd3b03",
+    "quality": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "pit_proven": false,
+    "canonical_input_local_read_by_this_preflight": false,
+    "locator": "Dot must locate its already verified M0256 cache and check exact hash/bytes; this executor did not materialize the raw4h CSV",
+    "evidence_files": [
+      {
+        "lab_relative_path": "research/public-strategies/M0256/artifacts/20261003-first-replay/4h-data-rebuild-receipt.json",
+        "sha256": "e6bc91227956b11aa4162fe48e5e43d32ee843d763d9417d50b27f8fffb0fc0a"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/specs/data-qa.json",
+        "sha256": "4c6a0faecb83927b7127f3d9180d7895dc40aaa352565f9def32d7157a091c63"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/specs/market-halt-evidence.json",
+        "sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999"
+      },
+      {
+        "lab_relative_path": "research/public-strategies/M0256/scripts/rebuild_official_bars.py",
+        "sha256": "54e425f5b0363991f02bb665f82a07066d7f6fc5a79330c4c769392f14a5122b"
+      }
+    ],
+    "halt_policy": {
+      "known_halt_start": "2023-03-24T11:27:00Z",
+      "resume": "2023-03-24T14:00:00Z",
+      "nominal_4h_12_open_is_not_executable_at_12": true,
+      "allowed_diagnostic_proxy": "Keep12:00 label but eligible open fill modeled at14:00 with verified1h resumption open;08:00 bucket intrabar bounds end11:26:59.999;12:00 bucket bounds14:00..15:59:59.999",
+      "required": "Validate all actual fill times and risk paths against retained halt evidence; if engine cannot represent timing, block that execution claim or freeze explicit bounded diagnostic treatment. Do not silently fill at12:00."
+    },
+    "licensing": "Binance Vision CC BY-NC-SA4.0 plus pinned additional terms; user-authorized personal nonproduction; raw data not for Git",
+    "new_market_data_requests_performed": 0
+  },
+  "future_execution_contract_to_freeze": [
+    "Read fresh global claims before assignment; only root writes claim/global progress.",
+    "Retain original source and immutable input hashes. No native timeframe change.",
+    "Specify BTC-only universe, long-only cash allocation/max_positions/fees/slippage/terminal policy separately from source.",
+    "Freeze cost and delay sensitivity before observing results; no hyperopt in this small source-rule batch.",
+    "Verify native parameter loading, indicator identities, causality, signal conflicts and ROI/stop/trailing ordering as applicable.",
+    "Inherit known March24 spot halt evidence and reject invented12:00 fills.",
+    "Persist per-ID ChineseMD/code/spec/sourcehash/lightcurves/trades plus reconstruction receipt; root saves remote and verifies readback.",
+    "Keep raw market data, copied full source and unbound Graph detail private; never touch Site/Graph active DB/runner."
+  ],
+  "proposed_future_cases_not_run": [
+    {
+      "name": "base",
+      "fee_bps_per_side": 8,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps_per_side": 0,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps_per_side": 20,
+      "signal_delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps_per_side": 8,
+      "signal_delay_bars": 2
+    }
+  ],
+  "claim_status": "READY_NOT_ASSIGNED",
+  "backtest_started": false,
+  "new_executions": 0,
+  "identity_verification": "Original ID and source matched by authorized Library read; original private CSV row omitted",
+  "preflight_scope": "Native class load and 96 synthetic bars only; not a market replay"
+}
