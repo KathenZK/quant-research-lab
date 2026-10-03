@@ -1,0 +1,104 @@
+{
+  "id": "M0260",
+  "protocol_sha256": "5b791e847e5c43ff56b1c9c98dda16211819fe0ebbbdbda316dabb8fd890981e",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "source_sha256": "e94ea092f9d277f29ce593f5adc1d9efffb846c27f1c1abfa51c57f1c53257b5",
+  "files": {
+    "base-daily-nav.csv": {
+      "bytes": 50007,
+      "sha256": "715bb396d0fcc741363bf63f023bdebd51c57b7d0455520727a107c6887bcb7e"
+    },
+    "base-nav.csv": {
+      "bytes": 13171703,
+      "sha256": "590d16adf362054848a0357bc08e4a6f54eb875408c8907e1fbc10f3a5e77ed6"
+    },
+    "base-trades.csv": {
+      "bytes": 99108,
+      "sha256": "80d1ae79a8bceb44d62423a126ce263856c9692eb05dc61d7b7bc85bd42f06b5"
+    },
+    "delay2-daily-nav.csv": {
+      "bytes": 50034,
+      "sha256": "2fee71b2bd03f654ca73e5915fe23dc15302d209114a9a3e0d9e250547b49c86"
+    },
+    "delay2-nav.csv": {
+      "bytes": 13177289,
+      "sha256": "cb91a43aff31f1b344eed43225cb36bf30e7c941899929703f7741a76389469b"
+    },
+    "delay2-trades.csv": {
+      "bytes": 99262,
+      "sha256": "2bef992fd8d5eeebff41094a4826f316e60cc782a0bdd9a2c3675c60872107dc"
+    },
+    "fee0-daily-nav.csv": {
+      "bytes": 49970,
+      "sha256": "0d7c5f4c1057441f57ff8ef5058b7fc5226b1519734d26f8cb593effa8166478"
+    },
+    "fee0-nav.csv": {
+      "bytes": 13158500,
+      "sha256": "3589290b5b483f7aa724eea942014d121c93b25a0becd5b25933b48fe8d7d112"
+    },
+    "fee0-trades.csv": {
+      "bytes": 93336,
+      "sha256": "a95a9260c7b1fea15e105f0b209a8f39289dca69bb2d8a5d3ebb774fe03550ac"
+    },
+    "fee20-daily-nav.csv": {
+      "bytes": 50131,
+      "sha256": "ea44fc8c64d23c4dce704bbddc22d9b82cee28f52b54312a33f35182d88f5345"
+    },
+    "fee20-nav.csv": {
+      "bytes": 13205834,
+      "sha256": "a4cb83855fc8c9285a55307b17d0075802443508a602bfdcccefa2b2cf48066b"
+    },
+    "fee20-trades.csv": {
+      "bytes": 99197,
+      "sha256": "ece0f2855be99120509b7dbf29fcec7a45c28d3724b82a16c856b76a8276c6e9"
+    },
+    "signals.csv": {
+      "bytes": 34011308,
+      "sha256": "74196be6ce03f2eb12230048724fe4082f4a6d6c82ad9da0adac95461b0145ac"
+    },
+    "summary.json": {
+      "bytes": 8158,
+      "sha256": "c757402ab7500479c279e46e9f626cbccc5f307709aa19751b40194d43f0e6b3"
+    }
+  },
+  "checks": {
+    "source": "40f15cdfc7fad8e406350408d22f6d9e098633a5acff32b70c2a815519097d86",
+    "oracle": "8cc51e47c433fb9a4a97fd7863eea3a599b2954148f0f87cbcd023836948eac5",
+    "event": "0d3ecc892cfd1cf82f675539b6f9d9da5a66435cc4a451610f99629bb256ffe8",
+    "prefix": "8e276fbb845e731123710f0efa4f54d37c54c57495a18542814ce58e385a0a16"
+  },
+  "recovery_sha256": "eac36609b001db8d9c5ca413b87c1fd1bd4bba8b65aa45e841cbb9126b2b832c",
+  "strategy_configs": 4,
+  "new_controls": 0,
+  "reused_control": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "strict_replications": 0
+}

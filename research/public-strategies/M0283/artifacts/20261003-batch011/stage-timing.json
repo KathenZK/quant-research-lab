@@ -1,0 +1,68 @@
+{
+  "run": {
+    "stage": "M0283-run",
+    "start_utc": "2026-10-03T14:22:59.845241+00:00",
+    "end_utc": "2026-10-03T14:23:14.230205+00:00",
+    "wall_seconds": 14.384977724002965,
+    "cpu_user_seconds": 13.953673,
+    "cpu_system_seconds": 0.421153,
+    "peak_child_rss_kib": 589816,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0283-source",
+    "start_utc": "2026-10-03T14:23:14.278222+00:00",
+    "end_utc": "2026-10-03T14:23:16.789767+00:00",
+    "wall_seconds": 2.5115533509961097,
+    "cpu_user_seconds": 2.305037,
+    "cpu_system_seconds": 0.20110899999999998,
+    "peak_child_rss_kib": 389180,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0283-oracle",
+    "start_utc": "2026-10-03T14:23:16.822630+00:00",
+    "end_utc": "2026-10-03T14:23:24.604275+00:00",
+    "wall_seconds": 7.781659342996136,
+    "cpu_user_seconds": 7.373289,
+    "cpu_system_seconds": 0.403437,
+    "peak_child_rss_kib": 724544,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "event": {
+    "stage": "M0283-event",
+    "start_utc": "2026-10-03T14:23:24.636105+00:00",
+    "end_utc": "2026-10-03T14:23:25.193198+00:00",
+    "wall_seconds": 0.557212844993046,
+    "cpu_user_seconds": 0.49229799999999996,
+    "cpu_system_seconds": 0.06408799999999999,
+    "peak_child_rss_kib": 202496,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0283-prefix",
+    "start_utc": "2026-10-03T14:23:25.228592+00:00",
+    "end_utc": "2026-10-03T14:23:37.057473+00:00",
+    "wall_seconds": 11.828892366997025,
+    "cpu_user_seconds": 11.112926999999999,
+    "cpu_system_seconds": 0.705028,
+    "peak_child_rss_kib": 563636,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0283-restore",
+    "start_utc": "2026-10-03T14:25:30.059912+00:00",
+    "end_utc": "2026-10-03T14:25:43.834578+00:00",
+    "wall_seconds": 13.774697360000573,
+    "cpu_user_seconds": 13.319131,
+    "cpu_system_seconds": 0.44886299999999996,
+    "peak_child_rss_kib": 589880,
+    "exit_code": 0,
+    "threads": 1
+  }
+}

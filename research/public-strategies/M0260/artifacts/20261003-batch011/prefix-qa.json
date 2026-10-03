@@ -1,0 +1,32 @@
+{
+  "id": "M0260",
+  "status": "PASS",
+  "cuts": [
+    {
+      "cut": 9000,
+      "features_and_signals_causal": true,
+      "account_prefix_checked": true
+    },
+    {
+      "cut": 9500,
+      "features_and_signals_causal": true,
+      "account_prefix_checked": true
+    },
+    {
+      "cut": 20000,
+      "features_and_signals_causal": true,
+      "account_prefix_checked": false
+    },
+    {
+      "cut": 50000,
+      "features_and_signals_causal": true,
+      "account_prefix_checked": false
+    },
+    {
+      "cut": 90000,
+      "features_and_signals_causal": true,
+      "account_prefix_checked": false
+    }
+  ],
+  "new_strategy_trials": 0
+}

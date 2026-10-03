@@ -1,0 +1,24 @@
+{
+  "id": "M0283",
+  "status": "PASS",
+  "method": "Independent stdlib/Decimal event field audit, separate from shared account and oracle; exact phase/time plus nonzero-relative1e-9 notional",
+  "intrabar_exact_time_claim": false,
+  "cases": {
+    "base": {
+      "events": 135,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "fee0": {
+      "events": 145,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "fee20": {
+      "events": 121,
+      "notional_fees_phase_and_time": "PASS"
+    },
+    "delay2": {
+      "events": 139,
+      "notional_fees_phase_and_time": "PASS"
+    }
+  }
+}

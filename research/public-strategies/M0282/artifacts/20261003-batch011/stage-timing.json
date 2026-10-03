@@ -1,0 +1,68 @@
+{
+  "run": {
+    "stage": "M0282-run",
+    "start_utc": "2026-10-03T14:22:21.232339+00:00",
+    "end_utc": "2026-10-03T14:22:35.254919+00:00",
+    "wall_seconds": 14.022669649999443,
+    "cpu_user_seconds": 13.549545,
+    "cpu_system_seconds": 0.46852699999999997,
+    "peak_child_rss_kib": 585940,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0282-source",
+    "start_utc": "2026-10-03T14:22:35.284472+00:00",
+    "end_utc": "2026-10-03T14:22:37.610613+00:00",
+    "wall_seconds": 2.3261531149983057,
+    "cpu_user_seconds": 2.144829,
+    "cpu_system_seconds": 0.179364,
+    "peak_child_rss_kib": 389080,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0282-oracle",
+    "start_utc": "2026-10-03T14:22:37.640378+00:00",
+    "end_utc": "2026-10-03T14:22:46.253474+00:00",
+    "wall_seconds": 8.613105569005711,
+    "cpu_user_seconds": 8.209762,
+    "cpu_system_seconds": 0.394489,
+    "peak_child_rss_kib": 729756,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "event": {
+    "stage": "M0282-event",
+    "start_utc": "2026-10-03T14:22:46.291029+00:00",
+    "end_utc": "2026-10-03T14:22:47.062869+00:00",
+    "wall_seconds": 0.771847854994121,
+    "cpu_user_seconds": 0.675667,
+    "cpu_system_seconds": 0.095714,
+    "peak_child_rss_kib": 202496,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0282-prefix",
+    "start_utc": "2026-10-03T14:22:47.106639+00:00",
+    "end_utc": "2026-10-03T14:22:59.813766+00:00",
+    "wall_seconds": 12.70713341300143,
+    "cpu_user_seconds": 11.971647,
+    "cpu_system_seconds": 0.718108,
+    "peak_child_rss_kib": 561152,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0282-restore",
+    "start_utc": "2026-10-03T14:25:15.651643+00:00",
+    "end_utc": "2026-10-03T14:25:29.855658+00:00",
+    "wall_seconds": 14.204031118002604,
+    "cpu_user_seconds": 13.833406,
+    "cpu_system_seconds": 0.363599,
+    "peak_child_rss_kib": 587440,
+    "exit_code": 0,
+    "threads": 1
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "M0265",
+  "protocol_sha256": "b5fcc1c0c1058c567d49d833fd7e05ce0e0441ba14163a8e4afc2f1682353631",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "source_sha256": "c565296f014ade283b684cae3ff375bd1b80c8696d7b8498b2b5915d2a6553ff",
+  "files": {
+    "base-daily-nav.csv": {
+      "bytes": 50129,
+      "sha256": "2856918630aae96933713f5b86789cd06a614c1bfa58a74f03938851b6bc9db4"
+    },
+    "base-nav.csv": {
+      "bytes": 13167678,
+      "sha256": "238237ddcc4a4416390c2194edcf198cf62d248990e2b6240104597233e1168a"
+    },
+    "base-trades.csv": {
+      "bytes": 497126,
+      "sha256": "c008aad363173f7d20530e73b9f3a804a2879801025be7048942af94410f4d55"
+    },
+    "delay2-daily-nav.csv": {
+      "bytes": 50183,
+      "sha256": "34b10b4b950357283b5e30d57ab254d7edf88b40783dbd61cc9277a9da068ebf"
+    },
+    "delay2-nav.csv": {
+      "bytes": 13163399,
+      "sha256": "6c9f30b8f2338732383a83863963896b79dc75f60c3d6961ed317e5d671d0a51"
+    },
+    "delay2-trades.csv": {
+      "bytes": 497220,
+      "sha256": "21a38e8111d441dac50c6c354d461d53d221465b3dc1efcd8ec9530c9e86d434"
+    },
+    "fee0-daily-nav.csv": {
+      "bytes": 50124,
+      "sha256": "bd1f286f62b4a901623dbcebbae6d17c29093652e6606cb2ce0dcc25e82ecf50"
+    },
+    "fee0-nav.csv": {
+      "bytes": 13158694,
+      "sha256": "5b3655054a85f6f59a83271b00abfa11c5fb8a6bff2fa93c4f8f68a55cb714fa"
+    },
+    "fee0-trades.csv": {
+      "bytes": 466699,
+      "sha256": "fb4af7cea047ecafe223d5d339550ecddcfb51ce5133c0045808a52031e6f8b9"
+    },
+    "fee20-daily-nav.csv": {
+      "bytes": 50276,
+      "sha256": "ac3252b88094d31ade8d31ceb940912f35202be94083fbf41c63bdadef58c55e"
+    },
+    "fee20-nav.csv": {
+      "bytes": 13202478,
+      "sha256": "abf2cc1101720ac2ee923114f073e629a9a30110f53afbf472f96ae5cd052ba8"
+    },
+    "fee20-trades.csv": {
+      "bytes": 497713,
+      "sha256": "f604c2d8d53d1c00fc3a45e976b4cbfd013e522c1677d67a4015236f44ccbe56"
+    },
+    "signals.csv": {
+      "bytes": 14963727,
+      "sha256": "00189a68aa588118a63e7a70bb4c6aa4fd302ef5c7f0275973ded517fcd3977f"
+    },
+    "summary.json": {
+      "bytes": 6963,
+      "sha256": "262a6459a5da4d9e679caa3b16cb1b71e8f82db7e53f5f77952199f29e1ebd39"
+    }
+  },
+  "checks": {
+    "source": "7ca0415fc58524188e0f726c60a3e11f0cfc3b35af31b24f4e0f0022c0857ccb",
+    "oracle": "6d4e8b995bca098703e09685166654a2c3b36f188006292e3e9f3816c5ea0f7c",
+    "event": "479529257b1c04837af1092c9614599abc51559d92b9dee258a0071f64d2e6fb",
+    "prefix": "bbb3f1a612d1f4aeacc3ea2896525e8cec02a0716c67b835420ce6bebdda7ec3"
+  },
+  "recovery_sha256": "c8516671e281f79f008b67dd3a8ee25808105650e6ecc47e91f121133f35c663",
+  "strategy_configs": 4,
+  "new_controls": 0,
+  "reused_control": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "strict_replications": 0
+}
