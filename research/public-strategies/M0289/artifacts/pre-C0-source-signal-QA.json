@@ -1,0 +1,61 @@
+{
+  "id": "M0289",
+  "status": "PASS_SOURCE_AND_SIGNAL_NO_RETURNS",
+  "rows": 114336,
+  "evaluation_rows": 105408,
+  "independent_receipt_sha256": "14e92c185fc03d216fcd553db557fef7314b348bf4f6e0b83ba6b05c8bea4e30",
+  "historical_returns_calculated": false,
+  "account_replay_calls": 0,
+  "market_requests": 0,
+  "evidence": {
+    "protocol_sha256": "d2b31e0809b76e80597a933cba7766de1536a5dedb1986fce45889c7e90747e7",
+    "adapter_sha256": "36a00222b5c2ae5f0ece9025d6d3ac8475678ae2d62eff9dbf86d3f3d50040b3",
+    "source_sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+    "original_catalog_sha256": "a11d209dbb8f988eac4a2f639ffc52f6221cb2190e2e355c4afe495e7ef38427",
+    "rows": 114336,
+    "evaluation_rows": 105408,
+    "feature_readiness": {},
+    "signal_counts": {
+      "all_entry": 0,
+      "all_exit": 114334,
+      "evaluation_entry": 0,
+      "evaluation_exit": 105408,
+      "evaluation_collision": 0
+    },
+    "complete_group_availability": null,
+    "allrow_original_shared_bridge": "PASS",
+    "allrow_independent_features_rules": "PASS",
+    "causality": {
+      "cuts": [
+        119,
+        120,
+        199,
+        200,
+        8927,
+        8928,
+        8929,
+        8930,
+        50000,
+        50001,
+        50002,
+        50003,
+        50004,
+        50005,
+        50006,
+        50007,
+        114335
+      ],
+      "columns": [
+        "date",
+        "enter_long",
+        "exit_long",
+        "entry_signal",
+        "exit_signal"
+      ],
+      "prefix_future": "PASS"
+    },
+    "Boolean_fuzz_rows": 2000,
+    "historical_returns_calculated": false,
+    "account_calls": 0
+  }
+}

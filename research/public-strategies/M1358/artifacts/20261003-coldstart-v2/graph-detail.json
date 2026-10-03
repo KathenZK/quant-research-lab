@@ -1,0 +1,412 @@
+{
+  "run_id": "m1358-coldstart-daily-20261003-v2",
+  "origin_run_id": "m1358-coldstart-daily-20261003-v2",
+  "id": "M1358",
+  "variant_id": "M1358-coldstart-daily-v2-base",
+  "name": "BTCUSDT 日线 EMA13/48 状态交易（冷启动适配）",
+  "family": "daily-ema13-48-state",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "原窗口、账户、费用及成交均为显式ADAPTED；HYPOTHESIS为现有Graph兼容枚举，不升级严格性。",
+  "metrics": {
+    "periods": {
+      "2023-2024": {
+        "total_return": 1.1657065688213613,
+        "cagr": 0.47085634600691884,
+        "max_drawdown": -0.30034824099753377,
+        "sharpe_zero_cash": 1.2247757266540886,
+        "observations": 731,
+        "final_equity": 216570.65688213613,
+        "sharpe": 1.2247757266540886,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "2023": {
+        "total_return": 0.2922121388168273,
+        "cagr": 0.2922121388168273,
+        "max_drawdown": -0.19404624227312106,
+        "sharpe_zero_cash": 0.9857309942415282,
+        "observations": 365,
+        "final_equity": 129221.21388168274,
+        "sharpe": 0.9857309942415282,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "2024": {
+        "total_return": 0.6759682901635029,
+        "cagr": 0.6736053261514792,
+        "max_drawdown": -0.30034824099753377,
+        "sharpe_zero_cash": 1.4232304756035954,
+        "observations": 366,
+        "final_equity": 216570.65688213613,
+        "sharpe": 1.4232304756035954,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "total_return": 4.422269858060954,
+        "cagr": 1.3258858046070183,
+        "max_drawdown": -0.25848029746503176,
+        "sharpe_zero_cash": 2.00578922935108,
+        "observations": 731,
+        "final_equity": 542226.9858060954,
+        "sharpe": 2.00578922935108,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "2023": {
+        "total_return": 1.4771161418067562,
+        "cagr": 1.4771161418067562,
+        "max_drawdown": -0.19471872279443359,
+        "sharpe_zero_cash": 2.3374669139995365,
+        "observations": 365,
+        "final_equity": 247711.61418067562,
+        "sharpe": 2.3374669139995365,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "2024": {
+        "total_return": 1.1889445418195308,
+        "cagr": 1.1842641380269758,
+        "max_drawdown": -0.25848029746503176,
+        "sharpe_zero_cash": 1.752396567998615,
+        "observations": 366,
+        "final_equity": 542226.9858060954,
+        "sharpe": 1.752396567998615,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      }
+    },
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "total_return": 0.8834513416343432,
+        "cagr": 0.3717947457928077,
+        "max_drawdown": -0.35169382750554146,
+        "sharpe_zero_cash": 1.0262220326145512,
+        "observations": 731,
+        "final_equity": 188345.13416343433,
+        "sharpe": 1.0262220326145512,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "2023": {
+        "total_return": 0.19749831675991558,
+        "cagr": 0.19749831675991558,
+        "max_drawdown": -0.2452308205419339,
+        "sharpe_zero_cash": 0.7284988914677673,
+        "observations": 365,
+        "final_equity": 119749.83167599156,
+        "sharpe": 0.7284988914677673,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "2024": {
+        "total_return": 0.5728217027731766,
+        "cagr": 0.5708767703474449,
+        "max_drawdown": -0.35169382750554146,
+        "sharpe_zero_cash": 1.2638486569720582,
+        "observations": 366,
+        "final_equity": 188345.13416343433,
+        "sharpe": 1.2638486569720582,
+        "annualization": 365,
+        "status": "ADAPTED_DIAGNOSTIC",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      }
+    },
+    "cost_sensitivity": {
+      "fee0": {
+        "2023-2024": {
+          "total_return": 1.1929609622664925,
+          "cagr": 0.4800697655918469,
+          "max_drawdown": -0.29697703942571707,
+          "sharpe_zero_cash": 1.2421801013457785,
+          "observations": 731,
+          "final_equity": 219296.09622664924,
+          "sharpe": 1.2421801013457785,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2023-01-01",
+          "end": "2024-12-31"
+        },
+        "2023": {
+          "total_return": 0.30091710730639654,
+          "cagr": 0.30091710730639654,
+          "max_drawdown": -0.1902395048601525,
+          "sharpe_zero_cash": 1.0079670534175034,
+          "observations": 365,
+          "final_equity": 130091.71073063965,
+          "sharpe": 1.0079670534175034,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "2024": {
+          "total_return": 0.68570383919934,
+          "cagr": 0.6833005097951479,
+          "max_drawdown": -0.29697703942571707,
+          "sharpe_zero_cash": 1.4375151021070822,
+          "observations": 366,
+          "final_equity": 219296.09622664924,
+          "sharpe": 1.4375151021070822,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        }
+      },
+      "fee20": {
+        "2023-2024": {
+          "total_return": 1.1253854628351987,
+          "cagr": 0.45711855076938934,
+          "max_drawdown": -0.3053840697508182,
+          "sharpe_zero_cash": 1.1986077854989587,
+          "observations": 731,
+          "final_equity": 212538.54628351986,
+          "sharpe": 1.1986077854989587,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2023-01-01",
+          "end": "2024-12-31"
+        },
+        "2023": {
+          "total_return": 0.2792399305676767,
+          "cagr": 0.2792399305676767,
+          "max_drawdown": -0.19973352205367678,
+          "sharpe_zero_cash": 0.952295321928078,
+          "observations": 365,
+          "final_equity": 127923.99305676766,
+          "sharpe": 0.952295321928078,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "2024": {
+          "total_return": 0.661443965317777,
+          "cagr": 0.659140935547986,
+          "max_drawdown": -0.3053840697508182,
+          "sharpe_zero_cash": 1.4017544281253709,
+          "observations": 366,
+          "final_equity": 212538.54628351986,
+          "sharpe": 1.4017544281253709,
+          "annualization": 365,
+          "status": "ADAPTED_DIAGNOSTIC",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+    "capital_state": {
+      "initial_cash_usdt": 100000,
+      "final_equity_usdt": 216570.65688213613,
+      "final_position_open": true
+    }
+  },
+  "spec": {
+    "source_url": "https://www.quantconnect.com/forum/discussion/13690/ema-crossover-on-crypto/",
+    "assumptions": [
+      "ADAPTED；原作者运行版本与账户默认未证；strict=0。",
+      "仅100000 USDT现金、无借贷；买入名义金额为费前现金95%，费用另扣USDT。",
+      "2023-01-01指标状态为空，前31天数据不喂EMA；保留前48天现金净值。",
+      "EMA13/48以首N收盘SMA种子，Decimal50递推；状态比较，等值不交易。",
+      "日线收盘决定、下一UTC日open全量成交；lag2为第二日open；双边2bps不利滑点。",
+      "基线双边8bps，另0/20bps与lag2预定敏感性；原源未设ROI/stop/halt，本实现不加入。",
+      "重复延迟意图保留，到期仅在适用持仓状态成交；不按后续反向信号隐式取消。",
+      "数据DIAGNOSTIC_ONLY，PIT/成交可行性未证；窗口已研究，不是新样本外。",
+      "完整731天指标、期末按原收盘盯市不强制卖出；lot、订单簿、部分成交未建模。"
+    ],
+    "rule_excerpt": "就绪后，空仓且EMA13>EMA48做多；持多且EMA13<EMA48清仓。状态判断，不要求发生交叉。",
+    "params": {
+      "fast": 13,
+      "slow": 48,
+      "timeframe": "1d",
+      "initial_state": "empty",
+      "account": "single_USDT_cash",
+      "execution": "95% pre-fee notional, next-open proxy"
+    }
+  },
+  "audit": {
+    "source_verification_status": "VISIBLE_CLASS_AND_FIXED_CATALOG_REVIEWED",
+    "source_rule_attribution_status": "STATE_RULES_VERIFIED_EXECUTION_ADAPTED",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "deep_validation": {
+    "Decimal_account": "PASS",
+    "Fraction_source_features": "PASS",
+    "prefix_future_perturbation": "PASS",
+    "fresh_restore": "PASS"
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-01-31",
+      "equity": 1.0,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-02-28",
+      "equity": 0.9438948666450596,
+      "drawdown": -0.06511865400568162
+    },
+    {
+      "date": "2023-03-31",
+      "equity": 0.968594317782461,
+      "drawdown": -0.04065506495499793
+    },
+    {
+      "date": "2023-04-30",
+      "equity": 0.9936229383880761,
+      "drawdown": -0.03889780475217719
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 0.9126320045050043,
+      "drawdown": -0.11723794902910978
+    },
+    {
+      "date": "2023-06-30",
+      "equity": 0.9255824754435773,
+      "drawdown": -0.10471134002313465
+    },
+    {
+      "date": "2023-07-31",
+      "equity": 0.8897535509045615,
+      "drawdown": -0.13936760317631813
+    },
+    {
+      "date": "2023-08-31",
+      "equity": 0.8537512558419799,
+      "drawdown": -0.17419156252929024
+    },
+    {
+      "date": "2023-09-30",
+      "equity": 0.8537512558419799,
+      "drawdown": -0.17419156252929024
+    },
+    {
+      "date": "2023-10-31",
+      "equity": 1.0662121609796233,
+      "drawdown": 0.0
+    },
+    {
+      "date": "2023-11-30",
+      "equity": 1.1574005698550045,
+      "drawdown": -0.0034175117495818252
+    },
+    {
+      "date": "2023-12-31",
+      "equity": 1.2922121388168273,
+      "drawdown": -0.041397078849623514
+    },
+    {
+      "date": "2024-01-31",
+      "equity": 1.2095799371131895,
+      "drawdown": -0.15426537377633742
+    },
+    {
+      "date": "2024-02-29",
+      "equity": 1.7103793395120488,
+      "drawdown": -0.020123031428565308
+    },
+    {
+      "date": "2024-03-31",
+      "equity": 1.9843609921755785,
+      "drawdown": -0.02380390802019039
+    },
+    {
+      "date": "2024-04-30",
+      "equity": 1.7623336952695652,
+      "drawdown": -0.13302908449116257
+    },
+    {
+      "date": "2024-05-31",
+      "equity": 1.7762891534149152,
+      "drawdown": -0.1261637692803741
+    },
+    {
+      "date": "2024-06-30",
+      "equity": 1.7078762010093071,
+      "drawdown": -0.159819166177657
+    },
+    {
+      "date": "2024-07-31",
+      "equity": 1.645562482492899,
+      "drawdown": -0.1904740766159817
+    },
+    {
+      "date": "2024-08-31",
+      "equity": 1.4879093474544371,
+      "drawdown": -0.26803071823499536
+    },
+    {
+      "date": "2024-09-30",
+      "equity": 1.4893254361369297,
+      "drawdown": -0.2673340807566349
+    },
+    {
+      "date": "2024-10-31",
+      "equity": 1.6450560113337782,
+      "drawdown": -0.19072323247430778
+    },
+    {
+      "date": "2024-11-30",
+      "equity": 2.229032363597053,
+      "drawdown": -0.02431288353887462
+    },
+    {
+      "date": "2024-12-31",
+      "equity": 2.1657065688213613,
+      "drawdown": -0.11477667880245868
+    }
+  ],
+  "curve_meta": {
+    "observations": 731,
+    "total_observations": 731,
+    "returned_points": 25,
+    "sampling": "first close + UTC month-end; unchanged initial-capital denominator100000",
+    "benchmark_curve_available": false,
+    "equity_unit": "initial_capital_multiple",
+    "drawdown_unit": "fraction"
+  },
+  "lineage": {
+    "source_commit": "11a101a855c9ef83a2b4223d49dfa9a6b48d4a51",
+    "C0_sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+    "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "catalog_commit": "26712be68a662d15dcdb636a197a8062457246b5",
+    "new_control_runs": 0,
+    "benchmark_summary_sha256": "a8941d6cdb767b12fbec960836042b6b83ddcf8fa0f4b27587a6669952f04c42"
+  },
+  "limitations": [
+    "不是原作者严格复现。",
+    "因果/账本验证不证明未来获利或真实成交。",
+    "原论坛源码许可未证，未包含在外传恢复包。",
+    "Library远端保存未验证。"
+  ]
+}

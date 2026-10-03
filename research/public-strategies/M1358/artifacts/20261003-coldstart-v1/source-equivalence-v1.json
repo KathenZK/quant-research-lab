@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "synthetic_cases": 54,
+  "visible_class_sha256": "b568553dabbe304d814d4e15d5ebbab1a343b4688b16fea1573d433600833eba",
+  "runner_action_semantics": "literal ready/quantity/current-state/equality matches inspected visible source",
+  "historical_features_or_returns": false,
+  "source_content_not_embedded": true,
+  "source_redistribution_authorized": false
+}

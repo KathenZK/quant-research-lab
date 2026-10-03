@@ -1,0 +1,115 @@
+{
+  "purpose": "hash-only commitment to private full ledgers; no market rows included",
+  "files": [
+    {
+      "path": "base-decisions.csv",
+      "bytes": 117869,
+      "sha256": "1faf9adf9ff15e6cdadc3ce350ed39d4f566f440a0dc39f9f7c81f0e1fd95772"
+    },
+    {
+      "path": "base-fills.csv",
+      "bytes": 4167,
+      "sha256": "c9ba9de3a2cb7f8048393427e7a0a6557dee2b005f0cd2b284313c6808792371"
+    },
+    {
+      "path": "base-nav.csv",
+      "bytes": 89162,
+      "sha256": "17735f0176bcecb185808ba27453a2352d75bb0fe55f27b889f3db6f64f3e4cc"
+    },
+    {
+      "path": "base-pending.csv",
+      "bytes": 3427,
+      "sha256": "a853d28ee34a46d0369f4c69435bf9dd8e70178fae6379c71d8652115b8204d7"
+    },
+    {
+      "path": "base-terminal-pending.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "features.csv",
+      "bytes": 111943,
+      "sha256": "a799da66867e69197533e74ae2a05ebbd3a563aa260e70540ecfc285abf2508f"
+    },
+    {
+      "path": "fee0-decisions.csv",
+      "bytes": 118055,
+      "sha256": "341585bde6de809845c8f79f12e2d6a3dbba40647d3f45988e43d9a471a36899"
+    },
+    {
+      "path": "fee0-fills.csv",
+      "bytes": 3939,
+      "sha256": "98005728a4e4f6f1ce05a94ad9c4a856e4c7971b4f2aca751b92c50523b81b53"
+    },
+    {
+      "path": "fee0-nav.csv",
+      "bytes": 89315,
+      "sha256": "7ee66aa5b6aca7067e785f0b334bb0ccad278c1cf9961997298752a0617c083f"
+    },
+    {
+      "path": "fee0-pending.csv",
+      "bytes": 3427,
+      "sha256": "f636f9b6ce6d3f562c81c2abf618870002ebae977eeddf86af118446a5d583d5"
+    },
+    {
+      "path": "fee0-terminal-pending.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "fee20-decisions.csv",
+      "bytes": 118105,
+      "sha256": "a5dabc9564f21bb1e932cc31d9499b9cc00467620164019069cf250530272e73"
+    },
+    {
+      "path": "fee20-fills.csv",
+      "bytes": 4187,
+      "sha256": "8f1c8e68ab7faf344334b33334b833aa9641cbf32b1b6a168bd711258a865775"
+    },
+    {
+      "path": "fee20-nav.csv",
+      "bytes": 89341,
+      "sha256": "e5df30fe20d5b028afa38283110e28fb3532f838bd91e7eb96dafce9e4b8fca2"
+    },
+    {
+      "path": "fee20-pending.csv",
+      "bytes": 3461,
+      "sha256": "6453f46260f8c9f3daf9b87e70cff2ac5c585fa0dcbf26d67be3c06d6446b193"
+    },
+    {
+      "path": "fee20-terminal-pending.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "lag2-decisions.csv",
+      "bytes": 118816,
+      "sha256": "b36f4204170f9e19e33c31dd1f630d8c50908a2fe5890359a8fbd9d82268a4ba"
+    },
+    {
+      "path": "lag2-fills.csv",
+      "bytes": 4194,
+      "sha256": "dd6885010df625aa343c5bc7c0621368b64e80f0f74249b400a30ea8dac9f006"
+    },
+    {
+      "path": "lag2-nav.csv",
+      "bytes": 89670,
+      "sha256": "fdee8d81e8cbf503d351a34668c41a913a32599e57d0936dbdee50a42fca3da3"
+    },
+    {
+      "path": "lag2-pending.csv",
+      "bytes": 7124,
+      "sha256": "c93ca90c9873ff08ba38c0f10b6142bfec6d26dc7714663b0874ffbc2ad6321b"
+    },
+    {
+      "path": "lag2-terminal-pending.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 4383,
+      "sha256": "b789c4d9a0a6a963e90dd21c49533edc7e26d74162f7d3cf48970e3849a8854b"
+    }
+  ]
+}

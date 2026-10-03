@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "features": 731,
+  "cases": {
+    "base": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 17,
+      "decisions": 731,
+      "pending_events": 34,
+      "all_event_fields_checked": true
+    },
+    "fee0": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 17,
+      "decisions": 731,
+      "pending_events": 34,
+      "all_event_fields_checked": true
+    },
+    "fee20": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 17,
+      "decisions": 731,
+      "pending_events": 34,
+      "all_event_fields_checked": true
+    },
+    "lag2": {
+      "status": "PASS",
+      "nav_rows": 731,
+      "fills": 17,
+      "decisions": 731,
+      "pending_events": 68,
+      "all_event_fields_checked": true
+    }
+  },
+  "tolerance": "expected zero exact; otherwise Decimal rel1e-9 abs0",
+  "source_signals": "exact Fraction SMA seed and rational recurrence; all comparisons equal",
+  "metrics": "independent fsum/population path with sample return std",
+  "no_engine_import": true
+}

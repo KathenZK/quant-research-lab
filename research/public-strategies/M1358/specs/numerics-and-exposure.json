@@ -1,0 +1,14 @@
+{
+  "classification": "ADAPTED_EXECUTION_PROXY",
+  "signal_arithmetic": "Python float64; math.fsum SMA seed; alpha*x+(1-alpha)*prev; not claimed C# decimal bitwise",
+  "account_arithmetic": "float64; same daily cash/notional formulas as pinned M0215",
+  "serialization": "csv.DictWriter Python shortest round-trip float repr; JSON json.dumps allow_nan=False",
+  "oracle": "independent Decimal50 feature/account; expectedzero exact, other abs0/rel1e-9; all event fields and yearly/whole metrics",
+  "runtime_policy": "single thread; no network",
+  "new_strategy_returns_seen_before_C0": false,
+  "window_prior_use": "2023-2024 already used by prior daily/other strategies; benchmark values included in preassigned root contract are known; not OOS",
+  "prior_search_trial_count": "UNKNOWN; no valid DSR/PBO claim",
+  "same_window_control": "M0216 frozen result reference; zero new control runs",
+  "changed_from_source": "explicit root protocol adaptations: dates/account/budget/fees/quote fee/next-open queue/precision; no implicit warmup",
+  "recovery_scope": "own adapted runner/code/input/results; does not include unlicensed forum class or reproduce original author project"
+}

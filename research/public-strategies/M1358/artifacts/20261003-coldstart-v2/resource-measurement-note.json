@@ -1,0 +1,6 @@
+{
+  "scope": "Resource measurement interpretation, no extra replay",
+  "replay_oracle_causality": "CPU/RSS are each measured Python process, wall is complete command span",
+  "fresh_restore": "wall covers parent and child. Reported CPU/RSS are restore wrapper parent only; replay child CPU/RSS were not individually captured. Do not sum as full restore resource cost.",
+  "new_runs": 0
+}

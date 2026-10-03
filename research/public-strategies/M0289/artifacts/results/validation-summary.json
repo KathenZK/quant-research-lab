@@ -1,0 +1,17 @@
+{
+  "source_signal": "PASS",
+  "independent_complete_group_OHLCV_Wilder_RSI": "NOT_APPLICABLE",
+  "absolute_power_rules_and_no_volume_filter": "PASS",
+  "prefix_future_perturbation": "PASS",
+  "frozen_decimal_oracle": "PASS",
+  "supplementary_event_time_notional_all_metrics": "PASS",
+  "source_audit_sha256": "5f026c88b7dd5ce9b0e068ef50a1265cad54aba3929a0e272d4569eb16481d1e",
+  "oracle_sha256": "96bbe51a6e1e8e22681690b6e5ac780b7b9c2dd8a86d679440d5fdbecf17218c",
+  "supplement_sha256": "6ef611aaacde966afd3f97efb3b60a837a8ca40b399056b4b77908583b220a9d",
+  "public_samples_not_statistical": true,
+  "tolerance": {
+    "absolute": 0,
+    "relative": 1e-09,
+    "expected_zero": "exact"
+  }
+}

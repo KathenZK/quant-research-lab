@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0289,PowerTower,加密现货,5m；连续三根收盘大于各自向前 2 根收盘的 buy_pow=3.849 次幂做多；对应 sell_pow=3.798 任一成立平多；止损 -28.8%。,freqtrade/freqtrade-strategies,PowerTower,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/PowerTower.py,PowerTower.py,中,,未知

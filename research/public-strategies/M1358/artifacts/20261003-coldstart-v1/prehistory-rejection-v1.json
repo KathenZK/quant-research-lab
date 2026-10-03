@@ -1,0 +1,16 @@
+{
+  "status": "PREHISTORY_REJECTED",
+  "source_commit": "0b7020f4d93c7b1b2437d95dbdc8e725fbba8851",
+  "C0_sha256": "50741401a2b108694c9ea133b76105e59f6f685d8aa29f303173896809cf2f32",
+  "detected_by": "independent reviewer m0286",
+  "finding": "Float64 EMA in constant-price sequences drifts apart and generates false state action. Direct equality-unit test was insufficient.",
+  "constant_examples": [
+    "0.1",
+    "0.3",
+    "10",
+    "100"
+  ],
+  "historical_runs": 0,
+  "response": "Keep all v1 files/C0 untouched. New Decimal feature implementation v2 with exact rational oracle and whole-sequence constant tests. No epsilon or rule alteration.",
+  "received_at_utc": "2026-10-03T15:42:05.208973+00:00"
+}

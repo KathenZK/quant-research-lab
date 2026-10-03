@@ -1,0 +1,28 @@
+{
+  "id": "M1358",
+  "name": "BTCUSDT 日线 EMA13/48 状态交易（冷启动适配）",
+  "status": "tested_proxy_only",
+  "reason": "ADAPTED_EXECUTION_PROXY；1规则实现、4预定配置；strict0",
+  "tested_variants": 1,
+  "families": [
+    "daily-ema13-48-state"
+  ],
+  "audit": {
+    "source_verification_status": "VISIBLE_CLASS_AND_FIXED_CATALOG_REVIEWED",
+    "source_rule_attribution_status": "STATE_RULES_VERIFIED_EXECUTION_ADAPTED",
+    "strict_reproductions": 0,
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "PIT": "NOT_PROVEN",
+    "original_runtime_equivalence": false
+  },
+  "implementations": [
+    {
+      "variant_id": "M1358-coldstart-daily-v2-base",
+      "family": "daily-ema13-48-state",
+      "origin_run_id": "m1358-coldstart-daily-20261003-v2",
+      "fidelity_class": "HYPOTHESIS"
+    }
+  ],
+  "configuration_runs": 4,
+  "new_control_runs": 0
+}

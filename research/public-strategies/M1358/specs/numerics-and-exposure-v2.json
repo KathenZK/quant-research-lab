@@ -1,0 +1,15 @@
+{
+  "classification": "ADAPTED_EXECUTION_PROXY",
+  "signal_arithmetic": "Decimal50 from exact canonical close text; SMA seed then previous + alpha*(close-previous); strict state comparisons with no epsilon; not original C# bitwise",
+  "account_arithmetic": "float64; same daily cash/notional formulas as pinned M0215",
+  "serialization": "CSV Decimal string for features, Python round-trip float for account; JSON finite float metrics",
+  "oracle": "exact Fraction feature seed/recurrence/comparison, independently Decimal50 account; expectedzero exact, other abs0/rel1e-9",
+  "runtime_policy": "single thread; no network",
+  "new_strategy_returns_seen_before_C0": false,
+  "window_prior_use": "2023-2024 already used by prior daily/other strategies; benchmark values included in preassigned root contract are known; not OOS",
+  "prior_search_trial_count": "UNKNOWN; no valid DSR/PBO claim",
+  "same_window_control": "M0216 frozen result reference; zero new control runs",
+  "changed_from_source": "explicit root protocol adaptations: dates/account/budget/fees/quote fee/next-open queue/precision; no implicit warmup",
+  "recovery_scope": "own adapted runner/code/input/results; does not include unlicensed forum class or reproduce original author project",
+  "supersedes_before_history": "v1 float64 EMA failed constant sequence equality, retained immutable; historical v1 runs0"
+}

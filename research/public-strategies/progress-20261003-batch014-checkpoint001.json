@@ -1,0 +1,479 @@
+{
+  "schema": "public-catalog-progress/v1",
+  "recorded_at": "2026-10-03T16:11:55.517845+00:00",
+  "coordinator": "Codex root only",
+  "batch": "014",
+  "checkpoint": 1,
+  "previous_checkpoint_sha256": "5cb2307456946c078e0515220a1cb3fa10c665d5824651cb6de77886c1070386",
+  "new_accepted_ids": [
+    "M0287",
+    "M0289",
+    "M1358"
+  ],
+  "new_strategy_configurations": 12,
+  "new_controls": 0,
+  "cumulative_tested_ids": [
+    "M0200",
+    "M0212",
+    "M0214",
+    "M0215",
+    "M0216",
+    "M0217",
+    "M0220",
+    "M0233",
+    "M0256",
+    "M0275",
+    "M0286",
+    "M0288",
+    "M0293",
+    "M0316",
+    "M0317",
+    "M0315",
+    "M0311",
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0298",
+    "M0304",
+    "M0260",
+    "M0265",
+    "M0282",
+    "M0283",
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266",
+    "M0287",
+    "M0289",
+    "M1358"
+  ],
+  "cumulative_strategy_configurations": 143,
+  "cumulative_controls": 20,
+  "cumulative_blocked_ids": [
+    "M0004",
+    "M0211",
+    "M0221",
+    "M0226",
+    "M0232",
+    "M0259",
+    "M0274"
+  ],
+  "strict_reproductions": 0,
+  "acceptance_meaning": "Independently validated executed research. Remote persistence is tracked separately; local-only packages are not declared complete remote backups.",
+  "last_independent_QA_completed_at": "2026-10-03T16:06:31.533127+00:00",
+  "public_source_commits": {
+    "dot007": "a8b65cb629a462941c85d08098a75bef4415b217",
+    "M1358_results": "1c23b690faf6cabeaa9270d646ed7a36849b8e47",
+    "M1358_C0_v2": "11a101a855c9ef83a2b4223d49dfa9a6b48d4a51"
+  },
+  "independent_reviews": {
+    "dot007": {
+      "sha256": "6afd7e660e0d4b6538029765d57c2d0a74bb23be27a583b2b4f8a4cba550c5bd",
+      "status": "PASS_INDEPENDENT_RECONSTRUCTION",
+      "public_files": 50,
+      "public_bytes": 656583,
+      "validation_configurations": 8,
+      "deterministic_files": 28,
+      "deterministic_bytes": 104699977,
+      "full_native_states": 843264,
+      "fills": 4656,
+      "daily_points": 2928,
+      "summary_byte_exact": true,
+      "new_trials": 0,
+      "private_original_ZIP_locally_materialized": false
+    },
+    "M1358": {
+      "sha256": "392c5d2c38a9aad0c808667a7a6bfa2da3c5b86e4384c210fe49a2518be86393",
+      "status": "PASS_LOCAL_ADAPTED_QA_REMOTE_PERSISTENCE_PENDING",
+      "original_public_files": 47,
+      "deterministic_payloads": 22,
+      "restored_manifest_exact": true,
+      "NAV_rows": 2924,
+      "source_gate_rows": 2924,
+      "fills": 68,
+      "package_members": 165,
+      "original_forum_or_Lean_source_in_archive": false,
+      "v1_failure_preserved": true
+    }
+  },
+  "results": {
+    "M0287": {
+      "base": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.48562070984691186,
+        "annualized_return": -0.4846855535522455,
+        "max_drawdown": 0.5150198345647721,
+        "sharpe": -3.1332788924902775,
+        "sharpe_5m": -3.0594189692544926,
+        "final_equity": 51437.929015308815,
+        "trades": 1168,
+        "round_trips": 584,
+        "winning_round_trip_fraction": 0.4863013698630137,
+        "fees_paid": 70093.07252545598,
+        "position_bar_fraction": 0.16754895264116576,
+        "final_cash": 51437.929015308815,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "fee0": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.26850767749591853,
+        "annualized_return": 0.2676836192450336,
+        "max_drawdown": 0.2169198235220331,
+        "sharpe": 1.2172769949740256,
+        "sharpe_5m": 1.2559896444172363,
+        "final_equity": 126850.76774959186,
+        "trades": 1196,
+        "round_trips": 598,
+        "winning_round_trip_fraction": 0.6120401337792643,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.16604052823315119,
+        "final_cash": 126850.76774959186,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "fee20": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.8562788557501797,
+        "annualized_return": -0.8555150798297406,
+        "max_drawdown": 0.8600511858280965,
+        "sharpe": -9.561591078042436,
+        "sharpe_5m": -8.73962667772751,
+        "final_equity": 14372.114424982032,
+        "trades": 1138,
+        "round_trips": 569,
+        "winning_round_trip_fraction": 0.28295254833040423,
+        "fees_paid": 104160.85011773923,
+        "position_bar_fraction": 0.16874430783242259,
+        "final_cash": 14372.114424982032,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "delay2": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.5261512400454564,
+        "annualized_return": -0.5251833073259744,
+        "max_drawdown": 0.5424391396164355,
+        "sharpe": -3.5966667805226242,
+        "sharpe_5m": -3.4154781618813788,
+        "final_equity": 47384.875995454364,
+        "trades": 1154,
+        "round_trips": 577,
+        "winning_round_trip_fraction": 0.464471403812825,
+        "fees_paid": 64255.708073323054,
+        "position_bar_fraction": 0.16746357012750454,
+        "final_cash": 47384.875995454364,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "M0289": {
+      "base": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "final_equity": 100000.0,
+        "trades": 0,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.0,
+        "final_cash": 100000.0,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "fee0": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "final_equity": 100000.0,
+        "trades": 0,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.0,
+        "final_cash": 100000.0,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "fee20": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "final_equity": 100000.0,
+        "trades": 0,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.0,
+        "final_cash": 100000.0,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      },
+      "delay2": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sharpe_5m": null,
+        "final_equity": 100000.0,
+        "trades": 0,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.0,
+        "final_cash": 100000.0,
+        "final_quantity": 0.0,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "M1358": {
+      "base": {
+        "metrics": {
+          "total_return": 1.1657065688213613,
+          "cagr": 0.47085634600691884,
+          "max_drawdown": -0.30034824099753377,
+          "sharpe_zero_cash": 1.2247757266540886,
+          "observations": 731,
+          "final_equity": 216570.65688213613
+        },
+        "periods": {
+          "2023": {
+            "total_return": 0.2922121388168273,
+            "cagr": 0.2922121388168273,
+            "max_drawdown": -0.19404624227312106,
+            "sharpe_zero_cash": 0.9857309942415282,
+            "observations": 365,
+            "final_equity": 129221.21388168274
+          },
+          "2024": {
+            "total_return": 0.6759682901635029,
+            "cagr": 0.6736053261514792,
+            "max_drawdown": -0.30034824099753377,
+            "sharpe_zero_cash": 1.4232304756035954,
+            "observations": 366,
+            "final_equity": 216570.65688213613
+          }
+        },
+        "fills": 17,
+        "completed_round_trips": 8,
+        "queued_intents": 17,
+        "skipped_stale_intents": 0,
+        "terminal_pending": 0,
+        "fee_bps": 8,
+        "lag_days": 1,
+        "terminal_position_open": true
+      },
+      "fee0": {
+        "metrics": {
+          "total_return": 1.1929609622664925,
+          "cagr": 0.4800697655918469,
+          "max_drawdown": -0.29697703942571707,
+          "sharpe_zero_cash": 1.2421801013457785,
+          "observations": 731,
+          "final_equity": 219296.09622664924
+        },
+        "periods": {
+          "2023": {
+            "total_return": 0.30091710730639654,
+            "cagr": 0.30091710730639654,
+            "max_drawdown": -0.1902395048601525,
+            "sharpe_zero_cash": 1.0079670534175034,
+            "observations": 365,
+            "final_equity": 130091.71073063965
+          },
+          "2024": {
+            "total_return": 0.68570383919934,
+            "cagr": 0.6833005097951479,
+            "max_drawdown": -0.29697703942571707,
+            "sharpe_zero_cash": 1.4375151021070822,
+            "observations": 366,
+            "final_equity": 219296.09622664924
+          }
+        },
+        "fills": 17,
+        "completed_round_trips": 8,
+        "queued_intents": 17,
+        "skipped_stale_intents": 0,
+        "terminal_pending": 0,
+        "fee_bps": 0,
+        "lag_days": 1,
+        "terminal_position_open": true
+      },
+      "fee20": {
+        "metrics": {
+          "total_return": 1.1253854628351987,
+          "cagr": 0.45711855076938934,
+          "max_drawdown": -0.3053840697508182,
+          "sharpe_zero_cash": 1.1986077854989587,
+          "observations": 731,
+          "final_equity": 212538.54628351986
+        },
+        "periods": {
+          "2023": {
+            "total_return": 0.2792399305676767,
+            "cagr": 0.2792399305676767,
+            "max_drawdown": -0.19973352205367678,
+            "sharpe_zero_cash": 0.952295321928078,
+            "observations": 365,
+            "final_equity": 127923.99305676766
+          },
+          "2024": {
+            "total_return": 0.661443965317777,
+            "cagr": 0.659140935547986,
+            "max_drawdown": -0.3053840697508182,
+            "sharpe_zero_cash": 1.4017544281253709,
+            "observations": 366,
+            "final_equity": 212538.54628351986
+          }
+        },
+        "fills": 17,
+        "completed_round_trips": 8,
+        "queued_intents": 17,
+        "skipped_stale_intents": 0,
+        "terminal_pending": 0,
+        "fee_bps": 20,
+        "lag_days": 1,
+        "terminal_position_open": true
+      },
+      "lag2": {
+        "metrics": {
+          "total_return": 0.8834513416343432,
+          "cagr": 0.3717947457928077,
+          "max_drawdown": -0.35169382750554146,
+          "sharpe_zero_cash": 1.0262220326145512,
+          "observations": 731,
+          "final_equity": 188345.13416343433
+        },
+        "periods": {
+          "2023": {
+            "total_return": 0.19749831675991558,
+            "cagr": 0.19749831675991558,
+            "max_drawdown": -0.2452308205419339,
+            "sharpe_zero_cash": 0.7284988914677673,
+            "observations": 365,
+            "final_equity": 119749.83167599156
+          },
+          "2024": {
+            "total_return": 0.5728217027731766,
+            "cagr": 0.5708767703474449,
+            "max_drawdown": -0.35169382750554146,
+            "sharpe_zero_cash": 1.2638486569720582,
+            "observations": 366,
+            "final_equity": 188345.13416343433
+          }
+        },
+        "fills": 17,
+        "completed_round_trips": 8,
+        "queued_intents": 34,
+        "skipped_stale_intents": 17,
+        "terminal_pending": 0,
+        "fee_bps": 8,
+        "lag_days": 2,
+        "terminal_position_open": true
+      }
+    }
+  },
+  "interpretation": {
+    "M0287": "base-48.5621%,fee0+26.8508% with2bpsslip still retained; cost sensitivity substantial; no native limit-fill reproduction or OOS claim",
+    "M0289": "Original absolute powers3.849/3.798 retained; all4 configurations have zero trades and returns, Sharpe null. No normalization or parameter change to manufacture activity.",
+    "M1358": "base+116.5707%,MDD-30.0348%,17fills/8roundtrips versus existing buyhold+442.2270%,MDD-25.8480%; lag2+88.3451%. No relative advantage in this availability-selected window; original window/runtime not reproduced."
+  },
+  "backups": {
+    "dot007": {
+      "archive_sha256": "9e024a12fe79591c48eab65b9171c6d97828c68f11a1f04037a92d8e64d6b1c9",
+      "bytes": 16282942,
+      "remote_status": "Parent confirms Library upload, actual readback,8config28file recovery equality; not root original ZIP validation",
+      "root_materialization": "prepare successful for three refs; standard download failed, HTTPstatus not exposed; no identical retry"
+    },
+    "M1358": {
+      "archive_sha256": "1bcba9d0be5961ab90dff513fc20aa7cf53166bd9cdaedafeec6efab3fcbae07",
+      "bytes": 564113,
+      "independent_contents_sha256": "0defd93cb8a6b88e057deb16d3dd6e8f283b4113a5620980d0dffcc6b3930b33",
+      "local_CRC_members_dependencies_and_fresh_restore": "PASS",
+      "remote_status": "NOT_SAVED_OR_VERIFIED; known standard uploadHTTP401; no authorization repair evidence, no blind repeat",
+      "original_author_project_restorable": false,
+      "own_adapted_experiment_locally_restorable": true
+    },
+    "root_previous009_011": "Previously recorded local complete packages; remote Library persistence gap remains"
+  },
+  "next_preflight": {
+    "M1180": "catalog-based HYPOTHESIS freeze preparation; BTCUSDT4h original parameters preserved; independent pending/readiness/accounting review; no claim/C0/historical execution yet",
+    "M1258": "catalog-based HYPOTHESIS freeze preparation; title says5day/body5period; daily/quote/venue implementation explicitly disclosed; fullcapital preserved; no claim/C0/history yet",
+    "planned_new_controls_not_yet_run": 2,
+    "historical_gate": "C0/code/synthetic independent pass and corresponding remote-persistence handoff required; preparation does not grant history",
+    "SPY_and_new_USD_sources": "Parent owns read-only data-route work; DATA_SOURCE_PERMISSION_OR_COVERAGE_PENDING; no account/signup/terms acceptance/download; no broad permanent impossibility claim"
+  },
+  "Graph": {
+    "last_confirmed_main_commit": "58e9ad0a4820fa454172b2c28a382ced13160abf",
+    "PR": 24,
+    "head_code": "045e1fad3d5adb75fd4c0895b2626d7c85dc6785",
+    "head_CI": "4SUCCESS",
+    "main_CI": "pending at checkpoint",
+    "offline_display_records": 16,
+    "offline_curve_points": 5490,
+    "new_dot007_and_M1358_default_imported": false,
+    "Site_deployed": false,
+    "active_assets": "HTTP403; no complete currentactive entity/revision/asset bytes; no bypass"
+  },
+  "Lab_previous_batch": {
+    "PR": 27,
+    "main_commit": "4ee46b1c42b43f3476cb86c6959b8156afb225de",
+    "main_CI": "37135120176 SUCCESS",
+    "main_readback_files": 204,
+    "main_readback_bytes": 2186772
+  },
+  "counts_exclude": [
+    "QA or recovery reruns",
+    "historical1691 adaptations without current required evidence",
+    "legacy2294 logs",
+    "Graph directory/source/checkpoint/display counts",
+    "unstarted agents and proposed controls"
+  ],
+  "private_library_identifiers_in_public_files": false,
+  "new_market_requests_for_this_acceptance": 0
+}

@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0287,MultiRSI,加密现货,SMA5>=SMA200 且本周期 RSI(14) < 8 倍周期 RSI-20 做多；本周期 RSI 同时高于 2 倍与 8 倍周期 RSI 平多。,berlinguyinca / freqtrade/freqtrade-strategies,MultiRSI,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/MultiRSI.py,MultiRSI.py,高,,未知

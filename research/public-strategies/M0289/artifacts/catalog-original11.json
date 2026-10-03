@@ -1,0 +1,13 @@
+{
+  "id": "M0289",
+  "名称": "PowerTower",
+  "市场": "加密现货",
+  "规则": "5m；连续三根收盘大于各自向前 2 根收盘的 buy_pow=3.849 次幂做多；对应 sell_pow=3.798 任一成立平多；止损 -28.8%。",
+  "作者或机构": "freqtrade/freqtrade-strategies",
+  "标题": "PowerTower",
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/PowerTower.py",
+  "页码或文件": "PowerTower.py",
+  "可回测": "中",
+  "别名来源": "",
+  "提出日期": "未知"
+}

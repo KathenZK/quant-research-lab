@@ -1,0 +1,527 @@
+{
+  "schema": "dot-b007-native5m-protocol/v1",
+  "record_id": "M0289",
+  "run_id": "M0289-20261003-dot-b007-v1",
+  "variant_id": "M0289-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003",
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "dd09a1c1834942bab3a972bb0afd6667f38fbc43221c6dd01e288ee1dfdb39a5",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research.",
+    "capture_identity": {
+      "scope": "This dot007 contract directly authorizes the exact already-held dot capture, independently of dot006 ID scope.",
+      "actual_executor_manifest_sha256": "dd09a1c1834942bab3a972bb0afd6667f38fbc43221c6dd01e288ee1dfdb39a5",
+      "origin_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+      "compatibility_manifest_sha256": "c7ec9966dbebde94fe65538542b77c3e40a09216513bd7054c204ae67e502102",
+      "object_count": 39,
+      "object_set_fingerprint_sha256": "2b606da6e10b4f067393cab3bfc3a33b102ffec7f27bba5d61d7154295133c04",
+      "object_fingerprint_encoding": "UTF-8 json.dumps(objects sorted by name, sort_keys=True, separators=(comma,colon), ensure_ascii=True); no BOM or final newline",
+      "required_objects": [
+        {
+          "name": "archives/2023-12/BTCUSDT-5m-2023-12.csv",
+          "bytes": 1371564,
+          "sha256": "7c422c98ef5bf612fd23d92567c598a830b9fc2bc4941d8a933108abf74f9e6e"
+        },
+        {
+          "name": "archives/2023-12/BTCUSDT-5m-2023-12.zip",
+          "bytes": 462569,
+          "sha256": "8e3b780eddcff7f19f24f25d799b2affe03113b90457b8caa22a454f065fbf56"
+        },
+        {
+          "name": "archives/2023-12/BTCUSDT-5m-2023-12.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "51bb1a5e99f2c3465f8e4baaa204993249e1250e658469e629b447a5c1a94a76"
+        },
+        {
+          "name": "archives/2024-01/BTCUSDT-5m-2024-01.csv",
+          "bytes": 1373281,
+          "sha256": "ffa7cfaa98f83e07f304c70d3c8d3e773f0a0d5f2c8d75112f6135ea395c19e6"
+        },
+        {
+          "name": "archives/2024-01/BTCUSDT-5m-2024-01.zip",
+          "bytes": 465498,
+          "sha256": "a375f811f672ad70de97af533f6e70181647a9e978838b451ac17d5c17313ad8"
+        },
+        {
+          "name": "archives/2024-01/BTCUSDT-5m-2024-01.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "bf7c65bfb1cfe7b6a55fc02b070334ffa1a7b8380304912bfaa872866544aa33"
+        },
+        {
+          "name": "archives/2024-02/BTCUSDT-5m-2024-02.csv",
+          "bytes": 1284503,
+          "sha256": "842c7c117423f6bd4ebe6e8e09c284bc16de00a1af3b90001d9bcaedac5e83c8"
+        },
+        {
+          "name": "archives/2024-02/BTCUSDT-5m-2024-02.zip",
+          "bytes": 434210,
+          "sha256": "4bbed105653be96229f6678b3ce3df7366a6ced5aea32285da2bf62ac5f890ed"
+        },
+        {
+          "name": "archives/2024-02/BTCUSDT-5m-2024-02.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "7dbe560755312f8e5d774e16b1aa45c3ba05b0be94d4eca6477fb002a1829dc1"
+        },
+        {
+          "name": "archives/2024-03/BTCUSDT-5m-2024-03.csv",
+          "bytes": 1381878,
+          "sha256": "eee27c484208516a9c4336435b9bbc1893d3f0a7d28424585d43ebc8f4717a18"
+        },
+        {
+          "name": "archives/2024-03/BTCUSDT-5m-2024-03.zip",
+          "bytes": 474003,
+          "sha256": "fd3670210b38640ee9562b7761879fae8cfed3beec7d7313b868cf618ca4c72a"
+        },
+        {
+          "name": "archives/2024-03/BTCUSDT-5m-2024-03.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "0e9043f07029e34c51cb3265c299c9eebb30e1b35717c11830462badbb362cee"
+        },
+        {
+          "name": "archives/2024-04/BTCUSDT-5m-2024-04.csv",
+          "bytes": 1330547,
+          "sha256": "053b8177c4453c2746fcba73205449ed506ccfa64b33ccb0e73cb65a087c9438"
+        },
+        {
+          "name": "archives/2024-04/BTCUSDT-5m-2024-04.zip",
+          "bytes": 454656,
+          "sha256": "b41c6d2703ee9e4c8167de082dcd363fac39ed176ebe9eacf7f0109e284a5948"
+        },
+        {
+          "name": "archives/2024-04/BTCUSDT-5m-2024-04.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "3aef5d181f163ece8be1acd12deec2a430c6bed68c84b1c96b1e6916a634ef86"
+        },
+        {
+          "name": "archives/2024-05/BTCUSDT-5m-2024-05.csv",
+          "bytes": 1369523,
+          "sha256": "d0a75dc099f6fe23f0687355d5494727b3975adfbf801c67bf7da9ad260b8787"
+        },
+        {
+          "name": "archives/2024-05/BTCUSDT-5m-2024-05.zip",
+          "bytes": 462542,
+          "sha256": "3a9c810274f38b18abda912c3446df51cb160c4c0e376655fb7defb1cacf5de2"
+        },
+        {
+          "name": "archives/2024-05/BTCUSDT-5m-2024-05.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "2c246b3730e530c310ddcf3aa77f717ffe5736fda7ab69f72583072e130ef652"
+        },
+        {
+          "name": "archives/2024-06/BTCUSDT-5m-2024-06.csv",
+          "bytes": 1320955,
+          "sha256": "ebf4d19b7b9a7b34df2c4f0468b7ddbbf83b9e20b1280cb4d94a2fc5ad79557a"
+        },
+        {
+          "name": "archives/2024-06/BTCUSDT-5m-2024-06.zip",
+          "bytes": 440069,
+          "sha256": "627dd48125d89759e498d2db2e523166787bda4dd9a64ca56abf9fba235ba71e"
+        },
+        {
+          "name": "archives/2024-06/BTCUSDT-5m-2024-06.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "780c1f0c9b5d4140f383afda32cedf56e6898e0dccb2e6cc7cec9d0fdeb0d616"
+        },
+        {
+          "name": "archives/2024-07/BTCUSDT-5m-2024-07.csv",
+          "bytes": 1369417,
+          "sha256": "834f6b76830c04fbde4a5c2b3701339638063520a9dceb049cb5480640f3fb82"
+        },
+        {
+          "name": "archives/2024-07/BTCUSDT-5m-2024-07.zip",
+          "bytes": 461448,
+          "sha256": "7fcfb7aa22c344f0c6bb0a7d2ae2dbfd1a1e597fc80806daa341068dfdab6586"
+        },
+        {
+          "name": "archives/2024-07/BTCUSDT-5m-2024-07.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "006892493632aafa8086a4e3f1804073596f6fd211d229631d7a9cdd30e5bfe5"
+        },
+        {
+          "name": "archives/2024-08/BTCUSDT-5m-2024-08.csv",
+          "bytes": 1369839,
+          "sha256": "386b67240aeb85e126975f761ec7963090b7ea0276de16c4a0cfc91280d6c36c"
+        },
+        {
+          "name": "archives/2024-08/BTCUSDT-5m-2024-08.zip",
+          "bytes": 464434,
+          "sha256": "4ead243e5f862df551e12815d8ddc4c67da711fda253325c36f83a1ff3ef36d7"
+        },
+        {
+          "name": "archives/2024-08/BTCUSDT-5m-2024-08.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "e0a30426c4ed90d67da11c90caa95bfa7fe37a8642a91f70ffc1872c182c2635"
+        },
+        {
+          "name": "archives/2024-09/BTCUSDT-5m-2024-09.csv",
+          "bytes": 1323537,
+          "sha256": "689fd7d5bb7de077fc4516d810fee0b9b7fe834c852e4ccb7c8644835d5753f9"
+        },
+        {
+          "name": "archives/2024-09/BTCUSDT-5m-2024-09.zip",
+          "bytes": 441999,
+          "sha256": "a9989fa72ee8eba72cdd79b0e251652fcd456a31548a3014a8660b65405bc67a"
+        },
+        {
+          "name": "archives/2024-09/BTCUSDT-5m-2024-09.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "231d61c469460ad027c7ccae4a45b161d0fdbeb9007f17ae95e25ff84761ef94"
+        },
+        {
+          "name": "archives/2024-10/BTCUSDT-5m-2024-10.csv",
+          "bytes": 1368846,
+          "sha256": "a3794161d5117a2d8d4ef2d857429ddbd9173706e2a1d65b8260c9ed7e46d904"
+        },
+        {
+          "name": "archives/2024-10/BTCUSDT-5m-2024-10.zip",
+          "bytes": 458990,
+          "sha256": "5cd2d0dcc2dc193fc7b31be69166021fca41b9fce61ab6a0771ce00db864c327"
+        },
+        {
+          "name": "archives/2024-10/BTCUSDT-5m-2024-10.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "c9ba639e0b652411a16315ec7434ee3c78f3d0e1f38a901291ef55fb79e064a5"
+        },
+        {
+          "name": "archives/2024-11/BTCUSDT-5m-2024-11.csv",
+          "bytes": 1339750,
+          "sha256": "931af12beb8b761ed6d60a686448c6863d2f5d46a5bce66d00fb043f0fbc29cb"
+        },
+        {
+          "name": "archives/2024-11/BTCUSDT-5m-2024-11.zip",
+          "bytes": 458714,
+          "sha256": "72851d323b0d43f7c8cdf177ca85ded66ec511ed3b1a53e63cca0d2501c75bc0"
+        },
+        {
+          "name": "archives/2024-11/BTCUSDT-5m-2024-11.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "39e8198b37c4acb3f48a93fe8886fbdd72e45cb755d2f891c94689e2a2fc7521"
+        },
+        {
+          "name": "archives/2024-12/BTCUSDT-5m-2024-12.csv",
+          "bytes": 1389778,
+          "sha256": "b249533031efe294e6a47d4194feda032d5eac492e246dc226b345a376245a97"
+        },
+        {
+          "name": "archives/2024-12/BTCUSDT-5m-2024-12.zip",
+          "bytes": 474874,
+          "sha256": "0a2f70744f9244a066ab4ced934a725d85b247e917cfe22ada218435c1573301"
+        },
+        {
+          "name": "archives/2024-12/BTCUSDT-5m-2024-12.zip.CHECKSUM",
+          "bytes": 88,
+          "sha256": "63e4896d31adb68ac29bdbe57bfded2f9a6efe6af53bf3e19f5a3e21fbd41372"
+        }
+      ],
+      "existing_executor_comparison_receipt": {
+        "logical_path": "review/origin-vs-local-input-evidence.json",
+        "sha256": "50fe389cad63fd640fdc018a255d4b8ff7f886e39639fe5d23b7b9cbdb8bd655",
+        "source": "Parent verified report before returns, 39 objects / 182 expected-field comparisons PASS; executor actual receipt must remain frozen",
+        "root_materialized_receipt": false
+      },
+      "builder_sha256": "e217666105d2a454b61bb93d4306f2c91af9d6356182baaf57d145645556f182",
+      "validator_sha256": "4972fedfbe54517423c94d834efda557a99a2667ddd067be31acc5ed5927f746",
+      "root_materialized_dot_capture": false,
+      "evidence_attribution": "Dot-side capture/receipt checked by parent; root independently verified original39 objects and canonical CSV only.",
+      "c0_requirements": [
+        "Rehash actual dot dd09 capture manifest, all39 ZIP/CHECKSUM/CSV objects, and canonical91e5 CSV; pin this contract and actual executor-side QA receipts before returns.",
+        "Recompute exact object-set fingerprint; complete raw CRC/checksum and one fresh byte-rebuild validation per batch using fixed builder/verifier; no discarded or substituted rows.",
+        "Capture timestamps/HTTP metadata may differ from original fb84 manifest; no claim of identical acquisition manifest. Any semantic difference outside this exact frozen capture blocks startup.",
+        "Retain original licensing provenance and DIAGNOSTIC_ONLY/untrusted/PIT_NOT_PROVEN status; do not use root paths as if they existed in dot."
+      ]
+    }
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "slippage_bps": 2,
+    "open_execution_overrides": {},
+    "intrabar_execution_latest_overrides": {},
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable spot without borrowing",
+    "fractional_fills": true,
+    "sequence": [
+      "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+      "flat entry due from previous closedbar; never same-bar reentry after sale",
+      "open<=stop triggers stop gap; else open>ROI strict gap",
+      "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+      "mark remaining position at rawclose; no terminal forced sale"
+    ],
+    "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+    "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+    "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded",
+    "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+    "proxy_label": "ADAPTED_EXECUTION_PROXY",
+    "proxy_changes": {
+      "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+      "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+      "stop": "Original limit stop replaced by market-style gap/threshold full fill",
+      "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+      "pending": "No restinglimit states/timeouts/cancellations or partialfills"
+    },
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0
+  },
+  "risk": {
+    "stoploss": -0.288,
+    "minimal_roi": {
+      "0": 0.213,
+      "39": 0.048,
+      "56": 0.029,
+      "159": 0
+    }
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    }
+  ],
+  "source": {
+    "id": "M0289",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+    "bytes": 4317,
+    "sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "class_name": "PowerTower",
+    "license": "GPL-3.0",
+    "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "private_original_preserved": true,
+    "repository": "freqtrade/freqtrade-strategies",
+    "path": "user_data/strategies/PowerTower.py"
+  },
+  "qtpylib": {
+    "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+    "commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "path": "technical/vendor/qtpylib/indicators.py",
+    "chain": [
+      {
+        "reference": "source/freqtrade-qtpylib.py",
+        "runtime_relative": "freqtrade/vendor/qtpylib/indicators.py",
+        "sha256": "c040927436bb510e2091a7bb7f6e51f25135292bf2e0d995fa344871f0d505a9"
+      },
+      {
+        "reference": "source/technical-qtpylib.py",
+        "runtime_relative": "technical/qtpylib.py",
+        "sha256": "8876ecab2d3b7314d2d83db9bd9b4839eb3b86c6b74cf53291a15a5b7f215e6c"
+      },
+      {
+        "reference": "source/qtpylib.py",
+        "runtime_relative": "technical/vendor/qtpylib/indicators.py",
+        "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+      }
+    ]
+  },
+  "source_specific_requirements": {
+    "entry": "For every j=0,1,2: close[t-j] > close[t-j-2] ** 3.849",
+    "exit": "For any j=0,1,2: close[t-j] < close[t-j-2] ** 3.798",
+    "volume_filter": "NONE",
+    "price_unit_dependence": "Preserve absolute price powers; no normalization or changed exponent to create trades. Report zero-trade outcome truthfully if observed.",
+    "ROI_5m_open_first_eligible_minutes": [
+      0,
+      40,
+      60,
+      160
+    ],
+    "ROI_original_minutes": [
+      0,
+      39,
+      56,
+      159
+    ]
+  },
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "parameters": {
+    "loaded_parameter_values": {
+      "buy_pow": 3.849,
+      "sell_pow": 3.798
+    },
+    "external_config_overrides": {},
+    "parameter_sidecars": false,
+    "full_effective_attributes": {
+      "stoploss": -0.288,
+      "minimal_roi": {
+        "0": 0.213,
+        "39": 0.048,
+        "56": 0.029,
+        "159": 0
+      },
+      "timeframe": "5m",
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "use_custom_roi": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 30,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      }
+    }
+  },
+  "dependencies": {
+    "packages": {
+      "freqtrade": "2026.9",
+      "technical": "1.7.0",
+      "pandas": "2.2.3",
+      "numpy": "2.3.5",
+      "TA-Lib": "0.6.8",
+      "ft-pandas-ta": "0.3.16"
+    },
+    "TA_Lib_C": "0.6.4",
+    "environment_manifest_sha256": "f847a5e9d5bd28d1caa4135b067e131ecfcd4d6a44d46bebe5822c941ac276b9",
+    "runtime_b007_verification_sha256": "0ee7365e9e6e81d0591fc3d5270df2424851677851d7721ef8c72c92acbf339e",
+    "requirements_lock_sha256": "d61833e9bffa419b1562ca2d408dc77178454cfac396133973d7b4976f118040"
+  },
+  "kernel": {
+    "path": "research/_shared-kernels/native5m-execution-proxy/v1",
+    "files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "benchmark_reference": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "code_hashes": {
+    "scripts/adapter.py": "36a00222b5c2ae5f0ece9025d6d3ac8475678ae2d62eff9dbf86d3f3d50040b3"
+  },
+  "supporting_hashes": {
+    "specs/source-rule-card.json": "8bfd05a3a28598692263f6c9b5cadefa437093fea0c64e5b2c52320748a3f0af",
+    "artifacts/catalog-original11.json": "1d380f6e26d2a50e6eb46be8359cc077912775c39aea81b30d4c457ced755cdc",
+    "specs/catalog-source-manifest.json": "fcec0efdd14da20de12ce937d4b723ce13791c0263e67c6911987892af7e3eb1",
+    "specs/exposure.json": "01eb42f16b0f16f5ddbf54db853dd12b4012bea2e75e8f98e259d2b15c113e1a"
+  },
+  "warmup": {
+    "start": "2023-12-01T00:00:00Z",
+    "rows": 8928,
+    "source_startup_candle_count": 30,
+    "research_warmup_selection": true,
+    "no_orders_during_warmup": true
+  },
+  "limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "2024 already exposed in previous research; no holdout or OOS inference; unknown historical search count remains unknown; DSR/PBO unavailable",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready"
+  ],
+  "metric_conventions": {
+    "MDD": "full5m path including initial100000",
+    "Sharpe": "daily UTC close returns sample std sqrt365; riskfree0; zero std null",
+    "Sharpe_5m": "5m returns sample std sqrt(365*288); zero std null",
+    "annualized_return": "(final/initial)^(365/366)-1",
+    "terminal": "no liquidation and no hypothetical terminal exit costs"
+  },
+  "history": {
+    "first_returns_seen": false,
+    "historical_executions_at_freeze": 0,
+    "new_controls": 0,
+    "optimization_trials": 0
+  },
+  "assignment_contract_sha256": "2de86c76de5751fca58ce116e8275935f1a1985ede624e239f060831d4ade1fc"
+}
