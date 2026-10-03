@@ -451,6 +451,42 @@ DELEGATING_CONSUMERS: tuple[ConsumerSpec, ...] = (
 
 AUXILIARY_CLASSIFICATIONS: tuple[AuxiliaryClassification, ...] = (
     AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/run_replay.py",
+        "load_input", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/validate_independent.py",
+        "validate", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/check_causality.py",
+        "check", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/export_graph.py",
+        "export", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/audit_input.py",
+        "audit", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/rebuild.py",
+        "rebuild", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+    AuxiliaryClassification(
+        "research/public-strategies/M0286/scripts/compare_original.py",
+        "compare", "frozen-artifact-consumer",
+        "Explicit hash-pinned spot diagnostic input or frozen derived evidence; not trusted perpetual data, PIT proof, or source-faithful execution.",
+    ),
+
+    AuxiliaryClassification(
         "research/public-strategies/M0288/scripts/run_replay.py",
         "load_input", "frozen-artifact-consumer",
         "Consumes explicitly hash-pinned BTC spot daily input in offline Freqtrade diagnostics; no PIT, trusted perpetual data, or strict-reproduction claim.",

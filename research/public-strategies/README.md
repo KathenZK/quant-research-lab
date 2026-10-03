@@ -19,6 +19,7 @@
 | M0226 | [日频定投预审](M0226/README.md) | 金额与资金流规则阻塞，回测0 |
 | M0256 | [AverageStrategy EMA8/21](M0256/README.md) | 4h假设回测4配置及1买持对照，严格0 |
 | M0259 | [BbandRsi数据预审](M0259/README.md) | 1h缺口与停市异常阻塞，回测0 |
+| M0286 | [MultiMa](M0286/README.md) | TEMA信号核验及4配置假设回测、1买持，严格0 |
 | M0288 | [PatternRecognition](M0288/README.md) | 原生参考引擎假设回测4配置及1买持，严格0 |
 
 本次目录迁移发生在三个执行者完成之后，由单一协调者串行执行。各ID的 path-migration-20261003.json 记录旧根、新根及原始文件哈希；冻结JSON内历史路径与哈希链不改写，按映射解释。修改过的操作文档原字节保存在各ID的 artifacts/path-migration-20261003/original-documents/。这保留证据与历史commit身份，不表示再次回测或升级可信度。

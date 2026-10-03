@@ -266,3 +266,7 @@
 ## 公开策略 M0288
 
 - [M0288 主账](public-strategies/M0288/m0288-core-ledger.md)：BTC现货日线高浪线形态，原生参考引擎4个假设配置及1个买持；DIAGNOSTIC_ONLY，严格0，未晋级。
+
+## 公开策略 M0286
+
+- [M0286 主账](public-strategies/M0286/m0286-core-ledger.md)：BTC现货4h MultiMa，完整原类信号核对，4个假设配置及1买持；DIAGNOSTIC_ONLY，严格0，未晋级。
