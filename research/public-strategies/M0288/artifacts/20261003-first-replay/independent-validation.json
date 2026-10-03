@@ -1,0 +1,124 @@
+{
+  "status": "PASS_DIAGNOSTIC_NOT_STRICT",
+  "source_checks": {
+    "parameter_default_before_load": [
+      "CDL2CROWS",
+      0
+    ],
+    "parameter_after_native_load": [
+      "CDLHIGHWAVE",
+      -100
+    ],
+    "empty_tuple_probes": [
+      {
+        "index": "RangeIndex",
+        "preexisting_zero_column": false,
+        "exit_ones": 0,
+        "nan_count": 3
+      },
+      {
+        "index": "RangeIndex",
+        "preexisting_zero_column": true,
+        "exit_ones": 0,
+        "nan_count": 0
+      },
+      {
+        "index": "DatetimeIndex",
+        "preexisting_zero_column": false,
+        "exit_ones": 0,
+        "nan_count": 3
+      },
+      {
+        "index": "DatetimeIndex",
+        "preexisting_zero_column": true,
+        "exit_ones": 0,
+        "nan_count": 0
+      }
+    ],
+    "causal_prefixes_checked": 5,
+    "all_pattern_columns_checked": 61,
+    "rows": 762,
+    "entry_signals": 69,
+    "exit_signals": 0
+  },
+  "native_risk_checks": {
+    "no_trailing_before_offset": 71.2,
+    "same_entry_bar_trailing_pessimistic_fill": 105.2,
+    "trailing_ratchet_never_lowers": 106.48,
+    "fixed_stop_precedes_roi_when_both_touched": [
+      "stop_loss",
+      "roi"
+    ],
+    "roi_precedes_trailing_when_both_touched": [
+      "roi",
+      "trailing_stop_loss"
+    ],
+    "roi_schedule_boundaries": [
+      [
+        0,
+        0.936
+      ],
+      [
+        5270,
+        0.936
+      ],
+      [
+        5271,
+        0.332
+      ],
+      [
+        18146,
+        0.332
+      ],
+      [
+        18147,
+        0.086
+      ],
+      [
+        48151,
+        0.086
+      ],
+      [
+        48152,
+        0
+      ]
+    ]
+  },
+  "independent_ledger": {
+    "base": {
+      "round_trips_checked": 22,
+      "days_checked": 731,
+      "max_per_trade_profit_error": 4.498360794968903e-09,
+      "max_cash_error": 8.09086486697197e-09,
+      "max_nav_error": 8.09086486697197e-09,
+      "all_entries_have_correct_prior_signal": true
+    },
+    "fee0": {
+      "round_trips_checked": 22,
+      "days_checked": 731,
+      "max_per_trade_profit_error": 4.405592335388064e-09,
+      "max_cash_error": 1.3853423297405243e-08,
+      "max_nav_error": 1.3882527127861977e-08,
+      "all_entries_have_correct_prior_signal": true
+    },
+    "fee20": {
+      "round_trips_checked": 20,
+      "days_checked": 731,
+      "max_per_trade_profit_error": 4.310399152190891e-09,
+      "max_cash_error": 5.50062395632267e-09,
+      "max_nav_error": 5.50062395632267e-09,
+      "all_entries_have_correct_prior_signal": true
+    },
+    "delay2": {
+      "round_trips_checked": 18,
+      "days_checked": 731,
+      "max_per_trade_profit_error": 3.736204234883189e-09,
+      "max_cash_error": 1.0360963642597198e-08,
+      "max_nav_error": 1.0360963642597198e-08,
+      "all_entries_have_correct_prior_signal": true
+    }
+  },
+  "hash_gate_tamper_rejections": 2,
+  "summary_sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521",
+  "limitation": "Independent accounting and boundary fixtures, not a second complete trade engine or proof of intraday path"
+}

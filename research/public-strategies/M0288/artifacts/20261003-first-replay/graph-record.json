@@ -1,0 +1,50 @@
+{
+  "id": "M0288",
+  "name": "PatternRecognition：日线 CDLHIGHWAVE=-100",
+  "status": "tested_hypothesis_only",
+  "tested_variants": 1,
+  "tested_configurations": 4,
+  "families": [
+    "PUBLIC-M0288-PATTERN"
+  ],
+  "reason": "原源码和原生参考引擎可执行；BTC单标的诊断明显落后买持、对执行延迟敏感。",
+  "audit": {
+    "source_verification_status": "pinned_source_sha256_verified",
+    "source_rule_attribution_status": "unchanged_source_native_reference_engine_hypothesis",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_replication": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0288-20261003-native-diagnostic-v1",
+      "variant_id": "M0288-BTCUSDT-1D-CDLHIGHWAVE-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "a13acd951d8303644b035b964d7f5ad27f7449699d9dab5496d9a964fb725613",
+      "manifest_sha256": "e24eb81fa8f48a11eccaf5323116c69bac4dcd4daa31058adb079bd943a3370a",
+      "family": "PUBLIC-M0288-PATTERN"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0288-20261003-native-diagnostic-v1",
+      "variant_id": "M0288-BTCUSDT-1D-CDLHIGHWAVE-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "a13acd951d8303644b035b964d7f5ad27f7449699d9dab5496d9a964fb725613",
+      "manifest_sha256": "e24eb81fa8f48a11eccaf5323116c69bac4dcd4daa31058adb079bd943a3370a"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance Vision",
+    "license": "CC BY-NC-SA 4.0",
+    "additional_terms": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "Native Freqtrade simulated trades, USDT daily NAV and derived metrics"
+  }
+}

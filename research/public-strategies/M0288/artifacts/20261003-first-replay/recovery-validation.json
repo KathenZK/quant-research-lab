@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-03T10:12:55.528039+00:00",
+  "files_byte_identical": 10,
+  "rows": [
+    {
+      "path": "base-daily-nav.csv",
+      "bytes": 51455,
+      "sha256": "dd97ad5f60eec7d75c2882f02effae32a494d9fa9b3c5bfde3e6d26ac8d70b96"
+    },
+    {
+      "path": "base-trades.csv",
+      "bytes": 4059,
+      "sha256": "4a41a777d5958017885a2bb10a26dfb673e1891ca3fe5058d608f0da649334bb"
+    },
+    {
+      "path": "buyhold-daily-nav.csv",
+      "bytes": 50801,
+      "sha256": "c9f16e8c2f63ad8fcea1bcc65e8908cce625158384bf6ac2d1bde965130450ba"
+    },
+    {
+      "path": "delay2-daily-nav.csv",
+      "bytes": 51692,
+      "sha256": "5a7e908a85c9c8fa2dbc0c2aef8ce2c7d4d7c8d419e118cf89caafafce530a97"
+    },
+    {
+      "path": "delay2-trades.csv",
+      "bytes": 3285,
+      "sha256": "7c66c3369fc45215d4165a1e8ff2a88c119f93ac4462346839696ff81ba544ec"
+    },
+    {
+      "path": "fee0-daily-nav.csv",
+      "bytes": 51240,
+      "sha256": "18c02632dedc1d4969eb706d5905fd337616c8f27dd4607cde7b99d78a5f1111"
+    },
+    {
+      "path": "fee0-trades.csv",
+      "bytes": 3747,
+      "sha256": "34423030f4601b9f4ee7f084704a9be776f5cb3fc4b2e1410db22ce7a88f7278"
+    },
+    {
+      "path": "fee20-daily-nav.csv",
+      "bytes": 51429,
+      "sha256": "c56e1abe2ee4331b04173d7d35050a19a03de3cda259d5886b13c2a47eecfc53"
+    },
+    {
+      "path": "fee20-trades.csv",
+      "bytes": 3614,
+      "sha256": "297a5a7b11b8a54408a41b0673073f1b29497c6ea7275ef78e85992068b0fd78"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3688,
+      "sha256": "a67439fa144cf8d2d9b34f55fb823a6e3885a64fad0c842ad5e4288722676521"
+    }
+  ],
+  "recipe": "25 official monthly zip files plus official CHECKSUM re-fetched; canonical CSV hash exact; original source fetched again and exact hash; native replay in fresh temp config and no network",
+  "unique_strategy_configurations": 4,
+  "actual_strategy_engine_executions": 8,
+  "unique_benchmark_configurations": 1,
+  "actual_benchmark_computations": 2,
+  "strict_reproductions": 0,
+  "recipe_retries": [
+    {
+      "attempt": "independent-recovery",
+      "status": "failed before download: isolated trading environment lacks repository PyYAML dependency"
+    },
+    {
+      "attempt": "independent-recovery2",
+      "status": "PASS with repository environment; no source/data bypass"
+    }
+  ]
+}

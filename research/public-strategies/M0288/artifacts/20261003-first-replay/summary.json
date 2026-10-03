@@ -1,0 +1,110 @@
+{
+  "record_id": "M0288",
+  "run_id": "M0288-20261003-native-diagnostic-v1",
+  "fidelity_class": "HYPOTHESIS",
+  "strict_reproductions": 0,
+  "strategy_configurations": 4,
+  "benchmark_runs": 1,
+  "cases": {
+    "base": {
+      "return": 1.8060895642260002,
+      "annualized_return": 0.6739568748294267,
+      "max_drawdown": -0.2311572288766438,
+      "daily_sharpe": 1.5670290906787214,
+      "final_equity": 280608.9564226,
+      "days": 731,
+      "round_trips": 22,
+      "fills": 44,
+      "native_final_balance": 280608.9564226,
+      "exit_reasons": {
+        "trailing_stop_loss": 11,
+        "roi": 10,
+        "force_exit": 1
+      },
+      "rejected_signals": 0,
+      "fee_bps": 8.0,
+      "signal_delay_bars": 1
+    },
+    "fee0": {
+      "return": 1.8787185638537998,
+      "annualized_return": 0.6954520605208672,
+      "max_drawdown": -0.23098939306625377,
+      "daily_sharpe": 1.599344965277822,
+      "final_equity": 287871.85638538,
+      "days": 731,
+      "round_trips": 22,
+      "fills": 44,
+      "native_final_balance": 287871.85638538003,
+      "exit_reasons": {
+        "roi": 11,
+        "trailing_stop_loss": 10,
+        "force_exit": 1
+      },
+      "rejected_signals": 0,
+      "fee_bps": 0.0,
+      "signal_delay_bars": 1
+    },
+    "fee20": {
+      "return": 1.6277689636872,
+      "annualized_return": 0.6199685905704406,
+      "max_drawdown": -0.23140934477861785,
+      "daily_sharpe": 1.480191361792204,
+      "final_equity": 262776.89636872,
+      "days": 731,
+      "round_trips": 20,
+      "fills": 40,
+      "native_final_balance": 262776.89636872,
+      "exit_reasons": {
+        "roi": 12,
+        "trailing_stop_loss": 7,
+        "force_exit": 1
+      },
+      "rejected_signals": 0,
+      "fee_bps": 20.0,
+      "signal_delay_bars": 1
+    },
+    "delay2": {
+      "return": 1.1709900230502002,
+      "annualized_return": 0.47264694809136154,
+      "max_drawdown": -0.22366732562805025,
+      "daily_sharpe": 1.2535544661473184,
+      "final_equity": 217099.00230502,
+      "days": 731,
+      "round_trips": 18,
+      "fills": 36,
+      "native_final_balance": 217099.00230502,
+      "exit_reasons": {
+        "roi": 11,
+        "trailing_stop_loss": 6,
+        "force_exit": 1
+      },
+      "rejected_signals": 0,
+      "fee_bps": 8.0,
+      "signal_delay_bars": 2
+    },
+    "buyhold": {
+      "return": 4.415512770245144,
+      "annualized_return": 1.3244381069859368,
+      "max_drawdown": -0.25843220299641634,
+      "daily_sharpe": 2.005002935457092,
+      "final_equity": 541551.2770245144,
+      "days": 731,
+      "round_trips": 1,
+      "fills": 2,
+      "fee_bps": 8,
+      "terminal": "final daily close, differs from native force_exit at final open"
+    }
+  },
+  "data_quality": "DIAGNOSTIC_ONLY",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "source_sha256": "cce61e4af8ed3cb8e78a5d9713aba7891ec08d1bdb1da9911c3f550424db795d",
+  "framework_checked": {
+    "freqtrade/strategy/parameters.py": "f0b9830e7652f49b9d782ae7ab082960b68db238d44d3cc96f59133fbf35505b",
+    "freqtrade/strategy/hyper.py": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+    "freqtrade/strategy/interface.py": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "freqtrade/optimize/backtesting.py": "1b185dfe44e5b0cbab0f2e35fae8c6f545c9aa987d556cd019bea1bd8880bfd1",
+    "freqtrade/resolvers/strategy_resolver.py": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+    "freqtrade/__init__.py": "95845714fc8f4a97c0379e2d2980181e3aac0d81398b89ff134254fe69d5c817"
+  },
+  "spec_sha256": "a13acd951d8303644b035b964d7f5ad27f7449699d9dab5496d9a964fb725613"
+}
