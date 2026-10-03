@@ -1,0 +1,79 @@
+{
+  "record_id": "M0264",
+  "source": {
+    "id": "M0264",
+    "path": "user_data/strategies/berlinguyinca/ClucMay72018.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ClucMay72018.py",
+    "sha256": "d146f7bc8285b5f1e48514d5d6acc53b37b0ca00299780210e3bdf84564978aa",
+    "bytes": 2893,
+    "status": "READ_OK"
+  },
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "status": "SOURCE_PREFLIGHT_ELIGIBLE_PENDING_SIGNAL_QA",
+  "selected": true,
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "0": 0.01
+    },
+    "stoploss": -0.05,
+    "timeframe": "5m"
+  },
+  "parameter_constructors": {},
+  "effective_without_external_override": {
+    "can_short": false,
+    "trailing_stop": false,
+    "use_custom_stoploss": false,
+    "position_adjustment_enable": false,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "startup_candle_count": 0,
+    "process_only_new_candles": true,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    },
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "0": 0.01
+    },
+    "stoploss": -0.05,
+    "timeframe": "5m"
+  },
+  "declared_methods": [
+    "populate_indicators",
+    "populate_entry_trend",
+    "populate_exit_trend"
+  ],
+  "entry": "close<EMA50(close) AND close<0.985*BB20(typical,2).lower AND volume<mean(volume,30).shift(1)*20",
+  "exit": "close>BB20(typical,2).mid",
+  "catalog_difference_or_omission": "ema100 column is EMA50; volume threshold uses previous rolling mean; RSI5/EMA5(RSI)/MACD/ADX computed but unused in signals.",
+  "dependency_versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "TA_Lib_python": "0.6.8",
+    "TA_Lib_C": "0.6.4",
+    "freqtrade_review_commit": "1f394eaebc2f46a83d26971388628707802f8602"
+  },
+  "runtime_boundary": "Config and parameter sidecars can override class values; author runtime/config/universe unknown. Frozen research runtime is a hypothesis. Raw open nextbar kernel is execution proxy, not native limit-fill equivalence.",
+  "static_causality": "Only current/past rolling/EMA and nonnegative shifts observed; no negative shift, external data, short methods or custom callbacks. Dynamic prefix/future tests NOT RUN.",
+  "execution_policy_to_freeze": "Long only; simultaneous entry+exit suppress entry; exit signals suppressed while entry active under engine convention; fixed stop/ROI precedence delegated to frozen shared kernel. Profit gate only on signal exit, not fixed stop/ROI. ROI durations minutes; fee-aware returns. Cost/stake/warmup/window must be explicitly frozen by executor.",
+  "historical_runs": 0,
+  "synthetic_runs": 0,
+  "market_requests": 0
+}

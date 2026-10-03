@@ -1,0 +1,333 @@
+{
+  "schema": "public-catalog-executor-output-contract/v1",
+  "created_at_utc": "2026-10-03T13:32:32.986270+00:00",
+  "repository": "KathenZK/quant-research-lab",
+  "output_branch": "dot/public-strategies-20261003-b006",
+  "fixed_implementation_base_commit": "c93d05f5728d80c6b68402bbc4354248d794eb10",
+  "executor": "dot exclusively; one executor for all four IDs",
+  "integration_and_global_progress_writer": "Codex root only",
+  "exclusive_ids": [
+    "M0253",
+    "M0272",
+    "M0264",
+    "M0266"
+  ],
+  "stage": "ASSIGNED_C0_AND_INDEPENDENT_QA_GATED_EXECUTION_PROXY",
+  "historical_runs_at_assignment": 0,
+  "started": false,
+  "allowed_paths": [
+    "research/public-strategies/M0253/**",
+    "research/public-strategies/M0272/**",
+    "research/public-strategies/M0264/**",
+    "research/public-strategies/M0266/**"
+  ],
+  "fixed_source_repository": "freqtrade/freqtrade-strategies",
+  "fixed_source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source_cards": [
+    {
+      "id": "M0253",
+      "path": "research/public-strategies/dot-batch006-preflight-20261003/M0253-rule-card.json",
+      "sha256": "faceb52d68ade8140ff07f319ee1cf67d2ff7ea9e74eb1eb7f474dab35dd5b4b",
+      "source": {
+        "id": "M0253",
+        "path": "user_data/strategies/berlinguyinca/ASDTSRockwellTrading.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ASDTSRockwellTrading.py",
+        "sha256": "58ee823e52dbf7def502c7cf069c4bca56d8198eb5037fc007856d27529e8968",
+        "bytes": 2575,
+        "status": "READ_OK"
+      }
+    },
+    {
+      "id": "M0272",
+      "path": "research/public-strategies/dot-batch006-preflight-20261003/M0272-rule-card.json",
+      "sha256": "dce5f6a2d5bb48f6b95c6f7aa4fcf3cc814a2e711440974d122325081a913b39",
+      "source": {
+        "id": "M0272",
+        "path": "user_data/strategies/berlinguyinca/EMASkipPump.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/EMASkipPump.py",
+        "sha256": "74117c68b3407a775d80fc4d4f1b27852689baad2255f19a7026a2b0c45b2085",
+        "bytes": 3020,
+        "status": "READ_OK"
+      }
+    },
+    {
+      "id": "M0264",
+      "path": "research/public-strategies/dot-batch006-preflight-20261003/M0264-rule-card.json",
+      "sha256": "f01d1f7cb3e02baa4c3748d216de0eb033c7547ecab285178effc0cfb558c191",
+      "source": {
+        "id": "M0264",
+        "path": "user_data/strategies/berlinguyinca/ClucMay72018.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ClucMay72018.py",
+        "sha256": "d146f7bc8285b5f1e48514d5d6acc53b37b0ca00299780210e3bdf84564978aa",
+        "bytes": 2893,
+        "status": "READ_OK"
+      }
+    },
+    {
+      "id": "M0266",
+      "path": "research/public-strategies/dot-batch006-preflight-20261003/M0266-rule-card.json",
+      "sha256": "98ce846ebaef33dc400479c954b05be10e81cb72a0e4a1aca53374b0d15fb8ee",
+      "source": {
+        "id": "M0266",
+        "path": "user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py",
+        "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/CombinedBinHAndCluc.py",
+        "sha256": "546256271db535f1e326130c6b2d9849dd9a5efb602eb92ed45dad282967f45d",
+        "bytes": 3265,
+        "status": "READ_OK"
+      }
+    }
+  ],
+  "kernel": {
+    "path": "research/_shared-kernels/native5m-execution-proxy/v1",
+    "files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research."
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "slippage_bps": 2,
+    "open_execution_overrides": {},
+    "intrabar_execution_latest_overrides": {},
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable spot without borrowing",
+    "fractional_fills": true,
+    "sequence": [
+      "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+      "flat entry due from previous closedbar; never same-bar reentry after sale",
+      "open<=stop triggers stop gap; else open>ROI strict gap",
+      "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+      "mark remaining position at rawclose; no terminal forced sale"
+    ],
+    "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+    "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+    "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded",
+    "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+    "proxy_label": "ADAPTED_EXECUTION_PROXY",
+    "proxy_changes": {
+      "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+      "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+      "stop": "Original limit stop replaced by market-style gap/threshold full fill",
+      "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+      "pending": "No restinglimit states/timeouts/cancellations or partialfills"
+    }
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    }
+  ],
+  "benchmark_reference": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "strategy_configurations_expected": 16,
+  "new_control_configurations_expected": 0,
+  "market_data_requests_authorized": false,
+  "data_rule": "Use only independently validated lawful input already held by dot. No data transfer from root, proxy fetch, replacement candle route or gap-filling. Same hash required; missing input blocks the affected batch.",
+  "fidelity": "ADAPTED_EXECUTION_PROXY; original GTC limit orders are not reproduced; no strict result presumed",
+  "requirements": [
+    "Read original11 fields in own verified catalog and preserve IDs and source text; verify all fixed source/card hashes before coding",
+    "Reuse shared v1 account and independent oracle by SHA pins, use per-ID source/Boolean adapters; no copies or modifications of v1. Any required kernel change returns to root for separate frozen version",
+    "Verify actual loaded source class/parameters, complete qtpylib reexport chain, source flags and causal prefix/future perturbations before historical returns",
+    "Freeze each ID code/source/environment/input/rules/cases/C0 before its first returns. Four declared configurations only; isolate blockers without silently changing source rules",
+    "One shared input validation/recovery per batch; full per-ID account states/fills, metrics, daily curves and nonstatistical public samples. Exact-zero and relative-scale Decimal checks plus execution-phase/time/notional verification",
+    "Reference exact existing M0311 same-window buyhold result; a reference is not a newly run control",
+    "Independent rule/account validator, one fresh batch restoration with deterministic outputs byte identical, frozen failures preserved",
+    "Per-ID standalone Chinese Markdown, core ledger, decision log, recoverable source/code/dependencies/input/full logs and Graph-compatible structured record with PIT/availability-selection/no-OOS limitations",
+    "One private batch archive plus standalone manifest and Library remote readback where available. Report any backup failure without claiming local storage is remote backup",
+    "Report actual IDs/configs/controls/blockers and timings/CPU/RSS; preserve full publication-manifest and immutable source commits. Root integrates indexes/allowlist/global progress"
+  ],
+  "forbidden_changes": [
+    "Outside four ID roots, including all global claims/progress/indexes/allowlists",
+    "Existing v1 kernel, other assigned IDs, main, Site, personal annotations",
+    "Market acquisition, live trading, purchases, credentials or permission changes, force-push/rebase/delete",
+    "Private Library IDs, credentials, signed URLs, raw market data or full private ledger publication"
+  ],
+  "previous_reservations_preserved": [
+    "M0298",
+    "M0304",
+    "M0257",
+    "M0273"
+  ],
+  "other_current_ids_excluded": [
+    "M0300",
+    "M0302",
+    "M0305",
+    "M0306",
+    "M0307",
+    "M0311",
+    "M0296",
+    "M0299",
+    "M0312",
+    "M0314"
+  ],
+  "per_id_required_source_parameters": {
+    "M0253": {
+      "minimal_roi": {
+        "60": 0.01,
+        "30": 0.03,
+        "20": 0.04,
+        "0": 0.05
+      },
+      "stoploss": -0.3,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "startup_candle_count": 0
+    },
+    "M0272": {
+      "minimal_roi": {
+        "0": 0.1
+      },
+      "stoploss": -0.05,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "startup_candle_count": 0
+    },
+    "M0264": {
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.05,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "startup_candle_count": 0
+    },
+    "M0266": {
+      "minimal_roi": {
+        "0": 0.05
+      },
+      "stoploss": -0.05,
+      "exit_profit_only": true,
+      "exit_profit_offset": 0.0,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "startup_candle_count": 0
+    }
+  }
+}

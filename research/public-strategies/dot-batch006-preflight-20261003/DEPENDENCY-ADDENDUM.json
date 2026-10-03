@@ -1,0 +1,11 @@
+{
+  "engine_vendor_is_reexport": true,
+  "engine_import": "from technical.qtpylib import *",
+  "technical_qtpylib": {
+    "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/technical/qtpylib.py",
+    "sha256": "8876ecab2d3b7314d2d83db9bd9b4839eb3b86c6b74cf53291a15a5b7f215e6c",
+    "bytes": 148,
+    "status": "READ_OK"
+  },
+  "note": "Engine vendor bytes differ because wrapper, not evidence of formula mismatch. Resolve frozen technical wrapper before signal QA; prior vendor source is frozen and available."
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T13:32:32.986270+00:00",
+  "coordinator": "Codex root only",
+  "batch": "010",
+  "dot_batch": "006",
+  "branch": "dot/public-strategies-20261003-b006",
+  "claims": [
+    {
+      "id": "M0253",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA + per-ID immutable C0"
+    },
+    {
+      "id": "M0272",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA + per-ID immutable C0"
+    },
+    {
+      "id": "M0264",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA + per-ID immutable C0"
+    },
+    {
+      "id": "M0266",
+      "owner": "dot exclusively",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "actual_historical_runs": 0,
+      "required_before_returns": "source signal QA + per-ID immutable C0"
+    }
+  ],
+  "ownership_check": "No candidate Lab root or matching active process; existing claims include M0253 only in an explicit not_assigned list. Existing other reservations preserved.",
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0
+}
