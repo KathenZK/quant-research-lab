@@ -1,0 +1,14 @@
+{
+  "parent": "research/public-strategies/M0293/scripts/run_replay.py",
+  "parent_sha256": "a73127852fc38e62d91460ff7b50007b4ad4bb3257f0e361e11aaf1fac886beb",
+  "parent_commit": "d5a0c5ee6ac7ddc56159b3d5969c5267ca83bf96",
+  "changes": [
+    "Replace features with literal source EMA12/EMA26 ratio and exact inclusive intervals",
+    "Change input grid300000ms/timeframe5m and source readiness names",
+    "Change execution timestamp basis5m and bar Sharpe sqrt365*288",
+    "Block socket connects in CLI; account/ROI/replay decision function unchanged except timestamp label"
+  ],
+  "not_original_freqtrade_engine": true,
+  "replay_ast_equal_except_timestamp_label_and_annualization": false,
+  "roi_function_ast_equal": true
+}

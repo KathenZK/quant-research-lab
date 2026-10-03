@@ -1,0 +1,56 @@
+{
+  "id": "M0315",
+  "name": "UniversalMACD：BTC现货5m原默认EMA比率区间",
+  "status": "tested_hypothesis_only",
+  "reason": "原源码和DecimalParameter默认核对通过；卖出空区间原样保留。2024可用性选窗，分钟ROI在5m开盘生效，非原框架严格复现。",
+  "tested_variants": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "families": [
+    "PUBLIC-M0315-UNIVERSAL-MACD"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_bytes_verified_original_class_signal_arrays_identical",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "strict_replication": false,
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_proven": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0315-20261003-first-replay",
+      "variant_id": "M0315-BTCUSDT-5M-DEFAULTS-2024-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb",
+      "manifest_sha256": "3185cff39c62fa90df3e5cb989f9347fc7e7e786db8c9d8585ee8c23c4fc6f0e",
+      "family": "PUBLIC-M0315-UNIVERSAL-MACD"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0315-20261003-first-replay",
+      "variant_id": "M0315-BTCUSDT-5M-DEFAULTS-2024-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb",
+      "manifest_sha256": "3185cff39c62fa90df3e5cb989f9347fc7e7e786db8c9d8585ee8c23c4fc6f0e"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 plus Binance Dataset Terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "EMA12/26 ratio literal default calculation, declared OHLC execution/accounting, metrics and daily sampling"
+  },
+  "limitations": [
+    "Availability-driven2024 window; not OOS and not comparable to prior2023-2024 totals",
+    "Only7 base roundtrips, sparse exposure; do not interpret dailySharpe as robust edge"
+  ]
+}

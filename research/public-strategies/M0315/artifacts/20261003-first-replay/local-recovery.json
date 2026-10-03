@@ -1,0 +1,91 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "verified_at_utc": "2026-10-03T12:08:46.807598+00:00",
+  "all_result_files_byte_identical": true,
+  "restored_result_files": 18,
+  "protocol_sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "source_status": "PASS",
+  "data_status": "PASS_DIAGNOSTIC_ONLY",
+  "independent_accounting": "PASS",
+  "raw_files": 39,
+  "files": {
+    "base-daily-nav.csv": {
+      "sha256": "aa8528a82a71f6cc68de23b16432f70c02543dfd91223f4e892960e265eb9bc5",
+      "bytes": 47925
+    },
+    "base-nav-light.csv": {
+      "sha256": "aa8528a82a71f6cc68de23b16432f70c02543dfd91223f4e892960e265eb9bc5",
+      "bytes": 47925
+    },
+    "base-nav.csv": {
+      "sha256": "e99b10978f0665bb0d27d6bdde9687016b775092e1cf3d226b5ce63d5ab00292",
+      "bytes": 12533744
+    },
+    "base-trades.csv": {
+      "sha256": "c9922e270c32dadeab733bd4d9641c9e7c46f4c675b7d77e706311c1a19ddb6f",
+      "bytes": 4026
+    },
+    "buyhold-daily-nav.csv": {
+      "sha256": "9468f43f3dac773b5ebc82899ca8d9dcfcfb49f82a4b1a9ca566d6ac72e44454",
+      "bytes": 50584
+    },
+    "buyhold-nav.csv": {
+      "sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+      "bytes": 13304577
+    },
+    "buyhold-trades.csv": {
+      "sha256": "b841336ee461cc6fcf3655705bee68f09737a31ff9eb24f147d85498892369f1",
+      "bytes": 493
+    },
+    "delay2-daily-nav.csv": {
+      "sha256": "b6cf8fe3471e749cf5b2187e83850ec0fdcc4536c71aa5f3fd80fa2b29e423bd",
+      "bytes": 49546
+    },
+    "delay2-nav.csv": {
+      "sha256": "a25373b94d912a65bc3ff8ba13a934dd815135a96c8a57a1ba04a03bba1df3b1",
+      "bytes": 13000312
+    },
+    "delay2-trades.csv": {
+      "sha256": "b311bbb89528debb1d45dbaa558be1c9c6632136df4a1b568387b11bc444abe5",
+      "bytes": 4562
+    },
+    "fee0-daily-nav.csv": {
+      "sha256": "ef8649740099d545ba53680e1eea67c455a9a4c1e4d995aac88fe4937d5a9e59",
+      "bytes": 49397
+    },
+    "fee0-nav.csv": {
+      "sha256": "777694980817238492e4f411b4787fb860dc3ad601c93f936195728d4f138ce5",
+      "bytes": 12959381
+    },
+    "fee0-trades.csv": {
+      "sha256": "3dcb803dd2a7c811453512d42c48ab5e2564e25c0c6d60de704a45f44cb2045b",
+      "bytes": 3805
+    },
+    "fee20-daily-nav.csv": {
+      "sha256": "256396d265d37d52bb770ea3a121c7830bcbea64e1315a5d2223dc7a552e62cd",
+      "bytes": 47827
+    },
+    "fee20-nav.csv": {
+      "sha256": "6abbd719e24ab3bf7a14aa4256d060f6f4d8d6c676c9fd22ac9bad684359541d",
+      "bytes": 12505428
+    },
+    "fee20-trades.csv": {
+      "sha256": "7b117bc35f1e5331a929a31d4d6aab1e5ad302cc69b5efc7757eb3431f7017e2",
+      "bytes": 4022
+    },
+    "signals.csv": {
+      "sha256": "4b30299024af3470efdb7bff515235561cd98e142e25f86ccf8d6da918d6630c",
+      "bytes": 9002585
+    },
+    "summary.json": {
+      "sha256": "6b43f3d1e8fe0b545cad9090ce605a6cd1c9599482156fb29c690ad1d0cfef6d",
+      "bytes": 5714
+    }
+  },
+  "new_market_requests": 0,
+  "new_strategy_trials": 0,
+  "remote_backup_verified": false,
+  "method": "New-directory copy of39 raw source files and pinned source; independently rebuild114336 rows from ZIP bytes, replay then independent Decimal oracle"
+}

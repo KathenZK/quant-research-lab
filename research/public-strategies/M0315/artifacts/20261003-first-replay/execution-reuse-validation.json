@@ -1,0 +1,8 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "parent_sha256": "a73127852fc38e62d91460ff7b50007b4ad4bb3257f0e361e11aaf1fac886beb",
+  "child_sha256": "7759b72caff4a4415fb50085b1e50bb2a8394402a2581edc7fe3489e5b035ebf",
+  "replay_ast_equal_except_native_timeframe_label_and_sharpe_scale": true,
+  "correction": "Frozen specs/execution-reuse.json boolean false came from overly broad comparison text replacement that also changed 10**6 into10**288 in the temporary comparison string only. AST-aware comparison passes. Neither parent nor child execution code was changed; frozen false receipt retained."
+}

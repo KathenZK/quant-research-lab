@@ -1,0 +1,46 @@
+{
+  "id": "M0315",
+  "status": "PASS",
+  "method": "Independent Decimal event decisions, cash/quantity/equity identities and stdlib metric recomputation; original-source signal equality separately verified",
+  "absolute_tolerance": 2e-07,
+  "relative_tolerance": 2e-11,
+  "cases": {
+    "base": {
+      "event_rows": 14,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "fee0": {
+      "event_rows": 14,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "fee20": {
+      "event_rows": 14,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "delay2": {
+      "event_rows": 16,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "buyhold": {
+      "event_rows": 1,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    }
+  },
+  "protocol_sha256": "16227897759d40c6c11ad2b8f4e8801f409418b601d6f107f85eb1ca3e1c7edb",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2"
+}
