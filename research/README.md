@@ -376,3 +376,4 @@
 
 - [批020交付增补005](public-strategies/progress-20261003-batch020-delivery005.json)：Graph PR30已交付27条离线展示，351成员本地恢复通过；计数不变、Library上传仍阻塞。[剩余历史门禁](public-strategies/catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md)保持关闭。
 - [批021 M1510来源准备](public-strategies/catalog-source-batch021-preflight-20261003/README.md)：固定源码补出盈利退出门和限价设置，框架语义未锁；父端独占准备，历史运行0。
+- [当前交付增补006](public-strategies/progress-20261003-batch020-delivery006.json)：005范围标签已纠正为Graph M1266／PR30，保留旧原件与独审发现；计数及未放行状态不变。

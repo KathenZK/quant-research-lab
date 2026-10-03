@@ -1,0 +1,92 @@
+{
+  "status": "NEEDS_ONE_TEXT_CORRECTION",
+  "commit": "4b27f9ebc7741b55f70fab505e0f709909154750",
+  "base": "b9cc41083a2ca824e397fd24cadacb43f4d5ab67",
+  "files": [
+    {
+      "path": "research/README.md",
+      "bytes": 67776,
+      "sha256": "9e3a3aa502a66905d9bdfe5ecd1fde859f27fb240a0aa28df658115881149556"
+    },
+    {
+      "path": "research/public-strategies/README.md",
+      "bytes": 11653,
+      "sha256": "1bf26b1e75f76ad2f3c5d9c51c44a3868e2b38c8824ba5a145e497fa02fe58a3"
+    },
+    {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md",
+      "bytes": 3224,
+      "sha256": "af71ff45e6bc3acea602236333f930950b32e3cd873295b9f149a9c222cc0a85"
+    },
+    {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/release-gates-independent-v1.safe.json",
+      "bytes": 3154,
+      "sha256": "e0824b98635d21ecf399ec0579a3743180a1ef4dfbadb7ce39f9f4e1d0d39d16"
+    },
+    {
+      "path": "research/public-strategies/catalog-daily-next3-batch020-preflight-20261003/release-gates-v1.json",
+      "bytes": 7115,
+      "sha256": "a6caaab560ddd36b66487a478f839a11cbdfcc1bfe0be36884983971637de1ce"
+    },
+    {
+      "path": "research/public-strategies/catalog-source-batch021-preflight-20261003/README.md",
+      "bytes": 1525,
+      "sha256": "327378ee955fbc8c6857ebc79649b0f56b0acd5f034685c24918c3c973f7bd36"
+    },
+    {
+      "path": "research/public-strategies/catalog-source-batch021-preflight-20261003/REPORT.safe.md",
+      "bytes": 7818,
+      "sha256": "4af83d256a82d146c9fa0e3153c46133f657744e1c7ed08356426f3670145133"
+    },
+    {
+      "path": "research/public-strategies/catalog-source-batch021-preflight-20261003/framework-gate.safe.json",
+      "bytes": 1692,
+      "sha256": "79fa1f35ce2ec65f9bce6ed296144a29cdbb8fad2f38a63eecbfe5aa01237f95"
+    },
+    {
+      "path": "research/public-strategies/catalog-source-batch021-preflight-20261003/source-card.safe.json",
+      "bytes": 8649,
+      "sha256": "24f601c89a0f3134ad4659285bf9b883ce45496a5e517093f8d43e0808dcb7b1"
+    },
+    {
+      "path": "research/public-strategies/claims-20261003-batch021-source-only.json",
+      "bytes": 5425,
+      "sha256": "f54ab2cf95757d873326fe182b20a7311873c3fe373ad9412ceb1aae5f6f0986"
+    },
+    {
+      "path": "research/public-strategies/progress-20261003-batch020-delivery005.json",
+      "bytes": 11051,
+      "sha256": "b684b19d3d8fb9bd96da5111d87f7e4eeb12df87ed3382f661ad2091da9aac1c"
+    }
+  ],
+  "file_count": 11,
+  "total_bytes": 129082,
+  "checks": {
+    "safe_source_payloads_byte_exact": 3,
+    "source_AST_attributes_matched": 11,
+    "source_HTTP_and_license_hashes": true,
+    "prior_three_gate_files_and_safe_receipt_unchanged": true,
+    "Graph_actual_merge_receipt_bound": true,
+    "main_successful_CI_runs": 2,
+    "local_archive_manifest_restore_receipt_hashes": true,
+    "existing_rebuilt_outputs_byte_equal": 30,
+    "relative_links_verified": 13,
+    "M2903_M3710_frozen_roots_unchanged": true,
+    "counts_43_175_22_7_strict0_increment0": true,
+    "release_false": true,
+    "public_scope_private_markers_absent": true
+  },
+  "issues": [
+    {
+      "path": "research/public-strategies/progress-20261003-batch020-delivery005.json",
+      "field": "remaining_prior_scope_blockers",
+      "issue": "Stale wording identifies Graph M1347 approval, while this delivery is M1266 PR30. Correct to M1266 in follow-up commit; preserve prior commit."
+    }
+  ],
+  "limits": [
+    "No network/framework/history calls; AST only",
+    "Local displaypack evidence is not Library persistence or Site activation",
+    "No rawsource/catalog/licensefulltext added to publicscope",
+    "ParentM1510 preparation remains statednotstarted; source-review support completion not promoted to execution"
+  ]
+}
