@@ -344,3 +344,5 @@
 - [catalog-daily-cash 共享日线全现金内核](_shared-kernels/catalog-daily-cash/README.md)：v1冻结、逐文件SHA256 pin，M1396/M1463消费；持仓计时退出需另建版本。
 
 - [批016实际远端恢复](public-strategies/catalog-hypothesis-batch016-recovery-20261003/REMOTE-CORE-RESTORE.md)：M1396/M1463从远端原代码重建，60载荷长度/hash及2份清单原字节通过；不新增研究/控制，完整Library私包仍未异地保存。
+
+- [Catalog月末窗批次018冻结准备](public-strategies/catalog-hypothesis-batch018-preflight-20261003/README.md)：M1347、4计划配置、0新控制；实际代码C0/独审门禁前不运行。

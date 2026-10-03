@@ -1,0 +1,24 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T18:14:46.745449+00:00",
+  "coordinator": "root only",
+  "batch": "018",
+  "claims": [
+    {
+      "id": "M1347",
+      "owner": "root/m0288",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "branch": "codex/catalog-monthturn-m1347-20261003",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ActualcodeC0 independentQA androotrelease"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-hypothesis-batch018-output-contract-20261003.json",
+    "bytes": 4664,
+    "sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0
+}
