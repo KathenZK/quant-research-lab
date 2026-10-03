@@ -1,0 +1,13 @@
+{
+  "id": "M0264",
+  "名称": "ClucMay72018",
+  "市场": "加密现货",
+  "规则": "收盘<EMA(50)（代码列名 ema100）、收盘<0.985×BB(20,2)下轨，且成交量<30 期均量×20 做多；收盘>BB 中轨平多。",
+  "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+  "标题": "ClucMay72018",
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/ClucMay72018.py",
+  "页码或文件": "ClucMay72018.py",
+  "可回测": "高",
+  "别名来源": "",
+  "提出日期": "未知"
+}

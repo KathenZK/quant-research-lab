@@ -1,0 +1,109 @@
+{
+  "id": "M0264",
+  "status": "PASS_SOURCE_AND_SIGNAL_NO_RETURNS",
+  "completed_at_utc": "2026-10-03T14:01:07.935749+00:00",
+  "rows": 114336,
+  "evaluation_rows": 105408,
+  "source_sha256": "d146f7bc8285b5f1e48514d5d6acc53b37b0ca00299780210e3bdf84564978aa",
+  "protocol_draft_sha256": "62cab8645a7e8b0a620367ba836f9f822ea89832b9f413c3224312617b14bb20",
+  "actual_flags_all_verified": true,
+  "actual_loaded_parameters": {},
+  "native_source_vs_independent_Boolean_signals": "EXACT",
+  "advanced_TA_formula_independence": false,
+  "causality": [
+    {
+      "cut": 1,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 20,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 40,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 100,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 8928,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 9000,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 9500,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 20000,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 50000,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    },
+    {
+      "cut": 90000,
+      "columns": 10,
+      "prefix_and_future_perturbation": "PASS"
+    }
+  ],
+  "feature_readiness": {
+    "rsi": {
+      "first_valid_index": 5,
+      "evaluation_nan_rows": 0
+    },
+    "emarsi": {
+      "first_valid_index": 9,
+      "evaluation_nan_rows": 0
+    },
+    "macd": {
+      "first_valid_index": 33,
+      "evaluation_nan_rows": 0
+    },
+    "adx": {
+      "first_valid_index": 27,
+      "evaluation_nan_rows": 0
+    },
+    "bb_lowerband": {
+      "first_valid_index": 1,
+      "evaluation_nan_rows": 0
+    },
+    "bb_middleband": {
+      "first_valid_index": 0,
+      "evaluation_nan_rows": 0
+    },
+    "bb_upperband": {
+      "first_valid_index": 1,
+      "evaluation_nan_rows": 0
+    },
+    "ema100": {
+      "first_valid_index": 49,
+      "evaluation_nan_rows": 0
+    }
+  },
+  "signals": {
+    "all_entry": 8,
+    "all_exit": 59347,
+    "evaluation_entry": 7,
+    "evaluation_exit": 54684,
+    "collisions": 0
+  },
+  "historical_returns_calculated": false,
+  "account_replay_calls": 0,
+  "market_requests": 0
+}

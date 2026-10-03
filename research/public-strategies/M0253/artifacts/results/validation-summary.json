@@ -1,0 +1,13 @@
+{
+  "source_signal": "PASS",
+  "independent_native_boundary_checks": "PASS",
+  "prefix_future_perturbation": "PASS",
+  "frozen_decimal_oracle": "PASS",
+  "supplementary_event_time_notional_all_metrics": "PASS",
+  "source_audit_sha256": "ce4eba5c9242ffb78226c3972a8e37d938d2a692048819500a442be450ab9f28",
+  "oracle_sha256": "5f40943e423f9435fe93016e68c34adc7a89fec4dba4d011b3a3cf41f1b1486c",
+  "supplement_sha256": "158d2b69c47cd1ca3b70b5c776320b25d3f2f264e17ef2737870cf4b6181ea5b",
+  "advanced_TA_formula_independence": false,
+  "kernel_predecessor_parity": "NOT_RUN_missing_predecessor",
+  "public_samples_not_statistical": true
+}

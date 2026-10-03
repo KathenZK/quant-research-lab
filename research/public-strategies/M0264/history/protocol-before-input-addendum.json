@@ -1,0 +1,271 @@
+{
+  "schema": "dot-b006-native5m-protocol/v1",
+  "record_id": "M0264",
+  "run_id": "M0264-20261003-dot-b006-v1",
+  "variant_id": "M0264-BTCUSDT-5M-EXECUTION-PROXY-2024-20261003",
+  "classification": "HYPOTHESIS_NOT_STRICT",
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research."
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "execution": {
+    "initial_cash": 100000,
+    "cash_currency": "USDT",
+    "cash_budget_fraction": 0.95,
+    "budget_includes_buy_fee": true,
+    "slippage_bps": 2,
+    "open_execution_overrides": {},
+    "intrabar_execution_latest_overrides": {},
+    "direction": "long_only",
+    "leverage": 1,
+    "max_positions": 1,
+    "pyramiding": false,
+    "cash_interest": 0,
+    "funding": "not applicable spot without borrowing",
+    "fractional_fills": true,
+    "sequence": [
+      "due signal exit at rawopen if no conflicting entry and profit-only rawfee gate passes",
+      "flat entry due from previous closedbar; never same-bar reentry after sale",
+      "open<=stop triggers stop gap; else open>ROI strict gap",
+      "low<=stop before high>ROI; risk exits unaffected by signal profit gate",
+      "mark remaining position at rawclose; no terminal forced sale"
+    ],
+    "ambiguity": "Stop first when both intrabarlevels reachable and open between; exact path unknown; no limitfill proof",
+    "pending": "only evaluation signals; delay1or2 bars; stale entry while long ignored; no orders after end",
+    "terminal": "no forced sale for strategy or buyhold; raw final close mark; unrealized exit costs excluded",
+    "limitations": "assumed full fills; no historical orderbook/lot/minnotional/partial fills/PIT tradability; 5mopen proxy",
+    "proxy_label": "ADAPTED_EXECUTION_PROXY",
+    "proxy_changes": {
+      "entry": "Original GTC limit replaced by guaranteed nextopen fractional purchase, adverse2bps",
+      "signal_exit": "Original GTC limit replaced by guaranteed nextopen sell, adverse2bps",
+      "stop": "Original limit stop replaced by market-style gap/threshold full fill",
+      "roi": "Full OHLC threshold/gap execution assumed; no native order queue",
+      "pending": "No restinglimit states/timeouts/cancellations or partialfills"
+    },
+    "exit_profit_only": false,
+    "exit_profit_offset": 0.0
+  },
+  "risk": {
+    "stoploss": -0.05,
+    "minimal_roi": {
+      "0": 0.01
+    }
+  },
+  "cases": [
+    {
+      "name": "base",
+      "fee_bps": 8,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee0",
+      "fee_bps": 0,
+      "delay_bars": 1
+    },
+    {
+      "name": "fee20",
+      "fee_bps": 20,
+      "delay_bars": 1
+    },
+    {
+      "name": "delay2",
+      "fee_bps": 8,
+      "delay_bars": 2
+    }
+  ],
+  "source": {
+    "id": "M0264",
+    "path": "user_data/strategies/berlinguyinca/ClucMay72018.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/ClucMay72018.py",
+    "sha256": "d146f7bc8285b5f1e48514d5d6acc53b37b0ca00299780210e3bdf84564978aa",
+    "bytes": 2893,
+    "status": "READ_OK",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "repository": "freqtrade/freqtrade-strategies",
+    "class_name": "ClucMay72018"
+  },
+  "qtpylib": {
+    "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7",
+    "commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+    "path": "technical/vendor/qtpylib/indicators.py",
+    "chain": [
+      {
+        "reference": "source/freqtrade-qtpylib.py",
+        "runtime_relative": "freqtrade/vendor/qtpylib/indicators.py",
+        "sha256": "c040927436bb510e2091a7bb7f6e51f25135292bf2e0d995fa344871f0d505a9"
+      },
+      {
+        "reference": "source/technical-qtpylib.py",
+        "runtime_relative": "technical/qtpylib.py",
+        "sha256": "8876ecab2d3b7314d2d83db9bd9b4839eb3b86c6b74cf53291a15a5b7f215e6c"
+      },
+      {
+        "reference": "source/qtpylib.py",
+        "runtime_relative": "technical/vendor/qtpylib/indicators.py",
+        "sha256": "39d6ef38c6c62b6a10df847af9f57c53090e49e0f5daf8585adae5b91e507ae7"
+      }
+    ]
+  },
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "limit",
+      "stoploss_on_exchange": false,
+      "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "parameters": {
+    "loaded_parameter_values": {},
+    "external_config_overrides": {},
+    "parameter_sidecars": false,
+    "full_effective_attributes": {
+      "can_short": false,
+      "trailing_stop": false,
+      "use_custom_stoploss": false,
+      "position_adjustment_enable": false,
+      "use_exit_signal": true,
+      "exit_profit_only": false,
+      "exit_profit_offset": 0.0,
+      "ignore_roi_if_entry_signal": false,
+      "startup_candle_count": 0,
+      "process_only_new_candles": true,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+      },
+      "INTERFACE_VERSION": 3,
+      "minimal_roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.05,
+      "timeframe": "5m"
+    }
+  },
+  "dependencies": {
+    "packages": {
+      "freqtrade": "2026.9",
+      "technical": "1.7.0",
+      "pandas": "2.2.3",
+      "numpy": "2.3.5",
+      "TA-Lib": "0.6.8"
+    },
+    "TA_Lib_C": "0.6.4",
+    "environment_manifest_sha256": "f847a5e9d5bd28d1caa4135b067e131ecfcd4d6a44d46bebe5822c941ac276b9",
+    "requirements_lock_sha256": "d61833e9bffa419b1562ca2d408dc77178454cfac396133973d7b4976f118040"
+  },
+  "kernel": {
+    "path": "research/_shared-kernels/native5m-execution-proxy/v1",
+    "files": {
+      "README.md": "ed2282161bd406213397fe6a22d5a4a96694b76dd37ff27952405d44e4355366",
+      "account.py": "678d6ea81396fc8f3c23085378bd792cc887bf9826937bdf3a089e16b7480b2a",
+      "oracle.py": "6ce2a70883d2e05800aeab1076c8c337098c188176b0342c0ab941ec4039a543",
+      "protocol.py": "ef22cbfe1948befb2f4ff7352ba9f6e4a349e4ea8790f5742a7db6dbf1d9e208",
+      "source_adapter.py": "a3157de62e32cfabbaa75f5411f0bcb6999aa66ea0256f253be5c2c454503143",
+      "test_contracts.py": "a26bdc0c9fbc0fb2f34964e4b4ca908707d55144dec7175014926b32b45b2c01",
+      "workflow.py": "57661f536633b094d4756d4f5244f550a89b3cf3da94a080512e8993f6a96b99",
+      "manifest.json": "8daf7c9182e055197f2541672911ac817a4bb7165409557566581aa09f1a4e1d"
+    }
+  },
+  "benchmark_reference": {
+    "origin_run_id": "M0311-20261003-first-replay",
+    "summary_path": "research/public-strategies/M0311/artifacts/20261003-first-replay/results/summary.json",
+    "summary_sha256": "c2e7ed4177b6a5a4c9145c59bb9b61d8a8a73211e589930fe0511972911aca57",
+    "native_curve_sha256": "89f8bf755f92b9ea0b12276e3cf74f46d5651bbe6b722c463d716f6134aef5c1",
+    "daily_curve_sha256": "2932c99bffa83b8f28b47dec14d6ebae3dc7760a378e2a149b3b9da093d3c093",
+    "new_control_runs": 0,
+    "metrics": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "observations": 105408,
+      "daily_observations": 366,
+      "total_return": 1.1503041230956876,
+      "annualized_return": 1.1458107566464215,
+      "max_drawdown": 0.32021064669603316,
+      "sharpe": 1.7447213326802145,
+      "sharpe_5m": 1.7319656438320898,
+      "final_equity": 215030.41230956875,
+      "trades": 1,
+      "round_trips": 0,
+      "winning_round_trip_fraction": null,
+      "fees_paid": 75.9392486011191,
+      "position_bar_fraction": 1.0,
+      "final_cash": 5000.0,
+      "final_quantity": 2.2444901717274597,
+      "same_bar_stop_roi_hits": 0,
+      "intrabar_stop_roi_ambiguities": 0
+    },
+    "path_base": "repository_root"
+  },
+  "code_hashes": {
+    "scripts/adapter.py": "6d95df08207c663083df8b01cbea9e1c170a0c81eb1a4a008e2335155ec96095"
+  },
+  "supporting_hashes": {
+    "specs/source-rule-card.json": "f01d1f7cb3e02baa4c3748d216de0eb033c7547ecab285178effc0cfb558c191",
+    "artifacts/catalog-original11.json": "ca74b6f07d3afea728f73e37c5e2ea31d3111c116921f711f79a58f7828a478c",
+    "specs/catalog-source-manifest.json": "a2c3a51bef9b679d3152282fcc53acc1fd3e0acb33c187f2d7d3e0dc9f896f18"
+  },
+  "warmup": {
+    "start": "2023-12-01T00:00:00Z",
+    "rows": 8928,
+    "source_startup_candle_count": 0,
+    "research_warmup_selection": true,
+    "no_orders_during_warmup": true
+  },
+  "limitations": [
+    "Availability-selected catalog; authors original universe/timeframe/config unverified",
+    "No holdout or OOS inference; only fixed2024BTCUSDTspot diagnostic",
+    "Original GTC limit orders replaced with guaranteed open/threshold fills",
+    "No orderbook/partial fills/lot rounding/min-notional/point-in-time tradability",
+    "PIT and core finality not established; not net_research; not live-ready"
+  ],
+  "metric_conventions": {
+    "MDD": "full5m path including initial100000",
+    "Sharpe": "daily UTC close returns sample std sqrt365; riskfree0",
+    "Sharpe_5m": "5m returns sample std sqrt(365*288)",
+    "annualized_return": "(final/initial)^(365/366)-1",
+    "terminal": "no liquidation and no hypothetical terminal exit costs"
+  },
+  "history": {
+    "first_returns_seen": false,
+    "historical_executions_at_freeze": 0,
+    "new_controls": 0,
+    "optimization_trials": 0
+  }
+}

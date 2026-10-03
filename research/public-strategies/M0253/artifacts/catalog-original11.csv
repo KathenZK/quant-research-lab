@@ -1,0 +1,2 @@
+id,名称,市场,规则,作者或机构,标题,source_url,页码或文件,可回测,别名来源,提出日期
+M0253,ASDTSRockwellTrading,加密现货,5m；MACD>0 且 MACD>信号线做多；MACD<信号线平多；止损 -30%。,berlinguyinca / freqtrade/freqtrade-strategies,ASDTSRockwellTrading,https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/ASDTSRockwellTrading.py,ASDTSRockwellTrading.py,高,,未知

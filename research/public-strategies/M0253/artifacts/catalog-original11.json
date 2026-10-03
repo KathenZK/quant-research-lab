@@ -1,0 +1,13 @@
+{
+  "id": "M0253",
+  "名称": "ASDTSRockwellTrading",
+  "市场": "加密现货",
+  "规则": "5m；MACD>0 且 MACD>信号线做多；MACD<信号线平多；止损 -30%。",
+  "作者或机构": "berlinguyinca / freqtrade/freqtrade-strategies",
+  "标题": "ASDTSRockwellTrading",
+  "source_url": "https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/berlinguyinca/ASDTSRockwellTrading.py",
+  "页码或文件": "ASDTSRockwellTrading.py",
+  "可回测": "高",
+  "别名来源": "",
+  "提出日期": "未知"
+}
