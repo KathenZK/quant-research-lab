@@ -1,0 +1,14 @@
+{
+  "id": "M0311",
+  "parent_path": "research/public-strategies/M0315/scripts/run_replay.py",
+  "parent_sha256": "7759b72caff4a4415fb50085b1e50bb2a8394402a2581edc7fe3489e5b035ebf",
+  "parent_commit": "4abf064cefed2d7472e0c6d69c37e798e9604cd9",
+  "changes": [
+    "CMF21 original signed-state signals, preserve NaN",
+    "ROI high and open guard strictly > threshold, not >=",
+    "Source risk1%ROI/-5%stop supplied by protocol",
+    "Classification ADAPTED_EXECUTION_PROXY: limit originals replaced by nextopen/marketstop proxy; no maker queue/timeouts"
+  ],
+  "account_budget_and_time_rules_reused": true,
+  "replay_AST_equal_except_strict_ROI_guards": true
+}

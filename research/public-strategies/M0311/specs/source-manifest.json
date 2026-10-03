@@ -1,0 +1,70 @@
+{
+  "id": "M0311",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/TechnicalExampleStrategy.py",
+      "bytes": 1069,
+      "sha256": "0a3d94c8ef857284c9bc37d592af329b1a831f9c504fb2d73b63db00d303db50",
+      "filename": "M0311-TechnicalExampleStrategy.py",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "filename": "strategies-LICENSE",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "filename": "technical-LICENSE",
+      "commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/interface.py",
+      "bytes": 81628,
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+      "filename": "engine-freqtrade__strategy__interface.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/strategy/hyper.py",
+      "bytes": 7650,
+      "sha256": "72249ce7f5ffd62f2bcb850b64cc3ba5db5ac470cc128817e6a53f7a5482fc2e",
+      "filename": "engine-freqtrade__strategy__hyper.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/freqtrade/resolvers/strategy_resolver.py",
+      "bytes": 13694,
+      "sha256": "394d55c6c1ce8f07bee80aac068deb560cf57897540b644d06000f7e68f94fe3",
+      "filename": "engine-freqtrade__resolvers__strategy_resolver.py",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/1f394eaebc2f46a83d26971388628707802f8602/LICENSE",
+      "bytes": 35141,
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "filename": "engine-LICENSE",
+      "commit": "1f394eaebc2f46a83d26971388628707802f8602",
+      "license": "GPL-3.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freqtrade/technical/8ce873e269bfbfe0d17d487a3e5163616ec0a872/technical/indicators/volume_indicators.py",
+      "bytes": 621,
+      "sha256": "8bfa4fd42727396c01b35f3ef4a651778612798acaf0788bb0915313afe909d5",
+      "filename": "technical-technical__indicators__volume_indicators.py",
+      "commit": "8ce873e269bfbfe0d17d487a3e5163616ec0a872",
+      "license": "GPL-3.0"
+    }
+  ],
+  "private_source_bytes_preserved": true
+}

@@ -1,0 +1,8 @@
+{
+  "id": "M0311",
+  "status": "PASS",
+  "private_reference_identifiers_in_public": 0,
+  "private_preflight_context_fingerprints_in_public": 0,
+  "public_sources": "fixed GitHub public source hashes only",
+  "private_provenance_mapping": "maintained only outside repository"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "M0311",
+  "name": "TechnicalExampleStrategy：BTC现货5m CMF21执行代理",
+  "status": "tested_adapted_only",
+  "reason": "原CMF信号与strict ROI核对通过；原limit订单改为明示成交代理。全部预定配置显著亏损，不晋升。",
+  "tested_variants": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "families": [
+    "PUBLIC-M0311-TECHNICAL-EXAMPLE-CMF"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_and_CMF_original_arrays_identical",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "strict_replication": false,
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_proven": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false,
+    "remote_backup_verified": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0311-20261003-first-replay",
+      "variant_id": "M0311-BTCUSDT-5M-CMF21-EXECUTION-PROXY-2024-20261003",
+      "fidelity_class": "ADAPTED",
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "protocol_sha256": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+      "manifest_sha256": "608564e1c113a6e40c4df90499a3f4120212bf768ee9c6a3b400c39c63458e00",
+      "family": "PUBLIC-M0311-TECHNICAL-EXAMPLE-CMF"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0311-20261003-first-replay",
+      "variant_id": "M0311-BTCUSDT-5M-CMF21-EXECUTION-PROXY-2024-20261003",
+      "fidelity_class": "ADAPTED",
+      "execution_class": "ADAPTED_EXECUTION_PROXY",
+      "protocol_sha256": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+      "manifest_sha256": "608564e1c113a6e40c4df90499a3f4120212bf768ee9c6a3b400c39c63458e00"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 plus Binance Dataset Terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "CMF21, declared adapted OHLC accounting, metrics,daily sampling"
+  },
+  "limitations": [
+    "ADAPTED_EXECUTION_PROXY: original GTC limit entry/exit/stop replaced with nextopen/marketstyle full fills",
+    "CMF21 original NaN/sign rules and strict ROI>1% preserved; exit_profit_onlyFalse",
+    "Availability-selected2024 already exposed, no OOS or original author runtime claim",
+    "Fractional dust trading continues below real minimum notionals; near-zero balances are theoretical proxy outputs",
+    "No original limit queue/timeout/fill validation; no execution guarantee",
+    "Only derived light curves and explicitly sampled fills public; full logs private"
+  ]
+}

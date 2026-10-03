@@ -1,0 +1,56 @@
+{
+  "id": "M0311",
+  "implementation_started_utc": "2026-10-03T12:30:40.864940Z",
+  "C0_frozen_utc": "2026-10-03T12:36:33.034030Z",
+  "phases": {
+    "replay": {
+      "started_at_utc": "2026-10-03T12:37:09.492825+00:00",
+      "last_output_at_utc": "2026-10-03T12:38:14.709923+00:00",
+      "wall_seconds_from_file_timestamps": 65.217098,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    },
+    "source_validation": {
+      "started_at_utc": "2026-10-03T12:37:10.844847+00:00",
+      "last_output_at_utc": "2026-10-03T12:37:13.671999+00:00",
+      "wall_seconds_from_file_timestamps": 2.827152,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    },
+    "causality": {
+      "started_at_utc": "2026-10-03T12:37:10.840847+00:00",
+      "last_output_at_utc": "2026-10-03T12:37:12.948883+00:00",
+      "wall_seconds_from_file_timestamps": 2.108036,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    },
+    "decimal_oracle": {
+      "started_at_utc": "2026-10-03T12:39:29.211184+00:00",
+      "last_output_at_utc": "2026-10-03T12:39:35.058887+00:00",
+      "wall_seconds_from_file_timestamps": 5.847703,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    },
+    "one_offline_recovery": {
+      "started_at_utc": "2026-10-03T12:39:29.215184+00:00",
+      "last_output_at_utc": "2026-10-03T12:40:41.017113+00:00",
+      "wall_seconds_from_file_timestamps": 71.801929,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    },
+    "low_balance_precision": {
+      "started_at_utc": "2026-10-03T12:41:53.357419+00:00",
+      "last_output_at_utc": "2026-10-03T12:41:59.122537+00:00",
+      "wall_seconds_from_file_timestamps": 5.765118,
+      "cpu_seconds": null,
+      "peak_rss_kib": null,
+      "resource_note": "CPU/RSS were not instrumented for these already completed phases; not retrospectively inferred"
+    }
+  },
+  "standalone_archive": "not created; coordinator switched to one batch archive"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "M0311",
+  "recorded_at_utc": "2026-10-03T12:34:55.557302+00:00",
+  "input": {
+    "filename": "BTCUSDT-5m-202312-202412-native12.csv",
+    "sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+    "bytes": 31428289,
+    "start": "2023-12-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 114336,
+    "exchange": "binance",
+    "market_type": "spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "source": "official Binance Vision13 native monthly archives",
+    "raw_manifest_sha256": "fb84e080d97ed85ec92227bc43b9468de331b3399e6b8254dba4afa7ccc8d058",
+    "quality_status": "DIAGNOSTIC_ONLY",
+    "trusted": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_status": "NOT_PROVEN",
+    "gap_policy": "reject;114336 exact grids/close times, no discarded rows",
+    "new_market_requests": 0,
+    "loader_exception": "Explicit user-authorized spot native5m diagnostic; existing canonical perpetual v3 loader is different market/timeframe. Hash/grid/OHLCV and39raw-file CRC/byte-rebuild QA equivalent checks; never label trusted or net_research."
+  },
+  "evaluation": {
+    "start": "2024-01-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "expected_rows": 105408,
+    "initial_state": "cash only; first allowed strategy entry at second evaluation open"
+  },
+  "prior_exposure": {
+    "window_previously_exposed": true,
+    "historical_total_search_count": "UNKNOWN",
+    "oos_claim": false,
+    "DSR_or_PBO_claim": false,
+    "strategy_ids": 1,
+    "strategy_configurations": 4,
+    "controls": 1,
+    "parameter_searches": 0,
+    "selection": "Assigned for source completeness before thisIDperformance; calendar2024 already seen viaM0315 and availability-selected after2023dataQA rejection; not independentOOS",
+    "claim_commit": "b891d5dbd734fe3bc71866d2e0a2e3d46956bc25",
+    "base_commit": "4abf064cefed2d7472e0c6d69c37e798e9604cd9"
+  },
+  "historical_runs_this_id": 0,
+  "only_local_existing_snapshot": true
+}

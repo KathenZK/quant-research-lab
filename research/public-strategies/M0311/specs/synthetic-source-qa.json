@@ -1,0 +1,28 @@
+{
+  "id": "M0311",
+  "status": "PASS",
+  "rows": 3000,
+  "original_class_signals_identical": true,
+  "pinned_CMF_values_identical": true,
+  "independent_window_formula_and_signals": "PASS",
+  "independent_max_abs_error": 1.1102230246251565e-16,
+  "cmf_nan_rows": 20,
+  "roi_strict_greater_boundary": "PASS",
+  "native_order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "native_time_in_force": {
+    "entry": "GTC",
+    "exit": "GTC"
+  },
+  "native_exit_profit_only": false,
+  "startup_candle_count": 0,
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "native_engine_used": false,
+  "new_market_requests": 0
+}

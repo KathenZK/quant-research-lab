@@ -1,0 +1,173 @@
+{
+  "id": "M0311",
+  "origin_run_id": "M0311-20261003-first-replay",
+  "variant_id": "M0311-BTCUSDT-5M-CMF21-EXECUTION-PROXY-2024-20261003",
+  "fidelity_class": "ADAPTED",
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "status": "explore / not promoted / not live-ready",
+  "data_quality_status": "DIAGNOSTIC_ONLY",
+  "trusted_input": false,
+  "protocol_sha256": "c610dc5e8565fdc9d7d781356f0993206e47bb8e9713dabd9b6df761dab8f3bc",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2",
+  "engine_sha256": "53e355d6aa040e913e3fc2f0538a2a7d7c4501f923adaa661fe451e23d6e4dde",
+  "dependency_runtime": {
+    "TA-Lib": "0.6.8",
+    "ta_library": "0.6.4 (Oct 20 2025 20:23:51)",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "actual_strategy_ids": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "oos_claim": false,
+  "feature_readiness": {
+    "cmf": {
+      "first_valid_index": 20,
+      "evaluation_nan_rows": 0
+    }
+  },
+  "evaluation_entry_exit_collisions": 0,
+  "results": {
+    "base": {
+      "configuration": {
+        "name": "base",
+        "fee_bps": 8,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.999957649565611,
+        "annualized_return": -0.9999564682280846,
+        "max_drawdown": 0.9999577025881988,
+        "sharpe": -30.59524457132571,
+        "sharpe_5m": -27.12508631019533,
+        "final_equity": 4.235043438904483,
+        "trades": 11399,
+        "round_trips": 5699,
+        "winning_round_trip_fraction": 0.21652921565186875,
+        "fees_paid": 88110.77089916862,
+        "position_bar_fraction": 0.4466928506375228,
+        "final_cash": 0.21161269730567334,
+        "final_quantity": 4.2996395887821765e-05,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee0": {
+      "configuration": {
+        "name": "fee0",
+        "fee_bps": 0,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.752178292918626,
+        "annualized_return": -0.7512318931193489,
+        "max_drawdown": 0.7598169239195652,
+        "sharpe": -4.271085577089629,
+        "sharpe_5m": -3.7405543634621883,
+        "final_equity": 24782.17070813739,
+        "trades": 11441,
+        "round_trips": 5720,
+        "winning_round_trip_fraction": 0.5347902097902097,
+        "fees_paid": 0.0,
+        "position_bar_fraction": 0.4463418336369156,
+        "final_cash": 1237.3519526606215,
+        "final_quantity": 0.25161172475289356,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "fee20": {
+      "configuration": {
+        "name": "fee20",
+        "fee_bps": 20,
+        "delay_bars": 1
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.9999999998920392,
+        "annualized_return": -0.9999999998850531,
+        "max_drawdown": 0.9999999998921617,
+        "sharpe": -56.79764804289718,
+        "sharpe_5m": -55.18132898887007,
+        "final_equity": 1.079607501167836e-05,
+        "trades": 11361,
+        "round_trips": 5680,
+        "winning_round_trip_fraction": 0.06848591549295775,
+        "fees_paid": 94170.20489639672,
+        "position_bar_fraction": 0.44691105039465695,
+        "final_cash": 5.400626623151323e-07,
+        "final_quantity": 1.0960088430113733e-10,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "delay2": {
+      "configuration": {
+        "name": "delay2",
+        "fee_bps": 8,
+        "delay_bars": 2
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": -0.9999571830873586,
+        "annualized_return": -0.99995599005498,
+        "max_drawdown": 0.9999572316550537,
+        "sharpe": -28.652479963135715,
+        "sharpe_5m": -27.084091973633637,
+        "final_equity": 4.281691264135983,
+        "trades": 11469,
+        "round_trips": 5734,
+        "winning_round_trip_fraction": 0.22375305197070108,
+        "fees_paid": 84093.66438884613,
+        "position_bar_fraction": 0.446218503339405,
+        "final_cash": 0.2144184627887462,
+        "final_quantity": 4.346491409493071e-05,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    },
+    "buyhold": {
+      "configuration": {
+        "name": "buyhold",
+        "fee_bps": 8,
+        "delay_bars": 1,
+        "buy_hold": true
+      },
+      "metrics": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z",
+        "observations": 105408,
+        "daily_observations": 366,
+        "total_return": 1.1503041230956876,
+        "annualized_return": 1.1458107566464215,
+        "max_drawdown": 0.32021064669603316,
+        "sharpe": 1.7447213326802145,
+        "sharpe_5m": 1.7319656438320898,
+        "final_equity": 215030.41230956875,
+        "trades": 1,
+        "round_trips": 0,
+        "winning_round_trip_fraction": null,
+        "fees_paid": 75.9392486011191,
+        "position_bar_fraction": 1.0,
+        "final_cash": 5000.0,
+        "final_quantity": 2.2444901717274597,
+        "same_bar_stop_roi_hits": 0,
+        "intrabar_stop_roi_ambiguities": 0
+      }
+    }
+  }
+}
