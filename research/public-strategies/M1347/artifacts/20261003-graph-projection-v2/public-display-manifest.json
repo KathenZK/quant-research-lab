@@ -1,0 +1,59 @@
+{
+  "schema": "M1347-public-graph-projection/v2",
+  "manifest_kind": "PUBLIC_DERIVED_GRAPH_PROJECTION",
+  "id": "M1347",
+  "source_scope": "Only previously generated publicv1 fields; no private NAV read",
+  "files": [
+    {
+      "path": "base-nav-sampled.json",
+      "bytes": 2596,
+      "sha256": "7c0fa363f0fac5d01443dd4ff4108f303c210d8f47e7a6abaf89e8c20d22984a"
+    },
+    {
+      "path": "graph-detail.json",
+      "bytes": 13770,
+      "sha256": "21c0fa82c205105cc67ec7853dd38287e2a92a8aebd6a9090314703b1046dcb9"
+    },
+    {
+      "path": "graph-record.json",
+      "bytes": 1671,
+      "sha256": "9eea4dba860f11172eb6fbceb7acac8f7c4365e83e57f5b6ac7c1662f5c021d7"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "graph-detail.json",
+      "bytes": 11351,
+      "sha256": "5e8003a430a9e2f0e802cfba743b62b4ba1b8c46a962d273cc47903790efa5d4"
+    },
+    {
+      "path": "graph-record.json",
+      "bytes": 1107,
+      "sha256": "05b7e6a9d225a89756188c14739c15de87b44509f5cdcbbffdb5ed0824f5d6bd"
+    },
+    {
+      "path": "base-nav-sampled.json",
+      "bytes": 2596,
+      "sha256": "7c0fa363f0fac5d01443dd4ff4108f303c210d8f47e7a6abaf89e8c20d22984a"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 4021,
+      "sha256": "4c19980d35f4a699ef68dc9dffe0c1155b2bc6140847a0da864fb4dbf3594894"
+    }
+  ],
+  "script_sha256": "9d0dbdcebe5d57c013b7ca0bf4617694747da911bfacc34a26cd505ef06394ef",
+  "returned_points": 25,
+  "metrics_observations": 731,
+  "normalization_operations": 0,
+  "original_research_counts": {
+    "strategy_configurations": 4,
+    "new_controls": 0
+  },
+  "this_projection_counts": {
+    "strategy_configurations": 0,
+    "new_controls": 0
+  },
+  "null_policy": "Preserve every null/zero value; no fill or conversion",
+  "fixed_original_source_C0_and_results_unchanged": true
+}

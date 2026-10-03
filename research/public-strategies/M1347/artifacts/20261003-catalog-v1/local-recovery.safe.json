@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "compared_files": 31,
+  "new_research_configurations": 0,
+  "new_controls": 0,
+  "scope": "Local fresh source/input byte recovery; separately report remote/Library status"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS_INDEPENDENT_ACTUAL_LEDGER_AND_LOCAL_RESTORE",
+  "counts": {
+    "independent_features": 762,
+    "nav_rows": 2924,
+    "decision_rows": 2924,
+    "fills": 188,
+    "months": 96,
+    "pending_events": 376,
+    "closed_trips": 92,
+    "signal_availability_and_execution_phase": 188
+  },
+  "control7_hashes": true,
+  "control_reexecuted": false,
+  "own_money_quantity_tolerance": "Decimal numerical equality exactly, finite only, no quantization/tolerance/epsilon",
+  "metrics": "independent stdlib rel1e-12/abs0 and exact expectedzero",
+  "source_C0_kernel_copies_exact": 32,
+  "restore_objects_byte_equal": 31,
+  "results_manifest_sha256": "efae9bdac67125d12fde252f1e8fd1a506e455c6fbe215ea397e989cd3133d95",
+  "root_release_sha256": "a4215a61fa3f785e58a8b1aaecc4ff3cd830f4aacc6852be698a28e6082cc21e",
+  "new_engine_runs": 0,
+  "new_trials": 0,
+  "new_controls": 0,
+  "strict_reproductions": 0,
+  "wall_seconds": 0.10818365799786989,
+  "cpu_seconds": 0.10815750299999999,
+  "max_rss_kib": 30960,
+  "checked_utc": "2026-10-03T18:49:34.417711+00:00",
+  "private_full_receipt_sha256": "a31b5de0ecbeb9b55f773341b6fe6e652f1b26e7446102e8326f74b6b8fe53f0",
+  "derived_safe_scope": "Counts and verification status extracted without private full ledgers; independent reviewer retained full receipt."
+}

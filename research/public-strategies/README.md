@@ -92,6 +92,9 @@
 
 - [批016实际远端恢复](catalog-hypothesis-batch016-recovery-20261003/REMOTE-CORE-RESTORE.md)：M1396/M1463从远端原代码重建，60载荷长度/hash及2份清单原字节通过；不新增研究/控制，完整Library私包仍未异地保存。
 
+- [Catalog月末窗批次018冻结准备](catalog-hypothesis-batch018-preflight-20261003/README.md)：M1347、4计划配置、0新控制；实际代码C0/独审门禁前不运行。
+
+- [M1347：UTC月末窗口](M1347/M1347.md)：4个固定配置/0新对照，ADAPTED诊断；[新增结果入口](M1347/README-results-v1.md)与[展示兼容说明](M1347/M1347-display-correction-v2.md)。
 - [批017共享恢复诊断](catalog-hypothesis-batch017-execution-20261003/README.md)：M1346/M1349/M1270 的公开恢复核心；不增加研究计数，不等同完整私有备份。
 
 - [批019 M1266预检](catalog-fixedqty-batch019-preflight-20261003/README.md)：修正源码的明确执行适配；4策略+1控制计划，尚无历史。

@@ -1,0 +1,23 @@
+{
+  "status": "ROOT_APPROVED_HISTORY_AFTER_INDEPENDENT_QA",
+  "id": "M1347",
+  "approved_utc": "2026-10-03T18:45:52.283633+00:00",
+  "C0_sha256": "95c1aaee84657d0d3639c94d282e6e4bfa9934ba9f3b4c6fa5aaed13355dfed3",
+  "authorized_strategy_configurations": 4,
+  "new_controls": 0,
+  "control_independently_accepted": true,
+  "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+  "control_remote_acceptance_sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131",
+  "independent_code_review": {
+    "local_path": "recovery/independent-code-review.safe.json",
+    "sha256": "f602071c35031432f68b3b530e509fab88cc4ca154a0b1a99de18707f299856a",
+    "status": "PASS"
+  },
+  "source_commit": "5ccadf192dfc6381721058d28887cd9bc435a20c",
+  "scope": "Exactly one initial historical 4-case execution; independent QA and fresh recovery do not add trials; no tuning; shared existing control is read-only.",
+  "coordinator": "root",
+  "portability": {
+    "original_root_release_sha256": "a4215a61fa3f785e58a8b1aaecc4ff3cd830f4aacc6852be698a28e6082cc21e",
+    "change": "Only independent review local_path mapped to family-relative member; frozen execution authority and all pins retained"
+  }
+}

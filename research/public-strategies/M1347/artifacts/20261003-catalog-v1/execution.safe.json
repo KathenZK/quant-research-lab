@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "returncode": 0,
+  "started_utc": "2026-10-03T18:46:39.316264+00:00",
+  "finished_utc": "2026-10-03T18:46:39.486805+00:00",
+  "wall_seconds": 0.1705520579998847,
+  "cpu_seconds": 0.170089,
+  "max_rss_kib": 29520,
+  "actual_strategy_configurations": 4,
+  "new_controls": 0,
+  "network_market_requests": 0
+}
