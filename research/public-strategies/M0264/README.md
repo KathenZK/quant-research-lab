@@ -1,5 +1,5 @@
 ---
-research_classification: diagnostic_topic
+research_classification: strategy_family
 ---
 
 # M0264 · ClucMay72018 研究回测

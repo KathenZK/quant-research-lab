@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4745,
-      "sha256": "2aa69cdadd19256383b3f2586b9929e1d344565d13a10c1fc23bc10ae1666ba6"
+      "bytes": 4746,
+      "sha256": "43ca4a216589598eaf9b6409b8771930c941ca3eb574133b5b20af0ba4f0cae4"
     },
     {
       "path": "artifacts/catalog-original11.csv",
@@ -78,8 +78,8 @@
     },
     {
       "path": "decision-log.md",
-      "bytes": 1013,
-      "sha256": "89ea0dda1207eb2ada7d9229835bcb403828983b63ccfbb7d81a430fa5f71d9c"
+      "bytes": 604,
+      "sha256": "05e2ec38f160f0dc245eb0e182fee062b8e3fa6a2cad9b96c5895138013918f6"
     },
     {
       "path": "history/protocol-before-input-addendum.json",
@@ -90,26 +90,6 @@
       "path": "m0264-core-ledger.md",
       "bytes": 364,
       "sha256": "bfca1746e7c0755a2f0cb3b860a08d9bebd29d15dc6c066a65104d9629b0c49f"
-    },
-    {
-      "path": "publication-history/revision-v2.json",
-      "bytes": 1013,
-      "sha256": "fa79c9a5f5ae9412bd3fba15c425cd64a02292366513843d29bc8d932b8bafd9"
-    },
-    {
-      "path": "publication-history/v1/README.md.snapshot",
-      "bytes": 4746,
-      "sha256": "43ca4a216589598eaf9b6409b8771930c941ca3eb574133b5b20af0ba4f0cae4"
-    },
-    {
-      "path": "publication-history/v1/decision-log.md.snapshot",
-      "bytes": 604,
-      "sha256": "05e2ec38f160f0dc245eb0e182fee062b8e3fa6a2cad9b96c5895138013918f6"
-    },
-    {
-      "path": "publication-history/v1/publication-manifest.json",
-      "bytes": 4181,
-      "sha256": "c1251b3131c375f774b28da6e65abea7aeae842338bcebd967ff61b5eeb47876"
     },
     {
       "path": "scripts/adapter.py",
@@ -146,8 +126,5 @@
   "raw_market_data": false,
   "full_ledgers": false,
   "private_Library_IDs": false,
-  "shared_kernel_modified": false,
-  "revision": 2,
-  "previous_publication_manifest_sha256": "c1251b3131c375f774b28da6e65abea7aeae842338bcebd967ff61b5eeb47876",
-  "revision_scope": "governance classification and explicit preserved documentation history only; immutable runtime evidence unchanged"
+  "shared_kernel_modified": false
 }

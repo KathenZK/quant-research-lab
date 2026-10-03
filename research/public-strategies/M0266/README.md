@@ -1,5 +1,5 @@
 ---
-research_classification: diagnostic_topic
+research_classification: strategy_family
 ---
 
 # M0266 · CombinedBinHAndCluc 研究回测
