@@ -1,0 +1,465 @@
+{
+  "audit": {
+    "PIT": "NOT_PROVEN",
+    "input_quality": "DIAGNOSTIC_ONLY",
+    "original_runtime_equivalence": false,
+    "source_rule_attribution_status": "USER_AUTHORIZED_CATALOG_HYPOTHESIS",
+    "source_verification_status": "CATALOG_ONLY_ORIGINAL_WEBPAGE_UNVERIFIED",
+    "strict_reproductions": 0
+  },
+  "curve": [
+    {
+      "date": "2023-01-01",
+      "drawdown": 0.0,
+      "equity": 1.0
+    },
+    {
+      "date": "2023-01-31",
+      "drawdown": -0.003284094267180257,
+      "equity": 1.3280494495952946
+    },
+    {
+      "date": "2023-02-28",
+      "drawdown": -0.055740036508451225,
+      "equity": 1.3900186436222353
+    },
+    {
+      "date": "2023-03-31",
+      "drawdown": -0.0432089025747728,
+      "equity": 1.4218378336115056
+    },
+    {
+      "date": "2023-04-30",
+      "drawdown": -0.012638928438909465,
+      "equity": 1.4672662932991674
+    },
+    {
+      "date": "2023-05-31",
+      "drawdown": -0.045273921777778586,
+      "equity": 1.4187691152278696
+    },
+    {
+      "date": "2023-06-30",
+      "drawdown": -0.014365991741814788,
+      "equity": 1.5358507532240722
+    },
+    {
+      "date": "2023-07-31",
+      "drawdown": -0.041558343885143026,
+      "equity": 1.4934786412927183
+    },
+    {
+      "date": "2023-08-31",
+      "drawdown": -0.11586578483211833,
+      "equity": 1.377690084696292
+    },
+    {
+      "date": "2023-09-30",
+      "drawdown": -0.11928175181831875,
+      "equity": 1.3723672007203058
+    },
+    {
+      "date": "2023-10-31",
+      "drawdown": -0.07171956811330951,
+      "equity": 1.446480324918822
+    },
+    {
+      "date": "2023-11-30",
+      "drawdown": -0.02183745254321605,
+      "equity": 1.5242084513114231
+    },
+    {
+      "date": "2023-12-31",
+      "drawdown": -0.0070637238760728,
+      "equity": 1.626114519338475
+    },
+    {
+      "date": "2024-01-31",
+      "drawdown": -0.14093736228765097,
+      "equity": 1.406871983425157
+    },
+    {
+      "date": "2024-02-29",
+      "drawdown": -0.020840561185672114,
+      "equity": 1.7165305748169806
+    },
+    {
+      "date": "2024-03-31",
+      "drawdown": -0.11420051619589204,
+      "equity": 1.6835735436003245
+    },
+    {
+      "date": "2024-04-30",
+      "drawdown": -0.2206139315611201,
+      "equity": 1.4813214379390507
+    },
+    {
+      "date": "2024-05-31",
+      "drawdown": -0.16675075037436546,
+      "equity": 1.5836952013902665
+    },
+    {
+      "date": "2024-06-30",
+      "drawdown": -0.18288529123356442,
+      "equity": 1.553029473282106
+    },
+    {
+      "date": "2024-07-31",
+      "drawdown": -0.1986757168814238,
+      "equity": 1.523017779497011
+    },
+    {
+      "date": "2024-08-31",
+      "drawdown": -0.13057861657335545,
+      "equity": 1.6524448999353822
+    },
+    {
+      "date": "2024-09-30",
+      "drawdown": -0.08957471268252326,
+      "equity": 1.730377986415033
+    },
+    {
+      "date": "2024-10-31",
+      "drawdown": -0.10575423251476464,
+      "equity": 1.699626770100549
+    },
+    {
+      "date": "2024-11-30",
+      "drawdown": -0.013320155042025644,
+      "equity": 2.006487230639415
+    },
+    {
+      "date": "2024-12-31",
+      "drawdown": -0.1298406877255973,
+      "equity": 1.7695340161477913
+    }
+  ],
+  "curve_meta": {
+    "benchmark_curve_available": false,
+    "denominator": 100000,
+    "drawdown_unit": "fraction",
+    "equity_unit": "initial_capital_multiple",
+    "first_point_rebased": false,
+    "full_daily_curve_published": false,
+    "interpolation_claim": false,
+    "observations": 731,
+    "private_daily_nav_used": false,
+    "returned_points": 25,
+    "sampling": "first barclose+24UTCmonthend closes;bar-open date label",
+    "source_drawdown_basis": "Original25 samples retain drawdown against full daily peaks; not recomputed from samples",
+    "total_observations": 731
+  },
+  "deep_validation": {
+    "account": "PASS independent Decimal serialized state/fills/months",
+    "causality": "PASS 24prefix/future checks",
+    "recovery": "31files byte-exact fresh local; thisID remote core pending coordinator"
+  },
+  "execution_class": "ADAPTED_EXECUTION_PROXY",
+  "family": "catalog-daily-weekday-hl2-fullcash",
+  "fidelity_class": "HYPOTHESIS",
+  "fidelity_reason": "目录规则锚定的显式日线假设与全现金成交代理，非原作者严格复现",
+  "id": "M1396",
+  "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+  "lab_counts": {
+    "new_control_configurations": 0,
+    "reused_control_configurations": 1,
+    "strategy_configurations": 4,
+    "strategy_ids": 1,
+    "strict_reproductions": 0
+  },
+  "limitations": [
+    "Strict0;notpromoted",
+    "Prior-exposed2023–2024nonOOS",
+    "Partial fills, lot constraints, market impact and true publication timing not proved",
+    "Private fullNAV/raw excluded from public core",
+    "Only25 approved normalized public points;731 is source metric observations. No rescaling/interpolation or private dailyNAV use.",
+    "Four original strategy configurations;0 original new controls. Existing accepted M1258 fullcash fee-inclusive control is reused.",
+    "This display preparation runs0 strategies and0 controls; Graph HYPOTHESIS remains distinct from ADAPTED_EXECUTION_PROXY.",
+    "Prior-exposed2023-2024 is not untouched OOS;strict0;source webpage/runtime equivalence remains unverified.",
+    "Monthly observations count24 is preserved, but selected light summary does not publish monthly return values; none invented.",
+    "Original private-result hash in approved source lineage is provenance only, never a public display manifest or permission to read private outputs."
+  ],
+  "lineage": {
+    "C0_sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+    "definition_revision_bound": false,
+    "lab_commit": "683fe124f70c0f5b1e36af20ad68256c4a83e180",
+    "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+    "manifest_sha256": "7c00500dd7b7ad0107239431d08fbf2512dfb2c7d1afada2cf377dc39831b4a0",
+    "new_control_trials": 0,
+    "new_execution_trials": 0,
+    "protocol_sha256": "2ee5efd86194f2bda97d61839cd60313614767f357e362d00fee95864b71f056",
+    "source_artifacts": {
+      "C0": {
+        "bytes": 5232,
+        "path": "research/public-strategies/M1396/specs/C0-v1.json",
+        "sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/specs/C0-v1.json"
+      },
+      "catalog_fields": {
+        "bytes": 1850,
+        "path": "research/public-strategies/M1396/source/catalog-original-fields.json",
+        "sha256": "7d0d4464e98b0f3a59e41f0e2aa95faf8d9bd154ef4fd4aa065657818684d84d",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/source/catalog-original-fields.json"
+      },
+      "control_reference": {
+        "bytes": 4190,
+        "path": "research/public-strategies/M1396/recovery/control-release-v1/control-reference.json",
+        "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/recovery/control-release-v1/control-reference.json"
+      },
+      "control_release": {
+        "bytes": 2039,
+        "path": "research/public-strategies/M1396/recovery/control-release-v1/release.json",
+        "sha256": "51823b3b465f2f8ab75b37e56277c36264a21e624ddf9a146c76fcbcf666fbaf",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/recovery/control-release-v1/release.json"
+      },
+      "original_detail": {
+        "bytes": 10728,
+        "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-detail.json",
+        "sha256": "6acc5ef6dbfcdc8db71b22a5e89d72af1973d79f225a85b7dd813dac5f9e4487",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-detail.json"
+      },
+      "original_record": {
+        "bytes": 913,
+        "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-record.json",
+        "sha256": "1a69e57c411bcbdf7b46a3c5afca0daa09f1f115b84b8c8e70563472d756aa8d",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/artifacts/20261003-catalog-v1/graph-record.json"
+      },
+      "protocol": {
+        "bytes": 19302,
+        "path": "research/public-strategies/M1396/specs/protocol-v1.json",
+        "sha256": "2ee5efd86194f2bda97d61839cd60313614767f357e362d00fee95864b71f056",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/specs/protocol-v1.json"
+      },
+      "publication_manifest": {
+        "bytes": 10403,
+        "path": "research/public-strategies/M1396/publication-manifest.v1.json",
+        "sha256": "ee8d68770a697e372021989c192674b6db6cf96b8ea0eeee450ecb4370454c6f",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/publication-manifest.v1.json"
+      },
+      "rules": {
+        "bytes": 10110,
+        "path": "research/public-strategies/M1396/source/root-frozen-rules.json",
+        "sha256": "0b66cc30dda37a342fd1720ab70fb5a3909225693f15a1979c3b2c1918690ee0",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/source/root-frozen-rules.json"
+      },
+      "summary": {
+        "bytes": 4339,
+        "path": "research/public-strategies/M1396/artifacts/20261003-catalog-v1/summary.json",
+        "sha256": "b258d42ec259102cf23e987ca2cbc3ccc1edc82df81c9b33910864aaa9f38deb",
+        "url": "https://github.com/KathenZK/quant-research-lab/blob/683fe124f70c0f5b1e36af20ad68256c4a83e180/research/public-strategies/M1396/artifacts/20261003-catalog-v1/summary.json"
+      }
+    },
+    "source_contract": "CATALOG_WEEKDAY_HL2SMA4_FULLCASH_REUSED_CONTROL_V1",
+    "source_display_manifest_sha256": "7c00500dd7b7ad0107239431d08fbf2512dfb2c7d1afada2cf377dc39831b4a0",
+    "source_lineage": {
+      "C0_sha256": "2bd8be6f6bc9206a42a08f430d1628a8058ea2824b0b4c3383a4242ff34c169a",
+      "control_reference_sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a",
+      "control_remote_commit": "2a2e33e0de2b4897d6ccb460e72dcb5e73aa4153",
+      "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+      "new_control_runs": 0,
+      "result_manifest_sha256": "77b980470ba4c78a0af62f5855539589ff57b4aaedafbf194c46e4d24ce1c1f5",
+      "source_commit": "56c7cae289700d73d0e2f4df582ea044c2363b0c"
+    }
+  },
+  "manifest_kind": "PUBLIC_DERIVED_DISPLAY_MANIFEST",
+  "metrics": {
+    "additional_native_bar_lag": {
+      "2023-2024": {
+        "annualization": 365,
+        "cagr": 0.2170614542062026,
+        "end": "2024-12-31",
+        "final_equity": 148203.59854997552,
+        "max_drawdown": -0.24305338112216224,
+        "observations": 731,
+        "sharpe": 0.9326127217896479,
+        "sharpe_zero_cash": 0.9326127217896479,
+        "start": "2023-01-01",
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+        "total_return": 0.4820359854997551
+      }
+    },
+    "capital_state": {
+      "final_equity_usdt": 176953.4016147791,
+      "final_position_open": false,
+      "initial_cash_usdt": 100000,
+      "terminal_pending": {
+        "due_index": 731,
+        "side": "BUY",
+        "signal_index": 730
+      }
+    },
+    "cost_sensitivity": {
+      "0": {
+        "2023-2024": {
+          "annualization": 365,
+          "cagr": 0.39612565055158333,
+          "end": "2024-12-31",
+          "final_equity": 195094.96714668785,
+          "max_drawdown": -0.24766590369243524,
+          "observations": 731,
+          "sharpe": 1.3225404201160738,
+          "sharpe_zero_cash": 1.3225404201160738,
+          "start": "2023-01-01",
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+          "total_return": 0.9509496714668786
+        }
+      },
+      "20": {
+        "2023-2024": {
+          "annualization": 365,
+          "cagr": 0.23598440305519386,
+          "end": "2024-12-31",
+          "final_equity": 152854.44453757597,
+          "max_drawdown": -0.26843910411426797,
+          "observations": 731,
+          "sharpe": 0.8920703196429945,
+          "sharpe_zero_cash": 0.8920703196429945,
+          "start": "2023-01-01",
+          "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+          "total_return": 0.5285444453757597
+        }
+      }
+    },
+    "implementation_fidelity": "ADAPTED_EXECUTION_PROXY",
+    "periods": {
+      "2023-2024": {
+        "annualization": 365,
+        "cagr": 0.3297191510586144,
+        "end": "2024-12-31",
+        "final_equity": 176953.4016147791,
+        "max_drawdown": -0.25604503662450395,
+        "observations": 731,
+        "sharpe": 1.1508909542867984,
+        "sharpe_zero_cash": 1.1508909542867984,
+        "start": "2023-01-01",
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+        "total_return": 0.769534016147791
+      },
+      "full": {
+        "annualization": 365,
+        "cagr": 0.3297191510586144,
+        "end": "2024-12-31",
+        "final_equity": 176953.4016147791,
+        "max_drawdown": -0.25604503662450395,
+        "observations": 731,
+        "sharpe": 1.1508909542867984,
+        "sharpe_zero_cash": 1.1508909542867984,
+        "start": "2023-01-01",
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+        "total_return": 0.769534016147791
+      }
+    },
+    "same_instrument_benchmark": {
+      "2023-2024": {
+        "annualization": 365,
+        "cagr": 1.3744318581300612,
+        "end": "2024-12-31",
+        "final_equity": 565129.9863331392,
+        "max_drawdown": -0.261513750538678,
+        "observations": 731,
+        "sharpe": 2.016493590663557,
+        "sharpe_zero_cash": 2.016493590663557,
+        "start": "2023-01-01",
+        "status": "CATALOG_HYPOTHESIS_DIAGNOSTIC",
+        "total_return": 4.651299863331392
+      }
+    },
+    "source_cost_key_aliases": {
+      "fee0": "0",
+      "fee20": "20"
+    }
+  },
+  "name": "BTC周二hl2过滤/周六退出：目录假设",
+  "origin_run_id": "m1396-catalog-daily-20261003-v1",
+  "projection_activity": {
+    "new_controls": 0,
+    "new_strategy_trials": 0
+  },
+  "projection_profile": "DAILY_SAMPLED_APPROVED_DETAIL_V1",
+  "projection_status": "STAGED_NOT_IMPORTED",
+  "research_fidelity": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "run_id": "m1396-catalog-daily-20261003-v1",
+  "source_contract": "CATALOG_WEEKDAY_HL2SMA4_FULLCASH_REUSED_CONTROL_V1",
+  "spec": {
+    "assumptions": [
+      "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED / ADAPTED_EXECUTION_PROXY; strict0",
+      "Catalog position fraction unspecified; fullcash fee-inclusive is explicitly selected hypothesis, not author rule.",
+      "31 pre-evaluation daily bars for indicators; start allcash, no warmup intent. First evaluation close may compare prior ready feature; earliest signal-driven fill is second evaluation open.",
+      "2023-01-01T00:00:00Z through2025-01-01T00:00:00Z exclusive; full24calendar months including initial cash/readiness period. Prior exposed availability-selected window, NOT OOS.",
+      "Proposed Decimal50 ROUND_HALF_EVEN from original decimal CSV strings for indicators and account; recursive update prev+alpha*(x-prev), preserve exact constant input; independent implementation must match seeds/ready mask. Conversion to float only output metrics, no price rounding/tick assumptions.",
+      "Endbar equity=cash+quantity*rawclose. No funding/interest, no dividend assumptions needed for spot BTC. No terminal liquidation or hypothetical exit fee; report residual inventory and pending action separately. No fill outside evaluation.",
+      "base8bps/2bps each side; fee0 and fee20 retain2bps slippage; delay2 extra dailybar",
+      "No author runtime equivalence, PIT/tradability not proven; no untouched OOS",
+      "M1258 accepted existing fullcash100%control, no newcontrol",
+      "hl2=(H+L)/2 in Decimal50; arithmetic sum current and previous3 hl2 divided4; firstreadyindex3.",
+      "Tuesday close decision fills Wednesday open/lag1 or Thursdayopen/lag2; Saturday close decision fills Sundayopen/lag1 or Mondayopen/lag2. Not Tuesdayopen purchase/Saturdayopen sale.",
+      "Original2012–2018 filter explicitly overridden2023–2024 before returns"
+    ],
+    "params": {
+      "capital": {
+        "Decimal_precision": 50,
+        "buy_order_of_operations": [
+          "fill=Decimal(raw_open)*(1+Decimal(slip_bps)/10000)",
+          "notional=cash_before/(1+Decimal(fee_bps)/10000)",
+          "fee=cash_before-notional",
+          "quantity=notional/fill",
+          "cash_after=Decimal(0)"
+        ],
+        "currency": "USDT",
+        "entry_fee_inclusive": true,
+        "fraction": "1",
+        "fractional_fills": true,
+        "funding_interest_borrow": 0,
+        "initial_cash": "100000",
+        "leverage": 1,
+        "max_positions": 1,
+        "rounding": "ROUND_HALF_EVEN",
+        "rounding_disclosure": "fee=budget-notional closes the Decimal allocation exactly. Product quantity*fill may differ by final Decimal rounding; freeze this arithmetic order, no negative-cash tolerance/clipping, no implicit reserve, no price/tick rounding.",
+        "sell_order_of_operations": [
+          "fill=Decimal(raw_open)*(1-Decimal(slip_bps)/10000)",
+          "notional=quantity_before*fill",
+          "fee=notional*Decimal(fee_bps)/10000",
+          "cash_after=cash_before+notional-fee",
+          "quantity_after=Decimal(0)"
+        ],
+        "terminal": "mark raw last close without forced sale or unincurred exit fees; report holdings and unexecuted intent"
+      },
+      "entry": "UTC daily label Tuesday AND currenthl2>currentinclusiveSMA4; event true independent holdings, equality neutral.",
+      "exit": "UTC daily label Saturday, independent of hl2/trend; whenlong schedule sell, cancels pendingbuy even whileflat.",
+      "fee_bps": 8,
+      "fraction": "1",
+      "lag_bars": 1,
+      "metric_conventions": {
+        "base_series": "731 raw daily-close equity values including cash days, with initial100000 prepended only for returns/drawdown",
+        "cagr": "(E_last/100000)**(365/n)-1, n=731",
+        "daily_return": "r_i=E_i/E_(i-1)-1; E_-1=100000; i=0..730",
+        "exposure": "endclose bars quantity>0 divided by731; no intrabar inference",
+        "fee_total": "sum exact Decimal fees; represented decimaltext",
+        "floats": "Decimal values converted to float64 for numpy metrics only; no float in indicators, order eligibility, allocation, valuation",
+        "max_drawdown": "min(E_i/max(100000,E_0..E_i)-1), initialanchor included",
+        "monthly_counts": "fills by execution UTC month; days_long=endclose quantity>0; allzero activity months retained",
+        "monthly_return": "month final equity/prior month final equity-1; firstdenominator100000; all24calendar months continuous, no reset",
+        "roundtrip": "a buy followed by a sell; netpnl=sale cash_after-entry cash_before; open trade excluded from win_rate",
+        "serialization": "CSV UTF8 csv.writer default CRLF; booleans0/1; missing empty; Decimal str no quantization; JSON indent2 UTF8 ensure_ascii=False allow_nan=False newline; no timestamps in deterministic results",
+        "sharpe_zero_cash": "mean(r)/sample_std(r,ddof=1)*sqrt(365); null when standard deviation is0",
+        "total_return": "E_last/100000-1",
+        "win_rate": "strictly positive netpnl/closedroundtrips; zero included denominator; null if no closedtrade"
+      },
+      "slippage_bps": 2,
+      "source_contract": "CATALOG_WEEKDAY_HL2SMA4_FULLCASH_REUSED_CONTROL_V1",
+      "timeframe": "1d"
+    },
+    "rule_excerpt": "本条只写该TradingView脚本页已印出的规则。条件：hl2高于其4期SMA且dayofweek为周二则开多；周六strategy.close。回测年起止input默认2012–2018。注释写适合日线。不是M1270周日收盘买周一收盘卖，也不是M1202周一VWAP开多周日全平：本条hl2>SMA(hl2,4)且周二开多、周六平多。计入加密。提出日期按源文件原样保留Apr 28, 2018。",
+    "source_url": "https://www.tradingview.com/script/gPAcpcHK-Sundays-Suck-for-Bitcoin-Daily-Strategy/"
+  },
+  "transport_binding": {
+    "execution_class": "ADAPTED_EXECUTION_PROXY",
+    "fidelity_class": "HYPOTHESIS",
+    "manifest_sha256": "7c00500dd7b7ad0107239431d08fbf2512dfb2c7d1afada2cf377dc39831b4a0",
+    "origin_run_id": "m1396-catalog-daily-20261003-v1",
+    "protocol_sha256": "2ee5efd86194f2bda97d61839cd60313614767f357e362d00fee95864b71f056",
+    "variant_id": "M1396-catalog-daily-v1-base"
+  },
+  "variant_id": "M1396-catalog-daily-v1-base"
+}

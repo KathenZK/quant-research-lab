@@ -1383,3 +1383,19 @@ research/public-strategies/M1349/artifacts/20261003-batch017-v1/graph-record.jso
 research/public-strategies/M1349/artifacts/20261003-batch017-v1/light-curve.json
 research/public-strategies/M1349/artifacts/20261003-batch017-v1/private-output-manifest.json
 research/public-strategies/M1349/artifacts/20261003-batch017-v1/summary.json
+
+# M1396/M1463 independently reviewed additive display v2; exact approved paths
+research/public-strategies/M1396/artifacts/20261003-public-display-prep/base-nav-sampled.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-prep/graph-detail.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-prep/graph-record.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-prep/public-display-manifest.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-review/EXACT-8-FILES.json  # catalog pair display publication
+research/public-strategies/M1396/artifacts/20261003-public-display-review/review.safe.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-prep/base-nav-sampled.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-prep/graph-detail.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-prep/graph-record.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-prep/public-display-manifest.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-review/EXACT-8-FILES.json  # catalog pair display publication
+research/public-strategies/M1463/artifacts/20261003-public-display-review/review.safe.json  # catalog pair display publication
