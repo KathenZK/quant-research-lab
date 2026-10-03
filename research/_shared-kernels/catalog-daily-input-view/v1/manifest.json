@@ -1,0 +1,32 @@
+{
+  "schema": "shared-kernel-manifest/v1",
+  "kernel": "catalog-daily-input-view",
+  "version": "v1",
+  "base_commit": "5e92b97a3f5d1c07d980516d0e06d8991d2024ac",
+  "files": [
+    {
+      "path": "adapter.py",
+      "bytes": 8485,
+      "sha256": "a8b501c41902e0db50fcf71b767c4660f9fef982990a4836ba6426a3d4de9a22"
+    },
+    {
+      "path": "tests/test_adapter.py",
+      "bytes": 8492,
+      "sha256": "1300a5bb130f9f532f24caba29f801fbcdda8cc8c9a2c0379249aa2cd8f2db40"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5799,
+      "sha256": "acf7c4f8795c94329258c27e61e7346171e212b1d74921e65026bdf0ff287e04"
+    }
+  ],
+  "validation": {
+    "synthetic_only": true,
+    "normal_test_groups": 7,
+    "optimized_test_groups": 7,
+    "historical_runs": 0,
+    "controls_run": 0,
+    "real_input_reads": 0
+  },
+  "scope": "Fixed input identity, full feature projection and explicit index mapping only; independent review pending."
+}
