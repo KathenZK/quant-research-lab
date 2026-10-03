@@ -1,0 +1,178 @@
+{
+  "schema": "catalog-batch020-history-release-gates/v1",
+  "recorded_at_utc": "2026-10-03T23:37:10.566848+00:00",
+  "coordinator": "root only",
+  "is_history_release": false,
+  "replaces_or_mutates_original_C0": false,
+  "Lab_remote_public_delivery": {
+    "pull_request": 42,
+    "main": "d15ce516b56c4bc6e57ac8c6eb4dd474defef451",
+    "main_ci_run": 37158399139,
+    "status": "SUCCESS",
+    "actual_git_remote_byte_readback": "PASS"
+  },
+  "research": [
+    {
+      "id": "M2903",
+      "owner": "root/m0200",
+      "branch": "codex/catalog-ema20-m2903-20261003",
+      "frozen_executor_head": "be3504678189975acb4118cc202a9d9497018dcf",
+      "history_release": false,
+      "historical_features_generated": false,
+      "historical_strategy_runs": 0,
+      "new_controls": 0,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0,
+      "C0": {
+        "path": "M2903/specs/C0-v1.json",
+        "bytes": 3352,
+        "sha256": "eab148e33d268a7de91ed8386064c6aeec2243c6b270847e6aa9d6d06bd9b699"
+      },
+      "independent_code_review": {
+        "path": "M2903/reviews/exact-C0-independent-20261003.safe.json",
+        "bytes": 10078,
+        "sha256": "a721e2a4a04cb71f3ea2bf0d71fd5454c89bf3986333d01f900d39bc2253f047",
+        "status": "PASS_EXACT_C0_SYNTHETIC_ONLY"
+      },
+      "local_private_archive": {
+        "name": "M2903-prehistory-20261003-v1.zip",
+        "bytes": 1221463,
+        "sha256": "df7d24d73434b8ec81b6a82c2b6a64b62c489547e94dc4c481e8ff8b3b745b11",
+        "remote_Library_saved": false
+      },
+      "independent_manifest": {
+        "name": "MEMBERS.json",
+        "bytes": 54767,
+        "sha256": "7e5a713677bfec800926fe1028946bfe9954ca79b9ce949206ab65c022884646"
+      },
+      "local_fresh_restore": "PASS_PREVIOUSLY_RECEIPTED_NOT_REMOTE",
+      "minimum_free_bytes": 5368709120,
+      "additional_output_reserve_bytes": 67108864,
+      "release_requirements": [
+        "SAME_AUTHORIZED_STANDARD_LIBRARY_CONNECTION_RESTORED",
+        "EXACT_PRIVATE_PACKAGES_AND_SEPARATE_MANIFESTS_SAVED",
+        "ACTUAL_REMOTE_MATERIALIZATION_AND_FRESH_RESTORE_PASS",
+        "IMMEDIATE_ORIGINAL_EXECUTOR_LOCK_PIN_INPUT_RUNTIME_DISK_RECHECK",
+        "NEW_IMMUTABLE_ROOT_EXACT_C0_RELEASE_STRICT_4_CONFIGURATIONS_0_NEW_CONTROLS"
+      ],
+      "after_execution_before_counting": [
+        "INDEPENDENT_ACCOUNT_METRIC_CAUSALITY_RESTORE_REVIEW",
+        "RESULT_PRIVATE_LIBRARY_BACKUP_AND_ACTUAL_RECOVERY",
+        "ROOT_ONLY_ACCEPTANCE"
+      ],
+      "required_final_review_addendum": {
+        "archive": {
+          "name": "M2903-prehistory-review-addendum-20261003-v1.zip",
+          "bytes": 1190654,
+          "sha256": "31f3cb6e558d9b6acdaf1daf4130caccef580f18df2ccf5edb9b04d68bec3797"
+        },
+        "manifest": {
+          "name": "MEMBERS.json",
+          "bytes": 34679,
+          "sha256": "350fd3a808b4fbf55fad3dd983cdbf66e3ed966c15428dfb303e85f8f9e6e14a"
+        },
+        "remote_Library_saved": false
+      }
+    },
+    {
+      "id": "M3710",
+      "owner": "root/m0286",
+      "branch": "codex/catalog-sma20-m3710-20261003",
+      "frozen_executor_head": "88f5c31b66592e8917d14f5afe140e20c137bc11",
+      "history_release": false,
+      "historical_features_generated": false,
+      "historical_strategy_runs": 0,
+      "new_controls": 0,
+      "planned_strategy_configurations": 4,
+      "planned_new_controls": 0,
+      "C0": {
+        "path": "M3710/specs/C0-v1.json",
+        "bytes": 6255,
+        "sha256": "1d30c90f0d1ba1b18b1800d3c100bdb9fbafcbc568f0d14a02961be75f0e3da9"
+      },
+      "independent_code_review": {
+        "path": "M3710/reviews/exact-C0-independent-20261003.safe.json",
+        "bytes": 4907,
+        "sha256": "4ac745ba19c17be659805053cb9559b120ac5f35996f3e8c3260dd808116c4df",
+        "status": "PASS_EXACT_C0_SYNTHETIC_ONLY"
+      },
+      "local_private_archive": {
+        "name": "M3710-prehistory-private-recovery-v1.zip",
+        "bytes": 2007827,
+        "sha256": "a4af2db8aaa8d47f9051930e5767f63c0d8aa2bd6392ca9ba4cc4a8067dc65b3",
+        "remote_Library_saved": false
+      },
+      "independent_manifest": {
+        "name": "PRIVATE-CONTENTS.json",
+        "bytes": 139774,
+        "sha256": "650d04dbf67227b6a91479c1af916539391f4421b1283b0a21b0d00d2a4e013a"
+      },
+      "local_fresh_restore": "PASS_PREVIOUSLY_RECEIPTED_NOT_REMOTE",
+      "minimum_free_bytes": 5368709120,
+      "additional_output_reserve_bytes": 268435456,
+      "release_requirements": [
+        "SAME_AUTHORIZED_STANDARD_LIBRARY_CONNECTION_RESTORED",
+        "EXACT_PRIVATE_PACKAGES_AND_SEPARATE_MANIFESTS_SAVED",
+        "ACTUAL_REMOTE_MATERIALIZATION_AND_FRESH_RESTORE_PASS",
+        "IMMEDIATE_ORIGINAL_EXECUTOR_LOCK_PIN_INPUT_RUNTIME_DISK_RECHECK",
+        "NEW_IMMUTABLE_ROOT_EXACT_C0_RELEASE_STRICT_4_CONFIGURATIONS_0_NEW_CONTROLS"
+      ],
+      "after_execution_before_counting": [
+        "INDEPENDENT_ACCOUNT_METRIC_CAUSALITY_RESTORE_REVIEW",
+        "RESULT_PRIVATE_LIBRARY_BACKUP_AND_ACTUAL_RECOVERY",
+        "ROOT_ONLY_ACCEPTANCE"
+      ]
+    }
+  ],
+  "M0974": {
+    "owner": "parent single dot executor",
+    "status": "PRE_C0_UNSEALED_BLOCKED_ORIGINAL_CAPTURE",
+    "history_release": false,
+    "C0_sealed": false,
+    "historical_runs": 0,
+    "new_controls": 0,
+    "original_capture_still_available_and_rehashed": {
+      "bytes": 704480,
+      "sha256": "eb998fac67d55d55b549596b29c91915927327d32c36dd8a088c156a9cbaa74f"
+    },
+    "original_capture_remotely_saved_by_root": false,
+    "parent_partial_archive": {
+      "bytes": 2623875,
+      "sha256": "3002923e2049c00b71d18a507c57abbd8d4eb811fc50ed63c8515670f7550749"
+    },
+    "parent_partial_restore_receipt": {
+      "reported_original_bytes": 3195,
+      "reported_original_sha256": "ba2765ed3d3accf546185fcd4debbac62c146c7567e3885d6af9ecb79b2d3b0e",
+      "root_read": "ALL_70_LINES_VIA_CANONICAL_LIBRARY_READ_NOT_LOCAL_MATERIALIZATION",
+      "root_full_archive_materialized": false,
+      "parent_reported_entries": 586,
+      "parent_reported_review_pins": 12,
+      "parent_reported_synthetic_gate_groups": 26,
+      "covers_original_HTML": false
+    }
+  },
+  "Library_blocker": {
+    "status": "HTTP_401_BEFORE_ANY_UPLOAD",
+    "first_failure": "hosted apps tools/list request failed with HTTP status 401",
+    "new_saved_IDs": 0,
+    "failure_cause": "UNKNOWN",
+    "required_platform_step": "Restore the current executors authorized standard Library upload helper connection to hosted apps tools/list, followed by normal prepare/transfer/finalize.",
+    "retry_attempted_this_addendum": false,
+    "alternate_identity_or_proxy_upload_used": false,
+    "credentials_read": false
+  },
+  "counts": {
+    "accepted_research_ids": 43,
+    "strategy_configurations": 175,
+    "original_controls": 22,
+    "registered_blocked_ids": 7,
+    "strict_reproductions": 0,
+    "new_accepted_ids": 0,
+    "new_strategy_configurations": 0,
+    "new_controls": 0,
+    "new_historical_runs": 0,
+    "batch020_pending_ids_are_not_added_to_registered_blocked_ids": true
+  },
+  "no_private_Library_identifiers_published": true,
+  "no_quant_runner_actions": true
+}

@@ -373,3 +373,6 @@
 - [批020协调检查点003](public-strategies/progress-20261003-batch020-checkpoint003.json)：43 ID／175策略配置／22原始控制；两条新C0与父端M0974准备单列，不计作历史完成。
 
 - [批020交付增补004](public-strategies/progress-20261003-batch020-delivery004.json)：43 ID／175配置／22原始对照不变；Lab PR42与Graph PR29精确main CI通过，26条离线展示，Library上传401仍未解决。
+
+- [批020交付增补005](public-strategies/progress-20261003-batch020-delivery005.json)：Graph PR30已交付27条离线展示，351成员本地恢复通过；计数不变、Library上传仍阻塞。[剩余历史门禁](public-strategies/catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md)保持关闭。
+- [批021 M1510来源准备](public-strategies/catalog-source-batch021-preflight-20261003/README.md)：固定源码补出盈利退出门和限价设置，框架语义未锁；父端独占准备，历史运行0。
