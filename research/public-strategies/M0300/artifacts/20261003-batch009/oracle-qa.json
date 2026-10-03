@@ -1,0 +1,58 @@
+{
+  "id": "M0300",
+  "status": "PASS",
+  "method": "Independent Decimal event decisions, cash/quantity/equity identities and stdlib metric recomputation; original-source signal equality separately verified",
+  "absolute_tolerance": 0,
+  "relative_tolerance": 1e-09,
+  "expected_zero": "exact; Decimal comparison without float underflow",
+  "event_fields_checked": [
+    "bar_index",
+    "side",
+    "reason",
+    "reference_price",
+    "fill_price",
+    "quantity",
+    "fee",
+    "cash_after",
+    "quantity_after",
+    "signal_bar_index when signal-driven"
+  ],
+  "event_fields_not_independently_checked": [
+    "phase",
+    "effective_execution_time",
+    "notional",
+    "signal_available_at"
+  ],
+  "cases": {
+    "base": {
+      "event_rows": 542,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "fee0": {
+      "event_rows": 542,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "fee20": {
+      "event_rows": 542,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    },
+    "delay2": {
+      "event_rows": 542,
+      "nav_rows": 105408,
+      "daily_rows": 366,
+      "cash_quantity_equity_and_decisions": "PASS",
+      "metrics": "PASS"
+    }
+  },
+  "protocol_sha256": "85b98742cd11aaac077218c7fe4ed0590c1d148395adb45bbd3dc1125c0a10dd",
+  "input_sha256": "91e5bb0ba80ba2b70c5d6a5924c590459b0ffbe3e5955ba177abc981fb2a0af2"
+}

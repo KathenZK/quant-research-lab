@@ -1,0 +1,23 @@
+{
+  "id": "M0302",
+  "status": "PASS",
+  "rows": 114336,
+  "native_class_actual_parameter_load": true,
+  "independent_Boolean_formulas_equal": true,
+  "advanced_TA_indicator_independence": "Pinned TA-Lib/native indicator implementations; not independently reimplemented",
+  "source_sha256": "2357996e6594458e8db45b5f757918462afa3c998de9d06e2af0c009ddc4b80d",
+  "loaded_parameters": {},
+  "original_orders": {
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "engine_fills_reproduced": false
+}

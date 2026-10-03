@@ -1,0 +1,164 @@
+{
+  "scope": "source rule map and synthetic preflight only; NOT backtest completion",
+  "historical_runs": 0,
+  "strict_reproductions": 0,
+  "model_effort": "UNKNOWN",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "reviewed_engine_commit": "1f394eaebc2f46a83d26971388628707802f8602",
+  "engine_runtime": "research pin only; author original runtime unknown",
+  "source_license": {
+    "label": "GPLv3 repository license text",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "parameter_precedence": {
+    "special_flags": "external runtime config > sidecar special values > class > engine/resolver defaults",
+    "parameter_objects": "sidecar params > buy_params/sell_params with load=True > constructor defaults"
+  },
+  "account_semantics": {
+    "collision": "entry suppressed when same-side exit also1; signal exit requires not entry",
+    "exit_order_priority": "signal exit, stop/liquidation, ROI, trailing stop; actual fills require pinned backtester/model",
+    "profit_only": "applies to signal exits only; requires current_profit>exit_profit_offset; does not block ROI/stop",
+    "ROI": "integer elapsed minutes, largest elapsed key, strict profit>threshold in interface; backtester may use favorable high for long",
+    "stop": "initialized from trade.open_rate and stoploss; long low<=recorded_stop triggers in interface, actual fill semantics not proven by signal test",
+    "order_caveat": "limit must not silently become guaranteed next-open market fill"
+  },
+  "execution_gate": [
+    "exclusive root claim/spec/exposure",
+    "pin config/sidecar presence and final effective attrs",
+    "fixed native5m input/hash/asset(s)",
+    "cost/cash/limit fill+timeout/ROI/stop same-bar path/warmup",
+    "fidelity HYPOTHESIS unless original runtime evidence exists"
+  ],
+  "id": "M0306",
+  "name": "Strategy004",
+  "timeframe": "5m",
+  "source": {
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy004.py",
+    "sha256": "1b4c001e80b077aaf3ec227577c78d3283be549c7d25ce9279ea03f1db5de64a",
+    "bytes": 5472
+  },
+  "explicit_class_attributes": {
+    "INTERFACE_VERSION": 3,
+    "minimal_roi": {
+      "60": 0.01,
+      "30": 0.03,
+      "20": 0.04,
+      "0": 0.05
+    },
+    "stoploss": -0.1,
+    "timeframe": "5m",
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "process_only_new_candles": true,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "ignore_roi_if_entry_signal": false,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    }
+  },
+  "parameter_constructors": {},
+  "effective_flags_without_external_overrides": {
+    "trailing_stop": false,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.02,
+    "trailing_only_offset_is_reached": false,
+    "can_short": false,
+    "use_custom_stoploss": false,
+    "use_custom_roi": false,
+    "process_only_new_candles": true,
+    "startup_candle_count": 0,
+    "use_exit_signal": true,
+    "exit_profit_only": true,
+    "exit_profit_offset": 0.0,
+    "ignore_roi_if_entry_signal": false,
+    "position_adjustment_enable": false,
+    "max_entry_position_adjustment": -1,
+    "order_types": {
+      "entry": "limit",
+      "exit": "limit",
+      "stoploss": "market",
+      "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+      "entry": "GTC",
+      "exit": "GTC"
+    }
+  },
+  "indicator_calls": [
+    {
+      "call": "ta.ADX(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.ADX(dataframe, 35)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.CCI(dataframe)",
+      "library_defaults": {
+        "timeperiod": 14
+      }
+    },
+    {
+      "call": "ta.STOCHF(dataframe, 5)",
+      "library_defaults": {
+        "fastk_period": 5,
+        "fastd_period": 3,
+        "fastd_matype": 0
+      }
+    },
+    {
+      "call": "ta.STOCHF(dataframe, 50)",
+      "library_defaults": {
+        "fastk_period": 5,
+        "fastd_period": 3,
+        "fastd_matype": 0
+      }
+    },
+    {
+      "call": "ta.EMA(dataframe, timeperiod=5)",
+      "library_defaults": {
+        "timeperiod": 30
+      }
+    }
+  ],
+  "entry_rule": "(ADX14>50 OR ADX35>26) AND CCI14<-100 AND prior fastk<20 AND priorfastd<20 AND prior STOCHF50 fastk<30 AND priorSTOCHF50 fastd<30 AND priorfastk<priorfastd AND currentfastk>currentfastd AND rolling12volume>.75 AND close>.000001",
+  "exit_signal_rule": "ADX35<25 AND(fastk>70 ORfastd>70) AND priorfastk<priorfastd AND close>EMA5",
+  "catalog_differences": [
+    "catalog death-cross exit not in source: source only priorfastk<priorfastd, no currentk<d condition",
+    "slowStoch is STOCHF fastk_period50, not genericslow stochastic",
+    "volume uses rolling12, not full-data mean; source comment warns oldlookahead",
+    "source closefloor omitted; ROI/profit-only/orderflags omitted"
+  ],
+  "same_account_group": "roi5_4_3_1_stop10_profitonlytrue_limitentryexit_marketstop",
+  "next_batch_priority": 3,
+  "same_name_repo_sidecar_present": false,
+  "validation": {
+    "status": "PASS_METHOD_CAUSALITY",
+    "rows": 3000,
+    "raw_entry_count": 1,
+    "raw_exit_count": 339,
+    "collisions": 0,
+    "signal_formula": "independent Boolean formulas on native indicator columns PASS",
+    "indicator_independence": "advanced TA-Lib indicators not independently reimplemented in this batch; native pinned library outputs tested for prefix/future stability",
+    "prefix_checks": 3,
+    "future_checks": 3,
+    "parameter_constructor_defaults": {},
+    "effective_class_params": {},
+    "timing": {
+      "wall_s": 0.039497275996836834,
+      "cpu_s": 0.039491855999999936,
+      "max_rss_kib": 81028
+    }
+  }
+}

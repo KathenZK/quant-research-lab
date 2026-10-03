@@ -1,0 +1,11 @@
+{
+  "stage": "new-kernel-profitonly-synthetic",
+  "start_utc": "2026-10-03T12:56:45.601382+00:00",
+  "end_utc": "2026-10-03T12:56:46.186994+00:00",
+  "wall_seconds": 0.5856341369981237,
+  "cpu_user_seconds": 0.542345,
+  "cpu_system_seconds": 0.041401,
+  "peak_child_rss_kib": 138348,
+  "exit_code": 0,
+  "threads": 1
+}

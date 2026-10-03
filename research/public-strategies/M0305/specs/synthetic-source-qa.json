@@ -1,0 +1,14 @@
+{
+  "id": "M0305",
+  "status": "PASS",
+  "rows": 3000,
+  "actual_original_class_imported": true,
+  "actual_hyper_params_loaded": true,
+  "independent_Boolean_rules_identical": true,
+  "prefix_and_future_checks": 3,
+  "loaded_parameters": {},
+  "historical_runs": 0,
+  "wall_seconds": 0.0655566989989893,
+  "cpu_seconds": 0.06548507599999986,
+  "peak_process_rss_kib": 308064
+}

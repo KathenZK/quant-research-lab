@@ -1,0 +1,81 @@
+{
+  "M0302": {
+    "id": "M0302",
+    "status": "PASS",
+    "rows": 3000,
+    "actual_original_class_imported": true,
+    "actual_hyper_params_loaded": true,
+    "independent_Boolean_rules_identical": true,
+    "prefix_and_future_checks": 3,
+    "loaded_parameters": {},
+    "historical_runs": 0,
+    "wall_seconds": 0.4255207989990595,
+    "cpu_seconds": 0.42514530100000014,
+    "peak_process_rss_kib": 307036
+  },
+  "M0305": {
+    "id": "M0305",
+    "status": "PASS",
+    "rows": 3000,
+    "actual_original_class_imported": true,
+    "actual_hyper_params_loaded": true,
+    "independent_Boolean_rules_identical": true,
+    "prefix_and_future_checks": 3,
+    "loaded_parameters": {},
+    "historical_runs": 0,
+    "wall_seconds": 0.0655566989989893,
+    "cpu_seconds": 0.06548507599999986,
+    "peak_process_rss_kib": 308064
+  },
+  "M0306": {
+    "id": "M0306",
+    "status": "PASS",
+    "rows": 3000,
+    "actual_original_class_imported": true,
+    "actual_hyper_params_loaded": true,
+    "independent_Boolean_rules_identical": true,
+    "prefix_and_future_checks": 3,
+    "loaded_parameters": {},
+    "historical_runs": 0,
+    "wall_seconds": 0.06519868200120982,
+    "cpu_seconds": 0.06520112300000003,
+    "peak_process_rss_kib": 309088
+  },
+  "M0307": {
+    "id": "M0307",
+    "status": "PASS",
+    "rows": 3000,
+    "actual_original_class_imported": true,
+    "actual_hyper_params_loaded": true,
+    "independent_Boolean_rules_identical": true,
+    "prefix_and_future_checks": 3,
+    "loaded_parameters": {
+      "buy_volumeAVG": 150,
+      "buy_rsi": 26,
+      "buy_fastd": 1,
+      "buy_fishRsiNorma": 5,
+      "sell_rsi": 74,
+      "sell_minusDI": 4,
+      "sell_fishRsiNorma": 30,
+      "sell_trigger": "rsi-macd-minusdi"
+    },
+    "historical_runs": 0,
+    "wall_seconds": 0.05304763299864135,
+    "cpu_seconds": 0.05304963900000015,
+    "peak_process_rss_kib": 309984
+  },
+  "M0300": {
+    "id": "M0300",
+    "status": "PASS",
+    "rows": 3000,
+    "actual_original_class_imported": true,
+    "actual_hyper_params_loaded": true,
+    "independent_Boolean_rules_identical": true,
+    "prefix_and_future_checks": 3,
+    "loaded_parameters": {},
+    "historical_runs": 0,
+    "wall_seconds": 0.1043639780000376,
+    "cpu_seconds": 0.1042221510000001,
+    "peak_process_rss_kib": 311392
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "M0307",
+  "status": "PASS",
+  "rows": 3000,
+  "actual_original_class_imported": true,
+  "actual_hyper_params_loaded": true,
+  "independent_Boolean_rules_identical": true,
+  "prefix_and_future_checks": 3,
+  "loaded_parameters": {
+    "buy_volumeAVG": 150,
+    "buy_rsi": 26,
+    "buy_fastd": 1,
+    "buy_fishRsiNorma": 5,
+    "sell_rsi": 74,
+    "sell_minusDI": 4,
+    "sell_fishRsiNorma": 30,
+    "sell_trigger": "rsi-macd-minusdi"
+  },
+  "historical_runs": 0,
+  "wall_seconds": 0.05304763299864135,
+  "cpu_seconds": 0.05304963900000015,
+  "peak_process_rss_kib": 309984
+}

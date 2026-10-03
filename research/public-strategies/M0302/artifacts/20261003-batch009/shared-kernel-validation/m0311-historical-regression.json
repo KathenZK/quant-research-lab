@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "existing_id": "M0311",
+  "new_strategy_trials": 0,
+  "new_market_requests": 0,
+  "candidate_sha256": "daf10c6189d7523f99d851ae289ff70f0b2393342b3c6fa335c96cfb09550581",
+  "cases": {
+    "base": {
+      "native_nav_rows": 105408,
+      "event_rows": 11399,
+      "metrics_exact": true,
+      "serialized_arrays_byte_identical": true
+    },
+    "fee0": {
+      "native_nav_rows": 105408,
+      "event_rows": 11441,
+      "metrics_exact": true,
+      "serialized_arrays_byte_identical": true
+    },
+    "fee20": {
+      "native_nav_rows": 105408,
+      "event_rows": 11361,
+      "metrics_exact": true,
+      "serialized_arrays_byte_identical": true
+    },
+    "delay2": {
+      "native_nav_rows": 105408,
+      "event_rows": 11469,
+      "metrics_exact": true,
+      "serialized_arrays_byte_identical": true
+    },
+    "buyhold": {
+      "native_nav_rows": 105408,
+      "event_rows": 1,
+      "metrics_exact": true,
+      "serialized_arrays_byte_identical": true
+    }
+  }
+}

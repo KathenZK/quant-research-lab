@@ -1,0 +1,57 @@
+{
+  "run": {
+    "stage": "M0306-run",
+    "start_utc": "2026-10-03T13:13:00.166182+00:00",
+    "end_utc": "2026-10-03T13:13:15.009785+00:00",
+    "wall_seconds": 14.84361093500047,
+    "cpu_user_seconds": 14.438258,
+    "cpu_system_seconds": 0.401381,
+    "peak_child_rss_kib": 635064,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "source": {
+    "stage": "M0306-source",
+    "start_utc": "2026-10-03T13:13:15.039321+00:00",
+    "end_utc": "2026-10-03T13:13:17.566964+00:00",
+    "wall_seconds": 2.5276506049995078,
+    "cpu_user_seconds": 2.338654,
+    "cpu_system_seconds": 0.183775,
+    "peak_child_rss_kib": 390276,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "oracle": {
+    "stage": "M0306-oracle",
+    "start_utc": "2026-10-03T13:13:17.596212+00:00",
+    "end_utc": "2026-10-03T13:13:24.980748+00:00",
+    "wall_seconds": 7.384548682999593,
+    "cpu_user_seconds": 7.029666,
+    "cpu_system_seconds": 0.35008999999999996,
+    "peak_child_rss_kib": 779956,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "prefix": {
+    "stage": "M0306-prefix",
+    "start_utc": "2026-10-03T13:13:25.013977+00:00",
+    "end_utc": "2026-10-03T13:13:39.032267+00:00",
+    "wall_seconds": 14.018297978000192,
+    "cpu_user_seconds": 13.20463,
+    "cpu_system_seconds": 0.805125,
+    "peak_child_rss_kib": 629164,
+    "exit_code": 0,
+    "threads": 1
+  },
+  "restore": {
+    "stage": "M0306-restore",
+    "start_utc": "2026-10-03T13:19:37.892602+00:00",
+    "end_utc": "2026-10-03T13:19:52.372270+00:00",
+    "wall_seconds": 14.479677033999906,
+    "cpu_user_seconds": 14.051957,
+    "cpu_system_seconds": 0.420739,
+    "peak_child_rss_kib": 638880,
+    "exit_code": 0,
+    "threads": 1
+  }
+}
