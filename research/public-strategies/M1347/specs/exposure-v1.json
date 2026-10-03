@@ -1,0 +1,30 @@
+{
+  "id": "M1347-catalog-v1-prehistory-20261003",
+  "kind": "exposure",
+  "family": "M1347",
+  "registered_at": "2026-10-03T18:28:42.603201+00:00",
+  "window_start": "2023-01-01T00:00:00Z",
+  "window_end": "2025-01-01T00:00:00Z",
+  "evidence_class": "HYPOTHESIS_FROM_CATALOG_NOT_SOURCE_VERIFIED",
+  "trial_count": 4,
+  "trial_count_scope": "this frozen planned four-cost-case run only; actual runs0 atfreeze",
+  "cumulative_trial_count": null,
+  "trial_count_unknown_reason": "Prior shared-window strategy/parameter exposure is known, cumulative human/older searches incomplete.",
+  "selection_reason": "Root-fixed catalog calendar hypothesis; earlier author optimization-selected window explicitly retained; no result-based changes",
+  "out_of_sample": false,
+  "actual_strategy_runs_at_freeze": 0,
+  "new_controls": 0,
+  "artifacts": {
+    "scripts/check_causality.py": "cd7db6202ca1c1ab554b69efeb7135f78938d9437c314ddf942c08de77b005ba",
+    "scripts/check_synthetic.py": "df6099d47eb392e11c58842277d383b62912057515cae15acf9aa7ea1aa28f87",
+    "scripts/kernel_loader.py": "8c7d846753c54b14282676628a4a5a778793084f911c8576877408ae797ac66a",
+    "scripts/oracle.py": "f19079a4f7a710aa77c7045d698d26d6c264aecc03fc1493d1a74a9f454739a3",
+    "scripts/rebuild_input.py": "9057b3d800717797258a36aa351547095f95d0e8486559eac2013846c4c961ab",
+    "scripts/restore_run.py": "625e3c8a99d3418366c1c3ed3565c3fd31d756811bee2b75ab7d3d4e08eb0cc0",
+    "scripts/run_replay.py": "a6666f74ea2da6be69d6acbe2aae54a2903a588dd29dd92cc7ba36dba4b28f57",
+    "scripts/signals.py": "239d90c306353900fcd2028ae43df070efdc699c24429f95c34446176f6ea1eb",
+    "scripts/verify_replay.py": "f3afc6e2a84cd3ef5a867b3ef23439ce19cd2b4e5ac4128ebb4154b4799e35e3"
+  },
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "global_writer": "root only; this is family-local exposure binding"
+}

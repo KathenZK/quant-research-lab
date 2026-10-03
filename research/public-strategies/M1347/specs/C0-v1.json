@@ -1,0 +1,177 @@
+{
+  "schema": "M1347-catalog-code-freeze/v1",
+  "id": "M1347",
+  "frozen_at_utc": "2026-10-03T18:28:42.605476+00:00",
+  "base_commit": "65d18701b642e0aa1747154a7ef536984652e9d8",
+  "status": "FROZEN_CODE_SYNTHETIC_PASS_AWAITING_INDEPENDENT_ACTUAL_CODE_REVIEW_AND_ROOT_RELEASE",
+  "historical_strategy_runs": 0,
+  "new_controls": 0,
+  "strict_reproductions": 0,
+  "source_rule_sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4",
+  "contract_sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553",
+  "contract_independent_review_sha256": "059b56f52cec8ab2f29810203668b82e29280284b5548bfae524b9a66d47e78d",
+  "kernel": {
+    "remote_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+    "version": "v1",
+    "root": "research/_shared-kernels/catalog-daily-cash",
+    "files": {
+      "README.md": {
+        "bytes": 617,
+        "sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+      },
+      "v1/engine.py": {
+        "bytes": 9243,
+        "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+      },
+      "v1/verify_account.py": {
+        "bytes": 8744,
+        "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+      },
+      "v1/manifest.json": {
+        "bytes": 1038,
+        "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+      }
+    },
+    "execution_policy": "None; no timed-exit extension used"
+  },
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "files": [
+    {
+      "path": "M1347-core-ledger.md",
+      "bytes": 1380,
+      "sha256": "5657b7f657f4fc94940936b25861ec09e8b420613665e1d0a01b35c34d267c26"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1056,
+      "sha256": "53e3e1e6146a3f8ab7d419a291371b7841d003d38c10c9bb62142d7cbdd07a9c"
+    },
+    {
+      "path": "decision-log.md",
+      "bytes": 1579,
+      "sha256": "0b9a27c0a96fa09ab71ae50b05f1fc24fa0730f1fa39690bb3fbcd79ef4b935a"
+    },
+    {
+      "path": "diagnostics/prehistory-v1/contract-review.safe.json",
+      "bytes": 7046,
+      "sha256": "059b56f52cec8ab2f29810203668b82e29280284b5548bfae524b9a66d47e78d"
+    },
+    {
+      "path": "diagnostics/prehistory-v1/input-review.safe.json",
+      "bytes": 452,
+      "sha256": "f681059d6442fa6067765a4bf0f81be1c6181b9f162c8b7a40ec805843e18909"
+    },
+    {
+      "path": "diagnostics/prehistory-v1/synthetic-repeat.safe.json",
+      "bytes": 528,
+      "sha256": "2a74356039124d5b800e29aaf1071f3c18abf978c863e9961aae4a7fcee07f56"
+    },
+    {
+      "path": "diagnostics/prehistory-v1/synthetic-review.safe.json",
+      "bytes": 4405,
+      "sha256": "679a93d93404de705673b2d8cd2b208863239e4bcfd322f70909a4a5859e2c4d"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 2870,
+      "sha256": "f1b441ea697af7291bf162df237a1f535ad6d094a2ba7e94b99cb920f6a45fd3"
+    },
+    {
+      "path": "scripts/check_causality.py",
+      "bytes": 1671,
+      "sha256": "cd7db6202ca1c1ab554b69efeb7135f78938d9437c314ddf942c08de77b005ba"
+    },
+    {
+      "path": "scripts/check_synthetic.py",
+      "bytes": 8809,
+      "sha256": "df6099d47eb392e11c58842277d383b62912057515cae15acf9aa7ea1aa28f87"
+    },
+    {
+      "path": "scripts/kernel_loader.py",
+      "bytes": 822,
+      "sha256": "8c7d846753c54b14282676628a4a5a778793084f911c8576877408ae797ac66a"
+    },
+    {
+      "path": "scripts/oracle.py",
+      "bytes": 1371,
+      "sha256": "f19079a4f7a710aa77c7045d698d26d6c264aecc03fc1493d1a74a9f454739a3"
+    },
+    {
+      "path": "scripts/rebuild_input.py",
+      "bytes": 2176,
+      "sha256": "9057b3d800717797258a36aa351547095f95d0e8486559eac2013846c4c961ab"
+    },
+    {
+      "path": "scripts/restore_run.py",
+      "bytes": 2954,
+      "sha256": "625e3c8a99d3418366c1c3ed3565c3fd31d756811bee2b75ab7d3d4e08eb0cc0"
+    },
+    {
+      "path": "scripts/run_replay.py",
+      "bytes": 3468,
+      "sha256": "a6666f74ea2da6be69d6acbe2aae54a2903a588dd29dd92cc7ba36dba4b28f57"
+    },
+    {
+      "path": "scripts/signals.py",
+      "bytes": 841,
+      "sha256": "239d90c306353900fcd2028ae43df070efdc699c24429f95c34446176f6ea1eb"
+    },
+    {
+      "path": "scripts/verify_replay.py",
+      "bytes": 1047,
+      "sha256": "f3afc6e2a84cd3ef5a867b3ef23439ce19cd2b4e5ac4128ebb4154b4799e35e3"
+    },
+    {
+      "path": "source/catalog-public-fields.json",
+      "bytes": 1875,
+      "sha256": "af1f54439cdde98b5ca32752b885e7bc0d1660c357bb1543a73cf58f080d6819"
+    },
+    {
+      "path": "source/root-frozen-rules.json",
+      "bytes": 14981,
+      "sha256": "c84bc598eb11cc3649cf58caf069d69715574070ea192754bd9f97124c5a23b4"
+    },
+    {
+      "path": "source/root-output-contract.json",
+      "bytes": 4664,
+      "sha256": "b4a38502e110fa40f178bd353a60a53d9611c00e624b2db74db2c0d221b95553"
+    },
+    {
+      "path": "specs/control-reference.json",
+      "bytes": 4190,
+      "sha256": "ea4fb4687cffe69b7ee877312e19ec49b263bf5d21705d0dcfa2e791c24be00a"
+    },
+    {
+      "path": "specs/control-remote-acceptance.safe.json",
+      "bytes": 17869,
+      "sha256": "448e6996f1562999bb47e455fdac460f77fda0d688391a160139510f61c22131"
+    },
+    {
+      "path": "specs/environment-lock.json",
+      "bytes": 461,
+      "sha256": "345938d1f9c21ebdac7471429980e3e3609627319f0427849bd1ec6e834d8de8"
+    },
+    {
+      "path": "specs/exposure-v1.json",
+      "bytes": 1886,
+      "sha256": "9808b05c83112dd2f55b68ea4015bfadd28fdfc07d13e9723cc9ed1abe9a9c36"
+    },
+    {
+      "path": "specs/kernel-pin.json",
+      "bytes": 759,
+      "sha256": "cec2e11f67d006acc3a3a3766feb5a92bcdf6d4f7d0dff09e669169dd3cb3728"
+    },
+    {
+      "path": "specs/protocol-v1.json",
+      "bytes": 24615,
+      "sha256": "b176b3412aca14a1f9c860937654f97b4d42c9448abb712583005f14996ab674"
+    },
+    {
+      "path": "specs/scale-remote-acceptance.safe.json",
+      "bytes": 11323,
+      "sha256": "03d1351041be15781f582ec44ba0d4eeb773e61e497c52778955cf88316b6881"
+    }
+  ],
+  "public_private_boundary": "Full original catalog row/internalcuration and raw market data remain private; only reviewed public fields and hashbindings here.",
+  "restore": "Preserve all payloads and C0; copy pinned4kernel objects; reconstruct or retain exactinput; replay only after independentcode/rootrelease. FullprivateLibraryarchive status separate."
+}

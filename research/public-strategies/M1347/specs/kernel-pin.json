@@ -1,0 +1,24 @@
+{
+  "remote_commit": "fad9d65c74b4346c0ed992a742b91d70514fc6d1",
+  "version": "v1",
+  "root": "research/_shared-kernels/catalog-daily-cash",
+  "files": {
+    "README.md": {
+      "bytes": 617,
+      "sha256": "f2d4016974b9ee77681f6c59b66c19096fc3a0c4b6484a8d2e1a11177a139366"
+    },
+    "v1/engine.py": {
+      "bytes": 9243,
+      "sha256": "5b92fea2db2a5da7c4ecd90356adaf8cb533dcedd7378992d2b8e8e324d43782"
+    },
+    "v1/verify_account.py": {
+      "bytes": 8744,
+      "sha256": "338aa731bed5c6e2b46897ab2de190082fa29d96d252a686999610efce2d5dbe"
+    },
+    "v1/manifest.json": {
+      "bytes": 1038,
+      "sha256": "9109be9de3b72ab09c0075fe0603a93c216cbbba238265ebb9194ce0bbe2a2b4"
+    }
+  },
+  "execution_policy": "None; no timed-exit extension used"
+}

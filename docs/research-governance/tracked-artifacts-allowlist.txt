@@ -1422,3 +1422,29 @@ research/public-strategies/M1349/artifacts/20261003-public-display-prep/public-d
 research/public-strategies/M1349/artifacts/20261003-public-display-review/DELIVERY-MANIFEST.json  # dot009 additive display publication
 research/public-strategies/M1349/artifacts/20261003-public-display-review/EXACT-12-FILES.json  # dot009 additive display publication
 research/public-strategies/M1349/artifacts/20261003-public-display-review/review.safe.json  # dot009 additive display publication
+
+# M1347 frozen research outputs and additive projection v2; exact reviewed paths
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/account-validation.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/base-monthly.csv  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/base-nav-sampled.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/causality-validation.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/control-validation.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/delay2-monthly.csv  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/derivation-receipt.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/execution.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/failure-scenarios.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/fee0-monthly.csv  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/fee20-monthly.csv  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/graph-detail.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/graph-record.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/independent-ledger-review.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/local-recovery.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/private-archive-v2.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/private-archive.safe.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/private-output-manifest.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-catalog-v1/summary.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/base-nav-sampled.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/graph-detail.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/graph-record.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/public-display-manifest.json  # M1347 diagnostic publication
+research/public-strategies/M1347/artifacts/20261003-graph-projection-v2/verification.safe.json  # M1347 diagnostic publication

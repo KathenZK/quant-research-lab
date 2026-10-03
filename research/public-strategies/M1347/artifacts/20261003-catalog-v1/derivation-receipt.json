@@ -1,0 +1,15 @@
+{
+  "status": "DERIVED_ONLY_NO_NEW_RUNS",
+  "source_commit": "5ccadf192dfc6381721058d28887cd9bc435a20c",
+  "script_sha256": "20981272e040d674c114289b8db79803ab59f74de09a3fe4caa40afa23233fad",
+  "original_result_manifest_sha256": "efae9bdac67125d12fde252f1e8fd1a506e455c6fbe215ea397e989cd3133d95",
+  "source_base_nav_sha256": "e0af81a7efa4ba82dd75d08e20579301fccd5245d5c2b6cd40c00236b17542fb",
+  "curve_points": 25,
+  "metric_observations": 731,
+  "initial_capital_division_count": 1,
+  "private_fullNAV_in_public": false,
+  "private_result_manifest_kind": "HASH_ONLY_FULL_RESULT_INVENTORY; not a Graph public display manifest",
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "source_original_graph_flags_changed": false
+}

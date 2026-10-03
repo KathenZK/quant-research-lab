@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-09.zip.CHECKSUM",
+    "bytes": 88,
+    "sha256": "bb00e1e35f8030ffbb7c07df13bdea9dafa95b7e5d873ef617b207d8a4901015",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:12.002474+00:00"
+  },
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-09.zip",
+    "bytes": 2213,
+    "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:12.277384+00:00"
+  },
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-10.zip.CHECKSUM",
+    "bytes": 88,
+    "sha256": "9593c36f1c40cfa130f8ef6f72acc414da61a7028df0aa5113e1bc97042903c2",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:12.545596+00:00"
+  },
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-10.zip",
+    "bytes": 2219,
+    "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:12.784163+00:00"
+  },
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-11.zip.CHECKSUM",
+    "bytes": 88,
+    "sha256": "f14ecab2b0c8fcec6a329b007d5b499bd8ffe7663c5677fa129c498251d6db37",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:13.032975+00:00"
+  },
+  {
+    "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-11.zip",
+    "bytes": 2191,
+    "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+    "status": 200,
+    "captured_utc": "2026-10-03T19:07:13.530135+00:00"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "data": {
+    "symbol": "BTCUSDT",
+    "venue": "Binance spot",
+    "timeframe": "UTC1d",
+    "sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+    "rows": 762,
+    "eval_rows": 731,
+    "window": "input2022-12-01..2024-12-31; eval2023-01-01..2024-12-31",
+    "PIT": "UNKNOWN",
+    "OOS": false
+  },
+  "scope": "Contract recommendations only; not frozen/claimed; zero historical features,returns,controls or newmarket requests",
+  "claims": "No M1266/M1510 matches in available Lab worktree claims; process scan no executor for either ID. Root is sole assigner.",
+  "cost_recommendation": "Explicit research cases fee8/0/20bps each side +slip2bps and lag1/lag2; these are not author defaults. Root may instead freeze source costs where actually provided.",
+  "id": "M1266",
+  "status": "ADAPTED_CANDIDATE_READY_FOR_ROOT_CONTRACT_SELECTION; SOURCE_FAITHFUL_DATA_BLOCKED",
+  "original_record_sha256": "9bfa83216dc947fd65359f4359ea15f122038fce85d5a05485209216c9452a76",
+  "source_url": "https://www.quantconnect.com/forum/discussion/11340/btc-3-emas-strategy/",
+  "source_evidence": [
+    {
+      "file": "M1266-public-attachment-0.py",
+      "bytes": 2964,
+      "sha256": "288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913",
+      "contains_BTCUSD": true,
+      "contains_Bitfinex": true,
+      "source": "same ordinary HTTP200 public forum HTML files content"
+    },
+    {
+      "file": "M1266-public-attachment-1.py",
+      "bytes": 2826,
+      "sha256": "2b4242dfc3e450764e0eb5c49697b5e8a3d58a7e561785a234608b4834383b01",
+      "contains_BTCUSD": true,
+      "contains_Bitfinex": true,
+      "source": "same ordinary HTTP200 public forum HTML files content"
+    }
+  ],
+  "source_access": "Two complete Python main.py contents embedded in the same ordinary public HTTP200 HTML; no login, cloned project or protected endpoint used. HTML retained exact bytes, code decoded from public JSON content and separately hashed.",
+  "original_identity": {
+    "asset": "BTCUSD",
+    "brokerage": "Bitfinex Cash",
+    "timeframe": "Daily",
+    "start": "2020-01-01",
+    "end": "2021-05-01",
+    "cash": 100000,
+    "warmup": "SetWarmUp(timedelta(100)); EMA all readiness"
+  },
+  "versions": {
+    "recommended": "attachment0 SHA288aa381bfe794ddaf70d883f8249dd217809c46b610871ef7350529c05a5913: corrected all-ready guard, invested exits before flat entry, cashbook-target sizing.",
+    "other": "attachment1 SHA2b4242dfc3e450764e0eb5c49697b5e8a3d58a7e561785a234608b4834383b01: initial author version has misparenthesized readiness, downtrend early return before exits, high update whileflat and unparenthesized exit. Preserve as distinct version, not silently corrected."
+  },
+  "actual_rules": {
+    "entry": "Only flat: EMA20 > security.Price > EMA50 > EMA100. Descending20<50<100 returns for flat only in corrected version.",
+    "allocation": "target_quantity=.9*TotalPortfolioValue/price minus actual CashBook BTC. MarketOrder; no perbar rebalance while invested. This is90% nominal target, not fee-inclusive90%budget.",
+    "exit": "If invested: highestPrice=max(highestPrice,security.Price); exit if price<=EMA50 OR price<highestPrice*.95. Liquidate entire symbol. On order request reset highestPrice=0; original framework fill timing not proven.",
+    "high": "Initialize at signal/request price, then only update from security.Price during invested OnData; not daily high/low. Original code does not use intrabar stop order.",
+    "samebar": "Corrected if/else structure means exit branch does not enter on same OnData callback.",
+    "source_warning": "Author states selected backtest was cherry-picked and worse over longer time; carry warning."
+  },
+  "adaptations_required": [
+    "Explicit BTCUSD/Bitfinex→BTCUSDT/Binance and2020–21→2023–24; do not claim author-market/source-faithful reproduction.",
+    "Daily completed close substitutes security.Price; market order becomes raw nextopen proxy. 5%holding-high is close signal, never invented intrabar stop.",
+    "Recommend nominal90% cash/total-equity sizing at actual raw open: qty=.9*cash/fill; fee=.9*cash*rate additional; cash=.1*cash-fee; distinct from old card fee-inclusive suggestion. Preserve allocation0.9; Decimal50 math order freeze.",
+    "For nextopen execution recommend initialize holding-high at actual raw entry open, then max completed dailyclose including entrybar; this changes original request-price initialization and must be named. Alternative seed signalclose must be separately selected; do not conflate.",
+    "Exit intent latch until actual sale; cannot cancel because EMA recovers; repeated stop doesnotpostpone; reset high on actualsale. Delayed entry retained unless explicit new contrary close exit policy is frozen; do not fabricate state.",
+    "First100 complete dailyclose EMA100 ready global99; with31 prewarm, firstpossible decisionglobal99, fill100. Keep all731 evaldays including initialcash; no earlier download needed for cold-start hypothesis. If exact100-day pre-eval warmup is required root must freeze earlier acquisition, not silently fill."
+  ],
+  "kernel": "New immutable daily partial-allocation+position-high policy version/ID-local engine needed; existingcashv1/v2 hardcodedfullcash and noholding-high lifecycle. Do not edit frozen versions.",
+  "benchmark": "One new same90%nominal+additionalfee buyhold recommended; existing95/100control not allocation-matched. QA restore is not a new researchcontrol.",
+  "minimal_synthetic": [
+    "EMA20/50/100 SMAseeds/allready and exactchain equalities",
+    "close==EMA50 exit; close==0.95high nottrail; epsilonbelowtrail",
+    "position-only closehigh, initialization, actualfill gaps, no high leakage acrosstrades",
+    "downtrend whileheld still exits in corrected version; distinguish originalearlyreturn",
+    "90%nominal plusfees arithmetic and cashreserve; zero/slip/fee20; no repeatedrebalance",
+    "lag2 pendingexit cannotcancel/postpone; entryday/high/exitpriority/no sameopenreentry; finalpending remains",
+    "Independent Decimal50 fullstates/fills/months+metrics; prefix/future perturbation; restore bytehash"
+  ],
+  "license": "Forum attachment has no demonstrated redistribution license; keep full HTML/source private, publish sourceURL/hash and self-authored rule summary only unless rights established."
+}

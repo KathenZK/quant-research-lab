@@ -1,0 +1,64 @@
+{
+  "schema": "catalog-hypothesis-execution-output-contract/v1",
+  "coordinator": "root only",
+  "global_progress_writer": "root only",
+  "batch": "019",
+  "status": "ROOT_FROZEN_ASSIGNED_PRE_CODE_C0",
+  "created_at_utc": "2026-10-03T19:15:08.614394+00:00",
+  "implementation_base_commit": "420a0532a57b89b57045bf3e1ddb062e263edf44",
+  "source_scope": "Fixed2400 verified source subset within6973base; not full6973 readiness claim",
+  "strategy_ids": [
+    "M1266"
+  ],
+  "assignments": {
+    "M1266": "parent single dot executor; ASSIGNED_NOT_STARTED"
+  },
+  "output_branch": "dot/public-strategies-20261003-b010-m1266",
+  "fidelity": "ADAPTED_SOURCE_CORRECTED_VARIANT",
+  "execution_class": "HYPOTHESIS_EXECUTION_PROXY",
+  "strict_reproductions": 0,
+  "trusted": false,
+  "total_planned_strategy_configurations": 4,
+  "total_planned_new_controls": 1,
+  "historical_runs": 0,
+  "rules": {
+    "M1266": {
+      "path": "research/public-strategies/catalog-fixedqty-batch019-preflight-20261003/M1266-root-frozen-rules.json",
+      "bytes": 10061,
+      "sha256": "bc553ebdd3aa2a0bc8d55a3b878ce2354e52b200bd69728915cf6bdb8b1b9491"
+    }
+  },
+  "input": {
+    "manifest_path": "research/public-strategies/catalog-fixedqty-batch019-preflight-20261003/input-manifest.json",
+    "manifest_sha256": "c51b38f62c06820923a51d2df7b00564e109b77c4d752471f6106fa0b4f50283",
+    "canonical_sha256": "a21612759ddd7e849f4a5e5b3ac62f74b003c84bf9e0e77d45ab8670b59eb550",
+    "bytes": 139983,
+    "rows": 831,
+    "warmup": 100,
+    "evaluation": 731,
+    "raw_objects": 56,
+    "new_small_objects": 6,
+    "new_small_object_bytes": 6887
+  },
+  "gates_before_history": [
+    "Actual implementation C0/runtime/params/exposure frozen before any historicalfeature/return",
+    "Independent synthetic EMA/Decimal/account/high/pending/rejection/causality/restore QA and sourcecontract conformance PASS",
+    "Root explicit exactC0 historyrelease for4strategycases+1matchedcontrol; parent must not interpret thiscontract as executiongate",
+    "Source hash and fixed input offline56raw reconstruction must pass in parentexecutor; no reliance on rootlocalpaths",
+    "Immutable failed evidence retained; minimum5GiBdisk; no tuning/newvariants/oldv1v2mutation"
+  ],
+  "outputs": [
+    "Independent Chinese M1266.md withsourceversion/originalidentity/operationalrules/alladaptations/authorselectionwarning/dataquality/PIT/window/sourcehash/code/runtime/costs/benchmark/OOSlimitations/metrics/equity/trades/rejectedorders/failurecases/nextresearch",
+    "Private fullfeatures/decisions/pending/rejections/fills/NAV/monthly/closedtrips/manifests plusfullZIP+standalonemanifest; verifyindependentfreshrestore and saveprivateLibrary/readback whenavailable",
+    "Allowed Gitcode/ownrules/lightresults/rebuildrecipes/sourcehashes; no originalattachment/HTML/privatecatalognotes/rawmarket/fullprivateledger/LibraryIDs",
+    "Graphcompatible25publicnormalizedpoints/731metricobs/periods.full+sameperiodbenchmark/lag/numeric0and20costkeys; explicitunmatchedfee-control limitation; noentityrevisioninventing/Siteactivation",
+    "Exactpublicdeliveryallowlist andactualremoteGitrebuildexpectedhashcomparison; rootaloneaddsacceptedcounts"
+  ],
+  "data_authorization": "Useactualapproved56raw or boundednormalofficialVisionacquisition under unchangedprior approvedterms; noauth/newterms/payment; stopon403/451 andneverchangehost/proxy/identity. FAPI451 remainsunrelatedstoppedroute. No publicraw upload.",
+  "disk_reserve_bytes": 5368709120,
+  "ownership_check": {
+    "claims_files_checked": 10,
+    "ID_absent_from_currentfamily_roots": true,
+    "not_counted_as_started": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "public-catalog-claims/v1",
+  "assigned_at_utc": "2026-10-03T19:15:08.614394+00:00",
+  "coordinator": "root only",
+  "batch": "019",
+  "claims": [
+    {
+      "id": "M1266",
+      "owner": "parent single dot executor",
+      "stage": "ASSIGNED_NOT_STARTED",
+      "branch": "dot/public-strategies-20261003-b010-m1266",
+      "actual_historical_runs": 0,
+      "required_before_returns": "ActualcodeC0 independentQA androotrelease"
+    }
+  ],
+  "contract": {
+    "path": "research/public-strategies/catalog-fixedqty-batch019-output-contract-20261003.json",
+    "bytes": 3644,
+    "sha256": "f80970af5a90c335db55b507a8112ef2ec50c3c48d59a9d057f363120070260e"
+  },
+  "new_accepted_ids": 0,
+  "new_accepted_configurations": 0,
+  "new_controls_run": 0
+}
