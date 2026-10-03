@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "case": "base",
+      "cut": 47,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "cut": 48,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "cut": 49,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "cut": 150,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "cut": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "cut": 730,
+      "status": "PASS"
+    },
+    {
+      "case": "base",
+      "future_perturbation_after": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 47,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 48,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 49,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 150,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "cut": 730,
+      "status": "PASS"
+    },
+    {
+      "case": "fee0",
+      "future_perturbation_after": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 47,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 48,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 49,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 150,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "cut": 730,
+      "status": "PASS"
+    },
+    {
+      "case": "fee20",
+      "future_perturbation_after": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 47,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 48,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 49,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 150,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 500,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "cut": 730,
+      "status": "PASS"
+    },
+    {
+      "case": "lag2",
+      "future_perturbation_after": 500,
+      "status": "PASS"
+    }
+  ],
+  "new_parameter_trials": 0,
+  "purpose": "causal QA of already frozen configurations"
+}

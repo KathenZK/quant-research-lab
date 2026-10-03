@@ -1,0 +1,67 @@
+{
+  "status": "COMPLETE",
+  "completed_at_utc": "2026-10-03T15:56:30.098965+00:00",
+  "strategy_ids": 1,
+  "strategy_configurations": 4,
+  "new_controls": 0,
+  "strict_reproductions": 0,
+  "market_requests": 0,
+  "stage_records": [
+    {
+      "stage": "replay",
+      "start_utc": "2026-10-03T15:56:28.655850+00:00",
+      "end_utc": "2026-10-03T15:56:28.987510+00:00",
+      "wall_seconds": 0.3316784650014597,
+      "returncode": 0,
+      "resources": {
+        "wall_seconds": "0.2694348059958429",
+        "cpu_seconds": "0.269416974",
+        "user_seconds": "0.23116099999999998",
+        "system_seconds": "0.055476",
+        "max_rss_kib": "59264"
+      }
+    },
+    {
+      "stage": "oracle",
+      "start_utc": "2026-10-03T15:56:28.987926+00:00",
+      "end_utc": "2026-10-03T15:56:29.208776+00:00",
+      "wall_seconds": 0.22086383900023066,
+      "returncode": 0,
+      "resources": {
+        "wall_seconds": "0.19638049399509327",
+        "cpu_seconds": "0.196378622",
+        "user_seconds": "0.206223",
+        "system_seconds": "0.008084",
+        "max_rss_kib": "16256"
+      }
+    },
+    {
+      "stage": "causality",
+      "start_utc": "2026-10-03T15:56:29.209153+00:00",
+      "end_utc": "2026-10-03T15:56:29.743922+00:00",
+      "wall_seconds": 0.5347871420017327,
+      "returncode": 0,
+      "resources": {
+        "wall_seconds": "0.47591422100231284",
+        "cpu_seconds": "0.475892346",
+        "user_seconds": "0.43688299999999997",
+        "system_seconds": "0.055462",
+        "max_rss_kib": "62164"
+      }
+    },
+    {
+      "stage": "fresh_restore",
+      "start_utc": "2026-10-03T15:56:29.747171+00:00",
+      "end_utc": "2026-10-03T15:56:30.098604+00:00",
+      "wall_seconds": 0.351447310000367,
+      "returncode": 0,
+      "resources": {
+        "wall_seconds": "0.32788051000534324",
+        "cpu_seconds": "0.014019028000000003",
+        "user_seconds": "0.017575",
+        "system_seconds": "0.013451",
+        "max_rss_kib": "12160"
+      }
+    }
+  ]
+}

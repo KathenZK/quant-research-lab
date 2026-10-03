@@ -1,0 +1,207 @@
+{
+  "record_id": "M1358",
+  "fidelity": "ADAPTED",
+  "strict_reproductions": 0,
+  "configurations": 4,
+  "new_controls": 0,
+  "source_commit": "11a101a855c9ef83a2b4223d49dfa9a6b48d4a51",
+  "C0_sha256": "195a6010554e4602b9dbb9cccc491db2895097a6919e7327f8344bfcb1eee092",
+  "input_sha256": "48e4e785ee3366a459cf09f64617c89e04fb19b91da6c6125e86835506f6b9f5",
+  "summary": {
+    "base": {
+      "metrics": {
+        "total_return": 1.1657065688213613,
+        "cagr": 0.47085634600691884,
+        "max_drawdown": -0.30034824099753377,
+        "sharpe_zero_cash": 1.2247757266540886,
+        "observations": 731,
+        "final_equity": 216570.65688213613
+      },
+      "periods": {
+        "2023": {
+          "total_return": 0.2922121388168273,
+          "cagr": 0.2922121388168273,
+          "max_drawdown": -0.19404624227312106,
+          "sharpe_zero_cash": 0.9857309942415282,
+          "observations": 365,
+          "final_equity": 129221.21388168274
+        },
+        "2024": {
+          "total_return": 0.6759682901635029,
+          "cagr": 0.6736053261514792,
+          "max_drawdown": -0.30034824099753377,
+          "sharpe_zero_cash": 1.4232304756035954,
+          "observations": 366,
+          "final_equity": 216570.65688213613
+        }
+      },
+      "fills": 17,
+      "completed_round_trips": 8,
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "fee_bps": 8,
+      "lag_days": 1,
+      "terminal_position_open": true
+    },
+    "fee0": {
+      "metrics": {
+        "total_return": 1.1929609622664925,
+        "cagr": 0.4800697655918469,
+        "max_drawdown": -0.29697703942571707,
+        "sharpe_zero_cash": 1.2421801013457785,
+        "observations": 731,
+        "final_equity": 219296.09622664924
+      },
+      "periods": {
+        "2023": {
+          "total_return": 0.30091710730639654,
+          "cagr": 0.30091710730639654,
+          "max_drawdown": -0.1902395048601525,
+          "sharpe_zero_cash": 1.0079670534175034,
+          "observations": 365,
+          "final_equity": 130091.71073063965
+        },
+        "2024": {
+          "total_return": 0.68570383919934,
+          "cagr": 0.6833005097951479,
+          "max_drawdown": -0.29697703942571707,
+          "sharpe_zero_cash": 1.4375151021070822,
+          "observations": 366,
+          "final_equity": 219296.09622664924
+        }
+      },
+      "fills": 17,
+      "completed_round_trips": 8,
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "fee_bps": 0,
+      "lag_days": 1,
+      "terminal_position_open": true
+    },
+    "fee20": {
+      "metrics": {
+        "total_return": 1.1253854628351987,
+        "cagr": 0.45711855076938934,
+        "max_drawdown": -0.3053840697508182,
+        "sharpe_zero_cash": 1.1986077854989587,
+        "observations": 731,
+        "final_equity": 212538.54628351986
+      },
+      "periods": {
+        "2023": {
+          "total_return": 0.2792399305676767,
+          "cagr": 0.2792399305676767,
+          "max_drawdown": -0.19973352205367678,
+          "sharpe_zero_cash": 0.952295321928078,
+          "observations": 365,
+          "final_equity": 127923.99305676766
+        },
+        "2024": {
+          "total_return": 0.661443965317777,
+          "cagr": 0.659140935547986,
+          "max_drawdown": -0.3053840697508182,
+          "sharpe_zero_cash": 1.4017544281253709,
+          "observations": 366,
+          "final_equity": 212538.54628351986
+        }
+      },
+      "fills": 17,
+      "completed_round_trips": 8,
+      "queued_intents": 17,
+      "skipped_stale_intents": 0,
+      "terminal_pending": 0,
+      "fee_bps": 20,
+      "lag_days": 1,
+      "terminal_position_open": true
+    },
+    "lag2": {
+      "metrics": {
+        "total_return": 0.8834513416343432,
+        "cagr": 0.3717947457928077,
+        "max_drawdown": -0.35169382750554146,
+        "sharpe_zero_cash": 1.0262220326145512,
+        "observations": 731,
+        "final_equity": 188345.13416343433
+      },
+      "periods": {
+        "2023": {
+          "total_return": 0.19749831675991558,
+          "cagr": 0.19749831675991558,
+          "max_drawdown": -0.2452308205419339,
+          "sharpe_zero_cash": 0.7284988914677673,
+          "observations": 365,
+          "final_equity": 119749.83167599156
+        },
+        "2024": {
+          "total_return": 0.5728217027731766,
+          "cagr": 0.5708767703474449,
+          "max_drawdown": -0.35169382750554146,
+          "sharpe_zero_cash": 1.2638486569720582,
+          "observations": 366,
+          "final_equity": 188345.13416343433
+        }
+      },
+      "fills": 17,
+      "completed_round_trips": 8,
+      "queued_intents": 34,
+      "skipped_stale_intents": 17,
+      "terminal_pending": 0,
+      "fee_bps": 8,
+      "lag_days": 2,
+      "terminal_position_open": true
+    }
+  },
+  "existing_buyhold_reference": {
+    "metrics": {
+      "total_return": 4.422269858060954,
+      "cagr": 1.3258858046070183,
+      "max_drawdown": -0.25848029746503176,
+      "sharpe_zero_cash": 2.00578922935108,
+      "observations": 731,
+      "final_equity": 542226.9858060954
+    },
+    "fills": 1,
+    "completed_round_trips": 0,
+    "events": [],
+    "periods": {
+      "2023": {
+        "total_return": 1.4771161418067562,
+        "cagr": 1.4771161418067562,
+        "max_drawdown": -0.19471872279443359,
+        "sharpe_zero_cash": 2.3374669139995365,
+        "observations": 365,
+        "final_equity": 247711.61418067562
+      },
+      "2024": {
+        "total_return": 1.1889445418195308,
+        "cagr": 1.1842641380269758,
+        "max_drawdown": -0.25848029746503176,
+        "sharpe_zero_cash": 1.752396567998615,
+        "observations": 366,
+        "final_equity": 542226.9858060954
+      }
+    }
+  },
+  "base_diagnostics": {
+    "held_close_days": 487,
+    "cash_only_close_days": 244,
+    "paid_fees_usdt": 1546.9984887745973,
+    "completed_roundtrips": 8,
+    "losing_roundtrips": 5,
+    "worst_roundtrip": {
+      "entry_date": "2023-02-18",
+      "exit_date": "2023-03-11",
+      "net_trade_return": -0.18144609106902954,
+      "holding_days": 21
+    },
+    "max_drawdown_interval": {
+      "drawdown": -0.30034824099753377,
+      "peak_date": "2024-03-13",
+      "trough_date": "2024-10-10"
+    },
+    "first_fill_date": "2023-02-18",
+    "terminal_holding": true
+  }
+}
