@@ -1,0 +1,90 @@
+{
+  "id": "M0286",
+  "origin_run_id": "M0286-20261003-first-replay",
+  "protocol_sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50",
+  "input_sha256": "9f5cb39c1426ec91098bb8a1b1f0c926b80760e66fe452d6b0c0aa55429d126c",
+  "source_manifest_sha256": "4c60de4cdfc702c639f2b65d4caf76872dfed2033306ff0ac0887f79e0c46f5e",
+  "files": {
+    "base-daily-nav.csv": {
+      "sha256": "6acb3aef81830b4e08f90a9f467ae5b7f3772de48164c4bbb292c2cf36ec52d8",
+      "bytes": 98332
+    },
+    "base-nav-light.csv": {
+      "sha256": "6acb3aef81830b4e08f90a9f467ae5b7f3772de48164c4bbb292c2cf36ec52d8",
+      "bytes": 98332
+    },
+    "base-nav.csv": {
+      "sha256": "5bb90467d9940d94b15658825f557e1f00a613de8a8d86aaf5b1ea1281181a99",
+      "bytes": 540218
+    },
+    "base-trades.csv": {
+      "sha256": "fbd2536954af4a8fdcc6659f1aa2f92168346cd74c0d05c39f85671eb4110064",
+      "bytes": 12257
+    },
+    "buyhold-daily-nav.csv": {
+      "sha256": "0b2ef89a6df3316873678015353118b579f6294d391aecebe2bb8c1677fb9908",
+      "bytes": 109748
+    },
+    "buyhold-nav.csv": {
+      "sha256": "d1db34ea4337018df66e2cb4e1a54e331aa40c0b02e0631866dd81fdc2c4d03c",
+      "bytes": 608938
+    },
+    "buyhold-trades.csv": {
+      "sha256": "7b6a0c7df436c86c312c71a3818f07c10c1b384203aac73fb6c1946c6beaed7f",
+      "bytes": 497
+    },
+    "delay2-daily-nav.csv": {
+      "sha256": "3337bb9acf2a7d050766f6fffdbab4b94fa8a9ab81c4992fa951c0b9adce856e",
+      "bytes": 98311
+    },
+    "delay2-nav.csv": {
+      "sha256": "f16883ab43c9bd27c58bfd2b33b2b0d1d0f72b2b7cd6ade74d8e783fbb2b6b63",
+      "bytes": 540093
+    },
+    "delay2-trades.csv": {
+      "sha256": "6927dbb4d992e32474898cb45fbc8e0d42df27ad5ddb9577d13d4368fc48e184",
+      "bytes": 12235
+    },
+    "fee0-daily-nav.csv": {
+      "sha256": "2036a4c66fd22a5485ff9532a75de55a673dc80ced2d43eebfa48f5a77888830",
+      "bytes": 97966
+    },
+    "fee0-nav.csv": {
+      "sha256": "6ce8c0d00b098b392b635b6d225ef4328bf5beb3334fea69f3a3f56a0ff42edf",
+      "bytes": 538213
+    },
+    "fee0-trades.csv": {
+      "sha256": "43460c6b7bfd60c2c412789933e9118aebcac84633f9b56426271ce0aa360fa3",
+      "bytes": 11986
+    },
+    "fee20-daily-nav.csv": {
+      "sha256": "4d2296d88b0cfc19c24545a35e1f14d579cd306620cee2591113b1f558dd4e4a",
+      "bytes": 98436
+    },
+    "fee20-nav.csv": {
+      "sha256": "7423b32fb85d0e6921660309475cd58792638aeec820ded9f9ef07cc7ad6ce6b",
+      "bytes": 540829
+    },
+    "fee20-trades.csv": {
+      "sha256": "290166495f7819e38991657e1639dc1c3171656fc749688bd187766c51d709ff",
+      "bytes": 12246
+    },
+    "signals.csv": {
+      "sha256": "87bb9d53e7269e4a0ce1c60aa6d862591861c15c9b11c51d8a091d737580ad18",
+      "bytes": 1046438
+    },
+    "summary.json": {
+      "sha256": "f069d44a524a821a03eb4b3f69dfe6f1982271e0c02e97fae3a07842b1a0fb24",
+      "bytes": 6684
+    }
+  },
+  "checks": {
+    "original-source-validation.json": "da85cb7ba415e57ebbc427d2f7f8b90f7c9be1410e07a66bed0f61eb68a78ea8",
+    "source-risk-validation.json": "e76390a8d66b5fea0ff7d494b22956d7ede704cd36835d975d49a50fe991030d",
+    "independent-validation.json": "a4e254541427b08da67e89173ed13e5619e2e52c549a5f9817caa4d2edbe7d4d",
+    "causality-validation.json": "3c31733dbaa1a05f14f267af08bd7594295b09cb0f8077e7289a8dda69abebd9"
+  },
+  "recovery_sha256": "fbcde4253b4f2bc84ea693c113eb60e99b836acd563fe14d54cdee4a2674077d",
+  "replay_code_sha256": "93e9a4a91ede9a9a52a4d6d8cb230bcc7d903058dd583d7988585ea28efb1247",
+  "public_boundary": "No raw market data/full 4h curves/signals or third-party source text; lightweight summary, trades, daily base projection and fingerprints only."
+}

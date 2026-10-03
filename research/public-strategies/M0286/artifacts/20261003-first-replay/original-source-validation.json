@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "rows": 4572,
+  "loaded_parameters": {
+    "buy_ma_count": 4,
+    "buy_ma_gap": 15,
+    "sell_ma_count": 12,
+    "sell_ma_gap": 68
+  },
+  "source_indicators_computed": 860,
+  "consumed_indicators_equal": 14,
+  "entry_exit_arrays_identical": true,
+  "harness": "Original MultiMa class methods plus exact extracted Freqtrade ft_load_hyper_params/_ft_load_params; minimal IntParameter container, no external parameter file, not full engine"
+}

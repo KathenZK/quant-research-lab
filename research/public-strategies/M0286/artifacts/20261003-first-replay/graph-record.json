@@ -1,0 +1,52 @@
+{
+  "id": "M0286",
+  "name": "MultiMa：BTC现货4h多周期TEMA排列",
+  "status": "tested_hypothesis_only",
+  "reason": "原始信号数组与参数加载核对通过；分钟ROI用4h开盘代理、长TEMA预热不足如实保留；非原框架严格复现。",
+  "tested_variants": 1,
+  "strategy_configurations": 4,
+  "control_configurations": 1,
+  "families": [
+    "PUBLIC-M0286-MULTIMA"
+  ],
+  "audit": {
+    "source_verification_status": "pinned_source_bytes_verified_original_class_signal_arrays_identical",
+    "independent_validation": "PASS",
+    "causality_validation": "PASS",
+    "local_recovery": "PASS",
+    "strict_replication": false,
+    "data_quality_status": "DIAGNOSTIC_ONLY",
+    "trusted_input": false,
+    "strict_core_finality": "NOT_ESTABLISHED",
+    "pit_proven": false,
+    "oos_claim": false,
+    "promotion": false,
+    "definition_bound": false,
+    "deployed": false
+  },
+  "implementations": [
+    {
+      "origin_run_id": "M0286-20261003-first-replay",
+      "variant_id": "M0286-BTCUSDT-4H-MULTIMA-LONG-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50",
+      "manifest_sha256": "194f5583f5b07482401b701e54f89b8b1548d805b054416218537f7e95d16315",
+      "family": "PUBLIC-M0286-MULTIMA"
+    }
+  ],
+  "related_results": [
+    {
+      "origin_run_id": "M0286-20261003-first-replay",
+      "variant_id": "M0286-BTCUSDT-4H-MULTIMA-LONG-20261003",
+      "fidelity_class": "HYPOTHESIS",
+      "protocol_sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50",
+      "manifest_sha256": "194f5583f5b07482401b701e54f89b8b1548d805b054416218537f7e95d16315"
+    }
+  ],
+  "data_attribution": {
+    "provider": "Binance",
+    "license": "CC BY-NC-SA-4.0 plus Binance Dataset Terms",
+    "terms_url": "https://github.com/binance/binance-public-data/blob/f446ce3812bd4e5521f21faecd4ae3c6460e49fc/TERMS_AND_CONDITIONS.md",
+    "changes": "TEMA calculation, declared OHLC execution/accounting, metrics and daily sampling"
+  }
+}

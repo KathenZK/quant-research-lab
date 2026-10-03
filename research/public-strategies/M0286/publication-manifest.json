@@ -1,0 +1,236 @@
+{
+  "id": "M0286",
+  "scope": "reviewed lightweight public candidate; coordinator controls remote publication",
+  "files": [
+    {
+      "path": "research/public-strategies/M0286/ATTRIBUTION.md",
+      "bytes": 1846,
+      "sha256": "efb3fae3f5d502fc83cdc533462f1a2446aa9069a66e04b2705ec9b2f401b978"
+    },
+    {
+      "path": "research/public-strategies/M0286/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "research/public-strategies/M0286/README.md",
+      "bytes": 1536,
+      "sha256": "b03cb7d2bcbc076615833b7c888ff58fe2e358b2d5584022b47de1f53f494934"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/base-nav-light.csv",
+      "bytes": 51995,
+      "sha256": "9a7fee601ec3c964c22c09f88584c2370f49b67f7bce8cf3c469c189500a8a67"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/causality-validation.json",
+      "bytes": 458,
+      "sha256": "3c31733dbaa1a05f14f267af08bd7594295b09cb0f8077e7289a8dda69abebd9"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/environment.json",
+      "bytes": 331,
+      "sha256": "a8a12debf76be4bf5f811bdef24cae1b999e7182a793e2d7b4408ec21e8912be"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/execution-receipt.json",
+      "bytes": 759,
+      "sha256": "be45ad01aefa3bb35aaaeda2231fdf863c305b4685f5a76a77a4184d170f58b3"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/freeze-receipt.json",
+      "bytes": 385,
+      "sha256": "5333d012e035dc2c356cb41bd4130201b674428a94496511c0894ec48f00ae32"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/graph-projection-receipt.json",
+      "bytes": 236,
+      "sha256": "25e9a569ae0a643b063713a65250a72a0cbeee27bd382eaeeed8b551a965e7d7"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/graph-record.json",
+      "bytes": 2058,
+      "sha256": "8865dd2162cde5923afcf5b4f545aa1d54e32e7051337ed6be5a7be378080062"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/independent-validation.json",
+      "bytes": 1318,
+      "sha256": "a4e254541427b08da67e89173ed13e5619e2e52c549a5f9817caa4d2edbe7d4d"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/input-manifest-light.json",
+      "bytes": 33226,
+      "sha256": "8ef7b4ec2b340e07d4f723ddfbda1770f693159b607ccd72bc245941cf6b1bc9"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/local-recovery.json",
+      "bytes": 3152,
+      "sha256": "fbcde4253b4f2bc84ea693c113eb60e99b836acd563fe14d54cdee4a2674077d"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/original-source-validation.json",
+      "bytes": 464,
+      "sha256": "da85cb7ba415e57ebbc427d2f7f8b90f7c9be1410e07a66bed0f61eb68a78ea8"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/result-manifest.json",
+      "bytes": 3624,
+      "sha256": "194f5583f5b07482401b701e54f89b8b1548d805b054416218537f7e95d16315"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/base-trades.csv",
+      "bytes": 12257,
+      "sha256": "fbd2536954af4a8fdcc6659f1aa2f92168346cd74c0d05c39f85671eb4110064"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/buyhold-trades.csv",
+      "bytes": 497,
+      "sha256": "7b6a0c7df436c86c312c71a3818f07c10c1b384203aac73fb6c1946c6beaed7f"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/delay2-trades.csv",
+      "bytes": 12235,
+      "sha256": "6927dbb4d992e32474898cb45fbc8e0d42df27ad5ddb9577d13d4368fc48e184"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/fee0-trades.csv",
+      "bytes": 11986,
+      "sha256": "43460c6b7bfd60c2c412789933e9118aebcac84633f9b56426271ce0aa360fa3"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/fee20-trades.csv",
+      "bytes": 12246,
+      "sha256": "290166495f7819e38991657e1639dc1c3171656fc749688bd187766c51d709ff"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/results/summary.json",
+      "bytes": 6684,
+      "sha256": "f069d44a524a821a03eb4b3f69dfe6f1982271e0c02e97fae3a07842b1a0fb24"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/20261003-first-replay/source-risk-validation.json",
+      "bytes": 201,
+      "sha256": "e76390a8d66b5fea0ff7d494b22956d7ede704cd36835d975d49a50fe991030d"
+    },
+    {
+      "path": "research/public-strategies/M0286/artifacts/research-exposure-ledger.jsonl",
+      "bytes": 1350,
+      "sha256": "2fd6a3479966ef23ca1bc79b5c09ae6bb10fa297309cc2c2de9946b6e762d6f6"
+    },
+    {
+      "path": "research/public-strategies/M0286/decision-log.md",
+      "bytes": 1791,
+      "sha256": "d52d174939f91d8010a5a922e851fccb4987d2cccff12dbc09260aeb568094fe"
+    },
+    {
+      "path": "research/public-strategies/M0286/diagnostics/M0286-20261003.md",
+      "bytes": 8139,
+      "sha256": "56d6281e27441660365579f37903abc4275b934ac4c91efb87c24da388c1c568"
+    },
+    {
+      "path": "research/public-strategies/M0286/diagnostics/rebuild-20261003.md",
+      "bytes": 3033,
+      "sha256": "b5820b7a8105093ac663242a853f08bd03828886e9c541ef7eb1d3178ac8cfd8"
+    },
+    {
+      "path": "research/public-strategies/M0286/diagnostics/source-synthetic-preflight.json",
+      "bytes": 464,
+      "sha256": "fd49cc9a6e48d1b0189c01bf1fb6fbbaee0f5b6deae27801636d15b7685779da"
+    },
+    {
+      "path": "research/public-strategies/M0286/m0286-core-ledger.md",
+      "bytes": 1269,
+      "sha256": "1d8c0c53a10f3acae868efe2cb25c787637a39bf117276809c034c6684b16285"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/audit_input.py",
+      "bytes": 3284,
+      "sha256": "7a222fe0e8887716aae9b11bfa75125de53bd3bb945cd73d870dfd280a7366c6"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/check_causality.py",
+      "bytes": 2146,
+      "sha256": "2ceed019ae1654062368c8098bc752e86e6442bb5b68ec71e705968a46f627e2"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/compare_original.py",
+      "bytes": 5071,
+      "sha256": "601b3881f90cdd8d88fcec012f5c19b306606b523b964d6d359897ae119c843b"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/export_graph.py",
+      "bytes": 8863,
+      "sha256": "003b4577e2aea6fb79e9014e73af886cef6ea99614bfe212bdf99b29ec9f0f7e"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/fetch_sources.py",
+      "bytes": 1161,
+      "sha256": "f378a229753d9427ce603c9a0cf511094c6a8336ae80801b4e255b78adbc22d0"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/freeze_protocol.py",
+      "bytes": 5961,
+      "sha256": "7c5882f199db677836271ba0dc2fef2546f815530591f41ce74d325c044c692f"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/rebuild.py",
+      "bytes": 4229,
+      "sha256": "16b5d2ab794bbfed8c33c12eedf78c4111d31a4d7bf5a931693d1a8dd02a3ca7"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/run_replay.py",
+      "bytes": 13665,
+      "sha256": "93e9a4a91ede9a9a52a4d6d8cb230bcc7d903058dd583d7988585ea28efb1247"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/test_units.py",
+      "bytes": 3810,
+      "sha256": "f8290c907d4e0ab3d9a098263a96fa780363beaf9a0e32992f88ae01f64a0097"
+    },
+    {
+      "path": "research/public-strategies/M0286/scripts/validate_independent.py",
+      "bytes": 8459,
+      "sha256": "562604d3cc4834689e3aa3225c326282a09acd65a94b386c968336eb25683cfb"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/M0286-first-replay.json",
+      "bytes": 10850,
+      "sha256": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/data-qa.json",
+      "bytes": 611,
+      "sha256": "d35fb55dbf8f33aa3121c8c3fa8c87e3454991efb6f436baecccbc13583d613e"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/exposure-ledger-adapter.json",
+      "bytes": 1151,
+      "sha256": "8d419a70098d95f100ded13af7f8292dc89bfa863d39be630ae597cbdf499df2"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/exposure.json",
+      "bytes": 765,
+      "sha256": "03a17110a05487117b72db54935e5b48aeb793f6da996f235b0588efac5f2604"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/market-halt-evidence.json",
+      "bytes": 2714,
+      "sha256": "a1b3e915157f7d1dfed9bfded01558a813c28435566ad1b5f94283b97f821999"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/requirements.lock.txt",
+      "bytes": 68,
+      "sha256": "15337aeabb40f28b26c74f003a3b6433649949b69bf0684dd13d1273035a64e8"
+    },
+    {
+      "path": "research/public-strategies/M0286/specs/source-manifest.json",
+      "bytes": 2307,
+      "sha256": "4c60de4cdfc702c639f2b65d4caf76872dfed2033306ff0ac0887f79e0c46f5e"
+    }
+  ],
+  "total_bytes": 283802,
+  "raw_market_data_included": false,
+  "third_party_full_sources_included": false,
+  "private_catalog_included": false,
+  "full_native_curves_included": false
+}

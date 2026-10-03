@@ -1,0 +1,18 @@
+{
+  "id": "M0286-20261003-first-replay-exposure",
+  "kind": "exposure",
+  "family": "PUBLIC-M0286-MULTIMA",
+  "window_start": "2023-01-01T00:00:00Z",
+  "window_end": "2025-01-01T00:00:00Z",
+  "evidence_class": "retrospective_historical_replay",
+  "trial_count": 4,
+  "control_configurations": 1,
+  "historical_total_search_count": "UNKNOWN",
+  "selection_reason": "Coordinator preassigned M0286; fixed source params, no search. BTCUSDT window already exposed across prior IDs.",
+  "artifacts": {
+    "specs/M0286-first-replay.json": "9dadf4438f1f6c75f0e4538d674db21af64136c428927ad82fb10eb8d4db1c50"
+  },
+  "recorded_at_utc": "2026-10-03T10:13:37.771592+00:00",
+  "oos_claim": false,
+  "global_ledger_writer": "coordinator only; this is ID-local preregistration"
+}
