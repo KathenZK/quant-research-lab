@@ -4,7 +4,7 @@ research_classification: diagnostic_topic
 
 # 批021既有目录来源准备
 
-M1510 已由 root [独占登记](../claims-20261003-batch021-source-only.json)给父端 single dot executor，范围仅为来源、规则和数据复用准备；该执行者尚未启动本家族准备，root/m0288 完成的是只读独立来源支持。没有历史运行权限，没有 C0，没有新增策略配置或对照。
+M1510 已由 root [独占登记](../claims-20261003-batch021-source-only.json)给父端 single dot executor，范围仅为来源、规则和数据复用准备；登记时该执行者尚未启动准备，root/m0288 先完成了只读独立来源支持。2026-10-04 父端新增独立静态审计，见[框架参考增补](M1510-framework-static-audit-20261004.md)。没有历史运行权限，没有 C0，没有新增策略配置或对照。
 
 固定公开源码已验真，但原目录遗漏 `sell_profit_only=True` 及限价执行设置，不能把反向交叉写成无条件平仓。[源卡](source-card.safe.json)与[自撰报告](REPORT.safe.md)保留代码版本、源码指纹、仓库许可证据、规则差异、可复用日线输入指纹、经济假设和失败场景。
 

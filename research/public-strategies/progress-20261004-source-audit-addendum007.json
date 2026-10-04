@@ -1,0 +1,62 @@
+{
+  "schema": "public-strategy-coordinator-source-evidence-addendum/v1",
+  "coordinator": "root sole global writer",
+  "recorded_at_utc": "2026-10-04T00:28:01.856650+00:00",
+  "delivery_addendum": 7,
+  "previous_checkpoint": {
+    "file": "progress-20261003-batch020-delivery006.json",
+    "bytes": 11665,
+    "sha256": "204f9cc05e0dd1c29db6ceaeb561572c30bd46d61b617d12060334a323d6630c"
+  },
+  "cumulative_tested_ids": 43,
+  "cumulative_strategy_configurations": 175,
+  "cumulative_controls": 22,
+  "cumulative_blocked_ids": 7,
+  "strict_reproductions": 0,
+  "new_accepted_ids": 0,
+  "new_strategy_configurations": 0,
+  "new_controls": 0,
+  "new_historical_runs": 0,
+  "new_synthetic_strategy_executions": 0,
+  "last_original_execution_utc": "2026-10-03T20:44:26Z",
+  "M1510": {
+    "owner": "parent single dot executor",
+    "new_activity": "Parent independent static source audit completed; root registered and separately verified4official files plus2023.10tag.",
+    "status": "BLOCKED_SOURCE_FRAMEWORK_SEMANTICS",
+    "audit": {
+      "file": "M1510-framework-static-audit-20261004.safe.json",
+      "bytes": 4852,
+      "sha256": "15c52ea315c5bf17baf08818ca67f237c11bf767fb63c94347b5eb71556b971d"
+    },
+    "C0_sealed": false,
+    "history_release": false,
+    "original_framework_or_configuration_proven": false,
+    "parent_new_audit_package_remotely_restored": "PARENT_REPORTED; root verified only Library metadata",
+    "root_original25member_package_remotely_saved": false,
+    "source_semantics_are_not_historical_results": true
+  },
+  "batch020_history_release": {
+    "M2903": false,
+    "M3710": false,
+    "M0974": false
+  },
+  "root_Library_upload_status": "UNCHANGED_HTTP401_NOT_RETRIED",
+  "root_new_Library_saved_files": 0,
+  "new_parent_backup_cannot_be_counted_as_root_failed_upload_recovery": true,
+  "prior_Lab_delivery": {
+    "PR": 44,
+    "main": "f1a37d201eb9870fe2951f7aadbe04bff037e7c0",
+    "main_CI": 37163369609,
+    "status": "SUCCESS"
+  },
+  "Graph_delivery_unchanged": {
+    "PR": 30,
+    "main": "103b2dd15d57ddaf78a299a337e1c2ba03b8cb1a",
+    "offline_records": 27,
+    "Site_deployed": false
+  },
+  "no_private_Library_identifiers_published": true,
+  "no_credentials_read": true,
+  "quant_runner_touched": false,
+  "new_research_agents_or_execution_tasks_started": false
+}

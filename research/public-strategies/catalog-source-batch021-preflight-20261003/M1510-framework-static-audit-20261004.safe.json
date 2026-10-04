@@ -1,0 +1,102 @@
+{
+  "schema": "M1510-parent-independent-static-audit-registration/v1",
+  "recorded_at_utc": "2026-10-04T00:28:01.856335+00:00",
+  "id": "M1510",
+  "status": "BLOCKED_SOURCE_FRAMEWORK_SEMANTICS",
+  "parent_source_audit": "COMPLETED_REPORTED",
+  "source_identity": {
+    "commit": "9623c1f3d8c7f60c8b411010fa26377e6ca99ab9",
+    "bytes": 1813,
+    "sha256": "64846c265b53f34dfdd117cc31b195466f09e1dc154a9f3c3835cf1eab4600fd",
+    "git_blob": "aace9bb4b79271b62a8b5350a85fe535cf1eeb81",
+    "matches_prior_root_source_card": true
+  },
+  "reference_framework": {
+    "official_tag": "2023.10",
+    "commit": "f142abfb76138848937b0a9b3be9181a00f6556e",
+    "official_tag_API_verified_by_root": true,
+    "original_author_runtime_verified": false,
+    "effective_original_configuration_known": false,
+    "role": "STATIC_OFFICIAL_REFERENCE_ONLY_NOT_EXECUTION_CONTRACT"
+  },
+  "root_static_files": [
+    {
+      "path": "freqtrade/strategy/interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/f142abfb76138848937b0a9b3be9181a00f6556e/freqtrade/strategy/interface.py",
+      "HTTP": 200,
+      "captured_at_utc": "2026-10-04T00:24:25.222736+00:00",
+      "bytes": 66989,
+      "sha256": "d466ab880d54264e9d06a0bdf210120fa46a87999f56423cec87487565114261"
+    },
+    {
+      "path": "freqtrade/persistence/trade_model.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/f142abfb76138848937b0a9b3be9181a00f6556e/freqtrade/persistence/trade_model.py",
+      "HTTP": 200,
+      "captured_at_utc": "2026-10-04T00:24:25.451611+00:00",
+      "bytes": 77088,
+      "sha256": "b3f862c624e9a13bf1d34e535772e7cf9ed86593c1cca56367d9a473696dabce"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/f142abfb76138848937b0a9b3be9181a00f6556e/freqtrade/optimize/backtesting.py",
+      "HTTP": 200,
+      "captured_at_utc": "2026-10-04T00:24:25.728405+00:00",
+      "bytes": 66179,
+      "sha256": "16de598f75b198d72041239eb26b43143135027e3c7aff5f0e7b53db959db136"
+    },
+    {
+      "path": "freqtrade/vendor/qtpylib/indicators.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/f142abfb76138848937b0a9b3be9181a00f6556e/freqtrade/vendor/qtpylib/indicators.py",
+      "HTTP": 200,
+      "captured_at_utc": "2026-10-04T00:24:25.992963+00:00",
+      "bytes": 19869,
+      "sha256": "8622dcf3f92fc5b8e15f3d6f0909696b5d28678df113b2f77ca6e42d8b1a694a"
+    }
+  ],
+  "static_findings": {
+    "profit_gate": "Fee-inclusive profit ratio formatted to8decimal places and converted tofloat; exit signal gated by strict greater-than configured offset. Do not infer original offset or Decimal equivalence.",
+    "signal_timing": "Backtesting shifts signal columns1bar and passes current processed row open into should_exit; not a guaranteed final fill price.",
+    "stop_ROI": "Flags computed before profit-only exit-signal gate; not suppressed by that gate.",
+    "candidate_order": [
+      "EXIT_SIGNAL_OR_CUSTOM_EXIT",
+      "STOP_LOSS_OR_LIQUIDATION",
+      "ROI",
+      "TRAILING_STOP_LOSS"
+    ],
+    "priority_clarification": "Earlier calculation of flags does not mean stop/ROI always precede signal fills; backtesting tries returned candidates in order.",
+    "BB_mid": "bollinger_bands calls rolling_mean with min_periods1; do not force19initialNaNs for otherwise valid inputs. This does not certify full strategy readiness.",
+    "limit_fill": "OHLC-range touch is backtest model, not actual queue/liquidity/fill proof."
+  },
+  "parent_package": {
+    "reported_bytes": 129820,
+    "reported_sha256": "ea0a6e2bda4830cc848d822c93d2bb202bda1a5ce479f402ac35bcf0fa1c9e40",
+    "reported_version": 0,
+    "root_Library_metadata_read_matches_size_and_name": true,
+    "root_archive_materialized": false,
+    "root_archive_sha_verified": false,
+    "parent_reported_actual_download_fresh_restore": {
+      "archive_members": 22,
+      "manifest_member_hashes": 21,
+      "CRC": "PASS",
+      "official_git_blobs": 9,
+      "original_fields": 11
+    },
+    "scope": "PARENT_NEW_INDEPENDENT_STATIC_AUDIT_ONLY",
+    "covers_root_original25member_package": false,
+    "repairs_root_Library401": false,
+    "contains_public_Library_ID": false
+  },
+  "remaining_gate": "Original runtime/config/API compatibility, numeric initialization, order/risk semantics and exactC0 independent synthetic gates still unresolved. No automatic strategy adaptation.",
+  "C0_sealed": false,
+  "root_history_release": false,
+  "new_synthetic_strategy_executions": 0,
+  "new_historical_runs": 0,
+  "new_controls": 0,
+  "strict_reproductions": 0,
+  "root_Library_upload_retry": false,
+  "report": {
+    "file": "M1510-framework-static-audit-20261004.md",
+    "bytes": 4001,
+    "sha256": "92dde4f0bdddcdaa3601ab36c95787911f1c4a6b60843076c9579b718bd29aa1"
+  }
+}
