@@ -118,3 +118,4 @@
 - [批020历史运行剩余门禁](catalog-daily-next3-batch020-preflight-20261003/HISTORY-RELEASE-GATES-v1.md)：M2903/M3710/M0974保持未放行；[独审回执](catalog-daily-next3-batch020-preflight-20261003/release-gates-independent-v1.safe.json)。
 - [批021 M1510既有来源准备](catalog-source-batch021-preflight-20261003/README.md)：父端独占来源准备；固定源码发现目录遗漏盈利退出门与限价执行，框架语义未锁，历史运行0。
 - [当前交付增补006](progress-20261003-batch020-delivery006.json)：纠正005的范围标签为本次Graph M1266／PR30；005原件和独审发现保留，43／175／22及所有历史门禁不变。
+- [来源审计增补007](progress-20261004-source-audit-addendum007.json)：登记M1510父端独立静态审计，2023.10仅为参考；未解除框架语义或Library门禁，研究计数不变。
